@@ -41,7 +41,7 @@ export const GoogleMaps = React.memo(function GoogleMaps({
 
   return (
     <Base className={classNames} themed={themed} {...propsRest}>
-      <div class="gmap_canvas">
+      <div className="gmap_canvas">
         <iframe
           width={propsRest.width}
           height={propsRest.height}
@@ -61,7 +61,7 @@ GoogleMaps.propTypes = {
   location: PropTypes.string,
   height: PropTypes.string,
   width: PropTypes.string,
-  themed: PropTypes.arrayOf([PropTypes.func]),
+  themed: PropTypes.array,
 }
 
 GoogleMaps.defaultProps = {

@@ -47,7 +47,7 @@ export const Typography = React.memo(function Typography({
   const attributes = {
     ...(propsRest.as === 'hr'
       ? {
-          'aria-role': 'separator',
+          role: 'separator',
           'aria-orientation': 'horizontal',
         }
       : {}),

@@ -14,61 +14,6 @@
   },
   "props": [
     {
-      "key": "src/Accordion/Accordion.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Accordion",
-          "methods": [],
-          "actualName": "Accordion",
-          "props": {
-            "active": {
-              "type": {
-                "name": "string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "children": {
-              "type": {
-                "name": "node"
-              },
-              "required": false,
-              "description": ""
-            },
-            "item": {
-              "type": {
-                "name": "object"
-              },
-              "required": false,
-              "description": ""
-            },
-            "theme": {
-              "type": {
-                "name": "object"
-              },
-              "required": false,
-              "description": ""
-            },
-            "items": {
-              "defaultValue": {
-                "value": "[]",
-                "computed": false
-              },
-              "required": false
-            },
-            "themed": {
-              "defaultValue": {
-                "value": "[]",
-                "computed": false
-              },
-              "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
       "key": "src/Accordion/AccordionButton.js",
       "value": [
         {
@@ -176,33 +121,6 @@
       ]
     },
     {
-      "key": "src/Accordion/AccordionButtonIcon.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "AccordionButtonIcon",
-          "methods": [],
-          "actualName": "AccordionButtonIcon",
-          "props": {
-            "theme": {
-              "type": {
-                "name": "object"
-              },
-              "required": false,
-              "description": ""
-            },
-            "themed": {
-              "defaultValue": {
-                "value": "[]",
-                "computed": false
-              },
-              "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
       "key": "src/Accordion/AccordionContent.js",
       "value": [
         {
@@ -230,6 +148,61 @@
       ]
     },
     {
+      "key": "src/Accordion/Accordion.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Accordion",
+          "methods": [],
+          "actualName": "Accordion",
+          "props": {
+            "active": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "children": {
+              "type": {
+                "name": "node"
+              },
+              "required": false,
+              "description": ""
+            },
+            "item": {
+              "type": {
+                "name": "object"
+              },
+              "required": false,
+              "description": ""
+            },
+            "theme": {
+              "type": {
+                "name": "object"
+              },
+              "required": false,
+              "description": ""
+            },
+            "items": {
+              "defaultValue": {
+                "value": "[]",
+                "computed": false
+              },
+              "required": false
+            },
+            "themed": {
+              "defaultValue": {
+                "value": "[]",
+                "computed": false
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/Accordion/AccordionContext.js",
       "value": [
         {
@@ -237,6 +210,33 @@
           "displayName": "AccordionProvider",
           "methods": [],
           "actualName": "AccordionProvider"
+        }
+      ]
+    },
+    {
+      "key": "src/Accordion/AccordionButtonIcon.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "AccordionButtonIcon",
+          "methods": [],
+          "actualName": "AccordionButtonIcon",
+          "props": {
+            "theme": {
+              "type": {
+                "name": "object"
+              },
+              "required": false,
+              "description": ""
+            },
+            "themed": {
+              "defaultValue": {
+                "value": "[]",
+                "computed": false
+              },
+              "required": false
+            }
+          }
         }
       ]
     },
@@ -454,72 +454,6 @@
       ]
     },
     {
-      "key": "src/Badge/Badge.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Badge",
-          "methods": [],
-          "props": {
-            "children": {
-              "type": {
-                "name": "node"
-              },
-              "required": false,
-              "description": ""
-            },
-            "context": {
-              "type": {
-                "name": "enum",
-                "value": [
-                  {
-                    "value": "'accent'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'action'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'success'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'warning'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'danger'",
-                    "computed": false
-                  }
-                ]
-              },
-              "required": false,
-              "description": ""
-            },
-            "onClose": {
-              "type": {
-                "name": "func"
-              },
-              "required": false,
-              "description": ""
-            },
-            "themed": {
-              "type": {
-                "name": "array"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "[]",
-                "computed": false
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
       "key": "src/Base/Base.js",
       "value": [
         {
@@ -579,6 +513,72 @@
                 "value": {
                   "name": "func"
                 }
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "[]",
+                "computed": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/Badge/Badge.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Badge",
+          "methods": [],
+          "props": {
+            "children": {
+              "type": {
+                "name": "node"
+              },
+              "required": false,
+              "description": ""
+            },
+            "context": {
+              "type": {
+                "name": "enum",
+                "value": [
+                  {
+                    "value": "'accent'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'action'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'success'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'warning'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'danger'",
+                    "computed": false
+                  }
+                ]
+              },
+              "required": false,
+              "description": ""
+            },
+            "onClose": {
+              "type": {
+                "name": "func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "themed": {
+              "type": {
+                "name": "array"
               },
               "required": false,
               "description": "",
@@ -2463,62 +2463,6 @@
       ]
     },
     {
-      "key": "src/GoogleMaps/GoogleMaps.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "GoogleMaps",
-          "methods": [],
-          "props": {
-            "location": {
-              "type": {
-                "name": "string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "height": {
-              "type": {
-                "name": "string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'300'",
-                "computed": false
-              }
-            },
-            "width": {
-              "type": {
-                "name": "string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'100%'",
-                "computed": false
-              }
-            },
-            "themed": {
-              "type": {
-                "name": "arrayOf",
-                "value": {
-                  "name": "custom",
-                  "raw": "[PropTypes.func]"
-                }
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "[]",
-                "computed": false
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
       "key": "src/Icon/Icon.js",
       "value": [
         {
@@ -3328,6 +3272,124 @@
       ]
     },
     {
+      "key": "src/Tabs/TabContext.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "TabProvider",
+          "methods": [],
+          "actualName": "TabProvider",
+          "props": {
+            "selected": {
+              "defaultValue": {
+                "value": "{}",
+                "computed": false
+              },
+              "required": false
+            },
+            "items": {
+              "defaultValue": {
+                "value": "[]",
+                "computed": false
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/Tabs/TabList.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "TabList",
+          "methods": [],
+          "actualName": "TabList",
+          "props": {
+            "active": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "theme": {
+              "type": {
+                "name": "object"
+              },
+              "required": false,
+              "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/Tabs/TabListButton.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "TabListButton",
+          "methods": [],
+          "actualName": "TabListButton"
+        }
+      ]
+    },
+    {
+      "key": "src/Tabs/TabPanel.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "TabPanel",
+          "methods": [],
+          "props": {
+            "children": {
+              "type": {
+                "name": "node"
+              },
+              "required": false,
+              "description": ""
+            },
+            "theme": {
+              "type": {
+                "name": "object"
+              },
+              "required": false,
+              "description": ""
+            },
+            "uid": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/Tabs/Tabs.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Tabs",
+          "methods": [],
+          "actualName": "Tabs",
+          "props": {
+            "children": {
+              "type": {
+                "name": "node"
+              },
+              "required": false,
+              "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/Table/JsonView.js",
       "value": [
         {
@@ -3683,209 +3745,12 @@
       ]
     },
     {
-      "key": "src/Tabs/TabContext.js",
+      "key": "src/Table/ToolbarViewsButton.js",
       "value": [
         {
           "description": "",
-          "displayName": "TabProvider",
-          "methods": [],
-          "actualName": "TabProvider",
-          "props": {
-            "selected": {
-              "defaultValue": {
-                "value": "{}",
-                "computed": false
-              },
-              "required": false
-            },
-            "items": {
-              "defaultValue": {
-                "value": "[]",
-                "computed": false
-              },
-              "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/Tabs/TabList.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "TabList",
-          "methods": [],
-          "actualName": "TabList",
-          "props": {
-            "active": {
-              "type": {
-                "name": "string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "theme": {
-              "type": {
-                "name": "object"
-              },
-              "required": false,
-              "description": ""
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/Tabs/TabListButton.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "TabListButton",
-          "methods": [],
-          "actualName": "TabListButton"
-        }
-      ]
-    },
-    {
-      "key": "src/Tabs/TabPanel.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "TabPanel",
-          "methods": [],
-          "props": {
-            "children": {
-              "type": {
-                "name": "node"
-              },
-              "required": false,
-              "description": ""
-            },
-            "theme": {
-              "type": {
-                "name": "object"
-              },
-              "required": false,
-              "description": ""
-            },
-            "uid": {
-              "type": {
-                "name": "string"
-              },
-              "required": false,
-              "description": ""
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/Tabs/Tabs.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Tabs",
-          "methods": [],
-          "actualName": "Tabs",
-          "props": {
-            "children": {
-              "type": {
-                "name": "node"
-              },
-              "required": false,
-              "description": ""
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/Textarea/Textarea.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Textarea",
-          "methods": [],
-          "props": {
-            "active": {
-              "type": {
-                "name": "bool"
-              },
-              "required": false,
-              "description": ""
-            },
-            "appearance": {
-              "type": {
-                "name": "enum",
-                "value": [
-                  {
-                    "value": "'primary'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'secondary'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'accent'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'action'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'danger'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'success'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'warning'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'disabled'",
-                    "computed": false
-                  }
-                ]
-              },
-              "required": false,
-              "description": ""
-            },
-            "widths": {
-              "type": {
-                "name": "enum",
-                "value": [
-                  {
-                    "value": "'xsmall'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'small'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'medium'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'large'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'xlarge'",
-                    "computed": false
-                  }
-                ]
-              },
-              "required": false,
-              "description": ""
-            }
-          }
+          "displayName": "ToolbarViewsButton",
+          "methods": []
         }
       ]
     },
@@ -3978,413 +3843,6 @@
             "items": {
               "defaultValue": {
                 "value": "[]",
-                "computed": false
-              },
-              "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/Typography/Typography.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Typography",
-          "methods": [],
-          "props": {
-            "context": {
-              "type": {
-                "name": "enum",
-                "value": [
-                  {
-                    "value": "'accent'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'action'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'danger'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'disabled'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'success'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'warning'",
-                    "computed": false
-                  }
-                ]
-              },
-              "required": false,
-              "description": ""
-            },
-            "href": {
-              "type": {
-                "name": "string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "textWrap": {
-              "type": {
-                "name": "enum",
-                "value": [
-                  {
-                    "value": "'truncate'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'break'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'nowrap'",
-                    "computed": false
-                  }
-                ]
-              },
-              "required": false,
-              "description": ""
-            },
-            "element": {
-              "type": {
-                "name": "enum",
-                "value": [
-                  {
-                    "value": "'a'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'abbr'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'code'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'del'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'dfn'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'em'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'h1'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'h2'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'h3'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'h4'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'h5'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'h6'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'hr'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'ins'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'mark'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'q'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'p'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'span'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'strong'",
-                    "computed": false
-                  }
-                ]
-              },
-              "required": false,
-              "description": ""
-            },
-            "textAlign": {
-              "type": {
-                "name": "enum",
-                "value": [
-                  {
-                    "value": "'left'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'leftSmall'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'leftMedium'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'leftLarge'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'right'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'rightSmall'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'rightMedium'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'rightLarge'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'center'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'centerSmall'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'centerMedium'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'centerLarge'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'justify'",
-                    "computed": false
-                  }
-                ]
-              },
-              "required": false,
-              "description": ""
-            },
-            "theme": {
-              "type": {
-                "name": "object"
-              },
-              "required": false,
-              "description": ""
-            },
-            "as": {
-              "defaultValue": {
-                "value": "'p'",
-                "computed": false
-              },
-              "required": false
-            },
-            "themed": {
-              "defaultValue": {
-                "value": "[]",
-                "computed": false
-              },
-              "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/Video/Video.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Video",
-          "methods": [],
-          "props": {
-            "allowFullScreen": {
-              "type": {
-                "name": "bool"
-              },
-              "required": false,
-              "description": ""
-            },
-            "autoplay": {
-              "type": {
-                "name": "bool"
-              },
-              "required": false,
-              "description": ""
-            },
-            "controls": {
-              "type": {
-                "name": "bool"
-              },
-              "required": false,
-              "description": ""
-            },
-            "embeded": {
-              "type": {
-                "name": "bool"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              }
-            },
-            "height": {
-              "type": {
-                "name": "string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'auto'",
-                "computed": false
-              }
-            },
-            "intrinsicsize": {
-              "type": {
-                "name": "string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "inview": {
-              "type": {
-                "name": "bool"
-              },
-              "required": false,
-              "description": ""
-            },
-            "loop": {
-              "type": {
-                "name": "bool"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              }
-            },
-            "muted": {
-              "type": {
-                "name": "bool"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              }
-            },
-            "playsinline": {
-              "type": {
-                "name": "bool"
-              },
-              "required": false,
-              "description": ""
-            },
-            "preload": {
-              "type": {
-                "name": "enum",
-                "value": [
-                  {
-                    "value": "'none'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'metadata'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'auto'",
-                    "computed": false
-                  }
-                ]
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'auto'",
-                "computed": false
-              }
-            },
-            "src": {
-              "type": {
-                "name": "string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "themed": {
-              "type": {
-                "name": "array"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "[]",
-                "computed": false
-              }
-            },
-            "width": {
-              "type": {
-                "name": "custom",
-                "raw": "PropTypes.width"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'100%'",
-                "computed": false
-              }
-            },
-            "inView": {
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              },
-              "required": false
-            },
-            "playsInline": {
-              "defaultValue": {
-                "value": "false",
                 "computed": false
               },
               "required": false
@@ -4526,6 +3984,17 @@
       ]
     },
     {
+      "key": "src/MaterialIcons/AccessAlarmsTwoTone.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "AccessAlarmsTwoTone",
+          "methods": [],
+          "actualName": "AccessAlarmsTwoTone"
+        }
+      ]
+    },
+    {
       "key": "src/MaterialIcons/AccessAlarmsRounded.js",
       "value": [
         {
@@ -4544,17 +4013,6 @@
           "displayName": "AccessAlarmsSharp",
           "methods": [],
           "actualName": "AccessAlarmsSharp"
-        }
-      ]
-    },
-    {
-      "key": "src/MaterialIcons/AccessAlarmsTwoTone.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "AccessAlarmsTwoTone",
-          "methods": [],
-          "actualName": "AccessAlarmsTwoTone"
         }
       ]
     },
@@ -11720,17 +11178,6 @@
       ]
     },
     {
-      "key": "src/MaterialIcons/BrandingWatermark.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "BrandingWatermark",
-          "methods": [],
-          "actualName": "BrandingWatermark"
-        }
-      ]
-    },
-    {
       "key": "src/MaterialIcons/BorderVerticalTwoTone.js",
       "value": [
         {
@@ -11738,6 +11185,17 @@
           "displayName": "BorderVerticalTwoTone",
           "methods": [],
           "actualName": "BorderVerticalTwoTone"
+        }
+      ]
+    },
+    {
+      "key": "src/MaterialIcons/BrandingWatermark.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "BrandingWatermark",
+          "methods": [],
+          "actualName": "BrandingWatermark"
         }
       ]
     },
@@ -11764,17 +11222,6 @@
       ]
     },
     {
-      "key": "src/MaterialIcons/BrandingWatermarkTwoTone.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "BrandingWatermarkTwoTone",
-          "methods": [],
-          "actualName": "BrandingWatermarkTwoTone"
-        }
-      ]
-    },
-    {
       "key": "src/MaterialIcons/BrandingWatermarkSharp.js",
       "value": [
         {
@@ -11782,6 +11229,17 @@
           "displayName": "BrandingWatermarkSharp",
           "methods": [],
           "actualName": "BrandingWatermarkSharp"
+        }
+      ]
+    },
+    {
+      "key": "src/MaterialIcons/BrandingWatermarkTwoTone.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "BrandingWatermarkTwoTone",
+          "methods": [],
+          "actualName": "BrandingWatermarkTwoTone"
         }
       ]
     },
@@ -11863,17 +11321,6 @@
       ]
     },
     {
-      "key": "src/MaterialIcons/Brightness2Sharp.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Brightness2Sharp",
-          "methods": [],
-          "actualName": "Brightness2Sharp"
-        }
-      ]
-    },
-    {
       "key": "src/MaterialIcons/Brightness2Rounded.js",
       "value": [
         {
@@ -11881,6 +11328,17 @@
           "displayName": "Brightness2Rounded",
           "methods": [],
           "actualName": "Brightness2Rounded"
+        }
+      ]
+    },
+    {
+      "key": "src/MaterialIcons/Brightness2Sharp.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Brightness2Sharp",
+          "methods": [],
+          "actualName": "Brightness2Sharp"
         }
       ]
     },
@@ -11918,17 +11376,6 @@
       ]
     },
     {
-      "key": "src/MaterialIcons/Brightness3Sharp.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Brightness3Sharp",
-          "methods": [],
-          "actualName": "Brightness3Sharp"
-        }
-      ]
-    },
-    {
       "key": "src/MaterialIcons/Brightness3Rounded.js",
       "value": [
         {
@@ -11936,6 +11383,17 @@
           "displayName": "Brightness3Rounded",
           "methods": [],
           "actualName": "Brightness3Rounded"
+        }
+      ]
+    },
+    {
+      "key": "src/MaterialIcons/Brightness3Sharp.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Brightness3Sharp",
+          "methods": [],
+          "actualName": "Brightness3Sharp"
         }
       ]
     },
@@ -13788,17 +13246,6 @@
       ]
     },
     {
-      "key": "src/MaterialIcons/CameraRoll.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "CameraRoll",
-          "methods": [],
-          "actualName": "CameraRoll"
-        }
-      ]
-    },
-    {
       "key": "src/MaterialIcons/CameraRollOutlined.js",
       "value": [
         {
@@ -13806,6 +13253,17 @@
           "displayName": "CameraRollOutlined",
           "methods": [],
           "actualName": "CameraRollOutlined"
+        }
+      ]
+    },
+    {
+      "key": "src/MaterialIcons/CameraRoll.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "CameraRoll",
+          "methods": [],
+          "actualName": "CameraRoll"
         }
       ]
     },
@@ -17935,17 +17393,6 @@
       ]
     },
     {
-      "key": "src/MaterialIcons/CropSquareSharp.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "CropSquareSharp",
-          "methods": [],
-          "actualName": "CropSquareSharp"
-        }
-      ]
-    },
-    {
       "key": "src/MaterialIcons/CropSquareRounded.js",
       "value": [
         {
@@ -17953,6 +17400,17 @@
           "displayName": "CropSquareRounded",
           "methods": [],
           "actualName": "CropSquareRounded"
+        }
+      ]
+    },
+    {
+      "key": "src/MaterialIcons/CropSquareSharp.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "CropSquareSharp",
+          "methods": [],
+          "actualName": "CropSquareSharp"
         }
       ]
     },
@@ -30684,17 +30142,6 @@
       ]
     },
     {
-      "key": "src/MaterialIcons/InvertColorsOffTwoTone.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "InvertColorsOffTwoTone",
-          "methods": [],
-          "actualName": "InvertColorsOffTwoTone"
-        }
-      ]
-    },
-    {
       "key": "src/MaterialIcons/InvertColorsOutlined.js",
       "value": [
         {
@@ -30702,6 +30149,17 @@
           "displayName": "InvertColorsOutlined",
           "methods": [],
           "actualName": "InvertColorsOutlined"
+        }
+      ]
+    },
+    {
+      "key": "src/MaterialIcons/InvertColorsOffTwoTone.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "InvertColorsOffTwoTone",
+          "methods": [],
+          "actualName": "InvertColorsOffTwoTone"
         }
       ]
     },
@@ -30805,17 +30263,6 @@
       ]
     },
     {
-      "key": "src/MaterialIcons/KeyboardArrowDownOutlined.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "KeyboardArrowDownOutlined",
-          "methods": [],
-          "actualName": "KeyboardArrowDownOutlined"
-        }
-      ]
-    },
-    {
       "key": "src/MaterialIcons/KeyboardArrowDown.js",
       "value": [
         {
@@ -30823,6 +30270,17 @@
           "displayName": "KeyboardArrowDown",
           "methods": [],
           "actualName": "KeyboardArrowDown"
+        }
+      ]
+    },
+    {
+      "key": "src/MaterialIcons/KeyboardArrowDownOutlined.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "KeyboardArrowDownOutlined",
+          "methods": [],
+          "actualName": "KeyboardArrowDownOutlined"
         }
       ]
     },
@@ -35095,17 +34553,6 @@
       ]
     },
     {
-      "key": "src/MaterialIcons/Looks4.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Looks4",
-          "methods": [],
-          "actualName": "Looks4"
-        }
-      ]
-    },
-    {
       "key": "src/MaterialIcons/Looks4Outlined.js",
       "value": [
         {
@@ -35113,6 +34560,17 @@
           "displayName": "Looks4Outlined",
           "methods": [],
           "actualName": "Looks4Outlined"
+        }
+      ]
+    },
+    {
+      "key": "src/MaterialIcons/Looks4.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Looks4",
+          "methods": [],
+          "actualName": "Looks4"
         }
       ]
     },
@@ -42432,17 +41890,6 @@
       ]
     },
     {
-      "key": "src/MaterialIcons/PhonelinkSetup.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "PhonelinkSetup",
-          "methods": [],
-          "actualName": "PhonelinkSetup"
-        }
-      ]
-    },
-    {
       "key": "src/MaterialIcons/PhonelinkSetupOutlined.js",
       "value": [
         {
@@ -42450,6 +41897,17 @@
           "displayName": "PhonelinkSetupOutlined",
           "methods": [],
           "actualName": "PhonelinkSetupOutlined"
+        }
+      ]
+    },
+    {
+      "key": "src/MaterialIcons/PhonelinkSetup.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "PhonelinkSetup",
+          "methods": [],
+          "actualName": "PhonelinkSetup"
         }
       ]
     },
@@ -42498,17 +41956,6 @@
       ]
     },
     {
-      "key": "src/MaterialIcons/PhonelinkTwoTone.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "PhonelinkTwoTone",
-          "methods": [],
-          "actualName": "PhonelinkTwoTone"
-        }
-      ]
-    },
-    {
       "key": "src/MaterialIcons/Photo.js",
       "value": [
         {
@@ -42520,6 +41967,17 @@
       ]
     },
     {
+      "key": "src/MaterialIcons/PhonelinkTwoTone.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "PhonelinkTwoTone",
+          "methods": [],
+          "actualName": "PhonelinkTwoTone"
+        }
+      ]
+    },
+    {
       "key": "src/MaterialIcons/PhotoAlbum.js",
       "value": [
         {
@@ -42527,17 +41985,6 @@
           "displayName": "PhotoAlbum",
           "methods": [],
           "actualName": "PhotoAlbum"
-        }
-      ]
-    },
-    {
-      "key": "src/MaterialIcons/PhotoAlbumOutlined.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "PhotoAlbumOutlined",
-          "methods": [],
-          "actualName": "PhotoAlbumOutlined"
         }
       ]
     },
@@ -42575,6 +42022,17 @@
       ]
     },
     {
+      "key": "src/MaterialIcons/PhotoAlbumOutlined.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "PhotoAlbumOutlined",
+          "methods": [],
+          "actualName": "PhotoAlbumOutlined"
+        }
+      ]
+    },
+    {
       "key": "src/MaterialIcons/PhotoCamera.js",
       "value": [
         {
@@ -42608,17 +42066,6 @@
       ]
     },
     {
-      "key": "src/MaterialIcons/PhotoCameraSharp.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "PhotoCameraSharp",
-          "methods": [],
-          "actualName": "PhotoCameraSharp"
-        }
-      ]
-    },
-    {
       "key": "src/MaterialIcons/PhotoCameraTwoTone.js",
       "value": [
         {
@@ -42626,6 +42073,17 @@
           "displayName": "PhotoCameraTwoTone",
           "methods": [],
           "actualName": "PhotoCameraTwoTone"
+        }
+      ]
+    },
+    {
+      "key": "src/MaterialIcons/PhotoCameraSharp.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "PhotoCameraSharp",
+          "methods": [],
+          "actualName": "PhotoCameraSharp"
         }
       ]
     },
@@ -42729,17 +42187,6 @@
       ]
     },
     {
-      "key": "src/MaterialIcons/PhotoOutlined.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "PhotoOutlined",
-          "methods": [],
-          "actualName": "PhotoOutlined"
-        }
-      ]
-    },
-    {
       "key": "src/MaterialIcons/PhotoLibraryTwoTone.js",
       "value": [
         {
@@ -42747,6 +42194,17 @@
           "displayName": "PhotoLibraryTwoTone",
           "methods": [],
           "actualName": "PhotoLibraryTwoTone"
+        }
+      ]
+    },
+    {
+      "key": "src/MaterialIcons/PhotoOutlined.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "PhotoOutlined",
+          "methods": [],
+          "actualName": "PhotoOutlined"
         }
       ]
     },
@@ -43367,17 +42825,6 @@
       ]
     },
     {
-      "key": "src/MaterialIcons/PlayCircleFilledOutlined.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "PlayCircleFilledOutlined",
-          "methods": [],
-          "actualName": "PlayCircleFilledOutlined"
-        }
-      ]
-    },
-    {
       "key": "src/MaterialIcons/PlayCircleFilledRounded.js",
       "value": [
         {
@@ -43385,6 +42832,17 @@
           "displayName": "PlayCircleFilledRounded",
           "methods": [],
           "actualName": "PlayCircleFilledRounded"
+        }
+      ]
+    },
+    {
+      "key": "src/MaterialIcons/PlayCircleFilledOutlined.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "PlayCircleFilledOutlined",
+          "methods": [],
+          "actualName": "PlayCircleFilledOutlined"
         }
       ]
     },
@@ -43510,17 +42968,6 @@
       ]
     },
     {
-      "key": "src/MaterialIcons/PlayCircleOutlineTwoTone.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "PlayCircleOutlineTwoTone",
-          "methods": [],
-          "actualName": "PlayCircleOutlineTwoTone"
-        }
-      ]
-    },
-    {
       "key": "src/MaterialIcons/PlayForWork.js",
       "value": [
         {
@@ -43528,6 +42975,17 @@
           "displayName": "PlayForWork",
           "methods": [],
           "actualName": "PlayForWork"
+        }
+      ]
+    },
+    {
+      "key": "src/MaterialIcons/PlayCircleOutlineTwoTone.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "PlayCircleOutlineTwoTone",
+          "methods": [],
+          "actualName": "PlayCircleOutlineTwoTone"
         }
       ]
     },
@@ -43664,17 +43122,6 @@
       ]
     },
     {
-      "key": "src/MaterialIcons/PlaylistAddSharp.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "PlaylistAddSharp",
-          "methods": [],
-          "actualName": "PlaylistAddSharp"
-        }
-      ]
-    },
-    {
       "key": "src/MaterialIcons/PlaylistAddTwoTone.js",
       "value": [
         {
@@ -43704,6 +43151,17 @@
           "displayName": "PlaylistPlayOutlined",
           "methods": [],
           "actualName": "PlaylistPlayOutlined"
+        }
+      ]
+    },
+    {
+      "key": "src/MaterialIcons/PlaylistAddSharp.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "PlaylistAddSharp",
+          "methods": [],
+          "actualName": "PlaylistAddSharp"
         }
       ]
     },
@@ -43895,17 +43353,6 @@
       ]
     },
     {
-      "key": "src/MaterialIcons/PolymerSharp.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "PolymerSharp",
-          "methods": [],
-          "actualName": "PolymerSharp"
-        }
-      ]
-    },
-    {
       "key": "src/MaterialIcons/PolymerTwoTone.js",
       "value": [
         {
@@ -43913,6 +43360,17 @@
           "displayName": "PolymerTwoTone",
           "methods": [],
           "actualName": "PolymerTwoTone"
+        }
+      ]
+    },
+    {
+      "key": "src/MaterialIcons/PolymerSharp.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "PolymerSharp",
+          "methods": [],
+          "actualName": "PolymerSharp"
         }
       ]
     },
@@ -46755,17 +46213,6 @@
       ]
     },
     {
-      "key": "src/MaterialIcons/RestoreSharp.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "RestoreSharp",
-          "methods": [],
-          "actualName": "RestoreSharp"
-        }
-      ]
-    },
-    {
       "key": "src/MaterialIcons/RestoreTwoTone.js",
       "value": [
         {
@@ -46784,6 +46231,17 @@
           "displayName": "RingVolume",
           "methods": [],
           "actualName": "RingVolume"
+        }
+      ]
+    },
+    {
+      "key": "src/MaterialIcons/RestoreSharp.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "RestoreSharp",
+          "methods": [],
+          "actualName": "RestoreSharp"
         }
       ]
     },
@@ -46964,17 +46422,6 @@
       ]
     },
     {
-      "key": "src/MaterialIcons/Rotate90DegreesCcwSharp.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Rotate90DegreesCcwSharp",
-          "methods": [],
-          "actualName": "Rotate90DegreesCcwSharp"
-        }
-      ]
-    },
-    {
       "key": "src/MaterialIcons/Rotate90DegreesCcwRounded.js",
       "value": [
         {
@@ -46982,6 +46429,17 @@
           "displayName": "Rotate90DegreesCcwRounded",
           "methods": [],
           "actualName": "Rotate90DegreesCcwRounded"
+        }
+      ]
+    },
+    {
+      "key": "src/MaterialIcons/Rotate90DegreesCcwSharp.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Rotate90DegreesCcwSharp",
+          "methods": [],
+          "actualName": "Rotate90DegreesCcwSharp"
         }
       ]
     },
@@ -47888,17 +47346,6 @@
       ]
     },
     {
-      "key": "src/MaterialIcons/ScreenLockPortraitOutlined.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "ScreenLockPortraitOutlined",
-          "methods": [],
-          "actualName": "ScreenLockPortraitOutlined"
-        }
-      ]
-    },
-    {
       "key": "src/MaterialIcons/ScreenLockPortraitRounded.js",
       "value": [
         {
@@ -47906,6 +47353,17 @@
           "displayName": "ScreenLockPortraitRounded",
           "methods": [],
           "actualName": "ScreenLockPortraitRounded"
+        }
+      ]
+    },
+    {
+      "key": "src/MaterialIcons/ScreenLockPortraitOutlined.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "ScreenLockPortraitOutlined",
+          "methods": [],
+          "actualName": "ScreenLockPortraitOutlined"
         }
       ]
     },
@@ -50418,17 +49876,6 @@
       ]
     },
     {
-      "key": "src/MaterialIcons/SignalCellular4BarOutlined.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "SignalCellular4BarOutlined",
-          "methods": [],
-          "actualName": "SignalCellular4BarOutlined"
-        }
-      ]
-    },
-    {
       "key": "src/MaterialIcons/SignalCellular4BarRounded.js",
       "value": [
         {
@@ -50436,6 +49883,17 @@
           "displayName": "SignalCellular4BarRounded",
           "methods": [],
           "actualName": "SignalCellular4BarRounded"
+        }
+      ]
+    },
+    {
+      "key": "src/MaterialIcons/SignalCellular4BarOutlined.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "SignalCellular4BarOutlined",
+          "methods": [],
+          "actualName": "SignalCellular4BarOutlined"
         }
       ]
     },
@@ -60626,17 +60084,6 @@
       ]
     },
     {
-      "key": "src/MaterialIcons/WavesTwoTone.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "WavesTwoTone",
-          "methods": [],
-          "actualName": "WavesTwoTone"
-        }
-      ]
-    },
-    {
       "key": "src/MaterialIcons/WavesSharp.js",
       "value": [
         {
@@ -60644,6 +60091,17 @@
           "displayName": "WavesSharp",
           "methods": [],
           "actualName": "WavesSharp"
+        }
+      ]
+    },
+    {
+      "key": "src/MaterialIcons/WavesTwoTone.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "WavesTwoTone",
+          "methods": [],
+          "actualName": "WavesTwoTone"
         }
       ]
     },
@@ -61968,12 +61426,639 @@
       ]
     },
     {
-      "key": "src/Table/ToolbarViewsButton.js",
+      "key": "src/theme/colors/color.exmale.js",
       "value": [
         {
           "description": "",
-          "displayName": "ToolbarViewsButton",
-          "methods": []
+          "displayName": "ColoPalette",
+          "methods": [],
+          "actualName": "ColoPalette"
+        },
+        {
+          "description": "",
+          "displayName": "ColorSwatch",
+          "methods": [],
+          "actualName": "ColorSwatch"
+        }
+      ]
+    },
+    {
+      "key": "src/GoogleMaps/GoogleMaps.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "GoogleMaps",
+          "methods": [],
+          "props": {
+            "location": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "height": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'300'",
+                "computed": false
+              }
+            },
+            "width": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'100%'",
+                "computed": false
+              }
+            },
+            "themed": {
+              "type": {
+                "name": "array"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "[]",
+                "computed": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/Textarea/Textarea.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Textarea",
+          "methods": [],
+          "props": {
+            "active": {
+              "type": {
+                "name": "bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "appearance": {
+              "type": {
+                "name": "enum",
+                "value": [
+                  {
+                    "value": "'primary'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'secondary'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'tertiary'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'accent'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'primary-accent'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'secondary-accent'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'tertiary-accent'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'action'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'primary-action'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'secondary-action'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'tertiary-action'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'danger'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'primary-danger'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'secondary-danger'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'tertiary-danger'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'success'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'primary-success'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'secondary-success'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'tertiary-success'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'warning'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'primary-warning'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'secondary-warning'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'tertiary-warning'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'disabled'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'primary-disabled'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'secondary-disabled'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'tertiary-disabled'",
+                    "computed": false
+                  }
+                ]
+              },
+              "required": false,
+              "description": ""
+            },
+            "widths": {
+              "type": {
+                "name": "enum",
+                "value": [
+                  {
+                    "value": "'xsmall'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'small'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'medium'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'large'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'xlarge'",
+                    "computed": false
+                  }
+                ]
+              },
+              "required": false,
+              "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/Typography/Typography.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Typography",
+          "methods": [],
+          "props": {
+            "context": {
+              "type": {
+                "name": "enum",
+                "value": [
+                  {
+                    "value": "'accent'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'action'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'danger'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'disabled'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'success'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'warning'",
+                    "computed": false
+                  }
+                ]
+              },
+              "required": false,
+              "description": ""
+            },
+            "href": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "textWrap": {
+              "type": {
+                "name": "enum",
+                "value": [
+                  {
+                    "value": "'truncate'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'break'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'nowrap'",
+                    "computed": false
+                  }
+                ]
+              },
+              "required": false,
+              "description": ""
+            },
+            "element": {
+              "type": {
+                "name": "enum",
+                "value": [
+                  {
+                    "value": "'a'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'abbr'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'code'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'del'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'dfn'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'em'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'h1'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'h2'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'h3'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'h4'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'h5'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'h6'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'hr'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'ins'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'mark'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'q'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'p'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'span'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'strong'",
+                    "computed": false
+                  }
+                ]
+              },
+              "required": false,
+              "description": ""
+            },
+            "textAlign": {
+              "type": {
+                "name": "enum",
+                "value": [
+                  {
+                    "value": "'left'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'leftSmall'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'leftMedium'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'leftLarge'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'right'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'rightSmall'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'rightMedium'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'rightLarge'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'center'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'centerSmall'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'centerMedium'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'centerLarge'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'justify'",
+                    "computed": false
+                  }
+                ]
+              },
+              "required": false,
+              "description": ""
+            },
+            "theme": {
+              "type": {
+                "name": "object"
+              },
+              "required": false,
+              "description": ""
+            },
+            "as": {
+              "defaultValue": {
+                "value": "'p'",
+                "computed": false
+              },
+              "required": false
+            },
+            "themed": {
+              "defaultValue": {
+                "value": "[]",
+                "computed": false
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/Video/Video.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Video",
+          "methods": [],
+          "props": {
+            "allowFullScreen": {
+              "type": {
+                "name": "bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "autoplay": {
+              "type": {
+                "name": "bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "controls": {
+              "type": {
+                "name": "bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "embeded": {
+              "type": {
+                "name": "bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "height": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'auto'",
+                "computed": false
+              }
+            },
+            "intrinsicsize": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "inview": {
+              "type": {
+                "name": "bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "loop": {
+              "type": {
+                "name": "bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "muted": {
+              "type": {
+                "name": "bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "playsinline": {
+              "type": {
+                "name": "bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "preload": {
+              "type": {
+                "name": "enum",
+                "value": [
+                  {
+                    "value": "'none'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'metadata'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'auto'",
+                    "computed": false
+                  }
+                ]
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'auto'",
+                "computed": false
+              }
+            },
+            "src": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "themed": {
+              "type": {
+                "name": "array"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "[]",
+                "computed": false
+              }
+            },
+            "width": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'100%'",
+                "computed": false
+              }
+            },
+            "playsInline": {
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              },
+              "required": false
+            }
+          }
         }
       ]
     }
@@ -61982,7 +62067,7 @@
     {
       "key": "src/index.mdx",
       "value": {
-        "name": "Redesign System",
+        "name": "Home",
         "route": "/",
         "id": "6576455a124f9aaefd860597f03a8fe4",
         "filepath": "src/index.mdx",
@@ -61999,48 +62084,14 @@
       }
     },
     {
-      "key": "src/Alert/alert.mdx",
-      "value": {
-        "name": "Alert",
-        "id": "f276c2239e58a8174f8e8856acf4204e",
-        "filepath": "src/Alert/alert.mdx",
-        "link": "",
-        "slug": "src-alert-alert",
-        "route": "/src-alert-alert",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "alert",
-            "depth": 1,
-            "value": "Alert"
-          },
-          {
-            "slug": "default",
-            "depth": 2,
-            "value": "Default"
-          },
-          {
-            "slug": "appearance",
-            "depth": 2,
-            "value": "Appearance"
-          },
-          {
-            "slug": "context",
-            "depth": 2,
-            "value": "Context"
-          }
-        ]
-      }
-    },
-    {
       "key": "src/Accordion/accordion.mdx",
       "value": {
         "name": "Accordion",
+        "route": "/accordion",
         "id": "5c56a0dd8fc4d917137813ff923a4646",
         "filepath": "src/Accordion/accordion.mdx",
         "link": "",
         "slug": "src-accordion-accordion",
-        "route": "/src-accordion-accordion",
         "menu": "",
         "headings": [
           {
@@ -62082,14 +62133,48 @@
       }
     },
     {
+      "key": "src/Alert/alert.mdx",
+      "value": {
+        "name": "Alert",
+        "route": "/alert",
+        "id": "f276c2239e58a8174f8e8856acf4204e",
+        "filepath": "src/Alert/alert.mdx",
+        "link": "",
+        "slug": "src-alert-alert",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "alert",
+            "depth": 1,
+            "value": "Alert"
+          },
+          {
+            "slug": "default",
+            "depth": 2,
+            "value": "Default"
+          },
+          {
+            "slug": "appearance",
+            "depth": 2,
+            "value": "Appearance"
+          },
+          {
+            "slug": "context",
+            "depth": 2,
+            "value": "Context"
+          }
+        ]
+      }
+    },
+    {
       "key": "src/AppBar/AppBar.mdx",
       "value": {
         "name": "AppBar",
+        "route": "/app-bar",
         "id": "746796aa4c79b3394965f367c77f6b2a",
         "filepath": "src/AppBar/AppBar.mdx",
         "link": "",
         "slug": "src-app-bar-app-bar",
-        "route": "/src-app-bar-app-bar",
         "menu": "",
         "headings": [
           {
@@ -62114,11 +62199,11 @@
       "key": "src/Badge/badge.mdx",
       "value": {
         "name": "Badge",
+        "route": "/badge",
         "id": "8fc56e5b216254685815ba4da355f2e1",
         "filepath": "src/Badge/badge.mdx",
         "link": "",
         "slug": "src-badge-badge",
-        "route": "/src-badge-badge",
         "menu": "",
         "headings": [
           {
@@ -62148,11 +62233,11 @@
       "key": "src/Button/button.mdx",
       "value": {
         "name": "Button",
+        "route": "/button",
         "id": "dabf605616d90c798219ec4ecf9f988f",
         "filepath": "src/Button/button.mdx",
         "link": "",
         "slug": "src-button-button",
-        "route": "/src-button-button",
         "menu": "",
         "headings": [
           {
@@ -62187,11 +62272,11 @@
       "key": "src/ButtonGroup/buttonGroup.mdx",
       "value": {
         "name": "Button Group",
+        "route": "/button-group",
         "id": "9ba96b5b4a8f9df0a26f8566df9612e2",
         "filepath": "src/ButtonGroup/buttonGroup.mdx",
         "link": "",
         "slug": "src-button-group-button-group",
-        "route": "/src-button-group-button-group",
         "menu": "",
         "headings": [
           {
@@ -62226,11 +62311,11 @@
       "key": "src/Card/Card.mdx",
       "value": {
         "name": "Card",
+        "route": "/card",
         "id": "c675a9dbdf2039120b40211a2bcd031a",
         "filepath": "src/Card/Card.mdx",
         "link": "",
         "slug": "src-card-card",
-        "route": "/src-card-card",
         "menu": "",
         "headings": [
           {
@@ -62262,38 +62347,14 @@
       }
     },
     {
-      "key": "src/Carousel/carousel.mdx",
-      "value": {
-        "name": "Carousel",
-        "id": "c07d67c4369d8c3cbfdf76b35f033fbd",
-        "filepath": "src/Carousel/carousel.mdx",
-        "link": "",
-        "slug": "src-carousel-carousel",
-        "route": "/src-carousel-carousel",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "carousel",
-            "depth": 1,
-            "value": "Carousel"
-          },
-          {
-            "slug": "properties",
-            "depth": 2,
-            "value": "Properties"
-          }
-        ]
-      }
-    },
-    {
       "key": "src/Container/Container.mdx",
       "value": {
         "name": "Container",
+        "route": "/container",
         "id": "96731b6b4724cd22ad5078036a48173f",
         "filepath": "src/Container/Container.mdx",
         "link": "",
         "slug": "src-container-container",
-        "route": "/src-container-container",
         "menu": "",
         "headings": [
           {
@@ -62313,11 +62374,11 @@
       "key": "src/CoverImg/coverImg.mdx",
       "value": {
         "name": "Cover Image",
+        "route": "/cover-image",
         "id": "99f6e534aed3457fca5f4b8603137a3f",
         "filepath": "src/CoverImg/coverImg.mdx",
         "link": "",
         "slug": "src-cover-img-cover-img",
-        "route": "/src-cover-img-cover-img",
         "menu": "",
         "headings": [
           {
@@ -62332,11 +62393,11 @@
       "key": "src/Dropdown/Dropdown.mdx",
       "value": {
         "name": "Dropdown",
+        "route": "/dropdown",
         "id": "338f5375ef4829482d602355bd66e6ca",
         "filepath": "src/Dropdown/Dropdown.mdx",
         "link": "",
         "slug": "src-dropdown-dropdown",
-        "route": "/src-dropdown-dropdown",
         "menu": "",
         "headings": [
           {
@@ -62356,11 +62417,11 @@
       "key": "src/ErrorMessage/ErrorMessage.mdx",
       "value": {
         "name": "Error Message",
+        "route": "/error-message",
         "id": "892f2276db8d0dc5cf4ea3c0928345b0",
         "filepath": "src/ErrorMessage/ErrorMessage.mdx",
         "link": "",
         "slug": "src-error-message-error-message",
-        "route": "/src-error-message-error-message",
         "menu": "",
         "headings": [
           {
@@ -62385,11 +62446,11 @@
       "key": "src/Flex/flex.mdx",
       "value": {
         "name": "Flex",
+        "route": "/flex",
         "id": "48c7995e38998c32055c9500137f2534",
         "filepath": "src/Flex/flex.mdx",
         "link": "",
         "slug": "src-flex-flex",
-        "route": "/src-flex-flex",
         "menu": "",
         "headings": [
           {
@@ -62519,11 +62580,11 @@
       "key": "src/GoogleMaps/GoogleMaps.mdx",
       "value": {
         "name": "GoogleMaps",
+        "route": "/google-maps",
         "id": "c887ccdc95aabe63bf8ee8fcf1a375a5",
         "filepath": "src/GoogleMaps/GoogleMaps.mdx",
         "link": "",
         "slug": "src-google-maps-google-maps",
-        "route": "/src-google-maps-google-maps",
         "menu": "",
         "headings": [
           {
@@ -62543,11 +62604,11 @@
       "key": "src/Icon/Icon.mdx",
       "value": {
         "name": "Icon",
+        "route": "/icon",
         "id": "14d7832539c4f23d15425fcfd69a112d",
         "filepath": "src/Icon/Icon.mdx",
         "link": "",
         "slug": "src-icon-icon",
-        "route": "/src-icon-icon",
         "menu": "",
         "headings": [
           {
@@ -62606,11 +62667,11 @@
       "key": "src/Input/input.mdx",
       "value": {
         "name": "Input",
+        "route": "/input",
         "id": "410636657410e885a009bc150be3d80a",
         "filepath": "src/Input/input.mdx",
         "link": "",
         "slug": "src-input-input",
-        "route": "/src-input-input",
         "menu": "",
         "headings": [
           {
@@ -62645,11 +62706,11 @@
       "key": "src/Notify/notify.mdx",
       "value": {
         "name": "Notify",
+        "route": "/notify",
         "id": "3f6cb694907bfa8bdcdbcf57ba82c516",
         "filepath": "src/Notify/notify.mdx",
         "link": "",
         "slug": "src-notify-notify",
-        "route": "/src-notify-notify",
         "menu": "",
         "headings": [
           {
@@ -62684,11 +62745,11 @@
       "key": "src/Table/table.mdx",
       "value": {
         "name": "Table",
+        "route": "/table",
         "id": "a5110ef5350ab2226e120a27c15f2125",
         "filepath": "src/Table/table.mdx",
         "link": "",
         "slug": "src-table-table",
-        "route": "/src-table-table",
         "menu": "",
         "headings": [
           {
@@ -62728,11 +62789,11 @@
       "key": "src/Tabs/tabs.mdx",
       "value": {
         "name": "Tabs",
+        "route": "/tabs",
         "id": "0a0d550ff09892cc7745cfb4674570fa",
         "filepath": "src/Tabs/tabs.mdx",
         "link": "",
         "slug": "src-tabs-tabs",
-        "route": "/src-tabs-tabs",
         "menu": "",
         "headings": [
           {
@@ -62757,11 +62818,11 @@
       "key": "src/Textarea/textarea.mdx",
       "value": {
         "name": "Textarea",
+        "route": "/textarea",
         "id": "f2895968c333b27216bf195a92502711",
         "filepath": "src/Textarea/textarea.mdx",
         "link": "",
         "slug": "src-textarea-textarea",
-        "route": "/src-textarea-textarea",
         "menu": "",
         "headings": [
           {
@@ -62810,11 +62871,11 @@
       "key": "src/Toolbar/toolbar.mdx",
       "value": {
         "name": "Toolbar",
+        "route": "/toolbar",
         "id": "2b1dc2568720acdac08ddad89cca7a3d",
         "filepath": "src/Toolbar/toolbar.mdx",
         "link": "",
         "slug": "src-toolbar-toolbar",
-        "route": "/src-toolbar-toolbar",
         "menu": "",
         "headings": [
           {
@@ -62836,14 +62897,38 @@
       }
     },
     {
+      "key": "src/Typography/typography.mdx",
+      "value": {
+        "name": "Typography",
+        "route": "/typography",
+        "id": "0d87df1035f674f06f593c950b5bf5ff",
+        "filepath": "src/Typography/typography.mdx",
+        "link": "",
+        "slug": "src-typography-typography",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "typography",
+            "depth": 1,
+            "value": "Typography"
+          },
+          {
+            "slug": "as",
+            "depth": 2,
+            "value": "As"
+          }
+        ]
+      }
+    },
+    {
       "key": "src/Video/video.mdx",
       "value": {
         "name": "Video",
+        "route": "/video",
         "id": "d7b400d54468625a6617dd1999e81c82",
         "filepath": "src/Video/video.mdx",
         "link": "",
         "slug": "src-video-video",
-        "route": "/src-video-video",
         "menu": "",
         "headings": [
           {
@@ -62875,38 +62960,14 @@
       }
     },
     {
-      "key": "src/Typography/typography.mdx",
-      "value": {
-        "name": "Typography",
-        "id": "0d87df1035f674f06f593c950b5bf5ff",
-        "filepath": "src/Typography/typography.mdx",
-        "link": "",
-        "slug": "src-typography-typography",
-        "route": "/src-typography-typography",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "typography",
-            "depth": 1,
-            "value": "Typography"
-          },
-          {
-            "slug": "as",
-            "depth": 2,
-            "value": "As"
-          }
-        ]
-      }
-    },
-    {
       "key": "src/theme/borders/border.mdx",
       "value": {
         "name": "Borders",
+        "route": "/borders",
         "id": "7a1bf7f75acea497a8109f70a4e06898",
         "filepath": "src/theme/borders/border.mdx",
         "link": "",
         "slug": "src-theme-borders-border",
-        "route": "/src-theme-borders-border",
         "menu": "",
         "headings": [
           {
@@ -62936,11 +62997,11 @@
       "key": "src/theme/colors/colors.mdx",
       "value": {
         "name": "Colors",
+        "route": "/colors",
         "id": "45e24318176247d30077857be11aa525",
         "filepath": "src/theme/colors/colors.mdx",
         "link": "",
         "slug": "src-theme-colors-colors",
-        "route": "/src-theme-colors-colors",
         "menu": "",
         "headings": [
           {
@@ -62965,11 +63026,11 @@
       "key": "src/theme/elevate/elevate.mdx",
       "value": {
         "name": "Elevate",
+        "route": "/elevate",
         "id": "68772e977b6d65da200d0bcb9ebb2764",
         "filepath": "src/theme/elevate/elevate.mdx",
         "link": "",
         "slug": "src-theme-elevate-elevate",
-        "route": "/src-theme-elevate-elevate",
         "menu": "",
         "headings": [
           {
@@ -62984,11 +63045,11 @@
       "key": "src/theme/fonts/fonts.mdx",
       "value": {
         "name": "Fonts",
+        "route": "/fonts",
         "id": "ad16ffaae7954c222d541a2e58f957b9",
         "filepath": "src/theme/fonts/fonts.mdx",
         "link": "",
         "slug": "src-theme-fonts-fonts",
-        "route": "/src-theme-fonts-fonts",
         "menu": "",
         "headings": [
           {
@@ -63043,11 +63104,11 @@
       "key": "src/theme/radius/radius.mdx",
       "value": {
         "name": "Radius",
+        "route": "/radius",
         "id": "41564ba58508ba925faacacc83d20802",
         "filepath": "src/theme/radius/radius.mdx",
         "link": "",
         "slug": "src-theme-radius-radius",
-        "route": "/src-theme-radius-radius",
         "menu": "",
         "headings": [
           {

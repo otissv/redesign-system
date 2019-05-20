@@ -1,6 +1,5 @@
 import { baseDefaults } from '../utils'
 import merge from 'lodash/fp/merge'
-import { hsla } from 'polished'
 
 export function scrollbarTheme({ color, scrollbar, unit } = baseDefaults) {
   const defaults = {

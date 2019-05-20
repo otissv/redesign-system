@@ -1,29 +1,11 @@
 import { baseDefaults, makeColorScheme } from '../../utils'
 import merge from 'lodash/fp/merge'
 import { swatches as palette } from './color.swatches'
-import { rgb } from 'polished'
 
 export function colorTheme({ color, swatches = {} } = baseDefaults) {
   const _swatches = merge(palette)(swatches)
 
-  const makeColorReducer = (acc, key) => ({
-    ...acc,
-    [`${key}`]: _swatches[`${color[key]}-500`],
-    [`${key}2`]: _swatches[`${color[key]}-400`],
-
-    [`${key}-050`]: _swatches[`${color[key]}-050`],
-    [`${key}-100`]: _swatches[`${color[key]}-100`],
-    [`${key}-200`]: _swatches[`${color[key]}-200`],
-    [`${key}-300`]: _swatches[`${color[key]}-300`],
-    [`${key}-400`]: _swatches[`${color[key]}-400`],
-    [`${key}-500`]: _swatches[`${color[key]}-500`],
-    [`${key}-600`]: _swatches[`${color[key]}-600`],
-    [`${key}-700`]: _swatches[`${color[key]}-700`],
-    [`${key}-800`]: _swatches[`${color[key]}-800`],
-    [`${key}-900`]: _swatches[`${color[key]}-900`],
-  })
-
-  const makeColors = {
+  return {
     foreground: _swatches[color['foreground']],
     background: _swatches[color['background']],
     foregroundInvert: _swatches[color['foregroundInvert']],
@@ -124,6 +106,4 @@ export function colorTheme({ color, swatches = {} } = baseDefaults) {
     ['disabled-900']: _swatches[`${color['disabled']}-900`],
     ..._swatches,
   }
-
-  return makeColorScheme(makeColors)
 }

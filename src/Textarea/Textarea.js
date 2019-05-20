@@ -38,12 +38,37 @@ Textarea.propTypes = {
   appearance: PropTypes.oneOf([
     'primary',
     'secondary',
+    'tertiary',
+
     'accent',
+    'primary-accent',
+    'secondary-accent',
+    'tertiary-accent',
+
     'action',
+    'primary-action',
+    'secondary-action',
+    'tertiary-action',
+
     'danger',
+    'primary-danger',
+    'secondary-danger',
+    'tertiary-danger',
+
     'success',
+    'primary-success',
+    'secondary-success',
+    'tertiary-success',
+
     'warning',
+    'primary-warning',
+    'secondary-warning',
+    'tertiary-warning',
+
     'disabled',
+    'primary-disabled',
+    'secondary-disabled',
+    'tertiary-disabled',
   ]),
   widths: PropTypes.oneOf(['xsmall', 'small', 'medium', 'large', 'xlarge']),
 }

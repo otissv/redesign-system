@@ -3,13 +3,13 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-index" */ 'src/index.mdx'
     ),
-  'src/Alert/alert.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-alert-alert" */ 'src/Alert/alert.mdx'
-    ),
   'src/Accordion/accordion.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-accordion-accordion" */ 'src/Accordion/accordion.mdx'
+    ),
+  'src/Alert/alert.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-alert-alert" */ 'src/Alert/alert.mdx'
     ),
   'src/AppBar/AppBar.mdx': () =>
     import(
@@ -30,10 +30,6 @@ export const imports = {
   'src/Card/Card.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-card-card" */ 'src/Card/Card.mdx'
-    ),
-  'src/Carousel/carousel.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-carousel-carousel" */ 'src/Carousel/carousel.mdx'
     ),
   'src/Container/Container.mdx': () =>
     import(
@@ -95,13 +91,13 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-toolbar-toolbar" */ 'src/Toolbar/toolbar.mdx'
     ),
-  'src/Video/video.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-video-video" */ 'src/Video/video.mdx'
-    ),
   'src/Typography/typography.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-typography-typography" */ 'src/Typography/typography.mdx'
+    ),
+  'src/Video/video.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-video-video" */ 'src/Video/video.mdx'
     ),
   'src/theme/borders/border.mdx': () =>
     import(

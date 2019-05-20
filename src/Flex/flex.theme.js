@@ -10,7 +10,6 @@ export function flexTheme({
   wrap,
   theme,
 }) {
-  console.log(theme)
   return {
     display: display || 'flex',
     basis: basis ? `${basis}` : '',

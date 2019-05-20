@@ -15,6 +15,7 @@ export const Video = React.memo(function Video({
   className,
   embeded,
   height,
+  inview,
   muted,
   src,
   width,
@@ -29,15 +30,14 @@ export const Video = React.memo(function Video({
 
   const properties = {
     ...propsRest,
-    allowFullScreen: allowFullScreen ? 'true' : null,
-    autoPlay: autoPlay ? 'true' : null,
+    allowFullScreen: allowFullScreen ? true : null,
+    autoPlay: autoPlay ? true : null,
     height,
+    inview: inview ? true : null,
     muted: muted || null,
     src,
     width,
   }
-
-  console.log(properties.autoPlay)
 
   return (
     <Base
@@ -64,13 +64,13 @@ Video.propTypes = {
   preload: PropTypes.oneOf(['none', 'metadata', 'auto']),
   src: PropTypes.string,
   themed: PropTypes.array,
-  width: PropTypes.width,
+  width: PropTypes.string,
 }
 
 Video.defaultProps = {
   embeded: false,
   height: 'auto',
-  inView: false,
+  inview: false,
   loop: false,
   muted: false,
   playsInline: false,

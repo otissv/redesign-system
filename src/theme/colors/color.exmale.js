@@ -4,6 +4,7 @@ import Container from '../../Container/Container'
 
 import { useTheme } from '../../ThemeContext'
 import theme from '../../theme/theme'
+import { swatches } from './color.swatches'
 
 export function ColoPalette() {
   const {
@@ -20,6 +21,7 @@ export function ColoPalette() {
         {Object.keys(swatches).map(key =>
           key == '__filemeta' ? null : (
             <Container
+              key={key}
               css={`
                 text-align: center;
                 margin: 5px;

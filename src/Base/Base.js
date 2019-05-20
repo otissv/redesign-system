@@ -18,6 +18,7 @@ export function Base({
   ...propsRest
 }) {
   const { theme } = useTheme()
+
   const buildStyledThemed = props =>
     themed.reduce((acc, themeFn) => {
       return { ...acc, ...themeFn(props) }
