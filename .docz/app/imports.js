@@ -27,13 +27,13 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-button-group-button-group" */ 'src/ButtonGroup/buttonGroup.mdx'
     ),
-  'src/Card/Card.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-card-card" */ 'src/Card/Card.mdx'
-    ),
   'src/Container/Container.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-container-container" */ 'src/Container/Container.mdx'
+    ),
+  'src/Card/Card.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-card-card" */ 'src/Card/Card.mdx'
     ),
   'src/CoverImg/coverImg.mdx': () =>
     import(
@@ -43,13 +43,13 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-dropdown-dropdown" */ 'src/Dropdown/Dropdown.mdx'
     ),
-  'src/ErrorMessage/ErrorMessage.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-error-message-error-message" */ 'src/ErrorMessage/ErrorMessage.mdx'
-    ),
   'src/Flex/flex.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-flex-flex" */ 'src/Flex/flex.mdx'
+    ),
+  'src/ErrorMessage/ErrorMessage.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-error-message-error-message" */ 'src/ErrorMessage/ErrorMessage.mdx'
     ),
   'src/GoogleMaps/GoogleMaps.mdx': () =>
     import(

@@ -76,7 +76,7 @@ Typography.propTypes = {
   ]),
   href: PropTypes.string,
   textWrap: PropTypes.oneOf(['truncate', 'break', 'nowrap']),
-  element: PropTypes.oneOf([
+  as: PropTypes.oneOf([
     'a',
     'abbr',
     'code',
