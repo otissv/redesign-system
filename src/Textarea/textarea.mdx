@@ -1,0 +1,97 @@
+---
+name: Textarea
+---
+
+import { Playground, Props } from 'docz'
+import styled from 'styled-components'
+import Textarea from '../Textarea/Textarea'
+import Container from '../Container/Container'
+import { ThemeProvider } from '../ThemeContext'
+
+# Textarea
+
+<Props of={Textarea} />
+
+## Appearnace
+
+<Playground>
+  <ThemeProvider>
+    <Textarea marginBottom={3}  placeholder="Default" />
+    <Textarea marginBottom={3} placeholder="Primary" appearance="primary" />
+    <Textarea marginBottom={3} placeholder="Secondary" appearance="secondary" />
+
+    <h3>Accent</h3>
+    <Textarea marginBottom={3} placeholder="Accent" appearance="accent" />
+    <Textarea marginBottom={3} placeholder="Accent" appearance="primary-accent" />
+    <Textarea  arginBottom={3} placeholder="Accent" appearance="secondary-accent" />
+
+    <h3>Action</h3>
+    <Textarea marginBottom={3} placeholder="Action" appearance="action" />
+    <Textarea marginBottom={3} placeholder="Action" appearance="primary-action" />
+    <Textarea  arginBottom={3} placeholder="Action" appearance="secondary-action" />
+
+    <h3>Danger</h3>
+    <Textarea marginBottom={3} placeholder="Danger" appearance="danger" />
+    <Textarea marginBottom={3} placeholder="Danger" appearance="primary-danger" />
+    <Textarea  arginBottom={3} placeholder="Danger" appearance="secondary-danger" />
+
+    <h3>Success</h3>
+    <Textarea marginBottom={3} placeholder="Success" appearance="success"/>
+    <Textarea marginBottom={3} placeholder="Success" appearance="primary-success" />
+    <Textarea  arginBottom={3} placeholder="Success" appearance="secondary-success" />
+
+    <h3>Warning</h3>
+    <Textarea marginBottom={3} placeholder="Warning" appearance="warning" />
+    <Textarea marginBottom={3} placeholder="Warning" appearance="primary-warning" />
+    <Textarea  arginBottom={3} placeholder="Warning" appearance="secondary-warning" />
+
+
+    <h3>Primary</h3>
+    <Textarea marginBottom={3} placeholder="Disabled" appearance="disabled" />
+    <Textarea marginBottom={3} placeholder="Disabled" appearance="secondary-disabled" />
+    <Textarea marginBottom={3} placeholder="Disabled" appearance="secondary-disabled" />
+
+  </ThemeProvider>
+</Playground>
+
+## Widths
+
+<Playground>
+  <ThemeProvider>
+    <Textarea
+      display="block"
+      marginBottom={3}
+      placeholder="Xsmall"
+      widths="xsmall"
+      appearance="primary"
+    />
+    <Textarea
+      display="block"
+      marginBottom={3}
+      placeholder="Small"
+      widths="small"
+      appearance="primary"
+    />
+    <Textarea
+      display="block"
+      marginBottom={3}
+      placeholder="Medium"
+      widths="medium"
+      appearance="primary"
+    />
+    <Textarea
+      display="block"
+      marginBottom={3}
+      placeholder="Large"
+      widths="large"
+      appearance="primary"
+    />
+    <Textarea
+      display="block"
+      marginBottom={3}
+      placeholder="Xlarge"
+      widths="xlarge"
+      appearance="primary"
+    />
+  </ThemeProvider>
+</Playground>

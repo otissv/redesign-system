@@ -1,0 +1,35 @@
+---
+name: Error Message
+---
+
+import { Fragment } from 'react'
+import { Playground, Props } from 'docz'
+import styled from 'styled-components'
+import ErrorMessage from '../ErrorMessage/ErrorMessage'
+
+import { ThemeProvider } from '../ThemeContext'
+
+# Error Message
+
+<Props of={ErrorMessage} />
+
+## Default
+
+<Playground>
+  <ThemeProvider>
+    <ErrorMessage>Error message</ErrorMessage>
+  </ThemeProvider>
+</Playground>
+
+## Appearance
+
+<Playground>
+  <ThemeProvider>
+    <h3>Primary</h3>
+    <ErrorMessage appearance='primary'>Error message</ErrorMessage>
+
+    <h3>Secondary</h3>
+    <ErrorMessage appearance='secondary'>Error message</ErrorMessage>
+
+  </ThemeProvider>
+</Playground>

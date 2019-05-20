@@ -1,0 +1,138 @@
+---
+name: Typography
+---
+
+import { Playground, Props } from 'docz'
+import styled from 'styled-components'
+import Typography from '../Typography/Typography'
+import { ThemeProvider } from '../ThemeContext'
+import Container from '../Container/Container'
+
+# Typography
+
+<Props of={Typography} />
+
+## As
+
+<Playground>
+  <ThemeProvider>
+    <table>
+      <thead>
+        <tr>
+          <th>Prop</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>a</td>
+          <td>
+            <Typography href="#" as="a">
+              hyper link
+            </Typography>
+          </td>
+        </tr>
+        <tr>
+          <td>abbr</td>
+          <td>
+            <Typography as="abbr" title="Abbreviation Component">
+              abbr element
+            </Typography>
+          </td>
+        </tr>
+        <tr>
+          <td>code</td>
+          <td>
+            <Typography as="code">code element</Typography>
+          </td>
+        </tr>
+        <tr>
+          <td>dfn</td>
+          <td>
+            <Typography as="dfn">dfn element</Typography>
+          </td>
+        </tr>
+        <tr>
+          <td>em</td>
+          <td>
+            <Typography as="em">em element</Typography>
+          </td>
+        </tr>
+        <tr>
+          <td>h1</td>
+          <td>
+            <Typography as="h1">h1 element</Typography>
+          </td>
+        </tr>
+        <tr>
+          <td>h2</td>
+          <td>
+            <Typography as="h2">h2 element</Typography>
+          </td>
+        </tr>
+        <tr>
+          <td>h3</td>
+          <td>
+            <Typography as="h3">h3 element</Typography>
+          </td>
+        </tr>
+        <tr>
+          <td>h4</td>
+          <td>
+            <Typography as="h4">h4 element</Typography>
+          </td>
+        </tr>
+        <tr>
+          <td>h5</td>
+          <td>
+            <Typography as="h5">h5 element</Typography>
+          </td>
+        </tr>
+        <tr>
+          <td>h6</td>
+          <td>
+            <Typography as="h6">h6 element</Typography>
+          </td>
+        </tr>
+        <tr>
+          <td>hr</td>
+          <td>
+            <Typography as="hr" />
+          </td>
+        </tr>
+        <tr>
+          <td>mark</td>
+          <td>
+            <Typography as="mark">mark element</Typography>
+          </td>
+        </tr>
+        <tr>
+          <td>q</td>
+          <td>
+            <Typography as="q">q element</Typography>
+          </td>
+        </tr>
+        <tr>
+          <td>p</td>
+          <td>
+            <Typography as="p">
+              Define a paragraph using the p element.
+            </Typography>
+          </td>
+        </tr>
+        <tr>
+          <td>span</td>
+          <td>
+            <Typography as="span">span element</Typography>
+          </td>
+        </tr>
+        <tr>
+          <td>strong</td>
+          <td>
+            <Typography as="strong">strong element</Typography>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </ThemeProvider>
+</Playground>

@@ -1,0 +1,65 @@
+---
+name: Cover Image
+---
+
+import { Playground, Props } from 'docz'
+import styled from 'styled-components'
+import CoverImg from '../CoverImg/CoverImg'
+import { ThemeProvider } from '../ThemeContext'
+import Container from '../Container/Container'
+
+# Cover Image
+
+<Props of={CoverImg} />
+
+<Playground>
+  <ThemeProvider>
+    <Container margin5="bottom">
+      <CoverImg
+        css={`
+          justify-content: flex-end;
+          flex-direction: column;
+        `} 
+        src="https://images.unsplash.com/photo-1555605562-eb11c2d46767?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+      />
+    </Container>
+
+     <Container>
+      <CoverImg
+        parallax
+        css={`
+          justify-content: flex-end;
+          flex-direction: column;
+        `}
+        src="https://images.unsplash.com/photo-1545254930-06c375090cbe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+      />
+    </Container>
+
+    <Container>
+      <CoverImg
+        css={`
+          justify-content: flex-end;
+          flex-direction: column;
+        `}
+        src="https://images.unsplash.com/photo-1495954484750-af469f2f9be5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+      >
+        <Container css={`
+          position: absolute;
+          background #000;
+          opacity: 0.6;
+          width: inherit;
+          height: inherit;
+        `}/>
+
+        <Container css={`
+          position: absolute;
+          display: flex;
+          padding: 24px;
+        `}>
+          <h1>With Context</h1>
+        </Container>
+      </CoverImg>
+    </Container>
+
+  </ThemeProvider>
+</Playground>

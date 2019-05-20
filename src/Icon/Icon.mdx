@@ -1,0 +1,27 @@
+---
+name: Icon
+---
+
+import { Fragment } from 'react'
+import { Playground, Props } from 'docz'
+import styled from 'styled-components'
+import Icon from '../Icon/Icon'
+import { AccessAlarm } from '../MaterialIcons/AccessAlarm'
+import { Home } from '../MaterialIcons/Home'
+
+import { ThemeProvider } from '../ThemeContext'
+
+# Icon
+
+## Properties
+
+<Props of={Icon} />
+
+## Default
+
+<Playground>
+  <ThemeProvider appearance="primary">
+    <AccessAlarm />
+    <Home appearace="primary" />
+  </ThemeProvider>
+</Playground>

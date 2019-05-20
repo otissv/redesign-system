@@ -1,0 +1,357 @@
+---
+name: Borders
+---
+
+import { Playground, Props } from 'docz'
+import Container from '../../Container/Container'
+import Flex from '../../Flex/Flex'
+import { ThemeProvider } from '../../ThemeContext'
+import theme from '../../theme/theme'
+
+# Borders
+
+## Thin
+
+<Playground>
+  <ThemeProvider>
+    <Flex wrap="wrap">
+      <Container margin5="right bottom" css="text-align: center">
+        <Container
+          border="thin"
+          css={`
+            height: 100px;
+            width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+          `}
+        />
+        thin
+      </Container>
+      <Container margin5="right bottom" css="text-align: center">
+        <Container
+          border="thinDashed"
+          css={`
+            height: 100px;
+            width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+          `}
+        />
+        thinDashed
+      </Container>
+      <Container margin5="right bottom" css="text-align: center">
+        <Container
+          border="thinDashedInvert"
+          css={`
+            height: 100px;
+            width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+          `}
+        />
+        thinDashedInvert
+      </Container>
+      <Container margin5="right bottom" css="text-align: center">
+        <Container
+          border="thinInvert"
+          css={`
+            height: 100px;
+            width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+          `}
+        />
+        thinInvert
+      </Container>
+      <Container margin5="right bottom" css="text-align: center">
+        <Container
+          border="thinTransparent"
+          css={`
+            height: 100px;
+            width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+          `}
+        />
+        thinTransparent
+      </Container>
+    </Flex>
+  </ThemeProvider>
+</Playground>
+
+## Thick
+
+<Playground>
+  <ThemeProvider>
+    <Flex wrap="wrap">
+      <Container margin5="right bottom" css="text-align: center">
+        <Container
+          border="thick"
+          css={`
+            height: 100px;
+            width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+          `}
+        />
+        thick
+      </Container>
+      <Container margin5="right bottom" css="text-align: center">
+        <Container
+          border="thickDashed"
+          css={`
+            height: 100px;
+            width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+          `}
+        />
+        thickDashed
+      </Container>
+      <Container margin5="right bottom" css="text-align: center">
+        <Container
+          border="thickDashedInvert"
+          css={`
+            height: 100px;
+            width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+          `}
+        />
+        thickDashedInvert
+      </Container>
+      <Container margin5="right bottom" css="text-align: center">
+        <Container
+          border="thickInvert"
+          css={`
+            height: 100px;
+            width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+          `}
+        />
+        thickInvert
+      </Container>
+      <Container margin5="right bottom" css="text-align: center">
+        <Container
+          border="thickTransparent"
+          css={`
+            height: 100px;
+            width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+          `}
+        />
+        thickTransparent
+      </Container>
+    </Flex>
+  </ThemeProvider>
+</Playground>
+
+## Apperance
+
+<Playground>
+  <ThemeProvider>
+
+    <h3>Accent</h3>
+    <Flex wrap="wrap">
+      <Container margin5="right bottom" css="text-align: center">
+        <Container
+          border="thinAccent"
+          css={`
+            height: 100px;
+            width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+          `}
+        />
+        thinAccent
+      </Container>
+      <Container margin5="right bottom" css="text-align: center">
+        <Container
+          border="thickAccent"
+          css={`
+            height: 100px;
+            width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+          `}
+        />
+        thickAccent
+      </Container>
+      <Container margin5="right bottom" css="text-align: center">
+        <Container
+          border="thickDashedAccent"
+          css={`
+            height: 100px;
+            width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+          `}
+        />
+        thickDashedAccent
+      </Container>
+    </Flex>
+
+    <h3>Action</h3>
+    <Flex wrap="wrap">
+      <Container margin5="right bottom" css="text-align: center">
+        <Container
+          border="thinAction"
+          css={`
+            height: 100px;
+            width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+          `}
+        />
+        thiActiont
+      </Container>
+      <Container margin5="right bottom" css="text-align: center">
+        <Container
+          border="thickAction"
+          css={`
+            height: 100px;
+            width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+          `}
+        />
+        thickAction
+      </Container>
+      <Container margin5="right bottom" css="text-align: center">
+        <Container
+          border="thickDashedAction"
+          css={`
+            height: 100px;
+            width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+          `}
+        />
+        thickDashedAction
+      </Container>
+    </Flex>
+
+    <h3>Danger</h3>
+    <Flex wrap="wrap">
+      <Container margin5="right bottom" css="text-align: center">
+        <Container
+          border="thinDanger"
+          css={`
+            height: 100px;
+            width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+          `}
+        />
+        thiDangert
+      </Container>
+      <Container margin5="right bottom" css="text-align: center">
+        <Container
+          border="thickDanger"
+          css={`
+            height: 100px;
+            width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+          `}
+        />
+        thickDanger
+      </Container>
+      <Container margin5="right bottom" css="text-align: center">
+        <Container
+          border="thickDashedDanger"
+          css={`
+            height: 100px;
+            width: 100px;
+            margin-left: auto;
+             margin-right: auto;
+          `}
+        />
+        thickDashedDanger
+      </Container>
+    </Flex>
+
+    <h3>Success</h3>
+    <Flex wrap="wrap">
+      <Container margin5="right bottom" css="text-align: center">
+        <Container
+          border="thinSuccess"
+          css={`
+            height: 100px;
+            width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+          `}
+        />
+        thiSuccesst
+      </Container>
+      <Container margin5="right bottom" css="text-align: center">
+        <Container
+          border="thickSuccess"
+          css={`
+            height: 100px;
+            width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+          `}
+        />
+        thickSuccess
+      </Container>
+      <Container margin5="right bottom" css="text-align: center">
+        <Container
+          border="thickDashedSuccess"
+          css={`
+            height: 100px;
+            width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+          `}
+        />
+        thickDashedSuccess
+      </Container>
+    </Flex>
+
+    <h3>Action</h3>
+    <Flex wrap="wrap">
+      <Container margin5="right bottom" css="text-align: center">
+        <Container
+          border="thinAction"
+          css={`
+            height: 100px;
+            width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+          `}
+        />
+        thiActiont
+      </Container>
+      <Container margin5="right bottom" css="text-align: center">
+        <Container
+          border="thickAction"
+          css={`
+            height: 100px;
+            width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+          `}
+        />
+        thickAction
+      </Container>
+      <Container margin5="right bottom" css="text-align: center">
+        <Container
+          border="thickDashedAction"
+          css={`
+            height: 100px;
+            width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+          `}
+        />
+        thickDashedAction
+      </Container>
+    </Flex>
+
+  </ThemeProvider>
+</Playground>

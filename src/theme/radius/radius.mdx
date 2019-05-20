@@ -1,0 +1,45 @@
+---
+name: Radius
+---
+
+import { Playground, Props } from 'docz'
+import Container from '../../Container/Container'
+import Flex from '../../Flex/Flex'
+import { ThemeProvider } from '../../ThemeContext'
+import theme from '../../theme/theme'
+
+# Radius
+
+<ThemeProvider>
+  <Flex wrap='wrap'>
+    <Container css={`text-align: center`}>
+      <Container
+        radius='circle'
+        css={`
+          margin: 20px;
+          width: 200px;
+          height: 200px;
+          background: #fff;
+        `}
+      />
+      circle
+    </Container>
+
+    <Container
+      css={`
+        text-align: center;
+      `}>
+      <Container
+        radius='rounded'
+        css={`
+          margin: 20px;
+          width: 200px;
+          height: 200px;
+          background: #fff;
+        `}
+      />
+      rounded
+    </Container>
+
+  </Flex>
+</ThemeProvider>

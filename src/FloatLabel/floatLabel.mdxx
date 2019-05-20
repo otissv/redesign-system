@@ -1,0 +1,210 @@
+---
+name: Float Label
+---
+
+import { Playground, Props } from 'docz'
+import styled from 'styled-components'
+import FloatLabel, { FloatConsumer } from '../FloatLabel/FloatLabel'
+import Input from '../Input/Input'
+import Textarea from '../Textarea/Textarea'
+
+import { ThemeProvider } from '../ThemeContext'
+
+# Float Label
+
+<Props of={FloatLabel} />
+
+## Default
+
+<Playground>
+  <ThemeProvider>
+    <FloatLabel label="Default input">
+      <FloatConsumer>
+        {floatLabelContext => <Input {...floatLabelContext} />}
+      </FloatConsumer>
+    </FloatLabel>
+  </ThemeProvider>
+</Playground>
+
+## Input
+
+<Playground>
+  <ThemeProvider>
+    <FloatLabel label="Email" element="text">
+      <FloatConsumer>
+        {floatLabelContext => <Input {...floatLabelContext} />}
+      </FloatConsumer>
+    </FloatLabel>
+  </ThemeProvider>
+</Playground>
+
+## Input Context
+
+<Playground>
+  <ThemeProvider>
+    <FloatLabel label="Accent" context="accent">
+      <FloatConsumer>
+        {floatLabelContext => <Input {...floatLabelContext} />}
+      </FloatConsumer>
+    </FloatLabel>
+    <FloatLabel label="Danger" context="danger">
+      <FloatConsumer>
+        {floatLabelContext => <Input {...floatLabelContext} />}
+      </FloatConsumer>
+    </FloatLabel>
+    <FloatLabel label="Blank" context="blank">
+      <FloatConsumer>
+        {floatLabelContext => <Input {...floatLabelContext} />}
+      </FloatConsumer>
+    </FloatLabel>
+    <FloatLabel label="Primary" context="primary">
+      <FloatConsumer>
+        {floatLabelContext => <Input {...floatLabelContext} />}
+      </FloatConsumer>
+    </FloatLabel>
+    <FloatLabel label="Success" context="success">
+      <FloatConsumer>
+        {floatLabelContext => <Input {...floatLabelContext} />}
+      </FloatConsumer>
+    </FloatLabel>
+    <FloatLabel label="Warning" context="warning">
+      <FloatConsumer>
+        {floatLabelContext => <Input {...floatLabelContext} />}
+      </FloatConsumer>
+    </FloatLabel>
+  </ThemeProvider>
+</Playground>
+
+## Input Size
+
+<Playground>
+  <ThemeProvider>
+    <FloatLabel label="Small" size="small">
+      <FloatConsumer>
+        {floatLabelContext => <Input {...floatLabelContext} />}
+      </FloatConsumer>
+    </FloatLabel>
+    <FloatLabel label="Large" size="large">
+      <FloatConsumer>
+        {floatLabelContext => <Input {...floatLabelContext} />}
+      </FloatConsumer>
+    </FloatLabel>
+  </ThemeProvider>
+</Playground>
+
+## Input Widths
+
+<Playground>
+  <ThemeProvider>
+    <FloatLabel label="Xsmall" widths="xsmall">
+      <FloatConsumer>
+        {floatLabelContext => <Input {...floatLabelContext} />}
+      </FloatConsumer>
+    </FloatLabel>
+    <FloatLabel label="Small" widths="small">
+      <FloatConsumer>
+        {floatLabelContext => <Input {...floatLabelContext} />}
+      </FloatConsumer>
+    </FloatLabel>
+    <FloatLabel label="Medium" widths="medium">
+      <FloatConsumer>
+        {floatLabelContext => <Input {...floatLabelContext} />}
+      </FloatConsumer>
+    </FloatLabel>
+    <FloatLabel label="Large" widths="large">
+      <FloatConsumer>
+        {floatLabelContext => <Input {...floatLabelContext} />}
+      </FloatConsumer>
+    </FloatLabel>
+    <FloatLabel label="Xlarge" widths="xlarge">
+      <FloatConsumer>
+        {floatLabelContext => <Input {...floatLabelContext} />}
+      </FloatConsumer>
+    </FloatLabel>
+  </ThemeProvider>
+</Playground>
+
+## Textarea
+
+<Playground>
+  <ThemeProvider>
+    <FloatLabel label="Texrarea" element="textarea">
+      <FloatConsumer>
+        {floatLabelContext => <Textarea {...floatLabelContext} />}
+      </FloatConsumer>
+    </FloatLabel>
+  </ThemeProvider>
+</Playground>
+
+## Textarea Context
+
+<Playground>
+  <ThemeProvider>
+ <FloatLabel label="Accent" element="textarea" context="accent" >
+    <FloatConsumer>
+        {floatLabelContext => <Textarea {...floatLabelContext} />}
+      </FloatConsumer>
+    </FloatLabel>
+
+    <FloatLabel label="Danger" element="textarea" context="danger">
+      <FloatConsumer>
+        {floatLabelContext => <Textarea {...floatLabelContext}  />}
+      </FloatConsumer>
+    </FloatLabel>
+
+    <FloatLabel label="Primary" element="textarea" context="primary">
+      <FloatConsumer>
+        {floatLabelContext => <Textarea {...floatLabelContext} />}
+      </FloatConsumer>
+    </FloatLabel>
+
+    <FloatLabel label="Success" element="textarea" context="success">
+      <FloatConsumer>
+        {floatLabelContext => <Textarea {...floatLabelContext}  />}
+      </FloatConsumer>
+    </FloatLabel>
+
+    <FloatLabel label="Warning" element="textarea" context="warning">
+      <FloatConsumer>
+        {floatLabelContext => <Textarea {...floatLabelContext}  />}
+      </FloatConsumer>
+    </FloatLabel>
+
+  </ThemeProvider>
+</Playground>
+
+## Textarea Widths
+
+<Playground>
+  <ThemeProvider>
+   <FloatLabel label="Xsmall" element="textarea" widths="xsmall" >
+      <FloatConsumer>
+        {floatLabelContext => <Textarea {...floatLabelContext} />}
+      </FloatConsumer>
+    </FloatLabel>
+
+     <FloatLabel label="Small" element="textarea" widths="small">
+      <FloatConsumer>
+        {floatLabelContext => <Textarea {...floatLabelContext} />}
+      </FloatConsumer>
+    </FloatLabel>
+
+     <FloatLabel label="Medium" element="textarea" widths="medium">
+      <FloatConsumer>
+        {floatLabelContext => <Textarea {...floatLabelContext} />}
+      </FloatConsumer>
+    </FloatLabel>
+
+     <FloatLabel label="Large" element="textarea" widths="large">
+      <FloatConsumer>
+        {floatLabelContext => <Textarea {...floatLabelContext}/>}
+      </FloatConsumer>
+    </FloatLabel>
+     <FloatLabel label="Xlarge" element="textarea">
+      <FloatConsumer>
+        {floatLabelContext => <Textarea {...floatLabelContext}/>}
+      </FloatConsumer>
+    </FloatLabel>
+
+  </ThemeProvider>
+</Playground>

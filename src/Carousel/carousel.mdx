@@ -1,0 +1,46 @@
+---
+name: Carousel
+---
+
+import { Fragment } from 'react'
+import { Playground, Props } from 'docz'
+import styled from 'styled-components'
+import { Carousel, CarouselNext, CarouselPrevious } from '../Carousel/Carousel'
+
+import { ThemeProvider } from '../ThemeContext'
+import CoverImg from '../CoverImg/CoverImg'
+
+# Carousel
+
+## Properties
+
+<Props of={Carousel} />
+
+<Playground>
+  <ThemeProvider>
+    <Carousel>
+      <CarouselPrevious>Prev</CarouselPrevious>
+      <CarouselNext>Next</CarouselNext>
+      <CoverImg src="https://images.unsplash.com/photo-1522443286374-01dc7e91433a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"/>
+      <CoverImg src="https://images.unsplash.com/photo-1555605562-eb11c2d46767?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"/>
+      <CoverImg
+        src="https://images.unsplash.com/photo-1553615738-d8e0829f1d61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80"
+      />
+
+      <CoverImg
+        src="https://images.unsplash.com/photo-1533331639-74f1863c7b3c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+      />
+      <CoverImg
+        src="https://images.unsplash.com/photo-1553696590-4b3f68898333?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+      />
+      <CoverImg
+        src="https://images.unsplash.com/photo-1553289038-6638b1a1802a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"
+      />
+      <CoverImg
+        src="https://images.unsplash.com/photo-1551482850-d649f078ed01?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+      />
+
+    </Carousel>
+
+  </ThemeProvider>
+</Playground>

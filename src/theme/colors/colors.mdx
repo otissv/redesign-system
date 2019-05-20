@@ -1,0 +1,43 @@
+---
+name: Colors
+---
+
+import { Playground, Props } from 'docz'
+import Container from '../../Container/Container'
+import Flex from '../../Flex/Flex'
+import { ThemeProvider } from '../../ThemeContext'
+import theme from '../../theme/theme'
+import { ColoPalette, ColorSwatch } from './color.exmale.js'
+
+# Colors
+
+## Theme Colors
+
+<ThemeProvider>
+  <Flex
+  wrap="wrap">
+  <ColorSwatch label="foreground" color1='foreground' />
+  <ColorSwatch label="background" color1='background' />
+  <ColorSwatch label="transparent" color1='transparent' />
+  <ColorSwatch label="foregroundInverted" color1='foreground' />
+  <ColorSwatch label="backgroundInverted" color1='background' />
+  <ColorSwatch label="active" color1='active' />
+    
+  </Flex>
+
+  <Flex
+  wrap="wrap">
+  <ColorSwatch label="accent" color1="accent" color2="accent2" />
+  <ColorSwatch label="action" color1="action" color2="action2" />
+  <ColorSwatch label="success" color1="success" color2="success2" />
+  <ColorSwatch label="warning" color1="warning" color2="warning2" />
+  <ColorSwatch label="danger" color1="danger" color2="danger2" />
+  <ColorSwatch label="disabled" color1="disabled" color2="disabled2" />
+  </Flex>
+</ThemeProvider>
+
+## Swatches
+
+<ThemeProvider>
+  <ColoPalette />
+</ThemeProvider>

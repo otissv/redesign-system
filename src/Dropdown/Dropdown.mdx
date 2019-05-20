@@ -1,0 +1,36 @@
+---
+name: Dropdown
+---
+
+import { Fragment } from 'react'
+import { Playground, Props } from 'docz'
+import styled from 'styled-components'
+import Dropdown from './Dropdown'
+import Container from '../Container/Container'
+import { ThemeProvider } from '../ThemeContext'
+
+# Dropdown
+
+<Props of={Dropdown} />
+
+## Default
+
+<Playground>
+  <ThemeProvider>
+    <Dropdown uid="menu1" label="Dropdown">
+      <Container
+        margin1="top"
+        radius="rounded"
+        padding="default"
+        elevate={3}
+        css="background: #fff; color:#000">
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+        </ul>
+      </Container>
+    </Dropdown>
+  </ThemeProvider>
+</Playground>

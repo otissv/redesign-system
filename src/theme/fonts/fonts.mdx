@@ -1,0 +1,297 @@
+---
+name: Fonts
+---
+
+import { Playground, Props } from 'docz'
+import Container from '../../Container/Container'
+import Flex from '../../Flex/Flex'
+import { ThemeProvider } from '../../ThemeContext'
+import theme from '../../theme/theme'
+import { Typography } from '../../Typography'
+
+# Fonts
+
+## Color
+
+<ThemeProvider>
+  <Flex
+    css={`
+      max-width: 768px;
+    `}>
+    <Container
+      margin5="right"
+      css={`
+        background: ${theme.font.color};
+        height: 100px;
+        width: 100px;
+        border: ${theme.border.thin}
+      `}
+    />
+      <p>Font color</p>
+
+    <Container
+      css={`
+        background: ${theme.font.colorInvert};
+        height: 100px;
+        width: 100px;
+        border: ${theme.border.thin}
+      `}
+    />
+      <p>Font color Inverted</p>
+
+  </Flex>
+</ThemeProvider>
+
+## Family
+
+### Serif
+
+<ThemeProvider>
+ <Container
+    css={`
+      max-width: 768px;
+    `}>
+
+    <p>The quick brown fox jumps over the lazy dog</p>
+    <p>system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif</p>
+    </Container>
+
+</ThemeProvider>
+
+### Sans
+
+<ThemeProvider>
+ <Container
+    css={`
+      max-width: 768px;
+    `}>
+
+     <p>The quick brown fox jumps over the lazy dog</p>
+    <p></p>
+    </Container>
+
+</ThemeProvider>
+
+### Code
+
+<ThemeProvider>
+  <Container
+    css={`
+      max-width: 768px;
+    `}>
+    <code>{`<div>Hello, World<div>`}</code>
+    <p>
+      Source Code Pro, Consolas, Inconsolata, Source Code Pro, Monaco, monospace
+    </p>
+  </Container>
+</ThemeProvider>
+
+## Size
+
+<ThemeProvider>
+ <Container
+    css={`
+      max-width: 768px;
+
+      table {
+        width: 100%;
+      }
+      th, td {
+        border-bottom: 1px solid ${theme.color['grey-100']}
+      }
+      tr:last-child td {
+        border-bottom: none;
+      }
+
+      tr {
+        text-align: left;
+      }
+
+      td {
+        vertical-align: top;
+      }
+    `}>
+    <table>
+    <thead>
+      <tr>
+        <th>Value</th>
+        <th>Example</th>
+      </tr>
+    </thead>
+      <tbody>
+      <tr>
+          <td>default</td>
+          <td><Typography fontSize='default' element='span'>The quick brown fox jumps over the lazy dog</Typography></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td><Typography fontSize={1}  element='span' >The quick brown fox jumps over the lazy dog</Typography></td>
+        </tr>
+         <tr>
+          <td>2</td>
+          <td><Typography fontSize={2} element='span'>The quick brown fox jumps over the lazy dog</Typography></td>
+        </tr>
+         <tr>
+          <td>3</td>
+          <td><Typography fontSize={3} element='span'>The quick brown fox jumps over the lazy dog</Typography></td>
+        </tr>
+         <tr>
+          <td>4</td>
+          <td><Typography fontSize={4} element='span'>The quick brown fox jumps over the lazy dog</Typography></td>
+        </tr>
+         <tr>
+          <td>5</td>
+          <td><Typography fontSize={5} element='span'>The quick brown fox jumps over the lazy dog</Typography></td>
+        </tr>
+         <tr>
+          <td>6</td>
+          <td><Typography fontSize={6} element='span'>The quick brown fox jumps over the lazy dog</Typography></td>
+        </tr>
+         <tr>
+          <td>7</td>
+          <td><Typography fontSize={7} element='span'>The quick brown fox jumps over the lazy dog</Typography></td>
+        </tr>
+         <tr>
+          <td>8</td>
+          <td><Typography fontSize={8} element='span'>The quick brown fox jumps over the lazy dog</Typography></td>
+        </tr>
+         <tr>
+          <td>9</td>
+          <td><Typography fontSize={9} element='span'>The quick brown fox jumps over the lazy dog</Typography></td>
+        </tr>
+         <tr>
+          <td>10</td>
+          <td><Typography fontSize={10} element='span'>The quick brown fox jumps over the lazy dog</Typography></td>
+        </tr>
+         <tr>
+          <td>11</td>
+          <td><Typography fontSize={11} element='span'>The quick brown fox jumps over the lazy dog</Typography></td>
+        </tr>
+         <tr>
+          <td>12</td>
+          <td><Typography fontSize={12} element='span'>The quick brown fox jumps over the lazy dog</Typography></td>
+        </tr>
+      </tbody>
+    </table>
+
+    </Container>
+
+</ThemeProvider>
+
+## Line Height
+
+<ThemeProvider>
+  <Container css={`
+      max-width: 768px;
+      tr {
+        text-align: left;
+      }
+      table {
+        width: 100%;
+      }
+      th, td {
+        border-bottom: 1px solid ${theme.color['grey-100']}
+      }
+      tr:last-child td {
+        border-bottom: none;
+      }
+    `}>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Line height</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>default</td>
+          <td>1.5</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>1.5</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>1.75</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>2</td>
+        </tr>
+      </tbody>
+    </table>
+    </Container>
+
+</ThemeProvider>
+
+# Weight
+
+<ThemeProvider>
+  <Container css={`
+      max-width: 768px;
+      tr {
+        text-align: left;
+      }
+      table {
+        width: 100%;
+      }
+      th, td {
+        border-bottom: 1px solid ${theme.color['grey-100']}
+      }
+      tr:last-child td {
+        border-bottom: none;
+      }
+    `}>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>default</td>
+          <td><Typography fontWeight='default' element='span'>The quick brown fox jumps over the lazy dog</Typography></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td><Typography fontWeight={1} element='span'>The quick brown fox jumps over the lazy dog</Typography></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><Typography fontWeight={2} element='span'>The quick brown fox jumps over the lazy dog</Typography></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><Typography fontWeight={3} element='span'>The quick brown fox jumps over the lazy dog</Typography></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><Typography fontWeight={4} element='span'>The quick brown fox jumps over the lazy dog</Typography></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td><Typography fontWeight={5} element='span'>The quick brown fox jumps over the lazy dog</Typography></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td><Typography fontWeight={6} element='span'>The quick brown fox jumps over the lazy dog</Typography></td>
+        </tr>
+          <tr>
+          <td>normal</td>
+          <td><Typography fontWeight='normal' element='span'>The quick brown fox jumps over the lazy dog</Typography></td>
+        </tr>
+      </tbody>
+    </table>
+    </Container>
+
+</ThemeProvider>

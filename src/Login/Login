@@ -1,0 +1,117 @@
+import React from 'react';
+import styled from 'styled-components';
+
+import { setTheme, sharedStyles } from '../utils';
+import { ThemeConsumer } from '../ThemeContext';
+
+import { button } from '../Button';
+import { loginTheme } from './login.theme';
+import { loginTabsTheme } from './login-tabs.theme';
+import { FormControl } from '../FormControl';
+import { Input } from '../Input';
+import { Form } from '../Form';
+import { Error } from '../Error';
+
+const LoginStyled = styled.div`
+  ${loginTheme};
+  ${sharedStyles};
+  ${props => props.styled};
+`;
+
+const LoginTabs = styled.div`
+  ${loginTabsTheme};
+  ${props => props.styledLoginTabs};
+`;
+
+const Button = button`
+    ${({ active, theme: { colors } }) => `
+        ${
+          active
+            ? `background: ${colors.accent}; 
+            color: #fff;
+
+            &:hover {
+                background: ${colors.accent2};  
+            }
+            `
+            : ''
+        }
+    `}
+    
+`;
+
+interface LoginPropTypes {
+  active: string;
+  onChange: (any) => any;
+  onSignInClick: (any) => any;
+  onSignUpClick: (any) => any;
+  onSubmit: (any) => any;
+  showError?: boolean;
+  theme?: ThemeInterface;
+  styledLoginTabs?: string;
+}
+
+export class Login extends React.Component<LoginPropTypes> {
+  static defaultProps = {
+    showError: false
+  };
+
+  render() {
+    const buttonText = this.props.active === '/signin' ? 'Sign In' : 'Sign Up';
+
+    const { active, onChange, onSignInClick, onSignUpClick, onSubmit, showError } = this.props;
+
+    return (
+      <ThemeConsumer>
+        {theme => {
+          const themeContext = setTheme(this.props.theme, theme);
+
+          return (
+            <LoginStyled theme={themeContext} {...this.props}>
+              <LoginTabs theme={themeContext}>
+                <Button
+                  theme={themeContext}
+                  stretch
+                  active={active === '/signin'}
+                  onClick={onSignInClick}>
+                  Sign in
+                </Button>
+                <Button
+                  theme={themeContext}
+                  stretch
+                  active={active === '/signup'}
+                  onClick={onSignUpClick}>
+                  Sign up
+                </Button>
+              </LoginTabs>
+
+              <Error theme={themeContext} show={showError}>
+                User name or password is incorrect
+              </Error>
+
+              <Form theme={themeContext} onSubmit={onSubmit}>
+                {active === '/signup' ? (
+                  <FormControl label="Name" htmlFor="name">
+                    <Input theme={themeContext} name="name" onChange={onChange} />
+                  </FormControl>
+                ) : null}
+                <FormControl label="Username" htmlFor="username">
+                  <Input theme={themeContext} name="username" onChange={onChange} />
+                </FormControl>
+                Input
+                <FormControl label="Password" htmlFor="password">
+                  <Input theme={themeContext} name="password" type="password" onChange={onChange} />
+                </FormControl>
+                <Button theme={themeContext} stretch context="primary" type="submit">
+                  {buttonText}
+                </Button>
+              </Form>
+            </LoginStyled>
+          );
+        }}
+      </ThemeConsumer>
+    );
+  }
+}
+
+export const login = styled(Login);

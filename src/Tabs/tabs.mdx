@@ -1,0 +1,194 @@
+---
+name: Tabs
+---
+
+import { Fragment } from 'react'
+import { Playground, Props } from 'docz'
+import Tabs from '../Tabs/Tabs'
+import { TabList } from '../Tabs/TabList'
+import { TabListButton } from '../Tabs/TabListButton'
+import { TabPanel } from '../Tabs/TabPanel'
+
+import styled from 'styled-components'
+import { ThemeProvider } from '../ThemeContext'
+
+# Tabs
+
+## Properties
+
+<Props of={Tabs} />
+
+## Default
+
+<Playground>
+  <ThemeProvider>
+   <Tabs>
+      <TabList active="1">      
+        <TabListButton title='Tab1' uid='1'>Tab 1</TabListButton>
+        <TabListButton title='Tab2' uid='2'>Tab 2</TabListButton>
+        <TabListButton title='Tab3' uid='3'>Tab 3</TabListButton>
+        <TabListButton title='Tab4' uid='4'>Tab 4</TabListButton>
+        <TabListButton title='Tab5' uid='5'>Tab 5</TabListButton>
+        <TabListButton title='Tab6' uid='6'>Tab 6</TabListButton>
+        <TabListButton title='Tab7' uid='7'>Tab 7</TabListButton>
+        <TabListButton title='Tab8' uid='8'>Tab 8</TabListButton>
+        <TabListButton title='Tab9' uid='9'>Tab 9</TabListButton>
+      </TabList>
+
+      <TabPanel uid="1">
+        <h3>Tab 1</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Nam a nisl at leo porta suscipit et vel diam. Maecenas venenatis consectetur
+          tortor, quis fermentum orci tristique ut. Etiam tristique sollicitudin
+          feugiat. Morbi bibendum commodo quam malesuada venenatis. Nullam eu enim
+          quis neque fringilla venenatis id vel eros. Integer volutpat leo sit amet
+          imperdiet ultricies. Ut vestibulum pretium quam, mollis mollis leo
+          consectetur sit amet. Sed vitae sodales felis. Praesent nibh dolor,
+          hendrerit ac rutrum vitae, faucibus sed nisi. Pellentesque faucibus urna
+          turpis, sed suscipit ipsum consectetur vitae. Sed vel eleifend odio, sit
+          amet pulvinar leo. Suspendisse et ipsum dictum neque porta sodales non ut
+          turpis. Etiam id iaculis ipsum. Nam tristique ligula odio, ac mollis erat
+          consectetur molestie.
+         </p>
+      </TabPanel>
+      <TabPanel uid="2">
+        <h3>Tab 2</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Nam a nisl at leo porta suscipit et vel diam. Maecenas venenatis consectetur
+          tortor, quis fermentum orci tristique ut. Etiam tristique sollicitudin
+          feugiat. Morbi bibendum commodo quam malesuada venenatis. Nullam eu enim
+          quis neque fringilla venenatis id vel eros. Integer volutpat leo sit amet
+          imperdiet ultricies. Ut vestibulum pretium quam, mollis mollis leo
+          consectetur sit amet. Sed vitae sodales felis. Praesent nibh dolor,
+          hendrerit ac rutrum vitae, faucibus sed nisi. Pellentesque faucibus urna
+          turpis, sed suscipit ipsum consectetur vitae. Sed vel eleifend odio, sit
+          amet pulvinar leo. Suspendisse et ipsum dictum neque porta sodales non ut
+          turpis. Etiam id iaculis ipsum. Nam tristique ligula odio, ac mollis erat
+          consectetur molestie.
+         </p>
+      </TabPanel>
+      <TabPanel uid="3">
+        <h3>Tab 3</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Nam a nisl at leo porta suscipit et vel diam. Maecenas venenatis consectetur
+          tortor, quis fermentum orci tristique ut. Etiam tristique sollicitudin
+          feugiat. Morbi bibendum commodo quam malesuada venenatis. Nullam eu enim
+          quis neque fringilla venenatis id vel eros. Integer volutpat leo sit amet
+          imperdiet ultricies. Ut vestibulum pretium quam, mollis mollis leo
+          consectetur sit amet. Sed vitae sodales felis. Praesent nibh dolor,
+          hendrerit ac rutrum vitae, faucibus sed nisi. Pellentesque faucibus urna
+          turpis, sed suscipit ipsum consectetur vitae. Sed vel eleifend odio, sit
+          amet pulvinar leo. Suspendisse et ipsum dictum neque porta sodales non ut
+          turpis. Etiam id iaculis ipsum. Nam tristique ligula odio, ac mollis erat
+          consectetur molestie.
+         </p>
+      </TabPanel>
+      <TabPanel uid="4">
+        <h3>Tab 4</h3>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Nam a nisl at leo porta suscipit et vel diam. Maecenas venenatis consectetur
+          tortor, quis fermentum orci tristique ut. Etiam tristique sollicitudin
+          feugiat. Morbi bibendum commodo quam malesuada venenatis. Nullam eu enim
+          quis neque fringilla venenatis id vel eros. Integer volutpat leo sit amet
+          imperdiet ultricies. Ut vestibulum pretium quam, mollis mollis leo
+          consectetur sit amet. Sed vitae sodales felis. Praesent nibh dolor,
+          hendrerit ac rutrum vitae, faucibus sed nisi. Pellentesque faucibus urna
+          turpis, sed suscipit ipsum consectetur vitae. Sed vel eleifend odio, sit
+          amet pulvinar leo. Suspendisse et ipsum dictum neque porta sodales non ut
+          turpis. Etiam id iaculis ipsum. Nam tristique ligula odio, ac mollis erat
+          consectetur molestie.
+        </p>
+      </TabPanel>
+      <TabPanel uid="5">
+        <h3>Tab 5</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Nam a nisl at leo porta suscipit et vel diam. Maecenas venenatis consectetur
+          tortor, quis fermentum orci tristique ut. Etiam tristique sollicitudin
+          feugiat. Morbi bibendum commodo quam malesuada venenatis. Nullam eu enim
+          quis neque fringilla venenatis id vel eros. Integer volutpat leo sit amet
+          imperdiet ultricies. Ut vestibulum pretium quam, mollis mollis leo
+          consectetur sit amet. Sed vitae sodales felis. Praesent nibh dolor,
+          hendrerit ac rutrum vitae, faucibus sed nisi. Pellentesque faucibus urna
+          turpis, sed suscipit ipsum consectetur vitae. Sed vel eleifend odio, sit
+          amet pulvinar leo. Suspendisse et ipsum dictum neque porta sodales non ut
+          turpis. Etiam id iaculis ipsum. Nam tristique ligula odio, ac mollis erat
+          consectetur molestie.
+         </p>
+      </TabPanel>
+      <TabPanel uid="6">
+        <h3>Tab 6</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Nam a nisl at leo porta suscipit et vel diam. Maecenas venenatis consectetur
+          tortor, quis fermentum orci tristique ut. Etiam tristique sollicitudin
+          feugiat. Morbi bibendum commodo quam malesuada venenatis. Nullam eu enim
+          quis neque fringilla venenatis id vel eros. Integer volutpat leo sit amet
+          imperdiet ultricies. Ut vestibulum pretium quam, mollis mollis leo
+          consectetur sit amet. Sed vitae sodales felis. Praesent nibh dolor,
+          hendrerit ac rutrum vitae, faucibus sed nisi. Pellentesque faucibus urna
+          turpis, sed suscipit ipsum consectetur vitae. Sed vel eleifend odio, sit
+          amet pulvinar leo. Suspendisse et ipsum dictum neque porta sodales non ut
+          turpis. Etiam id iaculis ipsum. Nam tristique ligula odio, ac mollis erat
+          consectetur molestie.
+         </p>
+      </TabPanel>
+      <TabPanel uid="7">
+        <h3>Tab 7</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Nam a nisl at leo porta suscipit et vel diam. Maecenas venenatis consectetur
+          tortor, quis fermentum orci tristique ut. Etiam tristique sollicitudin
+          feugiat. Morbi bibendum commodo quam malesuada venenatis. Nullam eu enim
+          quis neque fringilla venenatis id vel eros. Integer volutpat leo sit amet
+          imperdiet ultricies. Ut vestibulum pretium quam, mollis mollis leo
+          consectetur sit amet. Sed vitae sodales felis. Praesent nibh dolor,
+          hendrerit ac rutrum vitae, faucibus sed nisi. Pellentesque faucibus urna
+          turpis, sed suscipit ipsum consectetur vitae. Sed vel eleifend odio, sit
+          amet pulvinar leo. Suspendisse et ipsum dictum neque porta sodales non ut
+          turpis. Etiam id iaculis ipsum. Nam tristique ligula odio, ac mollis erat
+          consectetur molestie.
+         </p>
+      </TabPanel>
+      <TabPanel uid="8">
+        <h3>Tab 8</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Nam a nisl at leo porta suscipit et vel diam. Maecenas venenatis consectetur
+          tortor, quis fermentum orci tristique ut. Etiam tristique sollicitudin
+          feugiat. Morbi bibendum commodo quam malesuada venenatis. Nullam eu enim
+          quis neque fringilla venenatis id vel eros. Integer volutpat leo sit amet
+          imperdiet ultricies. Ut vestibulum pretium quam, mollis mollis leo
+          consectetur sit amet. Sed vitae sodales felis. Praesent nibh dolor,
+          hendrerit ac rutrum vitae, faucibus sed nisi. Pellentesque faucibus urna
+          turpis, sed suscipit ipsum consectetur vitae. Sed vel eleifend odio, sit
+          amet pulvinar leo. Suspendisse et ipsum dictum neque porta sodales non ut
+          turpis. Etiam id iaculis ipsum. Nam tristique ligula odio, ac mollis erat
+          consectetur molestie.
+         </p>
+      </TabPanel>
+      <TabPanel uid="9">
+        <h3>Tab 9</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Nam a nisl at leo porta suscipit et vel diam. Maecenas venenatis consectetur
+          tortor, quis fermentum orci tristique ut. Etiam tristique sollicitudin
+          feugiat. Morbi bibendum commodo quam malesuada venenatis. Nullam eu enim
+          quis neque fringilla venenatis id vel eros. Integer volutpat leo sit amet
+          imperdiet ultricies. Ut vestibulum pretium quam, mollis mollis leo
+          consectetur sit amet. Sed vitae sodales felis. Praesent nibh dolor,
+          hendrerit ac rutrum vitae, faucibus sed nisi. Pellentesque faucibus urna
+          turpis, sed suscipit ipsum consectetur vitae. Sed vel eleifend odio, sit
+          amet pulvinar leo. Suspendisse et ipsum dictum neque porta sodales non ut
+          turpis. Etiam id iaculis ipsum. Nam tristique ligula odio, ac mollis erat
+          consectetur molestie.
+         </p>
+      </TabPanel>
+    </Tabs>
+
+  </ThemeProvider>
+</Playground>

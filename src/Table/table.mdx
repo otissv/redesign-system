@@ -1,0 +1,197 @@
+---
+name: Table
+---
+
+import { Playground, Props } from 'docz'
+import { Flex } from '../Flex/Flex'
+import styled from 'styled-components'
+import { ThemeProvider } from '../ThemeContext'
+import Table from './Table'
+import { useTable } from './table.example.js'
+import { TableRowSelect } from './TableRowSelect'
+
+# Table
+
+<Props of={Table} />
+
+## Default
+
+<Playground>
+  <ThemeProvider>
+    <Table
+      name='TableDeafult'
+      caption="Table caption"
+      headings={[ 'ID', 'Name', 'Endpoint']}
+      hook={useTable}
+      rows={items =>
+        items.map(({ id, name, endpoint }, index) => ({
+          row: [
+            {
+              key: 'index',
+              component: ({ handleChange, selected }) => <td>{index}</td>,
+            },
+            {
+              key: 'id',
+              component: () => <td>{id}</td>,
+            },
+            {
+              key: 'name',
+              component: () => <td>{name}</td>,
+            },
+            {
+              key: 'endpoint',
+              component: () => <td>{endpoint}</td>,
+            },
+          ],
+        }))
+      }
+    />
+
+  </ThemeProvider>
+</Playground>
+
+## Selectable
+
+<Playground>
+  <ThemeProvider>
+    <Table
+      name="TableSelect"
+      selectable
+      headings={['', 'ID', 'Name', 'Endpoint']}
+      hook={useTable}
+      rows={items =>
+        items.map(({ id, name, endpoint }) => ({
+          row: [
+            {
+              key: 'select',
+              component: ({ handleChange, selected }) => (
+                <TableRowSelect
+                  id={id}
+                  handleChange={handleChange}
+                  selected={selected}
+                />
+              ),
+            },
+            {
+              key: 'id',
+              component: () => <td>{id}</td>,
+            },
+            {
+              key: 'name',
+              component: () => <td>{name}</td>,
+            },
+            {
+              key: 'endpoint',
+              component: () => <td>{endpoint}</td>,
+            },
+          ],
+        }))
+      }
+    />
+  </ThemeProvider>
+</Playground>
+
+## Hover
+
+<Playground>
+  <ThemeProvider>
+    <Table
+      name="TableHover"
+      hover
+      headings={['ID', 'Name', 'Endpoint']}
+      hook={useTable}
+      rows={items =>
+        items.map(({ id, name, endpoint }) => ({
+          row: [
+            {
+              key: 'id',
+              component: () => <td>{id}</td>,
+            },
+            {
+              key: 'name',
+              component: () => <td>{name}</td>,
+            },
+            {
+              key: 'endpoint',
+              component: () => <td>{endpoint}</td>,
+            },
+          ],
+        }))
+      }
+    />
+  </ThemeProvider>
+</Playground>
+
+## Condensed
+
+<Playground>
+  <ThemeProvider>
+    <Table
+      name="TableCondensed"
+      condensed
+      headings={['ID', 'Name', 'Endpoint']}
+      hook={useTable}
+      rows={items =>
+        items.map(({ id, name, endpoint }) => ({
+          row: [
+            {
+              key: 'id',
+              component: () => <td>{id}</td>,
+            },
+            {
+              key: 'name',
+              component: () => <td>{name}</td>,
+            },
+            {
+              key: 'endpoint',
+              component: () => <td>{endpoint}</td>,
+            },
+          ],
+        }))
+      }
+    />
+  </ThemeProvider>
+</Playground>
+
+## Toolbar
+
+<Playground>
+  <ThemeProvider>
+    <Table
+      name='TableToolbar'
+      caption="Table caption"
+      headings={['', 'ID', 'Name', 'Endpoint']}
+      hook={useTable}
+      toolbar={['copy', 'download', 'views']}
+      rows={items =>
+        items.map(({ id, name, endpoint }, index) => ({
+          row: [
+            {
+              key: 'select',
+              component: ({ handleChange, selected }) => (
+                <TableRowSelect
+                  id={id}
+                  handleChange={handleChange}
+                  selected={selected}
+                />
+              ),
+            },
+            {
+              key: 'id',
+              component: () => <td>{id}</td>,
+            },
+            {
+              key: 'name',
+              component: () => <td>{name}</td>,
+            },
+            {
+              key: 'endpoint',
+              component: () => <td>{endpoint}</td>,
+            },
+          ],
+        }))
+      }
+    />
+
+  </ThemeProvider>
+</Playground>

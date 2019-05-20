@@ -1,0 +1,67 @@
+{
+  "name": "redesign-system",
+  "version": "0.0.0",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "babel src -d lib ",
+    "watch": "babel src -d lib --watch",
+    "build:dev": "NODE_ENV=development rollup -c",
+    "build:pro": "NODE_ENV=production rollup -c",
+    "format": "prettier --write \"src/**/*.js\"",
+    "prepublishOnly": "npm run release",
+    "release": "npm run build:dev && npm run build",
+    "test": "npm run build && jest",
+    "cypress": "cypress open",
+    "start": "docz dev",
+    "docz:build": "docz build"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.4.3",
+    "@mdx-js/tag": "^0.20.3",
+    "cuid": "^2.1.6",
+    "jest-pnp-resolver": "^1.2.1",
+    "js-file-download": "^0.4.5",
+    "react-copy-to-clipboard": "^5.0.1",
+    "react-pose": "^4.0.8",
+    "styled-normalize": "^8.0.6"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-external-helpers": "^7.2.0",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "@svgr/rollup": "^4.2.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.7.1",
+    "cypress": "^3.2.0",
+    "docz": "latest",
+    "docz-theme-default": "latest",
+    "eslint": "^5.16.0",
+    "eslint-plugin-react": "^7.12.4",
+    "jest": "^24.7.1",
+    "lodash": "^4.17.11",
+    "prettier": "^1.17.0",
+    "rollup": "^1.10.0",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-node-resolve": "^4.2.3",
+    "rollup-plugin-replace": "^2.2.0"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "styled-components": "^4.2.0",
+    "styled-normalize": "^8.0.6"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

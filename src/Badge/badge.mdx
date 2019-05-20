@@ -1,0 +1,179 @@
+---
+name: Badge
+---
+
+import { Playground, Props } from 'docz'
+import Container from '../Container/Container'
+import styled from 'styled-components'
+import { ThemeProvider } from '../ThemeContext'
+import Badge from '../Badge/Badge'
+
+# Badge
+
+<Props of={Badge} />
+
+## appearance
+
+<Playground>
+  <ThemeProvider>
+    <Container marginBottom={3}>
+      <Badge appearance="primary" margin1="left right">
+        Primary
+      </Badge>
+      <Badge appearance="secondary" margin1="left right">
+        Secondary
+      </Badge>
+      <Badge appearance="tertiary" margin1="left right">Tertiary</Badge>
+
+    </Container>
+
+  </ThemeProvider>
+</Playground>
+
+## Context
+
+<Playground>
+  <ThemeProvider>
+    <h3>Accent</h3>
+    <Container marginBottom={3}>
+      <Badge appearance='primary-accent' margin1="left right">
+        Primary 
+      </Badge>
+      <Badge appearance='secondary-accent' margin1="left right">
+        Secondary
+      </Badge>
+      <Badge appearance='tertiary-accent' margin1="left right">
+        Tertiary
+      </Badge>
+    </Container>
+
+    <h3>Accent</h3>
+    <Container marginBottom={3}>
+      <Badge appearance="primary-action" margin1="left right">
+        Primary
+      </Badge>
+      <Badge appearance="secondary-action" margin1="left right">
+        Secondary
+      </Badge>
+      <Badge appearance="tertiary-action" margin1="left right">
+        Tertiary
+      </Badge>
+    </Container>
+
+    <h3>Danger</h3>
+    <Container marginBottom={3}>
+      <Badge appearance="primary-danger" margin1="left right">
+        Primary
+      </Badge>
+      <Badge appearance="secondary-danger" margin1="left right">
+        Secondary
+      </Badge>
+       <Badge appearance="tertiary-danger" margin1="left right">
+        Tertiary
+      </Badge>
+    </Container>
+
+
+    <h3>Success</h3>
+    <Container marginBottom={3}>
+      <Badge appearance="primary-success" margin1="left right">
+        Primary
+      </Badge>
+      <Badge appearance="secondary-success" margin1="left right">
+        Secondary
+      </Badge>
+      <Badge appearance="tertiary-success" margin1="left right">
+        Tertiary
+      </Badge>
+    </Container>
+
+    <h3>Warning</h3>
+    <Container marginBottom={3}>
+      <Badge appearance="primary-warning" margin1="left right">
+        Warning
+      </Badge>
+      <Badge appearance="secondary-warning" margin1="left right">
+        Warning
+      </Badge>
+      <Badge appearance="tertiary-warning" margin1="left right">
+        Tertiary
+      </Badge>
+     </Container>
+
+  </ThemeProvider>
+</Playground>
+
+# Pill
+
+<Playground>
+  <ThemeProvider>
+
+    <h3>Accent</h3>
+    <Container marginBottom={3}>
+       <Badge pill appearance="primary-accent" appearance="" margin1="left right">
+        Primary
+      </Badge>
+       <Badge pill appearance="secondary-accent" margin1="left right">
+        Secondary
+      </Badge>
+        <Badge pill appearance="tertiary-accent" margin1="left right">
+        Tertiary
+      </Badge>
+    </Container>
+
+    <h3>Action</h3>
+    <Container marginBottom={3}>
+       <Badge pill appearance="primary-action" margin1="left right">
+        Primary
+      </Badge>
+       <Badge pill appearance="secondary-action" margin1="left right">
+        Secondary
+      </Badge>
+       <Badge pill appearance="tertiary-action" margin1="left right">
+        Tertiary
+      </Badge>
+    </Container>
+
+
+    <h3>Danger</h3>
+    <Container marginBottom={3}>
+      <Badge pill appearance="primary-danger" margin1="left right">
+        Primary
+      </Badge>
+      <Badge pill appearance="secondary-danger" margin1="left right">
+        Secondary
+      </Badge>
+      <Badge pill appearance="tertiary-danger" margin1="left right">
+        Tertiary
+      </Badge>
+    </Container>
+
+    <h3>Success</h3>
+    <Container marginBottom={3}>
+      <Badge pill appearance="primary-success" margin1="left right">
+          Primary
+        </Badge>
+      <Badge pill appearance="secondary-success" margin1="left right">
+        Secondary
+      </Badge>
+       <Badge pill appearance="tertiary-success" margin1="left right">
+        Tertiary
+      </Badge>
+    </Container>
+
+
+    <h3>Warning</h3>
+    <Container marginBottom={3}>
+       <Badge pill appearance="primary-warning" margin1="left right">
+        Primary
+      </Badge>
+       <Badge pill appearance="secondary-warning" margin1="left right">
+        Secondary
+      </Badge>
+        <Badge pill appearance="tertiary-warning" margin1="left right">
+        Tertiary
+      </Badge>
+    </Container>
+
+  </ThemeProvider>
+</Playground>

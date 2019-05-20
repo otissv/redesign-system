@@ -1,0 +1,15 @@
+{
+  "config": {
+    "title": "Redesign System",
+    "description": "My awesome app using docz",
+    "menu": [],
+    "version": "0.0.0",
+    "repository": null,
+    "native": false,
+    "codeSandbox": true,
+    "themeConfig": {
+      "mode": "dark"
+    },
+    "separator": "-"
+  }
+}

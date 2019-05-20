@@ -1,0 +1,47 @@
+---
+name: Notify
+---
+
+import { Playground, Props } from 'docz'
+import styled from 'styled-components'
+import Notify from './Notify'
+import Notifications from './Notifications'
+import Container from '../Container/Container'
+import { NotifyContainer } from './notify.example'
+import { ThemeProvider } from '../ThemeContext'
+
+# Notify
+
+## Properties
+
+### Notiy
+
+<Props of={Notify} />
+
+### Notifications
+
+<Props of={Notifications} />
+
+## Default
+
+<Playground>
+  <ThemeProvider>
+    <NotifyContainer>
+      {messages => (
+        <Notify uid="notify1" position="top-left">
+          {messages.map(({ appearance, id, message, sticky }) => {
+            return (
+              <Container
+                appearance={appearance}
+                key={id}
+                radius="rounded"
+                sticky={sticky}>
+                {message} :)
+              </Container>
+            )
+          })}
+        </Notify>
+      )}
+    </NotifyContainer>
+  </ThemeProvider>
+</Playground>

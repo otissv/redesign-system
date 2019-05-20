@@ -1,0 +1,80 @@
+---
+name: Alert
+---
+
+import { Playground, Props } from 'docz'
+import { Flex } from '../Flex/Flex'
+import styled from 'styled-components'
+import { ThemeProvider } from '../ThemeContext'
+import Alert from './Alert'
+
+# Alert
+
+<Props of={Alert} />
+
+## Default
+
+<Playground>
+  <ThemeProvider>
+    <Alert>Default alert</Alert>
+  </ThemeProvider>
+</Playground>
+
+## Appearance
+
+<Playground>
+  <ThemeProvider>
+    <Flex>
+      <Alert
+        appearance="primary"
+        margin3="left right bottom"
+        css={`
+          width: 200px;
+        `}>
+        Primary
+      </Alert>
+      <Alert
+        appearance="secondary"
+        margin3="left right bottom"
+        css={`
+          width: 200px;
+        `}>
+        Secondary
+      </Alert>
+    </Flex>
+  </ThemeProvider>
+</Playground>
+
+## Context
+
+<Playground>
+  <ThemeProvider>
+    <Flex>
+    <Alert context="accent" margin3='left right bottom' css={`width: 200px`}>Accent</Alert>
+    <Alert appearance='primary' context="accent" margin3='left right bottom' css={`width: 200px`}>Primary Accent</Alert>
+    <Alert appearance='secondary' context="accent" margin3='left right bottom'  css={`width: 200px`}>Seconday Accent</Alert>
+
+    </Flex>
+    <Flex>
+      <Alert context="action" margin3='left right bottom'  css={`width: 200px`}>Action</Alert>
+      <Alert appearance='primary' context="action" margin3='left right bottom'  css={`width: 200px`}>Primary Action</Alert>
+      <Alert appearance='secondary' context="action" margin3='left right bottom'  css={`width: 200px`}>Seconday Action</Alert>
+    </Flex>
+    <Flex>
+      <Alert context="danger" margin3='left right bottom'  css={`width: 200px`}>Danger</Alert>
+      <Alert appearance='primary' context="danger" margin3='left right bottom'  css={`width: 200px`}>Primary Danger</Alert>
+      <Alert appearance='secondary' context="danger" margin3='left right bottom'  css={`width: 200px`}>Seconday Danger</Alert>
+    </Flex>
+    <Flex>
+      <Alert context="success" margin3='left right bottom'  css={`width: 200px`}>Success</Alert>
+      <Alert appearance='primary' context="success" margin3='left right bottom'  css={`width: 200px`}>Primary Success</Alert>
+      <Alert appearance='secondary' context="success" margin3='left right bottom'  css={`width: 200px`}>Seconday Success</Alert>
+    </Flex>
+    <Flex>
+      <Alert context="warning" margin3='left right bottom'  css={`width: 200px`}>Warning</Alert>
+      <Alert appearance='primary' context="warning" margin3='left right bottom'  css={`width: 200px`}>Primary Warning</Alert>
+      <Alert appearance='secondary' context="warning" margin3='left right bottom'  css={`width: 200px`}>Seconday Success</Alert>
+    </Flex>
+
+  </ThemeProvider>
+</Playground>

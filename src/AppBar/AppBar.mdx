@@ -1,0 +1,80 @@
+---
+name: AppBar
+---
+
+import { Fragment } from 'react'
+import { Playground, Props } from 'docz'
+import styled from 'styled-components'
+import AppBar from '../AppBar/AppBar'
+import { Typography } from '../Typography'
+import { Input } from '../Input'
+import { ThemeProvider } from '../ThemeContext'
+import { Menu } from '../MaterialIcons/Menu'
+import ButtonIcon from '../ButtonIcon/ButtonIcon'
+
+# AppBar
+
+## Properties
+
+<Props of={AppBar} />
+
+## Context
+
+<Playground>
+  <ThemeProvider>
+    <h3>Default</h3>
+    <AppBar paddingRight={4}>
+      <ButtonIcon  icon={Menu} title='menu' />
+      <Typography element="h3" margin="0" flexGrow={1} display="inline-block">
+        My App
+      </Typography>
+      <Input widths="large" placeholder="Search" />
+    </AppBar>
+
+    <h3>Accent</h3>
+    <AppBar paddingRight={4}  appearance='accent'>
+     <ButtonIcon  icon={Menu} title='menu'  appearance='primary-accent' />
+      <Typography element="h3" margin="0" flexGrow={1} display="inline-block">
+        My App
+      </Typography>
+      <Input widths="large" placeholder="Search"  />
+    </AppBar>
+
+    <h3>Action</h3>
+    <AppBar paddingRight={4}  appearance='action'>
+     <ButtonIcon  icon={Menu} title='menu' appearance='primary-action'/>
+      <Typography element="h3" margin="0" flexGrow={1} display="inline-block">
+        My App
+      </Typography>
+      <Input widths="large" placeholder="Search"  />
+    </AppBar>
+
+    <h3>Danger</h3>
+    <AppBar paddingRight={4}  appearance='danger'>
+     <ButtonIcon  icon={Menu} title='menu' appearance='primary-danger'/>
+      <Typography element="h3" margin="0" flexGrow={1} display="inline-block">
+        My App
+      </Typography>
+      <Input widths="large" placeholder="Search"  />
+    </AppBar>
+
+    <h3>Success</h3>
+    <AppBar paddingRight={4}  appearance='success'>
+     <ButtonIcon  icon={Menu} title='menu' appearance='primary-success'/>
+      <Typography element="h3" margin="0" flexGrow={1} display="inline-block">
+        My App
+      </Typography>
+      <Input widths="large" placeholder="Search"  />
+    </AppBar>
+
+    <h3>Warning</h3>
+    <AppBar paddingRight={4}  appearance='warning'>
+     <ButtonIcon  icon={Menu} title='menu' appearance='primary-warning'/>
+      <Typography element="h3" margin="0" flexGrow={1} display="inline-block">
+        My App
+      </Typography>
+      <Input widths="large" placeholder="Search"  />
+    </AppBar>
+
+  </ThemeProvider>
+</Playground>

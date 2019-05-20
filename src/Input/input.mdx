@@ -1,0 +1,134 @@
+---
+name: Input
+---
+
+import { Playground, Props } from 'docz'
+import styled from 'styled-components'
+import Input from './Input'
+import Container from '../Container/Container'
+import Button from '../Button/Button'
+import ButtonIcon from '../ButtonIcon/ButtonIcon'
+import { ThemeProvider } from '../ThemeContext'
+import { Search } from '../MaterialIcons/Search'
+import { InputGroup } from '../Input/InputGroup'
+import { Email } from '../MaterialIcons/Email'
+import { Send } from '../MaterialIcons/Send'
+
+# Input
+
+<ThemeProvider>
+  <InputGroup>
+   <Email/>
+    <Input margin5="bottom right" placeholder="you@email.com" />
+    <ButtonIcon appearance="primary-success" icon={Send}>
+      Subscribe
+    </ButtonIcon>
+  </InputGroup>
+
+<div style={{ marginTop: '30px' }}>
+  <InputGroup>
+    <Input margin5="bottom right" placeholder="Search" />
+    <Button appearance="primary-accent">Search</Button>
+  </InputGroup>
+</div>
+
+</ThemeProvider>
+
+## Properties
+
+<Props of={Input} />
+
+## Appearnace
+
+<Playground>
+  <ThemeProvider>
+
+      <Input css="width: 200px;" margin5="bottom right"  placeholder="Primary" />
+      <Input appearance='secondary' css="width: 200px;" margin5="bottom right"  placeholder="Secondary" />
+      <Input appearance='tertiary' css="width: 200px;" margin5="bottom right"  placeholder="tertiary" />
+
+    <h3>Accent</h3>
+    <Container margin5="bottom">
+
+      <Input appearance="primary-accent" css="width: 200px;" margin5="bottom right"  placeholder="Primary" />
+      <Input appearance="secondary-accent" css="width: 200px;" margin5="bottom right"  placeholder="Secondary" />
+      <Input appearance="tertiary-accent" css="width: 200px;" margin5="bottom right"  placeholder="Tertiary" />
+
+    </Container>
+
+    <h3>Action</h3>
+    <Container margin5="bottom">
+      <Input appearance="primary-action" css="width: 200px;" margin5="bottom right"  placeholder="Primary" />
+      <Input appearance="secondary-action" css="width: 200px;" margin5="bottom right"  placeholder="Secondary" />
+      <Input appearance="tertiary-action" css="width: 200px;" margin5="bottom right"  placeholder="Tertiary" />
+
+    </Container>
+
+    <h3>Danger</h3>
+    <Container margin5="bottom">
+      <Input appearance="primary-danger" css="width: 200px;" margin5="bottom right"  placeholder="Primary" />
+      <Input appearance="secondary-danger" css="width: 200px;" margin5="bottom right"  placeholder="Secondary" />
+      <Input appearance="tertiary-danger" css="width: 200px;" margin5="bottom right"  placeholder="Tertiary" />
+
+    </Container>
+
+    <h3>Success</h3>
+    <Container margin5="bottom">
+      <Input appearance="primary-success" css="width: 200px;" margin5="bottom right"  placeholder="Primary" />
+      <Input appearance="secondary-success" css="width: 200px;" margin5="bottom right"  placeholder="Secondary" />
+      <Input appearance="tertiary-success" css="width: 200px;" margin5="bottom right"  placeholder="Tertiary" />
+
+    </Container>
+
+    <h3>Warning</h3>
+    <Container margin5="bottom">
+      <Input appearance="primary-warning" css="width: 200px;" margin5="bottom right"  placeholder="Primary" />
+      <Input appearance="secondary-warning" css="width: 200px;" margin5="bottom right"  placeholder="Secondary" />
+      <Input appearance="tertiary-warning" css="width: 200px;" margin5="bottom right"  placeholder="Tertiary" />
+
+    </Container>
+
+    <h3>Disabled</h3>
+    <Container margin5="bottom">
+      <Input appearance="primary-disabled" css="width: 200px;" margin5="bottom right"  placeholder="Primary" />
+      <Input appearance="secondary-disabled" css="width: 200px;" margin5="bottom right"  placeholder="Secondary" />
+      <Input appearance="tertiary-disabled" css="width: 200px;" margin5="bottom right"  placeholder="Tertiary" />
+    </Container>
+
+  </ThemeProvider>
+</Playground>
+
+## Size
+
+<Playground>
+  <ThemeProvider>
+    <Container margin5="bottom right">
+      <Input size="small" placeholder="Small" />
+    </Container>
+    <Container margin5="bottom">
+      <Input size="large" placeholder="Large" />
+    </Container>
+  </ThemeProvider>
+</Playground>
+
+## Widths
+
+<Playground>
+  <ThemeProvider>
+    <Container margin5="bottom">
+      <Input widths="xsmall" placeholder="xsmall" />
+    </Container>
+    <Container margin5="bottom">
+      <Input widths="small" placeholder="Small" />
+    </Container>
+    <Container margin5="bottom">
+      <Input widths="medium" placeholder="Medium" />
+    </Container>
+    <Container margin5="bottom">
+      <Input widths="large" placeholder="Large" />
+    </Container>
+    <Container margin5="bottom">
+      <Input widths="xlarge" placeholder="Xlarge" />
+    </Container>
+  </ThemeProvider>
+</Playground>

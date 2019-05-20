@@ -1,0 +1,357 @@
+---
+name: Flex
+---
+
+import { Playground, Props } from 'docz'
+import Flex from '../Flex/Flex'
+import Container from '../Container/Container'
+import styled from 'styled-components'
+import { ThemeProvider } from '../ThemeContext'
+
+# Flex
+
+## Properties
+
+<Props of={Flex} />
+
+## Default
+
+<Playground>
+  <ThemeProvider>
+    <Flex css="background:#fff">
+      <Container border="thinGrey500">Box</Container>
+      <Container border="thinGrey500">Box</Container>
+      <Container border="thinGrey500">Box</Container>
+    </Flex>
+  </ThemeProvider>
+</Playground>
+
+## Justify Content
+
+### Center
+
+<Playground>
+  <ThemeProvider>
+    <Flex justifyContent="center">
+      <Container border="thinGrey500">Box</Container>
+      <Container border="thinGrey500">Box</Container>
+      <Container border="thinGrey500">Box</Container>
+    </Flex>
+  </ThemeProvider>
+</Playground>
+
+### Flex Start
+
+<Playground>
+  <ThemeProvider>
+    <Flex justifyContent="flexStart">
+      <Container border="thinGrey500">Box</Container>
+      <Container border="thinGrey500">Box</Container>
+      <Container border="thinGrey500">Box</Container>
+    </Flex>
+  </ThemeProvider>
+</Playground>
+
+### Flex End
+
+<Playground>
+  <ThemeProvider>
+    <Flex justifyContent="flexEnd">
+      <Container border="thinGrey500">Box</Container>
+      <Container border="thinGrey500">Box</Container>
+      <Container border="thinGrey500">Box</Container>
+    </Flex>
+  </ThemeProvider>
+</Playground>
+
+### Stretch
+
+<Playground>
+  <ThemeProvider>
+    <Flex justifyContent="stretch">
+      <Container border="thinGrey500">Box</Container>
+      <Container border="thinGrey500">Box</Container>
+      <Container border="thinGrey500">Box</Container>
+    </Flex>
+  </ThemeProvider>
+</Playground>
+
+### Space Around
+
+<Playground>
+  <ThemeProvider>
+    <Flex justifyContent="spaceAround">
+      <Container border="thinGrey500">Box</Container>
+      <Container border="thinGrey500">Box</Container>
+      <Container border="thinGrey500">Box</Container>
+    </Flex>
+  </ThemeProvider>
+</Playground>
+
+### Space Evenly
+
+<Playground>
+  <ThemeProvider>
+    <Flex justifyContent="spaceEvenly">
+      <Container border="thinGrey500">Box</Container>
+      <Container border="thinGrey500">Box</Container>
+      <Container border="thinGrey500">Box</Container>
+    </Flex>
+  </ThemeProvider>
+</Playground>
+
+### Space Between
+
+<Playground>
+  <ThemeProvider>
+    <Flex justifyContent="spaceBetween">
+      <Container border="thinGrey500">Box</Container>
+      <Container border="thinGrey500">Box</Container>
+      <Container border="thinGrey500">Box</Container>
+    </Flex>
+  </ThemeProvider>
+</Playground>
+
+## Align Items
+
+### Center
+
+<Playground>
+  <ThemeProvider>
+    <Flex alignItems="center" style={{ height: '200px' }}>
+      <Container border="thinGrey500">Box</Container>
+      <Container border="thinGrey500">Box</Container>
+      <Container border="thinGrey500">Box</Container>
+    </Flex>
+  </ThemeProvider>
+</Playground>
+
+### Flex Start
+
+<Playground>
+  <ThemeProvider>
+    <Flex alignItems="flexStart" style={{ height: '200px' }}>
+      <Container border="thinGrey500">Box</Container>
+      <Container border="thinGrey500">Box</Container>
+      <Container border="thinGrey500">Box</Container>
+    </Flex>
+  </ThemeProvider>
+</Playground>
+
+### Flex End
+
+<Playground>
+  <ThemeProvider>
+    <Flex alignItems="flexEnd" style={{ height: '200px' }}>
+      <Container border="thinGrey500">Box</Container>
+      <Container border="thinGrey500">Box</Container>
+      <Container border="thinGrey500">Box</Container>
+    </Flex>
+  </ThemeProvider>
+</Playground>
+
+### Stretch
+
+<Playground>
+  <ThemeProvider>
+    <Flex alignItems="stretch" style={{ height: '200px' }}>
+      <Container border="thinGrey500">Box</Container>
+      <Container border="thinGrey500">Box</Container>
+      <Container border="thinGrey500">Box</Container>
+    </Flex>
+  </ThemeProvider>
+</Playground>
+
+### Space Around
+
+<Playground>
+  <ThemeProvider>
+    <Flex alignItems="spaceAround" style={{ height: '200px' }}>
+      <Container border="thinGrey500">Box</Container>
+      <Container border="thinGrey500">Box</Container>
+      <Container border="thinGrey500">Box</Container>
+    </Flex>
+  </ThemeProvider>
+</Playground>
+
+### Space Between
+
+<Playground>
+  <ThemeProvider>
+    <Flex alignItems="spaceBetween" style={{ height: '200px' }}>
+      <Container border="thinGrey500">Box</Container>
+      <Container border="thinGrey500">Box</Container>
+      <Container border="thinGrey500">Box</Container>
+    </Flex>
+  </ThemeProvider>
+</Playground>
+
+### Space Evenly
+
+<Playground>
+  <ThemeProvider>
+    <Flex alignItems="spaceEvenly">
+      <Container border="thinGrey500">Box</Container>
+      <Container border="thinGrey500">Box</Container>
+      <Container border="thinGrey500">Box</Container>
+    </Flex>
+  </ThemeProvider>
+</Playground>
+
+## Wrap
+
+### Wrap
+
+<Playground>
+  <ThemeProvider>
+    <Flex wrap="wrap">
+      <Container border="thinGrey500" flex={6}>
+        1
+      </Container>
+      <Container border="thinGrey500" flex={3}>
+        2
+      </Container>
+      <Container border="thinGrey500" flex={4}>
+        3
+      </Container>
+      <Container border="thinGrey500" flex={5}>
+        4
+      </Container>
+      <Container border="thinGrey500" flex={1}>
+        5
+      </Container>
+      <Container border="thinGrey500" flex={2}>
+        6
+      </Container>
+      <Container border="thinGrey500" flex={6}>
+        7
+      </Container>
+      <Container border="thinGrey500" flex={3}>
+        8
+      </Container>
+      <Container border="thinGrey500" flex={4}>
+        9
+      </Container>
+      <Container border="thinGrey500" flex={5}>
+        10
+      </Container>
+      <Container border="thinGrey500" flex={1}>
+        11
+      </Container>
+      <Container border="thinGrey500" flex={2}>
+        12
+      </Container>
+    </Flex>
+  </ThemeProvider>
+</Playground>
+
+### No Wrap
+
+<Playground>
+  <ThemeProvider>
+    <Flex wrap="nowrap">
+      <Container border="thinGrey500" flex={6}>
+        1
+      </Container>
+      <Container border="thinGrey500" flex={6}>
+        1
+      </Container>
+      <Container border="thinGrey500" flex={3}>
+        2
+      </Container>
+      <Container border="thinGrey500" flex={4}>
+        3
+      </Container>
+      <Container border="thinGrey500" flex={5}>
+        4
+      </Container>
+      <Container border="thinGrey500" flex={1}>
+        5
+      </Container>
+      <Container border="thinGrey500" flex={2}>
+        6
+      </Container>
+      <Container border="thinGrey500" flex={6}>
+        7
+      </Container>
+      <Container border="thinGrey500" flex={3}>
+        8
+      </Container>
+      <Container border="thinGrey500" flex={4}>
+        9
+      </Container>
+      <Container border="thinGrey500" flex={5}>
+        10
+      </Container>
+      <Container border="thinGrey500" flex={1}>
+        11
+      </Container>
+      <Container border="thinGrey500" flex={2}>
+        12
+      </Container>
+    </Flex>
+  </ThemeProvider>
+</Playground>
+
+### Wrap Reverse
+
+<Playground>
+  <ThemeProvider>
+    <Flex wrap="wrapReverse">
+      <Container border="thinGrey500" flex={6}>
+        1
+      </Container>
+      <Container border="thinGrey500" flex={3}>
+        2
+      </Container>
+      <Container border="thinGrey500" flex={4}>
+        3
+      </Container>
+      <Container border="thinGrey500" flex={5}>
+        4
+      </Container>
+      <Container border="thinGrey500" flex={1}>
+        5
+      </Container>
+      <Container border="thinGrey500" flex={2}>
+        6
+      </Container>
+      <Container border="thinGrey500" flex={6}>
+        7
+      </Container>
+      <Container border="thinGrey500" flex={3}>
+        8
+      </Container>
+      <Container border="thinGrey500" flex={4}>
+        9
+      </Container>
+      <Container border="thinGrey500" flex={5}>
+        10
+      </Container>
+      <Container border="thinGrey500" flex={1}>
+        11
+      </Container>
+      <Container border="thinGrey500" flex={2}>
+        12
+      </Container>
+    </Flex>
+  </ThemeProvider>
+</Playground>
+
+## Order
+
+<Playground>
+  <ThemeProvider>
+    <Flex>
+      <Container border="thinGrey500" order={3}>
+        1
+      </Container>
+      <Container border="thinGrey500" order={1}>
+        2
+      </Container>
+      <Container border="thinGrey500" order={2}>
+        3
+      </Container>
+    </Flex>
+  </ThemeProvider>
+</Playground>

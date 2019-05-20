@@ -1,0 +1,140 @@
+---
+name: Button
+---
+
+import { Playground, Props } from 'docz'
+import styled from 'styled-components'
+import Button from './Button'
+import { ThemeProvider } from '../ThemeContext'
+import { Container } from '../Container'
+
+# Button
+
+<Props of={Button} />
+
+## Appearance
+
+<Playground>
+  <ThemeProvider>
+    <Button marginLeft={3}>Primary</Button>
+
+    <Button marginLeft={3} appearance="secondary">
+      Seconday
+    </Button>
+    <Button marginLeft={3} appearance="tertiary">
+      Tertiary
+    </Button>
+
+  </ThemeProvider>
+</Playground>
+
+## Context
+
+<Playground>
+  <ThemeProvider>
+    <h3>Accent</h3>
+    <Container margin3='bottom right'>
+      <Button marginLeft={3} appearance='primary-accent'>
+        Primary
+      </Button>
+      <Button marginLeft={3} appearance="secondary-accent">
+        Seconday
+      </Button>
+      <Button marginLeft={3} appearance="tertiary-accent">
+        Tertiary
+      </Button>
+    </Container>
+    
+    <h3>Action</h3>
+    <Container margin3='bottom right'>
+      <Button marginLeft={3} appearance='primary-action'>
+        Primary
+      </Button>
+      <Button marginLeft={3} appearance="secondary-action">
+        Seconday
+      </Button>
+      <Button marginLeft={3} appearance="tertiary-action">
+        Tertiary
+      </Button>
+    </Container>
+
+    <h3>Danger</h3>
+    <Container margin3='bottom right'>
+      <Button marginLeft={3} appearance='primary-danger'>
+        Primary
+      </Button>
+      <Button marginLeft={3} appearance="secondary-danger">
+        Seconday
+      </Button>
+      <Button marginLeft={3} appearance="tertiary-danger">
+        Tertiary
+      </Button>
+    </Container>
+
+    <h3>Success</h3>
+    <Container margin3='bottom right'>
+      <Button marginLeft={3} appearance='primary-success'>
+        Primary
+      </Button>
+      <Button marginLeft={3} appearance="secondary-success">
+        Seconday
+      </Button>
+      <Button marginLeft={3} appearance="tertiary-success">
+        Tertiary
+      </Button>
+    </Container>
+
+    <h3>Waring</h3>
+    <Container margin3='bottom right'>
+      <Button marginLeft={3} appearance='primary-warning'>
+        Primary
+      </Button>
+      <Button marginLeft={3} appearance="secondary-warning">
+        Seconday
+      </Button>
+      <Button marginLeft={3} appearance="tertiary-warning">
+        Tertiary
+      </Button>
+    </Container>
+
+    <h3>Disabled</h3>
+    <Container margin3='bottom right'>
+      <Button marginLeft={3} appearance='primary-disabled'>
+        Primary
+      </Button>
+      <Button marginLeft={3} appearance="secondary-disabled">
+        Seconday
+      </Button>
+      <Button marginLeft={3} appearance="tertiary-disabled">
+        Tertiary
+      </Button>
+    </Container>
+
+  </ThemeProvider>
+</Playground>
+
+## Size
+
+<Playground>
+  <ThemeProvider>
+
+    <h3>Large</h3>
+    <Button marginLeft={3} size="large">
+      Button
+    </Button>
+
+    <h3>Small</h3>
+    <Button marginLeft={3} size="small">
+      Button
+    </Button>
+
+  </ThemeProvider>
+</Playground>
+
+## Stretch
+
+<Playground>
+  <ThemeProvider>
+    <Button stretch>Button</Button>
+  </ThemeProvider>
+</Playground>

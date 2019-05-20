@@ -1,0 +1,127 @@
+---
+name: Accordion
+---
+
+import { Playground, Props } from 'docz'
+import styled from 'styled-components'
+import { ThemeProvider } from '../ThemeContext'
+
+import Accordion from './Accordion'
+import AccordionItem from './AccordionItem'
+import AccordionButton from './AccordionButton'
+import AccordionContent from './AccordionContent'
+import Container from '../Container/Container'
+
+# Accordion
+
+## Properties
+
+### Accordion
+
+<Props of={Accordion} />
+
+### Accordion Item
+
+<Props of={AccordionItem} />
+
+### Accordion Button
+
+<Props of={AccordionButton} />
+
+### Accordion Button
+
+<Props of={AccordionButton} />
+
+### Default
+
+<Playground>
+  <ThemeProvider>
+    <Accordion active='1'>
+      <AccordionItem uid='1'>
+        <AccordionButton appearance='action'>Item 1</AccordionButton>
+        <AccordionContent>
+          <Container css='background: #2b313e' padding5='left right top bottom'>
+            Lorem ipsum dolor sit amet consectetur adipiscing elit vehicula tortor, 
+            ornare dignissim semper integer ultrices himenaeos ridiculus parturient, 
+            accumsan vulputate habitasse faucibus mattis vestibulum felis pretium. 
+            eugiat ridiculus litora consequat et aliquet quis a netus varius, per 
+            curae neque ligula ultricies morbi proin nisl sociosqu dapibus, mauris 
+            elementum enim penatibus sodales sem nec felis. Lacus ac mattis ullamcorper nisi 
+            volutpat facilisis arcu est, posuere dictumst aliquam mauris auctor scelerisque quis 
+            eleifend lobortis, sociosqu litora rhoncus parturient penatibus dis condimentum. 
+            Bibendum a dictum aptent parturient praesent nascetur class arcu, montes rutrum 
+            ultricies malesuada libero purus nam, ultrices at justo tellus duis etiam ut.
+
+            Aenean sociis duis facilisi ornare quis fames urna vel penatibus bibendum, egestas
+            nec nam eget consequat felis donec litora per. Vehicula vel lacinia laoreet
+            turpis sociis facilisi primis cum penatibus eget, potenti arcu tempor commodo
+            cubilia sociosqu blandit sem malesuada sed id, morbi imperdiet aliquam enim nisl
+            auctor torquent fermentum taciti. Magna duis montes suscipit leo porta consequat
+            donec hac est, facilisi sed netus mollis eget ligula dui taciti venenatis ornare,
+            vulputate fringilla nisi vitae dapibus felis faucibus primis. Iaculis class erat vel
+            fringilla odio parturient interdum, fermentum mauris lacus tempus netus id posuere
+            imperdiet, rhoncus elementum sociosqu vehicula ad habitasse.
+        </Container>
+      </AccordionContent>
+    </AccordionItem>
+
+      <AccordionItem uid='2'>
+        <AccordionButton appearance='action'>Item 2</AccordionButton>
+        <AccordionContent>
+          <Container css='background: #2b313e' padding5='left right top bottom'>
+            Lorem ipsum dolor sit amet consectetur adipiscing elit vehicula tortor,
+            ornare dignissim semper integer ultrices himenaeos ridiculus parturient,
+            accumsan vulputate habitasse faucibus mattis vestibulum felis pretium.
+            eugiat ridiculus litora consequat et aliquet quis a netus varius, per
+            curae neque ligula ultricies morbi proin nisl sociosqu dapibus, mauris
+            elementum enim penatibus sodales sem nec felis. Lacus ac mattis ullamcorper nisi
+            volutpat facilisis arcu est, posuere dictumst aliquam mauris auctor scelerisque quis
+            eleifend lobortis, sociosqu litora rhoncus parturient penatibus dis condimentum.
+            Bibendum a dictum aptent parturient praesent nascetur class arcu, montes rutrum
+            ultricies malesuada libero purus nam, ultrices at justo tellus duis etiam ut.
+
+            Aenean sociis duis facilisi ornare quis fames urna vel penatibus bibendum, egestas
+            nec nam eget consequat felis donec litora per. Vehicula vel lacinia laoreet
+            turpis sociis facilisi primis cum penatibus eget, potenti arcu tempor commodo
+            cubilia sociosqu blandit sem malesuada sed id, morbi imperdiet aliquam enim nisl
+            auctor torquent fermentum taciti. Magna duis montes suscipit leo porta consequat
+            donec hac est, facilisi sed netus mollis eget ligula dui taciti venenatis ornare,
+            vulputate fringilla nisi vitae dapibus felis faucibus primis. Iaculis class erat vel
+            fringilla odio parturient interdum, fermentum mauris lacus tempus netus id posuere
+            imperdiet, rhoncus elementum sociosqu vehicula ad habitasse.im nisl auctor torquent.
+         </Container>
+        </AccordionContent>
+      </AccordionItem>
+
+      <AccordionItem uid='3'>
+        <AccordionButton appearance='action'>Item 3</AccordionButton>
+        <AccordionContent appearance='action'>
+          <Container css='background: #2b313e' padding5='left right top bottom'>
+            lorem ipsum dolor sit amet consectetur adipiscing elit vehicula tortor,
+            ornare dignissim semper integer ultrices himenaeos ridiculus parturient,
+            accumsan vulputate habitasse faucibus mattis vestibulum felis pretium.
+            eugiat ridiculus litora consequat et aliquet quis a netus varius, per
+            curae neque ligula ultricies morbi proin nisl sociosqu dapibus, mauris
+            elementum enim penatibus sodales sem nec felis. Lacus ac mattis ullamcorper nisi
+            volutpat facilisis arcu est, posuere dictumst aliquam mauris auctor scelerisque quis
+            eleifend lobortis, sociosqu litora rhoncus parturient penatibus dis condimentum.
+            Bibendum a dictum aptent parturient praesent nascetur class arcu, montes rutrum
+            ultricies malesuada libero purus nam, ultrices at justo tellus duis etiam ut.
+
+            Aenean sociis duis facilisi ornare quis fames urna vel penatibus bibendum, egestas
+            nec nam eget consequat felis donec litora per. Vehicula vel lacinia laoreet
+            turpis sociis facilisi primis cum penatibus eget, potenti arcu tempor commodo
+            cubilia sociosqu blandit sem malesuada sed id, morbi imperdiet aliquam enim nisl
+            auctor torquent fermentum taciti. Magna duis montes suscipit leo porta consequat
+            donec hac est, facilisi sed netus mollis eget ligula dui taciti venenatis ornare,
+            vulputate fringilla nisi vitae dapibus felis faucibus primis. Iaculis class erat vel
+            fringilla odio parturient interdum, fermentum mauris lacus tempus netus id posuere
+            imperdiet, rhoncus elementum sociosqu vehicula ad habitasse.
+        </Container>
+      </AccordionContent>
+    </AccordionItem>
+
+    </Accordion>
+
+  </ThemeProvider>
+</Playground>

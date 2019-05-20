@@ -1,0 +1,266 @@
+---
+name: Card
+---
+
+import { Fragment } from 'react'
+import { Playground, Props } from 'docz'
+import Card from './Card'
+import CardHeader from './CardHeader'
+import CardFooter from './CardFooter'
+import { ThemeProvider } from '../ThemeContext'
+import CoverImg from '../CoverImg/CoverImg'
+
+# Card
+
+<Props of={Card} />
+
+## Context
+
+<Playground>
+  <ThemeProvider>
+
+    <h3>Default</h3>
+    <Card margin3="bottom">
+      <CardHeader >
+        <CoverImg src="https://images.unsplash.com/photo-1513326738677-b964603b136d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=687&q=80" />
+      </CardHeader>
+
+      <p>
+        Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+
+      <CardFooter paddingTop={5}>
+        <a href="#">Read more...</a>
+      </CardFooter>
+    </Card>
+
+    <h3>Accent</h3>
+    <Card margin3="bottom" context='accent'>
+       <CardHeader>
+        <h4>Card</h4>
+      </CardHeader>
+      <p>
+        Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+       <CardFooter paddingTop={5}>
+        <a href="#">Read more...</a>
+      </CardFooter>
+    </Card>
+
+
+    <h3>Action</h3>
+    <Card margin3="bottom" context='action'>
+       <CardHeader>
+        <h4>Card</h4>
+      </CardHeader>
+      <p>
+        Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+       <CardFooter paddingTop={5}>
+        <a href="#">Read more...</a>
+      </CardFooter>
+    </Card>
+
+    <h3>Danger</h3>
+    <Card margin3="bottom" context='danger'>
+       <CardHeader>
+        <h4>Card</h4>
+      </CardHeader>
+      <p>
+        Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+       <CardFooter paddingTop={5}>
+        <a href="#">Read more...</a>
+      </CardFooter>
+    </Card>
+
+    <h3>SuccessContext</h3>
+    <Card margin3="bottom" context='success'>
+       <CardHeader>
+        <h4>Card</h4>
+      </CardHeader>
+      <p>
+        Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+       <CardFooter paddingTop={5}>
+        <a href="#">Read more...</a>
+      </CardFooter>
+    </Card>
+
+    <h3>Warning</h3>
+    <Card margin3="bottom" context='warning'>
+       <CardHeader>
+        <h4>Card</h4>
+      </CardHeader>
+      <p>
+        Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+       <CardFooter paddingTop={5}>
+        <a href="#">Read more...</a>
+      </CardFooter>
+    </Card>
+
+  </ThemeProvider>
+</Playground>
+
+## Hover
+
+<Playground>
+  <ThemeProvider>
+
+    <h3>Default</h3>
+    <Card hover margin3="bottom">
+      <CardHeader>
+        <h4>Card</h4>
+      </CardHeader>
+      <p>
+        Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+       <CardFooter paddingTop={5}>
+        <a href="#">Read more...</a>
+      </CardFooter>
+    </Card>
+
+    <h3>Accent</h3>
+    <Card hover margin3="bottom" context='accent'>
+      <CardHeader>
+      <h4>Card</h4>
+      </CardHeader>
+      <p>
+        Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+       <CardFooter paddingTop={5}>
+        <a href="#">Read more...</a>
+      </CardFooter>
+    </Card>
+
+
+    <h3>Action</h3>
+    <Card hover margin3="bottom" context='action'>
+       <CardHeader>
+        <h4>Card</h4>
+      </CardHeader>
+      <p>
+        Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+       <CardFooter paddingTop={5}>
+        <a href="#">Read more...</a>
+      </CardFooter>
+    </Card>
+
+    <h3>Danger</h3>
+    <Card hover margin3="bottom" context='danger'>
+       <CardHeader>
+        <h4>Card</h4>
+      </CardHeader>
+      <p>
+        Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+       <CardFooter paddingTop={5}>
+        <a href="#">Read more...</a>
+      </CardFooter>
+    </Card>
+
+      <h3>Success</h3>
+    <Card hover margin3="bottom" context='success'>
+       <CardHeader>
+        <h4>Card</h4>
+      </CardHeader>
+      <p>
+        Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+       <CardFooter paddingTop={5}>
+        <a href="#">Read more...</a>
+      </CardFooter>
+    </Card>
+
+    <h3>Warning</h3>
+    <Card hover margin3="bottom" context='warning'>
+       <CardHeader>
+        <h4>Card</h4>
+      </CardHeader>
+      <p>
+        Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+       <CardFooter paddingTop={5}>
+        <a href="#">Read more...</a>
+      </CardFooter>
+    </Card>
+
+  </ThemeProvider>
+</Playground>
+
+## Collapse
+
+<Playground>
+  <ThemeProvider>
+    <h3>Collapse</h3>
+    <Card size="collapse" margin3="bottom">
+      <CardHeader>
+        <CoverImg
+          css={`
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+          `}
+          src="https://images.unsplash.com/photo-1498049860654-af1a5c566876?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+        />
+      </CardHeader>
+      <p>
+        Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <CardFooter paddingTop={5}>
+        <a href="#">Read more...</a>
+      </CardFooter>
+    </Card>
+  </ThemeProvider>
+</Playground>
+
+## Size
+
+<Playground>
+  <ThemeProvider>
+
+    <h3>Large</h3>
+    <Card size='large' margin3="bottom">
+      <CardHeader>
+        <h4>Card</h4>
+      </CardHeader>
+      <p>
+        Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <CardFooter paddingTop={5}>
+        <a href="#">Read more...</a>
+      </CardFooter>
+    </Card>
+
+
+    <h3>Small</h3>
+    <Card size='small' margin3="bottom">
+      <CardHeader>
+        <h4>Card</h4>
+      </CardHeader>
+      <p>
+        Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <CardFooter paddingTop={5}>
+        <a href="#">Read more...</a>
+      </CardFooter>
+    </Card>
+
+  </ThemeProvider>
+</Playground>

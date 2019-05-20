@@ -1,0 +1,57 @@
+---
+name: Img
+---
+
+import { Playground, Props } from 'docz'
+import Img from '../Img/Img'
+import styled from 'styled-components'
+import { ThemeProvider } from '../ThemeContext'
+
+# Img
+
+## Properties
+
+<Props of={Img} />
+
+## Default
+
+<Playground>
+  <ThemeProvider>
+    <Img
+      width="640px"
+      height="480px"
+      src="https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+    />
+  </ThemeProvider>
+</Playground>
+
+## Size
+
+<Playground>
+  <ThemeProvider>
+    <div>
+      <Img
+        size="small"
+        src="https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+      />
+    </div>
+    <div>
+      <Img
+        size="medium"
+        src="https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+      />
+    </div>
+    <div>
+      <Img
+        size="large"
+        src="https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+      />
+    </div>
+    <div>
+      <Img
+        size="xlarge"
+        src="https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+      />
+    </div>
+  </ThemeProvider>
+</Playground>
