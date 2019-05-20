@@ -6,8 +6,7 @@ export function errorMessageTheme({
     color: color.danger,
     transition: animation.easeMedium(),
     margin: `0 0 ${unit[3]} 3px`,
-    fontSize: '0.8rem',
-    lineHeight: '1.8',
+    fontSize: '0.9rem',
     padding: unit[2],
   }
 }

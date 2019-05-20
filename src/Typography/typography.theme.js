@@ -37,52 +37,16 @@ export function typographyContextTheme({ context, theme: { color } }) {
   )
 }
 
-export function typographyElementTheme({ as, theme: { color, border, unit } }) {
-  return (
-    {
-      code: {
-        background: color['grey-200'],
-        color: color.accent,
-        padding: '0 4px',
-        whiteSpace: 'nowrap',
-      },
-      hr: {
-        border: border.thin,
-        margin: `calc(${unit.default} - 1px) 0`,
-        textShadow: 'none',
-        height: 0,
-      },
-      q: {
-        fontStyle: 'italic',
-        '&:before': {
-          content: ' open-quote',
-        },
-        '&:after': {
-          content: ' close-quote',
-        },
-      },
-      sm: {
-        fontSize: '80%',
-      },
-      strong: {
-        fontWeight: 700,
-      },
-    }[as] || ''
-  )
-}
-
 export function typographyModifyTheme({ modify, theme: { color, font } }) {
   return (
     {
       lead: {
-        fontSize: font.x1,
-        lineHeight: 1.5,
+        fontSize: font.size[8],
         fontWeight: 300,
       },
       meta: {
-        fontSize: font.small,
+        fontSize: font.size[2],
         color: color['grey-500'],
-        lineHeight: 1.4,
       },
     }[modify] || ''
   )

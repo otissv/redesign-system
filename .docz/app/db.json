@@ -3,7 +3,7 @@
     "title": "Redesign System",
     "description": "My awesome app using docz",
     "menu": [],
-    "version": "0.0.0",
+    "version": "0.0.1",
     "repository": null,
     "native": false,
     "codeSandbox": true,
@@ -13,144 +13,6 @@
     "separator": "-"
   },
   "props": [
-    {
-      "key": "src/Alert/Alert.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Alert",
-          "methods": [],
-          "props": {
-            "children": {
-              "type": {
-                "name": "node"
-              },
-              "required": false,
-              "description": ""
-            },
-            "appearance": {
-              "type": {
-                "name": "enum",
-                "value": [
-                  {
-                    "value": "'primary'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'secondary'",
-                    "computed": false
-                  }
-                ]
-              },
-              "required": false,
-              "description": ""
-            },
-            "context": {
-              "type": {
-                "name": "enum",
-                "value": [
-                  {
-                    "value": "'accent'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'action'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'success'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'warning'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'danger'",
-                    "computed": false
-                  }
-                ]
-              },
-              "required": false,
-              "description": ""
-            },
-            "onClose": {
-              "type": {
-                "name": "func"
-              },
-              "required": false,
-              "description": ""
-            },
-            "themed": {
-              "type": {
-                "name": "array"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "[]",
-                "computed": false
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/Accordion/Accordion.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Accordion",
-          "methods": [],
-          "actualName": "Accordion",
-          "props": {
-            "active": {
-              "type": {
-                "name": "string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "children": {
-              "type": {
-                "name": "node"
-              },
-              "required": false,
-              "description": ""
-            },
-            "item": {
-              "type": {
-                "name": "object"
-              },
-              "required": false,
-              "description": ""
-            },
-            "theme": {
-              "type": {
-                "name": "object"
-              },
-              "required": false,
-              "description": ""
-            },
-            "items": {
-              "defaultValue": {
-                "value": "[]",
-                "computed": false
-              },
-              "required": false
-            },
-            "themed": {
-              "defaultValue": {
-                "value": "[]",
-                "computed": false
-              },
-              "required": false
-            }
-          }
-        }
-      ]
-    },
     {
       "key": "src/Accordion/AccordionButton.js",
       "value": [
@@ -259,6 +121,61 @@
       ]
     },
     {
+      "key": "src/Accordion/Accordion.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Accordion",
+          "methods": [],
+          "actualName": "Accordion",
+          "props": {
+            "active": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "children": {
+              "type": {
+                "name": "node"
+              },
+              "required": false,
+              "description": ""
+            },
+            "item": {
+              "type": {
+                "name": "object"
+              },
+              "required": false,
+              "description": ""
+            },
+            "theme": {
+              "type": {
+                "name": "object"
+              },
+              "required": false,
+              "description": ""
+            },
+            "items": {
+              "defaultValue": {
+                "value": "[]",
+                "computed": false
+              },
+              "required": false
+            },
+            "themed": {
+              "defaultValue": {
+                "value": "[]",
+                "computed": false
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/Accordion/AccordionButtonIcon.js",
       "value": [
         {
@@ -356,6 +273,89 @@
               },
               "required": false,
               "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/Alert/Alert.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Alert",
+          "methods": [],
+          "props": {
+            "children": {
+              "type": {
+                "name": "node"
+              },
+              "required": false,
+              "description": ""
+            },
+            "appearance": {
+              "type": {
+                "name": "enum",
+                "value": [
+                  {
+                    "value": "'primary'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'secondary'",
+                    "computed": false
+                  }
+                ]
+              },
+              "required": false,
+              "description": ""
+            },
+            "context": {
+              "type": {
+                "name": "enum",
+                "value": [
+                  {
+                    "value": "'accent'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'action'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'success'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'warning'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'danger'",
+                    "computed": false
+                  }
+                ]
+              },
+              "required": false,
+              "description": ""
+            },
+            "onClose": {
+              "type": {
+                "name": "func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "themed": {
+              "type": {
+                "name": "array"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "[]",
+                "computed": false
+              }
             }
           }
         }
@@ -1827,6 +1827,29 @@
       ]
     },
     {
+      "key": "src/ErrorMessage/ErrorMessage.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "ErrorMessage",
+          "methods": [],
+          "props": {
+            "themed": {
+              "type": {
+                "name": "array"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "[]",
+                "computed": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/Flex/Flex.js",
       "value": [
         {
@@ -2049,29 +2072,6 @@
               "required": false,
               "description": ""
             },
-            "themed": {
-              "type": {
-                "name": "array"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "[]",
-                "computed": false
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/ErrorMessage/ErrorMessage.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "ErrorMessage",
-          "methods": [],
-          "props": {
             "themed": {
               "type": {
                 "name": "array"
@@ -2448,17 +2448,6 @@
           "displayName": "FormValueControl",
           "methods": [],
           "actualName": "FormValueControl"
-        }
-      ]
-    },
-    {
-      "key": "src/GlobalStyle/GlobalStyle.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "GlobalStyle",
-          "methods": [],
-          "actualName": "GlobalStyle"
         }
       ]
     },
@@ -9072,17 +9061,6 @@
       ]
     },
     {
-      "key": "src/MaterialIcons/BarChartSharp.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "BarChartSharp",
-          "methods": [],
-          "actualName": "BarChartSharp"
-        }
-      ]
-    },
-    {
       "key": "src/MaterialIcons/BarChartTwoTone.js",
       "value": [
         {
@@ -9090,6 +9068,17 @@
           "displayName": "BarChartTwoTone",
           "methods": [],
           "actualName": "BarChartTwoTone"
+        }
+      ]
+    },
+    {
+      "key": "src/MaterialIcons/BarChartSharp.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "BarChartSharp",
+          "methods": [],
+          "actualName": "BarChartSharp"
         }
       ]
     },
@@ -10018,17 +10007,6 @@
       ]
     },
     {
-      "key": "src/MaterialIcons/BeachAccess.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "BeachAccess",
-          "methods": [],
-          "actualName": "BeachAccess"
-        }
-      ]
-    },
-    {
       "key": "src/MaterialIcons/BatteryUnknownTwoTone.js",
       "value": [
         {
@@ -10036,6 +10014,17 @@
           "displayName": "BatteryUnknownTwoTone",
           "methods": [],
           "actualName": "BatteryUnknownTwoTone"
+        }
+      ]
+    },
+    {
+      "key": "src/MaterialIcons/BeachAccess.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "BeachAccess",
+          "methods": [],
+          "actualName": "BeachAccess"
         }
       ]
     },
@@ -10359,17 +10348,6 @@
       ]
     },
     {
-      "key": "src/MaterialIcons/BluetoothOutlined.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "BluetoothOutlined",
-          "methods": [],
-          "actualName": "BluetoothOutlined"
-        }
-      ]
-    },
-    {
       "key": "src/MaterialIcons/BluetoothDisabledTwoTone.js",
       "value": [
         {
@@ -10377,6 +10355,17 @@
           "displayName": "BluetoothDisabledTwoTone",
           "methods": [],
           "actualName": "BluetoothDisabledTwoTone"
+        }
+      ]
+    },
+    {
+      "key": "src/MaterialIcons/BluetoothOutlined.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "BluetoothOutlined",
+          "methods": [],
+          "actualName": "BluetoothOutlined"
         }
       ]
     },
@@ -13439,17 +13428,6 @@
       ]
     },
     {
-      "key": "src/MaterialIcons/CameraAltTwoTone.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "CameraAltTwoTone",
-          "methods": [],
-          "actualName": "CameraAltTwoTone"
-        }
-      ]
-    },
-    {
       "key": "src/MaterialIcons/CameraEnhance.js",
       "value": [
         {
@@ -13468,6 +13446,17 @@
           "displayName": "CameraEnhanceOutlined",
           "methods": [],
           "actualName": "CameraEnhanceOutlined"
+        }
+      ]
+    },
+    {
+      "key": "src/MaterialIcons/CameraAltTwoTone.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "CameraAltTwoTone",
+          "methods": [],
+          "actualName": "CameraAltTwoTone"
         }
       ]
     },
@@ -14660,17 +14649,6 @@
       ]
     },
     {
-      "key": "src/MaterialIcons/ChatTwoTone.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "ChatTwoTone",
-          "methods": [],
-          "actualName": "ChatTwoTone"
-        }
-      ]
-    },
-    {
       "key": "src/MaterialIcons/Check.js",
       "value": [
         {
@@ -14678,6 +14656,17 @@
           "displayName": "Check",
           "methods": [],
           "actualName": "Check"
+        }
+      ]
+    },
+    {
+      "key": "src/MaterialIcons/ChatTwoTone.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "ChatTwoTone",
+          "methods": [],
+          "actualName": "ChatTwoTone"
         }
       ]
     },
@@ -27761,17 +27750,6 @@
       ]
     },
     {
-      "key": "src/MaterialIcons/GrainTwoTone.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "GrainTwoTone",
-          "methods": [],
-          "actualName": "GrainTwoTone"
-        }
-      ]
-    },
-    {
       "key": "src/MaterialIcons/GrainSharp.js",
       "value": [
         {
@@ -27779,6 +27757,17 @@
           "displayName": "GrainSharp",
           "methods": [],
           "actualName": "GrainSharp"
+        }
+      ]
+    },
+    {
+      "key": "src/MaterialIcons/GrainTwoTone.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "GrainTwoTone",
+          "methods": [],
+          "actualName": "GrainTwoTone"
         }
       ]
     },
@@ -27816,17 +27805,6 @@
       ]
     },
     {
-      "key": "src/MaterialIcons/GraphicEqTwoTone.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "GraphicEqTwoTone",
-          "methods": [],
-          "actualName": "GraphicEqTwoTone"
-        }
-      ]
-    },
-    {
       "key": "src/MaterialIcons/GraphicEqSharp.js",
       "value": [
         {
@@ -27834,6 +27812,17 @@
           "displayName": "GraphicEqSharp",
           "methods": [],
           "actualName": "GraphicEqSharp"
+        }
+      ]
+    },
+    {
+      "key": "src/MaterialIcons/GraphicEqTwoTone.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "GraphicEqTwoTone",
+          "methods": [],
+          "actualName": "GraphicEqTwoTone"
         }
       ]
     },
@@ -45394,17 +45383,6 @@
       ]
     },
     {
-      "key": "src/MaterialIcons/RemoveCircleOutlineSharp.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "RemoveCircleOutlineSharp",
-          "methods": [],
-          "actualName": "RemoveCircleOutlineSharp"
-        }
-      ]
-    },
-    {
       "key": "src/MaterialIcons/RemoveCircleOutlineRounded.js",
       "value": [
         {
@@ -45412,6 +45390,17 @@
           "displayName": "RemoveCircleOutlineRounded",
           "methods": [],
           "actualName": "RemoveCircleOutlineRounded"
+        }
+      ]
+    },
+    {
+      "key": "src/MaterialIcons/RemoveCircleOutlineSharp.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "RemoveCircleOutlineSharp",
+          "methods": [],
+          "actualName": "RemoveCircleOutlineSharp"
         }
       ]
     },
@@ -50806,17 +50795,6 @@
       ]
     },
     {
-      "key": "src/MaterialIcons/SignalWifi0BarOutlined.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "SignalWifi0BarOutlined",
-          "methods": [],
-          "actualName": "SignalWifi0BarOutlined"
-        }
-      ]
-    },
-    {
       "key": "src/MaterialIcons/SignalWifi0BarRounded.js",
       "value": [
         {
@@ -50824,6 +50802,17 @@
           "displayName": "SignalWifi0BarRounded",
           "methods": [],
           "actualName": "SignalWifi0BarRounded"
+        }
+      ]
+    },
+    {
+      "key": "src/MaterialIcons/SignalWifi0BarOutlined.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "SignalWifi0BarOutlined",
+          "methods": [],
+          "actualName": "SignalWifi0BarOutlined"
         }
       ]
     },
@@ -55261,17 +55250,6 @@
       ]
     },
     {
-      "key": "src/MaterialIcons/TextRotateVerticalRounded.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "TextRotateVerticalRounded",
-          "methods": [],
-          "actualName": "TextRotateVerticalRounded"
-        }
-      ]
-    },
-    {
       "key": "src/MaterialIcons/TextRotateVerticalOutlined.js",
       "value": [
         {
@@ -55279,6 +55257,17 @@
           "displayName": "TextRotateVerticalOutlined",
           "methods": [],
           "actualName": "TextRotateVerticalOutlined"
+        }
+      ]
+    },
+    {
+      "key": "src/MaterialIcons/TextRotateVerticalRounded.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "TextRotateVerticalRounded",
+          "methods": [],
+          "actualName": "TextRotateVerticalRounded"
         }
       ]
     },
@@ -60959,17 +60948,6 @@
       ]
     },
     {
-      "key": "src/MaterialIcons/WeekendSharp.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "WeekendSharp",
-          "methods": [],
-          "actualName": "WeekendSharp"
-        }
-      ]
-    },
-    {
       "key": "src/MaterialIcons/WeekendTwoTone.js",
       "value": [
         {
@@ -60988,6 +60966,17 @@
           "displayName": "Whatshot",
           "methods": [],
           "actualName": "Whatshot"
+        }
+      ]
+    },
+    {
+      "key": "src/MaterialIcons/WeekendSharp.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "WeekendSharp",
+          "methods": [],
+          "actualName": "WeekendSharp"
         }
       ]
     },
@@ -61806,6 +61795,17 @@
       ]
     },
     {
+      "key": "src/GlobalStyle/GlobalStyle.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "GlobalStyle",
+          "methods": [],
+          "actualName": "GlobalStyle"
+        }
+      ]
+    },
+    {
       "key": "src/Typography/Typography.js",
       "value": [
         {
@@ -61944,6 +61944,10 @@
                   },
                   {
                     "value": "'p'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'small'",
                     "computed": false
                   },
                   {
@@ -62288,30 +62292,6 @@
       }
     },
     {
-      "key": "src/Container/Container.mdx",
-      "value": {
-        "name": "Container",
-        "route": "/container",
-        "id": "96731b6b4724cd22ad5078036a48173f",
-        "filepath": "src/Container/Container.mdx",
-        "link": "",
-        "slug": "src-container-container",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "container",
-            "depth": 1,
-            "value": "Container"
-          },
-          {
-            "slug": "default",
-            "depth": 2,
-            "value": "Default"
-          }
-        ]
-      }
-    },
-    {
       "key": "src/Card/Card.mdx",
       "value": {
         "name": "Card",
@@ -62346,6 +62326,30 @@
             "slug": "size",
             "depth": 2,
             "value": "Size"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/Container/Container.mdx",
+      "value": {
+        "name": "Container",
+        "route": "/container",
+        "id": "96731b6b4724cd22ad5078036a48173f",
+        "filepath": "src/Container/Container.mdx",
+        "link": "",
+        "slug": "src-container-container",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "container",
+            "depth": 1,
+            "value": "Container"
+          },
+          {
+            "slug": "default",
+            "depth": 2,
+            "value": "Default"
           }
         ]
       }
@@ -62389,6 +62393,35 @@
             "slug": "default",
             "depth": 2,
             "value": "Default"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/ErrorMessage/ErrorMessage.mdx",
+      "value": {
+        "name": "Error Message",
+        "route": "/error-message",
+        "id": "892f2276db8d0dc5cf4ea3c0928345b0",
+        "filepath": "src/ErrorMessage/ErrorMessage.mdx",
+        "link": "",
+        "slug": "src-error-message-error-message",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "error-message",
+            "depth": 1,
+            "value": "Error Message"
+          },
+          {
+            "slug": "default",
+            "depth": 2,
+            "value": "Default"
+          },
+          {
+            "slug": "appearance",
+            "depth": 2,
+            "value": "Appearance"
           }
         ]
       }
@@ -62523,35 +62556,6 @@
             "slug": "order",
             "depth": 2,
             "value": "Order"
-          }
-        ]
-      }
-    },
-    {
-      "key": "src/ErrorMessage/ErrorMessage.mdx",
-      "value": {
-        "name": "Error Message",
-        "route": "/error-message",
-        "id": "892f2276db8d0dc5cf4ea3c0928345b0",
-        "filepath": "src/ErrorMessage/ErrorMessage.mdx",
-        "link": "",
-        "slug": "src-error-message-error-message",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "error-message",
-            "depth": 1,
-            "value": "Error Message"
-          },
-          {
-            "slug": "default",
-            "depth": 2,
-            "value": "Default"
-          },
-          {
-            "slug": "appearance",
-            "depth": 2,
-            "value": "Appearance"
           }
         ]
       }

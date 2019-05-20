@@ -15,9 +15,9 @@ export function fontTheme({ color, font } = baseDefaults) {
     // family
     code:
       "'Source Code Pro', 'Consolas', 'Inconsolata', 'Source Code Pro', 'Monaco', monospace !important",
-    serif:
+    serif: "'Merriweather','Georgia',serif",
+    sans:
       'system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif',
-    sans: '',
 
     size: {
       1: '12px',
@@ -32,7 +32,7 @@ export function fontTheme({ color, font } = baseDefaults) {
       10: '60px',
       11: '72px',
       12: '84px',
-      default: '14px',
+      default: '16px',
     },
 
     lineHeight: {
@@ -40,7 +40,7 @@ export function fontTheme({ color, font } = baseDefaults) {
       2: 1.5,
       3: 1.75,
       4: 2,
-      default: 1.5,
+      default: 1.75,
     },
 
     weight: {

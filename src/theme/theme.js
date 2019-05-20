@@ -34,4 +34,4 @@ export const theme = props => {
   }
 }
 
-export default theme(window.__theme)
+export default theme()

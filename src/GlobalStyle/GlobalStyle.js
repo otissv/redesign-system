@@ -9,7 +9,7 @@ export function GlobalStyle(props) {
   const { theme } = useTheme()
 
   const Global = createGlobalStyle`
-    ${({ theme: { color, font, scrollbar, unit } }) => `
+    ${({ theme: { border, color, font, scrollbar, unit } }) => `
     ${normalizeStyled}
 
     html {
@@ -57,7 +57,7 @@ export function GlobalStyle(props) {
     h6,
     a,
     button {
-      font-family: ${font.serif};
+      font-family: ${font.sans};
       ${font.smooth};
     }
 
@@ -83,10 +83,6 @@ export function GlobalStyle(props) {
       color: #ffffff;
     }
 
-
-
-    
-
     *::-webkit-scrollbar {
       width: ${scrollbar.width};
       height: ${scrollbar.height};
@@ -105,8 +101,6 @@ export function GlobalStyle(props) {
       background-color: ${scrollbar.thumb.hover.backgroundColor};
     }
     
-
-
     article,
     aside,
     details,
@@ -170,7 +164,7 @@ export function GlobalStyle(props) {
       color: #000;
     }
     small {
-      font-size: ${font.size[1]}
+      font-size: ${font.size[2]}
     }
     sub,
     sup {
@@ -206,6 +200,10 @@ export function GlobalStyle(props) {
       box-sizing: content-box;
       height: 0;
       overflow: visible;
+      border: ${border.thin};
+      margin: calc(${unit.default} - 1px) 0;
+      textShadow: none;
+      height: 0;
     }
     button,
     input,
@@ -303,25 +301,25 @@ export function GlobalStyle(props) {
       margin: 0  0 ${unit.default} 0;
       padding: 0;
       font-weight: bold;
-      line-height: ${font.lineHeight[1]};
+      line-height: ${font.lineHeight[2]};
     }
     h1 {
-      font-size: ${font.size[6]};
+      font-size: ${font.size[8]};
     }
     h2 {
-      font-size: ${font.size[5]};
+      font-size: ${font.size[7]};
     }
     h3 {
-      font-size: ${font.size[4]};
+      font-size: ${font.size[6]};
     }
     h4 {
-      font-size: ${font.size[3]};
+      font-size: ${font.size[5]};
     }
     h5 {
-      font-size: ${font.size[2]};
+      font-size: ${font.size[4]};
     }
     h6 {
-      font-size: ${font.size[1]};
+      font-size: ${font.size[3]};
     }
     hgroup {
       margin: 0  0 ${unit.default} 0;
@@ -377,8 +375,19 @@ export function GlobalStyle(props) {
       padding: 0;
     }
     blockquote {
-      margin: 0  ${unit.default} ${unit.default} ${unit.default};
-      padding: 0;
+      margin-left: -1.75rem;
+      margin-right: 1.75rem;
+      margin-top: 0;
+      padding-bottom: 0;
+      padding-left: 1.42188rem;
+      padding-right: 0;
+      padding-top: 0;
+      margin-bottom: 1.75rem;
+      font-size: ${font.size[5]};
+      line-height: ${font.lineHeight.default};
+      color: ${color['grey-500']};
+      font-style: italic;
+      border-left: 0.32813rem solid ${color.foreground};
     }
     form {
       margin: 0  0 ${unit.default} 0;
@@ -392,14 +401,7 @@ export function GlobalStyle(props) {
       margin: 0  0 ${unit.default} 0;
       padding: 0;
     }
-    hr {
-      margin: 0;
-      padding: 0;
-      margin-bottom: calc(${unit.default}  - 1px);
-      background: hsla(0, 0%, 0%, 0.2);
-      border: none;
-      height: 1px;
-    }
+    
     address {
       margin: 0  0 ${unit.default} 0;
       padding: 0;
@@ -451,6 +453,15 @@ export function GlobalStyle(props) {
     li > p {
       margin-bottom: calc(${unit.default} / 2);
     }
+    q: {
+      fontStyle: 'italic',
+      '&:before': {
+        content: ' open-quote',
+      },
+      '&:after': {
+        content: ' close-quote',
+      },
+    }
     abbr {
       border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
       cursor: help;
@@ -490,13 +501,12 @@ export function GlobalStyle(props) {
     }
     tt,
     code {
-      background-color: hsla(0, 0%, 0%, 0.04);
+      background-color: ${color['grey-200']};
+      color: ${color.accent};
       border-radius: 3px;
       font-family: 'SFMono-Regular', Consolas, 'Roboto Mono', 'Droid Sans Mono',
         'Liberation Mono', Menlo, Courier, monospace;
-      padding: 0;
-      padding-top: ${unit[1]};
-      padding-bottom: ${unit[1]};
+      padding: ${unit[1]} ${unit[2]};
     }
     pre code {
       background: none;

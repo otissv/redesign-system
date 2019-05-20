@@ -6,7 +6,6 @@ import Base from '../Base/Base'
 
 import {
   typographyContextTheme,
-  typographyElementTheme,
   typographyTheme,
   typographyModifyTheme,
   typographyWrapTheme,
@@ -24,7 +23,6 @@ export const Typography = React.memo(function Typography({
   const themed = useMemo(
     () => [
       typographyContextTheme,
-      typographyElementTheme,
       typographyTheme,
       typographyModifyTheme,
       typographyWrapTheme,
@@ -34,7 +32,6 @@ export const Typography = React.memo(function Typography({
     ],
     [
       typographyContextTheme,
-      typographyElementTheme,
       typographyTheme,
       typographyModifyTheme,
       typographyWrapTheme,
@@ -94,6 +91,7 @@ Typography.propTypes = {
     'mark',
     'q',
     'p',
+    'small',
     'span',
     'strong',
   ]),
