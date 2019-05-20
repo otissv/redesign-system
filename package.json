@@ -7,8 +7,6 @@
   "scripts": {
     "build": "babel src -d lib ",
     "watch": "babel src -d lib --watch",
-    "build:dev": "NODE_ENV=development rollup -c",
-    "build:pro": "NODE_ENV=production rollup -c",
     "format": "prettier --write \"src/**/*.js\"",
     "prepublishOnly": "npm run release",
     "release": "npm run build:dev && npm run build",

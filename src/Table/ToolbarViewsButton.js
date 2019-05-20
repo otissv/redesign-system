@@ -28,7 +28,7 @@ export const ToolbarViewsButton = React.memo(function ToolbarViewsButton({
   const ComponentCode = useMemo(() => Code, [Code])
 
   return (
-    <ToolbarViewsContainer>
+    <ToolbarViewsContainer className="ToolbarViewsContainer">
       <ButtonIcon
         icon={ComponentListAlt}
         onClick={handleClick}

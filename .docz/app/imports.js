@@ -3,13 +3,13 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-index" */ 'src/index.mdx'
     ),
-  'src/Accordion/accordion.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-accordion-accordion" */ 'src/Accordion/accordion.mdx'
-    ),
   'src/Alert/alert.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-alert-alert" */ 'src/Alert/alert.mdx'
+    ),
+  'src/Accordion/accordion.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-accordion-accordion" */ 'src/Accordion/accordion.mdx'
     ),
   'src/AppBar/AppBar.mdx': () =>
     import(
@@ -95,13 +95,13 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-toolbar-toolbar" */ 'src/Toolbar/toolbar.mdx'
     ),
-  'src/Typography/typography.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-typography-typography" */ 'src/Typography/typography.mdx'
-    ),
   'src/Video/video.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-video-video" */ 'src/Video/video.mdx'
+    ),
+  'src/Typography/typography.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-typography-typography" */ 'src/Typography/typography.mdx'
     ),
   'src/theme/borders/border.mdx': () =>
     import(

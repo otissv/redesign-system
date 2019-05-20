@@ -5,7 +5,7 @@ export function toolbarTheme({ borders, theme: { border, color, unit } }) {
     minHeight: 'auto',
     background: 'none',
 
-    '>button': {
+    '>button, .ToolbarViewsContainer>button': {
       color: color.foreground,
       background: 'none',
       borderColor: color.transparent,
