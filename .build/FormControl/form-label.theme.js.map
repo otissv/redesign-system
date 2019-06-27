@@ -1,1 +1,0 @@
-{"version":3,"file":"form-label.theme.js","sourceRoot":"","sources":["../../src/FormControl/form-label.theme.ts"],"names":[],"mappings":"AAEA,MAAM,UAAU,cAAc,CAAC,EAEV;QADnB,aAA0B,EAAjB,wBAAS,EAAE,cAAI;IAExB,OAAO;QACL,OAAO,EAAE,OAAO;QAChB,YAAY,EAAE,IAAI,CAAC,CAAC,CAAC;QACrB,UAAU,EAAE,SAAS,CAAC,UAAU,EAAE;KACnC,CAAC;AACJ,CAAC"}

@@ -1,1 +1,0 @@
-{"version":3,"file":"PinAccount.js","sourceRoot":"","sources":["../../src/MaterialIcons/PinAccount.tsx"],"names":[],"mappings":";AAAA,OAAO,KAAK,MAAM,OAAO,CAAC;AAC1B,OAAO,EAAE,IAAI,EAAiB,MAAM,SAAS,CAAC;AAE9C,MAAM,UAAU,UAAU,CAAC,KAAoB;IAC7C,OAAO,CACL,oBAAC,IAAI,uBAAK,KAAK;QACb,8BAAM,CAAC,EAAC,6OAA6O,GAAE,CAClP,CACR,CAAC;AACJ,CAAC;AAED,eAAe,UAAU,CAAA"}

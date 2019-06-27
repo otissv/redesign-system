@@ -1,1 +1,0 @@
-{"version":3,"file":"ThreeDRotation.js","sourceRoot":"","sources":["../../src/MaterialIcons/ThreeDRotation.tsx"],"names":[],"mappings":";AAAA,OAAO,KAAK,MAAM,OAAO,CAAC;AAC1B,OAAO,EAAE,IAAI,EAAiB,MAAM,SAAS,CAAC;AAE9C,MAAM,UAAU,cAAc,CAAC,KAAoB;IACjD,OAAO,CACL,oBAAC,IAAI,uBAAK,KAAK;QACb,8BAAM,CAAC,EAAC,87CAA87C,GAAE,CACn8C,CACR,CAAC;AACJ,CAAC;AAED,eAAe,cAAc,CAAA"}

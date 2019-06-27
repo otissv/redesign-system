@@ -1,1 +1,0 @@
-{"version":3,"file":"BrightnessAuto.js","sourceRoot":"","sources":["../../src/MaterialIcons/BrightnessAuto.tsx"],"names":[],"mappings":";AAAA,OAAO,KAAK,MAAM,OAAO,CAAC;AAC1B,OAAO,EAAE,IAAI,EAAiB,MAAM,SAAS,CAAC;AAE9C,MAAM,UAAU,cAAc,CAAC,KAAoB;IACjD,OAAO,CACL,oBAAC,IAAI,uBAAK,KAAK;QACb,8BAAM,CAAC,EAAC,4LAA4L,GAAE,CACjM,CACR,CAAC;AACJ,CAAC;AAED,eAAe,cAAc,CAAA"}

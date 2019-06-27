@@ -1,1 +1,0 @@
-{"version":3,"file":"SmartphonePortraitLock.js","sourceRoot":"","sources":["../../src/MaterialIcons/SmartphonePortraitLock.tsx"],"names":[],"mappings":";AAAA,OAAO,KAAK,MAAM,OAAO,CAAC;AAC1B,OAAO,EAAE,IAAI,EAAiB,MAAM,SAAS,CAAC;AAE9C,MAAM,UAAU,sBAAsB,CAAC,KAAoB;IACzD,OAAO,CACL,oBAAC,IAAI,uBAAK,KAAK;QACb,8BAAM,CAAC,EAAC,0QAA0Q,GAAE,CAC/Q,CACR,CAAC;AACJ,CAAC;AAED,eAAe,sBAAsB,CAAA"}

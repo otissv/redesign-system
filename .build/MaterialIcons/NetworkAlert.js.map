@@ -1,1 +1,0 @@
-{"version":3,"file":"NetworkAlert.js","sourceRoot":"","sources":["../../src/MaterialIcons/NetworkAlert.tsx"],"names":[],"mappings":";AAAA,OAAO,KAAK,MAAM,OAAO,CAAC;AAC1B,OAAO,EAAE,IAAI,EAAiB,MAAM,SAAS,CAAC;AAE9C,MAAM,UAAU,YAAY,CAAC,KAAoB;IAC/C,OAAO,CACL,oBAAC,IAAI,uBAAK,KAAK;QACb,8BAAM,CAAC,EAAC,sDAAsD,GAAE,CAC3D,CACR,CAAC;AACJ,CAAC;AAED,eAAe,YAAY,CAAA"}

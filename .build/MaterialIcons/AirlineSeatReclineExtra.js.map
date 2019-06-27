@@ -1,1 +1,0 @@
-{"version":3,"file":"AirlineSeatReclineExtra.js","sourceRoot":"","sources":["../../src/MaterialIcons/AirlineSeatReclineExtra.tsx"],"names":[],"mappings":";AAAA,OAAO,KAAK,MAAM,OAAO,CAAC;AAC1B,OAAO,EAAE,IAAI,EAAiB,MAAM,SAAS,CAAC;AAE9C,MAAM,UAAU,uBAAuB,CAAC,KAAoB;IAC1D,OAAO,CACL,oBAAC,IAAI,uBAAK,KAAK;QACb,8BAAM,CAAC,EAAC,0bAA0b,GAAE,CAC/b,CACR,CAAC;AACJ,CAAC;AAED,eAAe,uBAAuB,CAAA"}
