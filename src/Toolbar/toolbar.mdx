@@ -1,0 +1,37 @@
+---
+name: Toolbar
+route: /toolbar
+---
+
+import { Playground, Props } from 'docz';
+import styled from 'styled-components';
+import { ThemeProvider } from '../ThemeContext/ThemeProvider';
+import Toolbar from './Toolbar';
+import ButtonIcon from '../ButtonIcon/ButtonIcon';
+
+import { Copy } from '../MaterialIcons/Copy';
+import { Delete } from '../MaterialIcons/Delete';
+import { Download } from '../MaterialIcons/Download';
+import { Edit } from '../MaterialIcons/Edit';
+import { Plus } from '../MaterialIcons/Plus';
+
+# Toolbar
+
+## Properties
+
+<Props of={Toolbar} />
+
+## Default
+
+<Playground>
+  <ThemeProvider>
+    <Toolbar>
+      <ButtonIcon appearance="primary-action" icon={Plus}>Add</ButtonIcon>
+      <ButtonIcon appearance="primary-action" icon={Copy}>Copy</ButtonIcon>
+      <ButtonIcon appearance="primary-action" icon={Edit}>Edit</ButtonIcon>
+      <ButtonIcon appearance="primary-action" icon={Delete}>Delete</ButtonIcon>
+      <ButtonIcon appearance="primary-action" icon={Download}>Download</ButtonIcon>
+    </Toolbar>
+
+  </ThemeProvider>
+</Playground>

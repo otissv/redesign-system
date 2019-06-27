@@ -1,0 +1,1 @@
+{"version":3,"file":"PhotoSizeSelectSmall.js","sourceRoot":"","sources":["../../src/MaterialIcons/PhotoSizeSelectSmall.tsx"],"names":[],"mappings":";AAAA,OAAO,KAAK,MAAM,OAAO,CAAC;AAC1B,OAAO,EAAE,IAAI,EAAiB,MAAM,SAAS,CAAC;AAE9C,MAAM,UAAU,oBAAoB,CAAC,KAAoB;IACvD,OAAO,CACL,oBAAC,IAAI,uBAAK,KAAK;QACb,8BAAM,CAAC,EAAC,kQAAkQ,GAAE,CACvQ,CACR,CAAC;AACJ,CAAC;AAED,eAAe,oBAAoB,CAAA"}

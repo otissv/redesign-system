@@ -1,0 +1,24 @@
+{
+  "parser": "babel-eslint",
+  "plugins": ["prettier", "react"],
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "impliedStrict": true
+    }
+  },
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "trailingComma": "es5",
+        "printWidth": 80,
+        "semi": false
+      }
+    ]
+  }
+}

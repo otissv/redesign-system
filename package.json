@@ -1,0 +1,59 @@
+{
+  "name": "redesign-system",
+  "version": "0.0.7",
+  "main": "dist/index.js",
+  "umd:main": "dist/redesign.umd.production.js",
+  "module": "dist/redesign.es.production.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "docz dev",
+    "watch": "tsc --outDir .build --jsx react -w",
+    "build": "rm -rf .build && mkdir .build && tsc  --outDir .build --jsx",
+    "test": "tsdx test",
+    "docz:build": "docz build"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.15",
+    "@types/lodash": "^4.14.134",
+    "@types/react-dom": "^16.8.4",
+    "@types/styled-components": "^4.1.16",
+    "docz": "^1.2.0",
+    "docz-theme-default": "^1.2.0",
+    "husky": "^2.4.1",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
+    "prop-types": "^15.7.2",
+    "tslib": "^1.10.0",
+    "typescript": "^3.5.2"
+  },
+  "dependencies": {
+    "cuid": "^2.1.6",
+    "graphql": "^14.4.0",
+    "js-file-download": "^0.4.7",
+    "lodash": "^4.17.11",
+    "react": "^16.8.6",
+    "react-copy-to-clipboard": "^5.0.1",
+    "react-pose": "^4.0.8",
+    "styled-components": "^4.3.2",
+    "styled-normalize": "^8.0.6"
+  },
+  "peerDependencies": {
+    "graphql": "^14.3.1",
+    "react": "^16.8.6",
+    "styled-components": "^4.3.1"
+  }
+}

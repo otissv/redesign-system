@@ -1,0 +1,1 @@
+{"version":3,"file":"WindowMaximize.js","sourceRoot":"","sources":["../../src/MaterialIcons/WindowMaximize.tsx"],"names":[],"mappings":";AAAA,OAAO,KAAK,MAAM,OAAO,CAAC;AAC1B,OAAO,EAAE,IAAI,EAAiB,MAAM,SAAS,CAAC;AAE9C,MAAM,UAAU,cAAc,CAAC,KAAoB;IACjD,OAAO,CACL,oBAAC,IAAI,uBAAK,KAAK;QACd,8BAAM,CAAC,EAAC,+BAA+B,GAAG,CACpC,CACR,CAAC;AACJ,CAAC;AAED,eAAe,cAAc,CAAA"}

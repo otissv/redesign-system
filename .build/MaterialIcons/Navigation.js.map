@@ -1,0 +1,1 @@
+{"version":3,"file":"Navigation.js","sourceRoot":"","sources":["../../src/MaterialIcons/Navigation.tsx"],"names":[],"mappings":";AAAA,OAAO,KAAK,MAAM,OAAO,CAAC;AAC1B,OAAO,EAAE,IAAI,EAAiB,MAAM,SAAS,CAAC;AAE9C,MAAM,UAAU,UAAU,CAAC,KAAoB;IAC7C,OAAO,CACL,oBAAC,IAAI,uBAAK,KAAK;QACb,8BAAM,CAAC,EAAC,8CAA8C,GAAE,CACnD,CACR,CAAC;AACJ,CAAC;AAED,eAAe,UAAU,CAAA"}

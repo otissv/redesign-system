@@ -1,0 +1,63 @@
+---
+name: Video
+route: /video
+---
+
+import { Fragment } from 'react';
+import { Playground, Props } from 'docz';
+import styled from 'styled-components';
+import Video from './Video';
+import { Input } from '../Input';
+import { Flex } from '../Flex';
+
+import { ThemeProvider } from '../ThemeContext/ThemeProvider';
+
+# Video
+
+## Properties
+
+<Props of={Video} />
+
+## Controls
+
+<Playground>
+  <ThemeProvider>
+    <Video controls>
+      <source
+        src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4"
+        type="video/mp4"
+      />
+      <source src="http://clips.vorwaerts-gmbh.de/VfE.webm" type="video/webm" />
+      <source src="http://clips.vorwaerts-gmbh.de/VfE.ogv" type="video/ogg" />
+    </Video>
+  </ThemeProvider>
+</Playground>
+
+## Autoplay
+
+<Playground>
+  <ThemeProvider>
+    <Video autoPlay muted>
+      <source
+        src="https://quirksmode.org/html5/videos/big_buck_bunny.mp4"
+        type="video/mp4"
+      />
+      <source src="http://clips.vorwaerts-gmbh.de/VfE.webm" type="video/webm" />
+      <source src="http://clips.vorwaerts-gmbh.de/VfE.ogv" type="video/ogg" />
+    </Video>
+  </ThemeProvider>
+</Playground>
+
+## Embebed
+
+<Playground>
+  <ThemeProvider>
+    <Video
+      embeded
+      allowFullScreen
+      height="315"
+      width="560"
+      src="https://www.youtube-nocookie.com/embed/YE7VzlLtp-4?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1"
+    />
+  </ThemeProvider>
+</Playground>

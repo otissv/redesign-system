@@ -1,0 +1,34 @@
+---
+name: GoogleMaps
+route: /google-maps
+---
+
+import { Fragment } from 'react';
+import { Playground, Props } from 'docz';
+import GoogleMaps from './GoogleMaps';
+import GoogleMapsContainer from './googlemaps.example';
+import { Input } from '../Input';
+import { Flex } from '../Flex';
+
+import { ThemeProvider } from '../ThemeContext/ThemeProvider';
+
+# Google Maps
+
+## Properties
+
+<Props of={GoogleMaps} />
+
+<Playground>
+  <ThemeProvider>
+    <GoogleMapsContainer>
+      {state => (
+        <Flex direction='column'>
+          <Input value={state[0]} onChange={e => state[1](e.target.value)}  margin5='bottom'/>
+
+          <GoogleMaps location={state[0]} />
+        </Flex>
+      )}
+    </GoogleMapsContainer>
+
+  </ThemeProvider>
+</Playground>

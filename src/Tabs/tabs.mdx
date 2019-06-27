@@ -1,0 +1,1170 @@
+---
+name: Tabs
+route: /tabs
+---
+
+import { Fragment } from 'react';
+import { Playground, Props } from 'docz';
+
+import Tabs from './Tabs';
+import { TabList } from './TabList';
+import { TabListButton } from './TabListButton';
+import { TabPanel } from './TabPanel';
+
+import { ThemeProvider } from '../ThemeContext/ThemeProvider';
+
+# Tabs
+
+## Properties
+
+<Props of={Tabs} />
+
+<Playground>
+  <ThemeProvider>
+    <Tabs css='background: #2b313e'>
+      <TabList active="1">      
+        <TabListButton title='Tab1' uid='1'>Tab 1</TabListButton>
+        <TabListButton title='Tab2' uid='2'>Tab 2</TabListButton>
+        <TabListButton title='Tab3' uid='3'>Tab 3</TabListButton>
+      </TabList>
+
+      <TabPanel uid="1" padding={5}>
+        <h4>Tab 1</h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Nam a nisl at leo porta suscipit et vel diam. Maecenas venenatis consectetur
+          tortor, quis fermentum orci tristique ut. Etiam tristique sollicitudin
+          feugiat.
+        </p>
+      </TabPanel>
+      <TabPanel uid="2" padding={5}>
+        <h4>Tab 2</h4>
+        <p>
+          In eu mi bibendum neque. In ante metus dictum at. Senectus et netus et malesuada fames ac.
+          Ac tortor dignissim convallis aenean et tortor at risus viverra.
+          Pulvinar neque laoreet suspendisse interdum consectetur libero.
+          Maecenas pharetra convallis posuere morbi leo.
+        </p>
+      </TabPanel>
+      <TabPanel uid="3" padding={5}>
+        <h4>Tab 3</h4>
+        <p>
+          Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque.
+          Dolor sit amet consectetur adipiscing elit pellentesque.
+          Quisque sagittis purus sit amet volutpat consequat.
+          Aliquam eleifend mi in nulla posuere sollicitudin aliquam.
+        </p>
+      </TabPanel>
+    </Tabs>
+
+  </ThemeProvider>
+</Playground>
+
+<Playground>
+  <ThemeProvider>
+    <div>
+      <h3>Primary</h3>
+      <Tabs stretch marginBottom={5} height='200px' css='background: #2b313e'>
+          <TabList active="1">      
+            <TabListButton title='Tab1' uid='1'>Tab 1</TabListButton>
+            <TabListButton title='Tab2' uid='2'>Tab 2</TabListButton>
+            <TabListButton title='Tab3' uid='3'>Tab 3</TabListButton>
+            <TabListButton title='Tab4' uid='4'>Tab 4</TabListButton>
+            <TabListButton title='Tab5' uid='5'>Tab 5</TabListButton>
+            <TabListButton title='Tab6' uid='6'>Tab 6</TabListButton>
+            <TabListButton title='Tab7' uid='7'>Tab 7</TabListButton>
+            <TabListButton title='Tab8' uid='8'>Tab 8</TabListButton>
+            <TabListButton title='Tab9' uid='9'>Tab 9</TabListButton>
+          </TabList>
+
+          <TabPanel uid="1" padding={5}>
+            <h4>Tab 1</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Nam a nisl at leo porta suscipit et vel diam. Maecenas venenatis consectetur
+              tortor, quis fermentum orci tristique ut. Etiam tristique sollicitudin
+              feugiat.
+            </p>
+          </TabPanel>
+          <TabPanel uid="2" padding={5}>
+            <h4>Tab 2</h4>
+            <p>
+              In eu mi bibendum neque. In ante metus dictum at. Senectus et netus et malesuada fames ac.
+               Ac tortor dignissim convallis aenean et tortor at risus viverra.
+               Pulvinar neque laoreet suspendisse interdum consectetur libero.
+               Maecenas pharetra convallis posuere morbi leo.
+            </p>
+          </TabPanel>
+          <TabPanel uid="3" padding={5}>
+            <h4>Tab 3</h4>
+            <p>
+              Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque.
+              Dolor sit amet consectetur adipiscing elit pellentesque.
+              Quisque sagittis purus sit amet volutpat consequat.
+               Aliquam eleifend mi in nulla posuere sollicitudin aliquam.
+            </p>
+          </TabPanel>
+          <TabPanel uid="4" padding={5}>
+            <h4>Tab 4</h4>
+              <p>
+              Nulla porttitor massa id neque aliquam vestibulum morbi blandit.
+              Et netus et malesuada fames ac.
+              Cursus turpis massa tincidunt dui ut ornare lectus.
+              Integer feugiat scelerisque varius morbi enim nunc faucibus a pellentesque.
+              Maecenas accumsan lacus vel facilisis volutpat est.
+            </p>
+          </TabPanel>
+          <TabPanel uid="5" padding={5}>
+            <h4>Tab 5</h4>
+            <p>
+              Id cursus metus aliquam eleifend mi in. Vestibulum morbi blandit cursus risus.
+              Ipsum faucibus vitae aliquet nec ullamcorper sit amet.
+              Velit aliquet sagittis id consectetur.
+              Dolor sit amet consectetur adipiscing elit duis tristique sollicitudin.
+            </p>
+          </TabPanel>
+          <TabPanel uid="6" padding={5}>
+            <h4>Tab 6</h4>
+            <p>
+              Diam volutpat commodo sed egestas.
+              Hac habitasse platea dictumst quisque sagittis purus sit amet volutpat.
+              Elementum sagittis vitae et leo duis ut diam quam nulla.
+              Eget duis at tellus at urna condimentum mattis.
+            </p>
+          </TabPanel>
+          <TabPanel uid="7" padding={5}>
+            <h4>Tab 7</h4>
+            <p>
+              Enim tortor at auctor urna nunc. Elementum tempus egestas sed sed risus pretium quam.
+              Vitae congue eu consequat ac felis donec et. Eget nunc scelerisque viverra mauris in.
+              Id cursus metus aliquam eleifend mi. Euismod quis viverra nibh cras pulvinar.
+              Cursus metus aliquam eleifend mi. Ullamcorper morbi tincidunt ornare massa eget egestas.
+            </p>
+          </TabPanel>
+          <TabPanel uid="8" padding={5}>
+            <h4>Tab 8</h4>
+            <p>
+              Quam quisque id diam vel quam elementum pulvinar etiam non.
+              Est ante in nibh mauris cursus mattis molestie. Id semper risus in hendrerit gravida rutrum quisque non.
+              Mauris in aliquam sem fringilla ut morbi tincidunt augue interdum.
+            </p>
+          </TabPanel>
+          <TabPanel uid="9" padding={5}>
+            <h4>Tab 9</h4>
+            <p>
+              Luctus venenatis lectus magna fringilla urna porttitor.
+              Laoreet non curabitur gravida arcu ac tortor dignissim.
+              Semper feugiat nibh sed pulvinar proin gravida hendrerit lectus.
+              Eu facilisis sed odio morbi.
+            </p>
+          </TabPanel>
+        </Tabs>
+    </div>
+
+    <div>
+      <h3>Secondary</h3>
+      <Tabs stretch marginBottom={5} height='200px' appearance='secondary' css='background: #2b313e'>
+          <TabList active="1">
+            <TabListButton title='Tab1' uid='1'>Tab 1</TabListButton>
+            <TabListButton title='Tab2' uid='2'>Tab 2</TabListButton>
+            <TabListButton title='Tab3' uid='3'>Tab 3</TabListButton>
+            <TabListButton title='Tab4' uid='4'>Tab 4</TabListButton>
+            <TabListButton title='Tab5' uid='5'>Tab 5</TabListButton>
+            <TabListButton title='Tab6' uid='6'>Tab 6</TabListButton>
+            <TabListButton title='Tab7' uid='7'>Tab 7</TabListButton>
+            <TabListButton title='Tab8' uid='8'>Tab 8</TabListButton>
+            <TabListButton title='Tab9' uid='9'>Tab 9</TabListButton>
+          </TabList>
+
+          <TabPanel uid="1" padding={5}>
+            <h4>Tab 1</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Nam a nisl at leo porta suscipit et vel diam. Maecenas venenatis consectetur
+              tortor, quis fermentum orci tristique ut. Etiam tristique sollicitudin
+              feugiat.
+            </p>
+          </TabPanel>
+          <TabPanel uid="2" padding={5}>
+            <h4>Tab 2</h4>
+            <p>
+              In eu mi bibendum neque. In ante metus dictum at. Senectus et netus et malesuada fames ac.
+               Ac tortor dignissim convallis aenean et tortor at risus viverra.
+               Pulvinar neque laoreet suspendisse interdum consectetur libero.
+               Maecenas pharetra convallis posuere morbi leo.
+            </p>
+          </TabPanel>
+          <TabPanel uid="3" padding={5}>
+            <h4>Tab 3</h4>
+            <p>
+              Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque.
+              Dolor sit amet consectetur adipiscing elit pellentesque.
+              Quisque sagittis purus sit amet volutpat consequat.
+               Aliquam eleifend mi in nulla posuere sollicitudin aliquam.
+            </p>
+          </TabPanel>
+          <TabPanel uid="4" padding={5}>
+            <h4>Tab 4</h4>
+              <p>
+              Nulla porttitor massa id neque aliquam vestibulum morbi blandit.
+              Et netus et malesuada fames ac.
+              Cursus turpis massa tincidunt dui ut ornare lectus.
+              Integer feugiat scelerisque varius morbi enim nunc faucibus a pellentesque.
+              Maecenas accumsan lacus vel facilisis volutpat est.
+            </p>
+          </TabPanel>
+          <TabPanel uid="5" padding={5}>
+            <h4>Tab 5</h4>
+            <p>
+              Id cursus metus aliquam eleifend mi in. Vestibulum morbi blandit cursus risus.
+              Ipsum faucibus vitae aliquet nec ullamcorper sit amet.
+              Velit aliquet sagittis id consectetur.
+              Dolor sit amet consectetur adipiscing elit duis tristique sollicitudin.
+            </p>
+          </TabPanel>
+          <TabPanel uid="6" padding={5}>
+            <h4>Tab 6</h4>
+            <p>
+              Diam volutpat commodo sed egestas.
+              Hac habitasse platea dictumst quisque sagittis purus sit amet volutpat.
+              Elementum sagittis vitae et leo duis ut diam quam nulla.
+              Eget duis at tellus at urna condimentum mattis.
+            </p>
+          </TabPanel>
+          <TabPanel uid="7" padding={5}>
+            <h4>Tab 7</h4>
+            <p>
+              Enim tortor at auctor urna nunc. Elementum tempus egestas sed sed risus pretium quam.
+              Vitae congue eu consequat ac felis donec et. Eget nunc scelerisque viverra mauris in.
+              Id cursus metus aliquam eleifend mi. Euismod quis viverra nibh cras pulvinar.
+              Cursus metus aliquam eleifend mi. Ullamcorper morbi tincidunt ornare massa eget egestas.
+            </p>
+          </TabPanel>
+          <TabPanel uid="8" padding={5}>
+            <h4>Tab 8</h4>
+            <p>
+              Quam quisque id diam vel quam elementum pulvinar etiam non.
+              Est ante in nibh mauris cursus mattis molestie. Id semper risus in hendrerit gravida rutrum quisque non.
+              Mauris in aliquam sem fringilla ut morbi tincidunt augue interdum.
+            </p>
+          </TabPanel>
+          <TabPanel uid="9" padding={5}>
+            <h4>Tab 9</h4>
+            <p>
+              Luctus venenatis lectus magna fringilla urna porttitor.
+              Laoreet non curabitur gravida arcu ac tortor dignissim.
+              Semper feugiat nibh sed pulvinar proin gravida hendrerit lectus.
+              Eu facilisis sed odio morbi.
+            </p>
+          </TabPanel>
+        </Tabs>
+    </div>
+
+    <div>
+      <h3>Tertiary</h3>
+      <Tabs stretch marginBottom={5} height='200px' appearance='tertiary' css='background: #2b313e'>
+          <TabList active="1">
+            <TabListButton title='Tab1' uid='1'>Tab 1</TabListButton>
+            <TabListButton title='Tab2' uid='2'>Tab 2</TabListButton>
+            <TabListButton title='Tab3' uid='3'>Tab 3</TabListButton>
+            <TabListButton title='Tab4' uid='4'>Tab 4</TabListButton>
+            <TabListButton title='Tab5' uid='5'>Tab 5</TabListButton>
+            <TabListButton title='Tab6' uid='6'>Tab 6</TabListButton>
+            <TabListButton title='Tab7' uid='7'>Tab 7</TabListButton>
+            <TabListButton title='Tab8' uid='8'>Tab 8</TabListButton>
+            <TabListButton title='Tab9' uid='9'>Tab 9</TabListButton>
+          </TabList>
+
+          <TabPanel uid="1" padding={5}>
+            <h4>Tab 1</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Nam a nisl at leo porta suscipit et vel diam. Maecenas venenatis consectetur
+              tortor, quis fermentum orci tristique ut. Etiam tristique sollicitudin
+              feugiat.
+            </p>
+          </TabPanel>
+          <TabPanel uid="2" padding={5}>
+            <h4>Tab 2</h4>
+            <p>
+              In eu mi bibendum neque. In ante metus dictum at. Senectus et netus et malesuada fames ac.
+               Ac tortor dignissim convallis aenean et tortor at risus viverra.
+               Pulvinar neque laoreet suspendisse interdum consectetur libero.
+               Maecenas pharetra convallis posuere morbi leo.
+            </p>
+          </TabPanel>
+          <TabPanel uid="3" padding={5}>
+            <h4>Tab 3</h4>
+            <p>
+              Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque.
+              Dolor sit amet consectetur adipiscing elit pellentesque.
+              Quisque sagittis purus sit amet volutpat consequat.
+               Aliquam eleifend mi in nulla posuere sollicitudin aliquam.
+            </p>
+          </TabPanel>
+          <TabPanel uid="4" padding={5}>
+            <h4>Tab 4</h4>
+              <p>
+              Nulla porttitor massa id neque aliquam vestibulum morbi blandit.
+              Et netus et malesuada fames ac.
+              Cursus turpis massa tincidunt dui ut ornare lectus.
+              Integer feugiat scelerisque varius morbi enim nunc faucibus a pellentesque.
+              Maecenas accumsan lacus vel facilisis volutpat est.
+            </p>
+          </TabPanel>
+          <TabPanel uid="5" padding={5}>
+            <h4>Tab 5</h4>
+            <p>
+              Id cursus metus aliquam eleifend mi in. Vestibulum morbi blandit cursus risus.
+              Ipsum faucibus vitae aliquet nec ullamcorper sit amet.
+              Velit aliquet sagittis id consectetur.
+              Dolor sit amet consectetur adipiscing elit duis tristique sollicitudin.
+            </p>
+          </TabPanel>
+          <TabPanel uid="6" padding={5}>
+            <h4>Tab 6</h4>
+            <p>
+              Diam volutpat commodo sed egestas.
+              Hac habitasse platea dictumst quisque sagittis purus sit amet volutpat.
+              Elementum sagittis vitae et leo duis ut diam quam nulla.
+              Eget duis at tellus at urna condimentum mattis.
+            </p>
+          </TabPanel>
+          <TabPanel uid="7" padding={5}>
+            <h4>Tab 7</h4>
+            <p>
+              Enim tortor at auctor urna nunc. Elementum tempus egestas sed sed risus pretium quam.
+              Vitae congue eu consequat ac felis donec et. Eget nunc scelerisque viverra mauris in.
+              Id cursus metus aliquam eleifend mi. Euismod quis viverra nibh cras pulvinar.
+              Cursus metus aliquam eleifend mi. Ullamcorper morbi tincidunt ornare massa eget egestas.
+            </p>
+          </TabPanel>
+          <TabPanel uid="8" padding={5}>
+            <h4>Tab 8</h4>
+            <p>
+              Quam quisque id diam vel quam elementum pulvinar etiam non.
+              Est ante in nibh mauris cursus mattis molestie. Id semper risus in hendrerit gravida rutrum quisque non.
+              Mauris in aliquam sem fringilla ut morbi tincidunt augue interdum.
+            </p>
+          </TabPanel>
+          <TabPanel uid="9" padding={5}>
+            <h4>Tab 9</h4>
+            <p>
+              Luctus venenatis lectus magna fringilla urna porttitor.
+              Laoreet non curabitur gravida arcu ac tortor dignissim.
+              Semper feugiat nibh sed pulvinar proin gravida hendrerit lectus.
+              Eu facilisis sed odio morbi.
+            </p>
+          </TabPanel>
+        </Tabs>
+    </div>
+
+  </ThemeProvider>
+</Playground>
+
+## Stack
+
+<Playground>
+  <ThemeProvider>
+        <Tabs stacked height='200px' css='background: #2b313e' marginBottom={5}>
+          <TabList active="1">      
+            <TabListButton title='Tab1' uid='1'>Tab 1</TabListButton>
+            <TabListButton title='Tab2' uid='2'>Tab 2</TabListButton>
+            <TabListButton title='Tab3' uid='3'>Tab 3</TabListButton>
+          </TabList>
+
+          <TabPanel uid="1" padding={5}>
+            <h4>Tab 1</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Nam a nisl at leo porta suscipit et vel diam. Maecenas venenatis consectetur
+              tortor, quis fermentum orci tristique ut. Etiam tristique sollicitudin
+              feugiat.
+            </p>
+          </TabPanel>
+          <TabPanel uid="2" padding={5}>
+            <h4>Tab 2</h4>
+            <p>
+              In eu mi bibendum neque. In ante metus dictum at. Senectus et netus et malesuada fames ac.
+               Ac tortor dignissim convallis aenean et tortor at risus viverra.
+               Pulvinar neque laoreet suspendisse interdum consectetur libero.
+               Maecenas pharetra convallis posuere morbi leo.
+            </p>
+          </TabPanel>
+          <TabPanel uid="3" padding={5}>
+            <h4>Tab 3</h4>
+            <p>
+              Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque.
+              Dolor sit amet consectetur adipiscing elit pellentesque.
+              Quisque sagittis purus sit amet volutpat consequat.
+               Aliquam eleifend mi in nulla posuere sollicitudin aliquam.
+            </p>
+          </TabPanel>
+        </Tabs>
+
+        <Tabs stacked height='200px' css='background: #2b313e'>
+          <TabPanel uid="1" padding5='top left bottom'>
+            <h4>Tab 1</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Nam a nisl at leo porta suscipit et vel diam. Maecenas venenatis consectetur
+              tortor, quis fermentum orci tristique ut. Etiam tristique sollicitudin
+              feugiat.
+            </p>
+          </TabPanel>
+          <TabPanel uid="2" padding5='top left bottom'>
+            <h4>Tab 2</h4>
+            <p>
+              In eu mi bibendum neque. In ante metus dictum at. Senectus et netus et malesuada fames ac.
+               Ac tortor dignissim convallis aenean et tortor at risus viverra.
+               Pulvinar neque laoreet suspendisse interdum consectetur libero.
+               Maecenas pharetra convallis posuere morbi leo.
+            </p>
+          </TabPanel>
+          <TabPanel uid="3" padding5='top left bottom'>
+            <h4>Tab 3</h4>
+            <p>
+              Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque.
+              Dolor sit amet consectetur adipiscing elit pellentesque.
+              Quisque sagittis purus sit amet volutpat consequat.
+               Aliquam eleifend mi in nulla posuere sollicitudin aliquam.
+            </p>
+          </TabPanel>
+
+          <TabList active="1">
+            <TabListButton title='Tab1' uid='1'>Tab 1</TabListButton>
+            <TabListButton title='Tab2' uid='2'>Tab 2</TabListButton>
+            <TabListButton title='Tab3' uid='3'>Tab 3</TabListButton>
+          </TabList>
+        </Tabs>
+
+  </ThemeProvider>
+</Playground>
+
+## Apperance
+
+<Playground>
+  <ThemeProvider>
+    <div>
+      <h3>Accent</h3>
+      <div>
+        <h3>Primary</h3>
+        <Tabs stretch marginBottom={5} height='200px' appearance='accent' css='background: #2b313e'>
+            <TabList active="1">      
+              <TabListButton title='Tab1' uid='1'>Tab 1</TabListButton>
+              <TabListButton title='Tab2' uid='2'>Tab 2</TabListButton>
+              <TabListButton title='Tab3' uid='3'>Tab 3</TabListButton>
+            </TabList>
+
+            <TabPanel uid="1" padding={5}>
+              <h4>Tab 1</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nam a nisl at leo porta suscipit et vel diam. Maecenas venenatis consectetur
+                tortor, quis fermentum orci tristique ut. Etiam tristique sollicitudin
+                feugiat.
+              </p>
+            </TabPanel>
+            <TabPanel uid="2" padding={5}>
+              <h4>Tab 2</h4>
+              <p>
+                In eu mi bibendum neque. In ante metus dictum at. Senectus et netus et malesuada fames ac.
+                Ac tortor dignissim convallis aenean et tortor at risus viverra.
+                Pulvinar neque laoreet suspendisse interdum consectetur libero.
+                Maecenas pharetra convallis posuere morbi leo.
+              </p>
+            </TabPanel>
+            <TabPanel uid="3" padding={5}>
+              <h4>Tab 3</h4>
+              <p>
+                Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque.
+                Dolor sit amet consectetur adipiscing elit pellentesque.
+                Quisque sagittis purus sit amet volutpat consequat.
+                Aliquam eleifend mi in nulla posuere sollicitudin aliquam.
+              </p>
+            </TabPanel>
+          </Tabs>
+      </div>
+
+      <div>
+        <h3>Secondary</h3>
+        <Tabs stretch marginBottom={5} height='200px' appearance='secondary-accent' css='background: #2b313e'>
+           <TabList active="1">
+              <TabListButton title='Tab1' uid='1'>Tab 1</TabListButton>
+              <TabListButton title='Tab2' uid='2'>Tab 2</TabListButton>
+              <TabListButton title='Tab3' uid='3'>Tab 3</TabListButton>
+            </TabList>
+
+            <TabPanel uid="1" padding={5}>
+              <h4>Tab 1</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nam a nisl at leo porta suscipit et vel diam. Maecenas venenatis consectetur
+                tortor, quis fermentum orci tristique ut. Etiam tristique sollicitudin
+                feugiat.
+              </p>
+            </TabPanel>
+            <TabPanel uid="2" padding={5}>
+              <h4>Tab 2</h4>
+              <p>
+                In eu mi bibendum neque. In ante metus dictum at. Senectus et netus et malesuada fames ac.
+                Ac tortor dignissim convallis aenean et tortor at risus viverra.
+                Pulvinar neque laoreet suspendisse interdum consectetur libero.
+                Maecenas pharetra convallis posuere morbi leo.
+              </p>
+            </TabPanel>
+            <TabPanel uid="3" padding={5}>
+              <h4>Tab 3</h4>
+              <p>
+                Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque.
+                Dolor sit amet consectetur adipiscing elit pellentesque.
+                Quisque sagittis purus sit amet volutpat consequat.
+                Aliquam eleifend mi in nulla posuere sollicitudin aliquam.
+              </p>
+            </TabPanel>
+          </Tabs>
+      </div>
+
+      <div>
+        <h3>Tertiary</h3>
+        <Tabs stretch marginBottom={5} height='200px' appearance='tertiary-accent' css='background: #2b313e'>
+            <TabList active="1">
+              <TabListButton title='Tab1' uid='1'>Tab 1</TabListButton>
+              <TabListButton title='Tab2' uid='2'>Tab 2</TabListButton>
+              <TabListButton title='Tab3' uid='3'>Tab 3</TabListButton>
+            </TabList>
+
+            <TabPanel uid="1" padding={5}>
+              <h4>Tab 1</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nam a nisl at leo porta suscipit et vel diam. Maecenas venenatis consectetur
+                tortor, quis fermentum orci tristique ut. Etiam tristique sollicitudin
+                feugiat.
+              </p>
+            </TabPanel>
+            <TabPanel uid="2" padding={5}>
+              <h4>Tab 2</h4>
+              <p>
+                In eu mi bibendum neque. In ante metus dictum at. Senectus et netus et malesuada fames ac.
+                Ac tortor dignissim convallis aenean et tortor at risus viverra.
+                Pulvinar neque laoreet suspendisse interdum consectetur libero.
+                Maecenas pharetra convallis posuere morbi leo.
+              </p>
+            </TabPanel>
+            <TabPanel uid="3" padding={5}>
+              <h4>Tab 3</h4>
+              <p>
+                Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque.
+                Dolor sit amet consectetur adipiscing elit pellentesque.
+                Quisque sagittis purus sit amet volutpat consequat.
+                Aliquam eleifend mi in nulla posuere sollicitudin aliquam.
+              </p>
+            </TabPanel>
+          </Tabs>
+      </div>
+    </div>
+
+
+    <div>
+      <h3>Action</h3>
+      <div>
+        <h3>Primary</h3>
+        <Tabs stretch marginBottom={5} height='200px' appearance='action' css='background: #2b313e'>
+            <TabList active="1">
+              <TabListButton title='Tab1' uid='1'>Tab 1</TabListButton>
+              <TabListButton title='Tab2' uid='2'>Tab 2</TabListButton>
+              <TabListButton title='Tab3' uid='3'>Tab 3</TabListButton>
+            </TabList>
+
+            <TabPanel uid="1" padding={5}>
+              <h4>Tab 1</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nam a nisl at leo porta suscipit et vel diam. Maecenas venenatis consectetur
+                tortor, quis fermentum orci tristique ut. Etiam tristique sollicitudin
+                feugiat.
+              </p>
+            </TabPanel>
+            <TabPanel uid="2" padding={5}>
+              <h4>Tab 2</h4>
+              <p>
+                In eu mi bibendum neque. In ante metus dictum at. Senectus et netus et malesuada fames ac.
+                Ac tortor dignissim convallis aenean et tortor at risus viverra.
+                Pulvinar neque laoreet suspendisse interdum consectetur libero.
+                Maecenas pharetra convallis posuere morbi leo.
+              </p>
+            </TabPanel>
+            <TabPanel uid="3" padding={5}>
+              <h4>Tab 3</h4>
+              <p>
+                Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque.
+                Dolor sit amet consectetur adipiscing elit pellentesque.
+                Quisque sagittis purus sit amet volutpat consequat.
+                Aliquam eleifend mi in nulla posuere sollicitudin aliquam.
+              </p>
+            </TabPanel>
+          </Tabs>
+      </div>
+
+      <div>
+        <h3>Secondary</h3>
+        <Tabs stretch marginBottom={5} height='200px' appearance='secondary-action' css='background: #2b313e'>
+            <TabList active="1">
+              <TabListButton title='Tab1' uid='1'>Tab 1</TabListButton>
+              <TabListButton title='Tab2' uid='2'>Tab 2</TabListButton>
+              <TabListButton title='Tab3' uid='3'>Tab 3</TabListButton>
+            </TabList>
+
+            <TabPanel uid="1" padding={5}>
+              <h4>Tab 1</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nam a nisl at leo porta suscipit et vel diam. Maecenas venenatis consectetur
+                tortor, quis fermentum orci tristique ut. Etiam tristique sollicitudin
+                feugiat.
+              </p>
+            </TabPanel>
+            <TabPanel uid="2" padding={5}>
+              <h4>Tab 2</h4>
+              <p>
+                In eu mi bibendum neque. In ante metus dictum at. Senectus et netus et malesuada fames ac.
+                Ac tortor dignissim convallis aenean et tortor at risus viverra.
+                Pulvinar neque laoreet suspendisse interdum consectetur libero.
+                Maecenas pharetra convallis posuere morbi leo.
+              </p>
+            </TabPanel>
+            <TabPanel uid="3" padding={5}>
+              <h4>Tab 3</h4>
+              <p>
+                Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque.
+                Dolor sit amet consectetur adipiscing elit pellentesque.
+                Quisque sagittis purus sit amet volutpat consequat.
+                Aliquam eleifend mi in nulla posuere sollicitudin aliquam.
+              </p>
+            </TabPanel>
+          </Tabs>
+      </div>
+
+      <div>
+        <h3>Tertiary</h3>
+        <Tabs stretch marginBottom={5} height='200px' appearance='tertiary-action' css='background: #2b313e'>
+            <TabList active="1">
+              <TabListButton title='Tab1' uid='1'>Tab 1</TabListButton>
+              <TabListButton title='Tab2' uid='2'>Tab 2</TabListButton>
+              <TabListButton title='Tab3' uid='3'>Tab 3</TabListButton>
+            </TabList>
+
+            <TabPanel uid="1" padding={5}>
+              <h4>Tab 1</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nam a nisl at leo porta suscipit et vel diam. Maecenas venenatis consectetur
+                tortor, quis fermentum orci tristique ut. Etiam tristique sollicitudin
+                feugiat.
+              </p>
+            </TabPanel>
+            <TabPanel uid="2" padding={5}>
+              <h4>Tab 2</h4>
+              <p>
+                In eu mi bibendum neque. In ante metus dictum at. Senectus et netus et malesuada fames ac.
+                Ac tortor dignissim convallis aenean et tortor at risus viverra.
+                Pulvinar neque laoreet suspendisse interdum consectetur libero.
+                Maecenas pharetra convallis posuere morbi leo.
+              </p>
+            </TabPanel>
+            <TabPanel uid="3" padding={5}>
+              <h4>Tab 3</h4>
+              <p>
+                Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque.
+                Dolor sit amet consectetur adipiscing elit pellentesque.
+                Quisque sagittis purus sit amet volutpat consequat.
+                Aliquam eleifend mi in nulla posuere sollicitudin aliquam.
+              </p>
+            </TabPanel>
+          </Tabs>
+      </div>
+    </div>
+
+    <div>
+      <h3>Danger</h3>
+      <div>
+        <h3>Primary</h3>
+          <Tabs stretch marginBottom={5} height='200px' appearance='danger' css='background: #2b313e'>
+            <TabList active="1">
+              <TabListButton title='Tab1' uid='1'>Tab 1</TabListButton>
+              <TabListButton title='Tab2' uid='2'>Tab 2</TabListButton>
+              <TabListButton title='Tab3' uid='3'>Tab 3</TabListButton>
+            </TabList>
+
+            <TabPanel uid="1" padding={5}>
+              <h4>Tab 1</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nam a nisl at leo porta suscipit et vel diam. Maecenas venenatis consectetur
+                tortor, quis fermentum orci tristique ut. Etiam tristique sollicitudin
+                feugiat.
+              </p>
+            </TabPanel>
+            <TabPanel uid="2" padding={5}>
+              <h4>Tab 2</h4>
+              <p>
+                In eu mi bibendum neque. In ante metus dictum at. Senectus et netus et malesuada fames ac.
+                Ac tortor dignissim convallis aenean et tortor at risus viverra.
+                Pulvinar neque laoreet suspendisse interdum consectetur libero.
+                Maecenas pharetra convallis posuere morbi leo.
+              </p>
+            </TabPanel>
+            <TabPanel uid="3" padding={5}>
+              <h4>Tab 3</h4>
+              <p>
+                Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque.
+                Dolor sit amet consectetur adipiscing elit pellentesque.
+                Quisque sagittis purus sit amet volutpat consequat.
+                Aliquam eleifend mi in nulla posuere sollicitudin aliquam.
+              </p>
+            </TabPanel>
+          </Tabs>
+      </div>
+
+      <div>
+        <h3>Secondary</h3>
+        <Tabs stretch marginBottom={5} height='200px' appearance='secondary-danger' css='background: #2b313e'>
+            <TabList active="1">
+              <TabListButton title='Tab1' uid='1'>Tab 1</TabListButton>
+              <TabListButton title='Tab2' uid='2'>Tab 2</TabListButton>
+              <TabListButton title='Tab3' uid='3'>Tab 3</TabListButton>
+            </TabList>
+
+            <TabPanel uid="1" padding={5}>
+              <h4>Tab 1</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nam a nisl at leo porta suscipit et vel diam. Maecenas venenatis consectetur
+                tortor, quis fermentum orci tristique ut. Etiam tristique sollicitudin
+                feugiat.
+              </p>
+            </TabPanel>
+            <TabPanel uid="2" padding={5}>
+              <h4>Tab 2</h4>
+              <p>
+                In eu mi bibendum neque. In ante metus dictum at. Senectus et netus et malesuada fames ac.
+                Ac tortor dignissim convallis aenean et tortor at risus viverra.
+                Pulvinar neque laoreet suspendisse interdum consectetur libero.
+                Maecenas pharetra convallis posuere morbi leo.
+              </p>
+            </TabPanel>
+            <TabPanel uid="3" padding={5}>
+              <h4>Tab 3</h4>
+              <p>
+                Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque.
+                Dolor sit amet consectetur adipiscing elit pellentesque.
+                Quisque sagittis purus sit amet volutpat consequat.
+                Aliquam eleifend mi in nulla posuere sollicitudin aliquam.
+              </p>
+            </TabPanel>
+          </Tabs>
+      </div>
+
+      <div>
+        <h3>Tertiary</h3>
+        <Tabs stretch marginBottom={5} height='200px' appearance='danger-tertiary-danger' css='background: #2b313e'>
+           <TabList active="1">
+              <TabListButton title='Tab1' uid='1'>Tab 1</TabListButton>
+              <TabListButton title='Tab2' uid='2'>Tab 2</TabListButton>
+              <TabListButton title='Tab3' uid='3'>Tab 3</TabListButton>
+            </TabList>
+
+            <TabPanel uid="1" padding={5}>
+              <h4>Tab 1</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nam a nisl at leo porta suscipit et vel diam. Maecenas venenatis consectetur
+                tortor, quis fermentum orci tristique ut. Etiam tristique sollicitudin
+                feugiat.
+              </p>
+            </TabPanel>
+            <TabPanel uid="2" padding={5}>
+              <h4>Tab 2</h4>
+              <p>
+                In eu mi bibendum neque. In ante metus dictum at. Senectus et netus et malesuada fames ac.
+                Ac tortor dignissim convallis aenean et tortor at risus viverra.
+                Pulvinar neque laoreet suspendisse interdum consectetur libero.
+                Maecenas pharetra convallis posuere morbi leo.
+              </p>
+            </TabPanel>
+            <TabPanel uid="3" padding={5}>
+              <h4>Tab 3</h4>
+              <p>
+                Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque.
+                Dolor sit amet consectetur adipiscing elit pellentesque.
+                Quisque sagittis purus sit amet volutpat consequat.
+                Aliquam eleifend mi in nulla posuere sollicitudin aliquam.
+              </p>
+            </TabPanel>
+          </Tabs>
+      </div>
+    </div>
+
+    <div>
+      <h3>Success</h3>
+      <div>
+        <h3>Primary</h3>
+        <Tabs stretch marginBottom={5} height='200px' appearance='success' css='background: #2b313e'>
+           <TabList active="1">
+              <TabListButton title='Tab1' uid='1'>Tab 1</TabListButton>
+              <TabListButton title='Tab2' uid='2'>Tab 2</TabListButton>
+              <TabListButton title='Tab3' uid='3'>Tab 3</TabListButton>
+            </TabList>
+
+            <TabPanel uid="1" padding={5}>
+              <h4>Tab 1</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nam a nisl at leo porta suscipit et vel diam. Maecenas venenatis consectetur
+                tortor, quis fermentum orci tristique ut. Etiam tristique sollicitudin
+                feugiat.
+              </p>
+            </TabPanel>
+            <TabPanel uid="2" padding={5}>
+              <h4>Tab 2</h4>
+              <p>
+                In eu mi bibendum neque. In ante metus dictum at. Senectus et netus et malesuada fames ac.
+                Ac tortor dignissim convallis aenean et tortor at risus viverra.
+                Pulvinar neque laoreet suspendisse interdum consectetur libero.
+                Maecenas pharetra convallis posuere morbi leo.
+              </p>
+            </TabPanel>
+            <TabPanel uid="3" padding={5}>
+              <h4>Tab 3</h4>
+              <p>
+                Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque.
+                Dolor sit amet consectetur adipiscing elit pellentesque.
+                Quisque sagittis purus sit amet volutpat consequat.
+                Aliquam eleifend mi in nulla posuere sollicitudin aliquam.
+              </p>
+            </TabPanel>
+          </Tabs>
+      </div>
+
+      <div>
+        <h3>Secondary</h3>
+        <Tabs stretch marginBottom={5} height='200px' appearance='secondary-success' css='background: #2b313e'>
+           <TabList active="1">
+              <TabListButton title='Tab1' uid='1'>Tab 1</TabListButton>
+              <TabListButton title='Tab2' uid='2'>Tab 2</TabListButton>
+              <TabListButton title='Tab3' uid='3'>Tab 3</TabListButton>
+            </TabList>
+
+            <TabPanel uid="1" padding={5}>
+              <h4>Tab 1</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nam a nisl at leo porta suscipit et vel diam. Maecenas venenatis consectetur
+                tortor, quis fermentum orci tristique ut. Etiam tristique sollicitudin
+                feugiat.
+              </p>
+            </TabPanel>
+            <TabPanel uid="2" padding={5}>
+              <h4>Tab 2</h4>
+              <p>
+                In eu mi bibendum neque. In ante metus dictum at. Senectus et netus et malesuada fames ac.
+                Ac tortor dignissim convallis aenean et tortor at risus viverra.
+                Pulvinar neque laoreet suspendisse interdum consectetur libero.
+                Maecenas pharetra convallis posuere morbi leo.
+              </p>
+            </TabPanel>
+            <TabPanel uid="3" padding={5}>
+              <h4>Tab 3</h4>
+              <p>
+                Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque.
+                Dolor sit amet consectetur adipiscing elit pellentesque.
+                Quisque sagittis purus sit amet volutpat consequat.
+                Aliquam eleifend mi in nulla posuere sollicitudin aliquam.
+              </p>
+            </TabPanel>
+          </Tabs>
+      </div>
+
+      <div>
+        <h3>Tertiary</h3>
+        <Tabs stretch marginBottom={5} height='200px' appearance='tertiary-success' css='background: #2b313e'>
+            <TabList active="1">
+              <TabListButton title='Tab1' uid='1'>Tab 1</TabListButton>
+              <TabListButton title='Tab2' uid='2'>Tab 2</TabListButton>
+              <TabListButton title='Tab3' uid='3'>Tab 3</TabListButton>
+            </TabList>
+
+            <TabPanel uid="1" padding={5}>
+              <h4>Tab 1</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nam a nisl at leo porta suscipit et vel diam. Maecenas venenatis consectetur
+                tortor, quis fermentum orci tristique ut. Etiam tristique sollicitudin
+                feugiat.
+              </p>
+            </TabPanel>
+            <TabPanel uid="2" padding={5}>
+              <h4>Tab 2</h4>
+              <p>
+                In eu mi bibendum neque. In ante metus dictum at. Senectus et netus et malesuada fames ac.
+                Ac tortor dignissim convallis aenean et tortor at risus viverra.
+                Pulvinar neque laoreet suspendisse interdum consectetur libero.
+                Maecenas pharetra convallis posuere morbi leo.
+              </p>
+            </TabPanel>
+            <TabPanel uid="3" padding={5}>
+              <h4>Tab 3</h4>
+              <p>
+                Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque.
+                Dolor sit amet consectetur adipiscing elit pellentesque.
+                Quisque sagittis purus sit amet volutpat consequat.
+                Aliquam eleifend mi in nulla posuere sollicitudin aliquam.
+              </p>
+            </TabPanel>
+          </Tabs>
+      </div>
+    </div>
+
+    <div>
+      <h3>Warning</h3>
+      <div>
+        <h3>Primary</h3>
+        <Tabs stretch marginBottom={5} height='200px' appearance='warning' css='background: #2b313e'>
+            <TabList active="1">
+              <TabListButton title='Tab1' uid='1'>Tab 1</TabListButton>
+              <TabListButton title='Tab2' uid='2'>Tab 2</TabListButton>
+              <TabListButton title='Tab3' uid='3'>Tab 3</TabListButton>
+            </TabList>
+
+            <TabPanel uid="1" padding={5}>
+              <h4>Tab 1</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nam a nisl at leo porta suscipit et vel diam. Maecenas venenatis consectetur
+                tortor, quis fermentum orci tristique ut. Etiam tristique sollicitudin
+                feugiat.
+              </p>
+            </TabPanel>
+            <TabPanel uid="2" padding={5}>
+              <h4>Tab 2</h4>
+              <p>
+                In eu mi bibendum neque. In ante metus dictum at. Senectus et netus et malesuada fames ac.
+                Ac tortor dignissim convallis aenean et tortor at risus viverra.
+                Pulvinar neque laoreet suspendisse interdum consectetur libero.
+                Maecenas pharetra convallis posuere morbi leo.
+              </p>
+            </TabPanel>
+            <TabPanel uid="3" padding={5}>
+              <h4>Tab 3</h4>
+              <p>
+                Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque.
+                Dolor sit amet consectetur adipiscing elit pellentesque.
+                Quisque sagittis purus sit amet volutpat consequat.
+                Aliquam eleifend mi in nulla posuere sollicitudin aliquam.
+              </p>
+            </TabPanel>
+          </Tabs>
+      </div>
+
+      <div>
+        <h3>Secondary</h3>
+        <Tabs stretch marginBottom={5} height='200px' appearance='secondary-warning' css='background: #2b313e'>
+           <TabList active="1">
+              <TabListButton title='Tab1' uid='1'>Tab 1</TabListButton>
+              <TabListButton title='Tab2' uid='2'>Tab 2</TabListButton>
+              <TabListButton title='Tab3' uid='3'>Tab 3</TabListButton>
+            </TabList>
+
+            <TabPanel uid="1" padding={5}>
+              <h4>Tab 1</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nam a nisl at leo porta suscipit et vel diam. Maecenas venenatis consectetur
+                tortor, quis fermentum orci tristique ut. Etiam tristique sollicitudin
+                feugiat.
+              </p>
+            </TabPanel>
+            <TabPanel uid="2" padding={5}>
+              <h4>Tab 2</h4>
+              <p>
+                In eu mi bibendum neque. In ante metus dictum at. Senectus et netus et malesuada fames ac.
+                Ac tortor dignissim convallis aenean et tortor at risus viverra.
+                Pulvinar neque laoreet suspendisse interdum consectetur libero.
+                Maecenas pharetra convallis posuere morbi leo.
+              </p>
+            </TabPanel>
+            <TabPanel uid="3" padding={5}>
+              <h4>Tab 3</h4>
+              <p>
+                Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque.
+                Dolor sit amet consectetur adipiscing elit pellentesque.
+                Quisque sagittis purus sit amet volutpat consequat.
+                Aliquam eleifend mi in nulla posuere sollicitudin aliquam.
+              </p>
+            </TabPanel>
+          </Tabs>
+      </div>
+
+      <div>
+        <h3>Tertiary</h3>
+        <Tabs stretch marginBottom={5} height='200px' appearance='tertiary-warning' css='background: #2b313e'>
+           <TabList active="1">
+              <TabListButton title='Tab1' uid='1'>Tab 1</TabListButton>
+              <TabListButton title='Tab2' uid='2'>Tab 2</TabListButton>
+              <TabListButton title='Tab3' uid='3'>Tab 3</TabListButton>
+            </TabList>
+
+            <TabPanel uid="1" padding={5}>
+              <h4>Tab 1</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nam a nisl at leo porta suscipit et vel diam. Maecenas venenatis consectetur
+                tortor, quis fermentum orci tristique ut. Etiam tristique sollicitudin
+                feugiat.
+              </p>
+            </TabPanel>
+            <TabPanel uid="2" padding={5}>
+              <h4>Tab 2</h4>
+              <p>
+                In eu mi bibendum neque. In ante metus dictum at. Senectus et netus et malesuada fames ac.
+                Ac tortor dignissim convallis aenean et tortor at risus viverra.
+                Pulvinar neque laoreet suspendisse interdum consectetur libero.
+                Maecenas pharetra convallis posuere morbi leo.
+              </p>
+            </TabPanel>
+            <TabPanel uid="3" padding={5}>
+              <h4>Tab 3</h4>
+              <p>
+                Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque.
+                Dolor sit amet consectetur adipiscing elit pellentesque.
+                Quisque sagittis purus sit amet volutpat consequat.
+                Aliquam eleifend mi in nulla posuere sollicitudin aliquam.
+              </p>
+            </TabPanel>
+          </Tabs>
+      </div>
+    </div>
+
+    <div>
+      <h3>Disabled</h3>
+      <div>
+        <h3>Primary</h3>
+        <Tabs stretch marginBottom={5} height='200px' appearance='disabled' css='background: #2b313e'>
+            <TabList active="1">
+              <TabListButton title='Tab1' uid='1'>Tab 1</TabListButton>
+              <TabListButton title='Tab2' uid='2'>Tab 2</TabListButton>
+              <TabListButton title='Tab3' uid='3'>Tab 3</TabListButton>
+            </TabList>
+
+            <TabPanel uid="1" padding={5}>
+              <h4>Tab 1</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nam a nisl at leo porta suscipit et vel diam. Maecenas venenatis consectetur
+                tortor, quis fermentum orci tristique ut. Etiam tristique sollicitudin
+                feugiat.
+              </p>
+            </TabPanel>
+            <TabPanel uid="2" padding={5}>
+              <h4>Tab 2</h4>
+              <p>
+                In eu mi bibendum neque. In ante metus dictum at. Senectus et netus et malesuada fames ac.
+                Ac tortor dignissim convallis aenean et tortor at risus viverra.
+                Pulvinar neque laoreet suspendisse interdum consectetur libero.
+                Maecenas pharetra convallis posuere morbi leo.
+              </p>
+            </TabPanel>
+            <TabPanel uid="3" padding={5}>
+              <h4>Tab 3</h4>
+              <p>
+                Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque.
+                Dolor sit amet consectetur adipiscing elit pellentesque.
+                Quisque sagittis purus sit amet volutpat consequat.
+                Aliquam eleifend mi in nulla posuere sollicitudin aliquam.
+              </p>
+            </TabPanel>
+          </Tabs>
+      </div>
+
+      <div>
+        <h3>Secondary</h3>
+        <Tabs stretch marginBottom={5} height='200px' appearance='secondary-disabled' css='background: #2b313e'>
+            <TabList active="1">
+              <TabListButton title='Tab1' uid='1'>Tab 1</TabListButton>
+              <TabListButton title='Tab2' uid='2'>Tab 2</TabListButton>
+              <TabListButton title='Tab3' uid='3'>Tab 3</TabListButton>
+            </TabList>
+
+            <TabPanel uid="1" padding={5}>
+              <h4>Tab 1</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nam a nisl at leo porta suscipit et vel diam. Maecenas venenatis consectetur
+                tortor, quis fermentum orci tristique ut. Etiam tristique sollicitudin
+                feugiat.
+              </p>
+            </TabPanel>
+            <TabPanel uid="2" padding={5}>
+              <h4>Tab 2</h4>
+              <p>
+                In eu mi bibendum neque. In ante metus dictum at. Senectus et netus et malesuada fames ac.
+                Ac tortor dignissim convallis aenean et tortor at risus viverra.
+                Pulvinar neque laoreet suspendisse interdum consectetur libero.
+                Maecenas pharetra convallis posuere morbi leo.
+              </p>
+            </TabPanel>
+            <TabPanel uid="3" padding={5}>
+              <h4>Tab 3</h4>
+              <p>
+                Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque.
+                Dolor sit amet consectetur adipiscing elit pellentesque.
+                Quisque sagittis purus sit amet volutpat consequat.
+                Aliquam eleifend mi in nulla posuere sollicitudin aliquam.
+              </p>
+            </TabPanel>
+          </Tabs>
+      </div>
+
+      <div>
+        <h3>Tertiary</h3>
+        <Tabs stretch marginBottom={5} height='200px' appearance='tertiary-disabled' css='background: #2b313e'>
+            <TabList active="1">
+              <TabListButton title='Tab1' uid='1'>Tab 1</TabListButton>
+              <TabListButton title='Tab2' uid='2'>Tab 2</TabListButton>
+              <TabListButton title='Tab3' uid='3'>Tab 3</TabListButton>
+            </TabList>
+
+            <TabPanel uid="1" padding={5}>
+              <h4>Tab 1</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nam a nisl at leo porta suscipit et vel diam. Maecenas venenatis consectetur
+                tortor, quis fermentum orci tristique ut. Etiam tristique sollicitudin
+                feugiat.
+              </p>
+            </TabPanel>
+            <TabPanel uid="2" padding={5}>
+              <h4>Tab 2</h4>
+              <p>
+                In eu mi bibendum neque. In ante metus dictum at. Senectus et netus et malesuada fames ac.
+                Ac tortor dignissim convallis aenean et tortor at risus viverra.
+                Pulvinar neque laoreet suspendisse interdum consectetur libero.
+                Maecenas pharetra convallis posuere morbi leo.
+              </p>
+            </TabPanel>
+            <TabPanel uid="3" padding={5}>
+              <h4>Tab 3</h4>
+              <p>
+                Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque.
+                Dolor sit amet consectetur adipiscing elit pellentesque.
+                Quisque sagittis purus sit amet volutpat consequat.
+                Aliquam eleifend mi in nulla posuere sollicitudin aliquam.
+              </p>
+            </TabPanel>
+          </Tabs>
+      </div>
+    </div>
+
+  </ThemeProvider>
+</Playground>

@@ -1,0 +1,113 @@
+---
+name: Alert
+route: /alert
+---
+
+import { Playground, Props } from 'docz';
+import { Flex } from '../Flex';
+import { ThemeProvider } from '../ThemeContext/ThemeProvider';
+import Alert from './Alert';
+
+# Alert
+
+<Props of={Alert} />
+
+## Default
+
+<Playground>
+  <ThemeProvider>
+    <Alert>Default alert</Alert>
+  </ThemeProvider>
+</Playground>
+
+## Appearance
+
+<Playground>
+  <ThemeProvider>
+    <Flex>
+      <Alert
+        appearance="primary"
+        margin3="right bottom"
+        css={`
+          width: 200px;
+        `}
+      >
+        Primary
+      </Alert>
+      <Alert
+        appearance="secondary"
+        margin3="right bottom"
+        css={`
+          width: 200px;
+        `}
+      >
+        Secondary
+      </Alert>
+      <Alert
+        appearance="tertiary"
+        margin3="right bottom"
+        css={`
+          width: 200px;
+        `}
+      >
+        Tertiary
+      </Alert>
+    </Flex>
+  </ThemeProvider>
+</Playground>
+
+## Context
+
+<Playground>
+  <ThemeProvider>
+    <section>
+      <h3>Accent</h3>
+      <Flex>
+        <Alert appearance='primary-accent' margin3='right bottom' css={`width: 200px`}>Primary</Alert>
+        <Alert appearance='secondary-accent' margin3='right bottom' css={`width: 200px`}>Seconday</Alert>
+        <Alert appearance='tertiary-accent' margin3='right bottom'  css={`width: 200px`}>Tertiary</Alert>
+      </Flex>
+    </section>
+    <section>
+      <h3>Active</h3>
+      <Flex>
+        <Alert appearance='primary-active' margin3='right bottom'  css={`width: 200px`}> Primary</Alert>
+        <Alert appearance='secondary-active' margin3='right bottom'  css={`width: 200px`}>Seconday</Alert>
+        <Alert appearance='tertiary-active' margin3='right bottom'  css={`width: 200px`}>Tertiary</Alert>
+      </Flex>
+    </section>
+    <section>
+      <h3>Action</h3>
+      <Flex>
+        <Alert appearance='primary-action' margin3='right bottom'  css={`width: 200px`}> Primary</Alert>
+        <Alert appearance='secondary-action' margin3='right bottom'  css={`width: 200px`}>Seconday</Alert>
+        <Alert appearance='tertiary-action' margin3='right bottom'  css={`width: 200px`}>Tertiary</Alert>
+      </Flex>
+    </section>
+    <section>
+      <h3>Danger</h3>
+      <Flex>
+        <Alert appearance='primary-danger' margin3='right bottom'  css={`width: 200px`}> Primary</Alert>
+        <Alert appearance='secondary-danger' margin3='right bottom'  css={`width: 200px`}>Seconday</Alert>
+        <Alert appearance='tertiary-danger' margin3='right bottom'  css={`width: 200px`}>Tertiary</Alert>
+      </Flex>
+    </section>
+    <section>
+      <h3>Success</h3>
+      <Flex>
+        <Alert appearance='primary-success' margin3='right bottom'  css={`width: 200px`}> Primary</Alert>
+        <Alert appearance='secondary-success' margin3='right bottom'  css={`width: 200px`}>Seconday</Alert>
+        <Alert appearance='tertiary-success' margin3='right bottom'  css={`width: 200px`}>Tertiary</Alert>
+      </Flex>
+    </section>
+    <section>
+      <h3>Warning</h3>
+      <Flex>
+        <Alert appearance='primary-warning' margin3='right bottom'  css={`width: 200px`}> Primary</Alert>
+        <Alert appearance='secondary-warning' margin3='right bottom'  css={`width: 200px`}>Seconday</Alert>
+        <Alert appearance='tertiary-warning' margin3='right bottom'  css={`width: 200px`}>Tertiary</Alert>
+      </Flex>
+    </section>
+
+  </ThemeProvider>
+</Playground>

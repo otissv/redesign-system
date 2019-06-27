@@ -1,0 +1,80 @@
+---
+name: Units
+route: /units
+---
+
+import { Playground, Props } from 'docz';
+import Container from '../../Container/Container';
+import Flex from '../../Flex/Flex';
+import { ThemeProvider } from '../../ThemeContext/ThemeProvider';
+import theme from '../../theme/theme';
+
+# Units
+
+<ThemeProvider>
+  <Container css={`
+  text-align: left;
+  table {
+    width: 100%;
+  }
+  td {
+    padding-top: 24px;
+  }
+  `}>
+    <table>
+      <thead>
+      <tr>
+      <th>Value</th>
+      <th>px</th>
+      <th>Example</th>
+
+      </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>default</td>
+          <td>{theme.unit['default']}</td>
+          <td>
+            <Container
+              css={`
+                width: ${theme.unit['default']};
+                height: ${theme.unit['default']};
+                background: #777;
+              `}
+            />
+          </td>
+        </tr>
+        {
+          Object.keys(theme.unit).reduce((acc, key) => {
+
+
+            return key === 'default'
+            ? acc
+            : [
+              ...acc,
+              <tr key={key}>
+              <td>{key}</td>
+              <td>{theme.unit[key]}</td>
+              <td>
+                <Container
+                  css={`
+                    width: ${theme.unit[key]};
+                    height: ${theme.unit[key]};
+                    background: #777;
+                  `}
+                />
+              </td>
+            </tr>
+            ]
+          }, [])
+        }
+
+
+
+
+      </tbody>
+    </table>
+
+  </Container>
+</ThemeProvider>

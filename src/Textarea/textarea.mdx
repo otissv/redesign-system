@@ -1,0 +1,161 @@
+---
+name: Textarea
+route: /textarea
+---
+
+import { Playground, Props } from 'docz';
+import styled from 'styled-components';
+import Textarea from './Textarea';
+import { Container } from '../Container/Container';
+import { ThemeProvider } from '../ThemeContext/ThemeProvider';
+
+# Textarea
+
+<Props of={Textarea} />
+
+## Appearnace
+
+<Playground>
+  <ThemeProvider>
+
+    <Textarea marginBottom={3} placeholder="Primary" appearance="primary"/>
+    <Textarea marginBottom={3} placeholder="Secondary" appearance="secondary" />
+
+    <h3>Accent</h3>
+    <Textarea marginBottom={3} placeholder="Primary" appearance="primary-accent" />
+    <Textarea marginBottom={3} placeholder="Secondary" appearance="secondary-accent" />
+
+    <h3>Active</h3>
+    <Textarea marginBottom={3} placeholder="Primary" appearance="primary-active" />
+    <Textarea marginBottom={3} placeholder="Secondary" appearance="secondary-active" />
+
+
+    <h3>Action</h3>
+    <Textarea marginBottom={3} placeholder="Primary" appearance="primary-action" />
+    <Textarea marginBottom={3} placeholder="Secondary" appearance="secondary-action" />
+
+    <h3>Danger</h3>
+    <Textarea marginBottom={3} placeholder="Primary" appearance="primary-danger" />
+    <Textarea marginBottom={3} placeholder="Secondary" appearance="secondary-danger" />
+
+    <h3>Success</h3>
+    <Textarea marginBottom={3} placeholder="Primary" appearance="primary-success" />
+    <Textarea marginBottom={3} placeholder="Secondary" appearance="secondary-success" />
+
+    <h3>Warning</h3>
+    <Textarea marginBottom={3} placeholder="Primary" appearance="primary-warning" />
+    <Textarea marginBottom={3} placeholder="Secondary" appearance="secondary-warning" />
+
+    <h3>Disabled</h3>
+    <Textarea marginBottom={3} placeholder="Primary" appearance="secondary-disabled" />
+    <Textarea marginBottom={3} placeholder="Secondary" appearance="secondary-disabled" />
+
+  </ThemeProvider>
+</Playground>
+
+## Widths
+
+  <ThemeProvider>
+    <table>
+      <thead>
+        <tr>
+          <th>Prop</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>
+            <Textarea
+              widths={1}
+              appearance="primary"
+            />
+        </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>
+            <Textarea
+              widths={2}
+              appearance="primary"
+            />
+          </td>
+          </tr>
+        <tr>
+          <td>3</td>
+          <td>
+            <Textarea
+              widths={3}
+              appearance="primary"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>
+            <Textarea
+              widths={4}
+              appearance="primary"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>
+            <Textarea
+              widths={5}
+              appearance="primary"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>
+            <Textarea
+              widths={6}
+              appearance="primary"
+            />
+          </td>
+        </tr>
+        <tr>
+        <td>7</td>
+          <td>
+            <Textarea
+              widths={7}
+              appearance="primary"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>
+            <Textarea
+              widths={8}
+              appearance="primary"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>
+            <Textarea
+              widths={9}
+              appearance="primary"
+            />
+        </td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>
+            <Textarea
+              widths={10}
+              appearance="primary"
+            />
+          </td>
+        </tr>
+        
+      </tbody>
+    </table>
+
+  </ThemeProvider>

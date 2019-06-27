@@ -1,0 +1,20 @@
+---
+name: Form
+route: /form
+---
+
+import { Playground, Props } from 'docz';
+import Form from './Form';
+import { ThemeProvider } from '../ThemeContext/ThemeProvider';
+import { model } from './form.example';
+
+# Form
+
+## Default
+
+<Playground>
+  <ThemeProvider>
+    <Form initialState={model} />
+
+  </ThemeProvider>
+</Playground>

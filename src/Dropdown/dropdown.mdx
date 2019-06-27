@@ -1,0 +1,680 @@
+---
+name: Dropdown
+route: /dropdown
+---
+
+import { Fragment } from 'react';
+import { Playground, Props } from 'docz';
+import styled from 'styled-components';
+import Dropdown from './Dropdown';
+import Container from '../Container/Container';
+import { ThemeProvider } from '../ThemeContext/ThemeProvider';
+
+# Dropdown
+
+<Props of={Dropdown} />
+
+## Default
+
+<Playground>
+  <ThemeProvider>
+    <Dropdown uid="menu1" label="Primary" marginRight={3}>
+      <Container
+        margin1="top"
+        radius="rounded"
+        padding="default"
+        elevate={3}
+        css="background: #fff; color:#000"
+      >
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+        </ul>
+      </Container>
+    </Dropdown>
+
+    <Dropdown uid="menu1" label="Secondary" appearance="secondary" marginRight={3}>
+      <Container
+        margin1="top"
+        radius="rounded"
+        padding="default"
+        elevate={3}
+        css="background: #fff; color:#000"
+      >
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+        </ul>
+      </Container>
+    </Dropdown>
+
+    <Dropdown uid="menu1" label="Tertiary" appearance="tertiary" marginRight={3}>
+      <Container
+        margin1="top"
+        radius="rounded"
+        padding="default"
+        elevate={3}
+        css="background: #fff; color:#000"
+      >
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+        </ul>
+      </Container>
+    </Dropdown>
+
+  </ThemeProvider>
+</Playground>
+
+## Apperance
+
+<Playground>
+  <ThemeProvider>
+    <h3>Accent</h3>
+    <Dropdown uid="menu1" label="Primary" appearance="accent" marginRight={3}>
+      <Container
+        margin1="top"
+        radius="rounded"
+        padding="default"
+        elevate={3}
+        css="background: #fff; color:#000"
+      >
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+        </ul>
+      </Container>
+    </Dropdown>
+    <Dropdown uid="menu1" label="Secondary" appearance="secondary-accent" marginRight={3}>
+      <Container
+        margin1="top"
+        radius="rounded"
+        padding="default"
+        elevate={3}
+        css="background: #fff; color:#000"
+      >
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+        </ul>
+      </Container>
+    </Dropdown>
+    <Dropdown uid="menu1" label="Tertiary" appearance="tertiary-accent" marginRight={3}>
+      <Container
+        margin1="top"
+        radius="rounded"
+        padding="default"
+        elevate={3}
+        css="background: #fff; color:#000"
+      >
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+        </ul>
+      </Container>
+    </Dropdown>
+
+    <h3>Active</h3>
+    <Dropdown uid="menu1" label="Primary" appearance="active" marginRight={3}>
+      <Container
+        margin1="top"
+        radius="rounded"
+        padding="default"
+        elevate={3}
+        css="background: #fff; color:#000"
+      >
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+        </ul>
+      </Container>
+    </Dropdown>
+    <Dropdown uid="menu1" label="Secondary" appearance="secondary-active" marginRight={3}>
+      <Container
+        margin1="top"
+        radius="rounded"
+        padding="default"
+        elevate={3}
+        css="background: #fff; color:#000"
+      >
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+        </ul>
+      </Container>
+    </Dropdown>
+    <Dropdown uid="menu1" label="Tertiary" appearance="tertiary-active" marginRight={3}>
+      <Container
+        margin1="top"
+        radius="rounded"
+        padding="default"
+        elevate={3}
+        css="background: #fff; color:#000"
+      >
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+        </ul>
+      </Container>
+    </Dropdown>
+
+    <h3>Action</h3>
+    <Dropdown uid="menu1" label="Primary" appearance="action" marginRight={3}>
+      <Container
+        margin1="top"
+        radius="rounded"
+        padding="default"
+        elevate={3}
+        css="background: #fff; color:#000"
+      >
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+        </ul>
+      </Container>
+    </Dropdown>
+    <Dropdown uid="menu1" label="Secondary" appearance="secondary-action" marginRight={3}>
+      <Container
+        margin1="top"
+        radius="rounded"
+        padding="default"
+        elevate={3}
+        css="background: #fff; color:#000"
+      >
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+        </ul>
+      </Container>
+    </Dropdown>
+    <Dropdown uid="menu1" label="Tertiary" appearance="tertiary-action" marginRight={3}>
+      <Container
+        margin1="top"
+        radius="rounded"
+        padding="default"
+        elevate={3}
+        css="background: #fff; color:#000"
+      >
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+        </ul>
+      </Container>
+    </Dropdown>
+
+    <h3>Danger</h3>
+    <Dropdown uid="menu1" label="Primary" appearance="danger" marginRight={3}>
+      <Container
+        margin1="top"
+        radius="rounded"
+        padding="default"
+        elevate={3}
+        css="background: #fff; color:#000"
+      >
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+        </ul>
+      </Container>
+    </Dropdown>
+    <Dropdown uid="menu1" label="Secondary" appearance="secondary-danger" marginRight={3}>
+      <Container
+        margin1="top"
+        radius="rounded"
+        padding="default"
+        elevate={3}
+        css="background: #fff; color:#000"
+      >
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+        </ul>
+      </Container>
+    </Dropdown>
+    <Dropdown uid="menu1" label="Tertiary" appearance="tertiary-danger" marginRight={3}>
+      <Container
+        margin1="top"
+        radius="rounded"
+        padding="default"
+        elevate={3}
+        css="background: #fff; color:#000"
+      >
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+        </ul>
+      </Container>
+    </Dropdown>
+
+    <h3>Success</h3>
+    <Dropdown uid="menu1" label="Primary" appearance="success" marginRight={3}>
+      <Container
+        margin1="top"
+        radius="rounded"
+        padding="default"
+        elevate={3}
+        css="background: #fff; color:#000"
+      >
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+        </ul>
+      </Container>
+    </Dropdown>
+    <Dropdown uid="menu1" label="Secondary" appearance="secondary-success" marginRight={3}>
+      <Container
+        margin1="top"
+        radius="rounded"
+        padding="default"
+        elevate={3}
+        css="background: #fff; color:#000"
+      >
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+        </ul>
+      </Container>
+    </Dropdown>
+    <Dropdown uid="menu1" label="Tertiary" appearance="tertiary-success" marginRight={3}>
+      <Container
+        margin1="top"
+        radius="rounded"
+        padding="default"
+        elevate={3}
+        css="background: #fff; color:#000"
+      >
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+        </ul>
+      </Container>
+    </Dropdown>
+
+
+    <h3>Warning</h3>
+    <Dropdown uid="menu1" label="Primary" appearance="warning" marginRight={3}>
+      <Container
+        margin1="top"
+        radius="rounded"
+        padding="default"
+        elevate={3}
+        css="background: #fff; color:#000"
+      >
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+        </ul>
+      </Container>
+    </Dropdown>
+    <Dropdown uid="menu1" label="Secondary" appearance="secondary-warning" marginRight={3}>
+      <Container
+        margin1="top"
+        radius="rounded"
+        padding="default"
+        elevate={3}
+        css="background: #fff; color:#000"
+      >
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+        </ul>
+      </Container>
+    </Dropdown>
+    <Dropdown uid="menu1" label="Tertiary" appearance="tertiary-warning" marginRight={3}>
+      <Container
+        margin1="top"
+        radius="rounded"
+        padding="default"
+        elevate={3}
+        css="background: #fff; color:#000"
+      >
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+        </ul>
+      </Container>
+    </Dropdown>
+
+    <h3>Disabled</h3>
+    <Dropdown uid="menu1" label="Primary" appearance="disabled" marginRight={3}>
+      <Container
+        margin1="top"
+        radius="rounded"
+        padding="default"
+        elevate={3}
+        css="background: #fff; color:#000"
+      >
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+        </ul>
+      </Container>
+    </Dropdown>
+    <Dropdown uid="menu1" label="Secondary" appearance="secondary-disabled" marginRight={3}>
+      <Container
+        margin1="top"
+        radius="rounded"
+        padding="default"
+        elevate={3}
+        css="background: #fff; color:#000"
+      >
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+        </ul>
+      </Container>
+    </Dropdown>
+    <Dropdown uid="menu1" label="Tertiary" appearance="tertiary-disabled" marginRight={3}>
+      <Container
+        margin1="top"
+        radius="rounded"
+        padding="default"
+        elevate={3}
+        css="background: #fff; color:#000"
+      >
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+        </ul>
+      </Container>
+    </Dropdown>
+
+  </ThemeProvider>
+</Playground>
+
+## Size
+
+  <ThemeProvider>
+    <table>
+      <thead>
+        <tr>
+          <th>Prop</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>
+            <Dropdown uid="menu1" label="Dropdown" size={1}>
+              <Container
+                margin1="top"
+                radius="rounded"
+                padding="default"
+                elevate={3}
+                css="background: #fff; color:#000"
+              >
+                <ul>
+                  <li>Item 1</li>
+                  <li>Item 2</li>
+                  <li>Item 3</li>
+                  <li>Item 4</li>
+                </ul>
+              </Container>
+            </Dropdown>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>
+            <Dropdown uid="menu1" label="Dropdown" size={2}>
+              <Container
+                margin1="top"
+                radius="rounded"
+                padding="default"
+                elevate={3}
+                css="background: #fff; color:#000"
+              >
+                <ul>
+                  <li>Item 1</li>
+                  <li>Item 2</li>
+                  <li>Item 3</li>
+                  <li>Item 4</li>
+                </ul>
+              </Container>
+            </Dropdown>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>
+            <Dropdown uid="menu1" label="Dropdown" size={3}>
+              <Container
+                margin1="top"
+                radius="rounded"
+                padding="default"
+                elevate={3}
+                css="background: #fff; color:#000"
+              >
+                <ul>
+                  <li>Item 1</li>
+                  <li>Item 2</li>
+                  <li>Item 3</li>
+                  <li>Item 4</li>
+                </ul>
+              </Container>
+            </Dropdown>
+          </td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>
+            <Dropdown uid="menu1" label="Dropdown" size={4}>
+              <Container
+                margin1="top"
+                radius="rounded"
+                padding="default"
+                elevate={3}
+                css="background: #fff; color:#000"
+              >
+                <ul>
+                  <li>Item 1</li>
+                  <li>Item 2</li>
+                  <li>Item 3</li>
+                  <li>Item 4</li>
+                </ul>
+              </Container>
+            </Dropdown>
+          </td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>
+            <Dropdown uid="menu1" label="Dropdown" size={5}>
+              <Container
+                margin1="top"
+                radius="rounded"
+                padding="default"
+                elevate={3}
+                css="background: #fff; color:#000"
+              >
+                <ul>
+                  <li>Item 1</li>
+                  <li>Item 2</li>
+                  <li>Item 3</li>
+                  <li>Item 4</li>
+                </ul>
+              </Container>
+            </Dropdown>
+          </td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>
+            <Dropdown uid="menu1" label="Dropdown" size={6}>
+              <Container
+                margin1="top"
+                radius="rounded"
+                padding="default"
+                elevate={3}
+                css="background: #fff; color:#000"
+              >
+                <ul>
+                  <li>Item 1</li>
+                  <li>Item 2</li>
+                  <li>Item 3</li>
+                  <li>Item 4</li>
+                </ul>
+              </Container>
+            </Dropdown>
+          </td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>
+            <Dropdown uid="menu1" label="Dropdown" size={7}>
+              <Container
+                margin1="top"
+                radius="rounded"
+                padding="default"
+                elevate={3}
+                css="background: #fff; color:#000"
+              >
+                <ul>
+                  <li>Item 1</li>
+                  <li>Item 2</li>
+                  <li>Item 3</li>
+                  <li>Item 4</li>
+                </ul>
+              </Container>
+            </Dropdown>
+          </td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>
+            <Dropdown uid="menu1" label="Dropdown" size={8}>
+              <Container
+                margin1="top"
+                radius="rounded"
+                padding="default"
+                elevate={3}
+                css="background: #fff; color:#000"
+              >
+                <ul>
+                  <li>Item 1</li>
+                  <li>Item 2</li>
+                  <li>Item 3</li>
+                  <li>Item 4</li>
+                </ul>
+              </Container>
+            </Dropdown>
+          </td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>
+            <Dropdown uid="menu1" label="Dropdown" size={9}>
+              <Container
+                margin1="top"
+                radius="rounded"
+                padding="default"
+                elevate={3}
+                css="background: #fff; color:#000"
+              >
+                <ul>
+                  <li>Item 1</li>
+                  <li>Item 2</li>
+                  <li>Item 3</li>
+                  <li>Item 4</li>
+                </ul>
+              </Container>
+            </Dropdown>
+          </td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>
+            <Dropdown uid="menu1" label="Dropdown" size={10}>
+              <Container
+                margin1="top"
+                radius="rounded"
+                padding="default"
+                elevate={3}
+                css="background: #fff; color:#000"
+              >
+                <ul>
+                  <li>Item 1</li>
+                  <li>Item 2</li>
+                  <li>Item 3</li>
+                  <li>Item 4</li>
+                </ul>
+              </Container>
+            </Dropdown>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </ThemeProvider>
+
+## Stretch
+
+<Playground>
+  <ThemeProvider>
+    <Dropdown uid="menu1" label="Strtch" stretch>
+      <Container
+        margin1="top"
+        radius="rounded"
+        padding="default"
+        elevate={3}
+        css="background: #fff; color:#000"
+      >
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+        </ul>
+      </Container>
+    </Dropdown>
+  </ThemeProvider>
+</Playground>

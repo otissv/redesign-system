@@ -1,0 +1,111 @@
+---
+name: Elevate
+route: /elevate
+---
+
+import { Playground, Props } from 'docz';
+import { Container } from '../../Container/Container';
+import { Flex } from '../../Flex';
+
+import { ThemeProvider } from '../../ThemeContext/ThemeProvider';
+import theme from '../../theme/theme';
+
+# Elevate
+
+<ThemeProvider>
+  <Flex wrap='wrap'>
+    <Container css={`text-align: center`}>
+      <Container
+        elevate={0}
+        css={`
+          margin: 20px;
+          width: 200px;
+          height: 200px;
+          border: 1px solid ${theme.color['grey-100']};
+        `}
+      />
+      0
+    </Container>
+
+    <Container
+      css={`
+        text-align: center;
+      `}>
+      <Container
+        elevate={1}
+        css={`
+          margin: 20px;
+          width: 200px;
+          height: 200px;
+          border: 1px solid ${theme.color['grey-100']};
+        `}
+      />
+      1
+    </Container>
+
+    <Container
+      css={`
+        text-align: center;
+      `}>
+      <Container
+        elevate={2}
+        css={`
+          margin: 20px;
+          width: 200px;
+          height: 200px;
+          border: 1px solid ${theme.color['grey-100']};
+        `}
+      />
+      2
+    </Container>
+
+    <Container
+      css={`
+        text-align: center;
+      `}>
+      <Container
+        elevate={3}
+        css={`
+          margin: 20px;
+          width: 200px;
+          height: 200px;
+          border: 1px solid ${theme.color['grey-100']};
+        `}
+      />
+      3
+    </Container>
+
+    <Container
+      css={`
+        text-align: center;
+      `}>
+      <Container
+        elevate={4}
+        css={`
+          margin: 20px;
+          width: 200px;
+          height: 200px;
+          border: 1px solid ${theme.color['grey-100']};
+        `}
+      />
+      4
+    </Container>
+
+    <Container
+      css={`
+        text-align: center;
+      `}>
+      <Container
+        elevate={5}
+        css={`
+          margin: 20px;
+          width: 200px;
+          height: 200px;
+          border: 1px solid ${theme.color['grey-100']};
+        `}
+      />
+      5
+    </Container>
+
+  </Flex>
+</ThemeProvider>

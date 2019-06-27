@@ -1,0 +1,37 @@
+{
+  "include": ["./"],
+  "exclude": [
+    "typings/main",
+    "typings/main.d.ts",
+    "typings/index.d.ts",
+    "typings/browser.d.ts",
+    "typings/browser",
+    "node_modules"
+  ],
+  "jsx": "react",
+  "esModuleInterop": true,
+  "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
+    "lib": ["dom", "esnext", "es2015"],
+    "importHelpers": true,
+    "declaration": true,
+    "sourceMap": true,
+    "rootDir": "./src",
+    "outDir": "./.build",
+    "strictFunctionTypes": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths": {
+      "*": ["src/*"]
+    },
+    "types": ["react"],
+    "jsx": "react"
+  }
+}

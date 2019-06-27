@@ -1,0 +1,1 @@
+//# sourceMappingURL=badge.types.js.map

@@ -1,0 +1,136 @@
+---
+name: ButtonIcon
+route: /button-icon
+---
+
+import { Playground, Props } from 'docz';
+import { ThemeProvider } from '../ThemeContext/ThemeProvider';
+import ButtonIcon from './ButtonIcon';
+import { Home } from '../MaterialIcons/Home';
+import { Container } from '../Container';
+
+<Props of={ButtonIcon} />
+
+## Default
+
+<Playground>
+  <ThemeProvider>
+    <Container as='section' marginBottom={5}>
+     <h3>Default</h3>
+      <ButtonIcon appearance="primary" icon={Home} title="Table" marginRight={3}>
+        Primary
+      </ButtonIcon>
+      <ButtonIcon appearance="secondary" icon={Home} title="JSON" marginRight={3}>
+        Secondary
+      </ButtonIcon>
+      <ButtonIcon appearance="tertiary" icon={Home} title="JSON">
+        Tertiary
+      </ButtonIcon>
+    </Container>
+
+    <Container as='section' marginBottom={5}>
+     <h3>Accent</h3>
+      <ButtonIcon appearance="primary-accent" icon={Home} title="Table" marginRight={3}>
+        Primary
+      </ButtonIcon>
+      <ButtonIcon appearance="secondary-accent" icon={Home} title="JSON" marginRight={3}>
+        Secondary
+      </ButtonIcon>
+      <ButtonIcon appearance="tertiary-accent" icon={Home} title="JSON">
+        Tertiary
+      </ButtonIcon>
+    </Container>
+
+    <Container as='section' marginBottom={5}>
+     <h3>Active</h3>
+      <ButtonIcon appearance="primary-active" icon={Home} title="Table" marginRight={3}>
+        Primary
+      </ButtonIcon>
+      <ButtonIcon appearance="secondary-active" icon={Home} title="JSON" marginRight={3}>
+        Secondary
+      </ButtonIcon>
+      <ButtonIcon appearance="tertiary-active" icon={Home} title="JSON">
+        Tertiary
+      </ButtonIcon>
+    </Container>
+
+    <Container as='section' marginBottom={5}>
+     <h3>Action</h3>
+      <ButtonIcon appearance="primary-action" icon={Home} title="Table" marginRight={3}>
+        Primary
+      </ButtonIcon>
+      <ButtonIcon appearance="secondary-action" icon={Home} title="JSON" marginRight={3}>
+        Secondary
+      </ButtonIcon>
+      <ButtonIcon appearance="tertiary-action" icon={Home} title="JSON">
+        Tertiary
+      </ButtonIcon>
+    </Container>
+
+    <Container as='section' marginBottom={5}>
+     <h3>Danger</h3>
+      <ButtonIcon appearance="primary-danger" icon={Home} title="Table" marginRight={3}>
+        Primary
+      </ButtonIcon>
+      <ButtonIcon appearance="secondary-danger" icon={Home} title="JSON" marginRight={3}>
+        Secondary
+      </ButtonIcon>
+      <ButtonIcon appearance="tertiary-danger" icon={Home} title="JSON">
+        Tertiary
+      </ButtonIcon>
+    </Container>
+
+    <Container as='section' marginBottom={5}>
+     <h3>Danger</h3>
+      <ButtonIcon appearance="primary-danger" icon={Home} title="Table" marginRight={3}>
+        Primary
+      </ButtonIcon>
+      <ButtonIcon appearance="secondary-danger" icon={Home} title="JSON" marginRight={3}>
+        Secondary
+      </ButtonIcon>
+      <ButtonIcon appearance="tertiary-danger" icon={Home} title="JSON">
+        Tertiary
+      </ButtonIcon>
+    </Container>
+
+    <Container as='section' marginBottom={5}>
+     <h3>Success</h3>
+      <ButtonIcon appearance="primary-success" icon={Home} title="Table" marginRight={3}>
+        Primary
+      </ButtonIcon>
+      <ButtonIcon appearance="secondary-success" icon={Home} title="JSON" marginRight={3}>
+        Secondary
+      </ButtonIcon>
+      <ButtonIcon appearance="tertiary-success" icon={Home} title="JSON">
+        Tertiary
+      </ButtonIcon>
+    </Container>
+
+    <Container as='section' marginBottom={5}>
+     <h3>Warning</h3>
+      <ButtonIcon appearance="primary-warning" icon={Home} title="Table" marginRight={3}>
+        Primary
+      </ButtonIcon>
+      <ButtonIcon appearance="secondary-warning" icon={Home} title="JSON" marginRight={3}>
+        Secondary
+      </ButtonIcon>
+      <ButtonIcon appearance="tertiary-warning" icon={Home} title="JSON">
+        Tertiary
+      </ButtonIcon>
+    </Container>
+
+    <Container as='section' marginBottom={5}>
+     <h3>Disabled</h3>
+      <ButtonIcon appearance="primary-disabled" icon={Home} title="Table" marginRight={3}>
+        Primary
+      </ButtonIcon>
+      <ButtonIcon appearance="secondary-disabled" icon={Home} title="JSON" marginRight={3}>
+        Secondary
+      </ButtonIcon>
+      <ButtonIcon appearance="tertiary-disabled" icon={Home} title="JSON">
+        Tertiary
+      </ButtonIcon>
+    </Container>
+
+  </ThemeProvider>
+</Playground>

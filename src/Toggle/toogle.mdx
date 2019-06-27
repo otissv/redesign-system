@@ -1,0 +1,24 @@
+---
+name: Toggle
+route: /togle
+---
+
+import { Playground, Props } from 'docz';
+import styled from 'styled-components';
+import { ThemeProvider } from '../ThemeContext/ThemeProvider';
+import { Toggle } from './Toggle';
+import { ToggleContainer } from './toggle.example';
+
+# Toggle
+
+<Props of={Toggle} />
+
+## Default
+
+<Playground>
+  <ThemeProvider>
+    <ToggleContainer>
+      {toggle => <Toggle id="switch" toggle={toggle} />}
+    </ToggleContainer>
+  </ThemeProvider>
+</Playground>

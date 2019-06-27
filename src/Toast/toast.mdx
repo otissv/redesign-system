@@ -1,0 +1,34 @@
+---
+name: Toast
+route: /toast
+---
+
+import { Playground, Props } from 'docz';
+import styled from 'styled-components';
+import Toast from './Toast';
+import ToastNotification from './ToastNotification';
+import { Container } from '../Container';
+import { ToastExample } from './toast.example';
+import { ThemeProvider } from '../ThemeContext/ThemeProvider';
+
+# Toast
+
+## Default
+
+<Playground>
+  <ThemeProvider>
+    <ToastExample>
+      {messages => (
+        <Toast uid="notify1" position="top-left">
+          {messages.map(({ appearance, id, message, sticky }) => {
+            return (
+              <Container appearance={appearance} key={id} sticky={sticky}>
+                {message} :)
+              </Container>
+            );
+          })}
+        </Toast>
+      )}
+    </ToastExample>
+  </ThemeProvider>
+</Playground>

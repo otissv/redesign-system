@@ -1,0 +1,58 @@
+---
+name: Container
+route: /container
+---
+
+import { Fragment } from 'react';
+import { Playground, Props } from 'docz';
+import Container from './Container';
+import { ThemeProvider } from '../ThemeContext/ThemeProvider';
+
+# Container
+
+<Props of={Container} />
+
+# Default
+
+<Playground>
+  <ThemeProvider>
+    <Container>Container</Container>
+  </ThemeProvider>
+</Playground>
+
+# Apperance
+
+<Playground>
+  <ThemeProvider>
+
+    <Container marginBottom={3} padding={5} appearance='primary'>Primary</Container>
+    <Container marginBottom={3} padding={5} appearance='secondary'>Secondary</Container>
+    <Container marginBottom={3} padding={5} appearance='tertiary'>Tertiary</Container>
+
+    <h3>Accent</h3>
+    <Container marginBottom={3} padding={5} appearance='primary-accent'>Primary</Container>
+    <Container marginBottom={3} padding={5} appearance='secondary-accent'>Secondary</Container>
+    <Container marginBottom={3} padding={5} appearance='tertiary-accent'>Tertiary</Container>
+
+    <h3>Action</h3>
+    <Container marginBottom={3} padding={5} appearance='primary-action'>Primary</Container>
+    <Container marginBottom={3} padding={5} appearance='secondary-action'>Secondary</Container>
+    <Container marginBottom={3} padding={5} appearance='tertiary-action'>Tertiary</Container>
+
+    <h3>Danger</h3>
+    <Container marginBottom={3} padding={5} appearance='primary-danger'>Primary</Container>
+    <Container marginBottom={3} padding={5} appearance='secondary-danger'>Secondary</Container>
+    <Container marginBottom={3} padding={5} appearance='tertiary-danger'>Tertiary</Container>
+
+    <h3>Success</h3>
+    <Container marginBottom={3} padding={5} appearance='primary-success'>Primary</Container>
+    <Container marginBottom={3} padding={5} appearance='secondary-success'>Secondary</Container>
+    <Container marginBottom={3} padding={5} appearance='tertiary-success'>Tertiary</Container>
+
+    <h3>Warning</h3>
+    <Container marginBottom={3} padding={5} appearance='primary-warning'>Primary</Container>
+    <Container marginBottom={3} padding={5} appearance='secondary-warning'>Secondary</Container>
+    <Container marginBottom={3} padding={5} appearance='tertiary-warning'>Tertiary</Container>
+
+  </ThemeProvider>
+</Playground>

@@ -1,0 +1,388 @@
+---
+name: Button Group
+route: /button-group
+---
+
+import { Fragment } from 'react';
+import { Playground, Props } from 'docz';
+import { Container } from '../Container/Container';
+import { Flex } from '../Flex/Flex';
+import { ButtonGroupButton } from './ButtonGroupButton';
+import { ButtonGroup } from './ButtonGroup';
+import { ThemeProvider } from '../ThemeContext/ThemeProvider';
+
+# Button Group
+
+<Props of={ButtonGroup} />
+
+## Appearance
+
+<Playground>
+  <ThemeProvider>
+    <Flex widthSize="500px" wrap='wrap'>
+
+      <Container margin3="bottom right">
+        <ButtonGroup appearance="primary">
+          <ButtonGroupButton >Primary</ButtonGroupButton>
+          <ButtonGroupButton>Primary</ButtonGroupButton>
+          <ButtonGroupButton>Primary</ButtonGroupButton>
+        </ButtonGroup>
+      </Container>
+
+      <Container margin3="bottom right">
+        <ButtonGroup appearance="secondary">
+          <ButtonGroupButton>Seconday</ButtonGroupButton>
+          <ButtonGroupButton>Seconday</ButtonGroupButton>
+          <ButtonGroupButton>Seconday</ButtonGroupButton>
+        </ButtonGroup>
+      </Container>
+
+      <Container margin3="bottom right">
+        <ButtonGroup appearance="tertiary">
+          <ButtonGroupButton>Tertiary</ButtonGroupButton>
+          <ButtonGroupButton>Tertiary</ButtonGroupButton>
+          <ButtonGroupButton>Tertiary</ButtonGroupButton>
+        </ButtonGroup>
+      </Container>
+    </Flex>
+
+  </ThemeProvider>
+</Playground>
+
+## Context
+
+<Playground>
+  <ThemeProvider>
+
+    <h3>Accent</h3>
+    <Flex widthSize="500px" wrap='wrap'>
+      <Container margin3="bottom right">
+        <ButtonGroup appearance="primary-accent">
+          <ButtonGroupButton >Primary</ButtonGroupButton>
+          <ButtonGroupButton>Primary</ButtonGroupButton>
+          <ButtonGroupButton>Primary</ButtonGroupButton>
+        </ButtonGroup>
+      </Container>
+
+      <Container margin3="bottom right">
+        <ButtonGroup appearance="secondary-accent">
+          <ButtonGroupButton>Seconday</ButtonGroupButton>
+          <ButtonGroupButton>Seconday</ButtonGroupButton>
+          <ButtonGroupButton>Seconday</ButtonGroupButton>
+        </ButtonGroup>
+      </Container>
+
+      <Container margin3="bottom right">
+        <ButtonGroup appearance="tertiary-accent">
+          <ButtonGroupButton>Tertiary</ButtonGroupButton>
+          <ButtonGroupButton>Tertiary</ButtonGroupButton>
+          <ButtonGroupButton>Tertiary</ButtonGroupButton>
+        </ButtonGroup>
+      </Container>
+    </Flex>
+
+    <h3>Active</h3>
+    <Flex widthSize="500px" wrap='wrap'>
+      <Container margin3="bottom right">
+        <ButtonGroup appearance="primary-active">
+          <ButtonGroupButton >Primary</ButtonGroupButton>
+          <ButtonGroupButton>Primary</ButtonGroupButton>
+          <ButtonGroupButton>Primary</ButtonGroupButton>
+        </ButtonGroup>
+      </Container>
+
+      <Container margin3="bottom right">
+        <ButtonGroup appearance="secondary-active">
+          <ButtonGroupButton>Seconday</ButtonGroupButton>
+          <ButtonGroupButton>Seconday</ButtonGroupButton>
+          <ButtonGroupButton>Seconday</ButtonGroupButton>
+        </ButtonGroup>
+      </Container>
+
+      <Container margin3="bottom right">
+        <ButtonGroup appearance="tertiary-active">
+          <ButtonGroupButton>Tertiary</ButtonGroupButton>
+          <ButtonGroupButton>Tertiary</ButtonGroupButton>
+          <ButtonGroupButton>Tertiary</ButtonGroupButton>
+        </ButtonGroup>
+      </Container>
+    </Flex>
+
+    <h3>Action</h3>
+    <Flex widthSize="500px" wrap='wrap'>
+      <Container margin3="bottom right">
+        <ButtonGroup appearance="primary-action">
+          <ButtonGroupButton >Primary</ButtonGroupButton>
+          <ButtonGroupButton>Primary</ButtonGroupButton>
+          <ButtonGroupButton>Primary</ButtonGroupButton>
+        </ButtonGroup>
+      </Container>
+
+      <Container margin3="bottom right">
+        <ButtonGroup appearance="secondary-action">
+          <ButtonGroupButton>Seconday</ButtonGroupButton>
+          <ButtonGroupButton>Seconday</ButtonGroupButton>
+          <ButtonGroupButton>Seconday</ButtonGroupButton>
+        </ButtonGroup>
+      </Container>
+
+      <Container margin3="bottom right">
+        <ButtonGroup appearance="tertiary-action">
+          <ButtonGroupButton>Tertiary</ButtonGroupButton>
+          <ButtonGroupButton>Tertiary</ButtonGroupButton>
+          <ButtonGroupButton>Tertiary</ButtonGroupButton>
+        </ButtonGroup>
+      </Container>
+    </Flex>
+
+    <h3>Danger</h3>
+    <Flex widthSize="500px" wrap='wrap'>
+      <Container margin3="bottom right">
+        <ButtonGroup appearance="primary-danger">
+          <ButtonGroupButton >Primary</ButtonGroupButton>
+          <ButtonGroupButton>Primary</ButtonGroupButton>
+          <ButtonGroupButton>Primary</ButtonGroupButton>
+        </ButtonGroup>
+      </Container>
+
+      <Container margin3="bottom right">
+        <ButtonGroup appearance="secondary-danger">
+          <ButtonGroupButton>Seconday</ButtonGroupButton>
+          <ButtonGroupButton>Seconday</ButtonGroupButton>
+          <ButtonGroupButton>Seconday</ButtonGroupButton>
+        </ButtonGroup>
+      </Container>
+
+      <Container margin3="bottom right">
+        <ButtonGroup appearance="tertiary-danger">
+          <ButtonGroupButton>Tertiary</ButtonGroupButton>
+          <ButtonGroupButton>Tertiary</ButtonGroupButton>
+          <ButtonGroupButton>Tertiary</ButtonGroupButton>
+        </ButtonGroup>
+      </Container>
+    </Flex>
+
+    <h3>Success</h3>
+    <Flex widthSize="500px" wrap='wrap'>
+      <Container margin3="bottom right">
+        <ButtonGroup appearance="primary-success">
+          <ButtonGroupButton >Primary</ButtonGroupButton>
+          <ButtonGroupButton>Primary</ButtonGroupButton>
+          <ButtonGroupButton>Primary</ButtonGroupButton>
+        </ButtonGroup>
+      </Container>
+
+      <Container margin3="bottom right">
+        <ButtonGroup appearance="secondary-success">
+          <ButtonGroupButton>Seconday</ButtonGroupButton>
+          <ButtonGroupButton>Seconday</ButtonGroupButton>
+          <ButtonGroupButton>Seconday</ButtonGroupButton>
+        </ButtonGroup>
+      </Container>
+
+      <Container margin3="bottom right">
+        <ButtonGroup appearance="tertiary-success">
+          <ButtonGroupButton>Tertiary</ButtonGroupButton>
+          <ButtonGroupButton>Tertiary</ButtonGroupButton>
+          <ButtonGroupButton>Tertiary</ButtonGroupButton>
+        </ButtonGroup>
+      </Container>
+    </Flex>
+
+
+    <h3>Warning</h3>
+    <Flex widthSize="500px" wrap='wrap'>
+      <Container margin3="bottom right">
+        <ButtonGroup context='warning' appearance="primary-warning">
+          <ButtonGroupButton >Primary</ButtonGroupButton>
+          <ButtonGroupButton>Primary</ButtonGroupButton>
+          <ButtonGroupButton>Primary</ButtonGroupButton>
+        </ButtonGroup>
+      </Container>
+
+      <Container margin3="bottom right">
+        <ButtonGroup context='warning' appearance="secondary-warning">
+          <ButtonGroupButton>Seconday</ButtonGroupButton>
+          <ButtonGroupButton>Seconday</ButtonGroupButton>
+          <ButtonGroupButton>Seconday</ButtonGroupButton>
+        </ButtonGroup>
+      </Container>
+
+      <Container margin3="bottom right">
+        <ButtonGroup context='warning' appearance="tertiary-warning">
+          <ButtonGroupButton>Tertiary</ButtonGroupButton>
+          <ButtonGroupButton>Tertiary</ButtonGroupButton>
+          <ButtonGroupButton>Tertiary</ButtonGroupButton>
+        </ButtonGroup>
+      </Container>
+    </Flex>
+
+    <h3>Disable</h3>
+    <Flex widthSize="500px" wrap='wrap'>
+      <Container margin3="bottom right">
+        <ButtonGroup context='disabled' appearance="primary-disabled">
+          <ButtonGroupButton >Primary</ButtonGroupButton>
+          <ButtonGroupButton>Primary</ButtonGroupButton>
+          <ButtonGroupButton>Primary</ButtonGroupButton>
+        </ButtonGroup>
+      </Container>
+
+      <Container margin3="bottom right">
+        <ButtonGroup context='disabled' appearance="secondary-disabled">
+          <ButtonGroupButton>Seconday</ButtonGroupButton>
+          <ButtonGroupButton>Seconday</ButtonGroupButton>
+          <ButtonGroupButton>Seconday</ButtonGroupButton>
+        </ButtonGroup>
+      </Container>
+
+      <Container margin3="bottom right">
+        <ButtonGroup context='disabled' appearance="tertiary-disabled">
+          <ButtonGroupButton>Tertiary</ButtonGroupButton>
+          <ButtonGroupButton>Tertiary</ButtonGroupButton>
+          <ButtonGroupButton>Tertiary</ButtonGroupButton>
+        </ButtonGroup>
+      </Container>
+    </Flex>
+
+  </ThemeProvider>
+</Playground>
+
+## Size
+
+  <ThemeProvider>
+    <table>
+      <thead>
+        <tr>
+          <th>Prop</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>
+            <ButtonGroup size={1}>
+              <ButtonGroupButton>Button</ButtonGroupButton>
+              <ButtonGroupButton>Button</ButtonGroupButton>
+              <ButtonGroupButton>Button</ButtonGroupButton>
+            </ButtonGroup>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>
+            <ButtonGroup size={2}>
+              <ButtonGroupButton>Button</ButtonGroupButton>
+              <ButtonGroupButton>Button</ButtonGroupButton>
+              <ButtonGroupButton>Button</ButtonGroupButton>
+            </ButtonGroup>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>
+            <ButtonGroup size={3}>
+              <ButtonGroupButton>Button</ButtonGroupButton>
+              <ButtonGroupButton>Button</ButtonGroupButton>
+              <ButtonGroupButton>Button</ButtonGroupButton>
+            </ButtonGroup>
+          </td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>
+            <ButtonGroup size={4}>
+              <ButtonGroupButton>Button</ButtonGroupButton>
+              <ButtonGroupButton>Button</ButtonGroupButton>
+              <ButtonGroupButton>Button</ButtonGroupButton>
+            </ButtonGroup>
+          </td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>
+            <ButtonGroup size={5}>
+              <ButtonGroupButton>Button</ButtonGroupButton>
+              <ButtonGroupButton>Button</ButtonGroupButton>
+              <ButtonGroupButton>Button</ButtonGroupButton>
+            </ButtonGroup>
+          </td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>
+            <ButtonGroup size={6}>
+              <ButtonGroupButton>Button</ButtonGroupButton>
+              <ButtonGroupButton>Button</ButtonGroupButton>
+              <ButtonGroupButton>Button</ButtonGroupButton>
+            </ButtonGroup>
+          </td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>
+            <ButtonGroup size={7}>
+              <ButtonGroupButton>Button</ButtonGroupButton>
+              <ButtonGroupButton>Button</ButtonGroupButton>
+              <ButtonGroupButton>Button</ButtonGroupButton>
+            </ButtonGroup>
+          </td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>
+            <ButtonGroup size={8}>
+              <ButtonGroupButton>Button</ButtonGroupButton>
+              <ButtonGroupButton>Button</ButtonGroupButton>
+              <ButtonGroupButton>Button</ButtonGroupButton>
+            </ButtonGroup>
+          </td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>
+            <ButtonGroup size={9}>
+              <ButtonGroupButton>Button</ButtonGroupButton>
+              <ButtonGroupButton>Button</ButtonGroupButton>
+              <ButtonGroupButton>Button</ButtonGroupButton>
+            </ButtonGroup>
+          </td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>
+            <ButtonGroup size={10}>
+              <ButtonGroupButton>Button</ButtonGroupButton>
+              <ButtonGroupButton>Button</ButtonGroupButton>
+              <ButtonGroupButton>Button</ButtonGroupButton>
+            </ButtonGroup>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </ThemeProvider>
+
+## Stacked
+
+<Playground>
+  <ThemeProvider>
+    <ButtonGroup stacked>
+      <ButtonGroupButton>Button</ButtonGroupButton>
+      <ButtonGroupButton>Button</ButtonGroupButton>
+      <ButtonGroupButton>Button</ButtonGroupButton>
+    </ButtonGroup>
+  </ThemeProvider>
+</Playground>
+
+## Stretch
+
+<Playground>
+  <ThemeProvider>
+    <ButtonGroup stretch>
+      <ButtonGroupButton>Button</ButtonGroupButton>
+      <ButtonGroupButton>Button</ButtonGroupButton>
+      <ButtonGroupButton>Button</ButtonGroupButton>
+    </ButtonGroup>
+  </ThemeProvider>
+</Playground>

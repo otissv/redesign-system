@@ -1,0 +1,238 @@
+---
+name: Button
+route: /button
+---
+
+import { Playground, Props } from 'docz';
+import Button from './Button';
+import { ThemeProvider } from '../ThemeContext/ThemeProvider';
+import { Container } from '../Container';
+
+# Button
+
+<Props of={Button} />
+
+## Appearance
+
+<Playground>
+  <ThemeProvider>
+    <Button marginRight={3}>Primary</Button>
+
+    <Button marginRight={3} appearance="secondary">
+      Seconday
+    </Button>
+    <Button marginRight={3} appearance="tertiary">
+      Tertiary
+    </Button>
+
+  </ThemeProvider>
+</Playground>
+
+## Appearance
+
+<Playground>
+  <ThemeProvider>
+    <h3>Accent</h3>
+    <Container margin3='bottom right'>
+      <Button marginRight={3} appearance='primary-accent'>
+        Primary
+      </Button>
+      <Button marginRight={3} appearance="secondary-accent">
+        Seconday
+      </Button>
+      <Button marginRight={3} appearance="tertiary-accent">
+        Tertiary
+      </Button>
+    </Container>
+
+    <h3>Active</h3>
+    <Container margin3='bottom right'>
+      <Button marginRight={3} appearance='primary-active'>
+        Primary
+      </Button>
+      <Button marginRight={3} appearance="secondary-active">
+        Seconday
+      </Button>
+      <Button marginRight={3} appearance="tertiary-active">
+        Tertiary
+      </Button>
+    </Container>
+
+    <h3>Action</h3>
+    <Container margin3='bottom right'>
+      <Button marginRight={3} appearance='primary-action'>
+        Primary
+      </Button>
+      <Button marginRight={3} appearance="secondary-action">
+        Seconday
+      </Button>
+      <Button marginRight={3} appearance="tertiary-action">
+        Tertiary
+      </Button>
+    </Container>
+
+    <h3>Danger</h3>
+    <Container margin3='bottom right'>
+      <Button marginRight={3} appearance='primary-danger'>
+        Primary
+      </Button>
+      <Button marginRight={3} appearance="secondary-danger">
+        Seconday
+      </Button>
+      <Button marginRight={3} appearance="tertiary-danger">
+        Tertiary
+      </Button>
+    </Container>
+
+    <h3>Success</h3>
+    <Container margin3='bottom right'>
+      <Button marginRight={3} appearance='primary-success'>
+        Primary
+      </Button>
+      <Button marginRight={3} appearance="secondary-success">
+        Seconday
+      </Button>
+      <Button marginRight={3} appearance="tertiary-success">
+        Tertiary
+      </Button>
+    </Container>
+
+    <h3>Waring</h3>
+    <Container margin3='bottom right'>
+      <Button marginRight={3} appearance='primary-warning'>
+        Primary
+      </Button>
+      <Button marginRight={3} appearance="secondary-warning">
+        Seconday
+      </Button>
+      <Button marginRight={3} appearance="tertiary-warning">
+        Tertiary
+      </Button>
+    </Container>
+
+    <h3>Disabled</h3>
+    <Container margin3='bottom right'>
+      <Button marginRight={3} appearance='primary-disabled'>
+        Primary
+      </Button>
+      <Button marginRight={3} appearance="secondary-disabled">
+        Seconday
+      </Button>
+      <Button marginRight={3} appearance="tertiary-disabled">
+        Tertiary
+      </Button>
+    </Container>
+
+  </ThemeProvider>
+</Playground>
+
+## Size
+
+<ThemeProvider>
+  <table>
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Example</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>
+          <Button marginRight={3} size={1}>
+            Button
+          </Button>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>
+          <Button marginRight={3} size={2}>
+            Button
+          </Button>
+        </td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>
+          <Button marginRight={3} size={3}>
+            Button
+          </Button>
+        </td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>
+          <Button marginRight={3} size={4}>
+            Button
+          </Button>
+        </td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>
+          <Button marginRight={3} size={4}>
+            Button
+          </Button>
+        </td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>
+          <Button marginRight={3} size={5}>
+            Button
+          </Button>
+        </td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>
+          <Button marginRight={3} size={6}>
+            Button
+          </Button>
+        </td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>
+          <Button marginRight={3} size={7}>
+            Button
+          </Button>
+        </td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>
+          <Button marginRight={3} size={8}>
+            Button
+          </Button>
+        </td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>
+          <Button marginRight={3} size={9}>
+            Button
+          </Button>
+        </td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>
+          <Button marginRight={3} size={10}>
+            Button
+          </Button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</ThemeProvider>
+
+## Stretch
+
+<Playground>
+  <ThemeProvider>
+    <Button stretch>Button</Button>
+  </ThemeProvider>
+</Playground>
