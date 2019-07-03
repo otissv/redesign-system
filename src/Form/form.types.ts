@@ -8,10 +8,10 @@ export interface FormInterface extends BaseInterface {
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onBlur?: (e: React.MouseEvent<HTMLInputElement>) => void;
   onFocus?: (e: React.MouseEvent<HTMLInputElement>) => void;
-  onSubmit: ({ values, errors }: { values: any; errors: any }) => void;
+  onSubmit: FormSubmitType;
   name?: string;
   parent?: string;
-  heading: React.ReactNode;
+  heading?: React.ReactNode;
 }
 
 export type FormFieldsType = ({
@@ -23,14 +23,23 @@ export type FormFieldsType = ({
   handleBlur?: (e: React.MouseEvent<HTMLInputElement>) => void;
   handleChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleFocus?: (e: React.MouseEvent<HTMLInputElement>) => void;
-  model: FormModelInterface;
+  model?: FormModelInterface;
 }) => any;
+
+export interface FormAttributes {
+  appearance?: AppearanceType;
+  placeholder?: string;
+  required?: boolean;
+  type?: string;
+  value?: string;
+  checked?: boolean;
+  [key: string]: any;
+}
 
 export interface FormFieldInterface extends BaseInterface {
   attributes?: {
     appearance?: AppearanceType;
     // children?: FormFieldInterface;
-    name?: string;
     placeholder?: string;
     required?: boolean;
     type?: string;
@@ -42,14 +51,17 @@ export interface FormFieldInterface extends BaseInterface {
   component?: any;
   heading?: string;
   id: string;
-  label: string;
+  label?: string;
   labelProps?: FormLabelInterface;
-  model: FormModelInterface;
+  model?: FormModelInterface;
   onBlur?: (e: React.MouseEvent<HTMLInputElement>) => void;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onFocus?: (e: React.MouseEvent<HTMLInputElement>) => void;
   parent?: string;
-  validate?: (field: FormFieldInterface, model: FormModelInterface) => string;
+  validate?: (
+    field: FormFieldInterface,
+    model: FormModelInterface
+  ) => string | null;
 }
 
 export interface FormValidationInterface {
@@ -110,3 +122,8 @@ export type FormValidateType = (
   field?: FormFieldInterface,
   model?: FormModelInterface
 ) => string | null;
+
+export type FormSubmitType = (
+  { values, errors }: { values: any; errors: any },
+  model: FormModelInterface
+) => Promise<any> | void;

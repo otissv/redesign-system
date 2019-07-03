@@ -5,7 +5,7 @@ import { tabsPanelTheme } from './tabs.theme';
 import Base from '../Base/Base';
 import { TabPanelInterface } from './tabs.types';
 
-export function TabPanel({
+export const TabPanel = function TabPanel({
   children,
   className,
   uid,
@@ -34,7 +34,7 @@ export function TabPanel({
       {children}
     </Base>
   ) : null;
-}
+};
 
 TabPanel.defaultProps = {
   className: '',

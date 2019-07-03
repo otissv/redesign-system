@@ -8,7 +8,7 @@ import {
   badgePillTheme,
 } from './badge.theme';
 
-export function Badge({
+export const Badge = function Badge({
   children,
   className,
   themed,
@@ -25,7 +25,7 @@ export function Badge({
       {children}
     </Base>
   );
-}
+};
 
 Badge.defaultProps = {
   className: '',

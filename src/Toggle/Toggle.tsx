@@ -15,7 +15,7 @@ import {
   toggleContentTheme,
 } from './toggle.theme';
 
-export function ToggleInput({
+export const ToggleInput = function ToggleInput({
   checked,
   className,
   themed,
@@ -33,13 +33,13 @@ export function ToggleInput({
       {...propsRest}
     />
   );
-}
+};
 
 ToggleInput.defaultProps = {
   className: '',
 };
 
-export function ToggleLabel({
+export const ToggleLabel = function ToggleLabel({
   checked,
   className,
   ...propsRest
@@ -50,9 +50,9 @@ export function ToggleLabel({
   return (
     <Base as="label" className={classNames} themed={_themed} {...propsRest} />
   );
-}
+};
 
-export function ToggleContent({
+export const ToggleContent = function ToggleContent({
   checked,
   className,
   ...propsRest
@@ -63,7 +63,7 @@ export function ToggleContent({
   return (
     <Base as="label" className={classNames} themed={_themed} {...propsRest} />
   );
-}
+};
 
 ToggleContent.defaultProps = {
   className: '',
@@ -72,7 +72,7 @@ ToggleContent.defaultProps = {
   themed: [],
 };
 
-export function Toggle({
+export const Toggle = function Toggle({
   id,
   children,
   className,
@@ -123,7 +123,7 @@ export function Toggle({
       </ToggleLabel>
     </Base>
   );
-}
+};
 
 Toggle.defaultProps = {
   className: '',

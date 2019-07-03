@@ -4,7 +4,7 @@ import { Plus } from '../MaterialIcons/Plus';
 import ButtonIcon from '../ButtonIcon/ButtonIcon';
 import { TableToolbarButtonInterface } from './table.types';
 
-export function ToolbarAddButton({
+export const ToolbarAddButton = function ToolbarAddButton({
   onClick,
   ...propsRest
 }: TableToolbarButtonInterface) {
@@ -32,6 +32,6 @@ export function ToolbarAddButton({
       Add
     </ButtonIcon>
   );
-}
+};
 
 export default ToolbarAddButton;

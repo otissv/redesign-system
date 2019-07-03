@@ -17,14 +17,14 @@ import { ButtonIcon } from '../ButtonIcon';
 //   white-space: nowrap;
 // `;
 
-export function TableButton({
+export const TableButton = function TableButton({
   icon: Component,
   uid,
   ...propsRest
 }: TableButtonInterface) {
   const icon = useMemo(() => Component, [Component]);
   return <ButtonIcon data-uid={uid} icon={icon} {...propsRest} />;
-}
+};
 
 export function TableCopyButton({
   onClick,
@@ -44,7 +44,7 @@ export function TableCopyButton({
   );
 }
 
-export function TableDeleteButton({
+export const TableDeleteButton = function TableDeleteButton({
   onClick,
   uid,
   ...propsRest
@@ -60,9 +60,9 @@ export function TableDeleteButton({
       {...propsRest}
     />
   );
-}
+};
 
-export function TableDownloadButton({
+export const TableDownloadButton = function TableDownloadButton({
   onClick,
   uid,
   ...propsRest
@@ -78,9 +78,9 @@ export function TableDownloadButton({
       {...propsRest}
     />
   );
-}
+};
 
-export function TableEditLink({
+export const TableEditLink = function TableEditLink({
   children,
   uid,
   ...propsRest
@@ -99,6 +99,6 @@ export function TableEditLink({
       {children}
     </TableButton>
   );
-}
+};
 
 export default TableButton;

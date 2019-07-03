@@ -26,7 +26,7 @@ const SelectedText = styled.span`
   display: inline-block;
 `;
 
-export function Table({
+export const Table = function Table({
   className,
   caption,
   headings,
@@ -66,12 +66,12 @@ export function Table({
     itemList: [],
   };
 
-  const reducer: TableReducerType = function reducer(state, actions) {
-    switch (actions.type) {
+  const reducer: TableReducerType = function reducer(state, action) {
+    switch (action.type) {
       case 'SET_ITEM_LIST':
-        return { ...state, itemList: actions.itemList };
+        return { ...state, itemList: action.itemList };
       case 'SET_VARIABLES':
-        return { ...state, variables: actions.variables };
+        return { ...state, variables: action.variables };
       default:
         return state;
     }
@@ -247,14 +247,6 @@ export function Table({
         }
       };
 
-      console.log(
-        toolbar.map(button => {
-          return typeof button === 'function'
-            ? button({ handleSwitchView, currentView, handleAdd })
-            : buttons(button);
-        })
-      );
-
       return (
         <Fragment>
           {toolbar.map(button => {
@@ -312,7 +304,7 @@ export function Table({
       </Base>
     </Fragment>
   );
-}
+};
 
 Table.defaultProps = {
   className: '',

@@ -1,0 +1,32 @@
+---
+name: Router
+route: /router
+---
+
+import { Suspense } from 'react';
+import { routes } from './router.example';
+import { Link } from './Link';
+import { Router } from './Router';
+import { RouterProvider } from './RouterProvider';
+
+import { Flex } from '../../Flex';
+import { ThemeProvider } from '../../ThemeContext/ThemeProvider';
+
+# Router
+
+<ThemeProvider>
+  <RouterProvider>
+    <Suspense fallback="Loading...">
+
+    <Flex>
+      <Flex direction="column" css="width: 200px;">
+        <Link to="/router">Home</Link>
+        <Link to="/router/about">About</Link>
+        <Link to="/router/users/1">Users</Link>
+      </Flex>
+      <Router routes={routes} />
+    </Flex>
+    </Suspense>
+
+  </RouterProvider>
+</ThemeProvider>

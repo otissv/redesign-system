@@ -5,7 +5,7 @@ import { TableToolbarCopyButtonInterface } from './table.types';
 import { Copy } from '../MaterialIcons/Copy';
 import ButtonIcon from '../ButtonIcon/ButtonIcon';
 
-export function ToolbarCopyButton({
+export const ToolbarCopyButton = function ToolbarCopyButton({
   data,
   onClick,
   ...propsRest
@@ -38,6 +38,6 @@ export function ToolbarCopyButton({
       </ButtonIcon>
     </CopyToClipboard>
   );
-}
+};
 
 export default ToolbarCopyButton;

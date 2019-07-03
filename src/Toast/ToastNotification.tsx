@@ -47,7 +47,7 @@ ToastNotificationCloseButton.defaultProps = {
   themed: [],
 };
 
-export function ToastNotification({
+export const ToastNotification = function ToastNotification({
   animate,
   children,
   className,
@@ -126,7 +126,7 @@ export function ToastNotification({
       </Base>
     </Portal>
   );
-}
+};
 
 ToastNotification.defaultProps = {
   className: '',

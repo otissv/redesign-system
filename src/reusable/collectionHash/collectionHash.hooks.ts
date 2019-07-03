@@ -1,7 +1,8 @@
 import { useMemo, useEffect, useState } from 'react';
 
-export function useGetActiveItem(hook: any) {
-  const [state, setState] = useState({});
+export function useGetActiveItem<T>(hook: any) {
+  const [state, setState] = useState<T>();
+
   const { active, items } = hook();
 
   useEffect(() => {

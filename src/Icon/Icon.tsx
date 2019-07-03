@@ -5,7 +5,7 @@ import { iconTheme, iconAppearanceTheme } from './icon.theme';
 import Base from '../Base/Base';
 import { IconInterface } from './icon.types';
 
-export function Icon({
+export const Icon = function Icon({
   children,
   className,
   themed,
@@ -31,7 +31,7 @@ export function Icon({
       {children}
     </Base>
   );
-}
+};
 
 Icon.defaultProps = {
   className: '',

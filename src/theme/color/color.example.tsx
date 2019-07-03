@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Flex, WrapEnum } from '../../Flex';
+import { Flex } from '../../Flex';
 import Container from '../../Container/Container';
 
 import { useTheme } from '../../ThemeContext';
@@ -13,7 +13,7 @@ export function ColoPalette() {
   return (
     <Fragment>
       <Flex
-        wrap={WrapEnum.wrap}
+        wrap="wrap"
         css={`
           max-width: 768px;
         `}

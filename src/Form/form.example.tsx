@@ -1,107 +1,157 @@
 import React from 'react';
 import { FormFieldInterface } from './form.types';
+import { Tabs } from '../Tabs';
+import { TabListButton } from '../Tabs/TabListButton';
+import { TabList } from '../Tabs/TabList';
+import { TabPanel } from '../Tabs/TabPanel';
+import { FormControl } from '../FormControl';
+
+export function stringIsJson(value: string) {
+  if (typeof value !== 'string') {
+    return false;
+  }
+
+  try {
+    JSON.parse(value);
+    return true;
+  } catch (error) {
+    return false;
+  }
+}
+
+export function validateJSON(field: FormFieldInterface) {
+  return !stringIsJson(field.attributes.value) && 'Invalid JSON';
+}
 
 export const model = {
   fields: [
     {
-      label: 'Full Name',
+      id: 'name',
+      label: 'Project Name',
       attributes: {
-        name: 'fullName',
         value: '',
         required: true,
-        placeholder: 'Enter your full name',
-        appearance: 'primary-accent',
       },
+      description: 'The name of the project to create.',
       validate(field: FormFieldInterface) {
+        const attributes = field.attributes || {
+          attributes: {
+            value: '',
+            required: false,
+          },
+        };
+
         switch (true) {
-          case field.attributes.value.trim() === '' &&
-            field.attributes.required:
-            return 'Please fill in this field.';
-          case field.attributes.value.split(/(\s+)/).length < 2:
-            return 'Must be at least 2 words separated by a space.';
+          case attributes.value.trim() === '' && attributes.required:
+            return 'Please fill in this field';
+          case attributes.value.length <= 1:
+          case attributes.value.length > 256:
+            return 'Project Name must be between 2 and 50 characters';
           default:
             return null;
         }
       },
     },
     {
-      label: 'Email',
+      id: 'endpoint',
+      label: 'Endpoint',
       attributes: {
-        name: 'email',
         value: '',
         required: true,
-        placeholder: 'you@domain.com',
-        type: 'email',
       },
-    },
-    {
-      label: 'Phone Number (optional)',
-      attributes: {
-        name: 'phone',
-        value: '',
-        placeholder: 'Enter your phone number',
-        type: 'tel',
-      },
-    },
-    {
-      label: 'Preferred contact time (optional)',
-      attributes: {
-        name: 'contact_time',
-        value: '',
-        appearance: 'primary',
-      },
+      description: 'Graphql endpoint to connect to.',
       validate(field: FormFieldInterface) {
+        const attributes = field.attributes || {
+          attributes: {
+            value: '',
+            required: false,
+          },
+        };
+
         switch (true) {
-          case field.attributes.value.trim() !== '' &&
-            !/^\d\d:\d\d(:\d\d)?$/.test(field.attributes.value.trim()):
-            return "Format must be '23:59' or '23:59:59'";
+          case attributes.value.trim() === '' && attributes.required:
+            return 'Please fill in this field';
+          case attributes.value.length <= 1:
+          case attributes.value.length > 256:
+            return 'Project Name must be between 2 and 50 characters';
           default:
-            return '';
+            return null;
         }
       },
-      component: ({
-        attributes,
-        handleChange,
-        id,
-        label,
-      }: FormFieldInterface) => {
-        return (
-          <label htmlFor={id}>
-            {label}
-            <select id={id} onChange={handleChange} {...attributes}>
-              <option value={attributes.value}>Please choose</option>
-
-              <option value="09:30">09:30</option>
-              <option value="10:00">10:00</option>
-              <option value="10:30">10:30</option>
-              <option value="11:00">11:00</option>
-              <option value="11:30">11:30</option>
-              <option value="12:00">12:00</option>
-              <option value="12:30">12:30</option>
-              <option value="13:00">13:00</option>
-              <option value="13:30">13:30</option>
-              <option value="14:00">14:00</option>
-              <option value="14:30">14:30</option>
-              <option value="15:00">15:00</option>
-              <option value="15:30">15:30</option>
-              <option value="16:00">16:00</option>
-              <option value="16:30">16:30</option>
-              <option value="17:00">17:00</option>
-              <option value="17:30">17:30</option>
-            </select>
-          </label>
-        );
-      },
     },
     {
-      label: 'notes',
-      attributes: {
-        name: 'notes',
-        value: '',
-        appearance: 'primary',
-        type: 'textarea',
-        required: true,
-      },
+      component: () => 'Optional',
+    },
+    {
+      id: 'group',
+      component: ({
+        children,
+        handleBlur,
+        handleChange,
+        handleFocus,
+        parent,
+      }) => (
+        <Tabs css="height: 200px">
+          <TabList active="headers" stretch>
+            {children.map(({ label, id: uid }) => (
+              <TabListButton key={uid} uid={uid} title={label}>
+                {label}
+              </TabListButton>
+            ))}
+          </TabList>
+
+          {children.map(({ children: fields = [], id: uid }) => (
+            <TabPanel key={uid} uid={uid} marginTop={5}>
+              {fields.map(({ attributes, id, label, ...fieldRest }) => {
+                return (
+                  <FormControl
+                    key={id}
+                    attributes={attributes}
+                    id={id}
+                    onBlur={handleBlur}
+                    onChange={handleChange}
+                    onFocus={handleFocus}
+                    label={label}
+                    field={fieldRest}
+                    parent={`${parent}-${uid}`}
+                  />
+                );
+              })}
+            </TabPanel>
+          ))}
+        </Tabs>
+      ),
+
+      children: [
+        {
+          id: 'pramas',
+          label: 'Params',
+          children: [
+            {
+              id: 'pramas',
+              label: 'Params',
+              description: '',
+            },
+          ],
+        },
+        {
+          id: 'headers',
+          label: 'Headers',
+          children: [
+            {
+              id: 'headers',
+              label: 'Headers',
+              attributes: {
+                type: 'textarea',
+                value: `{
+}`,
+              },
+              description: '',
+              validate: validateJSON,
+            },
+          ],
+        },
+      ],
     },
   ],
 };

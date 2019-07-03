@@ -5,7 +5,7 @@ import { TabProvider } from './TabContext';
 import { tabsTheme } from './tabs.theme';
 import { TabsInterface } from './tabs.types';
 
-export function Tabs({
+export const Tabs = function Tabs({
   className,
   children,
   appearance,
@@ -39,7 +39,7 @@ export function Tabs({
       </Base>
     </TabProvider>
   );
-}
+};
 
 Tabs.defaultProps = {
   className: '',

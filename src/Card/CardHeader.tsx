@@ -5,7 +5,7 @@ import { useCard } from './CardContext';
 import { cardHeaderTheme, cardHeaderContextTheme } from './cardHeader.theme';
 import { CardHeaderInterface } from './card.types';
 
-export function CardHeader({
+export const CardHeader = function CardHeader({
   children,
   className,
   themed,
@@ -23,7 +23,7 @@ export function CardHeader({
       {children}
     </Base>
   );
-}
+};
 
 CardHeader.defaultProps = {
   className: '',

@@ -4,7 +4,7 @@ import Base from '../Base/Base';
 import { AppBarInterface } from './appBar.types';
 import { appBarTheme, appBarAppearanceTheme } from './appBar.theme';
 
-export function AppBar({
+export const AppBar = function AppBar({
   children,
   className,
   themed,
@@ -26,7 +26,7 @@ export function AppBar({
       {children}
     </Base>
   );
-}
+};
 
 AppBar.defaultProps = {
   className: '',

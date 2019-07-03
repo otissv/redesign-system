@@ -10,7 +10,7 @@ import {
 import { Button } from '../Button/Button';
 import Base from '../Base/Base';
 
-export function Dropdown({
+export const Dropdown = function Dropdown({
   children,
   className,
   label,
@@ -80,7 +80,7 @@ export function Dropdown({
       </Base>
     </Base>
   );
-}
+};
 
 Dropdown.defaultProps = {
   className: '',

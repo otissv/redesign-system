@@ -21,7 +21,7 @@ interface RowInterface {
   rowDetail?: TableRowDetailType;
 }
 
-export function TableBody({
+export const TableBody = function TableBody({
   dispatch,
   handleAdd,
   handleDeleteSelected,
@@ -130,6 +130,6 @@ export function TableBody({
       {body}
     </tbody>
   );
-}
+};
 
 export default TableBody;

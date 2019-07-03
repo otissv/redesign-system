@@ -4,7 +4,7 @@ import { Delete } from '../MaterialIcons/Delete';
 import ButtonIcon from '../ButtonIcon/ButtonIcon';
 import { TableToolbarButtonInterface } from './table.types';
 
-export function ToolbarDeleteButton({
+export const ToolbarDeleteButton = function ToolbarDeleteButton({
   onClick,
   ...propsRest
 }: TableToolbarButtonInterface) {
@@ -32,6 +32,6 @@ export function ToolbarDeleteButton({
       Delete
     </ButtonIcon>
   );
-}
+};
 
 export default ToolbarDeleteButton;

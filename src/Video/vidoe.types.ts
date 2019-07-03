@@ -1,10 +1,6 @@
 import { BaseInterface } from '../Base';
 
-export enum PreloadEnum {
-  none = 'none',
-  metadata = 'metadata',
-  auto = 'auto',
-}
+export type PreloadType = 'none' | 'metadata' | 'auto';
 
 export interface VideoInterface extends BaseInterface {
   allowFullScreen?: boolean;
@@ -17,7 +13,7 @@ export interface VideoInterface extends BaseInterface {
   loop?: boolean;
   muted?: boolean;
   playsinline?: boolean;
-  preload?: PreloadEnum;
+  preload?: PreloadType;
   src?: string;
   width?: string;
 }

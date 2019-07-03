@@ -3,7 +3,7 @@ import { FormValidationInterface } from '../Form';
 
 import { FormErrorMessage } from './FormErrorMessage';
 
-export function FormValidation({
+export const FormValidation = function FormValidation({
   attributes,
   field,
   model,
@@ -22,6 +22,6 @@ export function FormValidation({
     default:
       return null;
   }
-}
+};
 
 export default FormValidation;

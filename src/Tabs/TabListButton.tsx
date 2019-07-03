@@ -5,7 +5,7 @@ import ButtonGroupButton from '../ButtonGroup/ButtonGroupButton';
 import { useTabs } from './TabContext';
 import { TabListButtonInterface } from './tabs.types';
 
-export function TabListButton({
+export const TabListButton = function TabListButton({
   children,
   className,
   uid,
@@ -45,7 +45,7 @@ export function TabListButton({
       {children}
     </ButtonGroupButton>
   );
-}
+};
 
 TabListButton.defaultProps = {
   className: '',

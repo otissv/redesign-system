@@ -4,11 +4,12 @@ import { buttonIconTheme } from './buttonIcon.theme';
 import Button from '../Button/Button';
 import { ButtonIconInterface } from './buttonIcon.types';
 
-export function ButtonIcon({
+export const ButtonIcon = function ButtonIcon({
   alt,
   children,
   className,
   icon: Component,
+  iconProps,
   onClick,
   themed,
   title,
@@ -29,11 +30,11 @@ export function ButtonIcon({
       themed={_themed}
       {...propsRest}
     >
-      <Component alt={alt} />
+      <Component alt={alt} {...iconProps} />
       {children ? <span className="ButtonIconContent">{children}</span> : null}
     </Button>
   );
-}
+};
 
 ButtonIcon.defaultProps = {
   height: '24px',

@@ -5,7 +5,10 @@ import { theme as themeFn } from '../theme';
 import { GlobalStyle } from '../GlobalStyle';
 import { ThemeProviderInterface } from '../ThemeContext';
 
-export function ThemeProvider({ children, theme }: ThemeProviderInterface) {
+export const ThemeProvider = function ThemeProvider({
+  children,
+  theme,
+}: ThemeProviderInterface) {
   const _theme = themeFn({
     color: {
       accent: 'pink',
@@ -37,6 +40,6 @@ export function ThemeProvider({ children, theme }: ThemeProviderInterface) {
       {children}
     </ThemeContext.Provider>
   );
-}
+};
 
 export default ThemeProvider;

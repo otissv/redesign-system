@@ -6,7 +6,7 @@ import { Icon } from '../Icon';
 import { accordionIconTheme } from './accordion.theme';
 import { ChevronRight } from '../MaterialIcons/ChevronRight';
 
-export function AccordionIcon({
+export const AccordionIcon = function AccordionIcon({
   children,
   className,
   themed,
@@ -28,7 +28,7 @@ export function AccordionIcon({
       {children}
     </Icon>
   );
-}
+};
 
 AccordionIcon.defaultProps = {
   className: '',

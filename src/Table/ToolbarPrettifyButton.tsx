@@ -6,7 +6,7 @@ import { TableToolbarButtonInterface } from './table.types';
 
 import ButtonIcon from '../ButtonIcon/ButtonIcon';
 
-export function ToolbarPrettifyButton({
+export const ToolbarPrettifyButton = function ToolbarPrettifyButton({
   onClick,
   value,
   ...propsRest
@@ -38,6 +38,6 @@ export function ToolbarPrettifyButton({
       Prettify
     </ButtonIcon>
   );
-}
+};
 
 export default ToolbarPrettifyButton;

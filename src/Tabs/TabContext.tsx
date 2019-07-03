@@ -13,7 +13,7 @@ export function useTabs() {
   return useContext(TabContext);
 }
 
-export function TabProvider({
+export const TabProvider = function TabProvider({
   active,
   selected = {},
   children,
@@ -27,7 +27,7 @@ export function TabProvider({
     stacked,
   };
 
-  const [collection, dispatch] = useCollectionHashReducer(null, initialState);
+  const [collection, dispatch] = useCollectionHashReducer(initialState);
 
   const context = useMemo(() => ({ ...collection, dispatch, ...propsRest }), [
     collection,
@@ -36,6 +36,6 @@ export function TabProvider({
   ]);
 
   return <TabContext.Provider value={context}>{children}</TabContext.Provider>;
-}
+};
 
 export default TabContext;

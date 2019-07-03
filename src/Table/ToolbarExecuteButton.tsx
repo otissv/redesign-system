@@ -3,7 +3,7 @@ import ButtonIcon from '../ButtonIcon/ButtonIcon';
 import { TableToolbarButtonInterface } from './table.types';
 import { PlayCircle } from '../MaterialIcons/PlayCircle';
 
-export function ToolbarExecuteButton({
+export const ToolbarExecuteButton = function ToolbarExecuteButton({
   onClick,
   ...propsRest
 }: TableToolbarButtonInterface) {
@@ -31,6 +31,6 @@ export function ToolbarExecuteButton({
       Run
     </ButtonIcon>
   );
-}
+};
 
 export default ToolbarExecuteButton;

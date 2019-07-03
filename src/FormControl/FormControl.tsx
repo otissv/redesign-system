@@ -4,7 +4,7 @@ import { FormCheckedControl } from './FormCheckedControl';
 import { FormTextareaControl } from './FormTextareaControl';
 import { FormControlInterface } from '../Form';
 
-export function FormControl(props: FormControlInterface) {
+export const FormControl = function FormControl(props: FormControlInterface) {
   function getType(type: string) {
     switch (type) {
       case 'text':
@@ -30,7 +30,7 @@ export function FormControl(props: FormControlInterface) {
     boolean: () => <FormCheckedControl {...props} />,
     textarea: () => <FormTextareaControl {...props} />,
   }[type]();
-}
+};
 
 FormControl.defaultProps = {
   themed: [],

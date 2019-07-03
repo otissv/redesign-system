@@ -9,7 +9,7 @@ import { useAccordion } from './AccordionContext';
 import { useAccordionItem } from './AccordionItem';
 import { accordionButtonTheme, accordionIconTheme } from './accordion.theme';
 
-export function AccordionButton({
+export const AccordionButton = function AccordionButton({
   children,
   className,
   onFocus,
@@ -68,7 +68,7 @@ export function AccordionButton({
       />
     </Button>
   );
-}
+};
 
 AccordionButton.defaultProps = {
   className: '',

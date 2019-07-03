@@ -7,14 +7,13 @@ export type ToastContextType = {
   setNotification?: React.Dispatch<React.SetStateAction<any>>;
 };
 
-export enum positionEnum {
-  bottomCenter = 'bottom-center',
-  bottomLeft = 'bottom-left',
-  bottomRight = 'bottom-right',
-  topCenter = 'top-center',
-  topLeft = 'top-left',
-  topRight = 'top-right',
-}
+export type positionType =
+  | 'bottom-center'
+  | 'bottom-left'
+  | 'bottom-right'
+  | 'top-center'
+  | 'top-left'
+  | 'top-right';
 
 export interface ToastMessageInterface {
   id: string;
@@ -26,14 +25,14 @@ export interface ToastMessageInterface {
 export interface ToastInterface extends BaseInterface {
   appearance?: AppearanceLimitedType;
   messages: ToastMessageInterface[];
-  position?: positionEnum;
+  position?: positionType;
   timeout?: number;
   children?: any[];
 }
 
 export interface ToastNotificationInterface extends BaseInterface {
   appearance?: AppearanceLimitedType;
-  position?: positionEnum;
+  position?: positionType;
   items?: any;
   uid?: string;
   notifications?: ToastMessageInterface[];

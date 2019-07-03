@@ -8,7 +8,7 @@ import { FormControlInterface } from '../Form';
 import { Base } from '../Base';
 import { FormValidation } from './FormValidation';
 
-export function FormTextareaControl({
+export const FormTextareaControl = function FormTextareaControl({
   className,
   id,
   label,
@@ -39,6 +39,7 @@ export function FormTextareaControl({
         value={value}
         {...attributesRest}
         {...propsRest}
+        name={id}
         appearance={!isValid ? 'error' : appearance}
         valid={isValid}
       />
@@ -52,7 +53,7 @@ export function FormTextareaControl({
       <FormValidation attributes={attributes} field={field} model={model} />
     </Base>
   );
-}
+};
 
 FormTextareaControl.defaultProps = {
   className: '',

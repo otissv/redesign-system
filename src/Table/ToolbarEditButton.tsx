@@ -4,7 +4,7 @@ import { Edit } from '../MaterialIcons/Edit';
 import ButtonIcon from '../ButtonIcon/ButtonIcon';
 import { TableToolbarButtonInterface } from './table.types';
 
-export function ToolbarEditButton({
+export const ToolbarEditButton = function ToolbarEditButton({
   onClick,
   ...propsRest
 }: TableToolbarButtonInterface) {
@@ -32,6 +32,6 @@ export function ToolbarEditButton({
       Edit
     </ButtonIcon>
   );
-}
+};
 
 export default ToolbarEditButton;

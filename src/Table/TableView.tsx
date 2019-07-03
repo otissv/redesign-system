@@ -3,7 +3,7 @@ import React, { Fragment, useMemo } from 'react';
 import { TableViewInterface } from './table.types';
 import TableBody from './TableBody';
 
-export function TableView({
+export const TableView = function TableView({
   dispatch,
   handleAdd,
   handleDeleteSelected,
@@ -51,6 +51,6 @@ export function TableView({
       />
     </Fragment>
   );
-}
+};
 
 export default TableView;

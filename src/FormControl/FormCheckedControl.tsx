@@ -17,7 +17,7 @@ export function CheckBox({
   return <input {...props} />;
 }
 
-export function FormCheckedControl({
+export const FormCheckedControl = function FormCheckedControl({
   attributes,
   className,
   field,
@@ -47,6 +47,7 @@ export function FormCheckedControl({
           checked={checked || false}
           {...attributesRest}
           {...propsRest}
+          name={id}
           appearance={!isValid ? 'error' : appearance}
           valid={isValid}
         />
@@ -62,7 +63,7 @@ export function FormCheckedControl({
       <FormValidation attributes={attributes} field={field} model={model} />
     </Base>
   );
-}
+};
 
 FormCheckedControl.defaultProps = {
   className: '',

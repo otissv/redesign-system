@@ -1,12 +1,11 @@
 import React, { useMemo } from 'react';
-import PropTypes from 'prop-types';
 
 import { AccordionInterface } from './accordion.types';
 import { AccordionProvider } from './AccordionContext';
 import Base from '../Base/Base';
 import { accordionTheme } from './accordion.theme';
 
-export function Accordion({
+export const Accordion = function Accordion({
   active,
   children,
   className,
@@ -27,18 +26,10 @@ export function Accordion({
       </Base>
     </AccordionProvider>
   );
-}
+};
 
 Accordion.defaultProps = {
   themed: [],
-};
-
-Accordion.propTypes = {
-  active: PropTypes.string,
-  children: PropTypes.node,
-  className: '',
-  item: PropTypes.object,
-  theme: PropTypes.object,
 };
 
 export default Accordion;

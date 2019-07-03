@@ -13,7 +13,7 @@ import { formTheme } from './form.theme';
 //TODO: add hide boolean / function
 //TODO: add error component
 
-export function Form({
+export const Form = function Form({
   className,
   children,
   initialState,
@@ -62,7 +62,7 @@ export function Form({
       {render}
     </Base>
   );
-}
+};
 
 export const Fields: FormFieldsType = function Fields({
   handleBlur,

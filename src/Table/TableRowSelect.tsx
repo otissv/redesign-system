@@ -1,7 +1,7 @@
 import React from 'react';
 import { TableRowSelectInterface } from './table.types';
 
-export function TableRowSelect({
+export const TableRowSelect = function TableRowSelect({
   dispatch,
   handleChange,
   hook,
@@ -23,6 +23,6 @@ export function TableRowSelect({
       />
     </td>
   );
-}
+};
 
 export default TableRowSelect;

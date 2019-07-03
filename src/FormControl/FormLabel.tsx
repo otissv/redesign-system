@@ -4,7 +4,7 @@ import { Base } from '../Base';
 import { formLabelTheme } from './form-label.theme';
 import { FormLabelInterface } from '../Form';
 
-export function FormLabel({
+export const FormLabel = function FormLabel({
   className,
   children,
   id,
@@ -28,7 +28,7 @@ export function FormLabel({
       {children}
     </Base>
   );
-}
+};
 
 FormLabel.defaultProps = {
   className: '',

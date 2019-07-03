@@ -1,66 +1,53 @@
 import { BaseInterface } from '../Base';
 
-export enum AlignItemsEnum {
-  center = 'center',
-  flexEnd = 'flexEnd',
-  flexStart = 'flexStart',
-  stretch = 'stretch',
-  spaceAround = 'spaceAround',
-  spaceEvenly = 'spaceEvenly',
-  spaceBetween = 'spaceBetween',
-}
+export type AlignItemsType =
+  | 'center'
+  | 'flexEnd'
+  | 'flexStart'
+  | 'stretch'
+  | 'spaceAround'
+  | 'spaceEvenly'
+  | 'spaceBetween';
 
-export enum AlignContentEnum {
-  center = 'center',
-  flexEnd = 'flexEnd',
-  flexStart = 'flexStart',
-  stretch = 'stretch',
-  spaceAround = 'spaceAround',
-  spaceEvenly = 'spaceEvenly',
-  spaceBetween = 'spaceBetween',
-}
+export type AlignContentType =
+  | 'center'
+  | 'flexEnd'
+  | 'flexStart'
+  | 'stretch'
+  | 'spaceAround'
+  | 'spaceEvenly'
+  | 'spaceBetween';
 
-export enum JustifyContentEnum {
-  center = 'center',
-  flexEnd = 'flexEnd',
-  flexStart = 'flexStart',
-  stretch = 'stretch',
-  spaceAround = 'spaceAround',
-  spaceEvenly = 'spaceEvenly',
-  spaceBetween = 'spaceBetween',
-}
+export type JustifyContentType =
+  | 'center'
+  | 'flexEnd'
+  | 'flexStart'
+  | 'stretch'
+  | 'spaceAround'
+  | 'spaceEvenly'
+  | 'spaceBetween';
 
-export enum JustifyItemsEnum {
-  center = 'center',
-  flexEnd = 'flexEnd',
-  flexStart = 'flexStart',
-  stretch = 'stretch',
-  spaceAround = 'spaceAround',
-  spaceEvenly = 'spaceEvenly',
-  spaceBetween = 'spaceBetween',
-}
+export type JustifyItemsType =
+  | 'center'
+  | 'flexEnd'
+  | 'flexStart'
+  | 'stretch'
+  | 'spaceAround'
+  | 'spaceEvenly'
+  | 'spaceBetween';
 
-export enum DirectionEnum {
-  row = 'row',
-  rowReverse = 'rowReverse',
-  columnReverse = 'column',
-  COLUMN_REVERSE = 'columnReverse',
-}
+export type DirectionType = 'row' | 'rowReverse' | 'column' | 'columnReverse';
 
-export enum WrapEnum {
-  nowrap = 'nowrap',
-  wrap = 'wrap',
-  wrapReverse = 'wrapReverse',
-}
+export type WrapType = 'nowrap' | 'wrap' | 'wrapReverse';
 
 export interface FlexInterface extends BaseInterface {
-  alignContent?: AlignContentEnum;
-  alignItems?: AlignItemsEnum;
-  direction?: DirectionEnum;
+  alignContent?: AlignContentType;
+  alignItems?: AlignItemsType;
+  direction?: DirectionType;
   flow?: string;
-  JustifyContent?: JustifyContentEnum;
-  JustifyItems?: JustifyItemsEnum;
+  JustifyContent?: JustifyContentType;
+  JustifyItems?: JustifyItemsType;
   stretch?: boolean;
-  wrap?: WrapEnum;
+  wrap?: WrapType;
   order?: number;
 }

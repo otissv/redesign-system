@@ -4,7 +4,7 @@ import normalizeStyled from 'styled-normalize';
 
 import { useTheme } from '../ThemeContext';
 
-export function GlobalStyle() {
+export const GlobalStyle = function GlobalStyle() {
   const {
     theme,
     theme: { border, color, font, scrollbar, unit },
@@ -536,6 +536,6 @@ export function GlobalStyle() {
   `;
 
   return <Global theme={theme} />;
-}
+};
 
 export default GlobalStyle;

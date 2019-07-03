@@ -16,7 +16,7 @@ export function useAccordionItem() {
   return useContext(AccordionItemContext);
 }
 
-export function AccordionItem({
+export const AccordionItem = function AccordionItem({
   children,
   className,
   uid,
@@ -45,7 +45,7 @@ export function AccordionItem({
       </Base>
     </AccordionItemContext.Provider>
   );
-}
+};
 
 AccordionItem.defaultProps = {
   className: '',

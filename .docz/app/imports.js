@@ -107,6 +107,10 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-video-video" */ 'src/Video/video.mdx'
     ),
+  'src/reusable/router/router.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-reusable-router-router" */ 'src/reusable/router/router.mdx'
+    ),
   'src/theme/border/border.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-theme-border-border" */ 'src/theme/border/border.mdx'
@@ -131,4 +135,4 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-theme-unit-unit" */ 'src/theme/unit/unit.mdx'
     ),
-}
+};

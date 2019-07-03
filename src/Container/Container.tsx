@@ -4,7 +4,7 @@ import { ContainerInterface } from './container.types';
 import { Base } from '../Base';
 import { containerAppearanceTheme } from './container.theme';
 
-export function Container({
+export const Container = function Container({
   children,
   className,
   themed,
@@ -21,7 +21,7 @@ export function Container({
       {children}
     </Base>
   );
-}
+};
 
 Container.defaultProps = {
   className: '',

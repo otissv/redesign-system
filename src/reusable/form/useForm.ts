@@ -41,7 +41,7 @@ export function useForm({
     ...modelDefaults(),
     fields: buildModel({
       fields: initialState.fields,
-      parent: null,
+      parent: {},
     }),
   };
 
@@ -54,7 +54,7 @@ export function useForm({
         ...initialState,
         fields: buildModel({
           fields: initialState.fields,
-          parent: null,
+          parent: {},
         }),
       },
     });

@@ -7,7 +7,7 @@ import { setTheme } from '../utils/setTheme.util';
 import { sharedStyles } from '../utils/sharedStyles.utils';
 import { useTheme } from '../ThemeContext';
 
-export function Base({
+export const Base = function Base({
   animate,
   children,
   css,
@@ -43,6 +43,6 @@ export function Base({
       {children}
     </Component>
   );
-}
+};
 
 export default Base;

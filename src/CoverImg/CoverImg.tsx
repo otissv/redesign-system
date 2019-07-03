@@ -6,7 +6,11 @@ import { CoverImgInterface } from './coverImg.types';
 
 import { Container } from '../Container';
 
-export function Overlay({ background }: { background: string }) {
+export const Overlay = function Overlay({
+  background,
+}: {
+  background: string;
+}) {
   const bgColor = typeof background === 'string' ? background : '#00000080';
 
   return background ? (
@@ -19,7 +23,7 @@ export function Overlay({ background }: { background: string }) {
       `}
     />
   ) : null;
-}
+};
 
 export const CoverImg = function CoverImg({
   children,

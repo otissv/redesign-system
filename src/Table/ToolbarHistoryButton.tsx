@@ -4,7 +4,7 @@ import ButtonIcon from '../ButtonIcon/ButtonIcon';
 import { TimeRestore } from '../MaterialIcons/TimeRestore';
 import { TableToolbarButtonInterface } from './table.types';
 
-export function ToolbarHistoryButton({
+export const ToolbarHistoryButton = function ToolbarHistoryButton({
   onClick,
   ...propsRest
 }: TableToolbarButtonInterface) {
@@ -32,6 +32,6 @@ export function ToolbarHistoryButton({
       History
     </ButtonIcon>
   );
-}
+};
 
 export default ToolbarHistoryButton;

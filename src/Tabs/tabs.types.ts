@@ -1,7 +1,7 @@
 import { BaseInterface } from '../Base';
 import { ButtonInterface } from '../Button';
 import { AppearanceType } from '../theme';
-import { CollectionHashInitialValueType } from 'reusable/collectionHash';
+import { CollectionHashInitialValueInterface } from 'reusable/collectionHash';
 
 export type TabsContextType = {
   active?: string;
@@ -39,7 +39,7 @@ export interface TabsInterface extends BaseInterface {
 }
 
 export interface TabsInitialStateInterface
-  extends CollectionHashInitialValueType {
+  extends CollectionHashInitialValueInterface {
   stacked?: boolean;
 }
 

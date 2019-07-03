@@ -9,7 +9,7 @@ import {
   inputWidthsTheme,
 } from './input.theme';
 
-export function InputGroup({
+export const InputGroup = function InputGroup({
   children,
   className,
   valid,
@@ -39,7 +39,7 @@ export function InputGroup({
       {children}
     </Base>
   );
-}
+};
 
 InputGroup.defaultProps = {
   className: '',

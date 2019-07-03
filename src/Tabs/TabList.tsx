@@ -6,7 +6,7 @@ import { TabsListInterface } from './tabs.types';
 
 import { useTabs } from './TabContext';
 
-export function TabList({
+export const TabList = function TabList({
   active,
   children,
   className,
@@ -51,7 +51,7 @@ export function TabList({
       {children}
     </ButtonGroup>
   );
-}
+};
 
 TabList.defaultProps = {
   className: '',

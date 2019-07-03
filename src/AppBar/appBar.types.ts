@@ -1,15 +1,14 @@
 import { BaseInterface } from '../Base';
 import { AppearanceMinType } from '../theme';
 
-enum Position {
-  FIXED = 'fixed',
-  ABSOLUTE = 'absolute',
-  STICkY = 'sticky',
-  STATIC = 'static',
-  RELATIVE = 'relative',
-}
+export type PositionType =
+  | 'fixed'
+  | 'absolute'
+  | 'sticky'
+  | 'static'
+  | 'relative';
 
 export interface AppBarInterface extends BaseInterface {
   appearance?: AppearanceMinType;
-  position?: Position;
+  position?: PositionType;
 }

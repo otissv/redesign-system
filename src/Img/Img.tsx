@@ -4,7 +4,7 @@ import { ImgInterface } from './img.types';
 import { Base } from '../Base';
 import { imgTheme, imgSizeTheme } from './img.theme';
 
-export function Img({
+export const Img = function Img({
   children,
   className,
   themed,
@@ -60,7 +60,7 @@ export function Img({
   return (
     <Base as="img" className={classNames} themed={_themed} {...propsRest} />
   );
-}
+};
 
 Img.defaultProps = {
   className: '',

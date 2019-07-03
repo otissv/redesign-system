@@ -4,7 +4,7 @@ import { TableToolbarDownloadButtonInterface } from './table.types';
 import { Download } from '../MaterialIcons/Download';
 import ButtonIcon from '../ButtonIcon/ButtonIcon';
 
-export function ToolbarDownloadButton({
+export const ToolbarDownloadButton = function ToolbarDownloadButton({
   onClick,
   data,
   fileName,
@@ -37,6 +37,6 @@ export function ToolbarDownloadButton({
       Download
     </ButtonIcon>
   );
-}
+};
 
 export default ToolbarDownloadButton;

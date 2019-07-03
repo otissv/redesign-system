@@ -3,7 +3,7 @@ import Base from '../Base/Base';
 import { tableCaptionTheme } from './table.theme';
 import { TableCaptionInterface } from './table.types';
 
-export function TableCaption({
+export const TableCaption = function TableCaption({
   children,
   className,
   themed,
@@ -20,7 +20,7 @@ export function TableCaption({
       {children}
     </Base>
   );
-}
+};
 
 TableCaption.defaultProps = {
   className: '',

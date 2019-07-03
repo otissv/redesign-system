@@ -12,7 +12,7 @@ import {
   typographyTransformTheme,
 } from './typography.theme';
 
-export function Typography({
+export const Typography = function Typography({
   children,
   className,
   themed,
@@ -59,7 +59,7 @@ export function Typography({
       {children}
     </Base>
   );
-}
+};
 
 Typography.defaultProps = {
   as: 'p',

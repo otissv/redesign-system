@@ -10,21 +10,21 @@ export type CollectionHashType =
   | 'TOGGLE_SELECTED_ITEMS'
   | 'UPDATE_ITEM';
 
-export type CollectionHashInitialValueType = {
+export interface CollectionHashInitialValueInterface {
   active?: string;
   items?: any[];
   loading?: boolean;
   selected?: any[];
   uid?: string;
-};
+}
 
-export type CollectionHashStateType = {
+export interface CollectionHashStateInterface {
   active?: string;
   items?: { [key: string]: any };
   loading?: boolean;
   selected?: any[];
   uid?: string;
-};
+}
 
 export type BuildInitialValueType = <T>(initialState: T) => T;
 
@@ -32,7 +32,7 @@ export type CreateInitialStateType = <T>(initialState: T) => T;
 
 export type ReducerType = <S, A>(state: S, Actions?: A) => S;
 
-export type CollectionHashActionType = {
+export interface CollectionHashActionInterface {
   active?: string;
   item?: any;
   items?: any[];
@@ -44,9 +44,11 @@ export type CollectionHashActionType = {
   type: CollectionHashType;
   uid?: string;
   update?: any;
-};
+}
 
 export type CollectionHashReducerType = (
-  extendReducer: <S, A>(state: S, actions?: A) => S,
-  initialState: CollectionHashInitialValueType
-) => [CollectionHashStateType, React.Dispatch<any>];
+  initialState: CollectionHashInitialValueInterface,
+  extendReducer?: <S, A>(state: S, actions?: A) => S
+) => [CollectionHashStateInterface, React.Dispatch<any>];
+
+export type ItemsToArrayType = (items: { [key: string]: any }) => any[];

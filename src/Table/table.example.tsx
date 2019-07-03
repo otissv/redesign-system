@@ -26,7 +26,7 @@ export function useTable() {
     ],
   };
 
-  const [collection, dispatch] = useCollectionHashReducer(null, initialState);
+  const [collection, dispatch] = useCollectionHashReducer(initialState);
 
   return useMemo(
     () => ({

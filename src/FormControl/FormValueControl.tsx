@@ -8,7 +8,7 @@ import { FormControlInterface } from '../Form';
 import { Base } from '../Base';
 import { FormValidation } from './FormValidation';
 
-export function FormValueControl({
+export const FormValueControl = function FormValueControl({
   className,
   attributes,
   field,
@@ -44,6 +44,7 @@ export function FormValueControl({
         value={value || ''}
         {...attributesRest}
         {...propsRest}
+        name={id}
         appearance={!isValid ? 'error' : appearance}
         valid={isValid}
       />
@@ -53,10 +54,14 @@ export function FormValueControl({
           {description}
         </Typography>
       )}
-      <FormValidation attributes={attributes} field={field} model={model} />
+      <FormValidation
+        attributes={{ ...attributes, name: id }}
+        field={field}
+        model={model}
+      />
     </Base>
   );
-}
+};
 
 FormValueControl.defaultProps = {
   className: '',

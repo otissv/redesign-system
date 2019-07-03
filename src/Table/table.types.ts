@@ -1,7 +1,7 @@
 import { BaseInterface } from '../Base';
 import { ButtonIconInterface } from '../ButtonIcon';
 import {
-  CollectionHashStateType,
+  CollectionHashStateInterface,
   CollectionHashType,
 } from '../reusable/collectionHash';
 import React from 'react';
@@ -18,7 +18,7 @@ export interface JsonViewInterface {
 export interface TableInterface extends BaseInterface {
   caption?: string;
   condensed?: boolean;
-  headings?: Array<(n?: any) => any | string>;
+  headings?: Array<((props?: any) => JSX.Element) | string>;
   hook: () => any;
   hover?: boolean;
   initialValue?: any[];
@@ -26,13 +26,13 @@ export interface TableInterface extends BaseInterface {
   onAdd?: (n: any) => any;
   onCopy?: (n: any) => any;
   onDelete?: (n: any) => any;
-  onDeleteSelected: (n: any) => any;
+  onDeleteSelected?: (n: any) => any;
   onDownload?: (n: any) => any;
   onEdit?: (n: any) => any;
   onExecute?: (n: any) => any;
   rows: (n: any) => any;
   title?: string;
-  toolbar?: Array<(props: any) => any | string>;
+  toolbar?: Array<((props?: any) => JSX.Element) | string>;
   uid?: string;
 }
 
@@ -111,7 +111,7 @@ export interface TableViewInterface extends BaseInterface {
   dispatch: React.Dispatch<any>;
   handleAdd: (e: React.MouseEvent<HTMLElement>) => void;
   handleDeleteSelected: (e: React.MouseEvent<HTMLElement>) => void;
-  headings?: Array<(n?: any) => any | string>;
+  headings?: Array<((props?: any) => JSX.Element) | string>;
   itemsToArray: (items: any[]) => any[];
   loading: boolean;
   rows: Array<{
@@ -153,7 +153,7 @@ export type TableActionType =
   | 'SET_ITEM_LIST'
   | 'SET_VARIABLES';
 
-export interface TableStateInterface extends CollectionHashStateType {
+export interface TableStateInterface extends CollectionHashStateInterface {
   variables?: { [key: string]: any };
   itemList?: any[];
 }
@@ -163,7 +163,7 @@ export type TableReducerType = (
     variables?: { [key: string]: any };
     itemList?: any[];
   },
-  actions: {
+  action: {
     type: TableActionType;
     variables?: { [key: string]: any };
     itemList?: any[];

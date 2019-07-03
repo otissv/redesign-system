@@ -2,11 +2,12 @@ import { useReducer } from 'react';
 import { COLLECTION_HASH_INITIAL_STATE } from './collectionHashConstants';
 import {
   BuildInitialValueType,
-  CollectionHashActionType,
-  CollectionHashInitialValueType,
+  CollectionHashActionInterface,
+  CollectionHashInitialValueInterface,
   CollectionHashReducerType,
-  CollectionHashStateType,
+  CollectionHashStateInterface,
   ReducerType,
+  ItemsToArrayType,
 } from './collectionHash.types';
 
 const buildInitialValue: BuildInitialValueType = initialState => ({
@@ -17,7 +18,7 @@ const buildInitialValue: BuildInitialValueType = initialState => ({
 export const createInitialState: BuildInitialValueType = initialState =>
   buildInitialValue(initialState);
 
-export function itemsToArray(items: { [key: string]: any }) {
+export const itemsToArray: ItemsToArrayType = function itemsToArray(items) {
   let list = [];
 
   for (let item in items) {
@@ -25,13 +26,13 @@ export function itemsToArray(items: { [key: string]: any }) {
   }
 
   return list;
-}
+};
 
 export const useCollectionHashReducer: CollectionHashReducerType = function useCollectionHashReducer(
-  extendReducer,
-  initialState
+  initialState,
+  extendReducer = state => state
 ) {
-  const initialValue: CollectionHashInitialValueType = buildInitialValue(
+  const initialValue: CollectionHashInitialValueInterface = buildInitialValue(
     initialState
   );
 
@@ -60,9 +61,9 @@ export const useCollectionHashReducer: CollectionHashReducerType = function useC
   }
 
   function reducer(
-    state: CollectionHashStateType,
-    action: CollectionHashActionType,
-    initialValue: CollectionHashInitialValueType,
+    state: CollectionHashStateInterface,
+    action: CollectionHashActionInterface,
+    initialValue: CollectionHashInitialValueInterface,
     extendReducer: ReducerType
   ) {
     const notArray = (value: any) => !Array.isArray(value);
@@ -226,8 +227,8 @@ export const useCollectionHashReducer: CollectionHashReducerType = function useC
   }
 
   function crudReducer(
-    state: CollectionHashStateType,
-    action: CollectionHashActionType
+    state: CollectionHashStateInterface,
+    action: CollectionHashActionInterface
   ) {
     return reducer(state, action, initialValue, extendReducer);
   }

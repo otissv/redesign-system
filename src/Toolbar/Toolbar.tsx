@@ -4,7 +4,7 @@ import { AppBar } from '../AppBar';
 import { toolbarTheme } from './toolbar.theme';
 import { ToolbarInterface } from './toolbar.types';
 
-export function Toolbar({
+export const Toolbar = function Toolbar({
   children,
   className,
   items = [],
@@ -53,7 +53,7 @@ export function Toolbar({
       {toolbarContent}
     </AppBar>
   );
-}
+};
 
 Toolbar.defaultProps = {
   className: '',

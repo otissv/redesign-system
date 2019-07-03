@@ -4,7 +4,7 @@ import Base from '../Base/Base';
 import { VideoInterface } from './vidoe.types';
 import { videoTheme } from './video.theme';
 
-export function Video({
+export const Video = function Video({
   allowFullScreen,
   autoPlay,
   children,
@@ -42,7 +42,7 @@ export function Video({
       {embeded ? <iframe {...properties} frameBorder="0" /> : children}
     </Base>
   );
-}
+};
 
 Video.defaultProps = {
   className: '',

@@ -7,7 +7,7 @@ import { accordionContentTheme } from './accordion.theme';
 import { useAccordion } from './AccordionContext';
 import { useAccordionItem } from './AccordionItem';
 
-export function AccordionContent({
+export const AccordionContent = function AccordionContent({
   children,
   className,
   themed,
@@ -39,7 +39,7 @@ export function AccordionContent({
       </Base>
     </Base>
   );
-}
+};
 
 AccordionContent.defaultProps = {
   className: '',

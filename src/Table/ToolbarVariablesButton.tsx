@@ -4,7 +4,7 @@ import { Search } from '../MaterialIcons/Search';
 import ButtonIcon from '../ButtonIcon/ButtonIcon';
 import { TableToolbarButtonInterface } from './table.types';
 
-export function ToolbarVariablesButton({
+export const ToolbarVariablesButton = function ToolbarVariablesButton({
   onClick,
   ...propsRest
 }: TableToolbarButtonInterface) {
@@ -32,6 +32,6 @@ export function ToolbarVariablesButton({
       Variables
     </ButtonIcon>
   );
-}
+};
 
 export default ToolbarVariablesButton;
