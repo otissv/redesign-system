@@ -24,17 +24,22 @@ export const AccordionButton = React.memo(function AccordionButton({
   const handleClick = useCallback(
     function handleClick(e) {
       e.preventDefault()
-      handleOnClick ? handleOnClick(e) : setActiveItem(e.target.dataset.uid)
+
+      const activeItem =
+        active == e.target.dataset.uid ? null : e.target.dataset.uid
+
+      handleOnClick ? handleOnClick(e) : setActiveItem(activeItem)
     },
-    [handleOnClick, setActiveItem]
+    [handleOnClick, setActiveItem, active]
   )
 
   const handleFocus = useCallback(
     function handleFocus(e) {
       e.preventDefault()
-      onFocus ? onFocus(e) : setActiveItem(e.target.dataset.uid)
+
+      onFocus ? onFocus(e) : setActiveItem(active)
     },
-    [onFocus, setActiveItem]
+    [onFocus, setActiveItem, active]
   )
 
   const _themed = useMemo(() => [accordionButtonTheme, ...themed], [
