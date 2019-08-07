@@ -75,25 +75,25 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-portal-portal" */ 'src/Portal/portal.mdx'
     ),
-  'src/Tabs/tabs.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-tabs-tabs" */ 'src/Tabs/tabs.mdx'
-    ),
   'src/Table/table.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-table-table" */ 'src/Table/table.mdx'
+    ),
+  'src/Tabs/tabs.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-tabs-tabs" */ 'src/Tabs/tabs.mdx'
     ),
   'src/Textarea/textarea.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-textarea-textarea" */ 'src/Textarea/textarea.mdx'
     ),
-  'src/Toggle/toogle.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-toggle-toogle" */ 'src/Toggle/toogle.mdx'
-    ),
   'src/Toast/toast.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-toast-toast" */ 'src/Toast/toast.mdx'
+    ),
+  'src/Toggle/toogle.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-toggle-toogle" */ 'src/Toggle/toogle.mdx'
     ),
   'src/Toolbar/toolbar.mdx': () =>
     import(
