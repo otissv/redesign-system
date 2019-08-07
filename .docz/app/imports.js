@@ -1,11 +1,11 @@
 export const imports = {
-  'src/Accordion/accordion.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-accordion-accordion" */ 'src/Accordion/accordion.mdx'
-    ),
   'src/Alert/alert.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-alert-alert" */ 'src/Alert/alert.mdx'
+    ),
+  'src/Accordion/accordion.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-accordion-accordion" */ 'src/Accordion/accordion.mdx'
     ),
   'src/AppBar/appBar.mdx': () =>
     import(

@@ -846,205 +846,6 @@
       ]
     },
     {
-      "key": "src/Alert/Alert.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Alert",
-          "methods": [],
-          "props": {
-            "appearance": {
-              "defaultValue": null,
-              "description": "",
-              "name": "appearance",
-              "required": false,
-              "type": {
-                "name": "AppearanceType"
-              }
-            },
-            "stretch": {
-              "defaultValue": null,
-              "description": "",
-              "name": "stretch",
-              "required": false,
-              "type": {
-                "name": "boolean"
-              }
-            },
-            "onClose": {
-              "defaultValue": null,
-              "description": "",
-              "name": "onClose",
-              "required": false,
-              "type": {
-                "name": "any"
-              }
-            },
-            "animate": {
-              "defaultValue": null,
-              "description": "",
-              "name": "animate",
-              "required": false,
-              "type": {
-                "name": "{ [key: string]: any; }"
-              }
-            },
-            "css": {
-              "defaultValue": null,
-              "description": "",
-              "name": "css",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "as": {
-              "defaultValue": null,
-              "description": "",
-              "name": "as",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "state": {
-              "defaultValue": null,
-              "description": "",
-              "name": "state",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "className": {
-              "defaultValue": null,
-              "description": "",
-              "name": "className",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "theme": {
-              "defaultValue": null,
-              "description": "",
-              "name": "theme",
-              "required": false,
-              "type": {
-                "name": "ThemeInterface"
-              }
-            },
-            "themed": {
-              "defaultValue": null,
-              "description": "",
-              "name": "themed",
-              "required": false,
-              "type": {
-                "name": "((props: any) => { [key: string]: any; })[]"
-              }
-            }
-          }
-        },
-        {
-          "description": "",
-          "displayName": "NamedExoticComponent",
-          "methods": [],
-          "props": {
-            "appearance": {
-              "defaultValue": null,
-              "description": "",
-              "name": "appearance",
-              "required": false,
-              "type": {
-                "name": "AppearanceType"
-              }
-            },
-            "stretch": {
-              "defaultValue": null,
-              "description": "",
-              "name": "stretch",
-              "required": false,
-              "type": {
-                "name": "boolean"
-              }
-            },
-            "onClose": {
-              "defaultValue": null,
-              "description": "",
-              "name": "onClose",
-              "required": false,
-              "type": {
-                "name": "any"
-              }
-            },
-            "animate": {
-              "defaultValue": null,
-              "description": "",
-              "name": "animate",
-              "required": false,
-              "type": {
-                "name": "{ [key: string]: any; }"
-              }
-            },
-            "css": {
-              "defaultValue": null,
-              "description": "",
-              "name": "css",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "as": {
-              "defaultValue": null,
-              "description": "",
-              "name": "as",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "state": {
-              "defaultValue": null,
-              "description": "",
-              "name": "state",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "className": {
-              "defaultValue": null,
-              "description": "",
-              "name": "className",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "theme": {
-              "defaultValue": null,
-              "description": "",
-              "name": "theme",
-              "required": false,
-              "type": {
-                "name": "ThemeInterface"
-              }
-            },
-            "themed": {
-              "defaultValue": null,
-              "description": "",
-              "name": "themed",
-              "required": false,
-              "type": {
-                "name": "((props: any) => { [key: string]: any; })[]"
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
       "key": "src/AppBar/AppBar.tsx",
       "value": [
         {
@@ -115204,6 +115005,205 @@
               "required": false,
               "type": {
                 "name": "number"
+              }
+            },
+            "animate": {
+              "defaultValue": null,
+              "description": "",
+              "name": "animate",
+              "required": false,
+              "type": {
+                "name": "{ [key: string]: any; }"
+              }
+            },
+            "css": {
+              "defaultValue": null,
+              "description": "",
+              "name": "css",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "as": {
+              "defaultValue": null,
+              "description": "",
+              "name": "as",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "state": {
+              "defaultValue": null,
+              "description": "",
+              "name": "state",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "className": {
+              "defaultValue": null,
+              "description": "",
+              "name": "className",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "theme": {
+              "defaultValue": null,
+              "description": "",
+              "name": "theme",
+              "required": false,
+              "type": {
+                "name": "ThemeInterface"
+              }
+            },
+            "themed": {
+              "defaultValue": null,
+              "description": "",
+              "name": "themed",
+              "required": false,
+              "type": {
+                "name": "((props: any) => { [key: string]: any; })[]"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/Alert/Alert.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Alert",
+          "methods": [],
+          "props": {
+            "appearance": {
+              "defaultValue": null,
+              "description": "",
+              "name": "appearance",
+              "required": false,
+              "type": {
+                "name": "AppearanceType"
+              }
+            },
+            "stretch": {
+              "defaultValue": null,
+              "description": "",
+              "name": "stretch",
+              "required": false,
+              "type": {
+                "name": "boolean"
+              }
+            },
+            "onClose": {
+              "defaultValue": null,
+              "description": "",
+              "name": "onClose",
+              "required": false,
+              "type": {
+                "name": "any"
+              }
+            },
+            "animate": {
+              "defaultValue": null,
+              "description": "",
+              "name": "animate",
+              "required": false,
+              "type": {
+                "name": "{ [key: string]: any; }"
+              }
+            },
+            "css": {
+              "defaultValue": null,
+              "description": "",
+              "name": "css",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "as": {
+              "defaultValue": null,
+              "description": "",
+              "name": "as",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "state": {
+              "defaultValue": null,
+              "description": "",
+              "name": "state",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "className": {
+              "defaultValue": null,
+              "description": "",
+              "name": "className",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "theme": {
+              "defaultValue": null,
+              "description": "",
+              "name": "theme",
+              "required": false,
+              "type": {
+                "name": "ThemeInterface"
+              }
+            },
+            "themed": {
+              "defaultValue": null,
+              "description": "",
+              "name": "themed",
+              "required": false,
+              "type": {
+                "name": "((props: any) => { [key: string]: any; })[]"
+              }
+            }
+          }
+        },
+        {
+          "description": "",
+          "displayName": "NamedExoticComponent",
+          "methods": [],
+          "props": {
+            "appearance": {
+              "defaultValue": null,
+              "description": "",
+              "name": "appearance",
+              "required": false,
+              "type": {
+                "name": "AppearanceType"
+              }
+            },
+            "stretch": {
+              "defaultValue": null,
+              "description": "",
+              "name": "stretch",
+              "required": false,
+              "type": {
+                "name": "boolean"
+              }
+            },
+            "onClose": {
+              "defaultValue": null,
+              "description": "",
+              "name": "onClose",
+              "required": false,
+              "type": {
+                "name": "any"
               }
             },
             "animate": {

@@ -340,15 +340,17 @@
             x = A().uid,
             O = Object(o.useCallback)(
               function(e) {
-                e.preventDefault(), s ? s(e) : j(e.target.dataset.uid)
+                e.preventDefault()
+                var t = v == e.target.dataset.uid ? null : e.target.dataset.uid
+                s ? s(e) : j(t)
               },
-              [s, j]
+              [s, j, v]
             ),
             y = Object(o.useCallback)(
               function(e) {
-                e.preventDefault(), c ? c(e) : j(e.target.dataset.uid)
+                e.preventDefault(), c ? c(e) : j(v)
               },
-              [c, j]
+              [c, j, v]
             ),
             _ = Object(o.useMemo)(function() {
               return [g].concat(Object(u.a)(m))
@@ -1630,4 +1632,4 @@
     },
   },
 ])
-//# sourceMappingURL=src-accordion-accordion.0fdaed2baef5ba4a9603.js.map
+//# sourceMappingURL=src-accordion-accordion.71a687dd8ae96513953f.js.map
