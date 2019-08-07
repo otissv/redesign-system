@@ -28,8 +28,6 @@ export const AccordionButton = React.memo(function AccordionButton({
       const activeItem =
         active == e.target.dataset.uid ? null : e.target.dataset.uid
 
-      console.log('handleClick', active, e.target.dataset.uid)
-
       handleOnClick ? handleOnClick(e) : setActiveItem(activeItem)
     },
     [handleOnClick, setActiveItem, active]
