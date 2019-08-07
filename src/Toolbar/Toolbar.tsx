@@ -1,37 +1,44 @@
-import React, { useMemo } from 'react';
+import React, { useCallback, useMemo } from 'react'
 
-import { AppBar } from '../AppBar';
-import { toolbarTheme } from './toolbar.theme';
-import { ToolbarInterface } from './toolbar.types';
+import { AppBar } from '../AppBar'
+import { toolbarTheme } from './toolbar.theme'
+import { ToolbarInterface } from './toolbar.types'
 
-export const Toolbar = function Toolbar({
+export const Toolbar = React.memo(function Toolbar({
   children,
-  className,
+  className = '',
   items = [],
   onDeleteSelected,
   onSwitchView,
   toolbar,
   selectToolbar: SelectToolbar,
-  themed,
+  themed = [],
   ...propsRest
 }: ToolbarInterface) {
-  const classNames = `Toolbar ${className}`;
+  const classNames = useMemo(() => `Toolbar ${className}`, [className])
 
-  function handleDeleteSelected(e: React.MouseEvent<HTMLElement>) {
-    e.preventDefault();
-    onDeleteSelected && onDeleteSelected(e);
-  }
+  const handleDeleteSelected = useCallback(
+    function handleDeleteSelected(e: React.MouseEvent<HTMLElement>) {
+      e.preventDefault()
+      onDeleteSelected && onDeleteSelected(e)
+    },
+    [onDeleteSelected]
+  )
+
   const _themed = useMemo(() => [toolbarTheme, ...themed], [
     toolbarTheme,
     themed,
-  ]);
+  ])
 
-  function handleSwitchView(e: React.MouseEvent<HTMLElement>) {
-    e.preventDefault();
-    const id = e.currentTarget.dataset.uid;
+  const handleSwitchView = useCallback(
+    function handleSwitchView(e: React.MouseEvent<HTMLElement>) {
+      e.preventDefault()
+      const id = e.currentTarget.dataset.uid
 
-    onSwitchView && onSwitchView(e, { id });
-  }
+      onSwitchView && onSwitchView(e, { id })
+    },
+    [onSwitchView]
+  )
 
   const toolbarContent = useMemo(
     () =>
@@ -46,18 +53,13 @@ export const Toolbar = function Toolbar({
         children
       ),
     [children, handleSwitchView, handleDeleteSelected, items, toolbar]
-  );
+  )
 
   return (
     <AppBar className={classNames} themed={_themed} {...propsRest}>
       {toolbarContent}
     </AppBar>
-  );
-};
+  )
+})
 
-Toolbar.defaultProps = {
-  className: '',
-  themed: [],
-};
-
-export default Toolbar;
+export default Toolbar

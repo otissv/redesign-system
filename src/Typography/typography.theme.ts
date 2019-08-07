@@ -1,9 +1,9 @@
-import { TypographyInterface } from './typography.types';
+import { TypographyInterface } from './typography.types'
 
 export function typographyTheme({ theme: { animation } }: TypographyInterface) {
   return {
     transition: animation.easeMedium(),
-  };
+  }
 }
 
 export function typographyAppearanceTheme({
@@ -14,29 +14,29 @@ export function typographyAppearanceTheme({
     case 'accent':
       return {
         color: color.accent,
-      };
+      }
     case 'action':
       return {
         color: color.action,
-      };
+      }
     case 'danger':
       return {
         color: color.danger,
-      };
+      }
     case 'disabled':
       return {
         color: color.disabled,
-      };
+      }
     case 'success':
       return {
         color: color.success,
-      };
+      }
     case 'warning':
       return {
         color: color.warning,
-      };
+      }
     default:
-      return {};
+      return {}
   }
 }
 
@@ -49,14 +49,14 @@ export function typographyModifyTheme({
       return {
         fontSize: font.size[8],
         fontWeight: 300,
-      };
+      }
     case 'meta':
       return {
         fontSize: font.size[2],
         color: color['grey-500'],
-      };
+      }
     default:
-      return {};
+      return {}
   }
 }
 
@@ -67,18 +67,18 @@ export function typographyWrapTheme({ wrap }: TypographyInterface) {
         overflow: 'hidden',
         textOverflow: 'ellipsis',
         whiteSpace: 'nowrap',
-      };
+      }
     case 'break':
       return {
         wordWrap: 'break-word',
         hyphens: 'auto',
-      };
+      }
     case 'nowrap':
       return {
         whiteSpace: 'nowrap',
-      };
+      }
     default:
-      return {};
+      return {}
   }
 }
 
@@ -89,17 +89,17 @@ export function typographyTransformTheme({
     case 'capitalize':
       return {
         textTransform: 'capitalize',
-      };
+      }
     case 'lowercase':
       return {
         textTransform: 'lowercase',
-      };
+      }
     case 'uppercase':
       return {
         textTransform: 'uppercase',
-      };
+      }
     default:
-      return {};
+      return {}
   }
 }
 export function typographyTextAlignTheme({ textAlign }: TypographyInterface) {
@@ -107,51 +107,52 @@ export function typographyTextAlignTheme({ textAlign }: TypographyInterface) {
     case 'left':
       return {
         textAlign: 'left',
-      };
+      }
     case 'leftSmall':
       return {
         textAlign: 'left',
-      };
+      }
     case 'leftMedium':
       return {
         textAlign: 'left',
-      };
+      }
     case 'leftLarge':
       return {
         textAlign: 'left',
-      };
+      }
     case 'right':
       return {
         textAlign: 'right',
-      };
-      rightSmall: return {
+      }
+    case 'rightSmall':
+      return {
         textAlign: 'right',
-      };
+      }
     case 'rightMedium':
       return {
         textAlign: 'right',
-      };
+      }
     case 'center':
       return {
         textAlign: 'center',
-      };
+      }
     case 'centerSmall':
       return {
         textAlign: 'center',
-      };
+      }
     case 'centerMedium':
       return {
         textAlign: 'center',
-      };
+      }
     case 'centerLarge':
       return {
         textAlign: 'center',
-      };
+      }
     case 'justify':
       return {
         textAlign: 'justify',
-      };
+      }
     default:
-      return {};
+      return {}
   }
 }

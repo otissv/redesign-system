@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { useMemo } from 'react'
 
-import Button from '../Button/Button';
-import { useButtonGroup } from './ButtonGroup';
-import { ButtonGroupButtonInterface } from './buttonGroup.types';
+import Button from '../Button/Button'
+import { useButtonGroup } from './ButtonGroup'
+import { ButtonGroupButtonInterface } from './buttonGroup.types'
 
-export const ButtonGroupButton = function ButtonGroupButton({
+export const ButtonGroupButton = React.memo(function ButtonGroupButton({
   children,
-  className,
-  themed,
+  className = '',
+  themed = [],
   ...propsRest
 }: ButtonGroupButtonInterface) {
-  const buttonGroup = useButtonGroup();
-  const classNames = `ButtonGroupButton ${className || ''}`;
+  const buttonGroup = useButtonGroup()
+  const classNames = useMemo(() => `ButtonGroupButton ${className || ''}`, [
+    className,
+  ])
 
   return (
     <Button
@@ -22,7 +24,7 @@ export const ButtonGroupButton = function ButtonGroupButton({
     >
       {children}
     </Button>
-  );
-};
+  )
+})
 
-export default ButtonGroupButton;
+export default ButtonGroupButton

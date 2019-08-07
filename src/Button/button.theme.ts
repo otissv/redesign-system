@@ -1,4 +1,4 @@
-import { ButtonInterface } from './button.types';
+import { ButtonInterface } from './button.types'
 
 export function buttonTheme({
   theme: { animation, color, border, font, unit },
@@ -6,7 +6,7 @@ export function buttonTheme({
   const activeState = {
     background: color.default,
     borderBottom: border.thinDefault,
-  };
+  }
 
   return {
     color: color.white,
@@ -36,7 +36,7 @@ export function buttonTheme({
       zIndex: 2,
     },
     '&:active': activeState,
-  };
+  }
 }
 
 export function buttonAppearanceTheme({
@@ -59,7 +59,7 @@ export function buttonAppearanceTheme({
       background: color.accent,
       border: border.thinAccent,
     },
-  };
+  }
 
   const active = {
     background: color.active,
@@ -77,7 +77,7 @@ export function buttonAppearanceTheme({
       background: color.active,
       border: border.thinActive,
     },
-  };
+  }
 
   const action = {
     background: color.action,
@@ -95,7 +95,7 @@ export function buttonAppearanceTheme({
       background: color.action,
       border: border.thinAction,
     },
-  };
+  }
 
   const danger = {
     background: color.danger,
@@ -113,7 +113,7 @@ export function buttonAppearanceTheme({
       background: color.danger,
       border: border.thinDanger,
     },
-  };
+  }
 
   const success = {
     background: color.success,
@@ -131,7 +131,7 @@ export function buttonAppearanceTheme({
       background: color.success,
       border: border.thinSuccess,
     },
-  };
+  }
 
   const warning = {
     background: color.warning,
@@ -149,7 +149,7 @@ export function buttonAppearanceTheme({
       background: color.warning,
       border: border.thinWarning,
     },
-  };
+  }
 
   const disabled = {
     background: color.disabled,
@@ -175,7 +175,7 @@ export function buttonAppearanceTheme({
       boxShadow: `0 0 0 0.2em ${color.outline}`,
       zIndex: 2,
     },
-  };
+  }
 
   switch (appearance) {
     case 'secondary':
@@ -197,7 +197,7 @@ export function buttonAppearanceTheme({
           border: border.thinDefault2,
           color: color.white,
         },
-      };
+      }
     case 'tertiary':
       return {
         background: 'none',
@@ -214,11 +214,11 @@ export function buttonAppearanceTheme({
           borderBottom: border.thinDefault300,
           background: color['default-300'],
         },
-      };
+      }
 
     case 'accent':
     case 'primary-accent':
-      return accent;
+      return accent
     case 'secondary-accent':
       return {
         background: 'none',
@@ -238,7 +238,7 @@ export function buttonAppearanceTheme({
           border: `1px solid ${color.accent}`,
           color: color.white,
         },
-      };
+      }
     case 'tertiary-accent':
       return {
         background: 'none',
@@ -256,11 +256,11 @@ export function buttonAppearanceTheme({
           boxShadow: `0 0 0 0.2em ${color.outline}`,
           zIndex: 2,
         },
-      };
+      }
 
     case 'active':
     case 'primary-active':
-      return active;
+      return active
     case 'secondary-active':
       return {
         background: color.active,
@@ -280,17 +280,16 @@ export function buttonAppearanceTheme({
           boxShadow: `0 0 0 0.2em ${color.outline}`,
           zIndex: 2,
         },
-      };
+      }
     case 'tertiary-active':
       return {
-        background: color.active,
+        background: 'none',
         border: `1px solid ${color.transparent}`,
         borderBottom: border.thinActive,
-        color: color.white,
+        color: color.active,
         '&:hover': {
-          background: color.active2,
           borderBottom: border.thinActive2,
-          color: color.white,
+          color: color.active,
         },
         '&:active': {
           background: color.active,
@@ -301,11 +300,11 @@ export function buttonAppearanceTheme({
           boxShadow: `0 0 0 0.2em ${color.outline}`,
           zIndex: 2,
         },
-      };
+      }
 
     case 'action':
     case 'primary-action':
-      return action;
+      return action
     case 'secondary-action':
       return {
         background: 'none',
@@ -325,7 +324,7 @@ export function buttonAppearanceTheme({
           boxShadow: `0 0 0 0.2em ${color.outline}`,
           zIndex: 2,
         },
-      };
+      }
     case 'tertiary-action':
       return {
         background: 'none',
@@ -343,11 +342,11 @@ export function buttonAppearanceTheme({
           boxShadow: `0 0 0 0.2em ${color.outline}`,
           zIndex: 2,
         },
-      };
+      }
 
     case 'danger':
     case 'primary-danger':
-      return danger;
+      return danger
     case 'secondary-danger':
       return {
         background: 'none',
@@ -367,7 +366,7 @@ export function buttonAppearanceTheme({
           boxShadow: `0 0 0 0.2em ${color.outline}`,
           zIndex: 2,
         },
-      };
+      }
     case 'tertiary-danger':
       return {
         background: 'none',
@@ -385,11 +384,11 @@ export function buttonAppearanceTheme({
           boxShadow: `0 0 0 0.2em ${color.outline}`,
           zIndex: 2,
         },
-      };
+      }
 
     case 'success':
     case 'primary-success':
-      return success;
+      return success
     case 'secondary-success':
       return {
         background: 'none',
@@ -409,7 +408,7 @@ export function buttonAppearanceTheme({
           boxShadow: `0 0 0 0.2em ${color.outline}`,
           zIndex: 2,
         },
-      };
+      }
     case 'tertiary-success':
       return {
         background: 'none',
@@ -427,11 +426,11 @@ export function buttonAppearanceTheme({
           boxShadow: `0 0 0 0.2em ${color.outline}`,
           zIndex: 2,
         },
-      };
+      }
 
     case 'warning':
     case 'primary-warning':
-      return warning;
+      return warning
     case 'secondary-warning':
       return {
         background: 'none',
@@ -451,7 +450,7 @@ export function buttonAppearanceTheme({
           boxShadow: `0 0 0 0.2em ${color.outline}`,
           zIndex: 2,
         },
-      };
+      }
     case 'tertiary-warning':
       return {
         background: 'none',
@@ -469,11 +468,11 @@ export function buttonAppearanceTheme({
           boxShadow: `0 0 0 0.2em ${color.outline}`,
           zIndex: 2,
         },
-      };
+      }
 
     case 'disabled':
     case 'primary-disabled':
-      return disabled;
+      return disabled
     case 'secondary-disabled':
       return {
         background: 'none',
@@ -491,7 +490,7 @@ export function buttonAppearanceTheme({
           boxShadow: `0 0 0 0.2em ${color.outline}`,
           zIndex: 2,
         },
-      };
+      }
     case 'tertiary-disabled':
       return {
         background: 'none',
@@ -515,9 +514,9 @@ export function buttonAppearanceTheme({
           boxShadow: `0 0 0 0.2em ${color.outline}`,
           zIndex: 2,
         },
-      };
+      }
     default:
-      return {};
+      return {}
   }
 }
 
@@ -531,58 +530,58 @@ export function buttonSizeTheme({
         padding: `0 ${unit[1]}`,
         fontSize: font.size[2],
         // lineHeight: font.lineHeight[1],
-      };
+      }
     case 2:
       return {
         padding: `0 ${unit[2]}`,
         fontSize: font.size[3],
         // lineHeight: font.lineHeight[1],
-      };
+      }
     case 3:
       return {
         padding: `0 ${unit[3]}`,
         fontSize: font.size[4],
-      };
+      }
     case 4:
       return {
         padding: `0 ${unit[4]}`,
         fontSize: font.size[5],
-      };
+      }
     case 5:
       return {
         padding: `0 ${unit[5]}`,
         fontSize: font.size[6],
-      };
+      }
     case 6:
       return {
         padding: `0 ${unit[6]}`,
         fontSize: font.size[7],
-      };
+      }
     case 7:
       return {
         padding: `0 ${unit[7]}`,
         fontSize: font.size[8],
-      };
+      }
     case 8:
       return {
         padding: `0 ${unit[8]}`,
         fontSize: font.size[9],
-      };
+      }
     case 9:
       return {
         padding: `0 ${unit[9]}`,
         fontSize: font.size[10],
-      };
+      }
     case 10:
       return {
         padding: `0 ${unit[10]}`,
         fontSize: font.size[11],
-      };
+      }
     default:
-      return {};
+      return {}
   }
 }
 
 export function buttonStretchTheme({ stretch }: ButtonInterface) {
-  return stretch ? { width: '100%' } : {};
+  return stretch ? { width: '100%' } : {}
 }

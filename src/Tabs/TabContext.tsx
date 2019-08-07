@@ -1,19 +1,19 @@
-import React, { useContext, useMemo } from 'react';
-import { useCollectionHashReducer } from '../reusable/collectionHash';
+import React, { useContext, useMemo } from 'react'
+import { useCollectionHashReducer } from '../reusable/collectionHash'
 
 import {
   TabsContextType,
   TabsProviderInterface,
   TabsInitialStateInterface,
-} from './tabs.types';
+} from './tabs.types'
 
-export const TabContext = React.createContext<TabsContextType>({});
+export const TabContext = React.createContext<TabsContextType>({})
 
 export function useTabs() {
-  return useContext(TabContext);
+  return useContext(TabContext)
 }
 
-export const TabProvider = function TabProvider({
+export const TabProvider = React.memo(function TabProvider({
   active,
   selected = {},
   children,
@@ -25,17 +25,17 @@ export const TabProvider = function TabProvider({
     items: [],
     selected: [],
     stacked,
-  };
+  }
 
-  const [collection, dispatch] = useCollectionHashReducer(initialState);
+  const [collection, dispatch] = useCollectionHashReducer(initialState)
 
   const context = useMemo(() => ({ ...collection, dispatch, ...propsRest }), [
     collection,
     dispatch,
     propsRest,
-  ]);
+  ])
 
-  return <TabContext.Provider value={context}>{children}</TabContext.Provider>;
-};
+  return <TabContext.Provider value={context}>{children}</TabContext.Provider>
+})
 
-export default TabContext;
+export default TabContext

@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
-export const PageNotFound = function PageNotFound() {
-  return <>'404 page not found'</>;
-};
+export const PageNotFound = React.memo(function PageNotFound() {
+  return <>'404 page not found'</>
+})
 
-export default PageNotFound;
+export default PageNotFound

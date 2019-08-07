@@ -1,9 +1,11 @@
-import React, { Fragment, useMemo } from 'react';
+import React, { Fragment, useMemo } from 'react'
 
-import { TableViewInterface } from './table.types';
-import TableBody from './TableBody';
+import { TableViewInterface } from './table.types'
+import TableBody from './TableBody'
 
-export const TableView = function TableView({
+export const TableView = React.memo(function TableView({
+  allSelected,
+  baseRoute = '',
   dispatch,
   handleAdd,
   handleDeleteSelected,
@@ -31,13 +33,15 @@ export const TableView = function TableView({
         </thead>
       ),
     [headings]
-  );
+  )
 
   return (
     <Fragment>
       {tableHeadings}
 
       <TableBody
+        allSelected={allSelected}
+        baseRoute={baseRoute}
         className="TableView"
         dispatch={dispatch}
         handleAdd={handleAdd}
@@ -50,7 +54,7 @@ export const TableView = function TableView({
         {...propsRest}
       />
     </Fragment>
-  );
-};
+  )
+})
 
-export default TableView;
+export default TableView

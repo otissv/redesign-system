@@ -1,14 +1,14 @@
-import React, { Fragment } from 'react';
-import { Flex } from '../../Flex';
-import Container from '../../Container/Container';
+import React, { Fragment } from 'react'
+import { Flex } from '../../Flex'
+import Container from '../../Container/Container'
 
-import { useTheme } from '../../ThemeContext';
-import { swatches } from './color.swatches';
+import { useTheme } from '../../ThemeContext'
+import { swatches } from './color.swatches'
 
 export function ColoPalette() {
   const {
     theme: { color },
-  } = useTheme();
+  } = useTheme()
 
   return (
     <Fragment>
@@ -51,7 +51,7 @@ export function ColoPalette() {
         )}
       </Flex>
     </Fragment>
-  );
+  )
 }
 
 export function ColorSwatch({
@@ -59,11 +59,11 @@ export function ColorSwatch({
   color1,
   color2,
 }: {
-  [key: string]: string;
+  [key: string]: string
 }) {
   const {
     theme: { color },
-  } = useTheme();
+  } = useTheme()
   return (
     <Container
       css={`
@@ -88,15 +88,15 @@ export function ColorSwatch({
         />
         <Container
           css={`
-            background: ${color[color2 || color1]}
+            background: ${color[color2 || color1]};
             height: 100px;
             width: 50px;
-            display: inline-block
-            `}
+            display: inline-block;
+          `}
         />
       </Flex>
       <br />
       {label}
     </Container>
-  );
+  )
 }

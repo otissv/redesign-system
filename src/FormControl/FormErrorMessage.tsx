@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useMemo } from 'react'
 
-import ErrorMessage from '../ErrorMessage/ErrorMessage';
-import { FormErrorMessageInterface } from '../Form';
+import ErrorMessage from '../ErrorMessage/ErrorMessage'
+import { FormErrorMessageInterface } from '../Form'
 
-export const FormErrorMessage = function FormErrorMessage({
+export const FormErrorMessage = React.memo(function FormErrorMessage({
+  className,
   message,
 }: FormErrorMessageInterface) {
-  return <ErrorMessage className="FormErrorMessage">{message}</ErrorMessage>;
-};
+  const classNames = useMemo(() => `FormErrorMessage ${className}`, [className])
 
-export default FormErrorMessage;
+  return <ErrorMessage className={classNames}>{message}</ErrorMessage>
+})
+
+export default FormErrorMessage

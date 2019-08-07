@@ -1,24 +1,30 @@
-import React, { useMemo } from 'react';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { TableToolbarCopyButtonInterface } from './table.types';
+import React, { useCallback, useMemo } from 'react'
+import { CopyToClipboard } from 'react-copy-to-clipboard'
+import { TableToolbarCopyButtonInterface } from './table.types'
 
-import { Copy } from '../MaterialIcons/Copy';
-import ButtonIcon from '../ButtonIcon/ButtonIcon';
+import { Copy } from '../MaterialIcons/Copy'
+import ButtonIcon from '../ButtonIcon/ButtonIcon'
 
 export const ToolbarCopyButton = function ToolbarCopyButton({
   data,
   onClick,
   ...propsRest
 }: TableToolbarCopyButtonInterface) {
-  const text = typeof data === 'string' ? data : JSON.stringify(data, null, 2);
+  const text = useMemo(
+    () => (typeof data === 'string' ? data : JSON.stringify(data, null, 2)),
+    [data]
+  )
 
-  function handleClick(e: React.MouseEvent<HTMLElement>) {
-    e.preventDefault();
-    onClick && onClick(e);
-    //TODO: add copied notification
-  }
+  const handleClick = useCallback(
+    function handleClick(e: React.MouseEvent<HTMLElement>) {
+      e.preventDefault()
+      onClick && onClick(e)
+      //TODO: add copied notification
+    },
+    [onClick]
+  )
 
-  const icon = useMemo(() => Copy, [Copy]);
+  const icon = useMemo(() => Copy, [Copy])
 
   return (
     <CopyToClipboard text={text} copy={handleClick}>
@@ -37,7 +43,7 @@ export const ToolbarCopyButton = function ToolbarCopyButton({
         Copy
       </ButtonIcon>
     </CopyToClipboard>
-  );
-};
+  )
+}
 
-export default ToolbarCopyButton;
+export default ToolbarCopyButton

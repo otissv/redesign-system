@@ -1,31 +1,39 @@
-import React, { useMemo } from 'react';
+import React, { useMemo } from 'react'
 
-import { Base } from '../Base';
+import { Base } from '../Base'
 
-import { GoogleMapsInterface } from './googleMaps.types';
-import { googleMapsTheme } from './googleMaps.theme';
+import { GoogleMapsInterface } from './googleMaps.types'
+import { googleMapsTheme } from './googleMaps.theme'
 
-export const GoogleMaps = function GoogleMaps({
+export const GoogleMaps = React.memo(function GoogleMaps({
   children,
-  className,
+  className = '',
   location,
-  themed,
+  themed = [],
+  height = '300',
+  width = '100%',
   ...propsRest
 }: GoogleMapsInterface) {
-  const classNames = `GoogleMaps ${className}}`;
+  const classNames = useMemo(() => `GoogleMaps ${className}}`, [className])
   const _themed = useMemo(() => [googleMapsTheme, ...themed], [
     googleMapsTheme,
     themed,
-  ]);
+  ])
 
-  const query = encodeURIComponent(location);
+  const query = encodeURIComponent(location)
+
+  const props = {
+    ...propsRest,
+    width,
+    height,
+  }
 
   return (
-    <Base className={classNames} themed={_themed} {...propsRest}>
+    <Base className={classNames} themed={_themed} {...props}>
       <div className="gmap_canvas">
         <iframe
-          width={propsRest.width}
-          height={propsRest.height}
+          width={width}
+          height={height}
           id="gmap_canvas"
           src={`https://maps.google.com/maps?q=${query}&t=&z=13&ie=UTF8&iwloc=&output=embed`}
           frameBorder="0"
@@ -35,14 +43,7 @@ export const GoogleMaps = function GoogleMaps({
         />
       </div>
     </Base>
-  );
-};
+  )
+})
 
-GoogleMaps.defaultProps = {
-  className: '',
-  height: '300',
-  width: '100%',
-  themed: [],
-};
-
-export default GoogleMaps;
+export default GoogleMaps

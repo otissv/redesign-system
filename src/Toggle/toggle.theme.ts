@@ -3,39 +3,41 @@ import {
   ToggleInputInterface,
   ToggleLabelInterface,
   ToggleContentInterface,
-} from './toggle.types';
+} from './toggle.types'
 
 export function toggleTheme({  }: ToggleInterface) {
   return {
-    display: 'inline',
-  };
+    display: 'inline-block',
+    position: 'relative',
+  }
 }
 
 export function toggleAppearanceTheme({
   appearance,
-  theme: { border, color, unit },
+  theme: { border, unit },
 }: ToggleInterface) {
   switch (appearance) {
     case 'primary':
       return {
-        color: color.foreground,
-        backgroundColor: color.danger,
+        color: '#fff',
+        backgroundColor: 'blue',
         paddingLeft: unit[2],
         paddingRight: unit[2],
-      };
+      }
     case 'secondary':
       return {
         border: border.thinDanger,
         paddingLeft: unit[2],
         paddingRight: unit[2],
-      };
+      }
     default:
-      return '';
+      return {}
   }
 }
 
 export function toggleInputTheme({ theme: { color } }: ToggleInputInterface) {
   return {
+    position: 'absolute',
     boxSizing: 'border-box',
     height: 0,
     width: 0,
@@ -49,7 +51,7 @@ export function toggleInputTheme({ theme: { color } }: ToggleInputInterface) {
       left: 'calc(100% - 5px)',
       transform: 'translateX(-100%)',
     },
-  };
+  }
 }
 
 export function toggleLabelTheme({
@@ -60,7 +62,7 @@ export function toggleLabelTheme({
   width,
 }: ToggleLabelInterface) {
   return {
-    position: 'relative',
+    position: 'absolute',
     boxSizing: 'border-box',
     cursor: 'pointer',
     textIndent: hideText ? '-9999px' : 'initial',
@@ -72,7 +74,7 @@ export function toggleLabelTheme({
     fontSize: height,
     lineHeight: height,
     textAlign: checked ? 'left' : 'right',
-  };
+  }
 }
 
 export function toggleContentTheme({
@@ -82,6 +84,7 @@ export function toggleContentTheme({
   width,
 }: ToggleContentInterface) {
   return {
+    display: 'inherit',
     position: 'absolute',
     boxSizing: 'border-box',
     width: width,
@@ -95,5 +98,5 @@ export function toggleContentTheme({
       width: '25px',
       // transform: translateX(calc(100%  - 25px),
     },
-  };
+  }
 }

@@ -1,42 +1,42 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { ToastNotification } from './ToastNotification';
-import difference from 'lodash/difference';
+import React, { useEffect, useMemo, useRef, useState } from 'react'
+import { ToastNotification } from './ToastNotification'
+import difference from 'lodash/difference'
 
 import {
   ToastInterface,
   ToastMessageInterface,
   ToastContextType,
-} from './toast.types';
+} from './toast.types'
 
-export const ToastContext = React.createContext<ToastContextType>({});
+export const ToastContext = React.createContext<ToastContextType>({})
 
-export const Toast = function Toast({
+export const Toast = React.memo(function Toast({
   children,
-  messages,
-  timeout,
-  themed,
+  messages = [],
+  timeout = 3000,
+  themed = [],
   ...propsRest
 }: ToastInterface) {
-  const [notifications, setNotification] = useState([]);
-  const newNotificationRef = useRef([]);
+  const [notifications, setNotification] = useState([])
+  const newNotificationRef = useRef([])
 
   useEffect(() => {
     const _notification = children.map(child => {
       return {
         id: child.key,
         component: child,
-      };
-    });
+      }
+    })
 
-    newNotificationRef.current = difference(_notification, notifications);
-    setNotification([...notifications, ...newNotificationRef.current]);
-  }, [children]);
+    newNotificationRef.current = difference(_notification, notifications)
+    setNotification([...notifications, ...newNotificationRef.current])
+  }, [children])
 
   useEffect(() => {
     const removeNotificationWithTimeout = () => {
       const notificationsFilter = (notification: ToastMessageInterface) => (
         n: ToastMessageInterface
-      ) => n.id === notification.id;
+      ) => n.id === notification.id
 
       setNotification(
         notifications.filter((notification: ToastMessageInterface) => {
@@ -45,30 +45,34 @@ export const Toast = function Toast({
             !newNotificationRef.current.filter(
               notificationsFilter(notification)
             )
-          );
+          )
         })
-      );
-    };
+      )
+    }
 
-    const timeoutFn = setTimeout(removeNotificationWithTimeout, timeout);
+    const timeoutFn = setTimeout(removeNotificationWithTimeout, timeout)
 
     return () => {
-      clearTimeout(timeoutFn);
-    };
-  }, [newNotificationRef.current, timeout]);
+      clearTimeout(timeoutFn)
+    }
+  }, [newNotificationRef.current, timeout])
 
-  function handleOnClose(e: React.MouseEvent<HTMLElement>) {
-    e.preventDefault();
+  const handleOnClose = useMemo(
+    () =>
+      function handleOnClose(e: React.MouseEvent<HTMLElement>) {
+        e.preventDefault()
 
-    const notificationsFilter = (notification: ToastMessageInterface) => {
-      return notification.id !== e.currentTarget.dataset.uid;
-    };
+        const notificationsFilter = (notification: ToastMessageInterface) => {
+          return notification.id !== e.currentTarget.dataset.uid
+        }
 
-    setNotification(notifications.filter(notificationsFilter));
-    newNotificationRef.current = newNotificationRef.current.filter(
-      notificationsFilter
-    );
-  }
+        setNotification(notifications.filter(notificationsFilter))
+        newNotificationRef.current = newNotificationRef.current.filter(
+          notificationsFilter
+        )
+      },
+    [setNotification]
+  )
 
   const context = useMemo(
     () => ({
@@ -76,7 +80,7 @@ export const Toast = function Toast({
       setNotification,
     }),
     [notifications, setNotification]
-  );
+  )
 
   return (
     <ToastContext.Provider value={context}>
@@ -87,13 +91,7 @@ export const Toast = function Toast({
         onClose={handleOnClose}
       />
     </ToastContext.Provider>
-  );
-};
+  )
+})
 
-Toast.defaultProps = {
-  messages: [],
-  timeout: 3000,
-  themed: [],
-};
-
-export default Toast;
+export default Toast

@@ -1,23 +1,23 @@
-import React, { useMemo } from 'react';
+import React, { useMemo } from 'react'
 
-import { AccordionInterface } from './accordion.types';
-import { AccordionProvider } from './AccordionContext';
-import Base from '../Base/Base';
-import { accordionTheme } from './accordion.theme';
+import { AccordionInterface } from './accordion.types'
+import { AccordionProvider } from './AccordionProvider'
+import Base from '../Base/Base'
+import { accordionTheme } from './accordion.theme'
 
-export const Accordion = function Accordion({
+export const Accordion = React.memo(function Accordion({
   active,
   children,
-  className,
-  themed,
+  className = '',
+  themed = [],
   ...propsRest
 }: AccordionInterface) {
-  const classNames = `Accordion ${className}`;
+  const classNames = useMemo(() => `Accordion ${className}`, [className])
 
   const _themed = useMemo(() => [accordionTheme, ...themed], [
     accordionTheme,
     themed,
-  ]);
+  ])
 
   return (
     <AccordionProvider active={active}>
@@ -25,11 +25,7 @@ export const Accordion = function Accordion({
         {children}
       </Base>
     </AccordionProvider>
-  );
-};
+  )
+})
 
-Accordion.defaultProps = {
-  themed: [],
-};
-
-export default Accordion;
+export default Accordion

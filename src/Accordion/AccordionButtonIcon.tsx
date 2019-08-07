@@ -1,22 +1,22 @@
-import React, { useMemo } from 'react';
+import React, { useMemo } from 'react'
 
-import { AccordionIconInterface } from './accordion.types';
+import { AccordionIconInterface } from './accordion.types'
 
-import { Icon } from '../Icon';
-import { accordionIconTheme } from './accordion.theme';
-import { ChevronRight } from '../MaterialIcons/ChevronRight';
+import { Icon } from '../Icon'
+import { accordionIconTheme } from './accordion.theme'
+import { ChevronRight } from '../MaterialIcons/ChevronRight'
 
-export const AccordionIcon = function AccordionIcon({
+export const AccordionIcon = React.memo(function AccordionIcon({
   children,
-  className,
-  themed,
+  className = '',
+  themed = [],
   ...propsRest
 }: AccordionIconInterface) {
-  const classNames = `AccordionIcon ${className}`;
+  const classNames = useMemo(() => `AccordionIcon ${className}`, [className])
   const _themed = useMemo(() => [accordionIconTheme, ...themed], [
     accordionIconTheme,
     ...themed,
-  ]);
+  ])
 
   return (
     <Icon
@@ -27,12 +27,7 @@ export const AccordionIcon = function AccordionIcon({
     >
       {children}
     </Icon>
-  );
-};
+  )
+})
 
-AccordionIcon.defaultProps = {
-  className: '',
-  themed: [],
-};
-
-export default AccordionIcon;
+export default AccordionIcon

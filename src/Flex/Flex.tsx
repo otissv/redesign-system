@@ -1,32 +1,27 @@
-import React, { useMemo } from 'react';
+import React, { useMemo } from 'react'
 
-import { flexTheme, flexDirectionTheme } from './flex.theme';
-import { Base } from '../Base';
-import { FlexInterface } from './flex.types';
+import { flexTheme, flexDirectionTheme } from './flex.theme'
+import { Base } from '../Base'
+import { FlexInterface } from './flex.types'
 
-export const Flex = function Flex({
+export const Flex = React.memo(function Flex({
   children,
-  className,
-  themed,
+  className = '',
+  themed = [],
   ...propsRest
 }: FlexInterface) {
-  const classNames = `Flex ${className}`;
+  const classNames = useMemo(() => `Flex ${className}`, [className])
   const _themed = useMemo(() => [flexTheme, flexDirectionTheme, ...themed], [
     flexTheme,
     flexDirectionTheme,
     themed,
-  ]);
+  ])
 
   return (
     <Base className={classNames} themed={_themed} {...propsRest}>
       {children}
     </Base>
-  );
-};
+  )
+})
 
-Flex.defaultProps = {
-  className: '',
-  themed: [],
-};
-
-export default Flex;
+export default Flex

@@ -135,4 +135,4 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-theme-unit-unit" */ 'src/theme/unit/unit.mdx'
     ),
-};
+}

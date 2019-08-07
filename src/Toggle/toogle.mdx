@@ -3,11 +3,11 @@ name: Toggle
 route: /togle
 ---
 
-import { Playground, Props } from 'docz';
-import styled from 'styled-components';
-import { ThemeProvider } from '../ThemeContext/ThemeProvider';
-import { Toggle } from './Toggle';
-import { ToggleContainer } from './toggle.example';
+import { Playground, Props } from 'docz'
+import styled from 'styled-components'
+import { ThemeProvider } from '../ThemeContext/ThemeProvider'
+import { Toggle } from './Toggle'
+import { ToggleContainer } from './toggle.example'
 
 # Toggle
 
@@ -18,7 +18,10 @@ import { ToggleContainer } from './toggle.example';
 <Playground>
   <ThemeProvider>
     <ToggleContainer>
-      {toggle => <Toggle id="switch" toggle={toggle} />}
+      {toggle => <Toggle id="switch1" toggle={toggle} />}
+    </ToggleContainer>
+    <ToggleContainer>
+      {toggle => <Toggle appearance="primary" id="switch2" toggle={toggle} />}
     </ToggleContainer>
   </ThemeProvider>
 </Playground>

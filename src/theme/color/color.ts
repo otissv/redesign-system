@@ -1,20 +1,32 @@
-import merge from 'lodash/fp/merge';
+import merge from 'lodash/fp/merge'
 
-import { swatches as palette } from './color.swatches';
-import { ColorsInterface, ThemeInterface } from '../theme.types';
+import { swatches as palette } from './color.swatches'
+import { ColorsInterface, ThemeInterface } from '../theme.types'
 
 export function colorTheme({ color = {}, swatches = {} }: ThemeInterface) {
-  const _swatches = merge(palette)(swatches);
+  const _swatches = merge(palette)(swatches)
 
   const colors: ColorsInterface = {
     foreground: _swatches[color['foreground']],
-    background: _swatches[color['background']],
     foregroundInvert: _swatches[color['foregroundInvert']],
     backgroundInvert: _swatches[color['backgroundInvert']],
     transparent: 'rgba(0, 0, 0, 0)',
     outline: '#0077ff66',
     white: '#fff',
     black: '#000',
+    link: '#4ea1f3',
+
+    background: _swatches[`${color['background']}-600`],
+    'background-050': _swatches[`${color['background']}-050`],
+    'background-100': _swatches[`${color['background']}-100`],
+    'background-200': _swatches[`${color['background']}-200`],
+    'background-300': _swatches[`${color['background']}-300`],
+    'background-400': _swatches[`${color['background']}-400`],
+    'background-500': _swatches[`${color['background']}-500`],
+    'background-600': _swatches[`${color['background']}-600`],
+    'background-700': _swatches[`${color['background']}-700`],
+    'background-800': _swatches[`${color['background']}-800`],
+    'background-900': _swatches[`${color['background']}-900`],
 
     default: _swatches[`${color['disabled']}-400`],
     default2: _swatches[`${color['disabled']}-500`],
@@ -120,7 +132,7 @@ export function colorTheme({ color = {}, swatches = {} }: ThemeInterface) {
     'disabled-800': _swatches[`${color['disabled']}-800`],
     'disabled-900': _swatches[`${color['disabled']}-900`],
     ..._swatches,
-  };
+  }
 
-  return colors;
+  return colors
 }

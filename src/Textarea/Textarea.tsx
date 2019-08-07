@@ -1,21 +1,21 @@
-import React, { useMemo } from 'react';
-import { TextAreaInterface } from './textarea.types';
+import React, { useMemo } from 'react'
+import { TextAreaInterface } from './textarea.types'
 
-import { Base } from '../Base';
+import { Base } from '../Base'
 
 import {
   textareaTheme,
   textareaAppearanceTheme,
   textareaWidthsTheme,
-} from './textarea.theme';
+} from './textarea.theme'
 
-export const Textarea = function Textarea({
+export const Textarea = React.memo(function Textarea({
   children,
-  className,
-  themed,
+  className = '',
+  themed = [],
   ...propsRest
 }: TextAreaInterface) {
-  const classNames = `Textarea ${className}`;
+  const classNames = useMemo(() => `Textarea ${className}`, [className])
   const _themed = useMemo(
     () => [
       textareaTheme,
@@ -24,7 +24,7 @@ export const Textarea = function Textarea({
       ...themed,
     ],
     [textareaTheme, textareaAppearanceTheme, textareaWidthsTheme, themed]
-  );
+  )
 
   return (
     <Base
@@ -36,12 +36,7 @@ export const Textarea = function Textarea({
     >
       {children}
     </Base>
-  );
-};
+  )
+})
 
-Textarea.defaultProps = {
-  className: '',
-  themed: [],
-};
-
-export default Textarea;
+export default Textarea

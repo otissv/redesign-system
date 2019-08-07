@@ -1,39 +1,43 @@
-import React from 'react';
+import React, { useMemo } from 'react'
 
-import { formControlTheme } from './form-control.theme';
-import { Input } from '../Input';
-import { FormLabel } from './FormLabel';
-import { Typography } from '../Typography';
-import { FormControlInterface } from '../Form';
-import { Base } from '../Base';
-import { FormValidation } from './FormValidation';
+import { formControlTheme } from './form-control.theme'
+import { Input } from '../Input'
+import { FormLabel } from './FormLabel'
+import { Typography } from '../Typography'
+import { FormControlInterface } from '../Form'
+import { Base } from '../Base'
+import { FormValidation } from './FormValidation'
 
-export const FormValueControl = function FormValueControl({
-  className,
-  attributes,
+export const FormValueControl = React.memo(function FormValueControl({
+  className = '',
+  attributes = [],
   field,
   id,
   label,
   labelProps,
   parent,
   model,
-  themed,
+  themed = [],
   ...propsRest
 }: FormControlInterface) {
-  const classNames = `FormValueControl ${className}`;
-  const _themed = React.useMemo(() => [formControlTheme, ...themed], [
+  const classNames = useMemo(() => `FormValueControl ${className}`, [className])
+  const _themed = useMemo(() => [formControlTheme, ...themed], [
     formControlTheme,
     themed,
-  ]);
+  ])
 
-  const { appearance, value, ...attributesRest } = attributes;
-  const { description, isValid } = field;
+  const { appearance, value, ...attributesRest } = attributes
+  const { description, isValid } = field
 
-  const labelComponent = label ? (
-    <FormLabel {...labelProps} id={id}>
-      {label}
-    </FormLabel>
-  ) : null;
+  const labelComponent = useMemo(
+    () =>
+      label ? (
+        <FormLabel {...labelProps} id={id}>
+          {label}
+        </FormLabel>
+      ) : null,
+    [labelProps, label]
+  )
 
   return (
     <Base className={classNames} themed={_themed} {...propsRest}>
@@ -60,13 +64,7 @@ export const FormValueControl = function FormValueControl({
         model={model}
       />
     </Base>
-  );
-};
+  )
+})
 
-FormValueControl.defaultProps = {
-  className: '',
-  themed: [],
-  attributes: {},
-};
-
-export default FormValueControl;
+export default FormValueControl

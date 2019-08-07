@@ -1,21 +1,21 @@
-import React from 'react';
+import React, { useMemo } from 'react'
 
-import { Base } from '../Base';
-import { formLabelTheme } from './form-label.theme';
-import { FormLabelInterface } from '../Form';
+import { Base } from '../Base'
+import { formLabelTheme } from './form-label.theme'
+import { FormLabelInterface } from '../Form'
 
-export const FormLabel = function FormLabel({
-  className,
+export const FormLabel = React.memo(function FormLabel({
+  className = '',
   children,
   id,
-  themed,
+  themed = [],
   ...propsRest
 }: FormLabelInterface) {
-  const classNames = `FormLabel ${className}`;
-  const _themed = React.useMemo(() => [formLabelTheme, ...themed], [
+  const classNames = useMemo(() => `FormLabel ${className}`, [className])
+  const _themed = useMemo(() => [formLabelTheme, ...themed], [
     formLabelTheme,
     themed,
-  ]);
+  ])
 
   return (
     <Base
@@ -27,12 +27,7 @@ export const FormLabel = function FormLabel({
     >
       {children}
     </Base>
-  );
-};
+  )
+})
 
-FormLabel.defaultProps = {
-  className: '',
-  themed: [],
-};
-
-export default FormLabel;
+export default FormLabel

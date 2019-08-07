@@ -1,7 +1,7 @@
-import React, { useMemo } from 'react';
+import React, { useMemo } from 'react'
 
-import { Base } from '../Base';
-import { TypographyInterface } from './typography.types';
+import { Base } from '../Base'
+import { TypographyInterface } from './typography.types'
 
 import {
   typographyAppearanceTheme,
@@ -10,15 +10,16 @@ import {
   typographyWrapTheme,
   typographyTextAlignTheme,
   typographyTransformTheme,
-} from './typography.theme';
+} from './typography.theme'
 
-export const Typography = function Typography({
+export const Typography = React.memo(function Typography({
+  as: el = 'p',
   children,
-  className,
-  themed,
+  className = '',
+  themed = [],
   ...propsRest
 }: TypographyInterface) {
-  const classNames = `Typography ${className}`;
+  const classNames = useMemo(() => `Typography ${className}`, [className])
   const _themed = useMemo(
     () => [
       typographyAppearanceTheme,
@@ -38,32 +39,31 @@ export const Typography = function Typography({
       typographyTransformTheme,
       themed,
     ]
-  );
+  )
 
-  const attributes = {
-    ...(propsRest.as === 'hr'
-      ? {
-          role: 'separator',
-          'aria-orientation': 'horizontal',
-        }
-      : {}),
-  };
+  const attributes = useMemo(
+    () => ({
+      ...(el === 'hr'
+        ? {
+            role: 'separator',
+            'aria-orientation': 'horizontal',
+          }
+        : {}),
+    }),
+    []
+  )
 
   return (
     <Base
       className={classNames}
       themed={_themed}
       {...attributes}
+      as={el}
       {...propsRest}
     >
       {children}
     </Base>
-  );
-};
+  )
+})
 
-Typography.defaultProps = {
-  as: 'p',
-  themed: [],
-};
-
-export default Typography;
+export default Typography

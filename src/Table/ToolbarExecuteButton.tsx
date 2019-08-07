@@ -1,18 +1,21 @@
-import React, { useMemo } from 'react';
-import ButtonIcon from '../ButtonIcon/ButtonIcon';
-import { TableToolbarButtonInterface } from './table.types';
-import { PlayCircle } from '../MaterialIcons/PlayCircle';
+import React, { useCallback, useMemo } from 'react'
+import ButtonIcon from '../ButtonIcon/ButtonIcon'
+import { TableToolbarButtonInterface } from './table.types'
+import { PlayCircle } from '../MaterialIcons/PlayCircle'
 
 export const ToolbarExecuteButton = function ToolbarExecuteButton({
   onClick,
   ...propsRest
 }: TableToolbarButtonInterface) {
-  function handleClick(e: React.MouseEvent<HTMLElement>) {
-    e.preventDefault();
-    onClick && onClick(e);
-  }
+  const handleClick = useCallback(
+    function handleClick(e: React.MouseEvent<HTMLElement>) {
+      e.preventDefault()
+      onClick && onClick(e)
+    },
+    [onClick]
+  )
 
-  const icon = useMemo(() => PlayCircle, [PlayCircle]);
+  const icon = useMemo(() => PlayCircle, [PlayCircle])
 
   return (
     <ButtonIcon
@@ -30,7 +33,7 @@ export const ToolbarExecuteButton = function ToolbarExecuteButton({
     >
       Run
     </ButtonIcon>
-  );
-};
+  )
+}
 
-export default ToolbarExecuteButton;
+export default ToolbarExecuteButton

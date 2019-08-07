@@ -1,42 +1,44 @@
-import React from 'react';
+import React, { useMemo } from 'react'
 
-import { formControlTheme } from './form-control.theme';
-import { FormLabel } from './FormLabel';
-import { Typography } from '../Typography';
-import { FormControlInterface } from '../Form';
-import { Base } from '../Base';
-import { FormValidation } from './FormValidation';
+import { formControlTheme } from './form-control.theme'
+import { FormLabel } from './FormLabel'
+import { Typography } from '../Typography'
+import { FormControlInterface } from '../Form'
+import { Base } from '../Base'
+import { FormValidation } from './FormValidation'
 
 export function CheckBox({
   valid,
   ...props
 }: {
-  valid: false;
-  [key: string]: any;
+  valid: false
+  [key: string]: any
 }) {
-  return <input {...props} />;
+  return <input {...props} />
 }
 
-export const FormCheckedControl = function FormCheckedControl({
+export const FormCheckedControl = React.memo(function FormCheckedControl({
   attributes,
-  className,
+  className = '',
   field,
   id,
   label,
   labelProps,
   model,
   parent,
-  themed,
+  themed = [],
   ...propsRest
 }: FormControlInterface) {
-  const classNames = `FormCheckedControl ${className}`;
-  const _themed = React.useMemo(() => [formControlTheme, ...themed], [
+  const classNames = useMemo(() => `FormCheckedControl ${className}`, [
+    className,
+  ])
+  const _themed = useMemo(() => [formControlTheme, ...themed], [
     formControlTheme,
     themed,
-  ]);
+  ])
 
-  const { description, isValid } = field;
-  const { appearance, checked, ...attributesRest } = attributes;
+  const { description, isValid } = field
+  const { appearance, checked, ...attributesRest } = attributes
 
   return (
     <Base className={classNames} themed={_themed} {...propsRest}>
@@ -54,20 +56,22 @@ export const FormCheckedControl = function FormCheckedControl({
         {label}
       </FormLabel>
 
-      {description && (
-        <Typography marginTop={1} styled="color: #a0a0a0;">
-          {description}
-        </Typography>
-      )}
-
+      <Description description={description} />
       <FormValidation attributes={attributes} field={field} model={model} />
     </Base>
-  );
-};
+  )
+})
 
-FormCheckedControl.defaultProps = {
-  className: '',
-  themed: [],
-};
+export const Description = React.memo(function Description({
+  description,
+}: {
+  description: string
+}) {
+  return description ? (
+    <Typography marginTop={1} styled="color: #a0a0a0;">
+      {description}
+    </Typography>
+  ) : null
+})
 
-export default FormCheckedControl;
+export default FormCheckedControl

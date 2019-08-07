@@ -1,6 +1,6 @@
-import React from 'react';
-import { useRouter } from './RouterContext';
-import { Base, BaseInterface } from '../../Base';
+import React, { useCallback } from 'react'
+import { useRouter } from './RouterContext'
+import { Base, BaseInterface } from '../../Base'
 
 export const Link = function Link({
   className,
@@ -10,20 +10,23 @@ export const Link = function Link({
   to,
   ...propsRest
 }: BaseInterface) {
-  const classNames = `Link ${className}`;
-  const { route, dispatch } = useRouter();
+  const classNames = `Link ${className}`
+  const { route, dispatch } = useRouter()
 
-  function handleClick(e: React.MouseEvent<HTMLElement>) {
-    e.preventDefault();
-    if (to !== route) {
-      dispatch({
-        type: 'ADD_ROUTE',
-        route: to,
-      });
-    }
+  const handleClick = useCallback(
+    function handleClick(e: React.MouseEvent<HTMLElement>) {
+      e.preventDefault()
+      if (to !== route) {
+        dispatch({
+          type: 'ADD_ROUTE',
+          route: to,
+        })
+      }
 
-    onClick && onClick(e);
-  }
+      onClick && onClick(e)
+    },
+    [onClick]
+  )
 
   return (
     <Base
@@ -36,5 +39,5 @@ export const Link = function Link({
     >
       {children}
     </Base>
-  );
-};
+  )
+}

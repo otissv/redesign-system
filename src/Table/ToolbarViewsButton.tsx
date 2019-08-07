@@ -1,12 +1,12 @@
-import React, { useCallback, useMemo } from 'react';
+import React, { useCallback, useMemo } from 'react'
 
-import ButtonGroup from '../ButtonGroup/ButtonGroup';
-import ButtonIcon from '../ButtonIcon/ButtonIcon';
-import { Base } from '../Base';
-import { Code } from '../MaterialIcons/Code';
-import { TableToolbarViewsButtonInterface } from './table.types';
-import { ViewList } from '../MaterialIcons/ViewList';
-import { tableViewsButtonTheme } from './table.theme';
+import ButtonGroup from '../ButtonGroup/ButtonGroup'
+import ButtonIcon from '../ButtonIcon/ButtonIcon'
+import { Base } from '../Base'
+import { Code } from '../MaterialIcons/Code'
+import { TableToolbarViewsButtonInterface } from './table.types'
+import { ViewList } from '../MaterialIcons/ViewList'
+import { tableViewsButtonTheme } from './table.theme'
 
 export const ToolbarViewsButton = function ToolbarViewsButton({
   className,
@@ -15,24 +15,31 @@ export const ToolbarViewsButton = function ToolbarViewsButton({
   themed,
   ...propsRest
 }: TableToolbarViewsButtonInterface) {
-  const classNames = `ToolbarViewsButton ${className}`;
+  const classNames = useMemo(() => `ToolbarViewsButton ${className}`, [
+    className,
+  ])
   const _themed = useMemo(() => [tableViewsButtonTheme, ...themed], [
     tableViewsButtonTheme,
     themed,
-  ]);
+  ])
 
-  function handleClick(e: React.MouseEvent<HTMLElement>) {
-    e.preventDefault();
-    onClick && onClick(e);
-  }
+  const handleClick = useCallback(
+    function handleClick(e: React.MouseEvent<HTMLElement>) {
+      e.preventDefault()
+
+      const id = e.currentTarget.dataset.uid
+      onClick && onClick(e, { id })
+    },
+    [onClick]
+  )
 
   const selectedStyle = useCallback(
     view => (currentView === view ? 'border-bottom: 1px solid #fff;' : ''),
     [currentView]
-  );
+  )
 
-  const ComponentListAlt = useMemo(() => ViewList, [ViewList]);
-  const ComponentCode = useMemo(() => Code, [Code]);
+  const ComponentListAlt = useMemo(() => ViewList, [ViewList])
+  const ComponentCode = useMemo(() => Code, [Code])
 
   return (
     <Base className={classNames} themed={_themed} {...propsRest}>
@@ -43,7 +50,7 @@ export const ToolbarViewsButton = function ToolbarViewsButton({
           icon={ComponentListAlt}
           onClick={handleClick}
           styled={selectedStyle('table')}
-          title="Tabular"
+          title="Table"
           uid="table"
           css={`
             svg.Icon {
@@ -72,12 +79,12 @@ export const ToolbarViewsButton = function ToolbarViewsButton({
         </ButtonIcon>
       </ButtonGroup>
     </Base>
-  );
-};
+  )
+}
 
 ToolbarViewsButton.defaultProps = {
   className: '',
   themed: [],
-};
+}
 
-export default ToolbarViewsButton;
+export default ToolbarViewsButton

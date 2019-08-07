@@ -1,32 +1,22 @@
-import { useMemo } from 'react';
+import { useMemo } from 'react'
 import {
   useCollectionHashReducer,
   itemsToArray,
-} from '../reusable/collectionHash';
+} from '../reusable/collectionHash'
+
+const items = [...new Array(100)]
 
 export function useTable() {
   const initialState = {
     uid: 'id',
-    items: [
-      {
-        id: '1',
-        name: 'Project 1',
-        endpoint: 'http://project1.com',
-      },
-      {
-        id: '2',
-        name: 'Project 3',
-        endpoint: 'http://project2.com',
-      },
-      {
-        id: '3',
-        name: 'Project 3',
-        endpoint: 'http://project3.com',
-      },
-    ],
-  };
+    items: items.map((_, i) => ({
+      id: `id_${i}`,
+      name: `Project ${i}`,
+      endpoint: `http://project${i}.com`,
+    })),
+  }
 
-  const [collection, dispatch] = useCollectionHashReducer(initialState);
+  const [collection, dispatch] = useCollectionHashReducer(initialState)
 
   return useMemo(
     () => ({
@@ -35,5 +25,5 @@ export function useTable() {
       itemsToArray: () => itemsToArray(collection.items),
     }),
     [collection, dispatch]
-  );
+  )
 }

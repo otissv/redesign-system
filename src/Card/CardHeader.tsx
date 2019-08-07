@@ -1,33 +1,28 @@
-import React, { useMemo } from 'react';
+import React, { useMemo } from 'react'
 
-import Base from '../Base/Base';
-import { useCard } from './CardContext';
-import { cardHeaderTheme, cardHeaderContextTheme } from './cardHeader.theme';
-import { CardHeaderInterface } from './card.types';
+import Base from '../Base/Base'
+import { useCard } from './CardContext'
+import { cardHeaderTheme, cardHeaderContextTheme } from './cardHeader.theme'
+import { CardHeaderInterface } from './card.types'
 
-export const CardHeader = function CardHeader({
+export const CardHeader = React.memo(function CardHeader({
   children,
-  className,
-  themed,
+  className = '',
+  themed = [],
   ...propsRest
 }: CardHeaderInterface) {
-  const card = useCard();
-  const classNames = `CardHeader ${className}`;
+  const card = useCard()
+  const classNames = useMemo(() => `CardHeader ${className}`, [className])
   const _themed = useMemo(
     () => [cardHeaderTheme, cardHeaderContextTheme, ...themed],
     [cardHeaderTheme, cardHeaderContextTheme, themed]
-  );
+  )
 
   return (
     <Base className={classNames} {...card} themed={_themed} {...propsRest}>
       {children}
     </Base>
-  );
-};
+  )
+})
 
-CardHeader.defaultProps = {
-  className: '',
-  themed: [],
-};
-
-export default CardHeader;
+export default CardHeader

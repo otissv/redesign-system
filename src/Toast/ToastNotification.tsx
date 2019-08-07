@@ -1,15 +1,15 @@
-import React, { useMemo, useRef } from 'react';
-import { PoseGroup } from 'react-pose';
+import React, { useMemo, useRef } from 'react'
+import { PoseGroup } from 'react-pose'
 
-import { Close } from '../MaterialIcons/Close';
-import Base from '../Base/Base';
-import { ButtonIcon } from '../ButtonIcon';
-import { Portal } from '../Portal';
+import { Close } from '../MaterialIcons/Close'
+import Base from '../Base/Base'
+import { ButtonIcon } from '../ButtonIcon'
+import { Portal } from '../Portal'
 import {
   ToastNotificationInterface,
   ToastNotificationCloseInterface,
   ToastMessageInterface,
-} from './toast.types';
+} from './toast.types'
 
 import {
   toastTheme,
@@ -17,59 +17,59 @@ import {
   toastNotificationTheme,
   toastNotificationCloseButtonTheme,
   toastNotificationAppearanceTheme,
-} from './toast.theme';
+} from './toast.theme'
 
-function ToastNotificationCloseButton({
-  onClose,
-  uid,
-  themed,
-  ...propsRest
-}: ToastNotificationCloseInterface) {
-  const _themed = useMemo(
-    () => [toastNotificationCloseButtonTheme, ...themed],
-    [toastNotificationCloseButtonTheme, themed]
-  );
+const ToastNotificationCloseButton = React.memo(
+  function ToastNotificationCloseButton({
+    onClose,
+    uid,
+    themed = [],
+    ...propsRest
+  }: ToastNotificationCloseInterface) {
+    const _themed = useMemo(
+      () => [toastNotificationCloseButtonTheme, ...themed],
+      [toastNotificationCloseButtonTheme, themed]
+    )
 
-  return (
-    <ButtonIcon
-      className="ToastNotificationCloseButton"
-      onClick={onClose}
-      icon={Close}
-      title="Close"
-      {...propsRest}
-      uid={uid}
-      themed={_themed}
-    />
-  );
-}
+    return (
+      <ButtonIcon
+        className="ToastNotificationCloseButton"
+        onClick={onClose}
+        icon={Close}
+        title="Close"
+        {...propsRest}
+        uid={uid}
+        themed={_themed}
+      />
+    )
+  }
+)
 
-ToastNotificationCloseButton.defaultProps = {
-  themed: [],
-};
-
-export const ToastNotification = function ToastNotification({
+export const ToastNotification = React.memo(function ToastNotification({
   animate,
   children,
-  className,
+  className = '',
   notifications,
   onClose,
-  themed,
+  themed = [],
   ...propsRest
 }: ToastNotificationInterface) {
-  const classNames = `ToastNotification ${className}`;
+  const classNames = useMemo(() => `ToastNotification ${className}`, [
+    className,
+  ])
 
   const _themed = useMemo(() => [toastTheme, toastPositionTheme, ...themed], [
     toastTheme,
     toastPositionTheme,
     themed,
-  ]);
+  ])
 
   const themedNotification = useMemo(
     () => [toastNotificationTheme, toastNotificationAppearanceTheme],
     [toastNotificationTheme, toastNotificationAppearanceTheme]
-  );
+  )
 
-  const rootRef = useRef(document.getElementsByTagName('body')[0]);
+  const rootRef = useRef(document.getElementsByTagName('body')[0])
 
   const _animate = useMemo(() => {
     return (
@@ -86,8 +86,8 @@ export const ToastNotification = function ToastNotification({
           transition: { duration: 300 },
         },
       }
-    );
-  }, [animate]);
+    )
+  }, [animate])
 
   const items = notifications
     .map(({ id, component }: ToastMessageInterface) => {
@@ -98,7 +98,7 @@ export const ToastNotification = function ToastNotification({
           appearance: null,
         },
         component.props.children
-      );
+      )
 
       return (
         <Base
@@ -115,9 +115,9 @@ export const ToastNotification = function ToastNotification({
             alt="close"
           />
         </Base>
-      );
+      )
     })
-    .reverse();
+    .reverse()
 
   return (
     <Portal rootRef={rootRef}>
@@ -125,12 +125,7 @@ export const ToastNotification = function ToastNotification({
         <PoseGroup>{items}</PoseGroup>
       </Base>
     </Portal>
-  );
-};
+  )
+})
 
-ToastNotification.defaultProps = {
-  className: '',
-  themed: [],
-};
-
-export default ToastNotification;
+export default ToastNotification

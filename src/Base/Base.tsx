@@ -1,13 +1,13 @@
-import * as React from 'react';
-import styled from 'styled-components';
-import posed from 'react-pose';
+import React, { useCallback, useMemo, useRef } from 'react'
+import styled from 'styled-components'
+import posed from 'react-pose'
 
-import { BaseInterface } from './base.types';
-import { setTheme } from '../utils/setTheme.util';
-import { sharedStyles } from '../utils/sharedStyles.utils';
-import { useTheme } from '../ThemeContext';
+import { BaseInterface } from './base.types'
+import { setTheme } from '../utils/setTheme.util'
+import { sharedStyles } from '../utils/sharedStyles.utils'
+import { useTheme } from '../ThemeContext'
 
-export const Base = function Base({
+export const Base = React.memo(function Base({
   animate,
   children,
   css,
@@ -17,32 +17,42 @@ export const Base = function Base({
   themed = [],
   ...propsRest
 }: BaseInterface) {
-  const { theme } = useTheme();
+  const { theme } = useTheme()
 
-  const buildStyledThemed = (props: BaseInterface) => {
-    return themed.reduce(
-      (acc: { [key: string]: string }, themeFn: (a: any) => any) => {
-        return { ...acc, ...themeFn(props) };
-      },
-      {}
-    );
-  };
+  const buildStyledThemed = useCallback(
+    (props: BaseInterface) => {
+      return themed.reduce(
+        (acc: { [key: string]: string }, themeFn: (a: any) => any) => {
+          return { ...acc, ...themeFn(props) }
+        },
+        {}
+      )
+    },
+    [themed]
+  )
 
-  const poseRef = React.useRef(posed[el || 'div'](animate));
-  const styledRef = React.useRef(styled(poseRef.current)`
+  const poseRef = useRef(posed[el || 'div'](animate))
+  const styledRef = useRef(styled(poseRef.current)`
     ${buildStyledThemed}
     ${sharedStyles}
     ${css}
-  `);
+  `)
 
-  const Component = styledRef.current;
-  const _theme = setTheme(propsTheme, theme);
+  const Component = useMemo(() => styledRef.current, [
+    el,
+    animate,
+    css,
+    buildStyledThemed,
+    sharedStyles,
+  ])
+
+  const _theme = setTheme(propsTheme, theme)
 
   return (
     <Component pose={state} theme={_theme} {...propsRest}>
       {children}
     </Component>
-  );
-};
+  )
+})
 
-export default Base;
+export default Base

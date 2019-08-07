@@ -1,25 +1,26 @@
-import React, { useMemo } from 'react';
-import { ButtonInterface } from './button.types';
+import React, { useCallback, useMemo } from 'react'
+import { ButtonInterface } from './button.types'
 
-import { Base } from '../Base';
+import { Base } from '../Base'
 
 import {
   buttonTheme,
   buttonSizeTheme,
   buttonStretchTheme,
   buttonAppearanceTheme,
-} from './button.theme';
+} from './button.theme'
 
-export const Button = function Button({
+export const Button = React.memo(function Button({
   children,
-  className,
+  className = '',
   onClick,
-  themed: themed,
+  as: el = 'button',
+  themed: themed = [],
   ...propsRest
 }: ButtonInterface) {
-  const classNames = `Button ${className}`;
+  const classNames = useMemo(() => `Button ${className}`, [className])
 
-  const { disabled, appearance } = propsRest;
+  const { disabled, appearance } = propsRest
 
   const _themed = useMemo(
     () => [
@@ -36,17 +37,20 @@ export const Button = function Button({
       buttonStretchTheme,
       themed,
     ]
-  );
+  )
 
-  function handleOnClick(e: React.MouseEvent<HTMLElement>) {
-    e.preventDefault();
+  const handleOnClick = useCallback(
+    function handleOnClick(e: React.MouseEvent<HTMLElement>) {
+      e.preventDefault()
 
-    onClick && onClick(e);
-  }
+      onClick && onClick(e)
+    },
+    [onClick]
+  )
 
   return (
     <Base
-      as="button"
+      as={el}
       className={classNames}
       themed={_themed}
       onClick={handleOnClick}
@@ -63,12 +67,7 @@ export const Button = function Button({
     >
       {children}
     </Base>
-  );
-};
+  )
+})
 
-Button.defaultProps = {
-  className: '',
-  themed: [],
-};
-
-export default Button;
+export default Button

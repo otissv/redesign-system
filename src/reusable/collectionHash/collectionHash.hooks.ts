@@ -1,51 +1,51 @@
-import { useMemo, useEffect, useState } from 'react';
+import { useMemo, useEffect, useState } from 'react'
 
-export function useGetActiveItem<T>(hook: any) {
-  const [state, setState] = useState<T>();
+export function useGetItems(hook: any) {
+  const { items, itemsToArray } = hook()
+  const [state, setState] = useState([])
 
-  const { active, items } = hook();
+  useEffect(() => {
+    setState(itemsToArray(items))
+  }, [items])
+
+  return useMemo(() => state, [state])
+}
+
+export function useGetActiveItem<T>(hook: any, initialState: T) {
+  const [state, setState] = useState<T>(initialState)
+
+  const { active, items } = hook()
 
   useEffect(() => {
     if (items && items[active]) {
-      setState(items[active]);
+      setState(items[active])
     }
-  }, [active, items]);
+  }, [active, items])
 
-  return useMemo(() => state, [state]);
-}
-
-export function useGetItems(hook: any) {
-  const { items, itemsToArray } = hook();
-  const [state, setState] = useState([]);
-
-  useEffect(() => {
-    setState(itemsToArray(state));
-  }, [items]);
-
-  return useMemo(() => state, [state]);
+  return useMemo(() => state, [state])
 }
 
 export function useResetActive(hook: any) {
-  const { active, dispatch } = hook();
+  const { active, dispatch } = hook()
 
   useEffect(() => {
-    if (active === '') return;
+    if (active === '') return
 
     dispatch({
       type: 'SET_ACTIVE',
       active: '',
-    });
-  }, []);
+    })
+  }, [])
 }
 
 export function useSetActive(hook: any, value: any) {
-  const { active, dispatch } = hook();
+  const { active, dispatch } = hook()
 
   useEffect(() => {
-    if (active === value) return;
+    if (active === value) return
     dispatch({
       type: 'SET_ACTIVE',
       active: value,
-    });
-  }, [active, value]);
+    })
+  }, [active, value])
 }

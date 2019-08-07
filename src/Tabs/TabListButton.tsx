@@ -1,37 +1,44 @@
-import React, { useMemo } from 'react';
+import React, { useCallback, useMemo } from 'react'
 
-import { tabsListButtonTheme } from './tabs.theme';
-import ButtonGroupButton from '../ButtonGroup/ButtonGroupButton';
-import { useTabs } from './TabContext';
-import { TabListButtonInterface } from './tabs.types';
+import { tabsListButtonTheme } from './tabs.theme'
+import ButtonGroupButton from '../ButtonGroup/ButtonGroupButton'
+import { useTabs } from './TabContext'
+import { TabListButtonInterface } from './tabs.types'
 
-export const TabListButton = function TabListButton({
+export const TabListButton = React.memo(function TabListButton({
   children,
-  className,
+  className = '',
   uid,
   onClick,
-  themed,
+  themed = [],
   ...propsRest
 }: TabListButtonInterface) {
-  const classNames = `TabPanel ${className}`;
+  const classNames = useMemo(() => `TabListButton ${className}`, [className])
   const _themed = useMemo(() => [tabsListButtonTheme, ...themed], [
     tabsListButtonTheme,
     themed,
-  ]);
-  const { active, appearance, dispatch, stacked } = useTabs();
+  ])
+  const { active, appearance, dispatch, stacked } = useTabs()
 
-  function handleClick(e: React.MouseEvent<HTMLElement>) {
-    e.preventDefault();
+  const handleClick = useCallback(
+    function handleClick(e: React.MouseEvent<HTMLElement>) {
+      e.preventDefault()
 
-    dispatch({
-      type: 'SET_ACTIVE',
-      active: e.currentTarget.dataset.uid,
-    });
+      dispatch({
+        type: 'SET_ACTIVE',
+        active: e.currentTarget.dataset.uid,
+      })
 
-    onClick && onClick(e);
-  }
+      onClick && onClick(e)
+    },
+    [dispatch]
+  )
 
-  const getActiveAppearance = active === uid ? 'active' : appearance;
+  const getActiveAppearance = useMemo(
+    () => (active === uid ? 'active' : appearance),
+    [active, appearance, uid]
+  )
+
   return (
     <ButtonGroupButton
       className={classNames}
@@ -44,12 +51,7 @@ export const TabListButton = function TabListButton({
     >
       {children}
     </ButtonGroupButton>
-  );
-};
+  )
+})
 
-TabListButton.defaultProps = {
-  className: '',
-  themed: [],
-};
-
-export default TabListButton;
+export default TabListButton

@@ -1,40 +1,40 @@
-import React, { useEffect, useMemo } from 'react';
+import React, { useCallback, useEffect, useMemo } from 'react'
 
-import ButtonGroup from '../ButtonGroup/ButtonGroup';
-import { tabsListTheme } from './tabs.theme';
-import { TabsListInterface } from './tabs.types';
+import ButtonGroup from '../ButtonGroup/ButtonGroup'
+import { tabsListTheme } from './tabs.theme'
+import { TabsListInterface } from './tabs.types'
 
-import { useTabs } from './TabContext';
+import { useTabs } from './TabContext'
 
-export const TabList = function TabList({
+export const TabList = React.memo(function TabList({
   active,
   children,
-  className,
-  themed,
+  className = '',
+  themed = [],
   ...propsRest
 }: TabsListInterface) {
-  const classNames = `TabList ${className}`;
+  const classNames = useMemo(() => `TabList ${className}`, [className])
   const _themed = useMemo(() => [tabsListTheme, ...themed], [
     tabsListTheme,
     themed,
-  ]);
+  ])
 
-  const { dispatch, appearance, stacked, stretch, size } = useTabs();
+  const { dispatch, appearance, stacked, stretch, size } = useTabs()
 
-  function handleOnWheel(e: any) {
-    e.preventDefault();
+  const handleOnWheel = useCallback(function handleOnWheel(e: any) {
+    e.preventDefault()
 
-    const tabList = e.currentTarget;
+    const tabList = e.currentTarget
     //TODO: not working
-    tabList.scrollLeft = -e.nativeEvent.wheelDelta || -e.nativeEvent.detail;
-  }
+    tabList.scrollLeft = -e.nativeEvent.wheelDelta || -e.nativeEvent.detail
+  }, [])
 
   useEffect(() => {
     dispatch({
       type: 'SET_ACTIVE',
       active: active,
-    });
-  }, [active]);
+    })
+  }, [active])
 
   return (
     <ButtonGroup
@@ -50,12 +50,7 @@ export const TabList = function TabList({
     >
       {children}
     </ButtonGroup>
-  );
-};
+  )
+})
 
-TabList.defaultProps = {
-  className: '',
-  themed: [],
-};
-
-export default TabList;
+export default TabList

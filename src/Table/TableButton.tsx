@@ -1,11 +1,11 @@
-import React, { useMemo } from 'react';
+import React, { useMemo } from 'react'
 
-import { Copy } from '../MaterialIcons/Copy';
-import { Delete } from '../MaterialIcons/Delete';
-import { Edit } from '../MaterialIcons/Edit';
-import { Download } from '../MaterialIcons/Download';
-import { TableButtonInterface, TableLinkInterface } from './table.types';
-import { ButtonIcon } from '../ButtonIcon';
+import { Copy } from '../MaterialIcons/Copy'
+import { Delete } from '../MaterialIcons/Delete'
+import { Edit } from '../MaterialIcons/Edit'
+import { Download } from '../MaterialIcons/Download'
+import { TableButtonInterface, TableLinkInterface } from './table.types'
+import { ButtonIcon } from '../ButtonIcon'
 // const ButtonIcon = styled.a`
 //   background: #0000;
 //   border: none;
@@ -17,21 +17,21 @@ import { ButtonIcon } from '../ButtonIcon';
 //   white-space: nowrap;
 // `;
 
-export const TableButton = function TableButton({
+export const TableButton = React.memo(function TableButton({
   icon: Component,
   uid,
   ...propsRest
 }: TableButtonInterface) {
-  const icon = useMemo(() => Component, [Component]);
-  return <ButtonIcon data-uid={uid} icon={icon} {...propsRest} />;
-};
+  const icon = useMemo(() => Component, [Component])
+  return <ButtonIcon data-uid={uid} icon={icon} {...propsRest} />
+})
 
 export function TableCopyButton({
   onClick,
   uid,
   ...propsRest
 }: TableButtonInterface) {
-  const icon = useMemo(() => Copy, [Copy]);
+  const icon = useMemo(() => Copy, [Copy])
 
   return (
     <TableButton
@@ -41,7 +41,7 @@ export function TableCopyButton({
       title="Copy"
       {...propsRest}
     />
-  );
+  )
 }
 
 export const TableDeleteButton = function TableDeleteButton({
@@ -49,7 +49,7 @@ export const TableDeleteButton = function TableDeleteButton({
   uid,
   ...propsRest
 }: TableButtonInterface) {
-  const icon = useMemo(() => Delete, [Delete]);
+  const icon = useMemo(() => Delete, [Delete])
 
   return (
     <TableButton
@@ -59,15 +59,15 @@ export const TableDeleteButton = function TableDeleteButton({
       title="Delete"
       {...propsRest}
     />
-  );
-};
+  )
+}
 
 export const TableDownloadButton = function TableDownloadButton({
   onClick,
   uid,
   ...propsRest
 }: TableButtonInterface) {
-  const icon = useMemo(() => Download, [Download]);
+  const icon = useMemo(() => Download, [Download])
 
   return (
     <TableButton
@@ -77,15 +77,15 @@ export const TableDownloadButton = function TableDownloadButton({
       title="Download"
       {...propsRest}
     />
-  );
-};
+  )
+}
 
 export const TableEditLink = function TableEditLink({
   children,
   uid,
   ...propsRest
 }: TableLinkInterface) {
-  const icon = useMemo(() => Edit, [Edit]);
+  const icon = useMemo(() => Edit, [Edit])
 
   return (
     <TableButton
@@ -98,7 +98,7 @@ export const TableEditLink = function TableEditLink({
     >
       {children}
     </TableButton>
-  );
-};
+  )
+}
 
-export default TableButton;
+export default TableButton

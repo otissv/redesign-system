@@ -1,8 +1,8 @@
-import React, { useMemo } from 'react';
-import fileDownload from 'js-file-download';
-import { TableToolbarDownloadButtonInterface } from './table.types';
-import { Download } from '../MaterialIcons/Download';
-import ButtonIcon from '../ButtonIcon/ButtonIcon';
+import React, { useCallback, useMemo } from 'react'
+import fileDownload from 'js-file-download'
+import { TableToolbarDownloadButtonInterface } from './table.types'
+import { Download } from '../MaterialIcons/Download'
+import ButtonIcon from '../ButtonIcon/ButtonIcon'
 
 export const ToolbarDownloadButton = function ToolbarDownloadButton({
   onClick,
@@ -10,15 +10,21 @@ export const ToolbarDownloadButton = function ToolbarDownloadButton({
   fileName,
   ...propsRest
 }: TableToolbarDownloadButtonInterface) {
-  const text = typeof data === 'string' ? data : JSON.stringify(data, null, 2);
+  const text = useMemo(
+    () => (typeof data === 'string' ? data : JSON.stringify(data, null, 2)),
+    [data]
+  )
 
-  function handleClick(e: React.MouseEvent<HTMLElement>) {
-    e.preventDefault();
-    text && fileDownload(text, fileName);
-    onClick && onClick(e);
-  }
+  const handleClick = useCallback(
+    function handleClick(e: React.MouseEvent<HTMLElement>) {
+      e.preventDefault()
+      text && fileDownload(text, fileName)
+      onClick && onClick(e)
+    },
+    [onClick]
+  )
 
-  const icon = useMemo(() => Download, [Download]);
+  const icon = useMemo(() => Download, [Download])
 
   return (
     <ButtonIcon
@@ -36,7 +42,7 @@ export const ToolbarDownloadButton = function ToolbarDownloadButton({
     >
       Download
     </ButtonIcon>
-  );
-};
+  )
+}
 
-export default ToolbarDownloadButton;
+export default ToolbarDownloadButton

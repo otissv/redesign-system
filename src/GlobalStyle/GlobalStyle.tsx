@@ -1,14 +1,14 @@
-import React from 'react';
-import { createGlobalStyle } from 'styled-components';
-import normalizeStyled from 'styled-normalize';
+import React from 'react'
+import { createGlobalStyle } from 'styled-components'
+import normalizeStyled from 'styled-normalize'
 
-import { useTheme } from '../ThemeContext';
+import { useTheme } from '../ThemeContext'
 
-export const GlobalStyle = function GlobalStyle() {
+export const GlobalStyle = React.memo(function GlobalStyle() {
   const {
     theme,
     theme: { border, color, font, scrollbar, unit },
-  } = useTheme();
+  } = useTheme()
 
   const Global = createGlobalStyle`
     ${normalizeStyled}
@@ -140,7 +140,7 @@ export const GlobalStyle = function GlobalStyle() {
       background-color: transparent;
       -webkit-text-decoration-skip: objects;
       text-decoration: none;
-      color: #4ea1f3
+      color: ${color.link}
     }
     a:active,
     a:hover {
@@ -364,7 +364,6 @@ export const GlobalStyle = function GlobalStyle() {
       word-wrap: normal;
     }
     table {
-      margin: 0  0 ${unit.default} 0;
       padding: 0;
       font-size: ${font.size.default};
       line-height: ${font.lineHeight[2]};
@@ -514,6 +513,7 @@ export const GlobalStyle = function GlobalStyle() {
     pre code {
       background: none;
       line-height: ${font.lineHeight.default};
+      color: ${color.foreground};
     }
     code:before,
     code:after,
@@ -533,9 +533,9 @@ export const GlobalStyle = function GlobalStyle() {
         font-size: 100%;
       }
     }
-  `;
+  `
 
-  return <Global theme={theme} />;
-};
+  return <Global theme={theme} />
+})
 
-export default GlobalStyle;
+export default GlobalStyle

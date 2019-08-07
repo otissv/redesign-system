@@ -203,6 +203,17 @@ export const swatches = {
   'blue-800': '#0A558C',
   'blue-900': '#003E6B',
 
+  'night-blue-050': 'hsla(213, 18%, 75%,1)',
+  'night-blue-100': 'hsla(213, 15%, 57%,1)',
+  'night-blue-200': 'hsla(217, 13%, 40%,1)',
+  'night-blue-300': 'hsla(213, 18%, 35%,1)',
+  'night-blue-400': 'hsla(217, 20%, 32%,1)',
+  'night-blue-500': 'hsla(217, 22%, 26%,1)',
+  'night-blue-600': 'hsla(211, 26%, 21%,1)',
+  'night-blue-700': 'hsla(211, 25%, 15%,1)',
+  'night-blue-800': 'hsla(233, 24%, 10%,1)',
+  'night-blue-900': 'hsla(255, 24%, 10%,1)',
+
   // blue vivid
   'blue-vivid-050': '#E6F6FF',
   'blue-vivid-100': '#BAE3FF',
@@ -358,4 +369,4 @@ export const swatches = {
   'warm-grey-700': '#504A40',
   'warm-grey-800': '#423D33',
   'warm-grey-900': '#27241D',
-};
+}

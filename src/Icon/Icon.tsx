@@ -1,23 +1,33 @@
-import React, { useMemo } from 'react';
+import React, { useMemo } from 'react'
 
-import { iconTheme, iconAppearanceTheme } from './icon.theme';
+import { iconTheme, iconAppearanceTheme } from './icon.theme'
 
-import Base from '../Base/Base';
-import { IconInterface } from './icon.types';
+import Base from '../Base/Base'
+import { IconInterface } from './icon.types'
 
-export const Icon = function Icon({
+export const Icon = React.memo(function Icon({
   children,
-  className,
-  themed,
+  className = '',
+  height = '24px',
+  themed = [],
   title,
+  viewBox = '0 0 24 24',
+  width = '24px',
   ...propsRest
 }: IconInterface) {
-  const classNames = `Icon ${className}`;
+  const classNames = useMemo(() => `Icon ${className}`, [className])
   const _themed = useMemo(() => [iconTheme, iconAppearanceTheme, ...themed], [
     iconTheme,
     iconAppearanceTheme,
     themed,
-  ]);
+  ])
+
+  const props = {
+    height,
+    viewBox,
+    width,
+    ...propsRest,
+  }
 
   return (
     <Base
@@ -25,20 +35,12 @@ export const Icon = function Icon({
       className={classNames}
       themed={_themed}
       xmlns="http://www.w3.org/2000/svg"
-      {...propsRest}
+      {...props}
     >
       {title ? <title>{title}</title> : null}
       {children}
     </Base>
-  );
-};
+  )
+})
 
-Icon.defaultProps = {
-  className: '',
-  height: '24px',
-  themed: [],
-  viewBox: '0 0 24 24',
-  width: '24px',
-};
-
-export default Icon;
+export default Icon

@@ -1,4 +1,4 @@
-import { ToolbarInterface } from './toolbar.types';
+import { ToolbarInterface } from './toolbar.types'
 
 export function toolbarTheme({ theme: { color } }: ToolbarInterface) {
   return {
@@ -7,7 +7,7 @@ export function toolbarTheme({ theme: { color } }: ToolbarInterface) {
     minHeight: 'auto',
     background: 'none',
 
-    '>button': {
+    '>button, >a': {
       color: color.foreground,
       background: 'none',
       borderColor: color.transparent,
@@ -19,15 +19,15 @@ export function toolbarTheme({ theme: { color } }: ToolbarInterface) {
     },
 
     '.ToolbarViewsContainer': {
-      'button:first-child': {
+      'button:first-child, a:first-child': {
         borderTopLeftRadius: 0,
         borderBottomLeftRadius: 0,
       },
 
-      'button:last-child': {
+      'button:last-child, a:last-child': {
         borderTopRightRadius: 0,
         borderBottomRightRadius: 0,
       },
     },
-  };
+  }
 }

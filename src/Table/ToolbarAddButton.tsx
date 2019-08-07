@@ -1,22 +1,26 @@
-import React, { useMemo } from 'react';
+import React, { useCallback, useMemo } from 'react'
 
-import { Plus } from '../MaterialIcons/Plus';
-import ButtonIcon from '../ButtonIcon/ButtonIcon';
-import { TableToolbarButtonInterface } from './table.types';
+import { Plus } from '../MaterialIcons/Plus'
+import ButtonIcon from '../ButtonIcon/ButtonIcon'
+import { TableToolbarButtonInterface } from './table.types'
 
 export const ToolbarAddButton = function ToolbarAddButton({
   onClick,
   ...propsRest
 }: TableToolbarButtonInterface) {
-  function handleClick(e: React.MouseEvent<HTMLElement>) {
-    e.preventDefault();
-    onClick && onClick(e);
-  }
+  const handleClick = useCallback(
+    function handleClick(e: React.MouseEvent<HTMLElement>) {
+      e.preventDefault()
+      onClick && onClick(e)
+    },
+    [onClick]
+  )
 
-  const icon = useMemo(() => Plus, [Plus]);
+  const icon = useMemo(() => Plus, [Plus])
 
   return (
     <ButtonIcon
+      as="a"
       alt="add"
       appearance="active"
       uid="add"
@@ -31,7 +35,7 @@ export const ToolbarAddButton = function ToolbarAddButton({
     >
       Add
     </ButtonIcon>
-  );
-};
+  )
+}
 
-export default ToolbarAddButton;
+export default ToolbarAddButton

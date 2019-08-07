@@ -1,13 +1,13 @@
-import React, { useMemo } from 'react';
-import { ImgInterface } from './img.types';
+import React, { useMemo } from 'react'
+import { ImgInterface } from './img.types'
 
-import { Base } from '../Base';
-import { imgTheme, imgSizeTheme } from './img.theme';
+import { Base } from '../Base'
+import { imgTheme, imgSizeTheme } from './img.theme'
 
-export const Img = function Img({
+export const Img = React.memo(function Img({
   children,
-  className,
-  themed,
+  className = '',
+  themed = [],
   ...propsRest
 }: ImgInterface) {
   // componentDidMount() {
@@ -50,21 +50,16 @@ export const Img = function Img({
   //   // }
   // }
 
-  const classNames = `Img ${className}`;
+  const classNames = useMemo(() => `Img ${className}`, [className])
   const _themed = useMemo(() => [imgTheme, imgSizeTheme, ...themed], [
     imgTheme,
     imgSizeTheme,
     themed,
-  ]);
+  ])
 
   return (
     <Base as="img" className={classNames} themed={_themed} {...propsRest} />
-  );
-};
+  )
+})
 
-Img.defaultProps = {
-  className: '',
-  themed: [],
-};
-
-export default Img;
+export default Img

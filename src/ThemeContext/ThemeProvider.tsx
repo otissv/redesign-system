@@ -1,11 +1,11 @@
-import * as React from 'react';
-import ThemeContext from './ThemeContext';
+import * as React from 'react'
+import ThemeContext from './ThemeContext'
 
-import { theme as themeFn } from '../theme';
-import { GlobalStyle } from '../GlobalStyle';
-import { ThemeProviderInterface } from '../ThemeContext';
+import { theme as themeFn } from '../theme'
+import { GlobalStyle } from '../GlobalStyle'
+import { ThemeProviderInterface } from '../ThemeContext'
 
-export const ThemeProvider = function ThemeProvider({
+export const ThemeProvider = React.memo(function ThemeProvider({
   children,
   theme,
 }: ThemeProviderInterface) {
@@ -14,32 +14,33 @@ export const ThemeProvider = function ThemeProvider({
       accent: 'pink',
       action: 'blue',
       active: 'pink',
-      background: 'grey-900',
+      background: 'night-blue',
       backgroundInvert: 'grey-050',
       danger: 'red',
       default: 'grey',
       disabled: 'grey',
       foreground: 'grey-050',
-      foregroundInvert: 'grey-900',
+      foregroundInvert: 'night-blue-700',
       info: 'light-blue',
       success: 'green',
       warning: 'yellow',
     },
     ...theme,
-  });
+  })
 
-  const [themeContext, setTheme] = React.useState({ ..._theme });
+  const [themeContext, setTheme] = React.useState({ ..._theme })
 
   const context = React.useMemo(() => ({ theme: themeContext, setTheme }), [
     themeContext,
     setTheme,
-  ]);
+  ])
+
   return (
     <ThemeContext.Provider value={context}>
       <GlobalStyle />
       {children}
     </ThemeContext.Provider>
-  );
-};
+  )
+})
 
-export default ThemeProvider;
+export default ThemeProvider

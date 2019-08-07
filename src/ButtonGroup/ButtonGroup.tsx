@@ -1,35 +1,35 @@
-import React, { useContext, useMemo } from 'react';
+import React, { useContext, useMemo } from 'react'
 
-import Base from '../Base/Base';
-import { buttonGroupTheme, buttonStretchGroupTheme } from './buttonGroup.theme';
-import { ButtonGroupInterface } from './buttonGroup.types';
+import Base from '../Base/Base'
+import { buttonGroupTheme, buttonStretchGroupTheme } from './buttonGroup.theme'
+import { ButtonGroupInterface } from './buttonGroup.types'
 
-export const ButtonGroupContext = React.createContext({});
+export const ButtonGroupContext = React.createContext({})
 
 export function useButtonGroup() {
-  return useContext(ButtonGroupContext);
+  return useContext(ButtonGroupContext)
 }
 
-export const ButtonGroup = function ButtonGroup({
+export const ButtonGroup = React.memo(function ButtonGroup({
   children,
-  className,
+  className = '',
   onClick,
-  themed: propsThemed,
+  themed: propsThemed = [],
   ...propsRest
 }: ButtonGroupInterface) {
-  const classNames = `ButtonGroup ${className}`;
+  const classNames = useMemo(() => `ButtonGroup ${className}`, [className])
   const themed = useMemo(
     () => [buttonGroupTheme, buttonStretchGroupTheme, ...propsThemed],
     [buttonGroupTheme, buttonStretchGroupTheme, propsThemed]
-  );
+  )
 
-  const { appearance, context, size, stretch } = propsRest;
+  const { appearance, context, size, stretch } = propsRest
   const value = useMemo(() => ({ appearance, context, size, stretch }), [
     appearance,
     context,
     size,
     stretch,
-  ]);
+  ])
 
   return (
     <ButtonGroupContext.Provider value={value}>
@@ -37,12 +37,7 @@ export const ButtonGroup = function ButtonGroup({
         {children}
       </Base>
     </ButtonGroupContext.Provider>
-  );
-};
+  )
+})
 
-ButtonGroup.defaultProps = {
-  className: '',
-  themed: [],
-};
-
-export default ButtonGroup;
+export default ButtonGroup

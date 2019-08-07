@@ -1,10 +1,10 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useCallback, useMemo } from 'react'
+import styled from 'styled-components'
 
-import { Base } from '../Base';
-import { AlertInterface } from './alert.types';
+import { Base } from '../Base'
+import { AlertInterface } from './alert.types'
 
-import { alertTheme, alertAppearanceTheme } from './alert.theme';
+import { alertTheme, alertAppearanceTheme } from './alert.theme'
 
 const Close = styled.a<AlertInterface>`
   display: ${props => (props.onClose ? 'inline-block' : 'none')};
@@ -24,23 +24,24 @@ const Close = styled.a<AlertInterface>`
   background-color: transparent;
   fill: currentcolor;
   line-height: 0;
-`;
+`
 
-export const Alert = function Alert({
+export const Alert = React.memo(function Alert({
   children,
-  className,
+  className = '',
   themed = [],
   ...propsRest
 }: AlertInterface) {
-  const classNames = `Alert ${className}`;
-  const _themed = React.useMemo(
-    () => [alertTheme, alertAppearanceTheme, ...themed],
-    [alertTheme, alertAppearanceTheme, themed]
-  );
+  const classNames = useMemo(() => `Alert ${className}`, [className])
+  const _themed = useMemo(() => [alertTheme, alertAppearanceTheme, ...themed], [
+    alertTheme,
+    alertAppearanceTheme,
+    themed,
+  ])
 
-  function handleOnClose(e: any) {
-    e.preventDefault();
-  }
+  const handleOnClose = useCallback(function handleOnClose(e: any) {
+    e.preventDefault()
+  }, [])
 
   return (
     <Base className={classNames} themed={_themed} {...propsRest}>
@@ -73,11 +74,7 @@ export const Alert = function Alert({
       </Close>
       {children}
     </Base>
-  );
-};
+  )
+})
 
-Alert.defaultProps = {
-  className: '',
-  themed: [],
-};
-export default Alert;
+export default Alert

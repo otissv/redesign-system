@@ -1,18 +1,13 @@
-import React from 'react';
-import { JsonViewInterface, JsonViewDocInterface } from './table.types';
+import React from 'react'
 
-export function JsonView({ itemList }: JsonViewInterface) {
-  const value = itemList.map(
-    (doc: JsonViewDocInterface, i: number) => `/* ${i} */
-${JSON.stringify(doc, null, 2)}
-`
-  );
-
+export const JsonView = React.memo(function JsonView({ items }: any) {
   return (
-    <code>
-      <pre>{value}</pre>
-    </code>
-  );
-}
+    <pre>
+      <code className="language-javascript">
+        {JSON.stringify(items, null, 2)}
+      </code>
+    </pre>
+  )
+})
 
-export default JsonView;
+export default JsonView

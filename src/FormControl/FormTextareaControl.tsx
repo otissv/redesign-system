@@ -1,32 +1,34 @@
-import React from 'react';
+import React, { useMemo } from 'react'
 
-import { FormLabel } from './FormLabel';
-import { formControlTheme } from './form-control.theme';
-import { Textarea } from '../Textarea';
-import { Typography } from '../Typography';
-import { FormControlInterface } from '../Form';
-import { Base } from '../Base';
-import { FormValidation } from './FormValidation';
+import { FormLabel } from './FormLabel'
+import { formControlTheme } from './form-control.theme'
+import { Textarea } from '../Textarea'
+import { Typography } from '../Typography'
+import { FormControlInterface } from '../Form'
+import { Base } from '../Base'
+import { FormValidation } from './FormValidation'
 
-export const FormTextareaControl = function FormTextareaControl({
-  className,
+export const FormTextareaControl = React.memo(function FormTextareaControl({
+  className = '',
   id,
   label,
   parent,
   field,
   attributes,
   model,
-  themed,
+  themed = [],
   ...propsRest
 }: FormControlInterface) {
-  const classNames = `FormTextareaControl ${className}`;
-  const _themed = React.useMemo(() => [formControlTheme, ...themed], [
+  const classNames = useMemo(() => `FormTextareaControl ${className}`, [
+    className,
+  ])
+  const _themed = useMemo(() => [formControlTheme, ...themed], [
     formControlTheme,
     themed,
-  ]);
+  ])
 
-  const { description, isValid } = field;
-  const { appearance, value, ...attributesRest } = attributes;
+  const { description, isValid } = field
+  const { appearance, value, ...attributesRest } = attributes
 
   return (
     <Base className={classNames} themed={_themed} {...propsRest}>
@@ -52,13 +54,7 @@ export const FormTextareaControl = function FormTextareaControl({
 
       <FormValidation attributes={attributes} field={field} model={model} />
     </Base>
-  );
-};
+  )
+})
 
-FormTextareaControl.defaultProps = {
-  className: '',
-  themed: [],
-  value: '',
-};
-
-export default FormTextareaControl;
+export default FormTextareaControl

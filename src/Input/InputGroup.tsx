@@ -1,22 +1,22 @@
-import React, { useMemo } from 'react';
+import React, { useMemo } from 'react'
 
-import { InputInterface } from './input.types';
-import Base from '../Base/Base';
-import { inputGroupTheme } from './inputGroup.theme';
+import { InputInterface } from './input.types'
+import Base from '../Base/Base'
+import { inputGroupTheme } from './inputGroup.theme'
 import {
   inputAppearanceTheme,
   inputSizeTheme,
   inputWidthsTheme,
-} from './input.theme';
+} from './input.theme'
 
-export const InputGroup = function InputGroup({
+export const InputGroup = React.memo(function InputGroup({
   children,
-  className,
+  className = '',
   valid,
-  themed,
+  themed = [],
   ...propsRest
 }: InputInterface) {
-  const classNames = `InputGroup ${className}`;
+  const classNames = `InputGroup ${className}`
   const _themed = useMemo(
     () => [
       inputAppearanceTheme,
@@ -32,18 +32,13 @@ export const InputGroup = function InputGroup({
       inputWidthsTheme,
       themed,
     ]
-  );
+  )
 
   return (
     <Base role="group" className={classNames} themed={_themed} {...propsRest}>
       {children}
     </Base>
-  );
-};
+  )
+})
 
-InputGroup.defaultProps = {
-  className: '',
-  themed: [],
-};
-
-export default InputGroup;
+export default InputGroup

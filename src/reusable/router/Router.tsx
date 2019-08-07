@@ -1,8 +1,8 @@
-import React, { useMemo } from 'react';
-import RouteParser from 'route-parser';
+import React, { useMemo } from 'react'
+import RouteParser from 'route-parser'
 
-import { useRouter } from './RouterContext';
-import { ParamsType, RouterTypes, RouteTypes } from './router.types';
+import { useRouter } from './RouterContext'
+import { ParamsType, RouterTypes, RouteTypes } from './router.types'
 // import { useStateDevtools } from '../devtools'
 
 function flattenRoutes(routes: RouteTypes[], parent?: RouteTypes) {
@@ -18,31 +18,33 @@ function flattenRoutes(routes: RouteTypes[], parent?: RouteTypes) {
                 function() {
                   return parent.component.type
                     ? parent.component.type({ routes: parent.children })
-                    : parent.component({ routes: parent.children });
+                    : parent.component({ routes: parent.children })
                 }) ||
               route.component,
           },
-        ];
-  }, []);
+        ]
+  }, [])
 }
 
-export const Router = (props: RouterTypes) => {
-  const routes = useMemo(
-    () => (props.routes ? flattenRoutes(props.routes) : []),
-    [props.routes]
-  );
-  const { route, history, dispatch } = useRouter();
-  let params: ParamsType = false;
-  let Component = null;
+export const Router = React.memo(function Router({
+  routes: routesProp = [],
+  ...propsRest
+}: RouterTypes) {
+  const routes = useMemo(() => (routesProp ? flattenRoutes(routesProp) : []), [
+    routesProp,
+  ])
+  const { route, history, dispatch } = useRouter()
+  let params: ParamsType = false
+  let Component = null
 
   for (let item of routes) {
-    const pattern = new RouteParser(item.path);
-    const match = pattern.match(route);
+    const pattern = new RouteParser(item.path)
+    const match = pattern.match(route)
 
     if (match) {
-      params = match;
-      Component = item.component;
-      break;
+      params = match
+      Component = item.component
+      break
     }
   }
 
@@ -50,14 +52,10 @@ export const Router = (props: RouterTypes) => {
     route,
     history,
     dispatch,
-  ]);
+  ])
 
   return useMemo(
-    () => (params ? <Component {...props} route={routeContext} /> : null),
+    () => (params ? <Component {...propsRest} route={routeContext} /> : null),
     [params, route]
-  );
-};
-
-Router.defaultProps = {
-  routes: [],
-};
+  )
+})

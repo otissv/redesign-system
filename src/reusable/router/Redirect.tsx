@@ -1,16 +1,16 @@
-import React from 'react';
-import { useRouter } from './RouterContext';
+import React from 'react'
+import { useRouter } from './RouterContext'
 
-export const Redirect = function Redirect({ to }) {
-  const { dispatch } = useRouter();
+export const Redirect = React.memo(function Redirect({ to }: { to: string }) {
+  const { dispatch } = useRouter()
 
   React.useEffect(() => {
     // window.history.pushState(to, to, to)
     dispatch({
       type: 'ADD_ROUTE',
       route: to,
-    });
-  }, [to, dispatch]);
+    })
+  }, [to, dispatch])
 
-  return null;
-};
+  return null
+})

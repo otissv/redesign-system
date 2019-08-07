@@ -1,27 +1,27 @@
-import React, { useMemo } from 'react';
+import React, { useMemo } from 'react'
 
-import { Base } from '../Base';
-import { CardInterface } from './card.types';
+import { Base } from '../Base'
+import { CardInterface } from './card.types'
 
-import { cardTheme, cardAppearanceTheme } from './card.theme';
-import { CardProvider } from './CardContext';
+import { cardTheme, cardAppearanceTheme } from './card.theme'
+import { CardProvider } from './CardContext'
 
-export const Card = function Card({
+export const Card = React.memo(function Card({
   children,
-  className,
+  className = '',
   context,
-  hover,
+  hover = false,
   size,
-  themed,
+  themed = [],
   ...propsRest
 }: CardInterface) {
-  const classNames = `Card ${className}`;
+  const classNames = useMemo(() => `Card ${className}`, [className])
   const _themed = useMemo(() => [cardTheme, cardAppearanceTheme, , ...themed], [
     cardTheme,
     cardAppearanceTheme,
     ,
     themed,
-  ]);
+  ])
 
   const value = useMemo(
     () => ({
@@ -30,7 +30,7 @@ export const Card = function Card({
       size,
     }),
     [context, hover, size]
-  );
+  )
 
   return (
     <CardProvider value={value}>
@@ -45,13 +45,7 @@ export const Card = function Card({
         {children}
       </Base>
     </CardProvider>
-  );
-};
+  )
+})
 
-Card.defaultProps = {
-  className: '',
-  hover: false,
-  themed: [],
-};
-
-export default Card;
+export default Card

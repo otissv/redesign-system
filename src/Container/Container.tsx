@@ -1,31 +1,26 @@
-import React from 'react';
+import React, { useMemo } from 'react'
 
-import { ContainerInterface } from './container.types';
-import { Base } from '../Base';
-import { containerAppearanceTheme } from './container.theme';
+import { ContainerInterface } from './container.types'
+import { Base } from '../Base'
+import { containerAppearanceTheme } from './container.theme'
 
-export const Container = function Container({
+export const Container = React.memo(function Container({
   children,
-  className,
-  themed,
+  className = '',
+  themed = [],
   ...propsRest
 }: ContainerInterface) {
-  const classNames = `Container ${className}`;
-  const _themed = React.useMemo(() => [containerAppearanceTheme, ...themed], [
+  const classNames = useMemo(() => `Container ${className}`, [className])
+  const _themed = useMemo(() => [containerAppearanceTheme, ...themed], [
     containerAppearanceTheme,
     themed,
-  ]);
+  ])
 
   return (
     <Base className={classNames} themed={_themed} {...propsRest}>
       {children}
     </Base>
-  );
-};
+  )
+})
 
-Container.defaultProps = {
-  className: '',
-  themed: [],
-};
-
-export default Container;
+export default Container

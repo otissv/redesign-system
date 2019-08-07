@@ -1,12 +1,12 @@
-import React, { Fragment, useMemo } from 'react';
+import React, { Fragment, useCallback, useMemo } from 'react'
 
-import { useCacheState } from '../reusable/cacheState';
+import { useCacheState } from '../reusable/cacheState'
 import {
   TableCopyButton,
   TableDeleteButton,
   TableDownloadButton,
   TableEditLink,
-} from './TableButton';
+} from './TableButton'
 import {
   TableBodyInterface,
   TableToolbarButtonInterface,
@@ -14,14 +14,16 @@ import {
   TableToolbarDownloadButtonInterface,
   TableRowInterface,
   TableRowDetailType,
-} from './table.types';
+} from './table.types'
 
 interface RowInterface {
-  row: TableRowInterface[];
-  rowDetail?: TableRowDetailType;
+  column: TableRowInterface[]
+  rowDetail?: TableRowDetailType
 }
 
-export const TableBody = function TableBody({
+export const TableBody = React.memo(function TableBody({
+  allSelected,
+  baseRoute = '',
   dispatch,
   handleAdd,
   handleDeleteSelected,
@@ -33,55 +35,68 @@ export const TableBody = function TableBody({
   tableName,
   ...propsRest
 }: TableBodyInterface) {
-  const { state, setItem } = useCacheState<string[]>(
+  const { state: expandRows, setItem: setExpandRows } = useCacheState<string[]>(
     `${tableName}ExpandRows`,
     []
-  );
+  )
 
-  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-    e.preventDefault();
-    dispatch({
-      type: 'TOGGLE_SELECTED_ITEMS',
-      selected: [e.currentTarget.name],
-    });
-  }
+  const handleChange = useCallback(
+    function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+      e.preventDefault()
+      dispatch({
+        type: 'TOGGLE_SELECTED_ITEMS',
+        selected: [e.currentTarget.name],
+      })
+    },
+    [dispatch]
+  )
 
-  function handleDelete(e: React.MouseEvent<HTMLElement>) {
-    e.preventDefault();
+  const handleDelete = useCallback(function handleDelete(
+    e: React.MouseEvent<HTMLElement>
+  ) {
+    e.preventDefault()
     // onDelete && onDelete(e)
-  }
+  },
+  [])
 
-  function handleExpandRows(e: React.MouseEvent<HTMLElement>) {
-    e.preventDefault();
+  const handleExpandRows = useCallback(
+    function handleExpandRows(e: React.MouseEvent<HTMLElement>) {
+      e.preventDefault()
 
-    const id = e.currentTarget.dataset.uid;
-    const isStringEqual = (r: string) => r === id;
+      const id = e.currentTarget.dataset.uid
+      const isStringEqual = (r: string) => r === id
 
-    if (state.find(isStringEqual)) {
-      setItem(state.filter(r => !isStringEqual(r)));
-    } else {
-      setItem([...state, id]);
-    }
-  }
+      if (expandRows.find(isStringEqual)) {
+        setExpandRows(expandRows.filter(r => !isStringEqual(r)))
+      } else {
+        setExpandRows([...expandRows, id])
+      }
+    },
+    [setExpandRows]
+  )
 
-  function handleRowClick(e: React.MouseEvent<HTMLElement>) {
-    e.preventDefault();
-    const id = e.currentTarget.dataset.uid;
-    onRowClick && onRowClick(e, id);
-  }
+  const handleRowClick = useCallback(
+    function handleRowClick(e: React.MouseEvent<HTMLElement>) {
+      e.preventDefault()
+      const id = e.currentTarget.dataset.uid
+      onRowClick && onRowClick(e, id)
+    },
+    [onRowClick]
+  )
 
   const body = useMemo(
     () =>
-      rows.map(({ row, rowDetail }: RowInterface, i: number) => {
-        const RowDetail = rowDetail;
+      rows.map(({ column, rowDetail }: RowInterface, i: number) => {
+        const RowDetail = rowDetail
         return (
           <Fragment key={i}>
             <tr>
-              {row.map((item: TableRowInterface) => {
+              {column.map((item: TableRowInterface) => {
                 return (
                   <Fragment key={item.key}>
                     {item.component({
                       dispatch,
+                      expandRows,
                       handleAdd,
                       handleChange,
                       handleDelete,
@@ -91,12 +106,12 @@ export const TableBody = function TableBody({
                       itemsToArray,
                       loading,
                       selected,
-                      state,
+                      allSelected,
                       Copy: (props: TableToolbarCopyButtonInterface) => (
                         <TableCopyButton {...props} />
                       ),
                       Edit: (props: TableToolbarButtonInterface) => (
-                        <TableEditLink {...props} />
+                        <TableEditLink {...props} href={`${baseRoute}/edit`} />
                       ),
 
                       Delete: (props: TableToolbarButtonInterface) => (
@@ -107,15 +122,15 @@ export const TableBody = function TableBody({
                       ) => <TableDownloadButton {...props} />,
                     })}
                   </Fragment>
-                );
+                )
               })}
             </tr>
-            {rowDetail && <RowDetail state={state} />}
+            {rowDetail && <RowDetail expandRows={expandRows} />}
           </Fragment>
-        );
+        )
       }),
     [
-      state,
+      expandRows,
       handleAdd,
       handleChange,
       handleDelete,
@@ -123,13 +138,13 @@ export const TableBody = function TableBody({
       handleExpandRows,
       rows,
     ]
-  );
+  )
 
   return (
     <tbody className="TableBody" {...propsRest}>
       {body}
     </tbody>
-  );
-};
+  )
+})
 
-export default TableBody;
+export default TableBody

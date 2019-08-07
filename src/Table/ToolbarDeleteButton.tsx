@@ -1,19 +1,22 @@
-import React, { useMemo } from 'react';
+import React, { useCallback, useMemo } from 'react'
 
-import { Delete } from '../MaterialIcons/Delete';
-import ButtonIcon from '../ButtonIcon/ButtonIcon';
-import { TableToolbarButtonInterface } from './table.types';
+import { Delete } from '../MaterialIcons/Delete'
+import ButtonIcon from '../ButtonIcon/ButtonIcon'
+import { TableToolbarButtonInterface } from './table.types'
 
 export const ToolbarDeleteButton = function ToolbarDeleteButton({
   onClick,
   ...propsRest
 }: TableToolbarButtonInterface) {
-  function handleClick(e: React.MouseEvent<HTMLElement>) {
-    e.preventDefault();
-    onClick && onClick(e);
-  }
+  const handleClick = useCallback(
+    function handleClick(e: React.MouseEvent<HTMLElement>) {
+      e.preventDefault()
+      onClick && onClick(e)
+    },
+    [onClick]
+  )
 
-  const icon = useMemo(() => Delete, [Delete]);
+  const icon = useMemo(() => Delete, [Delete])
 
   return (
     <ButtonIcon
@@ -31,7 +34,7 @@ export const ToolbarDeleteButton = function ToolbarDeleteButton({
     >
       Delete
     </ButtonIcon>
-  );
-};
+  )
+}
 
-export default ToolbarDeleteButton;
+export default ToolbarDeleteButton

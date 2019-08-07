@@ -1,28 +1,28 @@
-import React, { useMemo } from 'react';
+import React, { useCallback, useMemo } from 'react'
 
-import { Base } from '../Base';
+import { Base } from '../Base'
 import {
   ToggleInterface,
   ToggleInputInterface,
   ToggleLabelInterface,
   ToggleContentInterface,
-} from './toggle.types';
+} from './toggle.types'
 import {
-  // toggleAppearanceTheme,
+  toggleAppearanceTheme,
   toggleInputTheme,
   toggleLabelTheme,
   toggleTheme,
   toggleContentTheme,
-} from './toggle.theme';
+} from './toggle.theme'
 
-export const ToggleInput = function ToggleInput({
+export const ToggleInput = React.memo(function ToggleInput({
   checked,
-  className,
-  themed,
+  className = '',
+  theme = [],
   ...propsRest
 }: ToggleInputInterface) {
-  const classNames = `ToggleInput ${className}`;
-  const _themed = useMemo(() => [toggleInputTheme], [toggleInputTheme]);
+  const classNames = useMemo(() => `ToggleInput ${className}`, [className])
+  const _themed = useMemo(() => [toggleInputTheme], [toggleInputTheme])
 
   return (
     <Base
@@ -32,68 +32,73 @@ export const ToggleInput = function ToggleInput({
       themed={_themed}
       {...propsRest}
     />
-  );
-};
+  )
+})
 
-ToggleInput.defaultProps = {
-  className: '',
-};
-
-export const ToggleLabel = function ToggleLabel({
+export const ToggleLabel = React.memo(function ToggleLabel({
   checked,
-  className,
+  className = '',
   ...propsRest
 }: ToggleLabelInterface) {
-  const classNames = `ToggleLabel ${className}`;
-  const _themed = useMemo(() => [toggleLabelTheme], [toggleLabelTheme, ,]);
+  const classNames = useMemo(() => `ToggleLabel ${className}`, [className])
+  const _themed = useMemo(() => [toggleAppearanceTheme, toggleLabelTheme], [
+    toggleLabelTheme,
+    toggleAppearanceTheme,
+  ])
 
   return (
     <Base as="label" className={classNames} themed={_themed} {...propsRest} />
-  );
-};
+  )
+})
 
-export const ToggleContent = function ToggleContent({
+export const ToggleContent = React.memo(function ToggleContent({
   checked,
-  className,
+  className = '',
+  themed = [],
+  width = '90px',
+  height = '90px',
   ...propsRest
 }: ToggleContentInterface) {
-  const classNames = `ToggleContent ${className}`;
-  const _themed = useMemo(() => [toggleContentTheme], [toggleContentTheme, ,]);
+  const classNames = useMemo(() => `ToggleContent ${className}`, [className])
+  const _themed = useMemo(() => [toggleContentTheme, ...themed], [
+    toggleContentTheme,
+    themed,
+  ])
 
   return (
-    <Base as="label" className={classNames} themed={_themed} {...propsRest} />
-  );
-};
+    <Base
+      as="span"
+      className={classNames}
+      themed={_themed}
+      width={width}
+      height={height}
+      {...propsRest}
+    />
+  )
+})
 
-ToggleContent.defaultProps = {
-  className: '',
-  width: '90px',
-  height: '90px',
-  themed: [],
-};
-
-export const Toggle = function Toggle({
-  id,
+export const Toggle = React.memo(function Toggle({
   children,
-  className,
+  className = '',
+  height = '20px',
   hideText,
-  height,
+  id,
+  themed = [],
   toggle,
-  width,
-  themed,
+  width = '40px',
   ...propsRest
 }: ToggleInterface) {
-  const classNames = `Toggle ${className}`;
-  const _themed = useMemo(() => [toggleTheme, ...themed], [
-    toggleTheme,
-    themed,
-  ]);
-  const [state, setState] = toggle;
+  const classNames = useMemo(() => `Toggle ${className}`, [className])
+  const _themed = useMemo(() => [toggleTheme, ...themed], [toggleTheme, themed])
+  const [state, setState] = toggle
 
-  function handleClick(e) {
-    e.preventDefault();
-    setState(!state);
-  }
+  const handleClick = useCallback(
+    function handleClick(e: React.MouseEvent<HTMLInputElement>) {
+      e.preventDefault()
+      setState(!state)
+    },
+    [setState]
+  )
 
   return (
     <Base className={classNames} themed={_themed} {...propsRest}>
@@ -122,14 +127,7 @@ export const Toggle = function Toggle({
         )}
       </ToggleLabel>
     </Base>
-  );
-};
+  )
+})
 
-Toggle.defaultProps = {
-  className: '',
-  width: '40px',
-  height: '20px',
-  themed: [],
-};
-
-export default Toggle;
+export default Toggle

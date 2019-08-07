@@ -3,15 +3,18 @@ name: Table
 route: /table
 ---
 
-import { Playground, Props } from 'docz';
-import { Flex } from '../Flex/Flex';
-import styled from 'styled-components';
-import { ThemeProvider } from '../ThemeContext/ThemeProvider';
-import Table from './Table';
-import { useTable } from './table.example';
-import { TableRowSelect } from './TableRowSelect';
+import { Playground, Props } from 'docz'
+import { Flex } from '../Flex/Flex'
+import styled from 'styled-components'
+import { ThemeProvider } from '../ThemeContext/ThemeProvider'
+import { Table } from './Table'
+import { useTable } from './table.example'
+import { TableRowSelect } from './TableRowSelect'
+import { AllSelectedHeading } from './AllSelectedHeading'
 
 # Table
+
+## Properties
 
 <Props of={Table} />
 
@@ -20,13 +23,15 @@ import { TableRowSelect } from './TableRowSelect';
 <Playground>
   <ThemeProvider>
     <Table
+      height='250px'
       name='TableDeafult'
       caption="Table caption"
-      headings={['', 'ID', 'Name', 'Endpoint']}
+      headings={['','ID', 'Name', 'Endpoint', '']}
+      baseRoute='/table/#'
       hook={useTable}
       rows={items =>
         items.map(({ id, name, endpoint }, index) => ({
-          row: [
+          column: [
             {
               key: 'index',
               component: ({ handleChange, selected }) => <td>{index}</td>,
@@ -41,7 +46,15 @@ import { TableRowSelect } from './TableRowSelect';
             },
             {
               key: 'endpoint',
-              component: () => <td>{endpoint}</td>,
+              component: () => <td><a href="#">{endpoint}</a></td>,
+            },
+            {
+              key: "actions",
+              component: ({ Edit }) => (
+                <td style={{ textAlign: "right" }}>
+                  <Edit appearance='tertiary' uid={name} />
+                </td>
+              )
             },
           ],
         }))
@@ -56,13 +69,14 @@ import { TableRowSelect } from './TableRowSelect';
 <Playground>
   <ThemeProvider>
     <Table
+      height="250px"
       name="TableSelect"
       selectable
       headings={['', 'ID', 'Name', 'Endpoint']}
       hook={useTable}
       rows={items =>
         items.map(({ id, name, endpoint }) => ({
-          row: [
+          column: [
             {
               key: 'select',
               component: ({ handleChange, selected }) => (
@@ -83,7 +97,11 @@ import { TableRowSelect } from './TableRowSelect';
             },
             {
               key: 'endpoint',
-              component: () => <td>{endpoint}</td>,
+              component: () => (
+                <td>
+                  <a href="#">{endpoint}</a>
+                </td>
+              ),
             },
           ],
         }))
@@ -97,13 +115,14 @@ import { TableRowSelect } from './TableRowSelect';
 <Playground>
   <ThemeProvider>
     <Table
+      height="250px"
       name="TableHover"
       hover
       headings={['ID', 'Name', 'Endpoint']}
       hook={useTable}
       rows={items =>
         items.map(({ id, name, endpoint }) => ({
-          row: [
+          column: [
             {
               key: 'id',
               component: () => <td>{id}</td>,
@@ -114,7 +133,11 @@ import { TableRowSelect } from './TableRowSelect';
             },
             {
               key: 'endpoint',
-              component: () => <td>{endpoint}</td>,
+              component: () => (
+                <td>
+                  <a href="#">{endpoint}</a>
+                </td>
+              ),
             },
           ],
         }))
@@ -128,13 +151,14 @@ import { TableRowSelect } from './TableRowSelect';
 <Playground>
   <ThemeProvider>
     <Table
+      height="250px"
       name="TableCondensed"
       condensed
       headings={['ID', 'Name', 'Endpoint']}
       hook={useTable}
       rows={items =>
         items.map(({ id, name, endpoint }) => ({
-          row: [
+          column: [
             {
               key: 'id',
               component: () => <td>{id}</td>,
@@ -145,7 +169,11 @@ import { TableRowSelect } from './TableRowSelect';
             },
             {
               key: 'endpoint',
-              component: () => <td>{endpoint}</td>,
+              component: () => (
+                <td>
+                  <a href="#">{endpoint}</a>
+                </td>
+              ),
             },
           ],
         }))
@@ -159,21 +187,30 @@ import { TableRowSelect } from './TableRowSelect';
 <Playground>
   <ThemeProvider>
     <Table
+      height='250px'
+      baseRoute='/table/#'
       name='TableToolbar'
       caption="Table caption"
-      headings={['', 'ID', 'Name', 'Endpoint']}
+      headings={[
+        ({ handleSelectHeadingChange }) => <AllSelectedHeading
+          onChange={handleSelectHeadingChange}
+        />,
+        'ID',
+        'Name',
+        'Endpoint'
+      ]}
       hook={useTable}
-      toolbar={['copy', 'download', 'views']}
+      toolbar={['add', 'copy', 'download', 'views']}
       rows={items =>
         items.map(({ id, name, endpoint }, index) => ({
-          row: [
+          column: [
             {
               key: 'select',
-              component: ({ handleChange, selected }) => (
+              component: ({ handleChange, allSelected }) => (
                 <TableRowSelect
                   id={id}
                   handleChange={handleChange}
-                  selected={selected}
+                  checked={allSelected}
                 />
               ),
             },
@@ -187,7 +224,7 @@ import { TableRowSelect } from './TableRowSelect';
             },
             {
               key: 'endpoint',
-              component: () => <td>{endpoint}</td>,
+              component: () => <td><a href="#">{endpoint}</a></td>,
             },
           ],
         }))

@@ -1,25 +1,28 @@
-import React, { useMemo } from 'react';
+import React, { useMemo } from 'react'
 
-import Base from '../Base/Base';
-import { VideoInterface } from './vidoe.types';
-import { videoTheme } from './video.theme';
+import Base from '../Base/Base'
+import { VideoInterface } from './vidoe.types'
+import { videoTheme } from './video.theme'
 
-export const Video = function Video({
+export const Video = React.memo(function Video({
   allowFullScreen,
   autoPlay,
   children,
-  className,
-  embeded,
-  height,
-  inview,
-  muted,
+  className = '',
+  embeded = false,
+  height = 'auto',
+  inview = false,
+  loop = false,
+  muted = false,
+  playsInline = false,
+  preload = 'auto',
   src,
-  width,
-  themed,
+  themed = [],
+  width = '100%',
   ...propsRest
 }: VideoInterface) {
-  const classNames = `Video ${className}`;
-  const _themed = useMemo(() => [videoTheme, ...themed], [videoTheme, themed]);
+  const classNames = useMemo(() => `Video ${className}`, [className])
+  const _themed = useMemo(() => [videoTheme, ...themed], [videoTheme, themed])
 
   const properties = {
     ...propsRest,
@@ -27,10 +30,13 @@ export const Video = function Video({
     autoPlay: autoPlay ? true : null,
     height,
     inview: inview ? true : null,
+    loop,
     muted: muted || null,
+    playsInline,
+    preload,
     src,
     width,
-  };
+  }
 
   return (
     <Base
@@ -41,20 +47,7 @@ export const Video = function Video({
     >
       {embeded ? <iframe {...properties} frameBorder="0" /> : children}
     </Base>
-  );
-};
+  )
+})
 
-Video.defaultProps = {
-  className: '',
-  embeded: false,
-  height: 'auto',
-  inview: false,
-  loop: false,
-  muted: false,
-  playsInline: false,
-  preload: 'auto',
-  themed: [],
-  width: '100%',
-};
-
-export default Video;
+export default Video

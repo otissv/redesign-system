@@ -1,22 +1,29 @@
-import React, { useMemo } from 'react';
+import React, { useMemo } from 'react'
 
-import { Base } from '../Base';
+import { Base } from '../Base'
 import {
   inputTheme,
   inputAppearanceTheme,
   inputSizeTheme,
   inputWidthsTheme,
-} from './input.theme';
-import { InputInterface } from './input.types';
+} from './input.theme'
+import { InputInterface } from './input.types'
 
-export const Input = function Input({
+export const Input = React.memo(function Input({
   children,
-  className,
-  valid,
-  themed,
+  className = '',
+  context = null,
+  onBlur = () => {},
+  onChange = () => {},
+  onFocus = () => {},
+  placeholder = null,
+  size = null,
+  themed = [],
+  valid = true,
+  widths = null,
   ...propsRest
 }: InputInterface) {
-  const classNames = `Input ${className}`;
+  const classNames = useMemo(() => `Input ${className}`, [className])
   const _themed = useMemo(
     () => [
       inputTheme,
@@ -26,12 +33,26 @@ export const Input = function Input({
       ...themed,
     ],
     [inputTheme, inputAppearanceTheme, inputSizeTheme, inputWidthsTheme, themed]
-  );
-  const isDisabled =
-    propsRest.appearance === 'disabled' ||
-    propsRest.appearance === 'primary-disabled' ||
-    propsRest.appearance === 'secondary-disabled' ||
-    propsRest.appearance === 'tertiary-disabled';
+  )
+  const isDisabled = useMemo(
+    () =>
+      propsRest.appearance === 'disabled' ||
+      propsRest.appearance === 'primary-disabled' ||
+      propsRest.appearance === 'secondary-disabled' ||
+      propsRest.appearance === 'tertiary-disabled',
+    [propsRest.appearance]
+  )
+
+  const props = {
+    context,
+    onBlur,
+    onChange,
+    onFocus,
+    placeholder,
+    size,
+    widths,
+    ...propsRest,
+  }
 
   return (
     <Base
@@ -40,24 +61,11 @@ export const Input = function Input({
       themed={_themed}
       disabled={isDisabled}
       aria-invalid={valid}
-      {...propsRest}
+      {...props}
     >
       {children}
     </Base>
-  );
-};
+  )
+})
 
-Input.defaultProps = {
-  className: '',
-  context: null,
-  onBlur: () => {},
-  onChange: () => {},
-  onFocus: () => {},
-  placeholder: null,
-  size: null,
-  themed: [],
-  valid: true,
-  widths: null,
-};
-
-export default Input;
+export default Input

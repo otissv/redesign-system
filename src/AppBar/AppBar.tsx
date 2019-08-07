@@ -1,20 +1,20 @@
-import React, { useMemo } from 'react';
+import React, { useMemo } from 'react'
 
-import Base from '../Base/Base';
-import { AppBarInterface } from './appBar.types';
-import { appBarTheme, appBarAppearanceTheme } from './appBar.theme';
+import Base from '../Base/Base'
+import { AppBarInterface } from './appBar.types'
+import { appBarTheme, appBarAppearanceTheme } from './appBar.theme'
 
-export const AppBar = function AppBar({
+export const AppBar = React.memo(function AppBar({
   children,
-  className,
-  themed,
+  className = '',
+  themed = [],
   ...propsRest
 }: AppBarInterface) {
-  const classNames = `AppBar ${className}`;
+  const classNames = useMemo(() => `AppBar ${className}`, [className])
   const _themed = useMemo(
     () => [appBarTheme, appBarAppearanceTheme, ...themed],
     [appBarTheme, appBarAppearanceTheme, themed]
-  );
+  )
 
   return (
     <Base
@@ -25,12 +25,7 @@ export const AppBar = function AppBar({
     >
       {children}
     </Base>
-  );
-};
+  )
+})
 
-AppBar.defaultProps = {
-  className: '',
-  themed: [],
-};
-
-export default AppBar;
+export default AppBar

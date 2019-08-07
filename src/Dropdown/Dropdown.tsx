@@ -1,42 +1,42 @@
-import React, { useCallback, useMemo, useState } from 'react';
-import { DropdownInterface } from './dropdown.types';
-import { CaretDown } from '../MaterialIcons/CaretDown';
+import React, { useCallback, useMemo, useState } from 'react'
+import { DropdownInterface } from './dropdown.types'
+import { CaretDown } from '../MaterialIcons/CaretDown'
 
 import {
   dropdownTheme,
   dropdownContainerTheme,
   dropdownContentTheme,
-} from './dropdown.theme';
-import { Button } from '../Button/Button';
-import Base from '../Base/Base';
+} from './dropdown.theme'
+import { Button } from '../Button/Button'
+import Base from '../Base/Base'
 
-export const Dropdown = function Dropdown({
+export const Dropdown = React.memo(function Dropdown({
   children,
-  className,
+  className = '',
   label,
   animate,
-  themed,
-  stretch,
+  themed = [],
+  stretch = false,
   ...propsRest
 }: DropdownInterface) {
-  const [opened, setOpened] = useState(false);
-  const classNames = `Dropdown ${className}`;
+  const [opened, setOpened] = useState(false)
+  const classNames = useMemo(() => `Dropdown ${className}`, [className])
 
   const themedDropdownContainer = useMemo(() => [dropdownContainerTheme], [
     dropdownContainerTheme,
-  ]);
+  ])
   const themedContent = useMemo(
     () => [dropdownTheme, dropdownContentTheme, ...themed],
     [dropdownTheme, dropdownContentTheme, themed]
-  );
+  )
 
   const handleClick = useCallback(
     function handleClick(e) {
-      e.preventDefault;
-      setOpened(!opened);
+      e.preventDefault
+      setOpened(!opened)
     },
     [setOpened]
-  );
+  )
 
   const _animate = useMemo(() => {
     return (
@@ -48,10 +48,8 @@ export const Dropdown = function Dropdown({
           opacity: 0,
         },
       }
-    );
-  }, [animate]);
-
-  console.log(propsRest);
+    )
+  }, [animate])
 
   return (
     <Base
@@ -79,13 +77,7 @@ export const Dropdown = function Dropdown({
         {children}
       </Base>
     </Base>
-  );
-};
+  )
+})
 
-Dropdown.defaultProps = {
-  className: '',
-  themed: [],
-  stretch: false,
-};
-
-export default Dropdown;
+export default Dropdown

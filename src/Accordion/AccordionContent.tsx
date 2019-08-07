@@ -1,27 +1,27 @@
-import React, { useMemo } from 'react';
+import React, { useMemo } from 'react'
 
-import { AccordionContentInterface } from './accordion.types';
+import { AccordionContentInterface } from './accordion.types'
 
-import Base from '../Base/Base';
-import { accordionContentTheme } from './accordion.theme';
-import { useAccordion } from './AccordionContext';
-import { useAccordionItem } from './AccordionItem';
+import Base from '../Base/Base'
+import { accordionContentTheme } from './accordion.theme'
+import { useAccordion } from './AccordionContext'
+import { useAccordionItem } from './AccordionItem'
 
-export const AccordionContent = function AccordionContent({
+export const AccordionContent = React.memo(function AccordionContent({
   children,
-  className,
-  themed,
+  className = '',
+  themed = [],
   ...propsRest
 }: AccordionContentInterface) {
-  const classNames = `AccordionContent ${className}`;
+  const classNames = useMemo(() => `AccordionContent ${className}`, [className])
 
   const _themed = useMemo(() => [accordionContentTheme, ...themed], [
     accordionContentTheme,
     themed,
-  ]);
+  ])
 
-  const { active, animate } = useAccordion();
-  const { uid } = useAccordionItem();
+  const { active, animate } = useAccordion()
+  const { uid } = useAccordionItem()
 
   const _animate = useMemo(() => {
     return (
@@ -29,8 +29,8 @@ export const AccordionContent = function AccordionContent({
         open: { height: 'auto' },
         close: { height: 0 },
       }
-    );
-  }, [animate]);
+    )
+  }, [animate])
 
   return (
     <Base className={classNames} themed={_themed} {...propsRest}>
@@ -38,12 +38,7 @@ export const AccordionContent = function AccordionContent({
         {children}
       </Base>
     </Base>
-  );
-};
+  )
+})
 
-AccordionContent.defaultProps = {
-  className: '',
-  themed: [],
-};
-
-export default AccordionContent;
+export default AccordionContent
