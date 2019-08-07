@@ -9,7 +9,8 @@
     "docz:build": "docz build",
     "copy": "cp package.json .build",
     "prepub": "rm -rf .build && npm run build && npm run copy",
-    "pub": "npm run prepub && cd .build && npm publish"
+    "pub": "npm run prepub && cd .build && npm publish",
+    "deploy": "npm run docz:build && git push origin master"
   },
   "husky": {
     "hooks": {
