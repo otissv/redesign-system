@@ -3,10 +3,10 @@ name: Alert
 route: /alert
 ---
 
-import { Playground, Props } from 'docz';
-import { Flex } from '../Flex';
-import { ThemeProvider } from '../ThemeContext/ThemeProvider';
-import Alert from './Alert';
+import { Playground, Props } from 'docz'
+import { Flex } from '../Flex'
+import { ThemeProvider } from '../ThemeContext/ThemeProvider'
+import Alert from './Alert'
 
 # Alert
 
@@ -109,5 +109,24 @@ import Alert from './Alert';
       </Flex>
     </section>
 
+  </ThemeProvider>
+</Playground>
+
+## Close
+
+<Playground>
+  <ThemeProvider>
+    <Alert
+      onClose={e => {
+        alert('close clicked')
+      }}
+      appearance="primary"
+      margin3="right bottom"
+      css={`
+        width: 200px;
+      `}
+    >
+      Alert
+    </Alert>
   </ThemeProvider>
 </Playground>

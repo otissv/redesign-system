@@ -7,7 +7,7 @@ import { AlertInterface } from './alert.types'
 import { alertTheme, alertAppearanceTheme } from './alert.theme'
 
 const Close = styled.a<AlertInterface>`
-  display: ${props => (props.onClose ? 'inline-block' : 'none')};
+  display: ${props => (props.close ? 'inline-block' : 'none')};
   position: absolute;
   top: 20px;
   right: 15px;
@@ -24,11 +24,13 @@ const Close = styled.a<AlertInterface>`
   background-color: transparent;
   fill: currentcolor;
   line-height: 0;
+  cursor: pointer;
 `
 
 export const Alert = React.memo(function Alert({
   children,
   className = '',
+  onClose,
   themed = [],
   ...propsRest
 }: AlertInterface) {
@@ -41,11 +43,14 @@ export const Alert = React.memo(function Alert({
 
   const handleOnClose = useCallback(function handleOnClose(e: any) {
     e.preventDefault()
+    onClose(e)
   }, [])
+
+  const close = typeof onClose === 'function'
 
   return (
     <Base className={classNames} themed={_themed} {...propsRest}>
-      <Close onClick={handleOnClose}>
+      <Close onClick={handleOnClose} close={close}>
         <svg
           width="14"
           height="14"
