@@ -23,14 +23,6 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-button-group-button-group" */ 'src/ButtonGroup/buttonGroup.mdx'
     ),
-  'src/ButtonIcon/buttonIcon.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-button-icon-button-icon" */ 'src/ButtonIcon/buttonIcon.mdx'
-    ),
-  'src/Card/card.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-card-card" */ 'src/Card/card.mdx'
-    ),
   'src/Container/container.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-container-container" */ 'src/Container/container.mdx'
@@ -39,9 +31,17 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-cover-img-cover-img" */ 'src/CoverImg/coverImg.mdx'
     ),
+  'src/Card/card.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-card-card" */ 'src/Card/card.mdx'
+    ),
   'src/Dropdown/dropdown.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-dropdown-dropdown" */ 'src/Dropdown/dropdown.mdx'
+    ),
+  'src/ButtonIcon/buttonIcon.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-button-icon-button-icon" */ 'src/ButtonIcon/buttonIcon.mdx'
     ),
   'src/ErrorMessage/ErrorMessage.mdx': () =>
     import(
@@ -59,10 +59,6 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-goolge-maps-google-maps" */ 'src/GoolgeMaps/GoogleMaps.mdx'
     ),
-  'src/Icon/Icons.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-icon-icons" */ 'src/Icon/Icons.mdx'
-    ),
   'src/Img/img.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-img-img" */ 'src/Img/img.mdx'
@@ -70,6 +66,10 @@ export const imports = {
   'src/Input/input.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-input-input" */ 'src/Input/input.mdx'
+    ),
+  'src/Icon/Icons.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-icon-icons" */ 'src/Icon/Icons.mdx'
     ),
   'src/Portal/portal.mdx': () =>
     import(
