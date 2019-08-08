@@ -7514,15 +7514,6 @@
                 "name": "boolean"
               }
             },
-            "onClose": {
-              "defaultValue": null,
-              "description": "",
-              "name": "onClose",
-              "required": false,
-              "type": {
-                "name": "any"
-              }
-            },
             "onBlur": {
               "defaultValue": null,
               "description": "",
@@ -7566,15 +7557,6 @@
               "required": false,
               "type": {
                 "name": "number"
-              }
-            },
-            "styled": {
-              "defaultValue": null,
-              "description": "",
-              "name": "styled",
-              "required": false,
-              "type": {
-                "name": "string"
               }
             },
             "valid": {
@@ -7692,15 +7674,6 @@
                 "name": "boolean"
               }
             },
-            "onClose": {
-              "defaultValue": null,
-              "description": "",
-              "name": "onClose",
-              "required": false,
-              "type": {
-                "name": "any"
-              }
-            },
             "onBlur": {
               "defaultValue": null,
               "description": "",
@@ -7744,15 +7717,6 @@
               "required": false,
               "type": {
                 "name": "number"
-              }
-            },
-            "styled": {
-              "defaultValue": null,
-              "description": "",
-              "name": "styled",
-              "required": false,
-              "type": {
-                "name": "string"
               }
             },
             "valid": {
@@ -8404,61 +8368,6 @@
               "required": true,
               "type": {
                 "name": "{ current: HTMLElement; }"
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/Table/AllSelectedHeading.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "AllSelectedHeading",
-          "methods": [],
-          "props": {
-            "checked": {
-              "defaultValue": null,
-              "description": "",
-              "name": "checked",
-              "required": true,
-              "type": {
-                "name": "boolean"
-              }
-            },
-            "onChange": {
-              "defaultValue": null,
-              "description": "",
-              "name": "onChange",
-              "required": true,
-              "type": {
-                "name": "(e: ChangeEvent<HTMLInputElement>) => void"
-              }
-            }
-          }
-        },
-        {
-          "description": "",
-          "displayName": "NamedExoticComponent",
-          "methods": [],
-          "props": {
-            "checked": {
-              "defaultValue": null,
-              "description": "",
-              "name": "checked",
-              "required": true,
-              "type": {
-                "name": "boolean"
-              }
-            },
-            "onChange": {
-              "defaultValue": null,
-              "description": "",
-              "name": "onChange",
-              "required": true,
-              "type": {
-                "name": "(e: ChangeEvent<HTMLInputElement>) => void"
               }
             }
           }
@@ -115272,6 +115181,61 @@
           }
         }
       ]
+    },
+    {
+      "key": "src/Table/AllSelectedHeading.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "AllSelectedHeading",
+          "methods": [],
+          "props": {
+            "checked": {
+              "defaultValue": null,
+              "description": "",
+              "name": "checked",
+              "required": true,
+              "type": {
+                "name": "boolean"
+              }
+            },
+            "onChange": {
+              "defaultValue": null,
+              "description": "",
+              "name": "onChange",
+              "required": true,
+              "type": {
+                "name": "(e: ChangeEvent<HTMLInputElement>) => void"
+              }
+            }
+          }
+        },
+        {
+          "description": "",
+          "displayName": "NamedExoticComponent",
+          "methods": [],
+          "props": {
+            "checked": {
+              "defaultValue": null,
+              "description": "",
+              "name": "checked",
+              "required": true,
+              "type": {
+                "name": "boolean"
+              }
+            },
+            "onChange": {
+              "defaultValue": null,
+              "description": "",
+              "name": "onChange",
+              "required": true,
+              "type": {
+                "name": "(e: ChangeEvent<HTMLInputElement>) => void"
+              }
+            }
+          }
+        }
+      ]
     }
   ],
   "entries": [
@@ -115292,9 +115256,63 @@
             "value": "Accordion"
           },
           {
+            "slug": "properties",
+            "depth": 2,
+            "value": "Properties"
+          },
+          {
+            "slug": "accordion-props",
+            "depth": 2,
+            "value": "Accordion Props"
+          },
+          {
+            "slug": "accordionitem-props",
+            "depth": 2,
+            "value": "AccordionItem Props"
+          },
+          {
+            "slug": "accordionbutton-props",
+            "depth": 2,
+            "value": "AccordionButton Props"
+          },
+          {
+            "slug": "accordioncontent-props",
+            "depth": 2,
+            "value": "AccordionContent Props"
+          },
+          {
             "slug": "default",
-            "depth": 3,
+            "depth": 2,
             "value": "Default"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/AppBar/appBar.mdx",
+      "value": {
+        "name": "AppBar",
+        "route": "/app-bar",
+        "id": "b11a5b5c63752a686266c86c117dfafa",
+        "filepath": "src/AppBar/appBar.mdx",
+        "link": "",
+        "slug": "src-app-bar-app-bar",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "appbar",
+            "depth": 1,
+            "value": "AppBar"
+          },
+          {
+            "slug": "properties",
+            "depth": 2,
+            "value": "Properties"
+          },
+          {
+            "slug": "context",
+            "depth": 2,
+            "value": "Context"
           }
         ]
       }
@@ -115329,35 +115347,11 @@
             "slug": "context",
             "depth": 2,
             "value": "Context"
-          }
-        ]
-      }
-    },
-    {
-      "key": "src/AppBar/appBar.mdx",
-      "value": {
-        "name": "AppBar",
-        "route": "/app-bar",
-        "id": "b11a5b5c63752a686266c86c117dfafa",
-        "filepath": "src/AppBar/appBar.mdx",
-        "link": "",
-        "slug": "src-app-bar-app-bar",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "appbar",
-            "depth": 1,
-            "value": "AppBar"
           },
           {
-            "slug": "properties",
+            "slug": "close",
             "depth": 2,
-            "value": "Properties"
-          },
-          {
-            "slug": "context",
-            "depth": 2,
-            "value": "Context"
+            "value": "Close"
           }
         ]
       }
@@ -115528,6 +115522,40 @@
             "slug": "collapse",
             "depth": 2,
             "value": "Collapse"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/Checkbox/checkbox.mdx",
+      "value": {
+        "name": "Checkbox",
+        "route": "/checkbox",
+        "id": "c118c3866aa1e63e4c929c674d4a9e18",
+        "filepath": "src/Checkbox/checkbox.mdx",
+        "link": "",
+        "slug": "src-checkbox-checkbox",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "checkbox",
+            "depth": 1,
+            "value": "Checkbox"
+          },
+          {
+            "slug": "properties",
+            "depth": 2,
+            "value": "Properties"
+          },
+          {
+            "slug": "default",
+            "depth": 2,
+            "value": "Default"
+          },
+          {
+            "slug": "appearace",
+            "depth": 2,
+            "value": "Appearace"
           }
         ]
       }
