@@ -1,15 +1,12 @@
 import { BaseInterface } from '../Base'
 import { AppearanceExtendedType } from '../theme'
 
-export interface InputInterface extends BaseInterface {
+export interface CheckboxInterface extends BaseInterface {
   appearance?: AppearanceExtendedType
-  stretch?: boolean
+  checked?: boolean
+  id?: string
+  name?: string
   onBlur?: (e: React.MouseEvent<HTMLInputElement>) => void
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
   onFocus?: (e: React.MouseEvent<HTMLInputElement>) => void
-  placeholder?: string
-  size?: number
-  valid?: boolean
-  value?: string
-  widths?: number
 }

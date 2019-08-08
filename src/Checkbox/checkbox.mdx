@@ -1,0 +1,120 @@
+---
+name: Checkbox
+route: /checkbox
+---
+
+import { Playground, Props } from 'docz'
+import { Fragment } from 'react'
+import Checkbox from './Checkbox'
+import { Container } from '../Container'
+import { ThemeProvider } from '../ThemeContext/ThemeProvider'
+import { CheckboxExample } from './checkbox.example'
+
+# Checkbox
+
+## Properties
+
+<Props of={Checkbox} />
+
+## Default
+
+<Playground>
+  <ThemeProvider>
+    <Checkbox />
+  </ThemeProvider>
+</Playground>
+
+## Appearace
+
+<Playground>
+  <ThemeProvider>
+    <CheckboxExample>
+      {(checked, onChange) => (
+        <Container>
+          <label>
+            <Checkbox appearance="accent" marginRight={3} />
+            Accent
+          </label>
+        </Container>
+      )}
+    </CheckboxExample>
+
+     <CheckboxExample>
+      {(checked, onChange) => (
+        <Container>
+          <label>
+            <Checkbox appearance="action" marginRight={3} />
+            Action
+          </label>
+        </Container>
+      )}
+    </CheckboxExample>
+
+    <CheckboxExample>
+      {(checked, onChange) => (
+        <Container>
+          <label>
+            <Checkbox appearance="active" marginRight={3} />
+            Active
+          </label>
+        </Container>
+      )}
+    </CheckboxExample>
+
+    <CheckboxExample>
+      {(checked, onChange) => (
+        <Container>
+          <label>
+            <Checkbox appearance="danger" marginRight={3} />
+            Danger
+          </label>
+        </Container>
+      )}
+    </CheckboxExample>
+
+    <CheckboxExample>
+      {(checked, onChange) => (
+        <Container>
+          <label>
+            <Checkbox appearance="error" marginRight={3} />
+            Error
+          </label>
+        </Container>
+      )}
+    </CheckboxExample>
+
+    <CheckboxExample>
+      {(checked, onChange) => (
+        <Container>
+          <label>
+            <Checkbox appearance="success" marginRight={3} />
+            Success
+          </label>
+        </Container>
+      )}
+    </CheckboxExample>
+
+    <CheckboxExample>
+      {(checked, onChange) => (
+        <Container>
+          <label>
+            <Checkbox appearance="warning" marginRight={3} />
+            Warning
+          </label>
+        </Container>
+      )}
+    </CheckboxExample>
+
+    <CheckboxExample>
+      {(checked, onChange) => (
+        <Container>
+          <label>
+            <Checkbox appearance="disabled" marginRight={3} checked />
+            Disabled
+          </label>
+        </Container>
+      )}
+    </CheckboxExample>
+
+  </ThemeProvider>
+</Playground>
