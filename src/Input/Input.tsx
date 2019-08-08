@@ -12,10 +12,7 @@ import { InputInterface } from './input.types'
 export const Input = React.memo(function Input({
   children,
   className = '',
-  context = null,
-  onBlur = () => {},
-  onChange = () => {},
-  onFocus = () => {},
+  onChange,
   placeholder = null,
   size = null,
   themed = [],
@@ -44,10 +41,7 @@ export const Input = React.memo(function Input({
   )
 
   const props = {
-    context,
-    onBlur,
     onChange,
-    onFocus,
     placeholder,
     size,
     widths,

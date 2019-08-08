@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { TableRowSelectInterface } from './table.types'
 
+import { TableRowSelectInterface } from './table.types'
+import { Checkbox } from '../Checkbox'
 export const TableRowSelect = function TableRowSelect({
   handleChange,
   id,
@@ -22,12 +23,10 @@ export const TableRowSelect = function TableRowSelect({
 
   return (
     <td style={{ width: '48px' }}>
-      <input
+      <Checkbox
         checked={isChecked}
         onChange={changed}
         name={id}
-        style={{ cursor: 'pointer' }}
-        type="checkbox"
         {...propsRest}
       />
     </td>
