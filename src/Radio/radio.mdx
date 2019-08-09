@@ -1,0 +1,87 @@
+---
+name: Radio
+route: /radio
+---
+
+import { Playground, Props } from 'docz'
+import { Fragment } from 'react'
+import Radio from './Radio'
+import { Container } from '../Container'
+import { ThemeProvider } from '../ThemeContext/ThemeProvider'
+import { RadioExample } from './radio.example'
+
+# Radio
+
+## Properties
+
+<Props of={Radio} />
+
+## Default
+
+<Playground>
+  <ThemeProvider>
+
+    <Radio name="chooseone" value="HTML" label ='HTML' id='html' />
+    <Radio name="chooseone" value="CSS" label ='CSS' id='css' />
+    <Radio name="chooseone" value="HTML" label ='JavaScript' id='javascript' />
+
+  </ThemeProvider>
+</Playground>
+
+## Appearace
+
+<Playground>
+  <ThemeProvider>
+
+    <Container marginBottom={4}>
+      <h3 style={{fontSize: '16px', marginBottom: '10px'}}>Accent</h3>
+      <Radio appearance='accent' name="accent" value="Accent 1" label ='One' id='Accent1' />
+      <Radio appearance='accent' name="accent" value="Accent 2" label ='Two' id='Accent2' />
+      <Radio appearance='accent' name="accent" value="Accent 3" label ='Three' id='Accent3' />
+    </Container>
+
+    <Container marginBottom={4}>
+      <h3 style={{fontSize: '16px', marginBottom: '10px'}}>Action</h3>
+      <Radio appearance='action' name="action" value="Action1" label ='One' id='Action1' />
+      <Radio appearance='action' name="action" value="Action2" label ='Two' id='Action2' />
+      <Radio appearance='action' name="action" value="Action3" label ='Three' id='Action3' />
+    </Container>
+
+
+    <Container  marginBottom={4}>
+      <h3 style={{fontSize: '16px', marginBottom: '10px'}}>Active</h3>
+      <Radio appearance='active' name="active" value="Active1" label ='One' id='Active1' />
+      <Radio appearance='active' name="active" value="Active2" label ='Two' id='Active2' />
+      <Radio appearance='active' name="active" value="Active3" label ='Three' id='Active3' />
+    </Container>
+
+    <Container  marginBottom={4}>
+      <h3 style={{fontSize: '16px', marginBottom: '10px'}}>Danger</h3>
+      <Radio appearance='danger' name="danger" value="Danger1" label ='One' id='Danger1' />
+      <Radio appearance='danger' name="danger" value="Danger2" label ='Two' id='Danger2' />
+      <Radio appearance='danger' name="danger" value="Danger3" label ='Three' id='Danger3' />
+    </Container>
+
+    <Container  marginBottom={4}>
+      <h3 style={{fontSize: '16px', marginBottom: '10px'}}>Error</h3>
+      <Radio appearance='error' name="error" value="Error1" label ='One' id='Error1' />
+      <Radio appearance='error' name="error" value="Error2" label ='Two' id='Error2' />
+      <Radio appearance='error' name="error" value="Error3" label ='Three' id='Error3' />
+    </Container>
+
+     <Container  marginBottom={4}>
+      <h3 style={{fontSize: '16px', marginBottom: '10px'}}>Success</h3>
+      <Radio appearance='success' name="success" value="Success1" label ='One' id='Success1' />
+      <Radio appearance='success' name="success" value="Success2" label ='Two' id='Success2' />
+      <Radio appearance='success' name="success" value="Success3" label ='Three' id='Success3' />
+    </Container>
+
+    <Container  marginBottom={4}>
+      <h3 style={{fontSize: '16px', marginBottom: '10px'}}>Disabled</h3>
+      <Radio appearance='disabled' name="disabled" value="Disabled1" label ='One' id='Disabled1' />
+      <Radio appearance='disabled' name="disabled" value="Disabled2" label ='Two' id='Disabled2' />
+      <Radio appearance='disabled' name="disabled" value="Disabled3" label ='Three' id='Disabled3' />
+    </Container>
+
+  </ThemeProvider>
+</Playground>

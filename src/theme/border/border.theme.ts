@@ -1,15 +1,15 @@
-import upperFirst from 'lodash/fp/upperFirst';
-import merge from 'lodash/fp/merge';
-import camelCase from 'lodash/camelCase';
-import { BorderInterface, ThemeInterface } from '../theme.types';
+import upperFirst from 'lodash/fp/upperFirst'
+import merge from 'lodash/fp/merge'
+import camelCase from 'lodash/camelCase'
+import { BorderInterface, ThemeInterface } from '../theme.types'
 
 export function borderTheme({ border, color }: ThemeInterface) {
-  const style = 'solid';
-  const dash = 'dashed';
-  const thickWidth = '4px';
-  const thickColor = color['grey-700'];
-  const thinWidth = '1px';
-  const thinColor = color['grey-700'];
+  const style = 'solid'
+  const dash = 'dashed'
+  const thickWidth = '2px'
+  const thickColor = color['grey-700']
+  const thinWidth = '1px'
+  const thinColor = color['grey-700']
 
   const defaults: BorderInterface = {
     none: 'none',
@@ -53,7 +53,7 @@ export function borderTheme({ border, color }: ThemeInterface) {
       }),
       {}
     ),
-  };
+  }
 
-  return merge(border)(defaults);
+  return merge(border)(defaults)
 }
