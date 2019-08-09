@@ -1,6 +1,6 @@
 import upperFirst from 'lodash/fp/upperFirst'
 
-import { CheckboxInterface } from './checkbox.types'
+import { RadioInterface } from './radio.types'
 import { ColorsInterface, AppearanceColorsType } from '../theme'
 
 function getAppearance({
@@ -13,63 +13,73 @@ function getAppearance({
   return color[appearance] || color.default
 }
 
-export function checkboxTheme({
+export function radioTheme() {
+  return {
+    display: 'inline-block',
+  }
+}
+
+export function radioContainerTheme({
   appearance,
   theme: { color, animation, border, unit },
-}: CheckboxInterface) {
+}: RadioInterface) {
+  const positionAbsolute = {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+  }
+
   return {
     position: 'relative',
     height: unit[5],
     width: unit[5],
-    border: border[`thick${upperFirst(appearance)}`] || border.thin,
     color: '#fff',
     cursor: 'pointer',
     display: 'inline-block',
     top: '5px',
 
+    label: {
+      marginRight: unit[3],
+    },
+
     input: {
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      width: '100%',
-      height: '100%',
+      ...positionAbsolute,
       margin: 0,
       padding: 0,
       opacity: 0,
       cursor: 'inherit',
     },
 
-    '.CheckboxBackground': {
+    '.RadioBackground': {
       width: 'inherit',
       height: 'inherit',
       pointerEvents: 'none',
-      position: 'relative',
-      top: '-2px',
-      left: '-2px',
     },
 
-    '.CheckboxCheckmark': {
-      strokeWidth: '3.12px',
-      strokeDasharray: 29.7833385,
+    '.RadioInnerCircle': {
+      ...positionAbsolute,
+      borderRadius: '50%',
+      border: border[`thick${upperFirst(appearance)}`] || border.thin,
+    },
+
+    '.RadioOuterCircle': {
+      ...positionAbsolute,
+      borderRadius: '50%',
       opacity: 0,
+      background: getAppearance({ appearance, color }),
       transform: 'scale(0)',
-      position: 'absolute',
-      top: 0,
-      left: 0,
       transformOrigin: 'center center',
       transition: animation.easeFast(),
     },
 
-    '.CheckboxBackground, .CheckboxCheckmark': {
-      transition: animation.easeFast(),
-    },
+    'input:checked+.RadioBackground': {
+      '.RadioOuterCircle': {
+        background: getAppearance({ appearance, color }),
 
-    'input:checked+.CheckboxBackground, input:indeterminate+.CheckboxBackground': {
-      background: getAppearance({ appearance, color }),
-
-      '.CheckboxCheckmark': {
         opacity: 1,
-        transform: 'scale(0.7)',
+        transform: 'scale(0.5)',
       },
     },
   }
