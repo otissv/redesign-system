@@ -3,13 +3,13 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-accordion-accordion" */ 'src/Accordion/accordion.mdx'
     ),
-  'src/AppBar/appBar.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-app-bar-app-bar" */ 'src/AppBar/appBar.mdx'
-    ),
   'src/Alert/alert.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-alert-alert" */ 'src/Alert/alert.mdx'
+    ),
+  'src/AppBar/appBar.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-app-bar-app-bar" */ 'src/AppBar/appBar.mdx'
     ),
   'src/Badge/badge.mdx': () =>
     import(
@@ -31,13 +31,13 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-card-card" */ 'src/Card/card.mdx'
     ),
-  'src/Checkbox/checkbox.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-checkbox-checkbox" */ 'src/Checkbox/checkbox.mdx'
-    ),
   'src/Container/container.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-container-container" */ 'src/Container/container.mdx'
+    ),
+  'src/Checkbox/checkbox.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-checkbox-checkbox" */ 'src/Checkbox/checkbox.mdx'
     ),
   'src/CoverImg/coverImg.mdx': () =>
     import(
@@ -78,6 +78,10 @@ export const imports = {
   'src/Portal/portal.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-portal-portal" */ 'src/Portal/portal.mdx'
+    ),
+  'src/Radio/radio.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-radio-radio" */ 'src/Radio/radio.mdx'
     ),
   'src/Table/table.mdx': () =>
     import(
