@@ -894,7 +894,7 @@
           v = Object(l.useMemo)(
             function() {
               return t.reduce(function(e, t) {
-                return 'TableRowDetail' === t.type.displayName
+                return 'detail' === t.props.uid
                   ? ((x.current = function() {
                       return t
                     }),
@@ -1246,9 +1246,9 @@
                   'tr',
                   null,
                   i.reduce(function(e, t, n) {
-                    var a = t.type,
-                      l = t.props.heading
-                    return 'TableRowDetail' === a.displayName
+                    var a = t.props,
+                      l = a.heading
+                    return 'detail' === a.uid
                       ? [o.a.createElement('th', { key: n })].concat(
                           Object(d.a)(e)
                         )
@@ -2977,7 +2977,7 @@
             {
               __position: 6,
               __code:
-                '<ThemeProvider>\n  <Table\n    height="250px"\n    name="TableDeafult"\n    caption="Table caption"\n    baseRoute="/table/#"\n    hook={useTable}\n  >\n    <TableColumn heading="#" uid="index" prop="__index" />\n\n    <TableColumn heading="ID" uid="id" prop="id" />\n\n    <TableColumn heading="Name" uid="name" prop="name" />\n\n    <TableColumn heading="Endpoint" uid="endpoint">\n      {({ data }) => (\n        <td>\n          <a href="/table/#" onClick={e => e.preventDefault()}>\n            {data.endpoint}\n          </a>\n        </td>\n      )}\n    </TableColumn>\n\n    <TableRowDetail>\n      <table>\n        <thead>\n          <tr>\n            <th>IP</th>\n            <th>Repository</th>\n            <th>Port</th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr>\n            <td>0.0.0.1</td>\n            <td>repo1</td>\n            <td>8081</td>\n          </tr>\n        </tbody>\n      </table>\n    </TableRowDetail>\n  </Table>\n</ThemeProvider>',
+                '<ThemeProvider>\n  <Table\n    height="250px"\n    name="TableDeafult"\n    caption="Table caption"\n    baseRoute="/table/#"\n    hook={useTable}\n  >\n    <TableColumn heading="#" uid="index" prop="__index" />\n\n    <TableColumn heading="ID" uid="id" prop="id" />\n\n    <TableColumn heading="Name" uid="name" prop="name" />\n\n    <TableColumn heading="Endpoint" uid="endpoint">\n      {({ data }) => (\n        <td>\n          <a href="/table/#" onClick={e => e.preventDefault()}>\n            {data.endpoint}\n          </a>\n        </td>\n      )}\n    </TableColumn>\n\n    <TableRowDetail uid="detail">\n      <table>\n        <thead>\n          <tr>\n            <th>IP</th>\n            <th>Repository</th>\n            <th>Port</th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr>\n            <td>0.0.0.1</td>\n            <td>repo1</td>\n            <td>8081</td>\n          </tr>\n        </tbody>\n      </table>\n    </TableRowDetail>\n  </Table>\n</ThemeProvider>',
               __scope: {
                 props: this ? this.props : n,
                 Playground: i.c,
@@ -3052,7 +3052,7 @@
                 ),
                 Object(c.b)(
                   Ee,
-                  { mdxType: 'TableRowDetail' },
+                  { uid: 'detail', mdxType: 'TableRowDetail' },
                   Object(c.b)(
                     'table',
                     null,
@@ -3093,7 +3093,7 @@
             {
               __position: 7,
               __code:
-                '<ThemeProvider>\n  <Table\n    height="250px"\n    name="TableDeafult"\n    caption="Table caption"\n    baseRoute="/table/#"\n    hook={useTable}\n  >\n    <TableColumn heading="#" uid="index" prop="__index" />\n\n    <TableColumn heading="ID" uid="id" prop="id" />\n\n    <TableColumn heading="Name" uid="name" prop="name" />\n\n    <TableColumn heading="Endpoint" uid="endpoint">\n      {({ data }) => (\n        <td>\n          <a href="/table/#" onClick={e => e.preventDefault()}>\n            {data.endpoint}\n          </a>\n        </td>\n      )}\n    </TableColumn>\n\n    <TableRowDetail>\n      {({ data }) => (\n        <table>\n          <thead>\n            <tr>\n              <th>IP</th>\n              <th>Repository</th>\n              <th>Port</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr>\n              <td>{data.ip}</td>\n              <td>{data.repo}</td>\n              <td>{data.port}</td>\n            </tr>\n          </tbody>\n        </table>\n      )}\n    </TableRowDetail>\n  </Table>\n</ThemeProvider>',
+                '<ThemeProvider>\n  <Table\n    height="250px"\n    name="TableDeafult"\n    caption="Table caption"\n    baseRoute="/table/#"\n    hook={useTable}\n  >\n    <TableColumn heading="#" uid="index" prop="__index" />\n\n    <TableColumn heading="ID" uid="id" prop="id" />\n\n    <TableColumn heading="Name" uid="name" prop="name" />\n\n    <TableColumn heading="Endpoint" uid="endpoint">\n      {({ data }) => (\n        <td>\n          <a href="/table/#" onClick={e => e.preventDefault()}>\n            {data.endpoint}\n          </a>\n        </td>\n      )}\n    </TableColumn>\n\n    <TableRowDetail uid="detail">\n      {({ data }) => (\n        <table>\n          <thead>\n            <tr>\n              <th>IP</th>\n              <th>Repository</th>\n              <th>Port</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr>\n              <td>{data.ip}</td>\n              <td>{data.repo}</td>\n              <td>{data.port}</td>\n            </tr>\n          </tbody>\n        </table>\n      )}\n    </TableRowDetail>\n  </Table>\n</ThemeProvider>',
               __scope: {
                 props: this ? this.props : n,
                 Playground: i.c,
@@ -3166,12 +3166,39 @@
                     )
                   }
                 ),
-                Object(c.b)(Ee, { mdxType: 'TableRowDetail' }, function(e) {
-                  var t = e.data
-                  return Object(
-                    c.b
-                  )('table', null, Object(c.b)('thead', null, Object(c.b)('tr', null, Object(c.b)('th', null, 'IP'), Object(c.b)('th', null, 'Repository'), Object(c.b)('th', null, 'Port'))), Object(c.b)('tbody', null, Object(c.b)('tr', null, Object(c.b)('td', null, t.ip), Object(c.b)('td', null, t.repo), Object(c.b)('td', null, t.port))))
-                })
+                Object(c.b)(
+                  Ee,
+                  { uid: 'detail', mdxType: 'TableRowDetail' },
+                  function(e) {
+                    var t = e.data
+                    return Object(c.b)(
+                      'table',
+                      null,
+                      Object(c.b)(
+                        'thead',
+                        null,
+                        Object(c.b)(
+                          'tr',
+                          null,
+                          Object(c.b)('th', null, 'IP'),
+                          Object(c.b)('th', null, 'Repository'),
+                          Object(c.b)('th', null, 'Port')
+                        )
+                      ),
+                      Object(c.b)(
+                        'tbody',
+                        null,
+                        Object(c.b)(
+                          'tr',
+                          null,
+                          Object(c.b)('td', null, t.ip),
+                          Object(c.b)('td', null, t.repo),
+                          Object(c.b)('td', null, t.port)
+                        )
+                      )
+                    )
+                  }
+                )
               )
             )
           )
@@ -3669,4 +3696,4 @@
     },
   },
 ])
-//# sourceMappingURL=src-table-table.d26d79b5d0539dda5417.js.map
+//# sourceMappingURL=src-table-table.5a777fd46df50694fdd3.js.map
