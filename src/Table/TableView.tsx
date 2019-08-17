@@ -2,57 +2,64 @@ import React, { Fragment, useMemo } from 'react'
 
 import { TableViewInterface } from './table.types'
 import TableBody from './TableBody'
-
+import { TableHeadingsProvider } from './TableHeadingsContext'
 export const TableView = React.memo(function TableView({
   allSelected,
   baseRoute = '',
+  children,
+  data,
   dispatch,
-  handleAdd,
-  handleDeleteSelected,
-  headings,
   itemsToArray,
   loading,
-  rows,
+  onAdd,
+  onAllSelectedChange,
+  onDeleteSelected,
   selected,
   tableName,
   ...propsRest
 }: TableViewInterface) {
   const tableHeadings = useMemo(
-    () =>
-      headings && (
-        <thead>
-          <tr>
-            {headings.map((heading, i) =>
-              typeof heading === 'function' ? (
-                <th key={i}>{heading()}</th>
-              ) : (
-                <th key={i}>{heading}</th>
-              )
-            )}
-          </tr>
-        </thead>
-      ),
-    [headings]
+    () => (
+      <thead>
+        <tr>
+          {children.reduce(
+            (acc: any[], { type, props: { heading } }, i: number) =>
+              type.displayName === 'TableRowDetail'
+                ? [<th key={i}></th>, ...acc]
+                : [...acc, <th key={i}>{heading}</th>],
+            []
+          )}
+        </tr>
+      </thead>
+    ),
+    [children]
   )
 
   return (
     <Fragment>
-      {tableHeadings}
-
-      <TableBody
+      <TableHeadingsProvider
         allSelected={allSelected}
-        baseRoute={baseRoute}
-        className="TableView"
-        dispatch={dispatch}
-        handleAdd={handleAdd}
-        handleDeleteSelected={handleDeleteSelected}
-        rows={rows}
-        tableName={tableName}
-        loading={loading}
-        selected={selected}
-        itemsToArray={itemsToArray}
-        {...propsRest}
-      />
+        data={data}
+        onAllSelectedChange={onAllSelectedChange}
+      >
+        {tableHeadings}
+
+        <TableBody
+          baseRoute={baseRoute}
+          className="TableView"
+          dispatch={dispatch}
+          onAdd={onAdd}
+          onDeleteSelected={onDeleteSelected}
+          tableName={tableName}
+          loading={loading}
+          selected={selected}
+          itemsToArray={itemsToArray}
+          data={data}
+          {...propsRest}
+        >
+          {children}
+        </TableBody>
+      </TableHeadingsProvider>
     </Fragment>
   )
 })

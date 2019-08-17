@@ -11,6 +11,8 @@ import { Table } from './Table'
 import { useTable } from './table.example'
 import { TableRowSelect } from './TableRowSelect'
 import { AllSelectedHeading } from './AllSelectedHeading'
+import { TableColumn } from './TableColumn'
+import { TableRowDetail } from './TableRowDetail'
 
 # Table
 
@@ -26,40 +28,40 @@ import { AllSelectedHeading } from './AllSelectedHeading'
       height='250px'
       name='TableDeafult'
       caption="Table caption"
-      headings={['','ID', 'Name', 'Endpoint', '']}
       baseRoute='/table/#'
       hook={useTable}
-      rows={items =>
-        items.map(({ id, name, endpoint }, index) => ({
-          column: [
-            {
-              key: 'index',
-              component: ({ handleChange, selected }) => <td>{index}</td>,
-            },
-            {
-              key: 'id',
-              component: () => <td>{id}</td>,
-            },
-            {
-              key: 'name',
-              component: () => <td>{name}</td>,
-            },
-            {
-              key: 'endpoint',
-              component: () => <td><a href="#">{endpoint}</a></td>,
-            },
-            {
-              key: "actions",
-              component: ({ Edit }) => (
-                <td style={{ textAlign: "right" }}>
-                  <Edit appearance='tertiary' uid={name} />
-                </td>
-              )
-            },
-          ],
-        }))
-      }
-    />
+    >
+
+    <TableColumn
+          heading='#'
+          uid='index'
+          prop='__index'
+        />
+
+      <TableColumn
+          heading='ID'
+          uid='id'
+          prop='id'
+        />
+
+      <TableColumn
+        heading='Name'
+        uid='name'
+        prop='name'
+      />
+
+      <TableColumn
+        heading='Endpoint'
+        uid='endpoint'
+
+      >
+        {({ data }) => <td>
+          <a href='/table/#' onClick={e => e.preventDefault()}>{data.endpoint}</a>
+        </td>}
+
+      </TableColumn>
+
+    </Table>
 
   </ThemeProvider>
 </Playground>
@@ -72,41 +74,33 @@ import { AllSelectedHeading } from './AllSelectedHeading'
       height="250px"
       name="TableSelect"
       selectable
-      headings={['', 'ID', 'Name', 'Endpoint']}
       hook={useTable}
-      rows={items =>
-        items.map(({ id, name, endpoint }) => ({
-          column: [
-            {
-              key: 'select',
-              component: ({ handleChange, selected }) => (
-                <TableRowSelect
-                  id={id}
-                  handleChange={handleChange}
-                  selected={selected}
-                />
-              ),
-            },
-            {
-              key: 'id',
-              component: () => <td>{id}</td>,
-            },
-            {
-              key: 'name',
-              component: () => <td>{name}</td>,
-            },
-            {
-              key: 'endpoint',
-              component: () => (
-                <td>
-                  <a href="#">{endpoint}</a>
-                </td>
-              ),
-            },
-          ],
-        }))
-      }
-    />
+      >
+        <TableColumn uid='select'
+          heading={<AllSelectedHeading/>}
+        >
+          <TableRowSelect />
+        </TableColumn>
+
+        <TableColumn
+          heading='ID'
+          uid='id'
+          prop='id'
+        />
+
+        <TableColumn
+          heading='Name'
+          uid='name'
+          prop='name'
+        />
+
+        <TableColumn
+          heading='Endpoint'
+          uid='endpoint'
+          prop='endpoint'
+        />
+      </Table>
+
   </ThemeProvider>
 </Playground>
 
@@ -120,29 +114,26 @@ import { AllSelectedHeading } from './AllSelectedHeading'
       hover
       headings={['ID', 'Name', 'Endpoint']}
       hook={useTable}
-      rows={items =>
-        items.map(({ id, name, endpoint }) => ({
-          column: [
-            {
-              key: 'id',
-              component: () => <td>{id}</td>,
-            },
-            {
-              key: 'name',
-              component: () => <td>{name}</td>,
-            },
-            {
-              key: 'endpoint',
-              component: () => (
-                <td>
-                  <a href="#">{endpoint}</a>
-                </td>
-              ),
-            },
-          ],
-        }))
-      }
-    />
+      >
+      <TableColumn
+          heading='ID'
+          uid='id'
+          prop='id'
+        />
+
+      <TableColumn
+        heading='Name'
+        uid='name'
+        prop='name'
+      />
+
+      <TableColumn
+        heading='Endpoint'
+        uid='endpoint'
+        prop='endpoint'
+      />
+    </Table>
+
   </ThemeProvider>
 </Playground>
 
@@ -156,29 +147,26 @@ import { AllSelectedHeading } from './AllSelectedHeading'
       condensed
       headings={['ID', 'Name', 'Endpoint']}
       hook={useTable}
-      rows={items =>
-        items.map(({ id, name, endpoint }) => ({
-          column: [
-            {
-              key: 'id',
-              component: () => <td>{id}</td>,
-            },
-            {
-              key: 'name',
-              component: () => <td>{name}</td>,
-            },
-            {
-              key: 'endpoint',
-              component: () => (
-                <td>
-                  <a href="#">{endpoint}</a>
-                </td>
-              ),
-            },
-          ],
-        }))
-      }
-    />
+      >
+      <TableColumn
+          heading='ID'
+          uid='id'
+          prop='id'
+        />
+
+      <TableColumn
+        heading='Name'
+        uid='name'
+        prop='name'
+      />
+
+      <TableColumn
+        heading='Endpoint'
+        uid='endpoint'
+        prop='endpoint'
+      />
+    </Table>
+
   </ThemeProvider>
 </Playground>
 
@@ -191,45 +179,164 @@ import { AllSelectedHeading } from './AllSelectedHeading'
       baseRoute='/table/#'
       name='TableToolbar'
       caption="Table caption"
-      headings={[
-        ({ handleSelectHeadingChange }) => <AllSelectedHeading
-          onChange={handleSelectHeadingChange}
-        />,
-        'ID',
-        'Name',
-        'Endpoint'
-      ]}
       hook={useTable}
       toolbar={['add', 'copy', 'download', 'views']}
-      rows={items =>
-        items.map(({ id, name, endpoint }, index) => ({
-          column: [
-            {
-              key: 'select',
-              component: ({ handleChange, allSelected }) => (
-                <TableRowSelect
-                  id={id}
-                  handleChange={handleChange}
-                  checked={allSelected}
-                />
-              ),
-            },
-            {
-              key: 'id',
-              component: () => <td>{id}</td>,
-            },
-            {
-              key: 'name',
-              component: () => <td>{name}</td>,
-            },
-            {
-              key: 'endpoint',
-              component: () => <td><a href="#">{endpoint}</a></td>,
-            },
-          ],
-        }))
-      }
-    />
+    >
+
+      <TableColumn uid='select'
+        heading={<AllSelectedHeading/>}
+      >
+        <TableRowSelect />
+      </TableColumn>
+
+      <TableColumn
+        heading='ID'
+        uid='id'
+        prop='id'
+      />
+
+      <TableColumn
+        heading='Name'
+        uid='name'
+        prop='name'
+      />
+
+      <TableColumn
+        heading='Endpoint'
+        uid='endpoint'
+        prop='endpoint'
+      />
+
+
+    </Table>
+
+  </ThemeProvider>
+</Playground>
+
+## Row Detail
+
+<Playground>
+  <ThemeProvider>
+    <Table
+      height='250px'
+      name='TableDeafult'
+      caption="Table caption"
+      baseRoute='/table/#'
+      hook={useTable}
+    >
+
+    <TableColumn
+          heading='#'
+          uid='index'
+          prop='__index'
+        />
+
+      <TableColumn
+          heading='ID'
+          uid='id'
+          prop='id'
+        />
+
+      <TableColumn
+        heading='Name'
+        uid='name'
+        prop='name'
+      />
+
+      <TableColumn
+        heading='Endpoint'
+        uid='endpoint'
+
+      >
+        {({ data }) => <td>
+          <a href='/table/#' onClick={e => e.preventDefault()}>{data.endpoint}</a>
+        </td>}
+
+      </TableColumn>
+
+      <TableRowDetail>
+        <table>
+          <thead>
+            <tr>
+              <th>IP</th>
+              <th>Repository</th>
+              <th>Port</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>0.0.0.1</td>
+              <td>repo1</td>
+              <td>8081</td>
+            </tr>
+          </tbody>
+          </table>
+      </TableRowDetail>
+    </Table>
+
+  </ThemeProvider>
+</Playground>
+
+### Render Props Detail
+
+<Playground>
+  <ThemeProvider>
+    <Table
+      height='250px'
+      name='TableDeafult'
+      caption="Table caption"
+      baseRoute='/table/#'
+      hook={useTable}
+    >
+
+    <TableColumn
+          heading='#'
+          uid='index'
+          prop='__index'
+        />
+
+      <TableColumn
+          heading='ID'
+          uid='id'
+          prop='id'
+        />
+
+      <TableColumn
+        heading='Name'
+        uid='name'
+        prop='name'
+      />
+
+      <TableColumn
+        heading='Endpoint'
+        uid='endpoint'
+
+      >
+        {({ data }) => <td>
+          <a href='/table/#' onClick={e => e.preventDefault()}>{data.endpoint}</a>
+        </td>}
+
+      </TableColumn>
+
+      <TableRowDetail>
+        {({ data }) => <table>
+          <thead>
+            <tr>
+              <th>IP</th>
+              <th>Repository</th>
+              <th>Port</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{data.ip}</td>
+              <td>{data.repo}</td>
+              <td>{data.port}</td>
+            </tr>
+          </tbody>
+          </table>}
+      </TableRowDetail>
+    </Table>
 
   </ThemeProvider>
 </Playground>

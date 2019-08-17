@@ -6,16 +6,6 @@ import { Edit } from '../MaterialIcons/Edit'
 import { Download } from '../MaterialIcons/Download'
 import { TableButtonInterface, TableLinkInterface } from './table.types'
 import { ButtonIcon } from '../ButtonIcon'
-// const ButtonIcon = styled.a`
-//   background: #0000;
-//   border: none;
-//   color: #fff;
-//   cursor: pointer;
-//   outline: none;
-//   padding: 0;
-//   transform: translateY(4px);
-//   white-space: nowrap;
-// `;
 
 export const TableButton = React.memo(function TableButton({
   icon: Component,
