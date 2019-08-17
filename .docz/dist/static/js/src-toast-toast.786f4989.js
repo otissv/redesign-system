@@ -1229,21 +1229,23 @@
         a = n('./node_modules/react-dom/index.js'),
         c = o.a.memo(function(e) {
           var t = e.children,
-            n = e.rootRef,
-            o = Object(r.useRef)(document.createElement('div'))
+            n = e.selector,
+            o = void 0 === n ? 'body' : n,
+            c = Object(r.useRef)(document.querySelector(o)),
+            i = Object(r.useRef)(document.createElement('div'))
           return (
             Object(r.useLayoutEffect)(
               function() {
                 return (
-                  n.current && n.current.appendChild(o.current),
+                  c.current && c.current.appendChild(i.current),
                   function() {
-                    n.current && n.current.removeChild(o.current)
+                    c.current && c.current.removeChild(i.current)
                   }
                 )
               },
-              [n.current, o.current]
+              [c.current, i.current]
             ),
-            Object(a.createPortal)(t, n.current)
+            Object(a.createPortal)(t, c.current)
           )
         })
       'undefined' !== typeof c &&
@@ -1404,9 +1406,7 @@
             }
           case 'tertiary':
             return {
-              borderLeft: ''
-                .concat(o.thickWidth, ' solid ')
-                .concat(r.foreground),
+              borderLeft: '4px solid '.concat(r.foreground),
               color: r.foreground,
             }
           case 'accent':
@@ -1415,35 +1415,35 @@
           case 'secondary-accent':
             return { border: o.thinAccent }
           case 'tertiary-accent':
-            return { borderLeft: o.thickAccent }
+            return { borderLeft: '4px solid '.concat(r.accent) }
           case 'action':
           case 'primary-action':
             return { background: r.action, border: o.thinAction }
           case 'secondary-action':
             return { border: o.thinAction }
           case 'tertiary-action':
-            return { borderLeft: o.thickAction }
+            return { borderLeft: '4px solid '.concat(r.action) }
           case 'danger':
           case 'primary-danger':
             return { background: r.danger, border: o.thinDanger }
           case 'secondary-danger':
             return { border: o.thinDanger }
           case 'tertiary-danger':
-            return { borderLeft: o.thickDanger }
+            return { borderLeft: '4px solid '.concat(r.danger) }
           case 'success':
           case 'primary-success':
             return { background: r.success, border: o.thinSuccess }
           case 'secondary-success':
             return { border: o.thinSuccess }
           case 'tertiary-success':
-            return { borderLeft: o.thickSuccess }
+            return { borderLeft: '4px solid '.concat(r.success) }
           case 'warning':
           case 'primary-warning':
             return { background: r.warning, border: o.thinWarning }
           case 'secondary-warning':
             return { border: o.thinWarning }
           case 'tertiary-warning':
-            return { borderLeft: o.thickWarning }
+            return { borderLeft: '4px solid '.concat(r.warning) }
           default:
             return {}
         }
@@ -1563,8 +1563,7 @@
               },
               [v, j]
             ),
-            w = Object(o.useRef)(document.getElementsByTagName('body')[0]),
-            I = Object(o.useMemo)(
+            w = Object(o.useMemo)(
               function() {
                 return (
                   t || {
@@ -1581,7 +1580,7 @@
               },
               [t]
             ),
-            C = i
+            I = i
               .map(function(e) {
                 var t = e.id,
                   n = e.component,
@@ -1594,7 +1593,7 @@
                   f.b,
                   {
                     className: 'Notification',
-                    animate: I,
+                    animate: w,
                     appearance: n.props.appearance,
                     key: t,
                     themed: _,
@@ -1606,11 +1605,11 @@
               .reverse()
           return a.a.createElement(
             g.Portal,
-            { rootRef: w },
+            null,
             a.a.createElement(
               f.b,
               Object.assign({ className: x, element: 'ul', themed: k }, p),
-              a.a.createElement(b.a, null, C)
+              a.a.createElement(b.a, null, I)
             )
           )
         })
@@ -2063,4 +2062,4 @@
     },
   },
 ])
-//# sourceMappingURL=src-toast-toast.3ae2d971195c87fda938.js.map
+//# sourceMappingURL=src-toast-toast.123d966e15eeb904531a.js.map

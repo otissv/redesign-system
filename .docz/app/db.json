@@ -112551,13 +112551,13 @@
           "displayName": "Portal",
           "methods": [],
           "props": {
-            "rootRef": {
+            "selector": {
               "defaultValue": null,
               "description": "",
-              "name": "rootRef",
-              "required": true,
+              "name": "selector",
+              "required": false,
               "type": {
-                "name": "{ current: HTMLElement; }"
+                "name": "string"
               }
             }
           }
@@ -112567,13 +112567,13 @@
           "displayName": "NamedExoticComponent",
           "methods": [],
           "props": {
-            "rootRef": {
+            "selector": {
               "defaultValue": null,
               "description": "",
-              "name": "rootRef",
-              "required": true,
+              "name": "selector",
+              "required": false,
               "type": {
-                "name": "{ current: HTMLElement; }"
+                "name": "string"
               }
             }
           }
@@ -112588,22 +112588,67 @@
           "displayName": "AllSelectedHeading",
           "methods": [],
           "props": {
-            "checked": {
+            "animate": {
               "defaultValue": null,
               "description": "",
-              "name": "checked",
-              "required": true,
+              "name": "animate",
+              "required": false,
               "type": {
-                "name": "boolean"
+                "name": "{ [key: string]: any; }"
               }
             },
-            "onChange": {
+            "css": {
               "defaultValue": null,
               "description": "",
-              "name": "onChange",
-              "required": true,
+              "name": "css",
+              "required": false,
               "type": {
-                "name": "(e: ChangeEvent<HTMLInputElement>) => void"
+                "name": "string"
+              }
+            },
+            "as": {
+              "defaultValue": null,
+              "description": "",
+              "name": "as",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "state": {
+              "defaultValue": null,
+              "description": "",
+              "name": "state",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "className": {
+              "defaultValue": null,
+              "description": "",
+              "name": "className",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "theme": {
+              "defaultValue": null,
+              "description": "",
+              "name": "theme",
+              "required": false,
+              "type": {
+                "name": "ThemeInterface"
+              }
+            },
+            "themed": {
+              "defaultValue": null,
+              "description": "",
+              "name": "themed",
+              "required": false,
+              "type": {
+                "name": "((props: any) => { [key: string]: any; })[]"
               }
             }
           }
@@ -112613,22 +112658,67 @@
           "displayName": "NamedExoticComponent",
           "methods": [],
           "props": {
-            "checked": {
+            "animate": {
               "defaultValue": null,
               "description": "",
-              "name": "checked",
-              "required": true,
+              "name": "animate",
+              "required": false,
               "type": {
-                "name": "boolean"
+                "name": "{ [key: string]: any; }"
               }
             },
-            "onChange": {
+            "css": {
               "defaultValue": null,
               "description": "",
-              "name": "onChange",
-              "required": true,
+              "name": "css",
+              "required": false,
               "type": {
-                "name": "(e: ChangeEvent<HTMLInputElement>) => void"
+                "name": "string"
+              }
+            },
+            "as": {
+              "defaultValue": null,
+              "description": "",
+              "name": "as",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "state": {
+              "defaultValue": null,
+              "description": "",
+              "name": "state",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "className": {
+              "defaultValue": null,
+              "description": "",
+              "name": "className",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "theme": {
+              "defaultValue": null,
+              "description": "",
+              "name": "theme",
+              "required": false,
+              "type": {
+                "name": "ThemeInterface"
+              }
+            },
+            "themed": {
+              "defaultValue": null,
+              "description": "",
+              "name": "themed",
+              "required": false,
+              "type": {
+                "name": "((props: any) => { [key: string]: any; })[]"
               }
             }
           }
@@ -112668,15 +112758,6 @@
               "required": false,
               "type": {
                 "name": "boolean"
-              }
-            },
-            "headings": {
-              "defaultValue": null,
-              "description": "",
-              "name": "headings",
-              "required": false,
-              "type": {
-                "name": "(string | ((props?: any) => Element))[]"
               }
             },
             "hook": {
@@ -112776,15 +112857,6 @@
               "required": false,
               "type": {
                 "name": "() => any"
-              }
-            },
-            "rows": {
-              "defaultValue": null,
-              "description": "",
-              "name": "rows",
-              "required": true,
-              "type": {
-                "name": "(n: any) => any"
               }
             },
             "title": {
@@ -112902,15 +112974,6 @@
                 "name": "boolean"
               }
             },
-            "headings": {
-              "defaultValue": null,
-              "description": "",
-              "name": "headings",
-              "required": false,
-              "type": {
-                "name": "(string | ((props?: any) => Element))[]"
-              }
-            },
             "hook": {
               "defaultValue": null,
               "description": "",
@@ -113008,15 +113071,6 @@
               "required": false,
               "type": {
                 "name": "() => any"
-              }
-            },
-            "rows": {
-              "defaultValue": null,
-              "description": "",
-              "name": "rows",
-              "required": true,
-              "type": {
-                "name": "(n: any) => any"
               }
             },
             "title": {
@@ -113121,6 +113175,15 @@
                 "name": "string"
               }
             },
+            "data": {
+              "defaultValue": null,
+              "description": "",
+              "name": "data",
+              "required": false,
+              "type": {
+                "name": "{ [key: string]: any; }"
+              }
+            },
             "dispatch": {
               "defaultValue": null,
               "description": "",
@@ -113175,22 +113238,13 @@
                 "name": "(e: MouseEvent<HTMLElement, MouseEvent>, id: string) => void"
               }
             },
-            "rows": {
-              "defaultValue": null,
-              "description": "",
-              "name": "rows",
-              "required": true,
-              "type": {
-                "name": "{ column: TableRowInterface[]; rowDetail?: TableRowDetailType; }[]"
-              }
-            },
             "selected": {
               "defaultValue": null,
               "description": "",
               "name": "selected",
               "required": true,
               "type": {
-                "name": "string"
+                "name": "string[]"
               }
             },
             "tableName": {
@@ -113281,6 +113335,15 @@
                 "name": "string"
               }
             },
+            "data": {
+              "defaultValue": null,
+              "description": "",
+              "name": "data",
+              "required": false,
+              "type": {
+                "name": "{ [key: string]: any; }"
+              }
+            },
             "dispatch": {
               "defaultValue": null,
               "description": "",
@@ -113335,22 +113398,13 @@
                 "name": "(e: MouseEvent<HTMLElement, MouseEvent>, id: string) => void"
               }
             },
-            "rows": {
-              "defaultValue": null,
-              "description": "",
-              "name": "rows",
-              "required": true,
-              "type": {
-                "name": "{ column: TableRowInterface[]; rowDetail?: TableRowDetailType; }[]"
-              }
-            },
             "selected": {
               "defaultValue": null,
               "description": "",
               "name": "selected",
               "required": true,
               "type": {
-                "name": "string"
+                "name": "string[]"
               }
             },
             "tableName": {
@@ -114348,33 +114402,6 @@
           "displayName": "TableRowSelect",
           "methods": [],
           "props": {
-            "handleChange": {
-              "defaultValue": null,
-              "description": "",
-              "name": "handleChange",
-              "required": true,
-              "type": {
-                "name": "(e: ChangeEvent<HTMLInputElement>) => void"
-              }
-            },
-            "id": {
-              "defaultValue": null,
-              "description": "",
-              "name": "id",
-              "required": true,
-              "type": {
-                "name": "string"
-              }
-            },
-            "checked": {
-              "defaultValue": null,
-              "description": "",
-              "name": "checked",
-              "required": false,
-              "type": {
-                "name": "boolean"
-              }
-            },
             "animate": {
               "defaultValue": null,
               "description": "",
@@ -114459,6 +114486,15 @@
                 "name": "boolean"
               }
             },
+            "data": {
+              "defaultValue": null,
+              "description": "",
+              "name": "data",
+              "required": false,
+              "type": {
+                "name": "{ [key: string]: any; }"
+              }
+            },
             "dispatch": {
               "defaultValue": null,
               "description": "",
@@ -114468,31 +114504,31 @@
                 "name": "Dispatch<any>"
               }
             },
-            "handleAdd": {
+            "onAdd": {
               "defaultValue": null,
               "description": "",
-              "name": "handleAdd",
+              "name": "onAdd",
               "required": true,
               "type": {
                 "name": "(e: MouseEvent<HTMLElement, MouseEvent>) => void"
               }
             },
-            "handleDeleteSelected": {
+            "onDeleteSelected": {
               "defaultValue": null,
               "description": "",
-              "name": "handleDeleteSelected",
+              "name": "onDeleteSelected",
               "required": true,
               "type": {
                 "name": "(e: MouseEvent<HTMLElement, MouseEvent>) => void"
               }
             },
-            "headings": {
+            "onAllSelectedChange": {
               "defaultValue": null,
               "description": "",
-              "name": "headings",
-              "required": false,
+              "name": "onAllSelectedChange",
+              "required": true,
               "type": {
-                "name": "(string | ((props?: any) => Element))[]"
+                "name": "(e: ChangeEvent<HTMLInputElement>) => void"
               }
             },
             "itemsToArray": {
@@ -114513,22 +114549,13 @@
                 "name": "boolean"
               }
             },
-            "rows": {
-              "defaultValue": null,
-              "description": "",
-              "name": "rows",
-              "required": true,
-              "type": {
-                "name": "{ column: TableRowInterface[]; rowDetail?: TableRowDetailType; }[]"
-              }
-            },
             "selected": {
               "defaultValue": null,
               "description": "",
               "name": "selected",
               "required": true,
               "type": {
-                "name": "string"
+                "name": "string[]"
               }
             },
             "tableName": {
@@ -114619,6 +114646,15 @@
                 "name": "boolean"
               }
             },
+            "data": {
+              "defaultValue": null,
+              "description": "",
+              "name": "data",
+              "required": false,
+              "type": {
+                "name": "{ [key: string]: any; }"
+              }
+            },
             "dispatch": {
               "defaultValue": null,
               "description": "",
@@ -114628,31 +114664,31 @@
                 "name": "Dispatch<any>"
               }
             },
-            "handleAdd": {
+            "onAdd": {
               "defaultValue": null,
               "description": "",
-              "name": "handleAdd",
+              "name": "onAdd",
               "required": true,
               "type": {
                 "name": "(e: MouseEvent<HTMLElement, MouseEvent>) => void"
               }
             },
-            "handleDeleteSelected": {
+            "onDeleteSelected": {
               "defaultValue": null,
               "description": "",
-              "name": "handleDeleteSelected",
+              "name": "onDeleteSelected",
               "required": true,
               "type": {
                 "name": "(e: MouseEvent<HTMLElement, MouseEvent>) => void"
               }
             },
-            "headings": {
+            "onAllSelectedChange": {
               "defaultValue": null,
               "description": "",
-              "name": "headings",
-              "required": false,
+              "name": "onAllSelectedChange",
+              "required": true,
               "type": {
-                "name": "(string | ((props?: any) => Element))[]"
+                "name": "(e: ChangeEvent<HTMLInputElement>) => void"
               }
             },
             "itemsToArray": {
@@ -114673,22 +114709,13 @@
                 "name": "boolean"
               }
             },
-            "rows": {
-              "defaultValue": null,
-              "description": "",
-              "name": "rows",
-              "required": true,
-              "type": {
-                "name": "{ column: TableRowInterface[]; rowDetail?: TableRowDetailType; }[]"
-              }
-            },
             "selected": {
               "defaultValue": null,
               "description": "",
               "name": "selected",
               "required": true,
               "type": {
-                "name": "string"
+                "name": "string[]"
               }
             },
             "tableName": {
@@ -115451,11 +115478,6 @@
             "value": "Appearance"
           },
           {
-            "slug": "context",
-            "depth": 2,
-            "value": "Context"
-          },
-          {
             "slug": "size",
             "depth": 2,
             "value": "Size"
@@ -116058,6 +116080,16 @@
             "slug": "toolbar",
             "depth": 2,
             "value": "Toolbar"
+          },
+          {
+            "slug": "row-detail",
+            "depth": 2,
+            "value": "Row Detail"
+          },
+          {
+            "slug": "render-props-detail",
+            "depth": 3,
+            "value": "Render Props Detail"
           }
         ]
       }

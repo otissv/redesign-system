@@ -562,13 +562,13 @@
           ),
           I = O.disabled,
           y = O.appearance,
-          w = Object(a.useMemo)(
+          v = Object(a.useMemo)(
             function() {
               return [i, d, b, u].concat(Object(r.a)(j))
             },
             [i, d, b, u, j]
           ),
-          v = Object(a.useCallback)(
+          w = Object(a.useCallback)(
             function(e) {
               e.preventDefault(), m && m(e)
             },
@@ -580,8 +580,8 @@
             {
               as: g,
               className: h,
-              themed: w,
-              onClick: v,
+              themed: v,
+              onClick: w,
               role: 'button',
               tabIndex: 0,
             },
@@ -832,23 +832,24 @@
           './node_modules/docz/node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray.js'
         ),
         u = t('./src/MaterialIcons/CaretDown.tsx'),
-        s = t(
+        s = t('./src/Portal/index.ts'),
+        m = t(
           './node_modules/docz/node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectDestructuringEmpty.js'
         )
-      function m(e) {
-        return Object(s.a)(e), { position: 'relative' }
-      }
       function p(e) {
-        return { display: 'inline-block', width: e.stretch ? '100%' : 'auto' }
+        return Object(m.a)(e), { position: 'relative' }
       }
       function g(e) {
-        return Object(s.a)(e), { position: 'absolute', zIndex: 8 }
+        return { display: 'inline-block', width: e.stretch ? '100%' : 'auto' }
       }
-      'undefined' !== typeof m &&
-        m &&
-        m === Object(m) &&
-        Object.isExtensible(m) &&
-        Object.defineProperty(m, '__filemeta', {
+      function f(e) {
+        return Object(m.a)(e), { position: 'absolute', zIndex: 8 }
+      }
+      'undefined' !== typeof p &&
+        p &&
+        p === Object(p) &&
+        Object.isExtensible(p) &&
+        Object.defineProperty(p, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: {
@@ -856,10 +857,10 @@
             filename: 'src/Dropdown/dropdown.theme.ts',
           },
         }),
-        p &&
-          p === Object(p) &&
-          Object.isExtensible(p) &&
-          Object.defineProperty(p, '__filemeta', {
+        g &&
+          g === Object(g) &&
+          Object.isExtensible(g) &&
+          Object.defineProperty(g, '__filemeta', {
             enumerable: !0,
             configurable: !0,
             value: {
@@ -867,11 +868,11 @@
               filename: 'src/Dropdown/dropdown.theme.ts',
             },
           }),
-        'undefined' !== typeof g &&
-          g &&
-          g === Object(g) &&
-          Object.isExtensible(g) &&
-          Object.defineProperty(g, '__filemeta', {
+        'undefined' !== typeof f &&
+          f &&
+          f === Object(f) &&
+          Object.isExtensible(f) &&
+          Object.defineProperty(f, '__filemeta', {
             enumerable: !0,
             configurable: !0,
             value: {
@@ -879,19 +880,19 @@
               filename: 'src/Dropdown/dropdown.theme.ts',
             },
           })
-      var f = t('./src/Button/Button.tsx'),
-        j = t('./src/Base/Base.tsx'),
-        O = a.a.memo(function(e) {
+      var j = t('./src/Button/Button.tsx'),
+        O = t('./src/Base/Base.tsx'),
+        h = a.a.memo(function(e) {
           var n = e.children,
             t = e.className,
             l = void 0 === t ? '' : t,
             c = e.label,
             i = e.animate,
-            s = e.themed,
-            O = void 0 === s ? [] : s,
-            h = e.stretch,
-            I = void 0 !== h && h,
-            y = Object(r.a)(e, [
+            m = e.themed,
+            h = void 0 === m ? [] : m,
+            I = e.stretch,
+            y = void 0 !== I && I,
+            v = Object(r.a)(e, [
               'children',
               'className',
               'label',
@@ -900,32 +901,32 @@
               'stretch',
             ]),
             w = Object(o.useState)(!1),
-            v = Object(b.a)(w, 2),
-            x = v[0],
-            k = v[1],
-            D = Object(o.useMemo)(
+            x = Object(b.a)(w, 2),
+            k = x[0],
+            D = x[1],
+            C = Object(o.useMemo)(
               function() {
                 return 'Dropdown '.concat(l)
               },
               [l]
             ),
-            C = Object(o.useMemo)(
-              function() {
-                return [p]
-              },
-              [p]
-            ),
             T = Object(o.useMemo)(
               function() {
-                return [m, g].concat(Object(d.a)(O))
+                return [g]
               },
-              [m, g, O]
+              [g]
             ),
-            _ = Object(o.useCallback)(
-              function(e) {
-                e.preventDefault, k(!x)
+            _ = Object(o.useMemo)(
+              function() {
+                return [p, f].concat(Object(d.a)(h))
               },
-              [k]
+              [p, f, h]
+            ),
+            P = Object(o.useCallback)(
+              function(e) {
+                e.preventDefault, D(!k)
+              },
+              [D]
             ),
             z = Object(o.useMemo)(
               function() {
@@ -934,65 +935,64 @@
               [i]
             )
           return a.a.createElement(
-            j.b,
-            { className: 'DropdownContainer', themed: C, stretch: I },
+            O.b,
+            { className: 'DropdownContainer', themed: T, stretch: y },
             a.a.createElement(
-              f.a,
-              Object.assign({ className: D, onClick: _ }, y, { stretch: I }),
+              j.a,
+              Object.assign({ className: C, onClick: P }, v, { stretch: y }),
               c,
               ' ',
               a.a.createElement(u.a, { alt: 'dropdown arrow' })
             ),
             a.a.createElement(
-              j.b,
-              Object.assign(
-                {
-                  className: D,
-                  as: 'ul',
-                  themed: T,
-                  state: x ? 'opened' : 'closed',
-                },
-                y,
-                { animate: z }
-              ),
-              n
+              s.Portal,
+              null,
+              a.a.createElement(
+                O.b,
+                Object.assign(
+                  { className: C, themed: _, state: k ? 'opened' : 'closed' },
+                  v,
+                  { animate: z }
+                ),
+                n
+              )
             )
           )
         })
-      'undefined' !== typeof O &&
-        O &&
-        O === Object(O) &&
-        Object.isExtensible(O) &&
-        Object.defineProperty(O, '__filemeta', {
+      'undefined' !== typeof h &&
+        h &&
+        h === Object(h) &&
+        Object.isExtensible(h) &&
+        Object.defineProperty(h, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: { name: 'Dropdown', filename: 'src/Dropdown/Dropdown.tsx' },
         })
-      var h = O
-      'undefined' !== typeof O &&
-        O &&
-        O === Object(O) &&
-        Object.isExtensible(O) &&
-        Object.defineProperty(O, '__filemeta', {
+      var I = h
+      'undefined' !== typeof h &&
+        h &&
+        h === Object(h) &&
+        Object.isExtensible(h) &&
+        Object.defineProperty(h, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: { name: 'Dropdown', filename: 'src/Dropdown/Dropdown.tsx' },
         })
-      var I = t('./src/Container/Container.tsx'),
-        y = t('./src/ThemeContext/ThemeProvider.tsx')
+      var y = t('./src/Container/Container.tsx'),
+        v = t('./src/ThemeContext/ThemeProvider.tsx')
       t.d(n, 'default', function() {
-        return x
+        return k
       })
       var w = {},
-        v = 'wrapper'
-      function x(e) {
+        x = 'wrapper'
+      function k(e) {
         var n = e.components,
           t = Object(r.a)(e, ['components'])
         return Object(l.b)(
-          v,
+          x,
           Object.assign({}, w, t, { components: n, mdxType: 'MDXLayout' }),
           Object(l.b)('h1', { id: 'dropdown' }, 'Dropdown'),
-          Object(l.b)(c.d, { of: h, mdxType: 'Props' }),
+          Object(l.b)(c.d, { of: I, mdxType: 'Props' }),
           Object(l.b)('h2', { id: 'default' }, 'Default'),
           Object(l.b)(
             c.c,
@@ -1006,17 +1006,17 @@
                 Playground: c.c,
                 Props: c.d,
                 styled: i.default,
-                Dropdown: h,
-                Container: I.b,
-                ThemeProvider: y.a,
+                Dropdown: I,
+                Container: y.b,
+                ThemeProvider: v.a,
               },
               mdxType: 'Playground',
             },
             Object(l.b)(
-              y.a,
+              v.a,
               { mdxType: 'ThemeProvider' },
               Object(l.b)(
-                h,
+                I,
                 {
                   uid: 'menu1',
                   label: 'Primary',
@@ -1024,7 +1024,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  I.b,
+                  y.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1044,7 +1044,7 @@
                 )
               ),
               Object(l.b)(
-                h,
+                I,
                 {
                   uid: 'menu1',
                   label: 'Secondary',
@@ -1053,7 +1053,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  I.b,
+                  y.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1073,7 +1073,7 @@
                 )
               ),
               Object(l.b)(
-                h,
+                I,
                 {
                   uid: 'menu1',
                   label: 'Tertiary',
@@ -1082,7 +1082,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  I.b,
+                  y.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1116,18 +1116,18 @@
                 Playground: c.c,
                 Props: c.d,
                 styled: i.default,
-                Dropdown: h,
-                Container: I.b,
-                ThemeProvider: y.a,
+                Dropdown: I,
+                Container: y.b,
+                ThemeProvider: v.a,
               },
               mdxType: 'Playground',
             },
             Object(l.b)(
-              y.a,
+              v.a,
               { mdxType: 'ThemeProvider' },
               Object(l.b)('h3', null, 'Accent'),
               Object(l.b)(
-                h,
+                I,
                 {
                   uid: 'menu1',
                   label: 'Primary',
@@ -1136,7 +1136,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  I.b,
+                  y.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1156,7 +1156,7 @@
                 )
               ),
               Object(l.b)(
-                h,
+                I,
                 {
                   uid: 'menu1',
                   label: 'Secondary',
@@ -1165,7 +1165,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  I.b,
+                  y.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1185,7 +1185,7 @@
                 )
               ),
               Object(l.b)(
-                h,
+                I,
                 {
                   uid: 'menu1',
                   label: 'Tertiary',
@@ -1194,7 +1194,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  I.b,
+                  y.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1215,7 +1215,7 @@
               ),
               Object(l.b)('h3', null, 'Active'),
               Object(l.b)(
-                h,
+                I,
                 {
                   uid: 'menu1',
                   label: 'Primary',
@@ -1224,7 +1224,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  I.b,
+                  y.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1244,7 +1244,7 @@
                 )
               ),
               Object(l.b)(
-                h,
+                I,
                 {
                   uid: 'menu1',
                   label: 'Secondary',
@@ -1253,7 +1253,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  I.b,
+                  y.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1273,7 +1273,7 @@
                 )
               ),
               Object(l.b)(
-                h,
+                I,
                 {
                   uid: 'menu1',
                   label: 'Tertiary',
@@ -1282,7 +1282,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  I.b,
+                  y.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1303,7 +1303,7 @@
               ),
               Object(l.b)('h3', null, 'Action'),
               Object(l.b)(
-                h,
+                I,
                 {
                   uid: 'menu1',
                   label: 'Primary',
@@ -1312,7 +1312,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  I.b,
+                  y.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1332,7 +1332,7 @@
                 )
               ),
               Object(l.b)(
-                h,
+                I,
                 {
                   uid: 'menu1',
                   label: 'Secondary',
@@ -1341,7 +1341,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  I.b,
+                  y.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1361,7 +1361,7 @@
                 )
               ),
               Object(l.b)(
-                h,
+                I,
                 {
                   uid: 'menu1',
                   label: 'Tertiary',
@@ -1370,7 +1370,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  I.b,
+                  y.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1391,7 +1391,7 @@
               ),
               Object(l.b)('h3', null, 'Danger'),
               Object(l.b)(
-                h,
+                I,
                 {
                   uid: 'menu1',
                   label: 'Primary',
@@ -1400,7 +1400,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  I.b,
+                  y.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1420,7 +1420,7 @@
                 )
               ),
               Object(l.b)(
-                h,
+                I,
                 {
                   uid: 'menu1',
                   label: 'Secondary',
@@ -1429,7 +1429,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  I.b,
+                  y.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1449,7 +1449,7 @@
                 )
               ),
               Object(l.b)(
-                h,
+                I,
                 {
                   uid: 'menu1',
                   label: 'Tertiary',
@@ -1458,7 +1458,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  I.b,
+                  y.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1479,7 +1479,7 @@
               ),
               Object(l.b)('h3', null, 'Success'),
               Object(l.b)(
-                h,
+                I,
                 {
                   uid: 'menu1',
                   label: 'Primary',
@@ -1488,7 +1488,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  I.b,
+                  y.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1508,7 +1508,7 @@
                 )
               ),
               Object(l.b)(
-                h,
+                I,
                 {
                   uid: 'menu1',
                   label: 'Secondary',
@@ -1517,7 +1517,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  I.b,
+                  y.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1537,7 +1537,7 @@
                 )
               ),
               Object(l.b)(
-                h,
+                I,
                 {
                   uid: 'menu1',
                   label: 'Tertiary',
@@ -1546,7 +1546,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  I.b,
+                  y.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1567,7 +1567,7 @@
               ),
               Object(l.b)('h3', null, 'Warning'),
               Object(l.b)(
-                h,
+                I,
                 {
                   uid: 'menu1',
                   label: 'Primary',
@@ -1576,7 +1576,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  I.b,
+                  y.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1596,7 +1596,7 @@
                 )
               ),
               Object(l.b)(
-                h,
+                I,
                 {
                   uid: 'menu1',
                   label: 'Secondary',
@@ -1605,7 +1605,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  I.b,
+                  y.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1625,7 +1625,7 @@
                 )
               ),
               Object(l.b)(
-                h,
+                I,
                 {
                   uid: 'menu1',
                   label: 'Tertiary',
@@ -1634,7 +1634,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  I.b,
+                  y.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1655,7 +1655,7 @@
               ),
               Object(l.b)('h3', null, 'Disabled'),
               Object(l.b)(
-                h,
+                I,
                 {
                   uid: 'menu1',
                   label: 'Primary',
@@ -1664,7 +1664,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  I.b,
+                  y.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1684,7 +1684,7 @@
                 )
               ),
               Object(l.b)(
-                h,
+                I,
                 {
                   uid: 'menu1',
                   label: 'Secondary',
@@ -1693,7 +1693,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  I.b,
+                  y.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1713,7 +1713,7 @@
                 )
               ),
               Object(l.b)(
-                h,
+                I,
                 {
                   uid: 'menu1',
                   label: 'Tertiary',
@@ -1722,7 +1722,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  I.b,
+                  y.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1745,7 +1745,7 @@
           ),
           Object(l.b)('h2', { id: 'size' }, 'Size'),
           Object(l.b)(
-            y.a,
+            v.a,
             { mdxType: 'ThemeProvider' },
             Object(l.b)(
               'table',
@@ -1771,7 +1771,7 @@
                     'td',
                     null,
                     Object(l.b)(
-                      h,
+                      I,
                       {
                         uid: 'menu1',
                         label: 'Dropdown',
@@ -1779,7 +1779,7 @@
                         mdxType: 'Dropdown',
                       },
                       Object(l.b)(
-                        I.b,
+                        y.b,
                         {
                           margin1: 'top',
                           radius: 'rounded',
@@ -1808,7 +1808,7 @@
                     'td',
                     null,
                     Object(l.b)(
-                      h,
+                      I,
                       {
                         uid: 'menu1',
                         label: 'Dropdown',
@@ -1816,7 +1816,7 @@
                         mdxType: 'Dropdown',
                       },
                       Object(l.b)(
-                        I.b,
+                        y.b,
                         {
                           margin1: 'top',
                           radius: 'rounded',
@@ -1845,7 +1845,7 @@
                     'td',
                     null,
                     Object(l.b)(
-                      h,
+                      I,
                       {
                         uid: 'menu1',
                         label: 'Dropdown',
@@ -1853,7 +1853,7 @@
                         mdxType: 'Dropdown',
                       },
                       Object(l.b)(
-                        I.b,
+                        y.b,
                         {
                           margin1: 'top',
                           radius: 'rounded',
@@ -1882,7 +1882,7 @@
                     'td',
                     null,
                     Object(l.b)(
-                      h,
+                      I,
                       {
                         uid: 'menu1',
                         label: 'Dropdown',
@@ -1890,7 +1890,7 @@
                         mdxType: 'Dropdown',
                       },
                       Object(l.b)(
-                        I.b,
+                        y.b,
                         {
                           margin1: 'top',
                           radius: 'rounded',
@@ -1919,7 +1919,7 @@
                     'td',
                     null,
                     Object(l.b)(
-                      h,
+                      I,
                       {
                         uid: 'menu1',
                         label: 'Dropdown',
@@ -1927,7 +1927,7 @@
                         mdxType: 'Dropdown',
                       },
                       Object(l.b)(
-                        I.b,
+                        y.b,
                         {
                           margin1: 'top',
                           radius: 'rounded',
@@ -1956,7 +1956,7 @@
                     'td',
                     null,
                     Object(l.b)(
-                      h,
+                      I,
                       {
                         uid: 'menu1',
                         label: 'Dropdown',
@@ -1964,7 +1964,7 @@
                         mdxType: 'Dropdown',
                       },
                       Object(l.b)(
-                        I.b,
+                        y.b,
                         {
                           margin1: 'top',
                           radius: 'rounded',
@@ -1993,7 +1993,7 @@
                     'td',
                     null,
                     Object(l.b)(
-                      h,
+                      I,
                       {
                         uid: 'menu1',
                         label: 'Dropdown',
@@ -2001,7 +2001,7 @@
                         mdxType: 'Dropdown',
                       },
                       Object(l.b)(
-                        I.b,
+                        y.b,
                         {
                           margin1: 'top',
                           radius: 'rounded',
@@ -2030,7 +2030,7 @@
                     'td',
                     null,
                     Object(l.b)(
-                      h,
+                      I,
                       {
                         uid: 'menu1',
                         label: 'Dropdown',
@@ -2038,7 +2038,7 @@
                         mdxType: 'Dropdown',
                       },
                       Object(l.b)(
-                        I.b,
+                        y.b,
                         {
                           margin1: 'top',
                           radius: 'rounded',
@@ -2067,7 +2067,7 @@
                     'td',
                     null,
                     Object(l.b)(
-                      h,
+                      I,
                       {
                         uid: 'menu1',
                         label: 'Dropdown',
@@ -2075,7 +2075,7 @@
                         mdxType: 'Dropdown',
                       },
                       Object(l.b)(
-                        I.b,
+                        y.b,
                         {
                           margin1: 'top',
                           radius: 'rounded',
@@ -2104,7 +2104,7 @@
                     'td',
                     null,
                     Object(l.b)(
-                      h,
+                      I,
                       {
                         uid: 'menu1',
                         label: 'Dropdown',
@@ -2112,7 +2112,7 @@
                         mdxType: 'Dropdown',
                       },
                       Object(l.b)(
-                        I.b,
+                        y.b,
                         {
                           margin1: 'top',
                           radius: 'rounded',
@@ -2149,17 +2149,17 @@
                 Playground: c.c,
                 Props: c.d,
                 styled: i.default,
-                Dropdown: h,
-                Container: I.b,
-                ThemeProvider: y.a,
+                Dropdown: I,
+                Container: y.b,
+                ThemeProvider: v.a,
               },
               mdxType: 'Playground',
             },
             Object(l.b)(
-              y.a,
+              v.a,
               { mdxType: 'ThemeProvider' },
               Object(l.b)(
-                h,
+                I,
                 {
                   uid: 'menu1',
                   label: 'Strtch',
@@ -2167,7 +2167,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  I.b,
+                  y.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -2190,15 +2190,15 @@
           )
         )
       }
-      x &&
-        x === Object(x) &&
-        Object.isExtensible(x) &&
-        Object.defineProperty(x, '__filemeta', {
+      k &&
+        k === Object(k) &&
+        Object.isExtensible(k) &&
+        Object.defineProperty(k, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: { name: 'MDXContent', filename: 'src/Dropdown/dropdown.mdx' },
         }),
-        (x.isMDXComponent = !0)
+        (k.isMDXComponent = !0)
     },
     './src/Icon/Icon.tsx': function(e, n, t) {
       'use strict'
@@ -2296,13 +2296,13 @@
             'viewBox',
             'width',
           ]),
-          w = Object(l.useMemo)(
+          v = Object(l.useMemo)(
             function() {
               return 'Icon '.concat(u)
             },
             [u]
           ),
-          v = Object(l.useMemo)(
+          w = Object(l.useMemo)(
             function() {
               return [i, d].concat(Object(o.a)(g))
             },
@@ -2314,8 +2314,8 @@
           Object.assign(
             {
               as: 'svg',
-              className: w,
-              themed: v,
+              className: v,
+              themed: w,
               xmlns: 'http://www.w3.org/2000/svg',
             },
             x
@@ -2404,6 +2404,76 @@
             },
           })
     },
+    './src/Portal/Portal.ts': function(e, n, t) {
+      'use strict'
+      t.d(n, 'a', function() {
+        return l
+      })
+      var r = t('./node_modules/react/index.js'),
+        o = t.n(r),
+        a = t('./node_modules/react-dom/index.js'),
+        l = o.a.memo(function(e) {
+          var n = e.children,
+            t = e.selector,
+            o = void 0 === t ? 'body' : t,
+            l = Object(r.useRef)(document.querySelector(o)),
+            c = Object(r.useRef)(document.createElement('div'))
+          return (
+            Object(r.useLayoutEffect)(
+              function() {
+                return (
+                  l.current && l.current.appendChild(c.current),
+                  function() {
+                    l.current && l.current.removeChild(c.current)
+                  }
+                )
+              },
+              [l.current, c.current]
+            ),
+            Object(a.createPortal)(n, l.current)
+          )
+        })
+      'undefined' !== typeof l &&
+        l &&
+        l === Object(l) &&
+        Object.isExtensible(l) &&
+        Object.defineProperty(l, '__filemeta', {
+          enumerable: !0,
+          configurable: !0,
+          value: { name: 'Portal', filename: 'src/Portal/Portal.ts' },
+        })
+      'undefined' !== typeof l &&
+        l &&
+        l === Object(l) &&
+        Object.isExtensible(l) &&
+        Object.defineProperty(l, '__filemeta', {
+          enumerable: !0,
+          configurable: !0,
+          value: { name: 'Portal', filename: 'src/Portal/Portal.ts' },
+        })
+    },
+    './src/Portal/index.ts': function(e, n, t) {
+      'use strict'
+      var r = t('./src/Portal/Portal.ts')
+      t.d(n, 'Portal', function() {
+        return r.a
+      })
+      t('./src/Portal/portal.types.ts')
+    },
+    './src/Portal/portal.types.ts': function(e, n) {
+      'undefined' !== typeof PortalInterface &&
+        PortalInterface &&
+        PortalInterface === Object(PortalInterface) &&
+        Object.isExtensible(PortalInterface) &&
+        Object.defineProperty(PortalInterface, '__filemeta', {
+          enumerable: !0,
+          configurable: !0,
+          value: {
+            name: 'PortalInterface',
+            filename: 'src/Portal/portal.types.ts',
+          },
+        })
+    },
   },
 ])
-//# sourceMappingURL=src-dropdown-dropdown.3ae2d971195c87fda938.js.map
+//# sourceMappingURL=src-dropdown-dropdown.123d966e15eeb904531a.js.map

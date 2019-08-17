@@ -1311,12 +1311,15 @@
           paddingRight: 0,
           minHeight: 'auto',
           background: 'none',
+          '>button': { minHeight: '31px' },
+          '>a': { minHeight: '33px' },
           '>button, >a': {
             color: t.foreground,
             background: 'none',
             borderColor: t.transparent,
             borderRadius: 0,
             '&:active': { color: t.foreground },
+            svg: { width: '24px', height: '24px' },
           },
           '.ToolbarViewsContainer': {
             'button:first-child, a:first-child': {
@@ -1349,67 +1352,50 @@
         var t = e.children,
           n = e.className,
           d = void 0 === n ? '' : n,
-          l = e.items,
-          u = void 0 === l ? [] : l,
-          b = e.onDeleteSelected,
-          m = e.onSwitchView,
-          f = e.toolbar,
-          p = e.selectToolbar,
-          h = e.themed,
-          g = void 0 === h ? [] : h,
-          v = Object(r.a)(e, [
+          l = e.onSwitchView,
+          u = e.toolbar,
+          b = (e.selectToolbar, e.themed),
+          m = void 0 === b ? [] : b,
+          f = Object(r.a)(e, [
             'children',
             'className',
-            'items',
-            'onDeleteSelected',
             'onSwitchView',
             'toolbar',
             'selectToolbar',
             'themed',
           ]),
-          x = Object(a.useMemo)(
+          p = Object(a.useMemo)(
             function() {
               return 'Toolbar '.concat(d)
             },
             [d]
           ),
-          j = Object(a.useCallback)(
-            function(e) {
-              e.preventDefault(), b && b(e)
-            },
-            [b]
-          ),
-          O = Object(a.useMemo)(
+          h = Object(a.useMemo)(
             function() {
-              return [s].concat(Object(o.a)(g))
+              return [s].concat(Object(o.a)(m))
             },
-            [s, g]
+            [s, m]
           ),
-          w = Object(a.useCallback)(
+          g = Object(a.useCallback)(
             function(e) {
               e.preventDefault()
               var t = e.currentTarget.dataset.uid
-              m && m(e, { id: t })
+              l && l(e, { id: t })
             },
-            [m]
+            [l]
           ),
-          y = Object(a.useMemo)(
+          v = Object(a.useMemo)(
             function() {
-              return u.length > 0
-                ? c.a.createElement(p, {
-                    selected: u.length,
-                    handleDeleteSelected: j,
-                  })
-                : 'function' === typeof t
-                ? t({ handleSwitchView: w, toolbar: f })
+              return 'function' === typeof t
+                ? t({ handleSwitchView: g, toolbar: u })
                 : t
             },
-            [t, w, j, u, f]
+            [t, g, u]
           )
         return c.a.createElement(
           i.AppBar,
-          Object.assign({ className: x, themed: O }, v),
-          y
+          Object.assign({ className: p, themed: h }, f),
+          v
         )
       })
       'undefined' !== typeof d &&
@@ -1434,4 +1420,4 @@
     },
   },
 ])
-//# sourceMappingURL=src-table-table~src-toolbar-toolbar.3ae2d971195c87fda938.js.map
+//# sourceMappingURL=src-table-table~src-toolbar-toolbar.123d966e15eeb904531a.js.map
