@@ -3,13 +3,13 @@ name: Button Group
 route: /button-group
 ---
 
-import { Fragment } from 'react';
-import { Playground, Props } from 'docz';
-import { Container } from '../Container/Container';
-import { Flex } from '../Flex/Flex';
-import { ButtonGroupButton } from './ButtonGroupButton';
-import { ButtonGroup } from './ButtonGroup';
-import { ThemeProvider } from '../ThemeContext/ThemeProvider';
+import { Fragment } from 'react'
+import { Playground, Props } from 'docz'
+import { Container } from '../Container/Container'
+import { Flex } from '../Flex/Flex'
+import { ButtonGroupButton } from './ButtonGroupButton'
+import { ButtonGroup } from './ButtonGroup'
+import { ThemeProvider } from '../ThemeContext/ThemeProvider'
 
 # Button Group
 
@@ -19,8 +19,9 @@ import { ThemeProvider } from '../ThemeContext/ThemeProvider';
 
 <Playground>
   <ThemeProvider>
-    <Flex widthSize="500px" wrap='wrap'>
 
+    <h3>Default</h3>
+    <Flex widthSize="500px" wrap='wrap'>
       <Container margin3="bottom right">
         <ButtonGroup appearance="primary">
           <ButtonGroupButton >Primary</ButtonGroupButton>
@@ -46,13 +47,7 @@ import { ThemeProvider } from '../ThemeContext/ThemeProvider';
       </Container>
     </Flex>
 
-  </ThemeProvider>
-</Playground>
 
-## Context
-
-<Playground>
-  <ThemeProvider>
 
     <h3>Accent</h3>
     <Flex widthSize="500px" wrap='wrap'>

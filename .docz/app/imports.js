@@ -15,17 +15,13 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-badge-badge" */ 'src/Badge/badge.mdx'
     ),
-  'src/Button/button.mdx': () =>
+  'src/ButtonIcon/buttonIcon.mdx': () =>
     import(
-      /* webpackPrefetch: true, webpackChunkName: "src-button-button" */ 'src/Button/button.mdx'
+      /* webpackPrefetch: true, webpackChunkName: "src-button-icon-button-icon" */ 'src/ButtonIcon/buttonIcon.mdx'
     ),
   'src/ButtonGroup/buttonGroup.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-button-group-button-group" */ 'src/ButtonGroup/buttonGroup.mdx'
-    ),
-  'src/ButtonIcon/buttonIcon.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-button-icon-button-icon" */ 'src/ButtonIcon/buttonIcon.mdx'
     ),
   'src/Card/card.mdx': () =>
     import(
@@ -35,13 +31,17 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-container-container" */ 'src/Container/container.mdx'
     ),
-  'src/Checkbox/checkbox.mdx': () =>
+  'src/Button/button.mdx': () =>
     import(
-      /* webpackPrefetch: true, webpackChunkName: "src-checkbox-checkbox" */ 'src/Checkbox/checkbox.mdx'
+      /* webpackPrefetch: true, webpackChunkName: "src-button-button" */ 'src/Button/button.mdx'
     ),
   'src/CoverImg/coverImg.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-cover-img-cover-img" */ 'src/CoverImg/coverImg.mdx'
+    ),
+  'src/Checkbox/checkbox.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-checkbox-checkbox" */ 'src/Checkbox/checkbox.mdx'
     ),
   'src/Dropdown/dropdown.mdx': () =>
     import(

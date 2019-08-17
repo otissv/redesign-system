@@ -6,6 +6,12 @@ import {
 } from '../reusable/collectionHash'
 import React from 'react'
 
+export interface RowDetailInterface extends BaseInterface {
+  children?: any
+  colSpan?: number
+  expanded?: boolean
+}
+
 export interface SelectToolbarInterface extends BaseInterface {
   selected: number
   handleDeleteSelected: (e: React.MouseEvent<HTMLElement>) => void
@@ -15,7 +21,6 @@ export interface TableInterface extends BaseInterface {
   baseRoute?: string
   caption?: string
   condensed?: boolean
-  headings?: Array<((props?: any) => JSX.Element) | string>
   hook: () => any
   hover?: boolean
   initialValue?: any[]
@@ -27,9 +32,36 @@ export interface TableInterface extends BaseInterface {
   onDownload?: (n: any) => any
   onEdit?: (n: any) => any
   onExecute?: () => any
-  rows: (n: any) => any
   title?: string
   toolbar?: Array<((props?: any) => JSX.Element) | string>
+}
+
+export interface TableColumnInterface extends BaseInterface {
+  prop?: string
+}
+
+export interface TableColumnContextInterface {
+  allSelected?: boolean
+  checked?: boolean
+  children?: any
+  data?: { [key: string]: any }
+  dispatch?: React.Dispatch<any>
+  expanded?: boolean
+  index?: number
+  itemsToArray?: (items: any[]) => any[]
+  loading?: boolean
+  onAdd?: (e: React.MouseEvent<HTMLElement>) => void
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
+  onDelete?: (e: React.MouseEvent<HTMLElement>) => void
+  onDeleteSelected?: (e: React.MouseEvent<HTMLElement>) => void
+  onExpandRows?: (e: React.MouseEvent<HTMLElement>) => void
+  onRowClick?: (e: React.MouseEvent<HTMLElement>) => void
+  selected?: Array<string>
+  setChecked?: React.Dispatch<React.SetStateAction<boolean>>
+  Copy?: (props: TableToolbarCopyButtonInterface) => React.ReactNode
+  Edit?: (props: TableToolbarButtonInterface) => React.ReactNode
+  Delete?: (props: TableToolbarButtonInterface) => React.ReactNode
+  Download?: (props: TableToolbarDownloadButtonInterface) => React.ReactNode
 }
 
 export interface TableInitialValueInterface {
@@ -39,37 +71,22 @@ export interface TableInitialValueInterface {
   itemList: any[]
 }
 
-export interface TableHeadingInterface {
-  allSelected: false
-  handleSelectHeadingChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+export interface TableHeadingsInterface {
+  children?: React.ReactNode
+  allSelected?: boolean
+  data?: { [key: string]: any }
+  onAllSelectedChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
-export type TableRowInterface = {
-  key: string
-  component: ({
-    dispatch,
-    expandRows,
-    handleAdd,
-    handleChange,
-    handleDelete,
-    handleDeleteSelected,
-    handleExpandRows,
-    handleRowClick,
-    itemsToArray,
-    loading,
-    selected,
-    state,
-    Copy,
-    Edit,
-    Delete,
-    Download,
-  }: TableRowComponentInterface) => React.ReactNode
+export interface TableRowDetailInterface extends BaseInterface {
+  children?: any
 }
+
+export interface TableRowProviderInterface {}
 
 export interface TableRowComponentInterface {
   allSelected?: boolean
   dispatch?: React.Dispatch<any>
-  expandRows?: Array<string>
   handleAdd?: (e: React.MouseEvent<HTMLElement>) => void
   handleChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
   handleDelete?: (e: React.MouseEvent<HTMLElement>) => void
@@ -78,7 +95,7 @@ export interface TableRowComponentInterface {
   handleRowClick?: (e: React.MouseEvent<HTMLElement>) => void
   itemsToArray?: (items: any[]) => any[]
   loading?: boolean
-  selected?: string
+  selected?: Array<string>
   state?: any
   Copy?: (props: TableToolbarCopyButtonInterface) => React.ReactNode
   Edit?: (props: TableToolbarButtonInterface) => React.ReactNode
@@ -86,43 +103,33 @@ export interface TableRowComponentInterface {
   Download?: (props: TableToolbarDownloadButtonInterface) => React.ReactNode
 }
 
-export type TableRowDetailType = (props: any) => JSX.Element
-
 export interface TableBodyInterface extends BaseInterface {
+  children?: any
   baseRoute?: string
+  data?: { [key: string]: any }
   dispatch: React.Dispatch<any>
   handleAdd?: (e: React.MouseEvent<HTMLElement>) => void
   handleDeleteSelected?: (e: React.MouseEvent<HTMLElement>) => void
   itemsToArray: (items: any[]) => any[]
   loading?: boolean
   onRowClick?: (e: React.MouseEvent<HTMLElement>, id: string) => void
-  rows: Array<{
-    column: TableRowInterface[]
-    rowDetail?: TableRowDetailType
-  }>
-  selected: string
+  selected: Array<string>
   tableName: string
 }
 
-export interface TableRowSelectInterface extends BaseInterface {
-  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void
-  id: string
-  checked?: boolean
-}
+export interface TableRowSelectInterface extends BaseInterface {}
 
 export interface TableViewInterface extends BaseInterface {
+  children?: any
   allSelected?: boolean
+  data?: { [key: string]: any }
   dispatch: React.Dispatch<any>
-  handleAdd: (e: React.MouseEvent<HTMLElement>) => void
-  handleDeleteSelected: (e: React.MouseEvent<HTMLElement>) => void
-  headings?: Array<((props?: any) => JSX.Element) | string>
+  onAdd: (e: React.MouseEvent<HTMLElement>) => void
+  onDeleteSelected: (e: React.MouseEvent<HTMLElement>) => void
+  onAllSelectedChange: (e: React.ChangeEvent<HTMLInputElement>) => void
   itemsToArray: (items: any[]) => any[]
   loading: boolean
-  rows: Array<{
-    column: TableRowInterface[]
-    rowDetail?: TableRowDetailType
-  }>
-  selected: string
+  selected: Array<string>
   tableName: string
 }
 

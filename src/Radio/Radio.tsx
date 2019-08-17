@@ -1,5 +1,4 @@
 import React, { useMemo } from 'react'
-import styled from 'styled-components'
 
 import { Base } from '../Base'
 import { RadioInterface } from './radio.types'

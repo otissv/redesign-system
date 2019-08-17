@@ -13,6 +13,9 @@ export function useTable() {
       id: `id_${i}`,
       name: `Project ${i}`,
       endpoint: `http://project${i}.com`,
+      ip: `0.0.0.${i}`,
+      repo: `repo${i}`,
+      port: `${i}000`,
     })),
   }
 

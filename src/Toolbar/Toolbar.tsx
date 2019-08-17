@@ -7,8 +7,6 @@ import { ToolbarInterface } from './toolbar.types'
 export const Toolbar = React.memo(function Toolbar({
   children,
   className = '',
-  items = [],
-  onDeleteSelected,
   onSwitchView,
   toolbar,
   selectToolbar: SelectToolbar,
@@ -16,14 +14,6 @@ export const Toolbar = React.memo(function Toolbar({
   ...propsRest
 }: ToolbarInterface) {
   const classNames = useMemo(() => `Toolbar ${className}`, [className])
-
-  const handleDeleteSelected = useCallback(
-    function handleDeleteSelected(e: React.MouseEvent<HTMLElement>) {
-      e.preventDefault()
-      onDeleteSelected && onDeleteSelected(e)
-    },
-    [onDeleteSelected]
-  )
 
   const _themed = useMemo(() => [toolbarTheme, ...themed], [
     toolbarTheme,
@@ -42,17 +32,10 @@ export const Toolbar = React.memo(function Toolbar({
 
   const toolbarContent = useMemo(
     () =>
-      items.length > 0 ? (
-        <SelectToolbar
-          selected={items.length}
-          handleDeleteSelected={handleDeleteSelected}
-        />
-      ) : typeof children === 'function' ? (
-        children({ handleSwitchView, toolbar })
-      ) : (
-        children
-      ),
-    [children, handleSwitchView, handleDeleteSelected, items, toolbar]
+      typeof children === 'function'
+        ? children({ handleSwitchView, toolbar })
+        : children,
+    [children, handleSwitchView, toolbar]
   )
 
   return (
