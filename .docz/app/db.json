@@ -3963,169 +3963,6 @@
       ]
     },
     {
-      "key": "src/Dropdown/Dropdown.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Dropdown",
-          "methods": [],
-          "props": {
-            "appearance": {
-              "defaultValue": null,
-              "description": "",
-              "name": "appearance",
-              "required": false,
-              "type": {
-                "name": "AppearanceType"
-              }
-            },
-            "animate": {
-              "defaultValue": null,
-              "description": "",
-              "name": "animate",
-              "required": false,
-              "type": {
-                "name": "{ [key: string]: any; }"
-              }
-            },
-            "css": {
-              "defaultValue": null,
-              "description": "",
-              "name": "css",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "as": {
-              "defaultValue": null,
-              "description": "",
-              "name": "as",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "state": {
-              "defaultValue": null,
-              "description": "",
-              "name": "state",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "className": {
-              "defaultValue": null,
-              "description": "",
-              "name": "className",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "theme": {
-              "defaultValue": null,
-              "description": "",
-              "name": "theme",
-              "required": false,
-              "type": {
-                "name": "ThemeInterface"
-              }
-            },
-            "themed": {
-              "defaultValue": null,
-              "description": "",
-              "name": "themed",
-              "required": false,
-              "type": {
-                "name": "((props: any) => { [key: string]: any; })[]"
-              }
-            }
-          }
-        },
-        {
-          "description": "",
-          "displayName": "NamedExoticComponent",
-          "methods": [],
-          "props": {
-            "appearance": {
-              "defaultValue": null,
-              "description": "",
-              "name": "appearance",
-              "required": false,
-              "type": {
-                "name": "AppearanceType"
-              }
-            },
-            "animate": {
-              "defaultValue": null,
-              "description": "",
-              "name": "animate",
-              "required": false,
-              "type": {
-                "name": "{ [key: string]: any; }"
-              }
-            },
-            "css": {
-              "defaultValue": null,
-              "description": "",
-              "name": "css",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "as": {
-              "defaultValue": null,
-              "description": "",
-              "name": "as",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "state": {
-              "defaultValue": null,
-              "description": "",
-              "name": "state",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "className": {
-              "defaultValue": null,
-              "description": "",
-              "name": "className",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "theme": {
-              "defaultValue": null,
-              "description": "",
-              "name": "theme",
-              "required": false,
-              "type": {
-                "name": "ThemeInterface"
-              }
-            },
-            "themed": {
-              "defaultValue": null,
-              "description": "",
-              "name": "themed",
-              "required": false,
-              "type": {
-                "name": "((props: any) => { [key: string]: any; })[]"
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
       "key": "src/ErrorMessage/ErrorMessage.tsx",
       "value": [
         {
@@ -8338,98 +8175,6 @@
       ]
     },
     {
-      "key": "src/Portal/Portal.ts",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Portal",
-          "methods": [],
-          "props": {
-            "rootRef": {
-              "defaultValue": null,
-              "description": "",
-              "name": "rootRef",
-              "required": true,
-              "type": {
-                "name": "{ current: HTMLElement; }"
-              }
-            }
-          }
-        },
-        {
-          "description": "",
-          "displayName": "NamedExoticComponent",
-          "methods": [],
-          "props": {
-            "rootRef": {
-              "defaultValue": null,
-              "description": "",
-              "name": "rootRef",
-              "required": true,
-              "type": {
-                "name": "{ current: HTMLElement; }"
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/Table/AllSelectedHeading.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "AllSelectedHeading",
-          "methods": [],
-          "props": {
-            "checked": {
-              "defaultValue": null,
-              "description": "",
-              "name": "checked",
-              "required": true,
-              "type": {
-                "name": "boolean"
-              }
-            },
-            "onChange": {
-              "defaultValue": null,
-              "description": "",
-              "name": "onChange",
-              "required": true,
-              "type": {
-                "name": "(e: ChangeEvent<HTMLInputElement>) => void"
-              }
-            }
-          }
-        },
-        {
-          "description": "",
-          "displayName": "NamedExoticComponent",
-          "methods": [],
-          "props": {
-            "checked": {
-              "defaultValue": null,
-              "description": "",
-              "name": "checked",
-              "required": true,
-              "type": {
-                "name": "boolean"
-              }
-            },
-            "onChange": {
-              "defaultValue": null,
-              "description": "",
-              "name": "onChange",
-              "required": true,
-              "type": {
-                "name": "(e: ChangeEvent<HTMLInputElement>) => void"
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
       "key": "src/Table/JsonView.tsx",
       "value": [
         {
@@ -8447,1711 +8192,6 @@
       ]
     },
     {
-      "key": "src/Table/Table.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Table",
-          "methods": [],
-          "props": {
-            "baseRoute": {
-              "defaultValue": null,
-              "description": "",
-              "name": "baseRoute",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "caption": {
-              "defaultValue": null,
-              "description": "",
-              "name": "caption",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "condensed": {
-              "defaultValue": null,
-              "description": "",
-              "name": "condensed",
-              "required": false,
-              "type": {
-                "name": "boolean"
-              }
-            },
-            "headings": {
-              "defaultValue": null,
-              "description": "",
-              "name": "headings",
-              "required": false,
-              "type": {
-                "name": "(string | ((props?: any) => Element))[]"
-              }
-            },
-            "hook": {
-              "defaultValue": null,
-              "description": "",
-              "name": "hook",
-              "required": true,
-              "type": {
-                "name": "() => any"
-              }
-            },
-            "hover": {
-              "defaultValue": null,
-              "description": "",
-              "name": "hover",
-              "required": false,
-              "type": {
-                "name": "boolean"
-              }
-            },
-            "initialValue": {
-              "defaultValue": null,
-              "description": "",
-              "name": "initialValue",
-              "required": false,
-              "type": {
-                "name": "any[]"
-              }
-            },
-            "name": {
-              "defaultValue": null,
-              "description": "",
-              "name": "name",
-              "required": true,
-              "type": {
-                "name": "string"
-              }
-            },
-            "onAdd": {
-              "defaultValue": null,
-              "description": "",
-              "name": "onAdd",
-              "required": false,
-              "type": {
-                "name": "(n: any) => any"
-              }
-            },
-            "onCopy": {
-              "defaultValue": null,
-              "description": "",
-              "name": "onCopy",
-              "required": false,
-              "type": {
-                "name": "(n: any) => any"
-              }
-            },
-            "onDelete": {
-              "defaultValue": null,
-              "description": "",
-              "name": "onDelete",
-              "required": false,
-              "type": {
-                "name": "(n: any) => any"
-              }
-            },
-            "onDeleteSelected": {
-              "defaultValue": null,
-              "description": "",
-              "name": "onDeleteSelected",
-              "required": false,
-              "type": {
-                "name": "(n: any) => any"
-              }
-            },
-            "onDownload": {
-              "defaultValue": null,
-              "description": "",
-              "name": "onDownload",
-              "required": false,
-              "type": {
-                "name": "(n: any) => any"
-              }
-            },
-            "onEdit": {
-              "defaultValue": null,
-              "description": "",
-              "name": "onEdit",
-              "required": false,
-              "type": {
-                "name": "(n: any) => any"
-              }
-            },
-            "onExecute": {
-              "defaultValue": null,
-              "description": "",
-              "name": "onExecute",
-              "required": false,
-              "type": {
-                "name": "() => any"
-              }
-            },
-            "rows": {
-              "defaultValue": null,
-              "description": "",
-              "name": "rows",
-              "required": true,
-              "type": {
-                "name": "(n: any) => any"
-              }
-            },
-            "title": {
-              "defaultValue": null,
-              "description": "",
-              "name": "title",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "toolbar": {
-              "defaultValue": null,
-              "description": "",
-              "name": "toolbar",
-              "required": false,
-              "type": {
-                "name": "(string | ((props?: any) => Element))[]"
-              }
-            },
-            "animate": {
-              "defaultValue": null,
-              "description": "",
-              "name": "animate",
-              "required": false,
-              "type": {
-                "name": "{ [key: string]: any; }"
-              }
-            },
-            "css": {
-              "defaultValue": null,
-              "description": "",
-              "name": "css",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "as": {
-              "defaultValue": null,
-              "description": "",
-              "name": "as",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "state": {
-              "defaultValue": null,
-              "description": "",
-              "name": "state",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "className": {
-              "defaultValue": null,
-              "description": "",
-              "name": "className",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "theme": {
-              "defaultValue": null,
-              "description": "",
-              "name": "theme",
-              "required": false,
-              "type": {
-                "name": "ThemeInterface"
-              }
-            },
-            "themed": {
-              "defaultValue": null,
-              "description": "",
-              "name": "themed",
-              "required": false,
-              "type": {
-                "name": "((props: any) => { [key: string]: any; })[]"
-              }
-            }
-          }
-        },
-        {
-          "description": "",
-          "displayName": "NamedExoticComponent",
-          "methods": [],
-          "props": {
-            "baseRoute": {
-              "defaultValue": null,
-              "description": "",
-              "name": "baseRoute",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "caption": {
-              "defaultValue": null,
-              "description": "",
-              "name": "caption",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "condensed": {
-              "defaultValue": null,
-              "description": "",
-              "name": "condensed",
-              "required": false,
-              "type": {
-                "name": "boolean"
-              }
-            },
-            "headings": {
-              "defaultValue": null,
-              "description": "",
-              "name": "headings",
-              "required": false,
-              "type": {
-                "name": "(string | ((props?: any) => Element))[]"
-              }
-            },
-            "hook": {
-              "defaultValue": null,
-              "description": "",
-              "name": "hook",
-              "required": true,
-              "type": {
-                "name": "() => any"
-              }
-            },
-            "hover": {
-              "defaultValue": null,
-              "description": "",
-              "name": "hover",
-              "required": false,
-              "type": {
-                "name": "boolean"
-              }
-            },
-            "initialValue": {
-              "defaultValue": null,
-              "description": "",
-              "name": "initialValue",
-              "required": false,
-              "type": {
-                "name": "any[]"
-              }
-            },
-            "name": {
-              "defaultValue": null,
-              "description": "",
-              "name": "name",
-              "required": true,
-              "type": {
-                "name": "string"
-              }
-            },
-            "onAdd": {
-              "defaultValue": null,
-              "description": "",
-              "name": "onAdd",
-              "required": false,
-              "type": {
-                "name": "(n: any) => any"
-              }
-            },
-            "onCopy": {
-              "defaultValue": null,
-              "description": "",
-              "name": "onCopy",
-              "required": false,
-              "type": {
-                "name": "(n: any) => any"
-              }
-            },
-            "onDelete": {
-              "defaultValue": null,
-              "description": "",
-              "name": "onDelete",
-              "required": false,
-              "type": {
-                "name": "(n: any) => any"
-              }
-            },
-            "onDeleteSelected": {
-              "defaultValue": null,
-              "description": "",
-              "name": "onDeleteSelected",
-              "required": false,
-              "type": {
-                "name": "(n: any) => any"
-              }
-            },
-            "onDownload": {
-              "defaultValue": null,
-              "description": "",
-              "name": "onDownload",
-              "required": false,
-              "type": {
-                "name": "(n: any) => any"
-              }
-            },
-            "onEdit": {
-              "defaultValue": null,
-              "description": "",
-              "name": "onEdit",
-              "required": false,
-              "type": {
-                "name": "(n: any) => any"
-              }
-            },
-            "onExecute": {
-              "defaultValue": null,
-              "description": "",
-              "name": "onExecute",
-              "required": false,
-              "type": {
-                "name": "() => any"
-              }
-            },
-            "rows": {
-              "defaultValue": null,
-              "description": "",
-              "name": "rows",
-              "required": true,
-              "type": {
-                "name": "(n: any) => any"
-              }
-            },
-            "title": {
-              "defaultValue": null,
-              "description": "",
-              "name": "title",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "toolbar": {
-              "defaultValue": null,
-              "description": "",
-              "name": "toolbar",
-              "required": false,
-              "type": {
-                "name": "(string | ((props?: any) => Element))[]"
-              }
-            },
-            "animate": {
-              "defaultValue": null,
-              "description": "",
-              "name": "animate",
-              "required": false,
-              "type": {
-                "name": "{ [key: string]: any; }"
-              }
-            },
-            "css": {
-              "defaultValue": null,
-              "description": "",
-              "name": "css",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "as": {
-              "defaultValue": null,
-              "description": "",
-              "name": "as",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "state": {
-              "defaultValue": null,
-              "description": "",
-              "name": "state",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "className": {
-              "defaultValue": null,
-              "description": "",
-              "name": "className",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "theme": {
-              "defaultValue": null,
-              "description": "",
-              "name": "theme",
-              "required": false,
-              "type": {
-                "name": "ThemeInterface"
-              }
-            },
-            "themed": {
-              "defaultValue": null,
-              "description": "",
-              "name": "themed",
-              "required": false,
-              "type": {
-                "name": "((props: any) => { [key: string]: any; })[]"
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/Table/TableBody.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "TableBody",
-          "methods": [],
-          "props": {
-            "baseRoute": {
-              "defaultValue": null,
-              "description": "",
-              "name": "baseRoute",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "dispatch": {
-              "defaultValue": null,
-              "description": "",
-              "name": "dispatch",
-              "required": true,
-              "type": {
-                "name": "Dispatch<any>"
-              }
-            },
-            "handleAdd": {
-              "defaultValue": null,
-              "description": "",
-              "name": "handleAdd",
-              "required": false,
-              "type": {
-                "name": "(e: MouseEvent<HTMLElement, MouseEvent>) => void"
-              }
-            },
-            "handleDeleteSelected": {
-              "defaultValue": null,
-              "description": "",
-              "name": "handleDeleteSelected",
-              "required": false,
-              "type": {
-                "name": "(e: MouseEvent<HTMLElement, MouseEvent>) => void"
-              }
-            },
-            "itemsToArray": {
-              "defaultValue": null,
-              "description": "",
-              "name": "itemsToArray",
-              "required": true,
-              "type": {
-                "name": "(items: any[]) => any[]"
-              }
-            },
-            "loading": {
-              "defaultValue": null,
-              "description": "",
-              "name": "loading",
-              "required": false,
-              "type": {
-                "name": "boolean"
-              }
-            },
-            "onRowClick": {
-              "defaultValue": null,
-              "description": "",
-              "name": "onRowClick",
-              "required": false,
-              "type": {
-                "name": "(e: MouseEvent<HTMLElement, MouseEvent>, id: string) => void"
-              }
-            },
-            "rows": {
-              "defaultValue": null,
-              "description": "",
-              "name": "rows",
-              "required": true,
-              "type": {
-                "name": "{ column: TableRowInterface[]; rowDetail?: TableRowDetailType; }[]"
-              }
-            },
-            "selected": {
-              "defaultValue": null,
-              "description": "",
-              "name": "selected",
-              "required": true,
-              "type": {
-                "name": "string"
-              }
-            },
-            "tableName": {
-              "defaultValue": null,
-              "description": "",
-              "name": "tableName",
-              "required": true,
-              "type": {
-                "name": "string"
-              }
-            },
-            "animate": {
-              "defaultValue": null,
-              "description": "",
-              "name": "animate",
-              "required": false,
-              "type": {
-                "name": "{ [key: string]: any; }"
-              }
-            },
-            "css": {
-              "defaultValue": null,
-              "description": "",
-              "name": "css",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "as": {
-              "defaultValue": null,
-              "description": "",
-              "name": "as",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "state": {
-              "defaultValue": null,
-              "description": "",
-              "name": "state",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "className": {
-              "defaultValue": null,
-              "description": "",
-              "name": "className",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "theme": {
-              "defaultValue": null,
-              "description": "",
-              "name": "theme",
-              "required": false,
-              "type": {
-                "name": "ThemeInterface"
-              }
-            },
-            "themed": {
-              "defaultValue": null,
-              "description": "",
-              "name": "themed",
-              "required": false,
-              "type": {
-                "name": "((props: any) => { [key: string]: any; })[]"
-              }
-            }
-          }
-        },
-        {
-          "description": "",
-          "displayName": "NamedExoticComponent",
-          "methods": [],
-          "props": {
-            "baseRoute": {
-              "defaultValue": null,
-              "description": "",
-              "name": "baseRoute",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "dispatch": {
-              "defaultValue": null,
-              "description": "",
-              "name": "dispatch",
-              "required": true,
-              "type": {
-                "name": "Dispatch<any>"
-              }
-            },
-            "handleAdd": {
-              "defaultValue": null,
-              "description": "",
-              "name": "handleAdd",
-              "required": false,
-              "type": {
-                "name": "(e: MouseEvent<HTMLElement, MouseEvent>) => void"
-              }
-            },
-            "handleDeleteSelected": {
-              "defaultValue": null,
-              "description": "",
-              "name": "handleDeleteSelected",
-              "required": false,
-              "type": {
-                "name": "(e: MouseEvent<HTMLElement, MouseEvent>) => void"
-              }
-            },
-            "itemsToArray": {
-              "defaultValue": null,
-              "description": "",
-              "name": "itemsToArray",
-              "required": true,
-              "type": {
-                "name": "(items: any[]) => any[]"
-              }
-            },
-            "loading": {
-              "defaultValue": null,
-              "description": "",
-              "name": "loading",
-              "required": false,
-              "type": {
-                "name": "boolean"
-              }
-            },
-            "onRowClick": {
-              "defaultValue": null,
-              "description": "",
-              "name": "onRowClick",
-              "required": false,
-              "type": {
-                "name": "(e: MouseEvent<HTMLElement, MouseEvent>, id: string) => void"
-              }
-            },
-            "rows": {
-              "defaultValue": null,
-              "description": "",
-              "name": "rows",
-              "required": true,
-              "type": {
-                "name": "{ column: TableRowInterface[]; rowDetail?: TableRowDetailType; }[]"
-              }
-            },
-            "selected": {
-              "defaultValue": null,
-              "description": "",
-              "name": "selected",
-              "required": true,
-              "type": {
-                "name": "string"
-              }
-            },
-            "tableName": {
-              "defaultValue": null,
-              "description": "",
-              "name": "tableName",
-              "required": true,
-              "type": {
-                "name": "string"
-              }
-            },
-            "animate": {
-              "defaultValue": null,
-              "description": "",
-              "name": "animate",
-              "required": false,
-              "type": {
-                "name": "{ [key: string]: any; }"
-              }
-            },
-            "css": {
-              "defaultValue": null,
-              "description": "",
-              "name": "css",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "as": {
-              "defaultValue": null,
-              "description": "",
-              "name": "as",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "state": {
-              "defaultValue": null,
-              "description": "",
-              "name": "state",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "className": {
-              "defaultValue": null,
-              "description": "",
-              "name": "className",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "theme": {
-              "defaultValue": null,
-              "description": "",
-              "name": "theme",
-              "required": false,
-              "type": {
-                "name": "ThemeInterface"
-              }
-            },
-            "themed": {
-              "defaultValue": null,
-              "description": "",
-              "name": "themed",
-              "required": false,
-              "type": {
-                "name": "((props: any) => { [key: string]: any; })[]"
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/Table/TableButton.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "TableCopyButton",
-          "methods": [],
-          "props": {
-            "alt": {
-              "defaultValue": null,
-              "description": "",
-              "name": "alt",
-              "required": true,
-              "type": {
-                "name": "string"
-              }
-            },
-            "dimension": {
-              "defaultValue": null,
-              "description": "",
-              "name": "dimension",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "icon": {
-              "defaultValue": null,
-              "description": "",
-              "name": "icon",
-              "required": false,
-              "type": {
-                "name": "(props: IconInterface) => Element"
-              }
-            },
-            "iconProps": {
-              "defaultValue": null,
-              "description": "",
-              "name": "iconProps",
-              "required": false,
-              "type": {
-                "name": "IconInterface"
-              }
-            },
-            "title": {
-              "defaultValue": null,
-              "description": "",
-              "name": "title",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "uid": {
-              "defaultValue": null,
-              "description": "",
-              "name": "uid",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "appearance": {
-              "defaultValue": null,
-              "description": "",
-              "name": "appearance",
-              "required": false,
-              "type": {
-                "name": "AppearanceType"
-              }
-            },
-            "stretch": {
-              "defaultValue": null,
-              "description": "",
-              "name": "stretch",
-              "required": false,
-              "type": {
-                "name": "boolean"
-              }
-            },
-            "size": {
-              "defaultValue": null,
-              "description": "",
-              "name": "size",
-              "required": false,
-              "type": {
-                "name": "number"
-              }
-            },
-            "animate": {
-              "defaultValue": null,
-              "description": "",
-              "name": "animate",
-              "required": false,
-              "type": {
-                "name": "{ [key: string]: any; }"
-              }
-            },
-            "css": {
-              "defaultValue": null,
-              "description": "",
-              "name": "css",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "as": {
-              "defaultValue": null,
-              "description": "",
-              "name": "as",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "state": {
-              "defaultValue": null,
-              "description": "",
-              "name": "state",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "className": {
-              "defaultValue": null,
-              "description": "",
-              "name": "className",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "theme": {
-              "defaultValue": null,
-              "description": "",
-              "name": "theme",
-              "required": false,
-              "type": {
-                "name": "ThemeInterface"
-              }
-            },
-            "themed": {
-              "defaultValue": null,
-              "description": "",
-              "name": "themed",
-              "required": false,
-              "type": {
-                "name": "((props: any) => { [key: string]: any; })[]"
-              }
-            }
-          }
-        },
-        {
-          "description": "",
-          "displayName": "TableButton",
-          "methods": [],
-          "props": {
-            "alt": {
-              "defaultValue": null,
-              "description": "",
-              "name": "alt",
-              "required": true,
-              "type": {
-                "name": "string"
-              }
-            },
-            "dimension": {
-              "defaultValue": null,
-              "description": "",
-              "name": "dimension",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "icon": {
-              "defaultValue": null,
-              "description": "",
-              "name": "icon",
-              "required": false,
-              "type": {
-                "name": "(props: IconInterface) => Element"
-              }
-            },
-            "iconProps": {
-              "defaultValue": null,
-              "description": "",
-              "name": "iconProps",
-              "required": false,
-              "type": {
-                "name": "IconInterface"
-              }
-            },
-            "title": {
-              "defaultValue": null,
-              "description": "",
-              "name": "title",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "uid": {
-              "defaultValue": null,
-              "description": "",
-              "name": "uid",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "appearance": {
-              "defaultValue": null,
-              "description": "",
-              "name": "appearance",
-              "required": false,
-              "type": {
-                "name": "AppearanceType"
-              }
-            },
-            "stretch": {
-              "defaultValue": null,
-              "description": "",
-              "name": "stretch",
-              "required": false,
-              "type": {
-                "name": "boolean"
-              }
-            },
-            "size": {
-              "defaultValue": null,
-              "description": "",
-              "name": "size",
-              "required": false,
-              "type": {
-                "name": "number"
-              }
-            },
-            "animate": {
-              "defaultValue": null,
-              "description": "",
-              "name": "animate",
-              "required": false,
-              "type": {
-                "name": "{ [key: string]: any; }"
-              }
-            },
-            "css": {
-              "defaultValue": null,
-              "description": "",
-              "name": "css",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "as": {
-              "defaultValue": null,
-              "description": "",
-              "name": "as",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "state": {
-              "defaultValue": null,
-              "description": "",
-              "name": "state",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "className": {
-              "defaultValue": null,
-              "description": "",
-              "name": "className",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "theme": {
-              "defaultValue": null,
-              "description": "",
-              "name": "theme",
-              "required": false,
-              "type": {
-                "name": "ThemeInterface"
-              }
-            },
-            "themed": {
-              "defaultValue": null,
-              "description": "",
-              "name": "themed",
-              "required": false,
-              "type": {
-                "name": "((props: any) => { [key: string]: any; })[]"
-              }
-            }
-          }
-        },
-        {
-          "description": "",
-          "displayName": "TableDeleteButton",
-          "methods": [],
-          "props": {
-            "alt": {
-              "defaultValue": null,
-              "description": "",
-              "name": "alt",
-              "required": true,
-              "type": {
-                "name": "string"
-              }
-            },
-            "dimension": {
-              "defaultValue": null,
-              "description": "",
-              "name": "dimension",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "icon": {
-              "defaultValue": null,
-              "description": "",
-              "name": "icon",
-              "required": false,
-              "type": {
-                "name": "(props: IconInterface) => Element"
-              }
-            },
-            "iconProps": {
-              "defaultValue": null,
-              "description": "",
-              "name": "iconProps",
-              "required": false,
-              "type": {
-                "name": "IconInterface"
-              }
-            },
-            "title": {
-              "defaultValue": null,
-              "description": "",
-              "name": "title",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "uid": {
-              "defaultValue": null,
-              "description": "",
-              "name": "uid",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "appearance": {
-              "defaultValue": null,
-              "description": "",
-              "name": "appearance",
-              "required": false,
-              "type": {
-                "name": "AppearanceType"
-              }
-            },
-            "stretch": {
-              "defaultValue": null,
-              "description": "",
-              "name": "stretch",
-              "required": false,
-              "type": {
-                "name": "boolean"
-              }
-            },
-            "size": {
-              "defaultValue": null,
-              "description": "",
-              "name": "size",
-              "required": false,
-              "type": {
-                "name": "number"
-              }
-            },
-            "animate": {
-              "defaultValue": null,
-              "description": "",
-              "name": "animate",
-              "required": false,
-              "type": {
-                "name": "{ [key: string]: any; }"
-              }
-            },
-            "css": {
-              "defaultValue": null,
-              "description": "",
-              "name": "css",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "as": {
-              "defaultValue": null,
-              "description": "",
-              "name": "as",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "state": {
-              "defaultValue": null,
-              "description": "",
-              "name": "state",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "className": {
-              "defaultValue": null,
-              "description": "",
-              "name": "className",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "theme": {
-              "defaultValue": null,
-              "description": "",
-              "name": "theme",
-              "required": false,
-              "type": {
-                "name": "ThemeInterface"
-              }
-            },
-            "themed": {
-              "defaultValue": null,
-              "description": "",
-              "name": "themed",
-              "required": false,
-              "type": {
-                "name": "((props: any) => { [key: string]: any; })[]"
-              }
-            }
-          }
-        },
-        {
-          "description": "",
-          "displayName": "TableDownloadButton",
-          "methods": [],
-          "props": {
-            "alt": {
-              "defaultValue": null,
-              "description": "",
-              "name": "alt",
-              "required": true,
-              "type": {
-                "name": "string"
-              }
-            },
-            "dimension": {
-              "defaultValue": null,
-              "description": "",
-              "name": "dimension",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "icon": {
-              "defaultValue": null,
-              "description": "",
-              "name": "icon",
-              "required": false,
-              "type": {
-                "name": "(props: IconInterface) => Element"
-              }
-            },
-            "iconProps": {
-              "defaultValue": null,
-              "description": "",
-              "name": "iconProps",
-              "required": false,
-              "type": {
-                "name": "IconInterface"
-              }
-            },
-            "title": {
-              "defaultValue": null,
-              "description": "",
-              "name": "title",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "uid": {
-              "defaultValue": null,
-              "description": "",
-              "name": "uid",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "appearance": {
-              "defaultValue": null,
-              "description": "",
-              "name": "appearance",
-              "required": false,
-              "type": {
-                "name": "AppearanceType"
-              }
-            },
-            "stretch": {
-              "defaultValue": null,
-              "description": "",
-              "name": "stretch",
-              "required": false,
-              "type": {
-                "name": "boolean"
-              }
-            },
-            "size": {
-              "defaultValue": null,
-              "description": "",
-              "name": "size",
-              "required": false,
-              "type": {
-                "name": "number"
-              }
-            },
-            "animate": {
-              "defaultValue": null,
-              "description": "",
-              "name": "animate",
-              "required": false,
-              "type": {
-                "name": "{ [key: string]: any; }"
-              }
-            },
-            "css": {
-              "defaultValue": null,
-              "description": "",
-              "name": "css",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "as": {
-              "defaultValue": null,
-              "description": "",
-              "name": "as",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "state": {
-              "defaultValue": null,
-              "description": "",
-              "name": "state",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "className": {
-              "defaultValue": null,
-              "description": "",
-              "name": "className",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "theme": {
-              "defaultValue": null,
-              "description": "",
-              "name": "theme",
-              "required": false,
-              "type": {
-                "name": "ThemeInterface"
-              }
-            },
-            "themed": {
-              "defaultValue": null,
-              "description": "",
-              "name": "themed",
-              "required": false,
-              "type": {
-                "name": "((props: any) => { [key: string]: any; })[]"
-              }
-            }
-          }
-        },
-        {
-          "description": "",
-          "displayName": "TableEditLink",
-          "methods": [],
-          "props": {
-            "alt": {
-              "defaultValue": null,
-              "description": "",
-              "name": "alt",
-              "required": true,
-              "type": {
-                "name": "string"
-              }
-            },
-            "dimension": {
-              "defaultValue": null,
-              "description": "",
-              "name": "dimension",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "icon": {
-              "defaultValue": null,
-              "description": "",
-              "name": "icon",
-              "required": false,
-              "type": {
-                "name": "(props: IconInterface) => Element"
-              }
-            },
-            "iconProps": {
-              "defaultValue": null,
-              "description": "",
-              "name": "iconProps",
-              "required": false,
-              "type": {
-                "name": "IconInterface"
-              }
-            },
-            "title": {
-              "defaultValue": null,
-              "description": "",
-              "name": "title",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "uid": {
-              "defaultValue": null,
-              "description": "",
-              "name": "uid",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "appearance": {
-              "defaultValue": null,
-              "description": "",
-              "name": "appearance",
-              "required": false,
-              "type": {
-                "name": "AppearanceType"
-              }
-            },
-            "stretch": {
-              "defaultValue": null,
-              "description": "",
-              "name": "stretch",
-              "required": false,
-              "type": {
-                "name": "boolean"
-              }
-            },
-            "size": {
-              "defaultValue": null,
-              "description": "",
-              "name": "size",
-              "required": false,
-              "type": {
-                "name": "number"
-              }
-            },
-            "animate": {
-              "defaultValue": null,
-              "description": "",
-              "name": "animate",
-              "required": false,
-              "type": {
-                "name": "{ [key: string]: any; }"
-              }
-            },
-            "css": {
-              "defaultValue": null,
-              "description": "",
-              "name": "css",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "as": {
-              "defaultValue": null,
-              "description": "",
-              "name": "as",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "state": {
-              "defaultValue": null,
-              "description": "",
-              "name": "state",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "className": {
-              "defaultValue": null,
-              "description": "",
-              "name": "className",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "theme": {
-              "defaultValue": null,
-              "description": "",
-              "name": "theme",
-              "required": false,
-              "type": {
-                "name": "ThemeInterface"
-              }
-            },
-            "themed": {
-              "defaultValue": null,
-              "description": "",
-              "name": "themed",
-              "required": false,
-              "type": {
-                "name": "((props: any) => { [key: string]: any; })[]"
-              }
-            }
-          }
-        },
-        {
-          "description": "",
-          "displayName": "NamedExoticComponent",
-          "methods": [],
-          "props": {
-            "alt": {
-              "defaultValue": null,
-              "description": "",
-              "name": "alt",
-              "required": true,
-              "type": {
-                "name": "string"
-              }
-            },
-            "dimension": {
-              "defaultValue": null,
-              "description": "",
-              "name": "dimension",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "icon": {
-              "defaultValue": null,
-              "description": "",
-              "name": "icon",
-              "required": false,
-              "type": {
-                "name": "(props: IconInterface) => Element"
-              }
-            },
-            "iconProps": {
-              "defaultValue": null,
-              "description": "",
-              "name": "iconProps",
-              "required": false,
-              "type": {
-                "name": "IconInterface"
-              }
-            },
-            "title": {
-              "defaultValue": null,
-              "description": "",
-              "name": "title",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "uid": {
-              "defaultValue": null,
-              "description": "",
-              "name": "uid",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "appearance": {
-              "defaultValue": null,
-              "description": "",
-              "name": "appearance",
-              "required": false,
-              "type": {
-                "name": "AppearanceType"
-              }
-            },
-            "stretch": {
-              "defaultValue": null,
-              "description": "",
-              "name": "stretch",
-              "required": false,
-              "type": {
-                "name": "boolean"
-              }
-            },
-            "size": {
-              "defaultValue": null,
-              "description": "",
-              "name": "size",
-              "required": false,
-              "type": {
-                "name": "number"
-              }
-            },
-            "animate": {
-              "defaultValue": null,
-              "description": "",
-              "name": "animate",
-              "required": false,
-              "type": {
-                "name": "{ [key: string]: any; }"
-              }
-            },
-            "css": {
-              "defaultValue": null,
-              "description": "",
-              "name": "css",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "as": {
-              "defaultValue": null,
-              "description": "",
-              "name": "as",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "state": {
-              "defaultValue": null,
-              "description": "",
-              "name": "state",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "className": {
-              "defaultValue": null,
-              "description": "",
-              "name": "className",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "theme": {
-              "defaultValue": null,
-              "description": "",
-              "name": "theme",
-              "required": false,
-              "type": {
-                "name": "ThemeInterface"
-              }
-            },
-            "themed": {
-              "defaultValue": null,
-              "description": "",
-              "name": "themed",
-              "required": false,
-              "type": {
-                "name": "((props: any) => { [key: string]: any; })[]"
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
       "key": "src/Table/TableCaption.tsx",
       "value": [
         {
@@ -10159,433 +8199,6 @@
           "displayName": "TableCaption",
           "methods": [],
           "props": {
-            "animate": {
-              "defaultValue": null,
-              "description": "",
-              "name": "animate",
-              "required": false,
-              "type": {
-                "name": "{ [key: string]: any; }"
-              }
-            },
-            "css": {
-              "defaultValue": null,
-              "description": "",
-              "name": "css",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "as": {
-              "defaultValue": null,
-              "description": "",
-              "name": "as",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "state": {
-              "defaultValue": null,
-              "description": "",
-              "name": "state",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "className": {
-              "defaultValue": null,
-              "description": "",
-              "name": "className",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "theme": {
-              "defaultValue": null,
-              "description": "",
-              "name": "theme",
-              "required": false,
-              "type": {
-                "name": "ThemeInterface"
-              }
-            },
-            "themed": {
-              "defaultValue": null,
-              "description": "",
-              "name": "themed",
-              "required": false,
-              "type": {
-                "name": "((props: any) => { [key: string]: any; })[]"
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/Table/TableRowSelect.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "TableRowSelect",
-          "methods": [],
-          "props": {
-            "handleChange": {
-              "defaultValue": null,
-              "description": "",
-              "name": "handleChange",
-              "required": true,
-              "type": {
-                "name": "(e: ChangeEvent<HTMLInputElement>) => void"
-              }
-            },
-            "id": {
-              "defaultValue": null,
-              "description": "",
-              "name": "id",
-              "required": true,
-              "type": {
-                "name": "string"
-              }
-            },
-            "checked": {
-              "defaultValue": null,
-              "description": "",
-              "name": "checked",
-              "required": false,
-              "type": {
-                "name": "boolean"
-              }
-            },
-            "animate": {
-              "defaultValue": null,
-              "description": "",
-              "name": "animate",
-              "required": false,
-              "type": {
-                "name": "{ [key: string]: any; }"
-              }
-            },
-            "css": {
-              "defaultValue": null,
-              "description": "",
-              "name": "css",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "as": {
-              "defaultValue": null,
-              "description": "",
-              "name": "as",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "state": {
-              "defaultValue": null,
-              "description": "",
-              "name": "state",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "className": {
-              "defaultValue": null,
-              "description": "",
-              "name": "className",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "theme": {
-              "defaultValue": null,
-              "description": "",
-              "name": "theme",
-              "required": false,
-              "type": {
-                "name": "ThemeInterface"
-              }
-            },
-            "themed": {
-              "defaultValue": null,
-              "description": "",
-              "name": "themed",
-              "required": false,
-              "type": {
-                "name": "((props: any) => { [key: string]: any; })[]"
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/Table/TableView.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "TableView",
-          "methods": [],
-          "props": {
-            "allSelected": {
-              "defaultValue": null,
-              "description": "",
-              "name": "allSelected",
-              "required": false,
-              "type": {
-                "name": "boolean"
-              }
-            },
-            "dispatch": {
-              "defaultValue": null,
-              "description": "",
-              "name": "dispatch",
-              "required": true,
-              "type": {
-                "name": "Dispatch<any>"
-              }
-            },
-            "handleAdd": {
-              "defaultValue": null,
-              "description": "",
-              "name": "handleAdd",
-              "required": true,
-              "type": {
-                "name": "(e: MouseEvent<HTMLElement, MouseEvent>) => void"
-              }
-            },
-            "handleDeleteSelected": {
-              "defaultValue": null,
-              "description": "",
-              "name": "handleDeleteSelected",
-              "required": true,
-              "type": {
-                "name": "(e: MouseEvent<HTMLElement, MouseEvent>) => void"
-              }
-            },
-            "headings": {
-              "defaultValue": null,
-              "description": "",
-              "name": "headings",
-              "required": false,
-              "type": {
-                "name": "(string | ((props?: any) => Element))[]"
-              }
-            },
-            "itemsToArray": {
-              "defaultValue": null,
-              "description": "",
-              "name": "itemsToArray",
-              "required": true,
-              "type": {
-                "name": "(items: any[]) => any[]"
-              }
-            },
-            "loading": {
-              "defaultValue": null,
-              "description": "",
-              "name": "loading",
-              "required": true,
-              "type": {
-                "name": "boolean"
-              }
-            },
-            "rows": {
-              "defaultValue": null,
-              "description": "",
-              "name": "rows",
-              "required": true,
-              "type": {
-                "name": "{ column: TableRowInterface[]; rowDetail?: TableRowDetailType; }[]"
-              }
-            },
-            "selected": {
-              "defaultValue": null,
-              "description": "",
-              "name": "selected",
-              "required": true,
-              "type": {
-                "name": "string"
-              }
-            },
-            "tableName": {
-              "defaultValue": null,
-              "description": "",
-              "name": "tableName",
-              "required": true,
-              "type": {
-                "name": "string"
-              }
-            },
-            "animate": {
-              "defaultValue": null,
-              "description": "",
-              "name": "animate",
-              "required": false,
-              "type": {
-                "name": "{ [key: string]: any; }"
-              }
-            },
-            "css": {
-              "defaultValue": null,
-              "description": "",
-              "name": "css",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "as": {
-              "defaultValue": null,
-              "description": "",
-              "name": "as",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "state": {
-              "defaultValue": null,
-              "description": "",
-              "name": "state",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "className": {
-              "defaultValue": null,
-              "description": "",
-              "name": "className",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "theme": {
-              "defaultValue": null,
-              "description": "",
-              "name": "theme",
-              "required": false,
-              "type": {
-                "name": "ThemeInterface"
-              }
-            },
-            "themed": {
-              "defaultValue": null,
-              "description": "",
-              "name": "themed",
-              "required": false,
-              "type": {
-                "name": "((props: any) => { [key: string]: any; })[]"
-              }
-            }
-          }
-        },
-        {
-          "description": "",
-          "displayName": "NamedExoticComponent",
-          "methods": [],
-          "props": {
-            "allSelected": {
-              "defaultValue": null,
-              "description": "",
-              "name": "allSelected",
-              "required": false,
-              "type": {
-                "name": "boolean"
-              }
-            },
-            "dispatch": {
-              "defaultValue": null,
-              "description": "",
-              "name": "dispatch",
-              "required": true,
-              "type": {
-                "name": "Dispatch<any>"
-              }
-            },
-            "handleAdd": {
-              "defaultValue": null,
-              "description": "",
-              "name": "handleAdd",
-              "required": true,
-              "type": {
-                "name": "(e: MouseEvent<HTMLElement, MouseEvent>) => void"
-              }
-            },
-            "handleDeleteSelected": {
-              "defaultValue": null,
-              "description": "",
-              "name": "handleDeleteSelected",
-              "required": true,
-              "type": {
-                "name": "(e: MouseEvent<HTMLElement, MouseEvent>) => void"
-              }
-            },
-            "headings": {
-              "defaultValue": null,
-              "description": "",
-              "name": "headings",
-              "required": false,
-              "type": {
-                "name": "(string | ((props?: any) => Element))[]"
-              }
-            },
-            "itemsToArray": {
-              "defaultValue": null,
-              "description": "",
-              "name": "itemsToArray",
-              "required": true,
-              "type": {
-                "name": "(items: any[]) => any[]"
-              }
-            },
-            "loading": {
-              "defaultValue": null,
-              "description": "",
-              "name": "loading",
-              "required": true,
-              "type": {
-                "name": "boolean"
-              }
-            },
-            "rows": {
-              "defaultValue": null,
-              "description": "",
-              "name": "rows",
-              "required": true,
-              "type": {
-                "name": "{ column: TableRowInterface[]; rowDetail?: TableRowDetailType; }[]"
-              }
-            },
-            "selected": {
-              "defaultValue": null,
-              "description": "",
-              "name": "selected",
-              "required": true,
-              "type": {
-                "name": "string"
-              }
-            },
-            "tableName": {
-              "defaultValue": null,
-              "description": "",
-              "name": "tableName",
-              "required": true,
-              "type": {
-                "name": "string"
-              }
-            },
             "animate": {
               "defaultValue": null,
               "description": "",
@@ -13155,241 +10768,6 @@
       ]
     },
     {
-      "key": "src/Toast/ToastNotification.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "ToastNotification",
-          "methods": [],
-          "props": {
-            "appearance": {
-              "defaultValue": null,
-              "description": "",
-              "name": "appearance",
-              "required": false,
-              "type": {
-                "name": "AppearanceLimitedType"
-              }
-            },
-            "position": {
-              "defaultValue": null,
-              "description": "",
-              "name": "position",
-              "required": false,
-              "type": {
-                "name": "positionType"
-              }
-            },
-            "items": {
-              "defaultValue": null,
-              "description": "",
-              "name": "items",
-              "required": false,
-              "type": {
-                "name": "any"
-              }
-            },
-            "uid": {
-              "defaultValue": null,
-              "description": "",
-              "name": "uid",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "notifications": {
-              "defaultValue": null,
-              "description": "",
-              "name": "notifications",
-              "required": false,
-              "type": {
-                "name": "ToastMessageInterface[]"
-              }
-            },
-            "animate": {
-              "defaultValue": null,
-              "description": "",
-              "name": "animate",
-              "required": false,
-              "type": {
-                "name": "{ [key: string]: any; }"
-              }
-            },
-            "css": {
-              "defaultValue": null,
-              "description": "",
-              "name": "css",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "as": {
-              "defaultValue": null,
-              "description": "",
-              "name": "as",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "state": {
-              "defaultValue": null,
-              "description": "",
-              "name": "state",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "className": {
-              "defaultValue": null,
-              "description": "",
-              "name": "className",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "theme": {
-              "defaultValue": null,
-              "description": "",
-              "name": "theme",
-              "required": false,
-              "type": {
-                "name": "ThemeInterface"
-              }
-            },
-            "themed": {
-              "defaultValue": null,
-              "description": "",
-              "name": "themed",
-              "required": false,
-              "type": {
-                "name": "((props: any) => { [key: string]: any; })[]"
-              }
-            }
-          }
-        },
-        {
-          "description": "",
-          "displayName": "NamedExoticComponent",
-          "methods": [],
-          "props": {
-            "appearance": {
-              "defaultValue": null,
-              "description": "",
-              "name": "appearance",
-              "required": false,
-              "type": {
-                "name": "AppearanceLimitedType"
-              }
-            },
-            "position": {
-              "defaultValue": null,
-              "description": "",
-              "name": "position",
-              "required": false,
-              "type": {
-                "name": "positionType"
-              }
-            },
-            "items": {
-              "defaultValue": null,
-              "description": "",
-              "name": "items",
-              "required": false,
-              "type": {
-                "name": "any"
-              }
-            },
-            "uid": {
-              "defaultValue": null,
-              "description": "",
-              "name": "uid",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "notifications": {
-              "defaultValue": null,
-              "description": "",
-              "name": "notifications",
-              "required": false,
-              "type": {
-                "name": "ToastMessageInterface[]"
-              }
-            },
-            "animate": {
-              "defaultValue": null,
-              "description": "",
-              "name": "animate",
-              "required": false,
-              "type": {
-                "name": "{ [key: string]: any; }"
-              }
-            },
-            "css": {
-              "defaultValue": null,
-              "description": "",
-              "name": "css",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "as": {
-              "defaultValue": null,
-              "description": "",
-              "name": "as",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "state": {
-              "defaultValue": null,
-              "description": "",
-              "name": "state",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "className": {
-              "defaultValue": null,
-              "description": "",
-              "name": "className",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "theme": {
-              "defaultValue": null,
-              "description": "",
-              "name": "theme",
-              "required": false,
-              "type": {
-                "name": "ThemeInterface"
-              }
-            },
-            "themed": {
-              "defaultValue": null,
-              "description": "",
-              "name": "themed",
-              "required": false,
-              "type": {
-                "name": "((props: any) => { [key: string]: any; })[]"
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
       "key": "src/Toggle/Toggle.tsx",
       "value": [
         {
@@ -13891,241 +11269,6 @@
               "required": true,
               "type": {
                 "name": "string"
-              }
-            },
-            "animate": {
-              "defaultValue": null,
-              "description": "",
-              "name": "animate",
-              "required": false,
-              "type": {
-                "name": "{ [key: string]: any; }"
-              }
-            },
-            "css": {
-              "defaultValue": null,
-              "description": "",
-              "name": "css",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "as": {
-              "defaultValue": null,
-              "description": "",
-              "name": "as",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "state": {
-              "defaultValue": null,
-              "description": "",
-              "name": "state",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "className": {
-              "defaultValue": null,
-              "description": "",
-              "name": "className",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "theme": {
-              "defaultValue": null,
-              "description": "",
-              "name": "theme",
-              "required": false,
-              "type": {
-                "name": "ThemeInterface"
-              }
-            },
-            "themed": {
-              "defaultValue": null,
-              "description": "",
-              "name": "themed",
-              "required": false,
-              "type": {
-                "name": "((props: any) => { [key: string]: any; })[]"
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/Toolbar/Toolbar.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Toolbar",
-          "methods": [],
-          "props": {
-            "items": {
-              "defaultValue": null,
-              "description": "",
-              "name": "items",
-              "required": false,
-              "type": {
-                "name": "any[]"
-              }
-            },
-            "onDeleteSelected": {
-              "defaultValue": null,
-              "description": "",
-              "name": "onDeleteSelected",
-              "required": false,
-              "type": {
-                "name": "(e: MouseEvent<HTMLElement, MouseEvent>) => void"
-              }
-            },
-            "onSwitchView": {
-              "defaultValue": null,
-              "description": "",
-              "name": "onSwitchView",
-              "required": false,
-              "type": {
-                "name": "(e: MouseEvent<HTMLElement, MouseEvent>, { id }: { id: string; }) => void"
-              }
-            },
-            "toolbar": {
-              "defaultValue": null,
-              "description": "",
-              "name": "toolbar",
-              "required": false,
-              "type": {
-                "name": "any[]"
-              }
-            },
-            "selectToolbar": {
-              "defaultValue": null,
-              "description": "",
-              "name": "selectToolbar",
-              "required": false,
-              "type": {
-                "name": "(props: SelectToolbarInterface) => Element"
-              }
-            },
-            "animate": {
-              "defaultValue": null,
-              "description": "",
-              "name": "animate",
-              "required": false,
-              "type": {
-                "name": "{ [key: string]: any; }"
-              }
-            },
-            "css": {
-              "defaultValue": null,
-              "description": "",
-              "name": "css",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "as": {
-              "defaultValue": null,
-              "description": "",
-              "name": "as",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "state": {
-              "defaultValue": null,
-              "description": "",
-              "name": "state",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "className": {
-              "defaultValue": null,
-              "description": "",
-              "name": "className",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "theme": {
-              "defaultValue": null,
-              "description": "",
-              "name": "theme",
-              "required": false,
-              "type": {
-                "name": "ThemeInterface"
-              }
-            },
-            "themed": {
-              "defaultValue": null,
-              "description": "",
-              "name": "themed",
-              "required": false,
-              "type": {
-                "name": "((props: any) => { [key: string]: any; })[]"
-              }
-            }
-          }
-        },
-        {
-          "description": "",
-          "displayName": "NamedExoticComponent",
-          "methods": [],
-          "props": {
-            "items": {
-              "defaultValue": null,
-              "description": "",
-              "name": "items",
-              "required": false,
-              "type": {
-                "name": "any[]"
-              }
-            },
-            "onDeleteSelected": {
-              "defaultValue": null,
-              "description": "",
-              "name": "onDeleteSelected",
-              "required": false,
-              "type": {
-                "name": "(e: MouseEvent<HTMLElement, MouseEvent>) => void"
-              }
-            },
-            "onSwitchView": {
-              "defaultValue": null,
-              "description": "",
-              "name": "onSwitchView",
-              "required": false,
-              "type": {
-                "name": "(e: MouseEvent<HTMLElement, MouseEvent>, { id }: { id: string; }) => void"
-              }
-            },
-            "toolbar": {
-              "defaultValue": null,
-              "description": "",
-              "name": "toolbar",
-              "required": false,
-              "type": {
-                "name": "any[]"
-              }
-            },
-            "selectToolbar": {
-              "defaultValue": null,
-              "description": "",
-              "name": "selectToolbar",
-              "required": false,
-              "type": {
-                "name": "(props: SelectToolbarInterface) => Element"
               }
             },
             "animate": {
@@ -115236,6 +112379,2863 @@
           }
         }
       ]
+    },
+    {
+      "key": "src/Dropdown/Dropdown.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Dropdown",
+          "methods": [],
+          "props": {
+            "appearance": {
+              "defaultValue": null,
+              "description": "",
+              "name": "appearance",
+              "required": false,
+              "type": {
+                "name": "AppearanceType"
+              }
+            },
+            "animate": {
+              "defaultValue": null,
+              "description": "",
+              "name": "animate",
+              "required": false,
+              "type": {
+                "name": "{ [key: string]: any; }"
+              }
+            },
+            "css": {
+              "defaultValue": null,
+              "description": "",
+              "name": "css",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "as": {
+              "defaultValue": null,
+              "description": "",
+              "name": "as",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "state": {
+              "defaultValue": null,
+              "description": "",
+              "name": "state",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "className": {
+              "defaultValue": null,
+              "description": "",
+              "name": "className",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "theme": {
+              "defaultValue": null,
+              "description": "",
+              "name": "theme",
+              "required": false,
+              "type": {
+                "name": "ThemeInterface"
+              }
+            },
+            "themed": {
+              "defaultValue": null,
+              "description": "",
+              "name": "themed",
+              "required": false,
+              "type": {
+                "name": "((props: any) => { [key: string]: any; })[]"
+              }
+            }
+          }
+        },
+        {
+          "description": "",
+          "displayName": "NamedExoticComponent",
+          "methods": [],
+          "props": {
+            "appearance": {
+              "defaultValue": null,
+              "description": "",
+              "name": "appearance",
+              "required": false,
+              "type": {
+                "name": "AppearanceType"
+              }
+            },
+            "animate": {
+              "defaultValue": null,
+              "description": "",
+              "name": "animate",
+              "required": false,
+              "type": {
+                "name": "{ [key: string]: any; }"
+              }
+            },
+            "css": {
+              "defaultValue": null,
+              "description": "",
+              "name": "css",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "as": {
+              "defaultValue": null,
+              "description": "",
+              "name": "as",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "state": {
+              "defaultValue": null,
+              "description": "",
+              "name": "state",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "className": {
+              "defaultValue": null,
+              "description": "",
+              "name": "className",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "theme": {
+              "defaultValue": null,
+              "description": "",
+              "name": "theme",
+              "required": false,
+              "type": {
+                "name": "ThemeInterface"
+              }
+            },
+            "themed": {
+              "defaultValue": null,
+              "description": "",
+              "name": "themed",
+              "required": false,
+              "type": {
+                "name": "((props: any) => { [key: string]: any; })[]"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/Portal/Portal.ts",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Portal",
+          "methods": [],
+          "props": {
+            "rootRef": {
+              "defaultValue": null,
+              "description": "",
+              "name": "rootRef",
+              "required": true,
+              "type": {
+                "name": "{ current: HTMLElement; }"
+              }
+            }
+          }
+        },
+        {
+          "description": "",
+          "displayName": "NamedExoticComponent",
+          "methods": [],
+          "props": {
+            "rootRef": {
+              "defaultValue": null,
+              "description": "",
+              "name": "rootRef",
+              "required": true,
+              "type": {
+                "name": "{ current: HTMLElement; }"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/Table/AllSelectedHeading.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "AllSelectedHeading",
+          "methods": [],
+          "props": {
+            "checked": {
+              "defaultValue": null,
+              "description": "",
+              "name": "checked",
+              "required": true,
+              "type": {
+                "name": "boolean"
+              }
+            },
+            "onChange": {
+              "defaultValue": null,
+              "description": "",
+              "name": "onChange",
+              "required": true,
+              "type": {
+                "name": "(e: ChangeEvent<HTMLInputElement>) => void"
+              }
+            }
+          }
+        },
+        {
+          "description": "",
+          "displayName": "NamedExoticComponent",
+          "methods": [],
+          "props": {
+            "checked": {
+              "defaultValue": null,
+              "description": "",
+              "name": "checked",
+              "required": true,
+              "type": {
+                "name": "boolean"
+              }
+            },
+            "onChange": {
+              "defaultValue": null,
+              "description": "",
+              "name": "onChange",
+              "required": true,
+              "type": {
+                "name": "(e: ChangeEvent<HTMLInputElement>) => void"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/Table/Table.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Table",
+          "methods": [],
+          "props": {
+            "baseRoute": {
+              "defaultValue": null,
+              "description": "",
+              "name": "baseRoute",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "caption": {
+              "defaultValue": null,
+              "description": "",
+              "name": "caption",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "condensed": {
+              "defaultValue": null,
+              "description": "",
+              "name": "condensed",
+              "required": false,
+              "type": {
+                "name": "boolean"
+              }
+            },
+            "headings": {
+              "defaultValue": null,
+              "description": "",
+              "name": "headings",
+              "required": false,
+              "type": {
+                "name": "(string | ((props?: any) => Element))[]"
+              }
+            },
+            "hook": {
+              "defaultValue": null,
+              "description": "",
+              "name": "hook",
+              "required": true,
+              "type": {
+                "name": "() => any"
+              }
+            },
+            "hover": {
+              "defaultValue": null,
+              "description": "",
+              "name": "hover",
+              "required": false,
+              "type": {
+                "name": "boolean"
+              }
+            },
+            "initialValue": {
+              "defaultValue": null,
+              "description": "",
+              "name": "initialValue",
+              "required": false,
+              "type": {
+                "name": "any[]"
+              }
+            },
+            "name": {
+              "defaultValue": null,
+              "description": "",
+              "name": "name",
+              "required": true,
+              "type": {
+                "name": "string"
+              }
+            },
+            "onAdd": {
+              "defaultValue": null,
+              "description": "",
+              "name": "onAdd",
+              "required": false,
+              "type": {
+                "name": "(n: any) => any"
+              }
+            },
+            "onCopy": {
+              "defaultValue": null,
+              "description": "",
+              "name": "onCopy",
+              "required": false,
+              "type": {
+                "name": "(n: any) => any"
+              }
+            },
+            "onDelete": {
+              "defaultValue": null,
+              "description": "",
+              "name": "onDelete",
+              "required": false,
+              "type": {
+                "name": "(n: any) => any"
+              }
+            },
+            "onDeleteSelected": {
+              "defaultValue": null,
+              "description": "",
+              "name": "onDeleteSelected",
+              "required": false,
+              "type": {
+                "name": "(n: any) => any"
+              }
+            },
+            "onDownload": {
+              "defaultValue": null,
+              "description": "",
+              "name": "onDownload",
+              "required": false,
+              "type": {
+                "name": "(n: any) => any"
+              }
+            },
+            "onEdit": {
+              "defaultValue": null,
+              "description": "",
+              "name": "onEdit",
+              "required": false,
+              "type": {
+                "name": "(n: any) => any"
+              }
+            },
+            "onExecute": {
+              "defaultValue": null,
+              "description": "",
+              "name": "onExecute",
+              "required": false,
+              "type": {
+                "name": "() => any"
+              }
+            },
+            "rows": {
+              "defaultValue": null,
+              "description": "",
+              "name": "rows",
+              "required": true,
+              "type": {
+                "name": "(n: any) => any"
+              }
+            },
+            "title": {
+              "defaultValue": null,
+              "description": "",
+              "name": "title",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "toolbar": {
+              "defaultValue": null,
+              "description": "",
+              "name": "toolbar",
+              "required": false,
+              "type": {
+                "name": "(string | ((props?: any) => Element))[]"
+              }
+            },
+            "animate": {
+              "defaultValue": null,
+              "description": "",
+              "name": "animate",
+              "required": false,
+              "type": {
+                "name": "{ [key: string]: any; }"
+              }
+            },
+            "css": {
+              "defaultValue": null,
+              "description": "",
+              "name": "css",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "as": {
+              "defaultValue": null,
+              "description": "",
+              "name": "as",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "state": {
+              "defaultValue": null,
+              "description": "",
+              "name": "state",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "className": {
+              "defaultValue": null,
+              "description": "",
+              "name": "className",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "theme": {
+              "defaultValue": null,
+              "description": "",
+              "name": "theme",
+              "required": false,
+              "type": {
+                "name": "ThemeInterface"
+              }
+            },
+            "themed": {
+              "defaultValue": null,
+              "description": "",
+              "name": "themed",
+              "required": false,
+              "type": {
+                "name": "((props: any) => { [key: string]: any; })[]"
+              }
+            }
+          }
+        },
+        {
+          "description": "",
+          "displayName": "NamedExoticComponent",
+          "methods": [],
+          "props": {
+            "baseRoute": {
+              "defaultValue": null,
+              "description": "",
+              "name": "baseRoute",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "caption": {
+              "defaultValue": null,
+              "description": "",
+              "name": "caption",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "condensed": {
+              "defaultValue": null,
+              "description": "",
+              "name": "condensed",
+              "required": false,
+              "type": {
+                "name": "boolean"
+              }
+            },
+            "headings": {
+              "defaultValue": null,
+              "description": "",
+              "name": "headings",
+              "required": false,
+              "type": {
+                "name": "(string | ((props?: any) => Element))[]"
+              }
+            },
+            "hook": {
+              "defaultValue": null,
+              "description": "",
+              "name": "hook",
+              "required": true,
+              "type": {
+                "name": "() => any"
+              }
+            },
+            "hover": {
+              "defaultValue": null,
+              "description": "",
+              "name": "hover",
+              "required": false,
+              "type": {
+                "name": "boolean"
+              }
+            },
+            "initialValue": {
+              "defaultValue": null,
+              "description": "",
+              "name": "initialValue",
+              "required": false,
+              "type": {
+                "name": "any[]"
+              }
+            },
+            "name": {
+              "defaultValue": null,
+              "description": "",
+              "name": "name",
+              "required": true,
+              "type": {
+                "name": "string"
+              }
+            },
+            "onAdd": {
+              "defaultValue": null,
+              "description": "",
+              "name": "onAdd",
+              "required": false,
+              "type": {
+                "name": "(n: any) => any"
+              }
+            },
+            "onCopy": {
+              "defaultValue": null,
+              "description": "",
+              "name": "onCopy",
+              "required": false,
+              "type": {
+                "name": "(n: any) => any"
+              }
+            },
+            "onDelete": {
+              "defaultValue": null,
+              "description": "",
+              "name": "onDelete",
+              "required": false,
+              "type": {
+                "name": "(n: any) => any"
+              }
+            },
+            "onDeleteSelected": {
+              "defaultValue": null,
+              "description": "",
+              "name": "onDeleteSelected",
+              "required": false,
+              "type": {
+                "name": "(n: any) => any"
+              }
+            },
+            "onDownload": {
+              "defaultValue": null,
+              "description": "",
+              "name": "onDownload",
+              "required": false,
+              "type": {
+                "name": "(n: any) => any"
+              }
+            },
+            "onEdit": {
+              "defaultValue": null,
+              "description": "",
+              "name": "onEdit",
+              "required": false,
+              "type": {
+                "name": "(n: any) => any"
+              }
+            },
+            "onExecute": {
+              "defaultValue": null,
+              "description": "",
+              "name": "onExecute",
+              "required": false,
+              "type": {
+                "name": "() => any"
+              }
+            },
+            "rows": {
+              "defaultValue": null,
+              "description": "",
+              "name": "rows",
+              "required": true,
+              "type": {
+                "name": "(n: any) => any"
+              }
+            },
+            "title": {
+              "defaultValue": null,
+              "description": "",
+              "name": "title",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "toolbar": {
+              "defaultValue": null,
+              "description": "",
+              "name": "toolbar",
+              "required": false,
+              "type": {
+                "name": "(string | ((props?: any) => Element))[]"
+              }
+            },
+            "animate": {
+              "defaultValue": null,
+              "description": "",
+              "name": "animate",
+              "required": false,
+              "type": {
+                "name": "{ [key: string]: any; }"
+              }
+            },
+            "css": {
+              "defaultValue": null,
+              "description": "",
+              "name": "css",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "as": {
+              "defaultValue": null,
+              "description": "",
+              "name": "as",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "state": {
+              "defaultValue": null,
+              "description": "",
+              "name": "state",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "className": {
+              "defaultValue": null,
+              "description": "",
+              "name": "className",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "theme": {
+              "defaultValue": null,
+              "description": "",
+              "name": "theme",
+              "required": false,
+              "type": {
+                "name": "ThemeInterface"
+              }
+            },
+            "themed": {
+              "defaultValue": null,
+              "description": "",
+              "name": "themed",
+              "required": false,
+              "type": {
+                "name": "((props: any) => { [key: string]: any; })[]"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/Table/TableBody.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "TableBody",
+          "methods": [],
+          "props": {
+            "baseRoute": {
+              "defaultValue": null,
+              "description": "",
+              "name": "baseRoute",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "dispatch": {
+              "defaultValue": null,
+              "description": "",
+              "name": "dispatch",
+              "required": true,
+              "type": {
+                "name": "Dispatch<any>"
+              }
+            },
+            "handleAdd": {
+              "defaultValue": null,
+              "description": "",
+              "name": "handleAdd",
+              "required": false,
+              "type": {
+                "name": "(e: MouseEvent<HTMLElement, MouseEvent>) => void"
+              }
+            },
+            "handleDeleteSelected": {
+              "defaultValue": null,
+              "description": "",
+              "name": "handleDeleteSelected",
+              "required": false,
+              "type": {
+                "name": "(e: MouseEvent<HTMLElement, MouseEvent>) => void"
+              }
+            },
+            "itemsToArray": {
+              "defaultValue": null,
+              "description": "",
+              "name": "itemsToArray",
+              "required": true,
+              "type": {
+                "name": "(items: any[]) => any[]"
+              }
+            },
+            "loading": {
+              "defaultValue": null,
+              "description": "",
+              "name": "loading",
+              "required": false,
+              "type": {
+                "name": "boolean"
+              }
+            },
+            "onRowClick": {
+              "defaultValue": null,
+              "description": "",
+              "name": "onRowClick",
+              "required": false,
+              "type": {
+                "name": "(e: MouseEvent<HTMLElement, MouseEvent>, id: string) => void"
+              }
+            },
+            "rows": {
+              "defaultValue": null,
+              "description": "",
+              "name": "rows",
+              "required": true,
+              "type": {
+                "name": "{ column: TableRowInterface[]; rowDetail?: TableRowDetailType; }[]"
+              }
+            },
+            "selected": {
+              "defaultValue": null,
+              "description": "",
+              "name": "selected",
+              "required": true,
+              "type": {
+                "name": "string"
+              }
+            },
+            "tableName": {
+              "defaultValue": null,
+              "description": "",
+              "name": "tableName",
+              "required": true,
+              "type": {
+                "name": "string"
+              }
+            },
+            "animate": {
+              "defaultValue": null,
+              "description": "",
+              "name": "animate",
+              "required": false,
+              "type": {
+                "name": "{ [key: string]: any; }"
+              }
+            },
+            "css": {
+              "defaultValue": null,
+              "description": "",
+              "name": "css",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "as": {
+              "defaultValue": null,
+              "description": "",
+              "name": "as",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "state": {
+              "defaultValue": null,
+              "description": "",
+              "name": "state",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "className": {
+              "defaultValue": null,
+              "description": "",
+              "name": "className",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "theme": {
+              "defaultValue": null,
+              "description": "",
+              "name": "theme",
+              "required": false,
+              "type": {
+                "name": "ThemeInterface"
+              }
+            },
+            "themed": {
+              "defaultValue": null,
+              "description": "",
+              "name": "themed",
+              "required": false,
+              "type": {
+                "name": "((props: any) => { [key: string]: any; })[]"
+              }
+            }
+          }
+        },
+        {
+          "description": "",
+          "displayName": "NamedExoticComponent",
+          "methods": [],
+          "props": {
+            "baseRoute": {
+              "defaultValue": null,
+              "description": "",
+              "name": "baseRoute",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "dispatch": {
+              "defaultValue": null,
+              "description": "",
+              "name": "dispatch",
+              "required": true,
+              "type": {
+                "name": "Dispatch<any>"
+              }
+            },
+            "handleAdd": {
+              "defaultValue": null,
+              "description": "",
+              "name": "handleAdd",
+              "required": false,
+              "type": {
+                "name": "(e: MouseEvent<HTMLElement, MouseEvent>) => void"
+              }
+            },
+            "handleDeleteSelected": {
+              "defaultValue": null,
+              "description": "",
+              "name": "handleDeleteSelected",
+              "required": false,
+              "type": {
+                "name": "(e: MouseEvent<HTMLElement, MouseEvent>) => void"
+              }
+            },
+            "itemsToArray": {
+              "defaultValue": null,
+              "description": "",
+              "name": "itemsToArray",
+              "required": true,
+              "type": {
+                "name": "(items: any[]) => any[]"
+              }
+            },
+            "loading": {
+              "defaultValue": null,
+              "description": "",
+              "name": "loading",
+              "required": false,
+              "type": {
+                "name": "boolean"
+              }
+            },
+            "onRowClick": {
+              "defaultValue": null,
+              "description": "",
+              "name": "onRowClick",
+              "required": false,
+              "type": {
+                "name": "(e: MouseEvent<HTMLElement, MouseEvent>, id: string) => void"
+              }
+            },
+            "rows": {
+              "defaultValue": null,
+              "description": "",
+              "name": "rows",
+              "required": true,
+              "type": {
+                "name": "{ column: TableRowInterface[]; rowDetail?: TableRowDetailType; }[]"
+              }
+            },
+            "selected": {
+              "defaultValue": null,
+              "description": "",
+              "name": "selected",
+              "required": true,
+              "type": {
+                "name": "string"
+              }
+            },
+            "tableName": {
+              "defaultValue": null,
+              "description": "",
+              "name": "tableName",
+              "required": true,
+              "type": {
+                "name": "string"
+              }
+            },
+            "animate": {
+              "defaultValue": null,
+              "description": "",
+              "name": "animate",
+              "required": false,
+              "type": {
+                "name": "{ [key: string]: any; }"
+              }
+            },
+            "css": {
+              "defaultValue": null,
+              "description": "",
+              "name": "css",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "as": {
+              "defaultValue": null,
+              "description": "",
+              "name": "as",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "state": {
+              "defaultValue": null,
+              "description": "",
+              "name": "state",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "className": {
+              "defaultValue": null,
+              "description": "",
+              "name": "className",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "theme": {
+              "defaultValue": null,
+              "description": "",
+              "name": "theme",
+              "required": false,
+              "type": {
+                "name": "ThemeInterface"
+              }
+            },
+            "themed": {
+              "defaultValue": null,
+              "description": "",
+              "name": "themed",
+              "required": false,
+              "type": {
+                "name": "((props: any) => { [key: string]: any; })[]"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/Table/TableButton.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "TableCopyButton",
+          "methods": [],
+          "props": {
+            "alt": {
+              "defaultValue": null,
+              "description": "",
+              "name": "alt",
+              "required": true,
+              "type": {
+                "name": "string"
+              }
+            },
+            "dimension": {
+              "defaultValue": null,
+              "description": "",
+              "name": "dimension",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "icon": {
+              "defaultValue": null,
+              "description": "",
+              "name": "icon",
+              "required": false,
+              "type": {
+                "name": "(props: IconInterface) => Element"
+              }
+            },
+            "iconProps": {
+              "defaultValue": null,
+              "description": "",
+              "name": "iconProps",
+              "required": false,
+              "type": {
+                "name": "IconInterface"
+              }
+            },
+            "title": {
+              "defaultValue": null,
+              "description": "",
+              "name": "title",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "uid": {
+              "defaultValue": null,
+              "description": "",
+              "name": "uid",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "appearance": {
+              "defaultValue": null,
+              "description": "",
+              "name": "appearance",
+              "required": false,
+              "type": {
+                "name": "AppearanceType"
+              }
+            },
+            "stretch": {
+              "defaultValue": null,
+              "description": "",
+              "name": "stretch",
+              "required": false,
+              "type": {
+                "name": "boolean"
+              }
+            },
+            "size": {
+              "defaultValue": null,
+              "description": "",
+              "name": "size",
+              "required": false,
+              "type": {
+                "name": "number"
+              }
+            },
+            "animate": {
+              "defaultValue": null,
+              "description": "",
+              "name": "animate",
+              "required": false,
+              "type": {
+                "name": "{ [key: string]: any; }"
+              }
+            },
+            "css": {
+              "defaultValue": null,
+              "description": "",
+              "name": "css",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "as": {
+              "defaultValue": null,
+              "description": "",
+              "name": "as",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "state": {
+              "defaultValue": null,
+              "description": "",
+              "name": "state",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "className": {
+              "defaultValue": null,
+              "description": "",
+              "name": "className",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "theme": {
+              "defaultValue": null,
+              "description": "",
+              "name": "theme",
+              "required": false,
+              "type": {
+                "name": "ThemeInterface"
+              }
+            },
+            "themed": {
+              "defaultValue": null,
+              "description": "",
+              "name": "themed",
+              "required": false,
+              "type": {
+                "name": "((props: any) => { [key: string]: any; })[]"
+              }
+            }
+          }
+        },
+        {
+          "description": "",
+          "displayName": "TableButton",
+          "methods": [],
+          "props": {
+            "alt": {
+              "defaultValue": null,
+              "description": "",
+              "name": "alt",
+              "required": true,
+              "type": {
+                "name": "string"
+              }
+            },
+            "dimension": {
+              "defaultValue": null,
+              "description": "",
+              "name": "dimension",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "icon": {
+              "defaultValue": null,
+              "description": "",
+              "name": "icon",
+              "required": false,
+              "type": {
+                "name": "(props: IconInterface) => Element"
+              }
+            },
+            "iconProps": {
+              "defaultValue": null,
+              "description": "",
+              "name": "iconProps",
+              "required": false,
+              "type": {
+                "name": "IconInterface"
+              }
+            },
+            "title": {
+              "defaultValue": null,
+              "description": "",
+              "name": "title",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "uid": {
+              "defaultValue": null,
+              "description": "",
+              "name": "uid",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "appearance": {
+              "defaultValue": null,
+              "description": "",
+              "name": "appearance",
+              "required": false,
+              "type": {
+                "name": "AppearanceType"
+              }
+            },
+            "stretch": {
+              "defaultValue": null,
+              "description": "",
+              "name": "stretch",
+              "required": false,
+              "type": {
+                "name": "boolean"
+              }
+            },
+            "size": {
+              "defaultValue": null,
+              "description": "",
+              "name": "size",
+              "required": false,
+              "type": {
+                "name": "number"
+              }
+            },
+            "animate": {
+              "defaultValue": null,
+              "description": "",
+              "name": "animate",
+              "required": false,
+              "type": {
+                "name": "{ [key: string]: any; }"
+              }
+            },
+            "css": {
+              "defaultValue": null,
+              "description": "",
+              "name": "css",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "as": {
+              "defaultValue": null,
+              "description": "",
+              "name": "as",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "state": {
+              "defaultValue": null,
+              "description": "",
+              "name": "state",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "className": {
+              "defaultValue": null,
+              "description": "",
+              "name": "className",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "theme": {
+              "defaultValue": null,
+              "description": "",
+              "name": "theme",
+              "required": false,
+              "type": {
+                "name": "ThemeInterface"
+              }
+            },
+            "themed": {
+              "defaultValue": null,
+              "description": "",
+              "name": "themed",
+              "required": false,
+              "type": {
+                "name": "((props: any) => { [key: string]: any; })[]"
+              }
+            }
+          }
+        },
+        {
+          "description": "",
+          "displayName": "TableDeleteButton",
+          "methods": [],
+          "props": {
+            "alt": {
+              "defaultValue": null,
+              "description": "",
+              "name": "alt",
+              "required": true,
+              "type": {
+                "name": "string"
+              }
+            },
+            "dimension": {
+              "defaultValue": null,
+              "description": "",
+              "name": "dimension",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "icon": {
+              "defaultValue": null,
+              "description": "",
+              "name": "icon",
+              "required": false,
+              "type": {
+                "name": "(props: IconInterface) => Element"
+              }
+            },
+            "iconProps": {
+              "defaultValue": null,
+              "description": "",
+              "name": "iconProps",
+              "required": false,
+              "type": {
+                "name": "IconInterface"
+              }
+            },
+            "title": {
+              "defaultValue": null,
+              "description": "",
+              "name": "title",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "uid": {
+              "defaultValue": null,
+              "description": "",
+              "name": "uid",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "appearance": {
+              "defaultValue": null,
+              "description": "",
+              "name": "appearance",
+              "required": false,
+              "type": {
+                "name": "AppearanceType"
+              }
+            },
+            "stretch": {
+              "defaultValue": null,
+              "description": "",
+              "name": "stretch",
+              "required": false,
+              "type": {
+                "name": "boolean"
+              }
+            },
+            "size": {
+              "defaultValue": null,
+              "description": "",
+              "name": "size",
+              "required": false,
+              "type": {
+                "name": "number"
+              }
+            },
+            "animate": {
+              "defaultValue": null,
+              "description": "",
+              "name": "animate",
+              "required": false,
+              "type": {
+                "name": "{ [key: string]: any; }"
+              }
+            },
+            "css": {
+              "defaultValue": null,
+              "description": "",
+              "name": "css",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "as": {
+              "defaultValue": null,
+              "description": "",
+              "name": "as",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "state": {
+              "defaultValue": null,
+              "description": "",
+              "name": "state",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "className": {
+              "defaultValue": null,
+              "description": "",
+              "name": "className",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "theme": {
+              "defaultValue": null,
+              "description": "",
+              "name": "theme",
+              "required": false,
+              "type": {
+                "name": "ThemeInterface"
+              }
+            },
+            "themed": {
+              "defaultValue": null,
+              "description": "",
+              "name": "themed",
+              "required": false,
+              "type": {
+                "name": "((props: any) => { [key: string]: any; })[]"
+              }
+            }
+          }
+        },
+        {
+          "description": "",
+          "displayName": "TableDownloadButton",
+          "methods": [],
+          "props": {
+            "alt": {
+              "defaultValue": null,
+              "description": "",
+              "name": "alt",
+              "required": true,
+              "type": {
+                "name": "string"
+              }
+            },
+            "dimension": {
+              "defaultValue": null,
+              "description": "",
+              "name": "dimension",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "icon": {
+              "defaultValue": null,
+              "description": "",
+              "name": "icon",
+              "required": false,
+              "type": {
+                "name": "(props: IconInterface) => Element"
+              }
+            },
+            "iconProps": {
+              "defaultValue": null,
+              "description": "",
+              "name": "iconProps",
+              "required": false,
+              "type": {
+                "name": "IconInterface"
+              }
+            },
+            "title": {
+              "defaultValue": null,
+              "description": "",
+              "name": "title",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "uid": {
+              "defaultValue": null,
+              "description": "",
+              "name": "uid",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "appearance": {
+              "defaultValue": null,
+              "description": "",
+              "name": "appearance",
+              "required": false,
+              "type": {
+                "name": "AppearanceType"
+              }
+            },
+            "stretch": {
+              "defaultValue": null,
+              "description": "",
+              "name": "stretch",
+              "required": false,
+              "type": {
+                "name": "boolean"
+              }
+            },
+            "size": {
+              "defaultValue": null,
+              "description": "",
+              "name": "size",
+              "required": false,
+              "type": {
+                "name": "number"
+              }
+            },
+            "animate": {
+              "defaultValue": null,
+              "description": "",
+              "name": "animate",
+              "required": false,
+              "type": {
+                "name": "{ [key: string]: any; }"
+              }
+            },
+            "css": {
+              "defaultValue": null,
+              "description": "",
+              "name": "css",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "as": {
+              "defaultValue": null,
+              "description": "",
+              "name": "as",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "state": {
+              "defaultValue": null,
+              "description": "",
+              "name": "state",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "className": {
+              "defaultValue": null,
+              "description": "",
+              "name": "className",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "theme": {
+              "defaultValue": null,
+              "description": "",
+              "name": "theme",
+              "required": false,
+              "type": {
+                "name": "ThemeInterface"
+              }
+            },
+            "themed": {
+              "defaultValue": null,
+              "description": "",
+              "name": "themed",
+              "required": false,
+              "type": {
+                "name": "((props: any) => { [key: string]: any; })[]"
+              }
+            }
+          }
+        },
+        {
+          "description": "",
+          "displayName": "TableEditLink",
+          "methods": [],
+          "props": {
+            "alt": {
+              "defaultValue": null,
+              "description": "",
+              "name": "alt",
+              "required": true,
+              "type": {
+                "name": "string"
+              }
+            },
+            "dimension": {
+              "defaultValue": null,
+              "description": "",
+              "name": "dimension",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "icon": {
+              "defaultValue": null,
+              "description": "",
+              "name": "icon",
+              "required": false,
+              "type": {
+                "name": "(props: IconInterface) => Element"
+              }
+            },
+            "iconProps": {
+              "defaultValue": null,
+              "description": "",
+              "name": "iconProps",
+              "required": false,
+              "type": {
+                "name": "IconInterface"
+              }
+            },
+            "title": {
+              "defaultValue": null,
+              "description": "",
+              "name": "title",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "uid": {
+              "defaultValue": null,
+              "description": "",
+              "name": "uid",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "appearance": {
+              "defaultValue": null,
+              "description": "",
+              "name": "appearance",
+              "required": false,
+              "type": {
+                "name": "AppearanceType"
+              }
+            },
+            "stretch": {
+              "defaultValue": null,
+              "description": "",
+              "name": "stretch",
+              "required": false,
+              "type": {
+                "name": "boolean"
+              }
+            },
+            "size": {
+              "defaultValue": null,
+              "description": "",
+              "name": "size",
+              "required": false,
+              "type": {
+                "name": "number"
+              }
+            },
+            "animate": {
+              "defaultValue": null,
+              "description": "",
+              "name": "animate",
+              "required": false,
+              "type": {
+                "name": "{ [key: string]: any; }"
+              }
+            },
+            "css": {
+              "defaultValue": null,
+              "description": "",
+              "name": "css",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "as": {
+              "defaultValue": null,
+              "description": "",
+              "name": "as",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "state": {
+              "defaultValue": null,
+              "description": "",
+              "name": "state",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "className": {
+              "defaultValue": null,
+              "description": "",
+              "name": "className",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "theme": {
+              "defaultValue": null,
+              "description": "",
+              "name": "theme",
+              "required": false,
+              "type": {
+                "name": "ThemeInterface"
+              }
+            },
+            "themed": {
+              "defaultValue": null,
+              "description": "",
+              "name": "themed",
+              "required": false,
+              "type": {
+                "name": "((props: any) => { [key: string]: any; })[]"
+              }
+            }
+          }
+        },
+        {
+          "description": "",
+          "displayName": "NamedExoticComponent",
+          "methods": [],
+          "props": {
+            "alt": {
+              "defaultValue": null,
+              "description": "",
+              "name": "alt",
+              "required": true,
+              "type": {
+                "name": "string"
+              }
+            },
+            "dimension": {
+              "defaultValue": null,
+              "description": "",
+              "name": "dimension",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "icon": {
+              "defaultValue": null,
+              "description": "",
+              "name": "icon",
+              "required": false,
+              "type": {
+                "name": "(props: IconInterface) => Element"
+              }
+            },
+            "iconProps": {
+              "defaultValue": null,
+              "description": "",
+              "name": "iconProps",
+              "required": false,
+              "type": {
+                "name": "IconInterface"
+              }
+            },
+            "title": {
+              "defaultValue": null,
+              "description": "",
+              "name": "title",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "uid": {
+              "defaultValue": null,
+              "description": "",
+              "name": "uid",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "appearance": {
+              "defaultValue": null,
+              "description": "",
+              "name": "appearance",
+              "required": false,
+              "type": {
+                "name": "AppearanceType"
+              }
+            },
+            "stretch": {
+              "defaultValue": null,
+              "description": "",
+              "name": "stretch",
+              "required": false,
+              "type": {
+                "name": "boolean"
+              }
+            },
+            "size": {
+              "defaultValue": null,
+              "description": "",
+              "name": "size",
+              "required": false,
+              "type": {
+                "name": "number"
+              }
+            },
+            "animate": {
+              "defaultValue": null,
+              "description": "",
+              "name": "animate",
+              "required": false,
+              "type": {
+                "name": "{ [key: string]: any; }"
+              }
+            },
+            "css": {
+              "defaultValue": null,
+              "description": "",
+              "name": "css",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "as": {
+              "defaultValue": null,
+              "description": "",
+              "name": "as",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "state": {
+              "defaultValue": null,
+              "description": "",
+              "name": "state",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "className": {
+              "defaultValue": null,
+              "description": "",
+              "name": "className",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "theme": {
+              "defaultValue": null,
+              "description": "",
+              "name": "theme",
+              "required": false,
+              "type": {
+                "name": "ThemeInterface"
+              }
+            },
+            "themed": {
+              "defaultValue": null,
+              "description": "",
+              "name": "themed",
+              "required": false,
+              "type": {
+                "name": "((props: any) => { [key: string]: any; })[]"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/Table/TableRowSelect.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "TableRowSelect",
+          "methods": [],
+          "props": {
+            "handleChange": {
+              "defaultValue": null,
+              "description": "",
+              "name": "handleChange",
+              "required": true,
+              "type": {
+                "name": "(e: ChangeEvent<HTMLInputElement>) => void"
+              }
+            },
+            "id": {
+              "defaultValue": null,
+              "description": "",
+              "name": "id",
+              "required": true,
+              "type": {
+                "name": "string"
+              }
+            },
+            "checked": {
+              "defaultValue": null,
+              "description": "",
+              "name": "checked",
+              "required": false,
+              "type": {
+                "name": "boolean"
+              }
+            },
+            "animate": {
+              "defaultValue": null,
+              "description": "",
+              "name": "animate",
+              "required": false,
+              "type": {
+                "name": "{ [key: string]: any; }"
+              }
+            },
+            "css": {
+              "defaultValue": null,
+              "description": "",
+              "name": "css",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "as": {
+              "defaultValue": null,
+              "description": "",
+              "name": "as",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "state": {
+              "defaultValue": null,
+              "description": "",
+              "name": "state",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "className": {
+              "defaultValue": null,
+              "description": "",
+              "name": "className",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "theme": {
+              "defaultValue": null,
+              "description": "",
+              "name": "theme",
+              "required": false,
+              "type": {
+                "name": "ThemeInterface"
+              }
+            },
+            "themed": {
+              "defaultValue": null,
+              "description": "",
+              "name": "themed",
+              "required": false,
+              "type": {
+                "name": "((props: any) => { [key: string]: any; })[]"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/Table/TableView.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "TableView",
+          "methods": [],
+          "props": {
+            "allSelected": {
+              "defaultValue": null,
+              "description": "",
+              "name": "allSelected",
+              "required": false,
+              "type": {
+                "name": "boolean"
+              }
+            },
+            "dispatch": {
+              "defaultValue": null,
+              "description": "",
+              "name": "dispatch",
+              "required": true,
+              "type": {
+                "name": "Dispatch<any>"
+              }
+            },
+            "handleAdd": {
+              "defaultValue": null,
+              "description": "",
+              "name": "handleAdd",
+              "required": true,
+              "type": {
+                "name": "(e: MouseEvent<HTMLElement, MouseEvent>) => void"
+              }
+            },
+            "handleDeleteSelected": {
+              "defaultValue": null,
+              "description": "",
+              "name": "handleDeleteSelected",
+              "required": true,
+              "type": {
+                "name": "(e: MouseEvent<HTMLElement, MouseEvent>) => void"
+              }
+            },
+            "headings": {
+              "defaultValue": null,
+              "description": "",
+              "name": "headings",
+              "required": false,
+              "type": {
+                "name": "(string | ((props?: any) => Element))[]"
+              }
+            },
+            "itemsToArray": {
+              "defaultValue": null,
+              "description": "",
+              "name": "itemsToArray",
+              "required": true,
+              "type": {
+                "name": "(items: any[]) => any[]"
+              }
+            },
+            "loading": {
+              "defaultValue": null,
+              "description": "",
+              "name": "loading",
+              "required": true,
+              "type": {
+                "name": "boolean"
+              }
+            },
+            "rows": {
+              "defaultValue": null,
+              "description": "",
+              "name": "rows",
+              "required": true,
+              "type": {
+                "name": "{ column: TableRowInterface[]; rowDetail?: TableRowDetailType; }[]"
+              }
+            },
+            "selected": {
+              "defaultValue": null,
+              "description": "",
+              "name": "selected",
+              "required": true,
+              "type": {
+                "name": "string"
+              }
+            },
+            "tableName": {
+              "defaultValue": null,
+              "description": "",
+              "name": "tableName",
+              "required": true,
+              "type": {
+                "name": "string"
+              }
+            },
+            "animate": {
+              "defaultValue": null,
+              "description": "",
+              "name": "animate",
+              "required": false,
+              "type": {
+                "name": "{ [key: string]: any; }"
+              }
+            },
+            "css": {
+              "defaultValue": null,
+              "description": "",
+              "name": "css",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "as": {
+              "defaultValue": null,
+              "description": "",
+              "name": "as",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "state": {
+              "defaultValue": null,
+              "description": "",
+              "name": "state",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "className": {
+              "defaultValue": null,
+              "description": "",
+              "name": "className",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "theme": {
+              "defaultValue": null,
+              "description": "",
+              "name": "theme",
+              "required": false,
+              "type": {
+                "name": "ThemeInterface"
+              }
+            },
+            "themed": {
+              "defaultValue": null,
+              "description": "",
+              "name": "themed",
+              "required": false,
+              "type": {
+                "name": "((props: any) => { [key: string]: any; })[]"
+              }
+            }
+          }
+        },
+        {
+          "description": "",
+          "displayName": "NamedExoticComponent",
+          "methods": [],
+          "props": {
+            "allSelected": {
+              "defaultValue": null,
+              "description": "",
+              "name": "allSelected",
+              "required": false,
+              "type": {
+                "name": "boolean"
+              }
+            },
+            "dispatch": {
+              "defaultValue": null,
+              "description": "",
+              "name": "dispatch",
+              "required": true,
+              "type": {
+                "name": "Dispatch<any>"
+              }
+            },
+            "handleAdd": {
+              "defaultValue": null,
+              "description": "",
+              "name": "handleAdd",
+              "required": true,
+              "type": {
+                "name": "(e: MouseEvent<HTMLElement, MouseEvent>) => void"
+              }
+            },
+            "handleDeleteSelected": {
+              "defaultValue": null,
+              "description": "",
+              "name": "handleDeleteSelected",
+              "required": true,
+              "type": {
+                "name": "(e: MouseEvent<HTMLElement, MouseEvent>) => void"
+              }
+            },
+            "headings": {
+              "defaultValue": null,
+              "description": "",
+              "name": "headings",
+              "required": false,
+              "type": {
+                "name": "(string | ((props?: any) => Element))[]"
+              }
+            },
+            "itemsToArray": {
+              "defaultValue": null,
+              "description": "",
+              "name": "itemsToArray",
+              "required": true,
+              "type": {
+                "name": "(items: any[]) => any[]"
+              }
+            },
+            "loading": {
+              "defaultValue": null,
+              "description": "",
+              "name": "loading",
+              "required": true,
+              "type": {
+                "name": "boolean"
+              }
+            },
+            "rows": {
+              "defaultValue": null,
+              "description": "",
+              "name": "rows",
+              "required": true,
+              "type": {
+                "name": "{ column: TableRowInterface[]; rowDetail?: TableRowDetailType; }[]"
+              }
+            },
+            "selected": {
+              "defaultValue": null,
+              "description": "",
+              "name": "selected",
+              "required": true,
+              "type": {
+                "name": "string"
+              }
+            },
+            "tableName": {
+              "defaultValue": null,
+              "description": "",
+              "name": "tableName",
+              "required": true,
+              "type": {
+                "name": "string"
+              }
+            },
+            "animate": {
+              "defaultValue": null,
+              "description": "",
+              "name": "animate",
+              "required": false,
+              "type": {
+                "name": "{ [key: string]: any; }"
+              }
+            },
+            "css": {
+              "defaultValue": null,
+              "description": "",
+              "name": "css",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "as": {
+              "defaultValue": null,
+              "description": "",
+              "name": "as",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "state": {
+              "defaultValue": null,
+              "description": "",
+              "name": "state",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "className": {
+              "defaultValue": null,
+              "description": "",
+              "name": "className",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "theme": {
+              "defaultValue": null,
+              "description": "",
+              "name": "theme",
+              "required": false,
+              "type": {
+                "name": "ThemeInterface"
+              }
+            },
+            "themed": {
+              "defaultValue": null,
+              "description": "",
+              "name": "themed",
+              "required": false,
+              "type": {
+                "name": "((props: any) => { [key: string]: any; })[]"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/Toast/ToastNotification.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "ToastNotification",
+          "methods": [],
+          "props": {
+            "appearance": {
+              "defaultValue": null,
+              "description": "",
+              "name": "appearance",
+              "required": false,
+              "type": {
+                "name": "AppearanceLimitedType"
+              }
+            },
+            "position": {
+              "defaultValue": null,
+              "description": "",
+              "name": "position",
+              "required": false,
+              "type": {
+                "name": "positionType"
+              }
+            },
+            "items": {
+              "defaultValue": null,
+              "description": "",
+              "name": "items",
+              "required": false,
+              "type": {
+                "name": "any"
+              }
+            },
+            "uid": {
+              "defaultValue": null,
+              "description": "",
+              "name": "uid",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "notifications": {
+              "defaultValue": null,
+              "description": "",
+              "name": "notifications",
+              "required": false,
+              "type": {
+                "name": "ToastMessageInterface[]"
+              }
+            },
+            "animate": {
+              "defaultValue": null,
+              "description": "",
+              "name": "animate",
+              "required": false,
+              "type": {
+                "name": "{ [key: string]: any; }"
+              }
+            },
+            "css": {
+              "defaultValue": null,
+              "description": "",
+              "name": "css",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "as": {
+              "defaultValue": null,
+              "description": "",
+              "name": "as",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "state": {
+              "defaultValue": null,
+              "description": "",
+              "name": "state",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "className": {
+              "defaultValue": null,
+              "description": "",
+              "name": "className",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "theme": {
+              "defaultValue": null,
+              "description": "",
+              "name": "theme",
+              "required": false,
+              "type": {
+                "name": "ThemeInterface"
+              }
+            },
+            "themed": {
+              "defaultValue": null,
+              "description": "",
+              "name": "themed",
+              "required": false,
+              "type": {
+                "name": "((props: any) => { [key: string]: any; })[]"
+              }
+            }
+          }
+        },
+        {
+          "description": "",
+          "displayName": "NamedExoticComponent",
+          "methods": [],
+          "props": {
+            "appearance": {
+              "defaultValue": null,
+              "description": "",
+              "name": "appearance",
+              "required": false,
+              "type": {
+                "name": "AppearanceLimitedType"
+              }
+            },
+            "position": {
+              "defaultValue": null,
+              "description": "",
+              "name": "position",
+              "required": false,
+              "type": {
+                "name": "positionType"
+              }
+            },
+            "items": {
+              "defaultValue": null,
+              "description": "",
+              "name": "items",
+              "required": false,
+              "type": {
+                "name": "any"
+              }
+            },
+            "uid": {
+              "defaultValue": null,
+              "description": "",
+              "name": "uid",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "notifications": {
+              "defaultValue": null,
+              "description": "",
+              "name": "notifications",
+              "required": false,
+              "type": {
+                "name": "ToastMessageInterface[]"
+              }
+            },
+            "animate": {
+              "defaultValue": null,
+              "description": "",
+              "name": "animate",
+              "required": false,
+              "type": {
+                "name": "{ [key: string]: any; }"
+              }
+            },
+            "css": {
+              "defaultValue": null,
+              "description": "",
+              "name": "css",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "as": {
+              "defaultValue": null,
+              "description": "",
+              "name": "as",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "state": {
+              "defaultValue": null,
+              "description": "",
+              "name": "state",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "className": {
+              "defaultValue": null,
+              "description": "",
+              "name": "className",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "theme": {
+              "defaultValue": null,
+              "description": "",
+              "name": "theme",
+              "required": false,
+              "type": {
+                "name": "ThemeInterface"
+              }
+            },
+            "themed": {
+              "defaultValue": null,
+              "description": "",
+              "name": "themed",
+              "required": false,
+              "type": {
+                "name": "((props: any) => { [key: string]: any; })[]"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/Toolbar/Toolbar.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Toolbar",
+          "methods": [],
+          "props": {
+            "items": {
+              "defaultValue": null,
+              "description": "",
+              "name": "items",
+              "required": false,
+              "type": {
+                "name": "any[]"
+              }
+            },
+            "onDeleteSelected": {
+              "defaultValue": null,
+              "description": "",
+              "name": "onDeleteSelected",
+              "required": false,
+              "type": {
+                "name": "(e: MouseEvent<HTMLElement, MouseEvent>) => void"
+              }
+            },
+            "onSwitchView": {
+              "defaultValue": null,
+              "description": "",
+              "name": "onSwitchView",
+              "required": false,
+              "type": {
+                "name": "(e: MouseEvent<HTMLElement, MouseEvent>, { id }: { id: string; }) => void"
+              }
+            },
+            "toolbar": {
+              "defaultValue": null,
+              "description": "",
+              "name": "toolbar",
+              "required": false,
+              "type": {
+                "name": "any[]"
+              }
+            },
+            "selectToolbar": {
+              "defaultValue": null,
+              "description": "",
+              "name": "selectToolbar",
+              "required": false,
+              "type": {
+                "name": "(props: SelectToolbarInterface) => Element"
+              }
+            },
+            "animate": {
+              "defaultValue": null,
+              "description": "",
+              "name": "animate",
+              "required": false,
+              "type": {
+                "name": "{ [key: string]: any; }"
+              }
+            },
+            "css": {
+              "defaultValue": null,
+              "description": "",
+              "name": "css",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "as": {
+              "defaultValue": null,
+              "description": "",
+              "name": "as",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "state": {
+              "defaultValue": null,
+              "description": "",
+              "name": "state",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "className": {
+              "defaultValue": null,
+              "description": "",
+              "name": "className",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "theme": {
+              "defaultValue": null,
+              "description": "",
+              "name": "theme",
+              "required": false,
+              "type": {
+                "name": "ThemeInterface"
+              }
+            },
+            "themed": {
+              "defaultValue": null,
+              "description": "",
+              "name": "themed",
+              "required": false,
+              "type": {
+                "name": "((props: any) => { [key: string]: any; })[]"
+              }
+            }
+          }
+        },
+        {
+          "description": "",
+          "displayName": "NamedExoticComponent",
+          "methods": [],
+          "props": {
+            "items": {
+              "defaultValue": null,
+              "description": "",
+              "name": "items",
+              "required": false,
+              "type": {
+                "name": "any[]"
+              }
+            },
+            "onDeleteSelected": {
+              "defaultValue": null,
+              "description": "",
+              "name": "onDeleteSelected",
+              "required": false,
+              "type": {
+                "name": "(e: MouseEvent<HTMLElement, MouseEvent>) => void"
+              }
+            },
+            "onSwitchView": {
+              "defaultValue": null,
+              "description": "",
+              "name": "onSwitchView",
+              "required": false,
+              "type": {
+                "name": "(e: MouseEvent<HTMLElement, MouseEvent>, { id }: { id: string; }) => void"
+              }
+            },
+            "toolbar": {
+              "defaultValue": null,
+              "description": "",
+              "name": "toolbar",
+              "required": false,
+              "type": {
+                "name": "any[]"
+              }
+            },
+            "selectToolbar": {
+              "defaultValue": null,
+              "description": "",
+              "name": "selectToolbar",
+              "required": false,
+              "type": {
+                "name": "(props: SelectToolbarInterface) => Element"
+              }
+            },
+            "animate": {
+              "defaultValue": null,
+              "description": "",
+              "name": "animate",
+              "required": false,
+              "type": {
+                "name": "{ [key: string]: any; }"
+              }
+            },
+            "css": {
+              "defaultValue": null,
+              "description": "",
+              "name": "css",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "as": {
+              "defaultValue": null,
+              "description": "",
+              "name": "as",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "state": {
+              "defaultValue": null,
+              "description": "",
+              "name": "state",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "className": {
+              "defaultValue": null,
+              "description": "",
+              "name": "className",
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "theme": {
+              "defaultValue": null,
+              "description": "",
+              "name": "theme",
+              "required": false,
+              "type": {
+                "name": "ThemeInterface"
+              }
+            },
+            "themed": {
+              "defaultValue": null,
+              "description": "",
+              "name": "themed",
+              "required": false,
+              "type": {
+                "name": "((props: any) => { [key: string]: any; })[]"
+              }
+            }
+          }
+        }
+      ]
     }
   ],
   "entries": [
@@ -115527,35 +115527,6 @@
       }
     },
     {
-      "key": "src/Container/container.mdx",
-      "value": {
-        "name": "Container",
-        "route": "/container",
-        "id": "f5ca434bb113f1a8133a964a7e9f28f2",
-        "filepath": "src/Container/container.mdx",
-        "link": "",
-        "slug": "src-container-container",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "container",
-            "depth": 1,
-            "value": "Container"
-          },
-          {
-            "slug": "default",
-            "depth": 1,
-            "value": "Default"
-          },
-          {
-            "slug": "apperance",
-            "depth": 1,
-            "value": "Apperance"
-          }
-        ]
-      }
-    },
-    {
       "key": "src/Checkbox/checkbox.mdx",
       "value": {
         "name": "Checkbox",
@@ -115585,6 +115556,35 @@
             "slug": "appearace",
             "depth": 2,
             "value": "Appearace"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/Container/container.mdx",
+      "value": {
+        "name": "Container",
+        "route": "/container",
+        "id": "f5ca434bb113f1a8133a964a7e9f28f2",
+        "filepath": "src/Container/container.mdx",
+        "link": "",
+        "slug": "src-container-container",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "container",
+            "depth": 1,
+            "value": "Container"
+          },
+          {
+            "slug": "default",
+            "depth": 1,
+            "value": "Default"
+          },
+          {
+            "slug": "apperance",
+            "depth": 1,
+            "value": "Apperance"
           }
         ]
       }

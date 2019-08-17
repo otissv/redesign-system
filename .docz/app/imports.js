@@ -31,13 +31,13 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-card-card" */ 'src/Card/card.mdx'
     ),
-  'src/Container/container.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-container-container" */ 'src/Container/container.mdx'
-    ),
   'src/Checkbox/checkbox.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-checkbox-checkbox" */ 'src/Checkbox/checkbox.mdx'
+    ),
+  'src/Container/container.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-container-container" */ 'src/Container/container.mdx'
     ),
   'src/CoverImg/coverImg.mdx': () =>
     import(
