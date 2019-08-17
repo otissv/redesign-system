@@ -36,7 +36,7 @@ export function TableColumnProvider({
   const columns = useMemo(
     () =>
       children.reduce((acc: any[], child: any) => {
-        if (child.type.displayName === 'TableRowDetail') {
+        if (child.props.uid === 'detail') {
           Detail.current = () => child
           hasDetail.current = true
           return acc

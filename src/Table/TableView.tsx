@@ -23,8 +23,8 @@ export const TableView = React.memo(function TableView({
       <thead>
         <tr>
           {children.reduce(
-            (acc: any[], { type, props: { heading } }, i: number) =>
-              type.displayName === 'TableRowDetail'
+            (acc: any[], { props: { heading, uid } }, i: number) =>
+              uid === 'detail'
                 ? [<th key={i}></th>, ...acc]
                 : [...acc, <th key={i}>{heading}</th>],
             []
