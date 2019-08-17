@@ -7,6 +7,14 @@ export function toolbarTheme({ theme: { color } }: ToolbarInterface) {
     minHeight: 'auto',
     background: 'none',
 
+    '>button': {
+      minHeight: '31px',
+    },
+
+    '>a': {
+      minHeight: '33px',
+    },
+
     '>button, >a': {
       color: color.foreground,
       background: 'none',
@@ -15,6 +23,11 @@ export function toolbarTheme({ theme: { color } }: ToolbarInterface) {
 
       '&:active': {
         color: color.foreground,
+      },
+
+      svg: {
+        width: '24px',
+        height: '24px',
       },
     },
 

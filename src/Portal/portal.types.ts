@@ -1,4 +1,4 @@
 export interface PortalInterface {
-  children: React.ReactNode;
-  rootRef: { current: HTMLElement };
+  children: React.ReactNode
+  selector?: string
 }

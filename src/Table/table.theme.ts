@@ -37,6 +37,12 @@ export function tableTheme({
       boxShadow: hover ? elevate[2] : '',
     },
 
+    '.TableView': {
+      '.RowDetail >td': {
+        padding: `0 0 ${unit[7]} 0`,
+      },
+    },
+
     a: {
       background: 'none',
       display: 'block',
@@ -64,5 +70,20 @@ export function tableViewsButtonTheme({ theme: {} }: TableInterface) {
   return {
     display: 'flex',
     marginLeft: 'auto',
+  }
+}
+
+export function tableToolbarTheme({ theme: { unit } }: TableInterface) {
+  return {
+    padding: `${unit[2]} 0`,
+  }
+}
+
+export function tableSelectedToolbarTheme({
+  theme: { color, unit },
+}: TableInterface) {
+  return {
+    background: color.active,
+    padding: `${unit[2]} ${unit[4]}`,
   }
 }

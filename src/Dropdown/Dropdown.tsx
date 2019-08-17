@@ -1,6 +1,7 @@
 import React, { useCallback, useMemo, useState } from 'react'
 import { DropdownInterface } from './dropdown.types'
 import { CaretDown } from '../MaterialIcons/CaretDown'
+import { Portal } from '../Portal'
 
 import {
   dropdownTheme,
@@ -66,16 +67,17 @@ export const Dropdown = React.memo(function Dropdown({
         {label} <CaretDown alt="dropdown arrow" />
       </Button>
 
-      <Base
-        className={classNames}
-        as="ul"
-        themed={themedContent}
-        state={opened ? 'opened' : 'closed'}
-        {...propsRest}
-        animate={_animate}
-      >
-        {children}
-      </Base>
+      <Portal>
+        <Base
+          className={classNames}
+          themed={themedContent}
+          state={opened ? 'opened' : 'closed'}
+          {...propsRest}
+          animate={_animate}
+        >
+          {children}
+        </Base>
+      </Portal>
     </Base>
   )
 })

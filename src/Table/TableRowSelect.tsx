@@ -1,31 +1,33 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 import { TableRowSelectInterface } from './table.types'
 import { Checkbox } from '../Checkbox'
+import { useTableColumn } from './TableColumnContext'
+
 export const TableRowSelect = function TableRowSelect({
-  handleChange,
-  id,
-  checked = false,
+  className = '',
   ...propsRest
 }: TableRowSelectInterface) {
-  const [isChecked, setChecked] = useState(checked)
+  const classNames = `TableRowSelect ${className}`
+  const {
+    checked,
+    data: { id },
+    onChange,
+    setChecked,
+  } = useTableColumn()
 
-  useEffect(() => {
-    if (checked !== isChecked) {
-      setChecked(checked)
-    }
-  }, [checked])
-
-  const changed = function handleClick(e: React.ChangeEvent<HTMLInputElement>) {
-    setChecked(!isChecked)
-    handleChange && handleChange(e)
+  const handleChange = function handleChange(
+    e: React.ChangeEvent<HTMLInputElement>
+  ) {
+    setChecked(e.currentTarget.checked)
+    onChange && onChange(e)
   }
 
   return (
-    <td style={{ width: '48px' }}>
+    <td className={classNames}>
       <Checkbox
-        checked={isChecked}
-        onChange={changed}
+        checked={checked}
+        onChange={handleChange}
         name={id}
         {...propsRest}
       />

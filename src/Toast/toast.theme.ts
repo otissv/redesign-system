@@ -1,4 +1,4 @@
-import { ToastInterface } from './toast.types';
+import { ToastInterface } from './toast.types'
 
 export function toastTheme({
   theme: { animation, border, font, unit },
@@ -14,7 +14,7 @@ export function toastTheme({
     zIndex: 1040,
     width: '350px',
     transition: animation.easeMedium(),
-  };
+  }
 }
 
 export function toastPositionTheme({
@@ -26,56 +26,39 @@ export function toastPositionTheme({
       return {
         left: '50%',
         right: 'auto',
-      };
+      }
     case 'top-left':
       return {
         left: unit[3],
         right: 'auto',
-      };
+      }
     case 'top-right':
       return {
         right: unit[3],
         left: 'auto',
-      };
+      }
     case 'bottom-center':
       return {
         left: '50%',
         right: 'auto',
-      };
+      }
     case 'bottom-left':
       return {
         top: unit[3],
         left: unit[3],
         right: 'auto',
-      };
+      }
     case 'bottom-right':
       return {
         top: 0,
         right: unit[3],
         left: 'auto',
-      };
+      }
 
     default:
-      return {};
+      return {}
   }
 }
-// element.style {
-//   display: block;
-//   opacity: 1;
-//   transform: translateY(0px);
-// }
-// .uk-toast-message {
-//   position: relative;
-//   margin-bottom: 10px;
-//   padding: 15px;
-//   background: #444;
-//   color: #fff;
-//   font-size: 16px;
-//   line-height: 22px;
-//   cursor: pointer;
-//   border: 1px solid #444;
-//   border-radius: 4px;
-// }
 
 export function toastNotificationTheme({
   theme: { color, elevate, unit },
@@ -89,7 +72,7 @@ export function toastNotificationTheme({
     zIndex: '100',
     boxShadow: elevate[5],
     padding: unit[5],
-  };
+  }
 }
 
 export function toastNotificationCloseButtonTheme({
@@ -116,7 +99,7 @@ export function toastNotificationCloseButtonTheme({
       borderColor: '#0000',
       color: color['grey-500'],
     },
-  };
+  }
 }
 
 export function toastNotificationAppearanceTheme({
@@ -128,109 +111,109 @@ export function toastNotificationAppearanceTheme({
       return {
         border: `${border.thinWidth} solid ${color.foreground}`,
         color: color.foreground,
-      };
+      }
     case 'tertiary':
       return {
-        borderLeft: `${border.thickWidth} solid ${color.foreground}`,
+        borderLeft: `4px solid ${color.foreground}`,
         color: color.foreground,
-      };
+      }
 
     case 'accent':
       return {
         background: color.accent,
         border: border.thinAccent,
-      };
+      }
     case 'primary-accent':
       return {
         background: color.accent,
         border: border.thinAccent,
-      };
+      }
     case 'secondary-accent':
       return {
         border: border.thinAccent,
-      };
+      }
     case 'tertiary-accent':
       return {
-        borderLeft: border.thickAccent,
-      };
+        borderLeft: `4px solid ${color.accent}`,
+      }
 
     case 'action':
       return {
         background: color.action,
         border: border.thinAction,
-      };
+      }
     case 'primary-action':
       return {
         background: color.action,
         border: border.thinAction,
-      };
+      }
     case 'secondary-action':
       return {
         border: border.thinAction,
-      };
+      }
     case 'tertiary-action':
       return {
-        borderLeft: border.thickAction,
-      };
+        borderLeft: `4px solid ${color.action}`,
+      }
 
     case 'danger':
       return {
         background: color.danger,
         border: border.thinDanger,
-      };
+      }
     case 'primary-danger':
       return {
         background: color.danger,
         border: border.thinDanger,
-      };
+      }
     case 'secondary-danger':
       return {
         border: border.thinDanger,
-      };
+      }
     case 'tertiary-danger':
       return {
-        borderLeft: border.thickDanger,
-      };
+        borderLeft: `4px solid ${color.danger}`,
+      }
 
     case 'success':
       return {
         background: color.success,
         border: border.thinSuccess,
-      };
+      }
     case 'primary-success':
       return {
         background: color.success,
         border: border.thinSuccess,
-      };
+      }
     case 'secondary-success':
       return {
         border: border.thinSuccess,
-      };
+      }
     case 'tertiary-success':
       return {
-        borderLeft: border.thickSuccess,
-      };
+        borderLeft: `4px solid ${color.success}`,
+      }
 
     case 'warning':
       return {
         background: color.warning,
         border: border.thinWarning,
-      };
+      }
     case 'primary-warning':
       return {
         background: color.warning,
         border: border.thinWarning,
-      };
+      }
     case 'secondary-warning':
       return {
         border: border.thinWarning,
-      };
+      }
     case 'tertiary-warning':
       return {
-        borderLeft: border.thickWarning,
-      };
+        borderLeft: `4px solid ${color.warning}`,
+      }
 
     default:
-      return {};
+      return {}
   }
 }

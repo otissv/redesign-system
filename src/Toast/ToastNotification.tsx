@@ -1,4 +1,4 @@
-import React, { useMemo, useRef } from 'react'
+import React, { useMemo } from 'react'
 import { PoseGroup } from 'react-pose'
 
 import { Close } from '../MaterialIcons/Close'
@@ -69,8 +69,6 @@ export const ToastNotification = React.memo(function ToastNotification({
     [toastNotificationTheme, toastNotificationAppearanceTheme]
   )
 
-  const rootRef = useRef(document.getElementsByTagName('body')[0])
-
   const _animate = useMemo(() => {
     return (
       animate || {
@@ -120,7 +118,7 @@ export const ToastNotification = React.memo(function ToastNotification({
     .reverse()
 
   return (
-    <Portal rootRef={rootRef}>
+    <Portal>
       <Base className={classNames} element="ul" themed={_themed} {...propsRest}>
         <PoseGroup>{items}</PoseGroup>
       </Base>

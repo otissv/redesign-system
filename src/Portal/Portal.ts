@@ -4,8 +4,10 @@ import { PortalInterface } from './portal.types'
 
 export const Portal = React.memo(function Portal({
   children,
-  rootRef,
+  selector = 'body',
 }: PortalInterface) {
+  const rootRef = useRef(document.querySelector(selector))
+
   const elementRef = useRef(document.createElement('div'))
 
   useLayoutEffect(() => {
