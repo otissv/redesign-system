@@ -2439,7 +2439,7 @@
           value: { name: 'Table', filename: 'src/Table/Table.tsx' },
         })
       var xe = n('./src/reusable/collectionHash/index.ts'),
-        ye = Object(d.a)(new Array(1))
+        ye = Object(d.a)(new Array(100))
       function ve() {
         var e = {
             uid: 'id',
@@ -3265,4 +3265,4 @@
     },
   },
 ])
-//# sourceMappingURL=src-table-table.e87bed39511fd489c1d4.js.map
+//# sourceMappingURL=src-table-table.f4a8dc8592ab79dd24fe.js.map
