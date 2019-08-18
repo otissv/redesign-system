@@ -6,13 +6,13 @@
       var a = n(
           './node_modules/docz/node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/toConsumableArray.js'
         ),
-        l = n(
+        c = n(
           './node_modules/docz/node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js'
         ),
-        o = n('./node_modules/react/index.js'),
-        c = n.n(o),
-        i = n('./src/Base/Base.tsx')
-      function r(e) {
+        l = n('./node_modules/react/index.js'),
+        o = n.n(l),
+        r = n('./src/Base/Base.tsx')
+      function i(e) {
         var t = e.stacked
         return {
           display: 'inline-flex',
@@ -22,14 +22,14 @@
           flexDirection: t ? 'column' : 'row',
         }
       }
-      function b(e) {
+      function s(e) {
         return e.stretch ? { width: '100%' } : {}
       }
-      'undefined' !== typeof r &&
-        r &&
-        r === Object(r) &&
-        Object.isExtensible(r) &&
-        Object.defineProperty(r, '__filemeta', {
+      'undefined' !== typeof i &&
+        i &&
+        i === Object(i) &&
+        Object.isExtensible(i) &&
+        Object.defineProperty(i, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: {
@@ -37,11 +37,11 @@
             filename: 'src/ButtonGroup/buttonGroup.theme.ts',
           },
         }),
-        'undefined' !== typeof b &&
-          b &&
-          b === Object(b) &&
-          Object.isExtensible(b) &&
-          Object.defineProperty(b, '__filemeta', {
+        'undefined' !== typeof s &&
+          s &&
+          s === Object(s) &&
+          Object.isExtensible(s) &&
+          Object.defineProperty(s, '__filemeta', {
             enumerable: !0,
             configurable: !0,
             value: {
@@ -50,20 +50,20 @@
             },
           }),
         n.d(t, 'c', function() {
-          return u
+          return b
         }),
         n.d(t, 'a', function() {
           return d
         })
-      var s = c.a.createContext({})
-      function u() {
-        return Object(o.useContext)(s)
+      var u = o.a.createContext({})
+      function b() {
+        return Object(l.useContext)(u)
       }
-      'undefined' !== typeof s &&
-        s &&
-        s === Object(s) &&
-        Object.isExtensible(s) &&
-        Object.defineProperty(s, '__filemeta', {
+      'undefined' !== typeof u &&
+        u &&
+        u === Object(u) &&
+        Object.isExtensible(u) &&
+        Object.defineProperty(u, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: {
@@ -71,10 +71,10 @@
             filename: 'src/ButtonGroup/ButtonGroup.tsx',
           },
         }),
-        u &&
-          u === Object(u) &&
-          Object.isExtensible(u) &&
-          Object.defineProperty(u, '__filemeta', {
+        b &&
+          b === Object(b) &&
+          Object.isExtensible(b) &&
+          Object.defineProperty(b, '__filemeta', {
             enumerable: !0,
             configurable: !0,
             value: {
@@ -82,40 +82,40 @@
               filename: 'src/ButtonGroup/ButtonGroup.tsx',
             },
           })
-      var d = c.a.memo(function(e) {
+      var d = o.a.memo(function(e) {
         var t = e.children,
           n = e.className,
-          u = void 0 === n ? '' : n,
+          b = void 0 === n ? '' : n,
           d = (e.onClick, e.themed),
           m = void 0 === d ? [] : d,
-          f = Object(l.a)(e, ['children', 'className', 'onClick', 'themed']),
-          p = Object(o.useMemo)(
+          f = Object(c.a)(e, ['children', 'className', 'onClick', 'themed']),
+          p = Object(l.useMemo)(
             function() {
-              return 'ButtonGroup '.concat(u)
+              return 'ButtonGroup '.concat(b)
             },
-            [u]
+            [b]
           ),
-          j = Object(o.useMemo)(
+          j = Object(l.useMemo)(
             function() {
-              return [r, b].concat(Object(a.a)(m))
+              return [i, s].concat(Object(a.a)(m))
             },
-            [r, b, m]
+            [i, s, m]
           ),
-          h = f.appearance,
-          O = f.context,
-          T = f.size,
-          x = f.stretch,
-          y = Object(o.useMemo)(
+          O = f.appearance,
+          h = f.context,
+          x = f.size,
+          y = f.stretch,
+          v = Object(l.useMemo)(
             function() {
-              return { appearance: h, context: O, size: T, stretch: x }
+              return { appearance: O, context: h, size: x, stretch: y }
             },
-            [h, O, T, x]
+            [O, h, x, y]
           )
-        return c.a.createElement(
-          s.Provider,
-          { value: y },
-          c.a.createElement(
-            i.b,
+        return o.a.createElement(
+          u.Provider,
+          { value: v },
+          o.a.createElement(
+            r.b,
             Object.assign({ role: 'group', className: p, themed: j }, f),
             t
           )
@@ -174,31 +174,31 @@
       var a = n(
           './node_modules/docz/node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/toConsumableArray.js'
         ),
-        l = n(
+        c = n(
           './node_modules/docz/node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js'
         ),
-        o = n('./node_modules/react/index.js'),
-        c = n.n(o),
-        i = n('./src/Base/index.tsx'),
-        r = n('./node_modules/lodash/fp/upperFirst.js'),
-        b = n.n(r)
-      function s(e) {
+        l = n('./node_modules/react/index.js'),
+        o = n.n(l),
+        r = n('./src/Base/index.tsx'),
+        i = n('./node_modules/lodash/fp/upperFirst.js'),
+        s = n.n(i)
+      function u(e) {
         var t = e.appearance,
           n = e.color
         return n[t] || n.default
       }
-      function u(e) {
+      function b(e) {
         var t = e.appearance,
           n = e.theme,
           a = n.color,
-          l = n.animation,
-          o = n.border,
-          c = n.unit
+          c = n.animation,
+          l = n.border,
+          o = n.unit
         return {
           position: 'relative',
-          height: c[5],
-          width: c[5],
-          border: o['thick'.concat(b()(t))] || o.thin,
+          height: o[5],
+          width: o[5],
+          border: l['thick'.concat(s()(t))] || l.thin,
           color: '#fff',
           cursor: 'pointer',
           display: 'inline-block',
@@ -231,22 +231,22 @@
             top: 0,
             left: 0,
             transformOrigin: 'center center',
-            transition: l.easeFast(),
+            transition: c.easeFast(),
           },
           '.CheckboxBackground, .CheckboxCheckmark': {
-            transition: l.easeFast(),
+            transition: c.easeFast(),
           },
           'input:checked+.CheckboxBackground, input:indeterminate+.CheckboxBackground': {
-            background: s({ appearance: t, color: a }),
+            background: u({ appearance: t, color: a }),
             '.CheckboxCheckmark': { opacity: 1, transform: 'scale(0.7)' },
           },
         }
       }
-      'undefined' !== typeof u &&
-        u &&
-        u === Object(u) &&
-        Object.isExtensible(u) &&
-        Object.defineProperty(u, '__filemeta', {
+      'undefined' !== typeof b &&
+        b &&
+        b === Object(b) &&
+        Object.isExtensible(b) &&
+        Object.defineProperty(b, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: {
@@ -257,16 +257,16 @@
         n.d(t, 'a', function() {
           return d
         })
-      var d = c.a.memo(function(e) {
+      var d = o.a.memo(function(e) {
         var t = e.checked,
           n = e.className,
-          r = void 0 === n ? '' : n,
-          b = e.id,
-          s = e.name,
+          i = void 0 === n ? '' : n,
+          s = e.id,
+          u = e.name,
           d = e.onChange,
           m = e.themed,
           f = void 0 === m ? [] : m,
-          p = Object(l.a)(e, [
+          p = Object(c.a)(e, [
             'checked',
             'className',
             'id',
@@ -274,43 +274,43 @@
             'onChange',
             'themed',
           ]),
-          j = Object(o.useMemo)(
+          j = Object(l.useMemo)(
             function() {
-              return 'Checkbox '.concat(r)
+              return 'Checkbox '.concat(i)
             },
-            [r]
+            [i]
           ),
-          h = Object(o.useMemo)(
+          O = Object(l.useMemo)(
             function() {
-              return [u].concat(Object(a.a)(f))
+              return [b].concat(Object(a.a)(f))
             },
-            [u, f]
+            [b, f]
           ),
-          O = Object(o.useMemo)(
+          h = Object(l.useMemo)(
             function() {
               return 'disabled' === p.appearance
             },
             [p.appearance]
           )
-        return c.a.createElement(
-          i.Base,
-          Object.assign({ className: j, themed: h }, p),
-          c.a.createElement('input', {
+        return o.a.createElement(
+          r.Base,
+          Object.assign({ className: j, themed: O }, p),
+          o.a.createElement('input', {
             checked: t,
             className: 'CheckboxInput',
-            disabled: O,
-            id: b,
-            name: s,
+            disabled: h,
+            id: s,
+            name: u,
             onChange: d,
             type: 'checkbox',
           }),
-          c.a.createElement(
+          o.a.createElement(
             'div',
             { className: 'CheckboxBackground' },
-            c.a.createElement(
+            o.a.createElement(
               'svg',
               { className: 'CheckboxCheckmark', viewBox: '0 0 24 24' },
-              c.a.createElement('path', {
+              o.a.createElement('path', {
                 className: 'mdc-checkbox__checkmark-path',
                 fill: 'none',
                 stroke: 'white',
@@ -367,32 +367,32 @@
       var a = n(
           './node_modules/docz/node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/toConsumableArray.js'
         ),
-        l = n(
+        c = n(
           './node_modules/docz/node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js'
         ),
-        o = n('./node_modules/react/index.js'),
-        c = n.n(o),
-        i = n('./node_modules/lodash/kebabCase.js'),
-        r = n.n(i)
-      function b(e) {
+        l = n('./node_modules/react/index.js'),
+        o = n.n(l),
+        r = n('./node_modules/lodash/kebabCase.js'),
+        i = n.n(r)
+      function s(e) {
         var t = e.alignItems,
           n = e.basis,
           a = e.display,
-          l = e.grow,
-          o = e.justifyContent,
-          c = e.shrink,
-          i = e.wrap
+          c = e.grow,
+          l = e.justifyContent,
+          o = e.shrink,
+          r = e.wrap
         return {
           display: a || 'flex',
           basis: n ? ''.concat(n) : '',
-          grow: l ? ''.concat(l) : '',
-          shrink: c ? ''.concat(c) : '',
-          justifyContent: (o && [r()(o)]) || '',
-          alignItems: (t && [r()(t)]) || '',
-          flexWrap: (i && [r()(i)]) || '',
+          grow: c ? ''.concat(c) : '',
+          shrink: o ? ''.concat(o) : '',
+          justifyContent: (l && [i()(l)]) || '',
+          alignItems: (t && [i()(t)]) || '',
+          flexWrap: (r && [i()(r)]) || '',
         }
       }
-      function s(e) {
+      function u(e) {
         switch (e.direction) {
           case 'row':
             return { flexDirection: 'row' }
@@ -406,20 +406,20 @@
             return {}
         }
       }
-      'undefined' !== typeof b &&
-        b &&
-        b === Object(b) &&
-        Object.isExtensible(b) &&
-        Object.defineProperty(b, '__filemeta', {
+      'undefined' !== typeof s &&
+        s &&
+        s === Object(s) &&
+        Object.isExtensible(s) &&
+        Object.defineProperty(s, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: { name: 'flexTheme', filename: 'src/Flex/flex.theme.ts' },
         }),
-        'undefined' !== typeof s &&
-          s &&
-          s === Object(s) &&
-          Object.isExtensible(s) &&
-          Object.defineProperty(s, '__filemeta', {
+        'undefined' !== typeof u &&
+          u &&
+          u === Object(u) &&
+          Object.isExtensible(u) &&
+          Object.defineProperty(u, '__filemeta', {
             enumerable: !0,
             configurable: !0,
             value: {
@@ -427,31 +427,31 @@
               filename: 'src/Flex/flex.theme.ts',
             },
           })
-      var u = n('./src/Base/index.tsx')
+      var b = n('./src/Base/index.tsx')
       n.d(t, 'a', function() {
         return d
       })
-      var d = c.a.memo(function(e) {
+      var d = o.a.memo(function(e) {
         var t = e.children,
           n = e.className,
-          i = void 0 === n ? '' : n,
-          r = e.themed,
-          d = void 0 === r ? [] : r,
-          m = Object(l.a)(e, ['children', 'className', 'themed']),
-          f = Object(o.useMemo)(
+          r = void 0 === n ? '' : n,
+          i = e.themed,
+          d = void 0 === i ? [] : i,
+          m = Object(c.a)(e, ['children', 'className', 'themed']),
+          f = Object(l.useMemo)(
             function() {
-              return 'Flex '.concat(i)
+              return 'Flex '.concat(r)
             },
-            [i]
+            [r]
           ),
-          p = Object(o.useMemo)(
+          p = Object(l.useMemo)(
             function() {
-              return [b, s].concat(Object(a.a)(d))
+              return [s, u].concat(Object(a.a)(d))
             },
-            [b, s, d]
+            [s, u, d]
           )
-        return c.a.createElement(
-          u.Base,
+        return o.a.createElement(
+          b.Base,
           Object.assign({ className: f, themed: p }, m),
           t
         )
@@ -479,25 +479,25 @@
     './src/MaterialIcons/CaretRight.tsx': function(e, t, n) {
       'use strict'
       n.d(t, 'a', function() {
-        return c
+        return o
       })
       var a = n('./node_modules/react/index.js'),
-        l = n.n(a),
-        o = n('./src/Icon/index.ts')
-      function c(e) {
-        return l.a.createElement(
-          o.Icon,
+        c = n.n(a),
+        l = n('./src/Icon/index.ts')
+      function o(e) {
+        return c.a.createElement(
+          l.Icon,
           Object.assign({ viewBox: '0 0 480 480' }, e),
-          l.a.createElement('path', {
+          c.a.createElement('path', {
             id: 'path4',
             d: 'M 190,340 290,240 190,140 Z',
           })
         )
       }
-      c &&
-        c === Object(c) &&
-        Object.isExtensible(c) &&
-        Object.defineProperty(c, '__filemeta', {
+      o &&
+        o === Object(o) &&
+        Object.isExtensible(o) &&
+        Object.defineProperty(o, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: {
@@ -505,11 +505,11 @@
             filename: 'src/MaterialIcons/CaretRight.tsx',
           },
         }),
-        (t.b = c),
-        c &&
-          c === Object(c) &&
-          Object.isExtensible(c) &&
-          Object.defineProperty(c, '__filemeta', {
+        (t.b = o),
+        o &&
+          o === Object(o) &&
+          Object.isExtensible(o) &&
+          Object.defineProperty(o, '__filemeta', {
             enumerable: !0,
             configurable: !0,
             value: {
@@ -521,34 +521,34 @@
     './src/MaterialIcons/Code.tsx': function(e, t, n) {
       'use strict'
       n.d(t, 'a', function() {
-        return c
+        return o
       })
       var a = n('./node_modules/react/index.js'),
-        l = n.n(a),
-        o = n('./src/Icon/index.ts')
-      function c(e) {
-        return l.a.createElement(
-          o.Icon,
+        c = n.n(a),
+        l = n('./src/Icon/index.ts')
+      function o(e) {
+        return c.a.createElement(
+          l.Icon,
           e,
-          l.a.createElement('path', {
+          c.a.createElement('path', {
             d:
               'M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z',
           })
         )
       }
-      c &&
-        c === Object(c) &&
-        Object.isExtensible(c) &&
-        Object.defineProperty(c, '__filemeta', {
+      o &&
+        o === Object(o) &&
+        Object.isExtensible(o) &&
+        Object.defineProperty(o, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: { name: 'Code', filename: 'src/MaterialIcons/Code.tsx' },
         }),
-        (t.b = c),
-        c &&
-          c === Object(c) &&
-          Object.isExtensible(c) &&
-          Object.defineProperty(c, '__filemeta', {
+        (t.b = o),
+        o &&
+          o === Object(o) &&
+          Object.isExtensible(o) &&
+          Object.defineProperty(o, '__filemeta', {
             enumerable: !0,
             configurable: !0,
             value: { name: 'Code', filename: 'src/MaterialIcons/Code.tsx' },
@@ -557,25 +557,25 @@
     './src/MaterialIcons/PlayCircle.tsx': function(e, t, n) {
       'use strict'
       n.d(t, 'a', function() {
-        return c
+        return o
       })
       var a = n('./node_modules/react/index.js'),
-        l = n.n(a),
-        o = n('./src/Icon/index.ts')
-      function c(e) {
-        return l.a.createElement(
-          o.Icon,
+        c = n.n(a),
+        l = n('./src/Icon/index.ts')
+      function o(e) {
+        return c.a.createElement(
+          l.Icon,
           e,
-          l.a.createElement('path', {
+          c.a.createElement('path', {
             d:
               'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z',
           })
         )
       }
-      c &&
-        c === Object(c) &&
-        Object.isExtensible(c) &&
-        Object.defineProperty(c, '__filemeta', {
+      o &&
+        o === Object(o) &&
+        Object.isExtensible(o) &&
+        Object.defineProperty(o, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: {
@@ -583,11 +583,11 @@
             filename: 'src/MaterialIcons/PlayCircle.tsx',
           },
         }),
-        (t.b = c),
-        c &&
-          c === Object(c) &&
-          Object.isExtensible(c) &&
-          Object.defineProperty(c, '__filemeta', {
+        (t.b = o),
+        o &&
+          o === Object(o) &&
+          Object.isExtensible(o) &&
+          Object.defineProperty(o, '__filemeta', {
             enumerable: !0,
             configurable: !0,
             value: {
@@ -599,25 +599,25 @@
     './src/MaterialIcons/ViewList.tsx': function(e, t, n) {
       'use strict'
       n.d(t, 'a', function() {
-        return c
+        return o
       })
       var a = n('./node_modules/react/index.js'),
-        l = n.n(a),
-        o = n('./src/Icon/index.ts')
-      function c(e) {
-        return l.a.createElement(
-          o.Icon,
+        c = n.n(a),
+        l = n('./src/Icon/index.ts')
+      function o(e) {
+        return c.a.createElement(
+          l.Icon,
           e,
-          l.a.createElement('path', {
+          c.a.createElement('path', {
             d:
               'M4 14h4v-4H4v4zm0 5h4v-4H4v4zM4 9h4V5H4v4zm5 5h12v-4H9v4zm0 5h12v-4H9v4zM9 5v4h12V5H9z',
           })
         )
       }
-      c &&
-        c === Object(c) &&
-        Object.isExtensible(c) &&
-        Object.defineProperty(c, '__filemeta', {
+      o &&
+        o === Object(o) &&
+        Object.isExtensible(o) &&
+        Object.defineProperty(o, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: {
@@ -625,11 +625,11 @@
             filename: 'src/MaterialIcons/ViewList.tsx',
           },
         }),
-        (t.b = c),
-        c &&
-          c === Object(c) &&
-          Object.isExtensible(c) &&
-          Object.defineProperty(c, '__filemeta', {
+        (t.b = o),
+        o &&
+          o === Object(o) &&
+          Object.isExtensible(o) &&
+          Object.defineProperty(o, '__filemeta', {
             enumerable: !0,
             configurable: !0,
             value: {
@@ -644,99 +644,144 @@
       var a = n(
           './node_modules/docz/node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js'
         ),
-        l = n('./node_modules/react/index.js'),
-        o = n.n(l),
-        c = n('./node_modules/@mdx-js/react/dist/index.es.js'),
-        i = n('./node_modules/docz/dist/index.esm.js'),
-        r = n('./src/Flex/Flex.tsx'),
-        b = n(
+        c = n('./node_modules/react/index.js'),
+        l = n.n(c),
+        o = n('./node_modules/@mdx-js/react/dist/index.es.js'),
+        r = n('./node_modules/docz/dist/index.esm.js'),
+        i = n('./src/Flex/Flex.tsx'),
+        s = n(
           './node_modules/styled-components/dist/styled-components.browser.esm.js'
         ),
-        s = n('./src/ThemeContext/ThemeProvider.tsx'),
-        u = n(
+        u = n('./src/ThemeContext/ThemeProvider.tsx'),
+        b = n(
           './node_modules/docz/node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectSpread.js'
         ),
         d = n(
           './node_modules/docz/node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/toConsumableArray.js'
         ),
-        m = n('./src/Base/Base.tsx'),
-        f = o.a.memo(function(e) {
+        m = n(
+          './node_modules/docz/node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray.js'
+        )
+      function f(e, t, n) {
+        var a = Object(c.useState)(t),
+          l = Object(m.a)(a, 2),
+          o = l[0],
+          r = l[1],
+          i =
+            'sessionStorage' === n ? window.sessionStorage : window.localStorage
+        Object(c.useEffect)(function() {
+          var n = i.getItem(e),
+            a = n ? JSON.parse(n) : n
+          s(a || t)
+        }, [])
+        var s = Object(c.useCallback)(
+          function(t) {
+            if (t !== o) {
+              var n = JSON.stringify(t)
+              return r(t), i.setItem(e, n)
+            }
+          },
+          [o, r]
+        )
+        function u() {
+          r(void 0), i.removeItem(e)
+        }
+        return Object(c.useMemo)(
+          function() {
+            return { state: o, setItem: s, removeItem: u }
+          },
+          [[o, s, u]]
+        )
+      }
+      f &&
+        f === Object(f) &&
+        Object.isExtensible(f) &&
+        Object.defineProperty(f, '__filemeta', {
+          enumerable: !0,
+          configurable: !0,
+          value: {
+            name: 'useCacheState',
+            filename: 'src/reusable/cacheState/useCacheState.ts',
+          },
+        })
+      var p = n('./src/Base/Base.tsx'),
+        j = l.a.memo(function(e) {
           var t = e.items
-          return o.a.createElement(
+          return l.a.createElement(
             'pre',
             null,
-            o.a.createElement(
+            l.a.createElement(
               'code',
               { className: 'language-javascript' },
               JSON.stringify(t, null, 2)
             )
           )
         })
-      'undefined' !== typeof f &&
-        f &&
-        f === Object(f) &&
-        Object.isExtensible(f) &&
-        Object.defineProperty(f, '__filemeta', {
+      'undefined' !== typeof j &&
+        j &&
+        j === Object(j) &&
+        Object.isExtensible(j) &&
+        Object.defineProperty(j, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: { name: 'JsonView', filename: 'src/Table/JsonView.tsx' },
         })
-      'undefined' !== typeof f &&
-        f &&
-        f === Object(f) &&
-        Object.isExtensible(f) &&
-        Object.defineProperty(f, '__filemeta', {
+      'undefined' !== typeof j &&
+        j &&
+        j === Object(j) &&
+        Object.isExtensible(j) &&
+        Object.defineProperty(j, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: { name: 'JsonView', filename: 'src/Table/JsonView.tsx' },
         })
-      var p = n('./src/MaterialIcons/Copy.tsx'),
-        j = n('./src/MaterialIcons/Delete.tsx'),
-        h = n('./src/MaterialIcons/Edit.tsx'),
-        O = n('./src/MaterialIcons/Download.tsx'),
-        T = n('./src/ButtonIcon/index.ts'),
-        x = o.a.memo(function(e) {
+      var O = n('./src/MaterialIcons/Copy.tsx'),
+        h = n('./src/MaterialIcons/Delete.tsx'),
+        x = n('./src/MaterialIcons/Edit.tsx'),
+        y = n('./src/MaterialIcons/Download.tsx'),
+        v = n('./src/ButtonIcon/index.ts'),
+        T = l.a.memo(function(e) {
           var t = e.icon,
             n = e.uid,
-            c = Object(a.a)(e, ['icon', 'uid']),
-            i = Object(l.useMemo)(
+            o = Object(a.a)(e, ['icon', 'uid']),
+            r = Object(c.useMemo)(
               function() {
                 return t
               },
               [t]
             )
-          return o.a.createElement(
-            T.ButtonIcon,
-            Object.assign({ 'data-uid': n, icon: i }, c)
+          return l.a.createElement(
+            v.ButtonIcon,
+            Object.assign({ 'data-uid': n, icon: r }, o)
           )
         })
-      function y(e) {
+      function _(e) {
         var t = e.onClick,
           n = (e.uid, Object(a.a)(e, ['onClick', 'uid'])),
-          c = Object(l.useMemo)(
+          o = Object(c.useMemo)(
             function() {
-              return p.a
+              return O.a
             },
-            [p.a]
+            [O.a]
           )
-        return o.a.createElement(
-          x,
-          Object.assign({ name: 'copy', onClick: t, icon: c, title: 'Copy' }, n)
+        return l.a.createElement(
+          T,
+          Object.assign({ name: 'copy', onClick: t, icon: o, title: 'Copy' }, n)
         )
       }
-      'undefined' !== typeof x &&
-        x &&
-        x === Object(x) &&
-        Object.isExtensible(x) &&
-        Object.defineProperty(x, '__filemeta', {
+      'undefined' !== typeof T &&
+        T &&
+        T === Object(T) &&
+        Object.isExtensible(T) &&
+        Object.defineProperty(T, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: { name: 'TableButton', filename: 'src/Table/TableButton.tsx' },
         }),
-        y &&
-          y === Object(y) &&
-          Object.isExtensible(y) &&
-          Object.defineProperty(y, '__filemeta', {
+        _ &&
+          _ === Object(_) &&
+          Object.isExtensible(_) &&
+          Object.defineProperty(_, '__filemeta', {
             enumerable: !0,
             configurable: !0,
             value: {
@@ -744,47 +789,19 @@
               filename: 'src/Table/TableButton.tsx',
             },
           })
-      var v = function(e) {
-        var t = e.onClick,
-          n = (e.uid, Object(a.a)(e, ['onClick', 'uid'])),
-          c = Object(l.useMemo)(
-            function() {
-              return j.a
-            },
-            [j.a]
-          )
-        return o.a.createElement(
-          x,
-          Object.assign(
-            { name: 'delete', onClick: t, icon: c, title: 'Delete' },
-            n
-          )
-        )
-      }
-      v &&
-        v === Object(v) &&
-        Object.isExtensible(v) &&
-        Object.defineProperty(v, '__filemeta', {
-          enumerable: !0,
-          configurable: !0,
-          value: {
-            name: 'TableDeleteButton',
-            filename: 'src/Table/TableButton.tsx',
-          },
-        })
       var g = function(e) {
         var t = e.onClick,
           n = (e.uid, Object(a.a)(e, ['onClick', 'uid'])),
-          c = Object(l.useMemo)(
+          o = Object(c.useMemo)(
             function() {
-              return O.a
+              return h.a
             },
-            [O.a]
+            [h.a]
           )
-        return o.a.createElement(
-          x,
+        return l.a.createElement(
+          T,
           Object.assign(
-            { name: 'Download', onClick: t, icon: c, title: 'Download' },
+            { name: 'delete', onClick: t, icon: o, title: 'Delete' },
             n
           )
         )
@@ -796,27 +813,25 @@
           enumerable: !0,
           configurable: !0,
           value: {
-            name: 'TableDownloadButton',
+            name: 'TableDeleteButton',
             filename: 'src/Table/TableButton.tsx',
           },
         })
       var C = function(e) {
-        var t = e.children,
-          n = e.uid,
-          c = Object(a.a)(e, ['children', 'uid']),
-          i = Object(l.useMemo)(
+        var t = e.onClick,
+          n = (e.uid, Object(a.a)(e, ['onClick', 'uid'])),
+          o = Object(c.useMemo)(
             function() {
-              return h.a
+              return y.a
             },
-            [h.a]
+            [y.a]
           )
-        return o.a.createElement(
-          x,
+        return l.a.createElement(
+          T,
           Object.assign(
-            { as: 'a', name: 'Edit', icon: i, title: 'Edit', 'data-uid': n },
-            c
-          ),
-          t
+            { name: 'Download', onClick: t, icon: o, title: 'Download' },
+            n
+          )
         )
       }
       C &&
@@ -826,117 +841,151 @@
           enumerable: !0,
           configurable: !0,
           value: {
+            name: 'TableDownloadButton',
+            filename: 'src/Table/TableButton.tsx',
+          },
+        })
+      var E = function(e) {
+        var t = e.children,
+          n = e.uid,
+          o = Object(a.a)(e, ['children', 'uid']),
+          r = Object(c.useMemo)(
+            function() {
+              return x.a
+            },
+            [x.a]
+          )
+        return l.a.createElement(
+          T,
+          Object.assign(
+            { as: 'a', name: 'Edit', icon: r, title: 'Edit', 'data-uid': n },
+            o
+          ),
+          t
+        )
+      }
+      E &&
+        E === Object(E) &&
+        Object.isExtensible(E) &&
+        Object.defineProperty(E, '__filemeta', {
+          enumerable: !0,
+          configurable: !0,
+          value: {
             name: 'TableEditLink',
             filename: 'src/Table/TableButton.tsx',
           },
         })
-      'undefined' !== typeof x &&
-        x &&
-        x === Object(x) &&
-        Object.isExtensible(x) &&
-        Object.defineProperty(x, '__filemeta', {
+      'undefined' !== typeof T &&
+        T &&
+        T === Object(T) &&
+        Object.isExtensible(T) &&
+        Object.defineProperty(T, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: { name: 'TableButton', filename: 'src/Table/TableButton.tsx' },
         })
-      var _ = n(
+      var k = n(
           './node_modules/docz/node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js'
         ),
-        E = n(
-          './node_modules/docz/node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray.js'
-        ),
-        k = n('./src/Base/index.tsx'),
-        I = n('./src/MaterialIcons/CaretRight.tsx')
-      function P() {
-        var e = Object(_.a)(['\n  ', '\n'])
+        I = n('./src/Base/index.tsx'),
+        P = n('./src/MaterialIcons/CaretRight.tsx')
+      function w() {
+        var e = Object(k.a)(['\n  ', '\n'])
         return (
-          (P = function() {
+          (w = function() {
             return e
           }),
           e
         )
       }
-      var w = o.a.createContext({})
-      function S() {
-        return Object(l.useContext)(w)
+      var S = l.a.createContext({})
+      function B() {
+        return Object(c.useContext)(S)
       }
-      function D(e) {
+      function H(e) {
         var t = e.children,
           n = e.checked,
-          c = void 0 !== n && n,
-          i = e.expanded,
-          r = void 0 !== i && i,
-          b = Object(a.a)(e, ['children', 'checked', 'expanded']),
-          s = Object(l.useState)(c),
-          m = Object(E.a)(s, 2),
-          f = m[0],
-          p = m[1],
-          j = Object(l.useState)(r),
-          h = Object(E.a)(j, 2),
-          O = h[0],
-          T = h[1]
-        Object(l.useEffect)(
+          o = void 0 !== n && n,
+          r = e.expanded,
+          i = void 0 !== r && r,
+          s = e.tableName,
+          u = e.data,
+          m = Object(a.a)(e, [
+            'children',
+            'checked',
+            'expanded',
+            'tableName',
+            'data',
+          ]),
+          p = f(''.concat(s, '_').concat(u.id, '_checked'), o),
+          j = p.state,
+          O = p.setItem,
+          h = f(''.concat(s, '_').concat(u.id, '_expanded'), i),
+          x = h.state,
+          y = h.setItem
+        Object(c.useEffect)(
           function() {
-            p(c)
+            O(o)
           },
-          [c, p]
+          [o]
         ),
-          Object(l.useEffect)(
+          Object(c.useEffect)(
             function() {
-              T(r)
+              y(i)
             },
-            [r, T]
+            [i]
           )
-        var x = o.a.useRef(function() {
+        var v = l.a.useRef(function() {
             return null
           }),
-          y = o.a.useRef(!1),
-          v = Object(l.useMemo)(
+          T = l.a.useRef(!1),
+          _ = Object(c.useMemo)(
             function() {
               return t.reduce(function(e, t) {
                 return 'detail' === t.props.uid
-                  ? ((x.current = function() {
+                  ? ((v.current = function() {
                       return t
                     }),
-                    (y.current = !0),
+                    (T.current = !0),
                     e)
                   : [].concat(Object(d.a)(e), [t])
               }, [])
             },
-            [t, x]
+            [t, v]
           ),
-          g = Object(l.useMemo)(
+          g = Object(c.useMemo)(
             function() {
-              return Object(u.a)({}, b, {
-                checked: f,
-                expanded: O,
-                setChecked: p,
-                setExpanded: T,
+              return Object(b.a)({}, m, {
+                data: u,
+                checked: j,
+                expanded: x,
+                setChecked: O,
+                setExpanded: y,
               })
             },
-            [f, p, O, T, b]
+            [j, O, x, y, m]
           )
-        return o.a.createElement(
-          w.Provider,
+        return l.a.createElement(
+          S.Provider,
           { value: g },
-          o.a.createElement(
+          l.a.createElement(
             'tr',
             null,
-            y.current && o.a.createElement(R, { expanded: O, setExpanded: T }),
-            v
+            T.current && l.a.createElement(A, { expanded: x, setExpanded: y }),
+            _
           ),
-          o.a.createElement(
-            H,
-            { expanded: O, colSpan: t.length },
-            o.a.createElement(x.current, null)
+          l.a.createElement(
+            D,
+            { expanded: x, colSpan: t.length },
+            l.a.createElement(v.current, null)
           )
         )
       }
-      'undefined' !== typeof w &&
-        w &&
-        w === Object(w) &&
-        Object.isExtensible(w) &&
-        Object.defineProperty(w, '__filemeta', {
+      'undefined' !== typeof S &&
+        S &&
+        S === Object(S) &&
+        Object.isExtensible(S) &&
+        Object.defineProperty(S, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: {
@@ -944,10 +993,10 @@
             filename: 'src/Table/TableColumnContext.tsx',
           },
         }),
-        S &&
-          S === Object(S) &&
-          Object.isExtensible(S) &&
-          Object.defineProperty(S, '__filemeta', {
+        B &&
+          B === Object(B) &&
+          Object.isExtensible(B) &&
+          Object.defineProperty(B, '__filemeta', {
             enumerable: !0,
             configurable: !0,
             value: {
@@ -955,10 +1004,10 @@
               filename: 'src/Table/TableColumnContext.tsx',
             },
           }),
-        D &&
-          D === Object(D) &&
-          Object.isExtensible(D) &&
-          Object.defineProperty(D, '__filemeta', {
+        H &&
+          H === Object(H) &&
+          Object.isExtensible(H) &&
+          Object.defineProperty(H, '__filemeta', {
             enumerable: !0,
             configurable: !0,
             value: {
@@ -966,11 +1015,11 @@
               filename: 'src/Table/TableColumnContext.tsx',
             },
           })
-      var H = o.a.memo(function(e) {
+      var D = l.a.memo(function(e) {
           var t = e.children,
             n = e.colSpan,
             a = e.expanded,
-            c = Object(l.useMemo)(function() {
+            o = Object(c.useMemo)(function() {
               return {
                 expanded: {
                   height: 'auto',
@@ -986,91 +1035,90 @@
                 },
               }
             }, [])
-          return o.a.createElement(
+          return l.a.createElement(
             'tr',
             {
               className: 'RowDetail',
               style: { display: a ? 'table-row' : 'none' },
             },
-            o.a.createElement(
+            l.a.createElement(
               'td',
               { colSpan: n },
-              o.a.createElement(
-                k.Base,
-                { animate: c, state: a ? 'expanded' : 'collapsed', as: 'div' },
+              l.a.createElement(
+                I.Base,
+                { animate: o, state: a ? 'expanded' : 'collapsed', as: 'div' },
                 t
               )
             )
           )
         }),
-        B = b.default.button(P(), function(e) {
+        M = s.default.button(w(), function(e) {
           var t = e.expanded
           return '\n  background: none;\n  border: none;\n  color: #fff;\n  cursor: pointer;\n  height: 30px;\n  margin: 3px;\n  outline: none;\n  padding-right: 0;\n  text-align: left;\n  transform: rotate('.concat(
             t ? '45deg' : '0deg',
             ');\n  transition: all 0.2s ease;\n\n  &:hover,\n  &:active {\n    background: none;\n    border-bottom: #0000;\n  }\n'
           )
         }),
-        R = o.a.memo(function(e) {
+        A = l.a.memo(function(e) {
           var t = e.expanded,
             n = e.setExpanded,
-            l = Object(a.a)(e, ['expanded', 'setExpanded']),
-            c = o.a.useCallback(
+            c = Object(a.a)(e, ['expanded', 'setExpanded']),
+            o = l.a.useCallback(
               function(e) {
                 e.preventDefault(), n(!t)
               },
               [n, t]
             )
-          return o.a.createElement(
+          return l.a.createElement(
             'td',
-            l,
-            o.a.createElement(
-              B,
-              { onClick: c, expanded: t },
-              o.a.createElement(I.a, { alt: 'indicator' })
+            c,
+            l.a.createElement(
+              M,
+              { onClick: o, expanded: t },
+              l.a.createElement(P.a, { alt: 'indicator' })
             )
           )
         }),
-        A = o.a.memo(function(e) {
+        R = l.a.memo(function(e) {
           var t = e.baseRoute,
             n = void 0 === t ? '' : t,
-            c = e.children,
-            i = e.data,
-            r = e.dispatch,
-            b = e.onAdd,
-            s = e.onDeleteSelected,
-            u = e.itemsToArray,
+            o = e.children,
+            r = e.data,
+            i = e.dispatch,
+            s = e.onAdd,
+            u = e.onDeleteSelected,
+            b = e.itemsToArray,
             d = e.loading,
             m = e.onRowClick,
             f = (e.rows, e.selected),
-            p =
-              (e.tableName,
-              Object(a.a)(e, [
-                'baseRoute',
-                'children',
-                'data',
-                'dispatch',
-                'onAdd',
-                'onDeleteSelected',
-                'itemsToArray',
-                'loading',
-                'onRowClick',
-                'rows',
-                'selected',
-                'tableName',
-              ])),
-            j = Object(l.useCallback)(
+            p = e.tableName,
+            j = Object(a.a)(e, [
+              'baseRoute',
+              'children',
+              'data',
+              'dispatch',
+              'onAdd',
+              'onDeleteSelected',
+              'itemsToArray',
+              'loading',
+              'onRowClick',
+              'rows',
+              'selected',
+              'tableName',
+            ]),
+            O = Object(c.useCallback)(
               function(e) {
-                r({
+                i({
                   type: 'TOGGLE_SELECTED_ITEMS',
                   selected: [e.currentTarget.name],
                 })
               },
-              [r]
+              [i]
             ),
-            h = Object(l.useCallback)(function(e) {
+            h = Object(c.useCallback)(function(e) {
               e.preventDefault()
             }, []),
-            O = Object(l.useCallback)(
+            x = Object(c.useCallback)(
               function(e) {
                 e.preventDefault()
                 var t = e.currentTarget.dataset.uid
@@ -1078,108 +1126,109 @@
               },
               [m]
             ),
-            T = Object(l.useMemo)(
+            y = Object(c.useMemo)(
               function() {
                 return {
                   Copy: function(e) {
-                    return o.a.createElement(y, e)
+                    return l.a.createElement(_, e)
                   },
                   Edit: function(e) {
-                    return o.a.createElement(
-                      C,
+                    return l.a.createElement(
+                      E,
                       Object.assign({}, e, { href: ''.concat(n, '/edit') })
                     )
                   },
                   Delete: function(e) {
-                    return o.a.createElement(
-                      v,
+                    return l.a.createElement(
+                      g,
                       Object.assign({ onClick: h }, e)
                     )
                   },
                   Download: function(e) {
-                    return o.a.createElement(g, e)
+                    return l.a.createElement(C, e)
                   },
-                  dispatch: r,
-                  itemsToArray: u,
+                  dispatch: i,
+                  itemsToArray: b,
                   loading: d,
-                  onAdd: b,
-                  onChange: j,
+                  onAdd: s,
+                  onChange: O,
                   onDelete: h,
-                  onDeleteSelected: s,
-                  onRowClick: O,
+                  onDeleteSelected: u,
+                  onRowClick: x,
                   selected: f,
                 }
               },
-              [y, v, g, C, r, j, h, O, u, d, b, s, f]
+              [_, g, C, E, i, O, h, x, b, d, s, u, f]
             ),
-            x = Object(l.useMemo)(
+            v = Object(c.useMemo)(
               function() {
-                return i.map(function(e, t) {
-                  return o.a.createElement(
-                    D,
+                return r.map(function(e, t) {
+                  return l.a.createElement(
+                    H,
                     Object.assign(
                       {
                         key: e.id,
                         data: e,
                         checked: f.includes(e.id),
                         index: t,
+                        tableName: p,
                       },
-                      T
+                      y
                     ),
-                    c
+                    o
                   )
                 })
               },
-              [c, i, T]
+              [o, r, y]
             )
-          return o.a.createElement(
+          return l.a.createElement(
             'tbody',
-            Object.assign({ className: 'TableBody' }, p),
-            x
+            Object.assign({ className: 'TableBody' }, j),
+            v
           )
         })
-      'undefined' !== typeof A &&
-        A &&
-        A === Object(A) &&
-        Object.isExtensible(A) &&
-        Object.defineProperty(A, '__filemeta', {
+      'undefined' !== typeof R &&
+        R &&
+        R === Object(R) &&
+        Object.isExtensible(R) &&
+        Object.defineProperty(R, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: { name: 'TableBody', filename: 'src/Table/TableBody.tsx' },
         })
-      var M = A
-      'undefined' !== typeof A &&
-        A &&
-        A === Object(A) &&
-        Object.isExtensible(A) &&
-        Object.defineProperty(A, '__filemeta', {
+      var N = R
+      'undefined' !== typeof R &&
+        R &&
+        R === Object(R) &&
+        Object.isExtensible(R) &&
+        Object.defineProperty(R, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: { name: 'TableBody', filename: 'src/Table/TableBody.tsx' },
         })
-      var N = o.a.createContext({})
-      function V() {
-        return Object(l.useContext)(N)
+      var V = l.a.createContext({})
+      function L() {
+        return Object(c.useContext)(V)
       }
-      function L(e) {
+      function G(e) {
         var t = e.allSelected,
           n = void 0 !== t && t,
           a = e.children,
-          c = e.data,
-          i = e.onAllSelectedChange,
-          r = Object(l.useMemo)(
+          o = e.data,
+          r = e.onAllSelectedChange,
+          i = Object(c.useMemo)(
             function() {
-              return { allSelected: n, data: c, onAllSelectedChange: i }
+              return { allSelected: n, data: o, onAllSelectedChange: r }
             },
-            [n, i]
+            [n, r]
           )
-        return o.a.createElement(N.Provider, { value: r }, a)
+        return l.a.createElement(V.Provider, { value: i }, a)
       }
-      'undefined' !== typeof N &&
-        N &&
-        N === Object(N) &&
-        Object.isExtensible(N) &&
-        Object.defineProperty(N, '__filemeta', {
+      'undefined' !== typeof V &&
+        V &&
+        V === Object(V) &&
+        Object.isExtensible(V) &&
+        Object.defineProperty(V, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: {
@@ -1187,17 +1236,6 @@
             filename: 'src/Table/TableHeadingsContext.tsx',
           },
         }),
-        V &&
-          V === Object(V) &&
-          Object.isExtensible(V) &&
-          Object.defineProperty(V, '__filemeta', {
-            enumerable: !0,
-            configurable: !0,
-            value: {
-              name: 'useTableHeading',
-              filename: 'src/Table/TableHeadingsContext.tsx',
-            },
-          }),
         L &&
           L === Object(L) &&
           Object.isExtensible(L) &&
@@ -1205,25 +1243,36 @@
             enumerable: !0,
             configurable: !0,
             value: {
+              name: 'useTableHeading',
+              filename: 'src/Table/TableHeadingsContext.tsx',
+            },
+          }),
+        G &&
+          G === Object(G) &&
+          Object.isExtensible(G) &&
+          Object.defineProperty(G, '__filemeta', {
+            enumerable: !0,
+            configurable: !0,
+            value: {
               name: 'TableHeadingsProvider',
               filename: 'src/Table/TableHeadingsContext.tsx',
             },
           })
-      var G = o.a.memo(function(e) {
+      var z = l.a.memo(function(e) {
         var t = e.allSelected,
           n = e.baseRoute,
-          c = void 0 === n ? '' : n,
-          i = e.children,
-          r = e.data,
-          b = e.dispatch,
-          s = e.itemsToArray,
-          u = e.loading,
+          o = void 0 === n ? '' : n,
+          r = e.children,
+          i = e.data,
+          s = e.dispatch,
+          u = e.itemsToArray,
+          b = e.loading,
           m = e.onAdd,
           f = e.onAllSelectedChange,
           p = e.onDeleteSelected,
           j = e.selected,
-          h = e.tableName,
-          O = Object(a.a)(e, [
+          O = e.tableName,
+          h = Object(a.a)(e, [
             'allSelected',
             'baseRoute',
             'children',
@@ -1237,134 +1286,134 @@
             'selected',
             'tableName',
           ]),
-          T = Object(l.useMemo)(
+          x = Object(c.useMemo)(
             function() {
-              return o.a.createElement(
+              return l.a.createElement(
                 'thead',
                 null,
-                o.a.createElement(
+                l.a.createElement(
                   'tr',
                   null,
-                  i.reduce(function(e, t, n) {
+                  r.reduce(function(e, t, n) {
                     var a = t.props,
-                      l = a.heading
+                      c = a.heading
                     return 'detail' === a.uid
-                      ? [o.a.createElement('th', { key: n })].concat(
+                      ? [l.a.createElement('th', { key: n })].concat(
                           Object(d.a)(e)
                         )
                       : [].concat(Object(d.a)(e), [
-                          o.a.createElement('th', { key: n }, l),
+                          l.a.createElement('th', { key: n }, c),
                         ])
                   }, [])
                 )
               )
             },
-            [i]
+            [r]
           )
-        return o.a.createElement(
-          l.Fragment,
+        return l.a.createElement(
+          c.Fragment,
           null,
-          o.a.createElement(
-            L,
-            { allSelected: t, data: r, onAllSelectedChange: f },
-            T,
-            o.a.createElement(
-              M,
+          l.a.createElement(
+            G,
+            { allSelected: t, data: i, onAllSelectedChange: f },
+            x,
+            l.a.createElement(
+              N,
               Object.assign(
                 {
-                  baseRoute: c,
+                  baseRoute: o,
                   className: 'TableView',
-                  dispatch: b,
+                  dispatch: s,
                   onAdd: m,
                   onDeleteSelected: p,
-                  tableName: h,
-                  loading: u,
+                  tableName: O,
+                  loading: b,
                   selected: j,
-                  itemsToArray: s,
-                  data: r,
+                  itemsToArray: u,
+                  data: i,
                 },
-                O
+                h
               ),
-              i
+              r
             )
           )
         )
       })
-      'undefined' !== typeof G &&
-        G &&
-        G === Object(G) &&
-        Object.isExtensible(G) &&
-        Object.defineProperty(G, '__filemeta', {
+      'undefined' !== typeof z &&
+        z &&
+        z === Object(z) &&
+        Object.isExtensible(z) &&
+        Object.defineProperty(z, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: { name: 'TableView', filename: 'src/Table/TableView.tsx' },
         })
-      'undefined' !== typeof G &&
-        G &&
-        G === Object(G) &&
-        Object.isExtensible(G) &&
-        Object.defineProperty(G, '__filemeta', {
+      'undefined' !== typeof z &&
+        z &&
+        z === Object(z) &&
+        Object.isExtensible(z) &&
+        Object.defineProperty(z, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: { name: 'TableView', filename: 'src/Table/TableView.tsx' },
         })
-      var z = n(
+      var F = n(
         './node_modules/docz/node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectDestructuringEmpty.js'
       )
-      function F(e) {
+      function J(e) {
         return { height: e.height || '100%', overflow: 'auto' }
       }
-      function J(e) {
+      function W(e) {
         var t = e.condensed,
           n = e.hover,
           a = e.theme,
-          l = a.animation,
-          o = a.border,
-          c = a.color,
-          i = a.elevate,
-          r = a.unit
+          c = a.animation,
+          l = a.border,
+          o = a.color,
+          r = a.elevate,
+          i = a.unit
         return {
           borderCollapse: 'collapse',
-          transition: l.easeMedium(),
+          transition: c.easeMedium(),
           'td, th': {
             lineHeight: t ? 2 : 2.5,
             padding: 0,
-            '&:first-child': { paddingLeft: r[4] },
-            '&:last-child': { paddingRight: r[4] },
+            '&:first-child': { paddingLeft: i[4] },
+            '&:last-child': { paddingRight: i[4] },
           },
-          td: { borderTop: o.thin },
+          td: { borderTop: l.thin },
           'tr:hover': {
-            background: n ? c['grey-800'] : '',
-            boxShadow: n ? i[2] : '',
+            background: n ? o['grey-800'] : '',
+            boxShadow: n ? r[2] : '',
           },
           '.TableView': {
-            '.RowDetail >td': { padding: '0 0 '.concat(r[7], ' 0') },
+            '.RowDetail >td': { padding: '0 0 '.concat(i[7], ' 0') },
           },
           a: {
             background: 'none',
             display: 'block',
             height: '100%',
             marginRight: '3px',
-            border: o.thinTransparent,
+            border: l.thinTransparent,
           },
           'a:hover, a:active': {
             background: 'none',
-            border: o.thinTransparent,
-            color: c.link,
+            border: l.thinTransparent,
+            color: o.link,
           },
         }
       }
-      function W(e) {
-        return Object(z.a)(e.theme), { height: 0, visibility: 'hidden' }
-      }
       function X(e) {
-        return Object(z.a)(e.theme), { display: 'flex', marginLeft: 'auto' }
+        return Object(F.a)(e.theme), { height: 0, visibility: 'hidden' }
       }
       function U(e) {
+        return Object(F.a)(e.theme), { display: 'flex', marginLeft: 'auto' }
+      }
+      function Z(e) {
         var t = e.theme.unit
         return { padding: ''.concat(t[2], ' 0') }
       }
-      function Z(e) {
+      function q(e) {
         var t = e.theme,
           n = t.color,
           a = t.unit
@@ -1373,39 +1422,10 @@
           padding: ''.concat(a[2], ' ').concat(a[4]),
         }
       }
-      function q(e, t, n) {
-        var a = Object(l.useState)(t),
-          o = Object(E.a)(a, 2),
-          c = o[0],
-          i = o[1],
-          r =
-            'sessionStorage' === n ? window.sessionStorage : window.localStorage
-        function b(t) {
-          if (t !== c) {
-            var n = JSON.stringify(t)
-            return i(t), r.setItem(e, n)
-          }
-        }
-        function s() {
-          i(void 0), r.removeItem(e)
-        }
-        return (
-          Object(l.useEffect)(function() {
-            var n = r.getItem(e)
-            b((n ? JSON.parse(n) : n) || t)
-          }, []),
-          Object(l.useMemo)(
-            function() {
-              return { state: c, setItem: b, removeItem: s }
-            },
-            [[c, b, s]]
-          )
-        )
-      }
-      F &&
-        F === Object(F) &&
-        Object.isExtensible(F) &&
-        Object.defineProperty(F, '__filemeta', {
+      J &&
+        J === Object(J) &&
+        Object.isExtensible(J) &&
+        Object.defineProperty(J, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: {
@@ -1413,15 +1433,6 @@
             filename: 'src/Table/table.theme.ts',
           },
         }),
-        'undefined' !== typeof J &&
-          J &&
-          J === Object(J) &&
-          Object.isExtensible(J) &&
-          Object.defineProperty(J, '__filemeta', {
-            enumerable: !0,
-            configurable: !0,
-            value: { name: 'tableTheme', filename: 'src/Table/table.theme.ts' },
-          }),
         'undefined' !== typeof W &&
           W &&
           W === Object(W) &&
@@ -1429,10 +1440,7 @@
           Object.defineProperty(W, '__filemeta', {
             enumerable: !0,
             configurable: !0,
-            value: {
-              name: 'tableCaptionTheme',
-              filename: 'src/Table/table.theme.ts',
-            },
+            value: { name: 'tableTheme', filename: 'src/Table/table.theme.ts' },
           }),
         'undefined' !== typeof X &&
           X &&
@@ -1442,14 +1450,26 @@
             enumerable: !0,
             configurable: !0,
             value: {
+              name: 'tableCaptionTheme',
+              filename: 'src/Table/table.theme.ts',
+            },
+          }),
+        'undefined' !== typeof U &&
+          U &&
+          U === Object(U) &&
+          Object.isExtensible(U) &&
+          Object.defineProperty(U, '__filemeta', {
+            enumerable: !0,
+            configurable: !0,
+            value: {
               name: 'tableViewsButtonTheme',
               filename: 'src/Table/table.theme.ts',
             },
           }),
-        U &&
-          U === Object(U) &&
-          Object.isExtensible(U) &&
-          Object.defineProperty(U, '__filemeta', {
+        Z &&
+          Z === Object(Z) &&
+          Object.isExtensible(Z) &&
+          Object.defineProperty(Z, '__filemeta', {
             enumerable: !0,
             configurable: !0,
             value: {
@@ -1457,49 +1477,38 @@
               filename: 'src/Table/table.theme.ts',
             },
           }),
-        'undefined' !== typeof Z &&
-          Z &&
-          Z === Object(Z) &&
-          Object.isExtensible(Z) &&
-          Object.defineProperty(Z, '__filemeta', {
-            enumerable: !0,
-            configurable: !0,
-            value: {
-              name: 'tableSelectedToolbarTheme',
-              filename: 'src/Table/table.theme.ts',
-            },
-          }),
-        q &&
+        'undefined' !== typeof q &&
+          q &&
           q === Object(q) &&
           Object.isExtensible(q) &&
           Object.defineProperty(q, '__filemeta', {
             enumerable: !0,
             configurable: !0,
             value: {
-              name: 'useCacheState',
-              filename: 'src/reusable/cacheState/useCacheState.ts',
+              name: 'tableSelectedToolbarTheme',
+              filename: 'src/Table/table.theme.ts',
             },
           })
       var K = function(e) {
         var t = e.children,
           n = e.className,
-          c = e.themed,
-          i = Object(a.a)(e, ['children', 'className', 'themed']),
-          r = Object(l.useMemo)(
+          o = e.themed,
+          r = Object(a.a)(e, ['children', 'className', 'themed']),
+          i = Object(c.useMemo)(
             function() {
               return 'TableCaption '.concat(n)
             },
             [n]
           ),
-          b = Object(l.useMemo)(
+          s = Object(c.useMemo)(
             function() {
-              return [W].concat(Object(d.a)(c))
+              return [X].concat(Object(d.a)(o))
             },
-            [W, c]
+            [X, o]
           )
-        return o.a.createElement(
-          m.b,
-          Object.assign({ as: 'caption', className: r, themed: b }, i),
+        return l.a.createElement(
+          p.b,
+          Object.assign({ as: 'caption', className: i, themed: s }, r),
           t
         )
       }
@@ -1530,27 +1539,27 @@
         Y = function(e) {
           var t = e.onClick,
             n = Object(a.a)(e, ['onClick']),
-            c = Object(l.useCallback)(
+            o = Object(c.useCallback)(
               function(e) {
                 e.preventDefault(), t && t(e)
               },
               [t]
             ),
-            i = Object(l.useMemo)(
+            r = Object(c.useMemo)(
               function() {
-                return j.a
+                return h.a
               },
-              [j.a]
+              [h.a]
             )
-          return o.a.createElement(
+          return l.a.createElement(
             Q.b,
             Object.assign(
               {
                 alt: 'delete',
                 appearance: 'active',
                 uid: 'delete',
-                onClick: c,
-                icon: i,
+                onClick: o,
+                icon: r,
                 css:
                   '\n        svg.Icon {\n          padding-right: 5px;\n        }\n      ',
               },
@@ -1583,7 +1592,7 @@
         })
       var $ = n('./src/Toolbar/Toolbar.tsx')
       function ee() {
-        var e = Object(_.a)(['\n  display: inline-block;\n'])
+        var e = Object(k.a)(['\n  display: inline-block;\n'])
         return (
           (ee = function() {
             return e
@@ -1591,39 +1600,39 @@
           e
         )
       }
-      var te = b.default.span(ee()),
-        ne = o.a.memo(function(e) {
+      var te = s.default.span(ee()),
+        ne = l.a.memo(function(e) {
           var t = e.className,
             n = void 0 === t ? '' : t,
-            c = e.selected,
-            i = e.handleDeleteSelected,
-            r = e.themed,
-            b = void 0 === r ? [] : r,
-            s = Object(a.a)(e, [
+            o = e.selected,
+            r = e.handleDeleteSelected,
+            i = e.themed,
+            s = void 0 === i ? [] : i,
+            u = Object(a.a)(e, [
               'className',
               'selected',
               'handleDeleteSelected',
               'themed',
             ]),
-            u = Object(l.useMemo)(
+            b = Object(c.useMemo)(
               function() {
                 return 'TableSelectToolbar '.concat(n)
               },
               [n]
             ),
-            m = Object(l.useMemo)(
+            m = Object(c.useMemo)(
               function() {
-                return [Z].concat(Object(d.a)(b))
+                return [q].concat(Object(d.a)(s))
               },
-              [Z, b]
+              [q, s]
             )
-          return o.a.createElement(
+          return l.a.createElement(
             $.a,
-            Object.assign({ className: u, themed: m }, s),
-            o.a.createElement(te, null, c, ' selected '),
-            o.a.createElement(Y, {
+            Object.assign({ className: b, themed: m }, u),
+            l.a.createElement(te, null, o, ' selected '),
+            l.a.createElement(Y, {
               alt: 'delete',
-              onClick: i,
+              onClick: r,
               title: 'Delete Collection',
             })
           )
@@ -1641,22 +1650,22 @@
           },
         })
       var ae = n('./src/MaterialIcons/Plus.tsx'),
-        le = function(e) {
+        ce = function(e) {
           var t = e.onClick,
             n = Object(a.a)(e, ['onClick']),
-            c = Object(l.useCallback)(
+            o = Object(c.useCallback)(
               function(e) {
                 e.preventDefault(), t && t(e)
               },
               [t]
             ),
-            i = Object(l.useMemo)(
+            r = Object(c.useMemo)(
               function() {
                 return ae.a
               },
               [ae.a]
             )
-          return o.a.createElement(
+          return l.a.createElement(
             Q.b,
             Object.assign(
               {
@@ -1664,8 +1673,8 @@
                 alt: 'add',
                 appearance: 'active',
                 uid: 'add',
-                onClick: c,
-                icon: i,
+                onClick: o,
+                icon: r,
                 css:
                   '\n        svg.Icon {\n          padding-right: 5px;\n        }\n      ',
               },
@@ -1674,10 +1683,10 @@
             'Add'
           )
         }
-      le &&
-        le === Object(le) &&
-        Object.isExtensible(le) &&
-        Object.defineProperty(le, '__filemeta', {
+      ce &&
+        ce === Object(ce) &&
+        Object.isExtensible(ce) &&
+        Object.defineProperty(ce, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: {
@@ -1685,10 +1694,10 @@
             filename: 'src/Table/ToolbarAddButton.tsx',
           },
         })
-      le &&
-        le === Object(le) &&
-        Object.isExtensible(le) &&
-        Object.defineProperty(le, '__filemeta', {
+      ce &&
+        ce === Object(ce) &&
+        Object.isExtensible(ce) &&
+        Object.defineProperty(ce, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: {
@@ -1696,53 +1705,53 @@
             filename: 'src/Table/ToolbarAddButton.tsx',
           },
         })
-      var oe = n('./node_modules/react-copy-to-clipboard/lib/index.js'),
-        ce = function(e) {
+      var le = n('./node_modules/react-copy-to-clipboard/lib/index.js'),
+        oe = function(e) {
           var t = e.data,
             n = e.onClick,
-            c = Object(a.a)(e, ['data', 'onClick']),
-            i = Object(l.useMemo)(
+            o = Object(a.a)(e, ['data', 'onClick']),
+            r = Object(c.useMemo)(
               function() {
                 return 'string' === typeof t ? t : JSON.stringify(t, null, 2)
               },
               [t]
             ),
-            r = Object(l.useCallback)(
+            i = Object(c.useCallback)(
               function(e) {
                 e.preventDefault(), n && n(e)
               },
               [n]
             ),
-            b = Object(l.useMemo)(
+            s = Object(c.useMemo)(
               function() {
-                return p.a
+                return O.a
               },
-              [p.a]
+              [O.a]
             )
-          return o.a.createElement(
-            oe.CopyToClipboard,
-            { text: i, copy: r },
-            o.a.createElement(
+          return l.a.createElement(
+            le.CopyToClipboard,
+            { text: r, copy: i },
+            l.a.createElement(
               Q.b,
               Object.assign(
                 {
                   alt: 'copy',
                   appearance: 'active',
                   uid: 'copy',
-                  icon: b,
+                  icon: s,
                   css:
                     '\n          svg.Icon {\n            padding-right: 5px;\n          }\n        ',
                 },
-                c
+                o
               ),
               'Copy'
             )
           )
         }
-      ce &&
-        ce === Object(ce) &&
-        Object.isExtensible(ce) &&
-        Object.defineProperty(ce, '__filemeta', {
+      oe &&
+        oe === Object(oe) &&
+        Object.isExtensible(oe) &&
+        Object.defineProperty(oe, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: {
@@ -1750,10 +1759,10 @@
             filename: 'src/Table/ToolbarCopyButton.tsx',
           },
         })
-      ce &&
-        ce === Object(ce) &&
-        Object.isExtensible(ce) &&
-        Object.defineProperty(ce, '__filemeta', {
+      oe &&
+        oe === Object(oe) &&
+        Object.isExtensible(oe) &&
+        Object.defineProperty(oe, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: {
@@ -1761,52 +1770,52 @@
             filename: 'src/Table/ToolbarCopyButton.tsx',
           },
         })
-      var ie = n('./node_modules/js-file-download/file-download.js'),
-        re = n.n(ie),
-        be = function(e) {
+      var re = n('./node_modules/js-file-download/file-download.js'),
+        ie = n.n(re),
+        se = function(e) {
           var t = e.onClick,
             n = e.data,
-            c = e.fileName,
-            i = Object(a.a)(e, ['onClick', 'data', 'fileName']),
-            r = Object(l.useMemo)(
+            o = e.fileName,
+            r = Object(a.a)(e, ['onClick', 'data', 'fileName']),
+            i = Object(c.useMemo)(
               function() {
                 return 'string' === typeof n ? n : JSON.stringify(n, null, 2)
               },
               [n]
             ),
-            b = Object(l.useCallback)(
+            s = Object(c.useCallback)(
               function(e) {
-                e.preventDefault(), r && re()(r, c), t && t(e)
+                e.preventDefault(), i && ie()(i, o), t && t(e)
               },
               [t]
             ),
-            s = Object(l.useMemo)(
+            u = Object(c.useMemo)(
               function() {
-                return O.a
+                return y.a
               },
-              [O.a]
+              [y.a]
             )
-          return o.a.createElement(
+          return l.a.createElement(
             Q.b,
             Object.assign(
               {
                 alt: 'download',
                 appearance: 'active',
                 uid: 'delete',
-                onClick: b,
-                icon: s,
+                onClick: s,
+                icon: u,
                 css:
                   '\n        svg.Icon {\n          padding-right: 5px;\n        }\n      ',
               },
-              i
+              r
             ),
             'Download'
           )
         }
-      be &&
-        be === Object(be) &&
-        Object.isExtensible(be) &&
-        Object.defineProperty(be, '__filemeta', {
+      se &&
+        se === Object(se) &&
+        Object.isExtensible(se) &&
+        Object.defineProperty(se, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: {
@@ -1814,10 +1823,10 @@
             filename: 'src/Table/ToolbarDownloadButton.tsx',
           },
         })
-      be &&
-        be === Object(be) &&
-        Object.isExtensible(be) &&
-        Object.defineProperty(be, '__filemeta', {
+      se &&
+        se === Object(se) &&
+        Object.isExtensible(se) &&
+        Object.defineProperty(se, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: {
@@ -1825,22 +1834,22 @@
             filename: 'src/Table/ToolbarDownloadButton.tsx',
           },
         })
-      var se = function(e) {
+      var ue = function(e) {
         var t = e.onClick,
           n = Object(a.a)(e, ['onClick']),
-          c = Object(l.useCallback)(
+          o = Object(c.useCallback)(
             function(e) {
               e.preventDefault(), t && t(e)
             },
             [t]
           ),
-          i = Object(l.useMemo)(
+          r = Object(c.useMemo)(
             function() {
-              return h.a
+              return x.a
             },
-            [h.a]
+            [x.a]
           )
-        return o.a.createElement(
+        return l.a.createElement(
           Q.b,
           Object.assign(
             {
@@ -1848,8 +1857,8 @@
               alt: 'edit',
               appearance: 'active',
               uid: 'edit',
-              onClick: c,
-              icon: i,
+              onClick: o,
+              icon: r,
               css:
                 '\n        svg.Icon {\n          padding-right: 5px;\n        }\n      ',
             },
@@ -1858,10 +1867,10 @@
           'Edit'
         )
       }
-      se &&
-        se === Object(se) &&
-        Object.isExtensible(se) &&
-        Object.defineProperty(se, '__filemeta', {
+      ue &&
+        ue === Object(ue) &&
+        Object.isExtensible(ue) &&
+        Object.defineProperty(ue, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: {
@@ -1869,10 +1878,10 @@
             filename: 'src/Table/ToolbarEditButton.tsx',
           },
         })
-      se &&
-        se === Object(se) &&
-        Object.isExtensible(se) &&
-        Object.defineProperty(se, '__filemeta', {
+      ue &&
+        ue === Object(ue) &&
+        Object.isExtensible(ue) &&
+        Object.defineProperty(ue, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: {
@@ -1880,31 +1889,31 @@
             filename: 'src/Table/ToolbarEditButton.tsx',
           },
         })
-      var ue = n('./src/MaterialIcons/PlayCircle.tsx'),
+      var be = n('./src/MaterialIcons/PlayCircle.tsx'),
         de = function(e) {
           var t = e.onClick,
             n = Object(a.a)(e, ['onClick']),
-            c = Object(l.useCallback)(
+            o = Object(c.useCallback)(
               function(e) {
                 e.preventDefault(), t && t(e)
               },
               [t]
             ),
-            i = Object(l.useMemo)(
+            r = Object(c.useMemo)(
               function() {
-                return ue.a
+                return be.a
               },
-              [ue.a]
+              [be.a]
             )
-          return o.a.createElement(
+          return l.a.createElement(
             Q.b,
             Object.assign(
               {
                 alt: 'execute',
                 appearance: 'active',
                 uid: 'execute',
-                onClick: c,
-                icon: i,
+                onClick: o,
+                icon: r,
                 css:
                   '\n        svg.Icon {\n          padding-right: 5px;\n        }\n      ',
               },
@@ -1941,65 +1950,65 @@
         je = function(e) {
           var t = e.className,
             n = e.currentView,
-            c = e.onClick,
-            i = e.themed,
-            r = Object(a.a)(e, [
+            o = e.onClick,
+            r = e.themed,
+            i = Object(a.a)(e, [
               'className',
               'currentView',
               'onClick',
               'themed',
             ]),
-            b = Object(l.useMemo)(
+            s = Object(c.useMemo)(
               function() {
                 return 'ToolbarViewsButton '.concat(t)
               },
               [t]
             ),
-            s = Object(l.useMemo)(
+            u = Object(c.useMemo)(
               function() {
-                return [X].concat(Object(d.a)(i))
+                return [U].concat(Object(d.a)(r))
               },
-              [X, i]
+              [U, r]
             ),
-            u = Object(l.useCallback)(
+            b = Object(c.useCallback)(
               function(e) {
                 e.preventDefault()
                 var t = e.currentTarget.dataset.uid
-                c && c(e, { id: t })
+                o && o(e, { id: t })
               },
-              [c]
+              [o]
             ),
-            m = Object(l.useCallback)(
+            m = Object(c.useCallback)(
               function(e) {
                 return n === e ? 'border-bottom: 1px solid #fff;' : ''
               },
               [n]
             ),
-            f = Object(l.useMemo)(
+            f = Object(c.useMemo)(
               function() {
                 return pe.a
               },
               [pe.a]
             ),
-            p = Object(l.useMemo)(
+            p = Object(c.useMemo)(
               function() {
                 return fe.a
               },
               [fe.a]
             )
-          return o.a.createElement(
-            k.Base,
-            Object.assign({ className: b, themed: s }, r),
-            o.a.createElement(
+          return l.a.createElement(
+            I.Base,
+            Object.assign({ className: s, themed: u }, i),
+            l.a.createElement(
               me.b,
               null,
-              o.a.createElement(
+              l.a.createElement(
                 Q.b,
                 {
                   alt: 'Tabular',
                   appearance: 'active',
                   icon: f,
-                  onClick: u,
+                  onClick: b,
                   styled: m('table'),
                   title: 'Table',
                   uid: 'table',
@@ -2008,14 +2017,14 @@
                 },
                 'Tabular'
               ),
-              o.a.createElement(
+              l.a.createElement(
                 Q.b,
                 {
                   Json: !0,
                   alt: 'json',
                   appearance: 'secondary',
                   icon: p,
-                  onClick: u,
+                  onClick: b,
                   styled: m('json'),
                   title: 'JSON',
                   uid: 'json',
@@ -2050,127 +2059,127 @@
             filename: 'src/Table/ToolbarViewsButton.tsx',
           },
         })
-      var he = o.a.memo(function(e) {
+      var Oe = l.a.memo(function(e) {
         var t = e.baseRoute,
           n = e.items,
           a = e.onDeleteSelected,
-          c = e.onSwitchView,
-          i = e.currentView,
-          r = e.data,
-          b = e.onAdd,
-          s = e.onCopy,
-          u = e.onDelete,
+          o = e.onSwitchView,
+          r = e.currentView,
+          i = e.data,
+          s = e.onAdd,
+          u = e.onCopy,
+          b = e.onDelete,
           d = e.onDownload,
           m = e.onEdit,
           f = e.onExecute,
           p = e.title,
           j = e.toolbar,
-          h = function(e) {
+          O = function(e) {
             switch (e) {
               case 'add':
-                return o.a.createElement(le, {
+                return l.a.createElement(ce, {
                   alt: 'add',
                   key: 'add',
-                  onClick: b,
+                  onClick: s,
                   href: '/'.concat(t, '/new'),
                 })
               case 'copy':
-                return o.a.createElement(ce, {
+                return l.a.createElement(oe, {
                   alt: 'copy',
                   key: 'copy',
-                  data: r,
-                  onClick: s,
+                  data: i,
+                  onClick: u,
                 })
               case 'edit':
-                return o.a.createElement(se, {
+                return l.a.createElement(ue, {
                   alt: 'edit',
                   key: 'edit',
                   onClick: m,
                   href: '/'.concat(t, '/edit'),
                 })
               case 'delete':
-                return o.a.createElement(Y, {
+                return l.a.createElement(Y, {
                   alt: 'delete',
                   key: 'delete',
-                  onClick: u,
+                  onClick: b,
                   title: 'Delete',
                 })
               case 'download':
-                return o.a.createElement(be, {
+                return l.a.createElement(se, {
                   alt: 'download',
                   key: 'download',
-                  data: r,
+                  data: i,
                   onClick: d,
                   fileName: p
                     ? 'guru_download_'.concat(p, '.json')
                     : 'guru_download.json',
                 })
               case 'execute':
-                return o.a.createElement(de, {
+                return l.a.createElement(de, {
                   alt: 'execute',
                   key: 'execute',
                   onClick: f,
                   title: 'Execute',
                 })
               case 'views':
-                return o.a.createElement(je, {
+                return l.a.createElement(je, {
                   key: 'views',
-                  onClick: c,
-                  currentView: i,
+                  onClick: o,
+                  currentView: r,
                 })
               default:
                 return null
             }
           },
-          O = Object(l.useMemo)(
+          h = Object(c.useMemo)(
             function() {
-              return o.a.createElement(
-                l.Fragment,
+              return l.a.createElement(
+                c.Fragment,
                 null,
                 j.map(function(e) {
                   return 'function' === typeof e
-                    ? e({ onSwitchView: c, currentView: i, onAdd: b })
-                    : h(e)
+                    ? e({ onSwitchView: o, currentView: r, onAdd: s })
+                    : O(e)
                 })
               )
             },
-            [h, i, b, c, j]
+            [O, r, s, o, j]
           ),
-          T = Object(l.useCallback)(
+          x = Object(c.useCallback)(
             function(e) {
               e.preventDefault(), a && a(e)
             },
             [a]
           ),
-          x = Object(l.useMemo)(
+          y = Object(c.useMemo)(
             function() {
-              return [U]
+              return [Z]
             },
-            [U]
+            [Z]
           )
         return n.length > 0
-          ? o.a.createElement(ne, {
+          ? l.a.createElement(ne, {
               selected: n.length,
-              handleDeleteSelected: T,
+              handleDeleteSelected: x,
             })
-          : o.a.createElement(
+          : l.a.createElement(
               $.a,
               {
                 className: 'TableToolbar',
                 baseRoute: t,
-                onSwitchView: c,
+                onSwitchView: o,
                 borderBottom: 'thin',
                 paddingBottom: 2,
-                themed: x,
+                themed: y,
               },
-              O
+              h
             )
       })
-      'undefined' !== typeof he &&
-        he &&
-        he === Object(he) &&
-        Object.isExtensible(he) &&
-        Object.defineProperty(he, '__filemeta', {
+      'undefined' !== typeof Oe &&
+        Oe &&
+        Oe === Object(Oe) &&
+        Object.isExtensible(Oe) &&
+        Object.defineProperty(Oe, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: {
@@ -2178,33 +2187,33 @@
             filename: 'src/Table/TableToolbar.tsx',
           },
         })
-      var Oe = o.a.memo(function(e) {
+      var he = l.a.memo(function(e) {
         var t = e.baseRoute,
           n = void 0 === t ? '' : t,
-          c = e.caption,
-          i = e.children,
-          r = e.className,
-          b = void 0 === r ? '' : r,
-          s = e.condensed,
-          p = e.height,
-          j = e.hook,
+          o = e.caption,
+          r = e.children,
+          i = e.className,
+          s = void 0 === i ? '' : i,
+          u = e.condensed,
+          m = e.height,
+          O = e.hook,
           h = e.hover,
-          O = e.initialValue,
-          T = e.name,
-          x = (e.numbered, e.onAdd),
-          y = e.onCopy,
-          v = e.onDelete,
+          x = e.initialValue,
+          y = e.name,
+          v = (e.numbered, e.onAdd),
+          T = e.onCopy,
+          _ = e.onDelete,
           g = e.onDeleteSelected,
           C = e.onDownload,
-          _ = e.onEdit,
-          E = e.onExecute,
-          k = e.onRowClick,
-          I = e.themed,
-          P = void 0 === I ? [] : I,
-          w = e.title,
-          S = e.toolbar,
-          D = void 0 === S ? [] : S,
-          H = Object(a.a)(e, [
+          E = e.onEdit,
+          k = e.onExecute,
+          I = e.onRowClick,
+          P = e.themed,
+          w = void 0 === P ? [] : P,
+          S = e.title,
+          B = e.toolbar,
+          H = void 0 === B ? [] : B,
+          D = Object(a.a)(e, [
             'baseRoute',
             'caption',
             'children',
@@ -2228,210 +2237,213 @@
             'title',
             'toolbar',
           ]),
-          B = Object(l.useMemo)(
+          M = Object(c.useMemo)(
             function() {
-              return 'TableContainer '.concat(b)
+              return 'TableContainer '.concat(s)
             },
-            [b]
+            [s]
           ),
-          R = Object(l.useMemo)(
+          A = Object(c.useMemo)(
             function() {
-              return [J].concat(Object(d.a)(P))
+              return [W].concat(Object(d.a)(w))
             },
-            [J, P]
+            [W, w]
           ),
-          A = j(),
-          M = A.loading,
-          N = A.selected,
-          V = A.dispatch,
-          L = A.itemsToArray,
-          z = A.items,
-          W = Object(l.useMemo)(
+          R = O(),
+          N = R.loading,
+          V = R.selected,
+          L = R.dispatch,
+          G = R.itemsToArray,
+          F = R.items,
+          X = Object(c.useMemo)(
             function() {
-              return z
+              return F
             },
-            [z]
+            [F]
           ),
-          X = Object(l.useMemo)(
+          U = Object(c.useMemo)(
             function() {
-              return O || L()
+              return x || G()
             },
-            [O, L]
+            [x, G]
           )
-        Object(l.useEffect)(
+        Object(c.useEffect)(
           function() {
-            Z({ type: 'SET_ITEM_LIST', itemList: X })
+            q({ type: 'SET_ITEM_LIST', itemList: U })
           },
-          [X]
+          [U]
         )
-        var U = Object(l.useCallback)(function(e, t) {
+        var Z = Object(c.useCallback)(function(e, t) {
             switch (t.type) {
               case 'SET_ITEM_LIST':
-                return Object(u.a)({}, e, { itemList: t.itemList })
+                return Object(b.a)({}, e, { itemList: t.itemList })
               case 'SET_VARIABLES':
-                return Object(u.a)({}, e, { variables: t.variables })
+                return Object(b.a)({}, e, { variables: t.variables })
               default:
                 return e
             }
           }, []),
-          Z = Object(l.useReducer)(U, { variables: {}, itemList: [] })[1],
-          Q = q(''.concat(T, '_Table'), 'table'),
+          q = Object(c.useReducer)(Z, { variables: {}, itemList: [] })[1],
+          Q = f(''.concat(y, '_Table'), 'table'),
           Y = Q.state,
           $ = Q.setItem,
-          ee = Object(l.useCallback)(
-            function(e) {
-              e.preventDefault(), x && x(e)
-            },
-            [x]
-          ),
-          te = Object(l.useCallback)(
+          ee = Object(c.useCallback)(
             function(e) {
               e.preventDefault(), v && v(e)
             },
             [v]
           ),
-          ae = Object(l.useCallback)(
+          te = Object(c.useCallback)(
+            function(e) {
+              e.preventDefault(), _ && _(e)
+            },
+            [_]
+          ),
+          ae = Object(c.useCallback)(
             function(e) {
               e.preventDefault(),
                 window.confirm(
-                  'Delete selected items?\n'.concat(N.join('\n'))
+                  'Delete selected items?\n'.concat(V.join('\n'))
                 ) &&
                   g &&
                   g(e)
             },
             [g]
           ),
-          le = Object(l.useCallback)(
+          ce = Object(c.useCallback)(
             function(e) {
-              e.preventDefault(), _ && _(e)
+              e.preventDefault(), E && E(e)
             },
-            [_]
+            [E]
           ),
-          oe = Object(l.useCallback)(
+          le = Object(c.useCallback)(
             function(e) {
               e.preventDefault(),
-                E().then(function(e) {
-                  e && Z({ type: 'SET_ITEM_LIST', itemList: e })
+                k().then(function(e) {
+                  e && q({ type: 'SET_ITEM_LIST', itemList: e })
                 })
             },
-            [Z, E]
+            [q, k]
           ),
-          ce = Object(l.useCallback)(
+          oe = Object(c.useCallback)(
             function(e, t) {
               var n = t.id
               e.preventDefault(), n !== Y && $(n)
             },
             [$]
           ),
-          ie = Object(l.useMemo)(
-            function() {
-              return N.length === X.length
-            },
-            [X, N]
-          ),
-          re = o.a.useCallback(
-            function(e) {
-              var t = Array.isArray(z)
-                ? z.reduce(function(e, t) {
-                    return [].concat(Object(d.a)(e), [t.id])
-                  }, [])
-                : Object.keys(z)
-              V({
-                type: 'SET_SELECTED',
-                selected: e.currentTarget.checked ? t : [],
-              })
-            },
-            [V, z]
-          )
-        return o.a.createElement(
-          l.Fragment,
+          re = f(''.concat(y, '_allSelected'), V.length === U.length),
+          ie = re.state,
+          se = re.setItem
+        Object(c.useEffect)(
+          function() {
+            se(V.length === U.length)
+          },
+          [U, V]
+        )
+        var ue = l.a.useCallback(
+          function(e) {
+            var t = Array.isArray(F)
+              ? F.reduce(function(e, t) {
+                  return [].concat(Object(d.a)(e), [t.id])
+                }, [])
+              : Object.keys(F)
+            L({
+              type: 'SET_SELECTED',
+              selected: e.currentTarget.checked ? t : [],
+            })
+          },
+          [L, F]
+        )
+        return l.a.createElement(
+          c.Fragment,
           null,
-          D.length > 0
-            ? o.a.createElement(he, {
+          H.length > 0
+            ? l.a.createElement(Oe, {
                 baseRoute: n,
                 borderBottom: 'thin',
                 currentView: Y,
-                data: X,
-                items: N,
+                data: U,
+                items: V,
                 onAdd: ee,
-                onCopy: y,
+                onCopy: T,
                 onDelete: te,
                 onDeleteSelected: ae,
                 onDownload: C,
-                onEdit: le,
-                onExecute: oe,
-                onSwitchView: ce,
+                onEdit: ce,
+                onExecute: le,
+                onSwitchView: oe,
                 paddingBottom: 2,
                 selectToolbar: ne,
-                title: w,
-                toolbar: D,
+                title: S,
+                toolbar: H,
               })
             : null,
           'table' === Y
-            ? o.a.createElement(
-                m.b,
-                Object.assign({ className: B, themed: [F], height: p }, H),
-                o.a.createElement(
-                  m.b,
+            ? l.a.createElement(
+                p.b,
+                Object.assign({ className: M, themed: [J], height: m }, D),
+                l.a.createElement(
+                  p.b,
                   {
                     as: 'table',
                     className: 'Table',
-                    themed: R,
-                    condensed: s,
+                    themed: A,
+                    condensed: u,
                     hover: h,
                   },
-                  c ? o.a.createElement(K, null, c) : null,
-                  o.a.createElement(
-                    G,
+                  o ? l.a.createElement(K, null, o) : null,
+                  l.a.createElement(
+                    z,
                     {
                       allSelected: ie,
                       baseRoute: n,
-                      dispatch: V,
+                      dispatch: L,
                       onAdd: ee,
                       onDeleteSelected: ae,
-                      onAllSelectedChange: re,
-                      itemsToArray: L,
-                      loading: M,
-                      selected: N,
-                      tableName: T,
-                      onRowClick: k,
-                      data: X,
+                      onAllSelectedChange: ue,
+                      itemsToArray: G,
+                      loading: N,
+                      selected: V,
+                      tableName: y,
+                      onRowClick: I,
+                      data: U,
                     },
-                    i
+                    r
                   )
                 )
               )
-            : o.a.createElement(
-                m.b,
-                Object.assign({ className: B, themed: [F], height: p }, H),
-                o.a.createElement(f, { items: W })
+            : l.a.createElement(
+                p.b,
+                Object.assign({ className: M, themed: [J], height: m }, D),
+                l.a.createElement(j, { items: X })
               )
         )
       })
-      'undefined' !== typeof Oe &&
-        Oe &&
-        Oe === Object(Oe) &&
-        Object.isExtensible(Oe) &&
-        Object.defineProperty(Oe, '__filemeta', {
+      'undefined' !== typeof he &&
+        he &&
+        he === Object(he) &&
+        Object.isExtensible(he) &&
+        Object.defineProperty(he, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: { name: 'Table', filename: 'src/Table/Table.tsx' },
         })
-      'undefined' !== typeof Oe &&
-        Oe &&
-        Oe === Object(Oe) &&
-        Object.isExtensible(Oe) &&
-        Object.defineProperty(Oe, '__filemeta', {
+      'undefined' !== typeof he &&
+        he &&
+        he === Object(he) &&
+        Object.isExtensible(he) &&
+        Object.defineProperty(he, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: { name: 'Table', filename: 'src/Table/Table.tsx' },
         })
-      var Te = n('./src/reusable/collectionHash/index.ts'),
-        xe = Object(d.a)(new Array(100))
-      function ye() {
+      var xe = n('./src/reusable/collectionHash/index.ts'),
+        ye = Object(d.a)(new Array(1))
+      function ve() {
         var e = {
             uid: 'id',
-            items: xe.map(function(e, t) {
+            items: ye.map(function(e, t) {
               return {
                 id: 'id_'.concat(t),
                 name: 'Project '.concat(t),
@@ -2442,64 +2454,64 @@
               }
             }),
           },
-          t = Object(Te.useCollectionHashReducer)(e),
-          n = Object(E.a)(t, 2),
+          t = Object(xe.useCollectionHashReducer)(e),
+          n = Object(m.a)(t, 2),
           a = n[0],
-          o = n[1]
-        return Object(l.useMemo)(
+          l = n[1]
+        return Object(c.useMemo)(
           function() {
-            return Object(u.a)({}, a, {
-              dispatch: o,
+            return Object(b.a)({}, a, {
+              dispatch: l,
               itemsToArray: function() {
-                return Object(Te.itemsToArray)(a.items)
+                return Object(xe.itemsToArray)(a.items)
               },
             })
           },
-          [a, o]
+          [a, l]
         )
       }
-      ye &&
-        ye === Object(ye) &&
-        Object.isExtensible(ye) &&
-        Object.defineProperty(ye, '__filemeta', {
+      ve &&
+        ve === Object(ve) &&
+        Object.isExtensible(ve) &&
+        Object.defineProperty(ve, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: { name: 'useTable', filename: 'src/Table/table.example.tsx' },
         })
-      var ve = n('./src/Checkbox/index.ts'),
-        ge = function(e) {
+      var Te = n('./src/Checkbox/index.ts'),
+        _e = function(e) {
           var t = e.className,
             n = void 0 === t ? '' : t,
-            l = Object(a.a)(e, ['className']),
-            c = 'TableRowSelect '.concat(n),
-            i = S(),
-            r = i.checked,
-            b = i.data.id,
-            s = i.onChange,
-            u = i.setChecked
-          return o.a.createElement(
+            c = Object(a.a)(e, ['className']),
+            o = 'TableRowSelect '.concat(n),
+            r = B(),
+            i = r.checked,
+            s = r.data.id,
+            u = r.onChange,
+            b = r.setChecked
+          return l.a.createElement(
             'td',
-            { className: c },
-            o.a.createElement(
-              ve.Checkbox,
+            { className: o },
+            l.a.createElement(
+              Te.Checkbox,
               Object.assign(
                 {
-                  checked: r,
+                  checked: i,
                   onChange: function(e) {
-                    u(e.currentTarget.checked), s && s(e)
+                    b(e.currentTarget.checked), u && u(e)
                   },
-                  name: b,
+                  name: s,
                 },
-                l
+                c
               )
             )
           )
         }
-      'undefined' !== typeof ge &&
-        ge &&
-        ge === Object(ge) &&
-        Object.isExtensible(ge) &&
-        Object.defineProperty(ge, '__filemeta', {
+      'undefined' !== typeof _e &&
+        _e &&
+        _e === Object(_e) &&
+        Object.isExtensible(_e) &&
+        Object.defineProperty(_e, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: {
@@ -2507,11 +2519,11 @@
             filename: 'src/Table/TableRowSelect.tsx',
           },
         })
-      'undefined' !== typeof ge &&
-        ge &&
-        ge === Object(ge) &&
-        Object.isExtensible(ge) &&
-        Object.defineProperty(ge, '__filemeta', {
+      'undefined' !== typeof _e &&
+        _e &&
+        _e === Object(_e) &&
+        Object.isExtensible(_e) &&
+        Object.defineProperty(_e, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: {
@@ -2519,33 +2531,33 @@
             filename: 'src/Table/TableRowSelect.tsx',
           },
         })
-      var Ce = o.a.memo(function(e) {
+      var ge = l.a.memo(function(e) {
         var t = e.className,
           n = void 0 === t ? '' : t,
-          c = Object(a.a)(e, ['className']),
-          i = 'AllSelectedHeading '.concat(n),
-          r = V(),
-          b = r.allSelected,
-          s = r.onAllSelectedChange,
-          u = Object(l.useCallback)(
+          o = Object(a.a)(e, ['className']),
+          r = 'AllSelectedHeading '.concat(n),
+          i = L(),
+          s = i.allSelected,
+          u = i.onAllSelectedChange,
+          b = Object(c.useCallback)(
             function(e) {
-              s && s(e)
+              u && u(e)
             },
-            [s]
+            [u]
           )
-        return o.a.createElement(
-          ve.Checkbox,
+        return l.a.createElement(
+          Te.Checkbox,
           Object.assign(
-            { className: i, checked: b, name: 'allSelected', onChange: u },
-            c
+            { className: r, checked: s, name: 'allSelected', onChange: b },
+            o
           )
         )
       })
-      'undefined' !== typeof Ce &&
-        Ce &&
-        Ce === Object(Ce) &&
-        Object.isExtensible(Ce) &&
-        Object.defineProperty(Ce, '__filemeta', {
+      'undefined' !== typeof ge &&
+        ge &&
+        ge === Object(ge) &&
+        Object.isExtensible(ge) &&
+        Object.defineProperty(ge, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: {
@@ -2553,53 +2565,53 @@
             filename: 'src/Table/AllSelectedHeading.tsx',
           },
         })
-      function _e(e) {
+      function Ce(e) {
         var t = e.children,
           n = e.prop,
-          c = Object(a.a)(e, ['children', 'prop']),
-          i = S(),
-          r = i.data,
-          b = i.index,
-          s = Object(l.useMemo)(
+          o = Object(a.a)(e, ['children', 'prop']),
+          r = B(),
+          i = r.data,
+          s = r.index,
+          u = Object(c.useMemo)(
             function() {
               return 'function' === typeof t
-                ? t(Object(u.a)({ data: r, prop: n }, c, { index: b }))
+                ? t(Object(b.a)({ data: i, prop: n }, o, { index: s }))
                 : t
             },
-            [t, r, b, n, c]
+            [t, i, s, n, o]
           )
-        return o.a.createElement(
-          o.a.Fragment,
+        return l.a.createElement(
+          l.a.Fragment,
           null,
-          s ||
-            o.a.createElement(
-              k.Base,
-              Object.assign({ as: 'td' }, c),
-              '__index' === n ? b : r[n]
+          u ||
+            l.a.createElement(
+              I.Base,
+              Object.assign({ as: 'td' }, o),
+              '__index' === n ? s : i[n]
             )
         )
       }
       function Ee(e) {
         var t = e.children,
           n = Object(a.a)(e, ['children']),
-          c = S(),
-          i = c.data,
-          r = c.index,
-          b = o.a.cloneElement(t, Object(u.a)({ data: i }, n, { index: r }))
-        return Object(l.useMemo)(
+          o = B(),
+          r = o.data,
+          i = o.index,
+          s = l.a.cloneElement(t, Object(b.a)({ data: r }, n, { index: i }))
+        return Object(c.useMemo)(
           function() {
             return 'function' === typeof t
-              ? t(Object(u.a)({ data: i }, n, { index: r }))
-              : b
+              ? t(Object(b.a)({ data: r }, n, { index: i }))
+              : s
           },
-          [t, b, i, r, n]
+          [t, s, r, i, n]
         )
       }
-      'undefined' !== typeof Ce &&
-        Ce &&
-        Ce === Object(Ce) &&
-        Object.isExtensible(Ce) &&
-        Object.defineProperty(Ce, '__filemeta', {
+      'undefined' !== typeof ge &&
+        ge &&
+        ge === Object(ge) &&
+        Object.isExtensible(ge) &&
+        Object.defineProperty(ge, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: {
@@ -2607,10 +2619,10 @@
             filename: 'src/Table/AllSelectedHeading.tsx',
           },
         }),
-        _e &&
-          _e === Object(_e) &&
-          Object.isExtensible(_e) &&
-          Object.defineProperty(_e, '__filemeta', {
+        Ce &&
+          Ce === Object(Ce) &&
+          Object.isExtensible(Ce) &&
+          Object.defineProperty(Ce, '__filemeta', {
             enumerable: !0,
             configurable: !0,
             value: {
@@ -2637,512 +2649,69 @@
       function Pe(e) {
         var t = e.components,
           n = Object(a.a)(e, ['components'])
-        return Object(c.b)(
+        return Object(o.b)(
           Ie,
           Object.assign({}, ke, n, { components: t, mdxType: 'MDXLayout' }),
-          Object(c.b)('h1', { id: 'table' }, 'Table'),
-          Object(c.b)('h2', { id: 'properties' }, 'Properties'),
-          Object(c.b)(i.d, { of: Oe, mdxType: 'Props' }),
-          Object(c.b)('h2', { id: 'default' }, 'Default'),
-          Object(c.b)(
-            i.c,
-            {
-              __position: 1,
-              __code:
-                '<ThemeProvider>\n  <Table\n    height="250px"\n    name="TableDeafult"\n    caption="Table caption"\n    baseRoute="/table/#"\n    hook={useTable}\n  >\n    <TableColumn heading="#" uid="index" prop="__index" />\n\n    <TableColumn heading="ID" uid="id" prop="id" />\n\n    <TableColumn heading="Name" uid="name" prop="name" />\n\n    <TableColumn heading="Endpoint" uid="endpoint">\n      {({ data }) => (\n        <td>\n          <a href="/table/#" onClick={e => e.preventDefault()}>\n            {data.endpoint}\n          </a>\n        </td>\n      )}\n    </TableColumn>\n  </Table>\n</ThemeProvider>',
-              __scope: {
-                props: this ? this.props : n,
-                Playground: i.c,
-                Props: i.d,
-                Flex: r.a,
-                styled: b.default,
-                ThemeProvider: s.a,
-                Table: Oe,
-                useTable: ye,
-                TableRowSelect: ge,
-                AllSelectedHeading: Ce,
-                TableColumn: _e,
-                TableRowDetail: Ee,
-              },
-              mdxType: 'Playground',
-            },
-            Object(c.b)(
-              s.a,
-              { mdxType: 'ThemeProvider' },
-              Object(c.b)(
-                Oe,
-                {
-                  height: '250px',
-                  name: 'TableDeafult',
-                  caption: 'Table caption',
-                  baseRoute: '/table/#',
-                  hook: ye,
-                  mdxType: 'Table',
-                },
-                Object(c.b)(_e, {
-                  heading: '#',
-                  uid: 'index',
-                  prop: '__index',
-                  mdxType: 'TableColumn',
-                }),
-                Object(c.b)(_e, {
-                  heading: 'ID',
-                  uid: 'id',
-                  prop: 'id',
-                  mdxType: 'TableColumn',
-                }),
-                Object(c.b)(_e, {
-                  heading: 'Name',
-                  uid: 'name',
-                  prop: 'name',
-                  mdxType: 'TableColumn',
-                }),
-                Object(c.b)(
-                  _e,
-                  {
-                    heading: 'Endpoint',
-                    uid: 'endpoint',
-                    mdxType: 'TableColumn',
-                  },
-                  function(e) {
-                    var t = e.data
-                    return Object(c.b)(
-                      'td',
-                      null,
-                      Object(c.b)(
-                        'a',
-                        {
-                          href: '/table/#',
-                          onClick: function(e) {
-                            return e.preventDefault()
-                          },
-                        },
-                        t.endpoint
-                      )
-                    )
-                  }
-                )
-              )
-            )
-          ),
-          Object(c.b)('h2', { id: 'selectable' }, 'Selectable'),
-          Object(c.b)(
-            i.c,
-            {
-              __position: 2,
-              __code:
-                '<ThemeProvider>\n  <Table height="250px" name="TableSelect" selectable hook={useTable}>\n    <TableColumn uid="select" heading={<AllSelectedHeading />}>\n      <TableRowSelect />\n    </TableColumn>\n    <TableColumn heading="ID" uid="id" prop="id" />\n\n    <TableColumn heading="Name" uid="name" prop="name" />\n\n    <TableColumn heading="Endpoint" uid="endpoint" prop="endpoint" />\n  </Table>\n</ThemeProvider>',
-              __scope: {
-                props: this ? this.props : n,
-                Playground: i.c,
-                Props: i.d,
-                Flex: r.a,
-                styled: b.default,
-                ThemeProvider: s.a,
-                Table: Oe,
-                useTable: ye,
-                TableRowSelect: ge,
-                AllSelectedHeading: Ce,
-                TableColumn: _e,
-                TableRowDetail: Ee,
-              },
-              mdxType: 'Playground',
-            },
-            Object(c.b)(
-              s.a,
-              { mdxType: 'ThemeProvider' },
-              Object(c.b)(
-                Oe,
-                {
-                  height: '250px',
-                  name: 'TableSelect',
-                  selectable: !0,
-                  hook: ye,
-                  mdxType: 'Table',
-                },
-                Object(c.b)(
-                  _e,
-                  {
-                    uid: 'select',
-                    heading: Object(c.b)(Ce, { mdxType: 'AllSelectedHeading' }),
-                    mdxType: 'TableColumn',
-                  },
-                  Object(c.b)(ge, { mdxType: 'TableRowSelect' })
-                ),
-                Object(c.b)(_e, {
-                  heading: 'ID',
-                  uid: 'id',
-                  prop: 'id',
-                  mdxType: 'TableColumn',
-                }),
-                Object(c.b)(_e, {
-                  heading: 'Name',
-                  uid: 'name',
-                  prop: 'name',
-                  mdxType: 'TableColumn',
-                }),
-                Object(c.b)(_e, {
-                  heading: 'Endpoint',
-                  uid: 'endpoint',
-                  prop: 'endpoint',
-                  mdxType: 'TableColumn',
-                })
-              )
-            )
-          ),
-          Object(c.b)('h2', { id: 'hover' }, 'Hover'),
-          Object(c.b)(
-            i.c,
-            {
-              __position: 3,
-              __code:
-                '<ThemeProvider>\n  <Table\n    height="250px"\n    name="TableHover"\n    hover\n    headings={[\'ID\', \'Name\', \'Endpoint\']}\n    hook={useTable}\n  >\n    <TableColumn heading="ID" uid="id" prop="id" />\n    <TableColumn heading="Name" uid="name" prop="name" />\n\n    <TableColumn heading="Endpoint" uid="endpoint" prop="endpoint" />\n  </Table>\n</ThemeProvider>',
-              __scope: {
-                props: this ? this.props : n,
-                Playground: i.c,
-                Props: i.d,
-                Flex: r.a,
-                styled: b.default,
-                ThemeProvider: s.a,
-                Table: Oe,
-                useTable: ye,
-                TableRowSelect: ge,
-                AllSelectedHeading: Ce,
-                TableColumn: _e,
-                TableRowDetail: Ee,
-              },
-              mdxType: 'Playground',
-            },
-            Object(c.b)(
-              s.a,
-              { mdxType: 'ThemeProvider' },
-              Object(c.b)(
-                Oe,
-                {
-                  height: '250px',
-                  name: 'TableHover',
-                  hover: !0,
-                  headings: ['ID', 'Name', 'Endpoint'],
-                  hook: ye,
-                  mdxType: 'Table',
-                },
-                Object(c.b)(_e, {
-                  heading: 'ID',
-                  uid: 'id',
-                  prop: 'id',
-                  mdxType: 'TableColumn',
-                }),
-                Object(c.b)(_e, {
-                  heading: 'Name',
-                  uid: 'name',
-                  prop: 'name',
-                  mdxType: 'TableColumn',
-                }),
-                Object(c.b)(_e, {
-                  heading: 'Endpoint',
-                  uid: 'endpoint',
-                  prop: 'endpoint',
-                  mdxType: 'TableColumn',
-                })
-              )
-            )
-          ),
-          Object(c.b)('h2', { id: 'condensed' }, 'Condensed'),
-          Object(c.b)(
-            i.c,
-            {
-              __position: 4,
-              __code:
-                '<ThemeProvider>\n  <Table\n    height="250px"\n    name="TableCondensed"\n    condensed\n    headings={[\'ID\', \'Name\', \'Endpoint\']}\n    hook={useTable}\n  >\n    <TableColumn heading="ID" uid="id" prop="id" />\n    <TableColumn heading="Name" uid="name" prop="name" />\n\n    <TableColumn heading="Endpoint" uid="endpoint" prop="endpoint" />\n  </Table>\n</ThemeProvider>',
-              __scope: {
-                props: this ? this.props : n,
-                Playground: i.c,
-                Props: i.d,
-                Flex: r.a,
-                styled: b.default,
-                ThemeProvider: s.a,
-                Table: Oe,
-                useTable: ye,
-                TableRowSelect: ge,
-                AllSelectedHeading: Ce,
-                TableColumn: _e,
-                TableRowDetail: Ee,
-              },
-              mdxType: 'Playground',
-            },
-            Object(c.b)(
-              s.a,
-              { mdxType: 'ThemeProvider' },
-              Object(c.b)(
-                Oe,
-                {
-                  height: '250px',
-                  name: 'TableCondensed',
-                  condensed: !0,
-                  headings: ['ID', 'Name', 'Endpoint'],
-                  hook: ye,
-                  mdxType: 'Table',
-                },
-                Object(c.b)(_e, {
-                  heading: 'ID',
-                  uid: 'id',
-                  prop: 'id',
-                  mdxType: 'TableColumn',
-                }),
-                Object(c.b)(_e, {
-                  heading: 'Name',
-                  uid: 'name',
-                  prop: 'name',
-                  mdxType: 'TableColumn',
-                }),
-                Object(c.b)(_e, {
-                  heading: 'Endpoint',
-                  uid: 'endpoint',
-                  prop: 'endpoint',
-                  mdxType: 'TableColumn',
-                })
-              )
-            )
-          ),
-          Object(c.b)('h2', { id: 'toolbar' }, 'Toolbar'),
-          Object(c.b)(
-            i.c,
-            {
-              __position: 5,
-              __code:
-                '<ThemeProvider>\n  <Table\n    height="250px"\n    baseRoute="/table/#"\n    name="TableToolbar"\n    caption="Table caption"\n    hook={useTable}\n    toolbar={[\'add\', \'copy\', \'download\', \'views\']}\n  >\n    <TableColumn uid="select" heading={<AllSelectedHeading />}>\n      <TableRowSelect />\n    </TableColumn>\n\n    <TableColumn heading="ID" uid="id" prop="id" />\n\n    <TableColumn heading="Name" uid="name" prop="name" />\n\n    <TableColumn heading="Endpoint" uid="endpoint" prop="endpoint" />\n  </Table>\n</ThemeProvider>',
-              __scope: {
-                props: this ? this.props : n,
-                Playground: i.c,
-                Props: i.d,
-                Flex: r.a,
-                styled: b.default,
-                ThemeProvider: s.a,
-                Table: Oe,
-                useTable: ye,
-                TableRowSelect: ge,
-                AllSelectedHeading: Ce,
-                TableColumn: _e,
-                TableRowDetail: Ee,
-              },
-              mdxType: 'Playground',
-            },
-            Object(c.b)(
-              s.a,
-              { mdxType: 'ThemeProvider' },
-              Object(c.b)(
-                Oe,
-                {
-                  height: '250px',
-                  baseRoute: '/table/#',
-                  name: 'TableToolbar',
-                  caption: 'Table caption',
-                  hook: ye,
-                  toolbar: ['add', 'copy', 'download', 'views'],
-                  mdxType: 'Table',
-                },
-                Object(c.b)(
-                  _e,
-                  {
-                    uid: 'select',
-                    heading: Object(c.b)(Ce, { mdxType: 'AllSelectedHeading' }),
-                    mdxType: 'TableColumn',
-                  },
-                  Object(c.b)(ge, { mdxType: 'TableRowSelect' })
-                ),
-                Object(c.b)(_e, {
-                  heading: 'ID',
-                  uid: 'id',
-                  prop: 'id',
-                  mdxType: 'TableColumn',
-                }),
-                Object(c.b)(_e, {
-                  heading: 'Name',
-                  uid: 'name',
-                  prop: 'name',
-                  mdxType: 'TableColumn',
-                }),
-                Object(c.b)(_e, {
-                  heading: 'Endpoint',
-                  uid: 'endpoint',
-                  prop: 'endpoint',
-                  mdxType: 'TableColumn',
-                })
-              )
-            )
-          ),
-          Object(c.b)('h2', { id: 'row-detail' }, 'Row Detail'),
-          Object(c.b)(
-            i.c,
-            {
-              __position: 6,
-              __code:
-                '<ThemeProvider>\n  <Table\n    height="250px"\n    name="TableDeafult"\n    caption="Table caption"\n    baseRoute="/table/#"\n    hook={useTable}\n  >\n    <TableColumn heading="#" uid="index" prop="__index" />\n\n    <TableColumn heading="ID" uid="id" prop="id" />\n\n    <TableColumn heading="Name" uid="name" prop="name" />\n\n    <TableColumn heading="Endpoint" uid="endpoint">\n      {({ data }) => (\n        <td>\n          <a href="/table/#" onClick={e => e.preventDefault()}>\n            {data.endpoint}\n          </a>\n        </td>\n      )}\n    </TableColumn>\n\n    <TableRowDetail uid="detail">\n      <table>\n        <thead>\n          <tr>\n            <th>IP</th>\n            <th>Repository</th>\n            <th>Port</th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr>\n            <td>0.0.0.1</td>\n            <td>repo1</td>\n            <td>8081</td>\n          </tr>\n        </tbody>\n      </table>\n    </TableRowDetail>\n  </Table>\n</ThemeProvider>',
-              __scope: {
-                props: this ? this.props : n,
-                Playground: i.c,
-                Props: i.d,
-                Flex: r.a,
-                styled: b.default,
-                ThemeProvider: s.a,
-                Table: Oe,
-                useTable: ye,
-                TableRowSelect: ge,
-                AllSelectedHeading: Ce,
-                TableColumn: _e,
-                TableRowDetail: Ee,
-              },
-              mdxType: 'Playground',
-            },
-            Object(c.b)(
-              s.a,
-              { mdxType: 'ThemeProvider' },
-              Object(c.b)(
-                Oe,
-                {
-                  height: '250px',
-                  name: 'TableDeafult',
-                  caption: 'Table caption',
-                  baseRoute: '/table/#',
-                  hook: ye,
-                  mdxType: 'Table',
-                },
-                Object(c.b)(_e, {
-                  heading: '#',
-                  uid: 'index',
-                  prop: '__index',
-                  mdxType: 'TableColumn',
-                }),
-                Object(c.b)(_e, {
-                  heading: 'ID',
-                  uid: 'id',
-                  prop: 'id',
-                  mdxType: 'TableColumn',
-                }),
-                Object(c.b)(_e, {
-                  heading: 'Name',
-                  uid: 'name',
-                  prop: 'name',
-                  mdxType: 'TableColumn',
-                }),
-                Object(c.b)(
-                  _e,
-                  {
-                    heading: 'Endpoint',
-                    uid: 'endpoint',
-                    mdxType: 'TableColumn',
-                  },
-                  function(e) {
-                    var t = e.data
-                    return Object(c.b)(
-                      'td',
-                      null,
-                      Object(c.b)(
-                        'a',
-                        {
-                          href: '/table/#',
-                          onClick: function(e) {
-                            return e.preventDefault()
-                          },
-                        },
-                        t.endpoint
-                      )
-                    )
-                  }
-                ),
-                Object(c.b)(
-                  Ee,
-                  { uid: 'detail', mdxType: 'TableRowDetail' },
-                  Object(c.b)(
-                    'table',
-                    null,
-                    Object(c.b)(
-                      'thead',
-                      null,
-                      Object(c.b)(
-                        'tr',
-                        null,
-                        Object(c.b)('th', null, 'IP'),
-                        Object(c.b)('th', null, 'Repository'),
-                        Object(c.b)('th', null, 'Port')
-                      )
-                    ),
-                    Object(c.b)(
-                      'tbody',
-                      null,
-                      Object(c.b)(
-                        'tr',
-                        null,
-                        Object(c.b)('td', null, '0.0.0.1'),
-                        Object(c.b)('td', null, 'repo1'),
-                        Object(c.b)('td', null, '8081')
-                      )
-                    )
-                  )
-                )
-              )
-            )
-          ),
-          Object(c.b)(
+          Object(o.b)(
             'h3',
             { id: 'render-props-detail' },
             'Render Props Detail'
           ),
-          Object(c.b)(
-            i.c,
+          Object(o.b)(
+            r.c,
             {
-              __position: 7,
+              __position: 0,
               __code:
-                '<ThemeProvider>\n  <Table\n    height="250px"\n    name="TableDeafult"\n    caption="Table caption"\n    baseRoute="/table/#"\n    hook={useTable}\n  >\n    <TableColumn heading="#" uid="index" prop="__index" />\n\n    <TableColumn heading="ID" uid="id" prop="id" />\n\n    <TableColumn heading="Name" uid="name" prop="name" />\n\n    <TableColumn heading="Endpoint" uid="endpoint">\n      {({ data }) => (\n        <td>\n          <a href="/table/#" onClick={e => e.preventDefault()}>\n            {data.endpoint}\n          </a>\n        </td>\n      )}\n    </TableColumn>\n\n    <TableRowDetail uid="detail">\n      {({ data }) => (\n        <table>\n          <thead>\n            <tr>\n              <th>IP</th>\n              <th>Repository</th>\n              <th>Port</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr>\n              <td>{data.ip}</td>\n              <td>{data.repo}</td>\n              <td>{data.port}</td>\n            </tr>\n          </tbody>\n        </table>\n      )}\n    </TableRowDetail>\n  </Table>\n</ThemeProvider>',
+                '<ThemeProvider>\n  <Table\n    height="250px"\n    name="TableRowDetailRenderProps"\n    caption="Table caption"\n    baseRoute="/table/#"\n    hook={useTable}\n  >\n    <TableColumn heading="#" uid="index" prop="__index" />\n\n    <TableColumn heading="ID" uid="id" prop="id" />\n\n    <TableColumn heading="Name" uid="name" prop="name" />\n\n    <TableColumn heading="Endpoint" uid="endpoint">\n      {({ data }) => (\n        <td>\n          <a href="/table/#" onClick={e => e.preventDefault()}>\n            {data.endpoint}\n          </a>\n        </td>\n      )}\n    </TableColumn>\n\n    <TableRowDetail uid="detail">\n      {({ data }) => (\n        <table>\n          <thead>\n            <tr>\n              <th>IP</th>\n              <th>Repository</th>\n              <th>Port</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr>\n              <td>{data.ip}</td>\n              <td>{data.repo}</td>\n              <td>{data.port}</td>\n            </tr>\n          </tbody>\n        </table>\n      )}\n    </TableRowDetail>\n  </Table>\n</ThemeProvider>',
               __scope: {
                 props: this ? this.props : n,
-                Playground: i.c,
-                Props: i.d,
-                Flex: r.a,
-                styled: b.default,
-                ThemeProvider: s.a,
-                Table: Oe,
-                useTable: ye,
-                TableRowSelect: ge,
-                AllSelectedHeading: Ce,
-                TableColumn: _e,
+                Playground: r.c,
+                Props: r.d,
+                Flex: i.a,
+                styled: s.default,
+                ThemeProvider: u.a,
+                Table: he,
+                useTable: ve,
+                TableRowSelect: _e,
+                AllSelectedHeading: ge,
+                TableColumn: Ce,
                 TableRowDetail: Ee,
               },
               mdxType: 'Playground',
             },
-            Object(c.b)(
-              s.a,
+            Object(o.b)(
+              u.a,
               { mdxType: 'ThemeProvider' },
-              Object(c.b)(
-                Oe,
+              Object(o.b)(
+                he,
                 {
                   height: '250px',
-                  name: 'TableDeafult',
+                  name: 'TableRowDetailRenderProps',
                   caption: 'Table caption',
                   baseRoute: '/table/#',
-                  hook: ye,
+                  hook: ve,
                   mdxType: 'Table',
                 },
-                Object(c.b)(_e, {
+                Object(o.b)(Ce, {
                   heading: '#',
                   uid: 'index',
                   prop: '__index',
                   mdxType: 'TableColumn',
                 }),
-                Object(c.b)(_e, {
+                Object(o.b)(Ce, {
                   heading: 'ID',
                   uid: 'id',
                   prop: 'id',
                   mdxType: 'TableColumn',
                 }),
-                Object(c.b)(_e, {
+                Object(o.b)(Ce, {
                   heading: 'Name',
                   uid: 'name',
                   prop: 'name',
                   mdxType: 'TableColumn',
                 }),
-                Object(c.b)(
-                  _e,
+                Object(o.b)(
+                  Ce,
                   {
                     heading: 'Endpoint',
                     uid: 'endpoint',
@@ -3150,10 +2719,10 @@
                   },
                   function(e) {
                     var t = e.data
-                    return Object(c.b)(
+                    return Object(o.b)(
                       'td',
                       null,
-                      Object(c.b)(
+                      Object(o.b)(
                         'a',
                         {
                           href: '/table/#',
@@ -3166,34 +2735,34 @@
                     )
                   }
                 ),
-                Object(c.b)(
+                Object(o.b)(
                   Ee,
                   { uid: 'detail', mdxType: 'TableRowDetail' },
                   function(e) {
                     var t = e.data
-                    return Object(c.b)(
+                    return Object(o.b)(
                       'table',
                       null,
-                      Object(c.b)(
+                      Object(o.b)(
                         'thead',
                         null,
-                        Object(c.b)(
+                        Object(o.b)(
                           'tr',
                           null,
-                          Object(c.b)('th', null, 'IP'),
-                          Object(c.b)('th', null, 'Repository'),
-                          Object(c.b)('th', null, 'Port')
+                          Object(o.b)('th', null, 'IP'),
+                          Object(o.b)('th', null, 'Repository'),
+                          Object(o.b)('th', null, 'Port')
                         )
                       ),
-                      Object(c.b)(
+                      Object(o.b)(
                         'tbody',
                         null,
-                        Object(c.b)(
+                        Object(o.b)(
                           'tr',
                           null,
-                          Object(c.b)('td', null, t.ip),
-                          Object(c.b)('td', null, t.repo),
-                          Object(c.b)('td', null, t.port)
+                          Object(o.b)('td', null, t.ip),
+                          Object(o.b)('td', null, t.repo),
+                          Object(o.b)('td', null, t.port)
                         )
                       )
                     )
@@ -3219,76 +2788,76 @@
       var a = n(
           './node_modules/docz/node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray.js'
         ),
-        l = n('./node_modules/react/index.js')
-      function o(e) {
+        c = n('./node_modules/react/index.js')
+      function l(e) {
         var t = e(),
           n = t.items,
-          o = t.itemsToArray,
-          c = Object(l.useState)([]),
-          i = Object(a.a)(c, 2),
-          r = i[0],
-          b = i[1]
+          l = t.itemsToArray,
+          o = Object(c.useState)([]),
+          r = Object(a.a)(o, 2),
+          i = r[0],
+          s = r[1]
         return (
-          Object(l.useEffect)(
+          Object(c.useEffect)(
             function() {
-              b(o(n))
+              s(l(n))
             },
             [n]
           ),
-          Object(l.useMemo)(
+          Object(c.useMemo)(
             function() {
-              return r
+              return i
             },
-            [r]
+            [i]
           )
         )
       }
-      function c(e, t) {
-        var n = Object(l.useState)(t),
-          o = Object(a.a)(n, 2),
-          c = o[0],
-          i = o[1],
-          r = e(),
-          b = r.active,
-          s = r.items
+      function o(e, t) {
+        var n = Object(c.useState)(t),
+          l = Object(a.a)(n, 2),
+          o = l[0],
+          r = l[1],
+          i = e(),
+          s = i.active,
+          u = i.items
         return (
-          Object(l.useEffect)(
+          Object(c.useEffect)(
             function() {
-              s && s[b] && i(s[b])
+              u && u[s] && r(u[s])
             },
-            [b, s]
+            [s, u]
           ),
-          Object(l.useMemo)(
+          Object(c.useMemo)(
             function() {
-              return c
+              return o
             },
-            [c]
+            [o]
           )
         )
       }
-      function i(e) {
+      function r(e) {
         var t = e(),
           n = t.active,
           a = t.dispatch
-        Object(l.useEffect)(function() {
+        Object(c.useEffect)(function() {
           '' !== n && a({ type: 'SET_ACTIVE', active: '' })
         }, [])
       }
-      function r(e, t) {
+      function i(e, t) {
         var n = e(),
           a = n.active,
-          o = n.dispatch
-        Object(l.useEffect)(
+          l = n.dispatch
+        Object(c.useEffect)(
           function() {
-            a !== t && o({ type: 'SET_ACTIVE', active: t })
+            a !== t && l({ type: 'SET_ACTIVE', active: t })
           },
           [a, t]
         )
       }
-      o &&
-        o === Object(o) &&
-        Object.isExtensible(o) &&
-        Object.defineProperty(o, '__filemeta', {
+      l &&
+        l === Object(l) &&
+        Object.isExtensible(l) &&
+        Object.defineProperty(l, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: {
@@ -3296,10 +2865,10 @@
             filename: 'src/reusable/collectionHash/collectionHash.hooks.ts',
           },
         }),
-        c &&
-          c === Object(c) &&
-          Object.isExtensible(c) &&
-          Object.defineProperty(c, '__filemeta', {
+        o &&
+          o === Object(o) &&
+          Object.isExtensible(o) &&
+          Object.defineProperty(o, '__filemeta', {
             enumerable: !0,
             configurable: !0,
             value: {
@@ -3307,10 +2876,10 @@
               filename: 'src/reusable/collectionHash/collectionHash.hooks.ts',
             },
           }),
-        i &&
-          i === Object(i) &&
-          Object.isExtensible(i) &&
-          Object.defineProperty(i, '__filemeta', {
+        r &&
+          r === Object(r) &&
+          Object.isExtensible(r) &&
+          Object.defineProperty(r, '__filemeta', {
             enumerable: !0,
             configurable: !0,
             value: {
@@ -3318,10 +2887,10 @@
               filename: 'src/reusable/collectionHash/collectionHash.hooks.ts',
             },
           }),
-        r &&
-          r === Object(r) &&
-          Object.isExtensible(r) &&
-          Object.defineProperty(r, '__filemeta', {
+        i &&
+          i === Object(i) &&
+          Object.isExtensible(i) &&
+          Object.defineProperty(i, '__filemeta', {
             enumerable: !0,
             configurable: !0,
             value: {
@@ -3477,32 +3046,32 @@
     ) {
       'use strict'
       n.d(t, 'a', function() {
-        return s
+        return u
       }),
         n.d(t, 'b', function() {
-          return u
+          return b
         })
       var a = n(
           './node_modules/docz/node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/toConsumableArray.js'
         ),
-        l = n(
+        c = n(
           './node_modules/docz/node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/defineProperty.js'
         ),
-        o = n(
+        l = n(
           './node_modules/docz/node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectSpread.js'
         ),
-        c = n('./node_modules/react/index.js'),
-        i = n('./src/reusable/collectionHash/collectionHashConstants.ts'),
-        r = function(e) {
-          return Object(o.a)({}, i.a, e)
+        o = n('./node_modules/react/index.js'),
+        r = n('./src/reusable/collectionHash/collectionHashConstants.ts'),
+        i = function(e) {
+          return Object(l.a)({}, r.a, e)
         },
-        b = function(e) {
-          return r(e)
+        s = function(e) {
+          return i(e)
         }
-      b &&
-        b === Object(b) &&
-        Object.isExtensible(b) &&
-        Object.defineProperty(b, '__filemeta', {
+      s &&
+        s === Object(s) &&
+        Object.isExtensible(s) &&
+        Object.defineProperty(s, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: {
@@ -3510,16 +3079,16 @@
             filename: 'src/reusable/collectionHash/collectionHashReducer.ts',
           },
         })
-      var s = function(e) {
+      var u = function(e) {
         var t = []
         for (var n in e) t.push(e[n])
         return t
       }
-      'undefined' !== typeof s &&
-        s &&
-        s === Object(s) &&
-        Object.isExtensible(s) &&
-        Object.defineProperty(s, '__filemeta', {
+      'undefined' !== typeof u &&
+        u &&
+        u === Object(u) &&
+        Object.isExtensible(u) &&
+        Object.defineProperty(u, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: {
@@ -3527,52 +3096,52 @@
             filename: 'src/reusable/collectionHash/collectionHashReducer.ts',
           },
         })
-      var u = function(e) {
+      var b = function(e) {
         var t =
             arguments.length > 1 && void 0 !== arguments[1]
               ? arguments[1]
               : function(e) {
                   return e
                 },
-          n = r(e)
-        function i(e, t) {
+          n = i(e)
+        function r(e, t) {
           var n = {}
           for (var a in e) t.includes(a) || (n[a] = e[a])
           return n
         }
-        function b(e) {
+        function s(e) {
           if (Array.isArray(e)) {
             return e.reduce(function(e, t) {
-              return Object(o.a)({}, e, Object(l.a)({}, t[n.uid], t))
+              return Object(l.a)({}, e, Object(c.a)({}, t[n.uid], t))
             }, {})
           }
         }
-        function s(e, t, n, c) {
-          var r
+        function u(e, t, n, o) {
+          var i
           switch (t.type) {
             case 'INSERT_ITEMS':
-              var s = Array.isArray(t.items)
-                ? b(t.items)
-                : Object(l.a)({}, t.items[n.uid], t.items)
-              return Object(o.a)({}, e, { items: Object(o.a)({}, e.items, s) })
+              var u = Array.isArray(t.items)
+                ? s(t.items)
+                : Object(c.a)({}, t.items[n.uid], t.items)
+              return Object(l.a)({}, e, { items: Object(l.a)({}, e.items, u) })
             case 'REDUCER':
               return t.reducer(e)
             case 'REMOVE_ITEMS':
               return (
-                (r = t.remove),
-                Array.isArray(r)
-                  ? Object(o.a)({}, e, {
+                (i = t.remove),
+                Array.isArray(i)
+                  ? Object(l.a)({}, e, {
                       active: t.remove.includes(e.active) ? '' : e.active,
                       selected: e.selected.filter(function(e) {
                         return !t.remove.includes(e)
                       }),
-                      items: i(e.items, t.remove),
+                      items: r(e.items, t.remove),
                     })
                   : e
               )
             case 'REPLACE_ITEMS':
-              var u = b(t.items)
-              return Object(o.a)({}, e, { items: u })
+              var b = s(t.items)
+              return Object(l.a)({}, e, { items: b })
             case 'RESET':
               return n
             case 'SET_ACTIVE':
@@ -3580,7 +3149,7 @@
                 return 'string' !== typeof e
               })(t.active)
                 ? e
-                : Object(o.a)({}, e, {
+                : Object(l.a)({}, e, {
                     active: (function(e) {
                       return null == e
                     })(t.active)
@@ -3588,9 +3157,9 @@
                       : t.active.trim(),
                   })
             case 'SET_LOADING':
-              return Object(o.a)({}, e, { loading: !!t.loading })
+              return Object(l.a)({}, e, { loading: !!t.loading })
             case 'SET_SELECTED':
-              return Object(o.a)({}, e, { selected: t.selected })
+              return Object(l.a)({}, e, { selected: t.selected })
             case 'TOGGLE_SELECTED_ITEMS':
               var d = Object(a.a)(e.selected),
                 m = !0,
@@ -3598,81 +3167,81 @@
                 p = void 0
               try {
                 for (
-                  var j, h = t.selected[Symbol.iterator]();
-                  !(m = (j = h.next()).done);
+                  var j, O = t.selected[Symbol.iterator]();
+                  !(m = (j = O.next()).done);
                   m = !0
                 ) {
-                  var O = j.value,
-                    T = d.indexOf(O),
-                    x = O.trim()
-                  e.items[T]
+                  var h = j.value,
+                    x = d.indexOf(h),
+                    y = h.trim()
+                  e.items[x]
                     ? (d =
-                        0 === T
+                        0 === x
                           ? d.slice(1)
-                          : T === d.length - 1
+                          : x === d.length - 1
                           ? d.slice(0, d.length - 1)
                           : [].concat(
-                              Object(a.a)(d.slice(0, T)),
-                              Object(a.a)(d.slice(T + 1))
+                              Object(a.a)(d.slice(0, x)),
+                              Object(a.a)(d.slice(x + 1))
                             ))
-                    : d.push(x)
+                    : d.push(y)
                 }
-              } catch (g) {
-                ;(f = !0), (p = g)
+              } catch (_) {
+                ;(f = !0), (p = _)
               } finally {
                 try {
-                  m || null == h.return || h.return()
+                  m || null == O.return || O.return()
                 } finally {
                   if (f) throw p
                 }
               }
-              return Object(o.a)({}, e, { selected: d })
+              return Object(l.a)({}, e, { selected: d })
             case 'UPDATE_ITEM':
               if (!e.items[t.select]) return e
-              var y = Object(l.a)(
+              var v = Object(c.a)(
                   {},
                   t.item.name || t.select,
-                  Object(o.a)({}, e.items[t.select], t.item)
+                  Object(l.a)({}, e.items[t.select], t.item)
                 ),
-                v = t.item[n.uid]
-                  ? Object(o.a)({}, i(e.items, [t.select]), y)
-                  : Object(o.a)({}, e.items, y)
-              return Object(o.a)({}, e, {
+                T = t.item[n.uid]
+                  ? Object(l.a)({}, r(e.items, [t.select]), v)
+                  : Object(l.a)({}, e.items, v)
+              return Object(l.a)({}, e, {
                 active: e.active === t.select ? t.item.name : e.active,
-                selected: (function(n, l, o) {
+                selected: (function(n, c, l) {
                   return e.selected.includes(t.select)
                     ? (function() {
-                        var e = n.indexOf(l)
+                        var e = n.indexOf(c)
                         return 0 === e
-                          ? [o].concat(Object(a.a)(n.slice(1)))
+                          ? [l].concat(Object(a.a)(n.slice(1)))
                           : e === n.length - 1
                           ? [].concat(Object(a.a)(n.slice(0, n.length - 1)), [
-                              o,
+                              l,
                             ])
                           : [].concat(
                               Object(a.a)(n.slice(0, e)),
-                              [o],
+                              [l],
                               Object(a.a)(n.slice(e + 1))
                             )
                       })()
                     : e.selected
                 })(e.selected, t.select, t.item.name),
-                items: v,
+                items: T,
               })
             default:
-              return c ? c(e, t) : e
+              return o ? o(e, t) : e
           }
         }
-        function u(e, a) {
-          return s(e, a, n, t)
+        function b(e, a) {
+          return u(e, a, n, t)
         }
-        return Object(c.useReducer)(u, n)
+        return Object(o.useReducer)(b, n)
       }
-      'undefined' !== typeof u &&
-        u &&
-        u === Object(u) &&
-        Object.isExtensible(u) &&
-        Object.defineProperty(u, '__filemeta', {
+      'undefined' !== typeof b &&
+        b &&
+        b === Object(b) &&
+        Object.isExtensible(b) &&
+        Object.defineProperty(b, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: {
@@ -3696,4 +3265,4 @@
     },
   },
 ])
-//# sourceMappingURL=src-table-table.5a777fd46df50694fdd3.js.map
+//# sourceMappingURL=src-table-table.e87bed39511fd489c1d4.js.map
