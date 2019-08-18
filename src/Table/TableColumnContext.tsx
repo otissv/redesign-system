@@ -1,4 +1,4 @@
-import React, { useMemo, useContext, useEffect, useState } from 'react'
+import React, { useMemo, useContext, useEffect } from 'react'
 import styled from 'styled-components'
 
 import { Base } from '../Base'
