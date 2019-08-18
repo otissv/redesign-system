@@ -54,10 +54,11 @@ export interface TableColumnContextInterface {
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
   onDelete?: (e: React.MouseEvent<HTMLElement>) => void
   onDeleteSelected?: (e: React.MouseEvent<HTMLElement>) => void
-  onExpandRows?: (e: React.MouseEvent<HTMLElement>) => void
   onRowClick?: (e: React.MouseEvent<HTMLElement>) => void
   selected?: Array<string>
-  setChecked?: React.Dispatch<React.SetStateAction<boolean>>
+  setChecked?: (newState: boolean) => void
+  setExpanded?: (newState: boolean) => void
+  tableName?: string
   Copy?: (props: TableToolbarCopyButtonInterface) => React.ReactNode
   Edit?: (props: TableToolbarButtonInterface) => React.ReactNode
   Delete?: (props: TableToolbarButtonInterface) => React.ReactNode

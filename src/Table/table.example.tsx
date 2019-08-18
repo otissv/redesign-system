@@ -4,7 +4,7 @@ import {
   itemsToArray,
 } from '../reusable/collectionHash'
 
-const items = [...new Array(100)]
+const items = [...new Array(1)]
 
 export function useTable() {
   const initialState = {

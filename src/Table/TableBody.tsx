@@ -106,6 +106,7 @@ export const TableBody = React.memo(function TableBody({
           data={item}
           checked={selected.includes(item.id)}
           index={index}
+          tableName={tableName}
           {...columnContext}
         >
           {children}

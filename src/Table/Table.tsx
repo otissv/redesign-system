@@ -5,13 +5,13 @@ import React, {
   useMemo,
   useReducer,
 } from 'react'
+import { useCacheState } from '../reusable/cacheState'
 
 import Base from '../Base/Base'
 import { JsonView } from './JsonView'
 import { TableView } from './TableView'
 
 import { tableTheme, tableContainerTheme } from './table.theme'
-import { useCacheState } from '../reusable/cacheState'
 import { TableCaption } from './TableCaption'
 import {
   TableInterface,
@@ -168,10 +168,14 @@ export const Table = React.memo(function Table({
     [setCurrentView]
   )
 
-  const allSelected = useMemo(() => selected.length === itemListMemo.length, [
-    itemListMemo,
-    selected,
-  ])
+  const { state: allSelected, setItem: setAllSelected } = useCacheState(
+    `${name}_allSelected`,
+    selected.length === itemListMemo.length
+  )
+
+  useEffect(() => {
+    setAllSelected(selected.length === itemListMemo.length)
+  }, [itemListMemo, selected])
 
   const handleAllSelectedChange = React.useCallback(
     function handleAllSelectedChange(e: React.ChangeEvent<HTMLInputElement>) {

@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { Base } from '../Base'
 import { RowDetailInterface, TableColumnContextInterface } from './table.types'
 import { CaretRight } from '../MaterialIcons/CaretRight'
+import { useCacheState } from '../reusable/cacheState'
 
 export const TableColumnContext = React.createContext<
   TableColumnContextInterface
@@ -17,18 +18,27 @@ export function TableColumnProvider({
   children,
   checked = false,
   expanded = false,
+  tableName,
+  data,
   ...value
 }: TableColumnContextInterface) {
-  const [isChecked, setChecked] = useState(checked)
-  const [isExpanded, setExpanded] = useState(expanded)
+  const { state: isChecked, setItem: setChecked } = useCacheState(
+    `${tableName}_${data.id}_checked`,
+    checked
+  )
+
+  const { state: isExpanded, setItem: setExpanded } = useCacheState(
+    `${tableName}_${data.id}_expanded`,
+    expanded
+  )
 
   useEffect(() => {
     setChecked(checked)
-  }, [checked, setChecked])
+  }, [checked])
 
   useEffect(() => {
     setExpanded(expanded)
-  }, [expanded, setExpanded])
+  }, [expanded])
 
   let Detail = React.useRef(() => null)
   let hasDetail = React.useRef(false)
@@ -50,6 +60,7 @@ export function TableColumnProvider({
   const context = useMemo(
     () => ({
       ...value,
+      data,
       checked: isChecked,
       expanded: isExpanded,
       setChecked,
