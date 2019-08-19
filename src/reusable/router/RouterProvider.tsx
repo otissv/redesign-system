@@ -7,13 +7,17 @@ export const RouterProvider = React.memo(function RouterProviderInterface({
   children,
   active = window.location.pathname,
 }: RouterProviderInterface) {
-  function reducer(state: string[], action: { type: string; route: string }) {
+  let isBack = false
+
+  function reducer(state: string[], action: { type: string; route?: string }) {
     switch (action.type) {
       case 'ADD_ROUTE': {
         return [...state, action.route]
       }
       case 'BACK_ROUTE': {
-        return state.slice(0, state.length - 1)
+        return window.location.pathname === `${state.length - 1}`
+          ? state.slice(0, state.length - 1)
+          : state
       }
       default:
         return state
@@ -24,17 +28,20 @@ export const RouterProvider = React.memo(function RouterProviderInterface({
 
   useEffect(() => {
     window.addEventListener('popstate', (e: any) => {
+      isBack = true
       dispatch({
-        type: 'ADD_ROUTE',
+        type: 'BACK_ROUTE',
         route: e.currentTarget.location.pathname,
       })
     })
   })
 
   useEffect(() => {
-    if (window.location.pathname !== route) {
+    if (window.location.pathname !== route && !isBack) {
       window.history.pushState(route, route, route)
     }
+
+    isBack = false
   }, [dispatch, route])
 
   const context = useMemo(() => ({ history, route, dispatch }), [

@@ -3,7 +3,6 @@ import RouteParser from 'route-parser'
 
 import { useRouter } from './RouterContext'
 import { ParamsType, RouterTypes, RouteTypes } from './router.types'
-// import { useStateDevtools } from '../devtools'
 
 function flattenRoutes(routes: RouteTypes[], parent?: RouteTypes) {
   return routes.reduce((accumulator, route) => {
