@@ -6,7 +6,7 @@ export function useGetItems(hook: any) {
 
   useEffect(() => {
     setState(itemsToArray(items))
-  }, [items])
+  }, [items, itemsToArray])
 
   return useMemo(() => state, [state])
 }
@@ -20,7 +20,7 @@ export function useGetActiveItem<T>(hook: any, initialState: T) {
     if (items && items[active]) {
       setState(items[active])
     }
-  }, [active, items])
+  }, [active, items, setState])
 
   return useMemo(() => state, [state])
 }
@@ -35,7 +35,7 @@ export function useResetActive(hook: any) {
       type: 'SET_ACTIVE',
       active: '',
     })
-  }, [])
+  }, [active, dispatch])
 }
 
 export function useSetActive(hook: any, value: any) {
@@ -47,5 +47,5 @@ export function useSetActive(hook: any, value: any) {
       type: 'SET_ACTIVE',
       active: value,
     })
-  }, [active, value])
+  }, [active, value, dispatch])
 }

@@ -1,6 +1,12 @@
 export type StackType = 'LIFO' | 'FIFO'
 
-export type StackActionType<T> = {
-  type: 'ADD_TO_STACK' | 'REMOVE_FROM_STACK' | 'TAKE_STACK_ITEM'
-  payload?: T
+export type StackActionType<S> = {
+  type:
+    | 'ADD_TO_STACK'
+    | 'CLEAR_STACK'
+    | 'DELETE_FROM_STACK'
+    | 'REPLACE_STACK'
+    | 'RESET_STACK'
+  payload?: S
+  replace?: S[]
 }

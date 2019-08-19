@@ -1,5 +1,5 @@
-import { useReducer } from 'react';
-import { COLLECTION_HASH_INITIAL_STATE } from './collectionHashConstants';
+import { useReducer } from 'react'
+import { COLLECTION_HASH_INITIAL_STATE } from './collectionHashConstants'
 import {
   BuildInitialValueType,
   CollectionHashActionInterface,
@@ -8,25 +8,46 @@ import {
   CollectionHashStateInterface,
   ReducerType,
   ItemsToArrayType,
-} from './collectionHash.types';
+} from './collectionHash.types'
 
-const buildInitialValue: BuildInitialValueType = initialState => ({
-  ...COLLECTION_HASH_INITIAL_STATE,
-  ...initialState,
-});
-
-export const createInitialState: BuildInitialValueType = initialState =>
-  buildInitialValue(initialState);
-
-export const itemsToArray: ItemsToArrayType = function itemsToArray(items) {
-  let list = [];
-
-  for (let item in items) {
-    list.push(items[item]);
+function transformCollectionToObject(items: any[], uid: string) {
+  if (!Array.isArray(items)) {
+    return undefined
   }
 
-  return list;
-};
+  const reducer = (acc: { [key: string]: string }, item: any) => ({
+    ...acc,
+    [item[uid]]: item,
+  })
+  return items.reduce(reducer, {})
+}
+
+const buildInitialValue: BuildInitialValueType = initialState => {
+  const value = {
+    ...COLLECTION_HASH_INITIAL_STATE,
+    ...initialState,
+  }
+
+  return {
+    ...value,
+    items: Array.isArray(value.items)
+      ? transformCollectionToObject(value.items, value.uid)
+      : value.items,
+  }
+}
+
+export const createInitialState: BuildInitialValueType = initialState =>
+  buildInitialValue(initialState)
+
+export const itemsToArray: ItemsToArrayType = function itemsToArray(items) {
+  let list = []
+
+  for (let item in items) {
+    list.push(items[item])
+  }
+
+  return list
+}
 
 export const useCollectionHashReducer: CollectionHashReducerType = function useCollectionHashReducer(
   initialState,
@@ -34,30 +55,18 @@ export const useCollectionHashReducer: CollectionHashReducerType = function useC
 ) {
   const initialValue: CollectionHashInitialValueInterface = buildInitialValue(
     initialState
-  );
+  )
 
   function removeItem(list: { [key: string]: string }, itemsToRemove: any[]) {
-    let items: { [key: string]: string } = {};
+    let items: { [key: string]: string } = {}
 
     for (let item in list) {
       if (!itemsToRemove.includes(item)) {
-        items[item] = list[item];
+        items[item] = list[item]
       }
     }
 
-    return items;
-  }
-
-  function transformCollectionToObject(items: any[]) {
-    if (!Array.isArray(items)) {
-      return undefined;
-    }
-
-    const reducer = (acc: { [key: string]: string }, item: any) => ({
-      ...acc,
-      [item[initialValue.uid]]: item,
-    });
-    return items.reduce(reducer, {});
+    return items
   }
 
   function reducer(
@@ -66,33 +75,34 @@ export const useCollectionHashReducer: CollectionHashReducerType = function useC
     initialValue: CollectionHashInitialValueInterface,
     extendReducer: ReducerType
   ) {
-    const notArray = (value: any) => !Array.isArray(value);
-    const notString = (value: any) => typeof value !== 'string';
-    const notDefined = (value: any) => value == null;
+    const notArray = (value: any) => !Array.isArray(value)
+    const notString = (value: any) => typeof value !== 'string'
+    const notDefined = (value: any) => value == null
 
     switch (action.type) {
       case 'INSERT_ITEMS': {
         const items = Array.isArray(action.items)
-          ? transformCollectionToObject(action.items)
+          ? transformCollectionToObject(action.items, initialValue.uid)
           : {
               [action.items[initialValue.uid]]: action.items,
-            };
+            }
+
         return {
           ...state,
           items: {
             ...state.items,
             ...items,
           },
-        };
+        }
       }
 
       case 'REDUCER': {
-        return action.reducer(state);
+        return action.reducer(state)
       }
 
       case 'REMOVE_ITEMS': {
         if (notArray(action.remove)) {
-          return state;
+          return state
         }
 
         return {
@@ -102,111 +112,113 @@ export const useCollectionHashReducer: CollectionHashReducerType = function useC
             item => !action.remove.includes(item)
           ),
           items: removeItem(state.items, action.remove),
-        };
+        }
       }
 
       case 'REPLACE_ITEMS': {
-        const transformedData = transformCollectionToObject(action.items);
+        const transformedData = transformCollectionToObject(
+          action.items,
+          initialValue.uid
+        )
         return {
           ...state,
           items: transformedData,
-        };
+        }
       }
 
       case 'RESET': {
-        return initialValue;
+        return initialValue
       }
 
       case 'SET_ACTIVE': {
         if (notString(action.active)) {
-          return state;
+          return state
         }
 
         return {
           ...state,
           active: notDefined(action.active) ? '' : action.active.trim(),
-        };
+        }
       }
 
       case 'SET_LOADING': {
         return {
           ...state,
           loading: !!action.loading,
-        };
+        }
       }
 
       case 'SET_SELECTED': {
         return {
           ...state,
           selected: action.selected,
-        };
+        }
       }
 
       case 'TOGGLE_SELECTED_ITEMS': {
-        let selected = [...state.selected];
-
+        let selected = [...state.selected]
         for (let select of action.selected) {
-          const index = selected.indexOf(select);
-          const _select = select.trim();
+          const index = selected.indexOf(select)
 
-          if (state.items[index]) {
+          if (index > -1) {
             selected =
               index === 0
                 ? selected.slice(1)
                 : index === selected.length - 1
                 ? selected.slice(0, selected.length - 1)
-                : [...selected.slice(0, index), ...selected.slice(index + 1)];
+                : [...selected.slice(0, index), ...selected.slice(index + 1)]
           } else {
-            selected.push(_select);
+            const _select = select.trim()
+            selected.push(_select)
           }
         }
 
         return {
           ...state,
           selected,
-        };
+        }
       }
 
       case 'UPDATE_ITEM': {
         if (!state.items[action.select]) {
-          return state;
+          return state
         }
 
         const item = {
-          [action.item.name || action.select]: {
+          [action.item[initialValue.uid] || action.select]: {
             ...state.items[action.select],
             ...action.item,
           },
-        };
+        }
 
         const updateItemInList = () => ({
           ...state.items,
           ...item,
-        });
+        })
 
         let removeCloneAndUpdateItem = () => ({
           ...removeItem(state.items, [action.select]),
           ...item,
-        });
+        })
 
         const updatedItems = action.item[initialValue.uid]
           ? removeCloneAndUpdateItem()
-          : updateItemInList();
+          : updateItemInList()
 
         const setSelectedItem = (list: any[], item: any, update: any) => {
           const replaceSelectedItem = () => {
-            const index = list.indexOf(item);
+            const index = list.indexOf(item)
             return index === 0
               ? [update, ...list.slice(1)]
               : index === list.length - 1
               ? [...list.slice(0, list.length - 1), update]
-              : [...list.slice(0, index), update, ...list.slice(index + 1)];
-          };
+              : [...list.slice(0, index), update, ...list.slice(index + 1)]
+          }
 
           return state.selected.includes(action.select)
             ? replaceSelectedItem()
-            : state.selected;
-        };
+            : state.selected
+        }
 
         return {
           ...state,
@@ -218,11 +230,11 @@ export const useCollectionHashReducer: CollectionHashReducerType = function useC
             action.item.name
           ),
           items: updatedItems,
-        };
+        }
       }
 
       default:
-        return extendReducer ? extendReducer(state, action) : state;
+        return extendReducer ? extendReducer(state, action) : state
     }
   }
 
@@ -230,8 +242,8 @@ export const useCollectionHashReducer: CollectionHashReducerType = function useC
     state: CollectionHashStateInterface,
     action: CollectionHashActionInterface
   ) {
-    return reducer(state, action, initialValue, extendReducer);
+    return reducer(state, action, initialValue, extendReducer)
   }
 
-  return useReducer(crudReducer, initialValue);
-};
+  return useReducer(crudReducer, initialValue)
+}

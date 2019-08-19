@@ -8,47 +8,47 @@ export type CollectionHashType =
   | 'SET_LOADING'
   | 'SET_SELECTED'
   | 'TOGGLE_SELECTED_ITEMS'
-  | 'UPDATE_ITEM';
+  | 'UPDATE_ITEM'
 
 export interface CollectionHashInitialValueInterface {
-  active?: string;
-  items?: any[];
-  loading?: boolean;
-  selected?: any[];
-  uid?: string;
+  active?: string
+  items?: any[]
+  loading?: boolean
+  selected?: any[]
+  uid?: string
 }
 
 export interface CollectionHashStateInterface {
-  active?: string;
-  items?: { [key: string]: any };
-  loading?: boolean;
-  selected?: any[];
-  uid?: string;
+  active?: string
+  items?: { [key: string]: any }
+  loading?: boolean
+  selected?: any[]
+  uid?: string
 }
 
-export type BuildInitialValueType = <T>(initialState: T) => T;
+export type BuildInitialValueType = <T>(initialState: T) => T
 
-export type CreateInitialStateType = <T>(initialState: T) => T;
+export type CreateInitialStateType = <T>(initialState: T) => T
 
-export type ReducerType = <S, A>(state: S, Actions?: A) => S;
+export type ReducerType = <S, A>(state: S, action?: A) => S
 
 export interface CollectionHashActionInterface {
-  active?: string;
-  item?: any;
-  items?: any[];
-  loading?: boolean;
-  reducer?: <S, A>(state: S, Actions?: A) => S;
-  remove?: any[];
-  select?: string;
-  selected?: any[];
-  type: CollectionHashType;
-  uid?: string;
-  update?: any;
+  active?: string
+  item?: any
+  items?: any[]
+  loading?: boolean
+  reducer?: <S, A>(state: S, action?: A) => S
+  remove?: any[]
+  select?: string
+  selected?: any[]
+  type: CollectionHashType
+  uid?: string
+  update?: any
 }
 
 export type CollectionHashReducerType = (
   initialState: CollectionHashInitialValueInterface,
-  extendReducer?: <S, A>(state: S, actions?: A) => S
-) => [CollectionHashStateInterface, React.Dispatch<any>];
+  extendReducer?: <S, A>(state: S, action?: A) => S
+) => [CollectionHashStateInterface, React.Dispatch<any>]
 
-export type ItemsToArrayType = (items: { [key: string]: any }) => any[];
+export type ItemsToArrayType = (items: { [key: string]: any }) => any[]

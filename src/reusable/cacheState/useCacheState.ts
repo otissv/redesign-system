@@ -10,6 +10,25 @@ export function useCacheState<T>(
   const windowStorage =
     storage === 'sessionStorage' ? window.sessionStorage : window.localStorage
 
+  const setItem = useCallback(
+    function setItem(newState: T) {
+      if (newState === state) return
+
+      const data = JSON.stringify(newState)
+      setState(newState)
+      return windowStorage.setItem(key, data)
+    },
+    [key, state, windowStorage]
+  )
+
+  const removeItem = useCallback(
+    function removeItem() {
+      setState(undefined)
+      windowStorage.removeItem(key)
+    },
+    [key, setState, windowStorage]
+  )
+
   useEffect(() => {
     const cached = windowStorage.getItem(key)
     const data = !cached ? cached : JSON.parse(cached)
@@ -17,24 +36,9 @@ export function useCacheState<T>(
     setItem(data || initialState)
   }, [])
 
-  const setItem = useCallback(
-    function setItem(newState: T) {
-      if (newState === state) return
-
-      const data = JSON.stringify(newState)
-
-      setState(newState)
-      return windowStorage.setItem(key, data)
-    },
-    [state, setState]
-  )
-
-  function removeItem() {
-    setState(undefined)
-    windowStorage.removeItem(key)
-  }
-
   return useMemo(() => ({ state, setItem, removeItem }), [
-    [state, setItem, removeItem],
+    state,
+    setItem,
+    removeItem,
   ])
 }

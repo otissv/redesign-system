@@ -1,39 +1,49 @@
 import { useMemo, useReducer } from 'react'
 import { StackType, StackActionType } from './stack.types'
 
-export function useStack<T>(
+export function useStack<S>(
   stackType: StackType = 'LIFO',
-  initialState: T[] = []
+  initialState: S[] = []
 ) {
   const stack = {
     FIFO: {
-      add: (state: T[], payload: T) => [...state, payload],
+      add: (state: S[], payload: S) => [...state, payload],
 
-      remove: (state: T[]) =>
+      delete: (state: S[]) =>
         state.length === 0 ? [] : state.slice(1, state.length),
 
-      take: (state: T[]) => [state[0]],
+      take: (state: S[]) => [state[0]],
     },
-    LIFO: {
-      add: (state: T[], payload: T) => [...state, payload],
 
-      remove: (state: T[]) =>
+    LIFO: {
+      add: (state: S[], payload: S) => [...state, payload],
+
+      delete: (state: S[]) =>
         state.length === 0 ? [] : state.slice(0, state.length - 1),
 
-      take: (state: T[]) => {
+      take: (state: S[]) => {
         return [state[state.length - 1]]
       },
     },
   }[stackType]
 
-  function reducer(state: T[], action: StackActionType<T>) {
+  function reducer(state: S[], action: StackActionType<S>) {
     switch (action.type) {
-      case 'ADD_TO_STACK':
-        return stack.add(state, action.payload)
-      case 'REMOVE_FROM_STACK':
-        return stack.remove(state)
-      case 'TAKE_STACK_ITEM':
-        return stack.take(state)
+      case 'ADD_TO_STACK': {
+        return action.payload ? stack.add(state, action.payload) : state
+      }
+      case 'DELETE_FROM_STACK':
+        return stack.delete(state)
+
+      case 'CLEAR_STACK':
+        return []
+
+      case 'REPLACE_STACK':
+        return action.replace ? action.replace : state
+
+      case 'RESET_STACK':
+        return initialState
+
       default:
         return state
     }
@@ -42,23 +52,34 @@ export function useStack<T>(
 
   const methods = {
     dispatch,
-    add: (payload: T) => {
+    add: (payload: S) => {
       dispatch({
         type: 'ADD_TO_STACK',
         payload,
       })
     },
-    remove: () => {
+    clear: () => {
       dispatch({
-        type: 'REMOVE_FROM_STACK',
+        type: 'CLEAR_STACK',
       })
     },
-    take: (payload: T) => {
+    delete: () => {
       dispatch({
-        type: 'REMOVE_FROM_STACK',
-        payload,
+        type: 'DELETE_FROM_STACK',
       })
-
+    },
+    replace: (payload: S[]) => {
+      dispatch({
+        type: 'REPLACE_STACK',
+        replace: payload,
+      })
+    },
+    reset: () => {
+      dispatch({
+        type: 'RESET_STACK',
+      })
+    },
+    take: () => {
       return stack.take(state)
     },
   }
@@ -66,10 +87,10 @@ export function useStack<T>(
   return useMemo(() => ({ state, ...methods }), [state, methods])
 }
 
-export function useFIFO<T>(initialState: T[] = []) {
+export function useFIFO<S>(initialState: S[] = []) {
   return useStack('FIFO', initialState)
 }
 
-export function useLIFO<T>(initialState: T[] = []) {
+export function useLIFO<S>(initialState: S[] = []) {
   return useStack('LIFO', initialState)
 }
