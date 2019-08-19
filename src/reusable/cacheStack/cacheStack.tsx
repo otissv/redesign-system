@@ -85,13 +85,8 @@ export function useCacheStack<S>(
 
   const takeItem = useCallback(
     function takeItem() {
-      try {
-        deleteItem()
-
-        return take()
-      } catch (error) {
-        console.log(error)
-      }
+      deleteItem()
+      return take()
     },
     [deleteItem, take]
   )

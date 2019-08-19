@@ -7,11 +7,6 @@ import {
   useCollectionHashReducer,
 } from '../collectionHash'
 
-interface ActionInterface {
-  type: string
-  payload?: any
-}
-
 export function useCacheCollectionHashReducer(
   key: string,
   initialState: CollectionHashInitialValueInterface,
@@ -40,10 +35,7 @@ export function useCacheCollectionHashReducer(
       default: {
         const reducer = extendReducer
           ? extendReducer(state, action)
-          : (
-              state: CollectionHashInitialValueInterface,
-              action: ActionInterface
-            ) => state
+          : (state: CollectionHashInitialValueInterface) => state
         return reducer
       }
     }

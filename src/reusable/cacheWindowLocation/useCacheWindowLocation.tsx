@@ -36,9 +36,7 @@ export function useCacheWindowLocation(
 
   useEffect(() => {
     try {
-      const data = JSON.stringify(state)
       const pathname = state.pathname
-      debugger
       window.history.pushState(pathname, pathname, pathname)
     } catch (error) {
       console.log(error)
