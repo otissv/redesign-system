@@ -952,4 +952,4 @@
     },
   },
 ])
-//# sourceMappingURL=src-badge-badge.71eb7f195bb3940d11db.js.map
+//# sourceMappingURL=src-badge-badge.b745f521513d232a6ff4.js.map
