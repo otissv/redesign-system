@@ -20,15 +20,15 @@ export function TableColumnProvider({
   expanded = false,
   tableName,
   data,
-  ...value
+  ...propsRest
 }: TableColumnContextInterface) {
   const { state: isChecked, setItem: setChecked } = useCacheState(
-    `${tableName}_${data.id}_checked`,
+    `${tableName}_${data[propsRest.uidKey]}_checked`,
     checked
   )
 
   const { state: isExpanded, setItem: setExpanded } = useCacheState(
-    `${tableName}_${data.id}_expanded`,
+    `${tableName}_${data[propsRest.uidKey]}_expanded`,
     expanded
   )
 
@@ -45,28 +45,30 @@ export function TableColumnProvider({
 
   const columns = useMemo(
     () =>
-      children.reduce((acc: any[], child: any) => {
-        if (child.props.uid === 'detail') {
-          Detail.current = () => child
-          hasDetail.current = true
-          return acc
-        } else {
-          return [...acc, child]
-        }
-      }, []),
+      Array.isArray(children)
+        ? children.reduce((acc: any[], child: any) => {
+            if (child.props.uid === 'detail') {
+              Detail.current = () => child
+              hasDetail.current = true
+              return acc
+            } else {
+              return [...acc, child]
+            }
+          }, [])
+        : children,
     [children, Detail]
   )
 
   const context = useMemo(
     () => ({
-      ...value,
+      ...propsRest,
       data,
       checked: isChecked,
       expanded: isExpanded,
       setChecked,
       setExpanded,
     }),
-    [isChecked, setChecked, isExpanded, setExpanded, value]
+    [isChecked, setChecked, isExpanded, setExpanded, propsRest]
   )
 
   return (
@@ -160,7 +162,11 @@ const RowIndicator = React.memo(function Indicator({
   )
 
   return (
-    <td {...propsRest}>
+    <td
+      {...propsRest}
+      className="RowIndicator"
+      style={{ padding: 0, width: '50px' }}
+    >
       <RowIndicatorStyled onClick={handleClick} expanded={expanded}>
         <CaretRight alt="indicator" />
       </RowIndicatorStyled>

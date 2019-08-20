@@ -44,6 +44,7 @@ export const Table = React.memo(function Table({
   themed: propsThemed = [],
   title,
   toolbar = [],
+  uidKey,
   ...propsRest
 }: TableInterface) {
   const classNames = useMemo(() => `TableContainer ${className}`, [className])
@@ -235,16 +236,17 @@ export const Table = React.memo(function Table({
             <TableView
               allSelected={allSelected}
               baseRoute={baseRoute}
+              data={itemListMemo}
               dispatch={dispatchHook}
-              onAdd={handleAdd}
-              onDeleteSelected={handleDeleteSelected}
-              onAllSelectedChange={handleAllSelectedChange}
               itemsToArray={itemsToArray}
               loading={loading}
+              onAdd={handleAdd}
+              onAllSelectedChange={handleAllSelectedChange}
+              onDeleteSelected={handleDeleteSelected}
+              onRowClick={onRowClick}
               selected={selected}
               tableName={name}
-              onRowClick={onRowClick}
-              data={itemListMemo}
+              uidKey={uidKey}
             >
               {children}
             </TableView>

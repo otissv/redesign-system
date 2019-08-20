@@ -33,7 +33,7 @@ export function tableTheme({
     },
 
     'tr:hover': {
-      background: hover ? color['grey-800'] : '',
+      background: hover ? color['background-600'] : '',
       boxShadow: hover ? elevate[2] : '',
     },
 

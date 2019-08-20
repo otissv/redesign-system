@@ -27,6 +27,7 @@ export const TableBody = React.memo(function TableBody({
   rows = [],
   selected,
   tableName,
+  uidKey = 'id',
   ...propsRest
 }: TableBodyInterface) {
   const handleChange = useCallback(
@@ -102,11 +103,12 @@ export const TableBody = React.memo(function TableBody({
     return data.map((item: { [key: string]: any }, index: number) => {
       return (
         <TableColumnProvider
-          key={item.id}
+          key={item[uidKey]}
           data={item}
           checked={selected.includes(item.id)}
           index={index}
           tableName={tableName}
+          uidKey={uidKey}
           {...columnContext}
         >
           {children}

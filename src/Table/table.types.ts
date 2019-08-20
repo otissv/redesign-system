@@ -63,6 +63,7 @@ export interface TableColumnContextInterface {
   Edit?: (props: TableToolbarButtonInterface) => React.ReactNode
   Delete?: (props: TableToolbarButtonInterface) => React.ReactNode
   Download?: (props: TableToolbarDownloadButtonInterface) => React.ReactNode
+  uidKey?: string
 }
 
 export interface TableInitialValueInterface {

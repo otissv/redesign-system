@@ -30,19 +30,19 @@ import { TableRowDetail } from './TableRowDetail'
       caption="Table caption"
       baseRoute='/table/#'
       hook={useTable}
+      uidKey='name'
     >
-
-    <TableColumn
-          heading='#'
-          uid='index'
-          prop='__index'
-        />
+      <TableColumn uid='select'
+        heading={<AllSelectedHeading/>}
+      >
+        <TableRowSelect />
+      </TableColumn>
 
       <TableColumn
-          heading='ID'
-          uid='id'
-          prop='id'
-        />
+        heading='ID'
+        uid='id'
+        prop='id'
+      />
 
       <TableColumn
         heading='Name'
@@ -53,14 +53,8 @@ import { TableRowDetail } from './TableRowDetail'
       <TableColumn
         heading='Endpoint'
         uid='endpoint'
-
-      >
-        {({ data }) => <td>
-          <a href='/table/#' onClick={e => e.preventDefault()}>{data.endpoint}</a>
-        </td>}
-
-      </TableColumn>
-
+        prop='endpoint'
+      />
     </Table>
 
   </ThemeProvider>
@@ -248,9 +242,9 @@ import { TableRowDetail } from './TableRowDetail'
         uid='endpoint'
 
       >
-        {({ data }) => <td>
-          <a href='/table/#' onClick={e => e.preventDefault()}>{data.endpoint}</a>
-        </td>}
+        {({ data }) => <a href='/table/#' onClick={e => e.preventDefault()}>
+          {data.endpoint}
+        </a>}
 
       </TableColumn>
 
@@ -312,13 +306,13 @@ import { TableRowDetail } from './TableRowDetail'
         uid='endpoint'
 
       >
-        {({ data }) => <td>
-          <a href='/table/#' onClick={e => e.preventDefault()}>{data.endpoint}</a>
-        </td>}
+        {({ data }) => <a href='/table/#' onClick={e => e.preventDefault()}>
+          {data.endpoint}
+        </a>}
 
       </TableColumn>
 
-      <TableRowDetail uid='detail'>
+      <TableRowDetail uid='detail' css='width: 50px'>
         {({ data }) => <table>
           <thead>
             <tr>
