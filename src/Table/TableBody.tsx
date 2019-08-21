@@ -105,7 +105,7 @@ export const TableBody = React.memo(function TableBody({
         <TableColumnProvider
           key={item[uidKey]}
           data={item}
-          checked={selected.includes(item.id)}
+          checked={selected.includes(item[uidKey])}
           index={index}
           tableName={tableName}
           uidKey={uidKey}
@@ -115,7 +115,7 @@ export const TableBody = React.memo(function TableBody({
         </TableColumnProvider>
       )
     })
-  }, [children, data, columnContext])
+  }, [children, data, columnContext, uidKey, selected, tableName])
 
   return (
     <tbody className="TableBody" {...propsRest}>

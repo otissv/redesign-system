@@ -42,7 +42,6 @@ export const Table = React.memo(function Table({
   onExecute,
   onRowClick,
   themed: propsThemed = [],
-  title,
   toolbar = [],
   uidKey,
   ...propsRest
@@ -171,28 +170,34 @@ export const Table = React.memo(function Table({
 
   const { state: allSelected, setItem: setAllSelected } = useCacheState(
     `${name}_allSelected`,
-    selected.length === itemListMemo.length
+    selected.length === 0 ? false : selected.length === itemListMemo.length
   )
 
   useEffect(() => {
-    setAllSelected(selected.length === itemListMemo.length)
+    setAllSelected(
+      selected.length === 0 ? false : selected.length === itemListMemo.length
+    )
   }, [itemListMemo, selected])
 
   const handleAllSelectedChange = React.useCallback(
     function handleAllSelectedChange(e: React.ChangeEvent<HTMLInputElement>) {
-      const selected = Array.isArray(items)
-        ? items.reduce(
-            (acc: string[], item: { [key: string]: any }) => [...acc, item.id],
-            []
-          )
-        : Object.keys(items)
+      // const selected = Array.isArray(items)
+      //   ? items.reduce(
+      //       (acc: string[], item: { [key: string]: any }) => [...acc, item.id],
+      //       []
+      //     )
+      //   : Object.keys(items)
+
+      const selected = e.currentTarget.checked
+        ? itemListMemo.map((item: any) => item[uidKey])
+        : []
 
       dispatchHook({
         type: 'SET_SELECTED',
-        selected: e.currentTarget.checked ? selected : [],
+        selected,
       })
     },
-    [dispatchHook, items]
+    [dispatchHook, itemListMemo, uidKey]
   )
 
   return (
@@ -214,7 +219,6 @@ export const Table = React.memo(function Table({
           onSwitchView={handleSwitchView}
           paddingBottom={2}
           selectToolbar={SelectToolbar}
-          title={title}
           toolbar={toolbar}
         />
       ) : null}

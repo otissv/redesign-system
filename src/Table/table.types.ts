@@ -32,7 +32,6 @@ export interface TableInterface extends BaseInterface {
   onDownload?: (n: any) => any
   onEdit?: (n: any) => any
   onExecute?: () => any
-  title?: string
   toolbar?: Array<((props?: any) => JSX.Element) | string>
 }
 
@@ -200,5 +199,4 @@ export interface TableToolbarInterface extends BaseInterface {
   onDownload: (n: any) => any
   onEdit: (n: any) => any
   onExecute: (n: any) => any
-  title: string
 }

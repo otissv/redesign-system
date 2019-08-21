@@ -9,12 +9,7 @@ export const TableRowSelect = function TableRowSelect({
   ...propsRest
 }: TableRowSelectInterface) {
   const classNames = `TableRowSelect ${className}`
-  const {
-    checked,
-    data: { id },
-    onChange,
-    setChecked,
-  } = useTableColumn()
+  const { checked, data, onChange, setChecked, uidKey } = useTableColumn()
 
   const handleChange = function handleChange(
     e: React.ChangeEvent<HTMLInputElement>
@@ -22,6 +17,8 @@ export const TableRowSelect = function TableRowSelect({
     setChecked(e.currentTarget.checked)
     onChange && onChange(e)
   }
+
+  const id = data[uidKey]
 
   return (
     <td className={classNames}>

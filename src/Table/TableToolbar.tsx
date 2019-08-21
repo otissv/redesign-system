@@ -25,7 +25,6 @@ export const TableToolbar = React.memo(function TableToolbar({
   onDownload,
   onEdit,
   onExecute,
-  title,
   toolbar,
 }: TableToolbarInterface) {
   const buttons = (button: string) => {
@@ -74,9 +73,7 @@ export const TableToolbar = React.memo(function TableToolbar({
             key="download"
             data={data}
             onClick={onDownload}
-            fileName={
-              title ? `guru_download_${title}.json` : `guru_download.json`
-            }
+            fileName="guru_download.json"
           />
         )
       case 'execute':
