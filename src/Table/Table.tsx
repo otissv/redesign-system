@@ -200,6 +200,12 @@ export const Table = React.memo(function Table({
     [dispatchHook, itemListMemo, uidKey]
   )
 
+  const childrenMemo = useMemo(
+    () =>
+      Array.isArray(children) ? children.filter((c: any) => !!c) : children,
+    [children]
+  )
+
   return (
     <Fragment>
       {toolbar.length > 0 ? (
@@ -252,7 +258,7 @@ export const Table = React.memo(function Table({
               tableName={name}
               uidKey={uidKey}
             >
-              {children}
+              {childrenMemo}
             </TableView>
           </Base>
         </Base>

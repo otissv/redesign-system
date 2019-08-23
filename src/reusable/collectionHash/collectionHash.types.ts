@@ -3,6 +3,7 @@ export type CollectionHashType =
   | 'REDUCER'
   | 'REMOVE_ITEMS'
   | 'REPLACE_ITEMS'
+  | 'REPLACE'
   | 'RESET'
   | 'SET_ACTIVE'
   | 'SET_LOADING'
@@ -44,6 +45,7 @@ export interface CollectionHashActionInterface {
   type: CollectionHashType
   uid?: string
   update?: any
+  state?: CollectionHashStateInterface
 }
 
 export type CollectionHashReducerType = (

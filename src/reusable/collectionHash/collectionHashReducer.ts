@@ -115,6 +115,13 @@ export const useCollectionHashReducer: CollectionHashReducerType = function useC
         }
       }
 
+      case 'REPLACE': {
+        return {
+          ...state,
+          ...action.state,
+        }
+      }
+
       case 'REPLACE_ITEMS': {
         const transformedData = transformCollectionToObject(
           action.items,

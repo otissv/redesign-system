@@ -18,6 +18,7 @@ export interface SelectToolbarInterface extends BaseInterface {
 }
 
 export interface TableInterface extends BaseInterface {
+  children?: any
   baseRoute?: string
   caption?: string
   condensed?: boolean
@@ -81,6 +82,7 @@ export interface TableHeadingsInterface {
 
 export interface TableRowDetailInterface extends BaseInterface {
   children?: any
+  condition?: (data: { [key: string]: any }) => boolean
 }
 
 export interface TableRowProviderInterface {}

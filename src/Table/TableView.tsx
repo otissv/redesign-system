@@ -19,16 +19,30 @@ export const TableView = React.memo(function TableView({
   tableName,
   ...propsRest
 }: TableViewInterface) {
-  const row = useCallback(
-    function row() {
+  function reduceChildren(children: any, initialValue: any[] = []) {
+    function reducer(acc: any[], child: any, i: number) {
+      if (Array.isArray(child)) {
+        return reduceChildren(child, acc)
+      } else if (!child.props) {
+        return child
+      }
+
+      const { heading, uid } = child.props
+
+      if (uid === 'detail') {
+        return [<th key={i}></th>, ...acc]
+      } else {
+        return [...acc, <th key={i}>{heading}</th>]
+      }
+    }
+
+    return children.reduce(reducer, initialValue)
+  }
+
+  const headings = useCallback(
+    function headings() {
       if (Array.isArray(children)) {
-        return children.reduce(
-          (acc: any[], { props: { heading, uid } }, i: number) =>
-            uid === 'detail'
-              ? [<th key={i}></th>, ...acc]
-              : [...acc, <th key={i}>{heading}</th>],
-          []
-        )
+        return reduceChildren(children)
       } else {
         return children.props.uid === 'detail' ? (
           <th></th>
@@ -43,7 +57,7 @@ export const TableView = React.memo(function TableView({
   const tableHeadings = useMemo(
     () => (
       <thead>
-        <tr>{row()}</tr>
+        <tr>{headings()}</tr>
       </thead>
     ),
     [children]

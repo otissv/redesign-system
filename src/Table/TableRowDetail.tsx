@@ -5,9 +5,12 @@ import { TableRowDetailInterface } from './table.types'
 
 export function TableRowDetail({
   children,
+  condition,
   ...propsRest
 }: TableRowDetailInterface) {
   const { data, index } = useTableColumn()
+
+  const showDetail = condition && condition({ data })
 
   const component = React.cloneElement(children, {
     data,
@@ -23,5 +26,5 @@ export function TableRowDetail({
     [children, component, data, index, propsRest]
   )
 
-  return _children
+  return showDetail ? _children : null
 }

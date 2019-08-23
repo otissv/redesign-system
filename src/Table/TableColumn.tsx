@@ -27,7 +27,7 @@ export function TableColumn({
     <>
       {_children || (
         <Base as="td" uid={uid} {...propsRest}>
-          {prop === '__index' ? index : data[prop]}
+          {prop === '__index' ? index + 1 : data[prop]}
         </Base>
       )}
     </>

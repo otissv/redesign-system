@@ -14,280 +14,18 @@ import { AllSelectedHeading } from './AllSelectedHeading'
 import { TableColumn } from './TableColumn'
 import { TableRowDetail } from './TableRowDetail'
 
-# Table
-
-## Properties
-
-<Props of={Table} />
-
 ## Default
 
 <Playground>
   <ThemeProvider>
-    <Table
-      height='250px'
-      name='TableDeafult'
-      caption="Table caption"
-      baseRoute='/table/#'
-      hook={useTable}
-      uidKey='id'
-    >
-      <TableColumn uid='select'
-        heading={<AllSelectedHeading/>}
-      >
-        <TableRowSelect />
-      </TableColumn>
-
-      <TableColumn
-        heading='ID'
-        uid='id'
-        prop='id'
-      />
-
-      <TableColumn
-        heading='Name'
-        uid='name'
-        prop='name'
-      />
-
-      <TableColumn
-        heading='Endpoint'
-        uid='endpoint'
-        prop='endpoint'
-      />
-    </Table>
-
-  </ThemeProvider>
-</Playground>
-
-## Selectable
-
-<Playground>
-  <ThemeProvider>
-    <Table
-      height="250px"
-      name="TableSelect"
-      selectable
-      hook={useTable}
-      >
-        <TableColumn uid='select'
-          heading={<AllSelectedHeading/>}
-        >
-          <TableRowSelect />
-        </TableColumn>
-
-        <TableColumn
-          heading='ID'
-          uid='id'
-          prop='id'
-        />
-
-        <TableColumn
-          heading='Name'
-          uid='name'
-          prop='name'
-        />
-
-        <TableColumn
-          heading='Endpoint'
-          uid='endpoint'
-          prop='endpoint'
-        />
-      </Table>
-
-  </ThemeProvider>
-</Playground>
-
-## Hover
-
-<Playground>
-  <ThemeProvider>
-    <Table
-      height="250px"
-      name="TableHover"
-      hover
-      headings={['ID', 'Name', 'Endpoint']}
-      hook={useTable}
-      >
-      <TableColumn
-          heading='ID'
-          uid='id'
-          prop='id'
-        />
-
-      <TableColumn
-        heading='Name'
-        uid='name'
-        prop='name'
-      />
-
-      <TableColumn
-        heading='Endpoint'
-        uid='endpoint'
-        prop='endpoint'
-      />
-    </Table>
-
-  </ThemeProvider>
-</Playground>
-
-## Condensed
-
-<Playground>
-  <ThemeProvider>
-    <Table
-      height="250px"
-      name="TableCondensed"
-      condensed
-      headings={['ID', 'Name', 'Endpoint']}
-      hook={useTable}
-      >
-      <TableColumn
-          heading='ID'
-          uid='id'
-          prop='id'
-        />
-
-      <TableColumn
-        heading='Name'
-        uid='name'
-        prop='name'
-      />
-
-      <TableColumn
-        heading='Endpoint'
-        uid='endpoint'
-        prop='endpoint'
-      />
-    </Table>
-
-  </ThemeProvider>
-</Playground>
-
-## Toolbar
-
-<Playground>
-  <ThemeProvider>
-    <Table
-      height='250px'
-      baseRoute='/table/#'
-      name='TableToolbar'
-      caption="Table caption"
-      hook={useTable}
-      toolbar={['add', 'copy', 'download', 'views']}
-    >
-
-      <TableColumn uid='select'
-        heading={<AllSelectedHeading/>}
-      >
-        <TableRowSelect />
-      </TableColumn>
-
-      <TableColumn
-        heading='ID'
-        uid='id'
-        prop='id'
-      />
-
-      <TableColumn
-        heading='Name'
-        uid='name'
-        prop='name'
-      />
-
-      <TableColumn
-        heading='Endpoint'
-        uid='endpoint'
-        prop='endpoint'
-      />
-
-
-    </Table>
-
-  </ThemeProvider>
-</Playground>
-
-## Row Detail
-
-<Playground>
-  <ThemeProvider>
-    <Table
-      height='250px'
-      name='TableRowDetail'
-      caption="Table caption"
-      baseRoute='/table/#'
-      hook={useTable}
-    >
-
-    <TableColumn
-          heading='#'
-          uid='index'
-          prop='__index'
-        />
-
-      <TableColumn
-          heading='ID'
-          uid='id'
-          prop='id'
-        />
-
-      <TableColumn
-        heading='Name'
-        uid='name'
-        prop='name'
-      />
-
-      <TableColumn
-        heading='Endpoint'
-        uid='endpoint'
-
-      >
-        {({ data }) => <a href='/table/#' onClick={e => e.preventDefault()}>
-          {data.endpoint}
-        </a>}
-
-      </TableColumn>
-
-      <TableRowDetail uid='detail'>
-        <table>
-          <thead>
-            <tr>
-              <th>IP</th>
-              <th>Repository</th>
-              <th>Port</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>0.0.0.1</td>
-              <td>repo1</td>
-              <td>8081</td>
-            </tr>
-          </tbody>
-          </table>
-      </TableRowDetail>
-    </Table>
-
-  </ThemeProvider>
-</Playground>
-
-### Render Props Detail
-
-<Playground>
-  <ThemeProvider>
-    <Table
-      height='250px'
+<Table
+      height='500px'
       name='TableRowDetailRenderProps'
       caption="Table caption"
       baseRoute='/table/#'
       hook={useTable}
+      hover
     >
-
-    <TableColumn
-          heading='#'
-          uid='index'
-          prop='__index'
-        />
 
       <TableColumn
           heading='ID'
@@ -295,25 +33,13 @@ import { TableRowDetail } from './TableRowDetail'
           prop='id'
         />
 
-      <TableColumn
-        heading='Name'
-        uid='name'
-        prop='name'
-      />
 
-      <TableColumn
-        heading='Endpoint'
-        uid='endpoint'
 
-      >
-        {({ data }) => <a href='/table/#' onClick={e => e.preventDefault()}>
-          {data.endpoint}
-        </a>}
+      <TableRowDetail uid='detail' css='width: 50px'
 
-      </TableColumn>
-
-      <TableRowDetail uid='detail' css='width: 50px'>
-        {({ data }) => <table>
+        condition={({ data }) => parseInt(data.port[0], 10) % 2? false: true}>
+        {({ data }) => {
+          return <table>
           <thead>
             <tr>
               <th>IP</th>
@@ -328,7 +54,8 @@ import { TableRowDetail } from './TableRowDetail'
               <td>{data.port}</td>
             </tr>
           </tbody>
-          </table>}
+          </table>
+        }}
       </TableRowDetail>
     </Table>
 

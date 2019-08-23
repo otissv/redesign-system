@@ -47,12 +47,30 @@ export function TableColumnProvider({
     () =>
       Array.isArray(children)
         ? children.reduce((acc: any[], child: any) => {
-            if (child.props.uid === 'detail') {
-              Detail.current = () => child
-              hasDetail.current = true
-              return acc
-            } else {
-              return [...acc, child]
+            const { condition, uid } = child.props || {
+              condition: null,
+              uid: null,
+            }
+            const isDetail = uid === 'detail'
+            const showDetail = condition && condition({ data })
+
+            switch (true) {
+              case isDetail && condition == null: {
+                Detail.current = () => child
+                hasDetail.current = true
+                return acc
+              }
+              case isDetail && showDetail: {
+                Detail.current = () => child
+                hasDetail.current = true
+                return acc
+              }
+              case isDetail && condition && !showDetail: {
+                return [<td></td>, ...acc]
+              }
+              default: {
+                return [...acc, child]
+              }
             }
           }, [])
         : children,
@@ -79,9 +97,12 @@ export function TableColumnProvider({
         )}
         {columns}
       </tr>
-      <RowDetail expanded={isExpanded} colSpan={children.length}>
-        <Detail.current />
-      </RowDetail>
+
+      {hasDetail.current && (
+        <RowDetail expanded={isExpanded} colSpan={children.length}>
+          <Detail.current />
+        </RowDetail>
+      )}
     </TableColumnContext.Provider>
   )
 }
