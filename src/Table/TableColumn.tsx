@@ -10,7 +10,6 @@ export function TableColumn({
   ...propsRest
 }: TableColumnInterface) {
   const { data, index } = useTableColumn()
-
   const _children = useMemo(
     () =>
       typeof children === 'function' ? (

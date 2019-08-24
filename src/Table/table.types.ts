@@ -108,12 +108,14 @@ export interface TableRowComponentInterface {
 
 export interface TableRowInterface {
   children?: (data: { [key: string]: any }) => React.ReactNode
-  data: { [key: string]: any }
+  data?: { [key: string]: any }
+  uid: string
 }
 
 export interface TableRowsInterface {
   children?: (data: { [key: string]: any }) => React.ReactNode
-  data: { [key: string]: any }
+  data?: { [key: string]: any }
+  uid: string
 }
 
 export interface TableBodyInterface extends BaseInterface {

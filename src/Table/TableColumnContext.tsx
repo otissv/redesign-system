@@ -89,7 +89,7 @@ export function TableColumnProvider({
         }
       }, [])
     } else if (typeof children.props.children === 'function') {
-      return children.props.children({ data })
+      return <td>{children.props.children({ data })}</td>
     } else {
       return children
     }

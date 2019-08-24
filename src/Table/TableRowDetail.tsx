@@ -10,7 +10,7 @@ export function TableRowDetail({
 }: TableRowDetailInterface) {
   const { data, index } = useTableColumn()
 
-  const showDetail = condition && condition({ data })
+  const showDetail = (condition && condition({ data })) || true
 
   const component = React.cloneElement(children, {
     data,
