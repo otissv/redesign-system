@@ -3,29 +3,226 @@ name: Table
 route: /table
 ---
 
+import { Fragment } from 'react'
 import { Playground, Props } from 'docz'
 import { Flex } from '../Flex/Flex'
 import styled from 'styled-components'
 import { ThemeProvider } from '../ThemeContext/ThemeProvider'
 import { Table } from './Table'
-import { useTable } from './table.example'
+import { useTable, useTableRow } from './table.example'
 import { TableRowSelect } from './TableRowSelect'
 import { AllSelectedHeading } from './AllSelectedHeading'
 import { TableColumn } from './TableColumn'
+import { TableRow } from './TableRow'
 import { TableRowDetail } from './TableRowDetail'
+import { TableRows } from './TableRows'
+
+# Table
+
+## Properties
+
+<Props of={Table} />
 
 ## Default
 
 <Playground>
   <ThemeProvider>
-<Table
-      height='500px'
-      name='TableRowDetailRenderProps'
+    <Table
+      height='250px'
+      name='TableDefault'
       caption="Table caption"
       baseRoute='/table/#'
       hook={useTable}
-      hover
+      uidKey='id'
     >
+        <TableRowSelect />
+
+      <TableColumn
+        heading='ID'
+        uid='id'
+        prop='id'
+      />
+
+      <TableColumn
+        heading='Name'
+        uid='name'
+        prop='name'
+      />
+
+      <TableColumn
+        heading='Endpoint'
+        uid='endpoint'
+        prop='endpoint'
+      />
+    </Table>
+
+  </ThemeProvider>
+</Playground>
+
+## Selectable
+
+<Playground>
+  <ThemeProvider>
+    <Table
+      height="250px"
+      name="TableSelect"
+      selectable
+      hook={useTable}
+      >
+        <TableColumn uid='select'
+          heading={<AllSelectedHeading/>}
+        >
+          <TableRowSelect />
+        </TableColumn>
+
+        <TableColumn
+          heading='ID'
+          uid='id'
+          prop='id'
+        />
+
+        <TableColumn
+          heading='Name'
+          uid='name'
+          prop='name'
+        />
+
+        <TableColumn
+          heading='Endpoint'
+          uid='endpoint'
+          prop='endpoint'
+        />
+      </Table>
+
+  </ThemeProvider>
+</Playground>
+
+## Hover
+
+<Playground>
+  <ThemeProvider>
+    <Table
+      height="250px"
+      name="TableHover"
+      hover
+      headings={['ID', 'Name', 'Endpoint']}
+      hook={useTable}
+      >
+      <TableColumn
+          heading='ID'
+          uid='id'
+          prop='id'
+        />
+
+      <TableColumn
+        heading='Name'
+        uid='name'
+        prop='name'
+      />
+
+      <TableColumn
+        heading='Endpoint'
+        uid='endpoint'
+        prop='endpoint'
+      />
+    </Table>
+
+  </ThemeProvider>
+</Playground>
+
+## Condensed
+
+<Playground>
+  <ThemeProvider>
+    <Table
+      height="250px"
+      name="TableCondensed"
+      condensed
+      headings={['ID', 'Name', 'Endpoint']}
+      hook={useTable}
+      >
+      <TableColumn
+          heading='ID'
+          uid='id'
+          prop='id'
+        />
+
+      <TableColumn
+        heading='Name'
+        uid='name'
+        prop='name'
+      />
+
+      <TableColumn
+        heading='Endpoint'
+        uid='endpoint'
+        prop='endpoint'
+      />
+    </Table>
+
+  </ThemeProvider>
+</Playground>
+
+## Toolbar
+
+<Playground>
+  <ThemeProvider>
+    <Table
+      height='250px'
+      baseRoute='/table/#'
+      name='TableToolbar'
+      caption="Table caption"
+      hook={useTable}
+      toolbar={['add', 'copy', 'download', 'views']}
+    >
+
+      <TableColumn uid='select'
+        heading={<AllSelectedHeading/>}
+      >
+        <TableRowSelect />
+      </TableColumn>
+
+      <TableColumn
+        heading='ID'
+        uid='id'
+        prop='id'
+      />
+
+      <TableColumn
+        heading='Name'
+        uid='name'
+        prop='name'
+      />
+
+      <TableColumn
+        heading='Endpoint'
+        uid='endpoint'
+        prop='endpoint'
+      />
+
+
+    </Table>
+
+  </ThemeProvider>
+</Playground>
+
+## Row Detail
+
+<Playground>
+  <ThemeProvider>
+    <Table
+      height='250px'
+      name='TableRowDetail'
+      caption="Table caption"
+      baseRoute='/table/#'
+      hook={useTable}
+    >
+
+    <TableColumn
+          heading='#'
+          uid='index'
+          prop='__index'
+        />
 
       <TableColumn
           heading='ID'
@@ -33,13 +230,89 @@ import { TableRowDetail } from './TableRowDetail'
           prop='id'
         />
 
+      <TableColumn
+        heading='Name'
+        uid='name'
+        prop='name'
+      />
 
+      <TableColumn
+        heading='Endpoint'
+        uid='endpoint'
 
-      <TableRowDetail uid='detail' css='width: 50px'
+      >
+        {({ data }) => <a href='/table/#' onClick={e => e.preventDefault()}>
+          {data.endpoint}
+        </a>}
 
-        condition={({ data }) => parseInt(data.port[0], 10) % 2? false: true}>
-        {({ data }) => {
-          return <table>
+      </TableColumn>
+
+      <TableRowDetail uid='detail'>
+        <table>
+          <thead>
+            <tr>
+              <th>IP</th>
+              <th>Repository</th>
+              <th>Port</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>0.0.0.1</td>
+              <td>repo1</td>
+              <td>8081</td>
+            </tr>
+          </tbody>
+          </table>
+      </TableRowDetail>
+    </Table>
+
+  </ThemeProvider>
+</Playground>
+
+### Render Props Detail
+
+<Playground>
+  <ThemeProvider>
+    <Table
+      height='250px'
+      name='TableRowDetailRenderProps'
+      caption="Table caption"
+      baseRoute='/table/#'
+      hook={useTable}
+    >
+
+    <TableColumn
+          heading='#'
+          uid='index'
+          prop='__index'
+        />
+
+      <TableColumn
+          heading='ID'
+          uid='id'
+          prop='id'
+        />
+
+      <TableColumn
+        heading='Name'
+        uid='name'
+        prop='name'
+      />
+
+      <TableColumn
+        heading='Endpoint'
+        uid='endpoint'
+
+      >
+        {({ data }) => <a href='/table/#' onClick={e => e.preventDefault()}>
+          {data.endpoint}
+        </a>}
+
+      </TableColumn>
+
+      <TableRowDetail uid='detail' css='width: 50px'>
+        {({ data }) => <table>
           <thead>
             <tr>
               <th>IP</th>
@@ -54,9 +327,129 @@ import { TableRowDetail } from './TableRowDetail'
               <td>{data.port}</td>
             </tr>
           </tbody>
-          </table>
-        }}
+          </table>}
       </TableRowDetail>
+    </Table>
+
+  </ThemeProvider>
+</Playground>
+
+<Playground>
+  <ThemeProvider>
+    <Table
+      height='250px'
+      name='TableRowDetailRenderProps'
+      caption="Table caption"
+      baseRoute='/table/#'
+      hook={useTable}
+    >
+
+    <TableColumn
+          heading='#'
+          uid='index'
+          prop='__index'
+        />
+
+      <TableColumn
+          heading='ID'
+          uid='id'
+          prop='id'
+        />
+
+      <TableColumn
+        heading='Name'
+        uid='name'
+        prop='name'
+      />
+
+      <TableColumn
+        heading='Endpoint'
+        uid='endpoint'
+
+      >
+        {({ data }) => <a href='/table/#' onClick={e => e.preventDefault()}>
+          {data.endpoint}
+        </a>}
+
+      </TableColumn>
+
+      <TableRowDetail
+        uid='detail'
+        css='width: 50px'
+        key='detail'
+        condition={({ data }) => parseInt(data.port[0], 10) % 2? true: false}
+        >
+        {({ data }) => <table>
+          <thead>
+            <tr>
+              <th>IP</th>
+              <th>Repository</th>
+              <th>Port</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{data.ip}</td>
+              <td>{data.repo}</td>
+              <td>{data.port}</td>
+            </tr>
+          </tbody>
+          </table>}
+      </TableRowDetail>
+    </Table>
+
+  </ThemeProvider>
+</Playground>
+
+## Columns and Rows
+
+<Playground>
+  <ThemeProvider>
+    <Table
+      name='TableRow'
+      caption="Table caption"
+      baseRoute='/table/#'
+      hook={useTableRow}
+      uidKey='_id'
+
+    >
+      <TableColumn heading='Full Name' />
+      <TableColumn heading='User ID' />
+
+      <TableRow uid='row'>
+        {({data}) => {
+          return <Fragment>
+            <td>{`${data.givenName} ${data.familyName}`}</td>
+            <td>{data._id}</td>
+          </Fragment>
+        }}
+      </TableRow>
+
+  </Table>
+
+  </ThemeProvider>
+</Playground>
+
+<Playground>
+  <ThemeProvider>
+    <Table
+      name='TableRows'
+      caption="Table caption"
+      baseRoute='/table/#'
+      hook={useTableRow}
+      uidKey='_id'
+    >
+      <TableColumn heading='Key' />
+      <TableColumn heading='Value' />
+
+      <TableRows uid='rows'>
+        {({ data }) => {
+          return Object.keys(data).map(key => <tr key={key}>
+            <td>{key}</td>
+            <td>{data[key]}</td>
+          </tr>)
+        }}
+      </TableRows>
     </Table>
 
   </ThemeProvider>

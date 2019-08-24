@@ -29,10 +29,14 @@ export const TableView = React.memo(function TableView({
 
       const { heading, uid } = child.props
 
-      if (uid === 'detail') {
-        return [<th key={i}></th>, ...acc]
-      } else {
-        return [...acc, <th key={i}>{heading}</th>]
+      switch (true) {
+        case uid === 'detail':
+          return [<th key={i}></th>, ...acc]
+        case !heading:
+          return acc
+
+        default:
+          return [...acc, <th key={i}>{heading}</th>]
       }
     }
 
@@ -41,14 +45,13 @@ export const TableView = React.memo(function TableView({
 
   const headings = useCallback(
     function headings() {
-      if (Array.isArray(children)) {
-        return reduceChildren(children)
-      } else {
-        return children.props.uid === 'detail' ? (
-          <th></th>
-        ) : (
-          <th>{children.props.heading}</th>
-        )
+      switch (true) {
+        case Array.isArray(children):
+          return reduceChildren(children)
+        case children.props.uid === 'detail':
+          return <th></th>
+        default:
+          return <th>{children.props.heading}</th>
       }
     },
     [children]

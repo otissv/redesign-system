@@ -1,5 +1,6 @@
-import React, { useMemo, useContext, useEffect } from 'react'
+import React, { useMemo, useContext, useEffect, Fragment } from 'react'
 import styled from 'styled-components'
+import isEmpty from 'lodash/isEmpty'
 
 import { Base } from '../Base'
 import { RowDetailInterface, TableColumnContextInterface } from './table.types'
@@ -42,40 +43,57 @@ export function TableColumnProvider({
 
   let Detail = React.useRef(() => null)
   let hasDetail = React.useRef(false)
+  let Rows = React.useRef(() => null)
 
-  const columns = useMemo(
-    () =>
-      Array.isArray(children)
-        ? children.reduce((acc: any[], child: any) => {
-            const { condition, uid } = child.props || {
-              condition: null,
-              uid: null,
-            }
-            const isDetail = uid === 'detail'
-            const showDetail = condition && condition({ data })
+  const columns = useMemo(() => {
+    if (Array.isArray(children)) {
+      return children.reduce((acc: any[], child: any) => {
+        const { condition, uid } = child.props || {
+          condition: null,
+          uid: null,
+        }
 
-            switch (true) {
-              case isDetail && condition == null: {
-                Detail.current = () => child
-                hasDetail.current = true
-                return acc
-              }
-              case isDetail && showDetail: {
-                Detail.current = () => child
-                hasDetail.current = true
-                return acc
-              }
-              case isDetail && condition && !showDetail: {
-                return [<td></td>, ...acc]
-              }
-              default: {
-                return [...acc, child]
-              }
-            }
-          }, [])
-        : children,
-    [children, Detail]
-  )
+        const isDetail = uid === 'detail'
+        const isRow = uid === 'row'
+        const isRows = uid === 'rows'
+        const showDetail = condition && condition({ data })
+        switch (true) {
+          case isDetail && condition == null: {
+            Detail.current = () => child
+            hasDetail.current = true
+            return acc
+          }
+          case isDetail && showDetail: {
+            Detail.current = () => child
+            hasDetail.current = true
+            return acc
+          }
+          case isDetail && condition && !showDetail: {
+            return [<td key="detail"></td>, ...acc]
+          }
+          case isRow: {
+            const row = React.cloneElement(child, { data, key: uid })
+            return [...acc, row]
+          }
+          case isRows: {
+            const rows = React.cloneElement(child, { data, key: uid })
+            Rows.current = () => rows
+            return acc
+          }
+          case !child.props.children && !child.props.prop: {
+            return acc
+          }
+          default: {
+            return [...acc, child]
+          }
+        }
+      }, [])
+    } else if (typeof children.props.children === 'function') {
+      return children.props.children({ data })
+    } else {
+      return children
+    }
+  }, [children, Detail])
 
   const context = useMemo(
     () => ({
@@ -91,12 +109,15 @@ export function TableColumnProvider({
 
   return (
     <TableColumnContext.Provider value={context}>
-      <tr>
-        {hasDetail.current && (
-          <RowIndicator expanded={isExpanded} setExpanded={setExpanded} />
-        )}
-        {columns}
-      </tr>
+      <Columns
+        columns={columns}
+        hasDetail={hasDetail}
+        RowIndicator={RowIndicator}
+        isExpanded={isExpanded}
+        setExpanded={setExpanded}
+      />
+
+      <Rows.current />
 
       {hasDetail.current && (
         <RowDetail expanded={isExpanded} colSpan={children.length}>
@@ -106,6 +127,33 @@ export function TableColumnProvider({
     </TableColumnContext.Provider>
   )
 }
+
+const Columns = React.memo(
+  ({ columns, hasDetail, RowIndicator, isExpanded, setExpanded }: any) => {
+    switch (true) {
+      case !isEmpty(columns) && hasDetail.current: {
+        return (
+          <tr>
+            <RowIndicator expanded={isExpanded} setExpanded={setExpanded} />
+            {columns}
+          </tr>
+        )
+      }
+      case isEmpty(columns) && hasDetail.current: {
+        return (
+          <tr>
+            <RowIndicator expanded={isExpanded} setExpanded={setExpanded} />
+          </tr>
+        )
+      }
+      case !isEmpty(columns) && !hasDetail.current: {
+        return <tr>{columns}</tr>
+      }
+      default:
+        return null
+    }
+  }
+)
 
 const RowDetail = React.memo(function RowDetail({
   children,

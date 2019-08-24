@@ -21,6 +21,8 @@ export function tableTheme({
       padding: 0,
 
       '&:first-child': {
+        borderTop: border.thinTransparent,
+
         paddingLeft: unit[4],
       },
       '&:last-child': {
@@ -32,7 +34,7 @@ export function tableTheme({
       borderTop: border.thin,
     },
 
-    'tr:hover': {
+    'tbody tr:hover': {
       background: hover ? color['background-600'] : '',
       boxShadow: hover ? elevate[2] : '',
     },

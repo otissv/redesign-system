@@ -106,6 +106,16 @@ export interface TableRowComponentInterface {
   Download?: (props: TableToolbarDownloadButtonInterface) => React.ReactNode
 }
 
+export interface TableRowInterface {
+  children?: (data: { [key: string]: any }) => React.ReactNode
+  data: { [key: string]: any }
+}
+
+export interface TableRowsInterface {
+  children?: (data: { [key: string]: any }) => React.ReactNode
+  data: { [key: string]: any }
+}
+
 export interface TableBodyInterface extends BaseInterface {
   children?: any
   baseRoute?: string
