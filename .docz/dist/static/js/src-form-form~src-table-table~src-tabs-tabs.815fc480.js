@@ -1125,6 +1125,8 @@
                     })
                   : e
               )
+            case 'REPLACE':
+              return Object(r.a)({}, e, t.state)
             case 'REPLACE_ITEMS':
               var d = l(t.items, n.uid)
               return Object(r.a)({}, e, { items: d })
@@ -1253,4 +1255,4 @@
     },
   },
 ])
-//# sourceMappingURL=src-form-form~src-table-table~src-tabs-tabs.ddc2b2ec94e08ab89efa.js.map
+//# sourceMappingURL=src-form-form~src-table-table~src-tabs-tabs.3f9ce5501e6b05b8dcb7.js.map
