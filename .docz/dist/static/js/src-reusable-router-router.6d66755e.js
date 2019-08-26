@@ -314,7 +314,9 @@
           f = m.history,
           p = m.dispatch,
           x = !1,
-          y = null,
+          y = function() {
+            return null
+          },
           j = !0,
           O = !1,
           _ = void 0
@@ -474,14 +476,16 @@
           var t = e.children,
             n = e.active,
             r = void 0 === n ? window.location.pathname : n,
-            a = !1
-          var u = Object(o.useReducer)(
+            a = e.fallback,
+            u = void 0 === a ? 'Loading...' : a,
+            c = !1
+          var i = Object(o.useReducer)(
               function(e, t) {
                 switch (t.type) {
                   case 'ADD_ROUTE':
                     return [].concat(Object(m.a)(e), [t.route])
                   case 'BACK_ROUTE':
-                    return window.location.pathname === ''.concat(e.length - 1)
+                    return window.location.pathname === e[e.length - 2]
                       ? e.slice(0, e.length - 1)
                       : e
                   default:
@@ -490,14 +494,14 @@
               },
               [r]
             ),
-            c = Object(b.a)(u, 2),
-            i = c[0],
-            l = c[1],
-            f = i[i.length - 1]
+            l = Object(b.a)(i, 2),
+            f = l[0],
+            p = l[1],
+            x = f[f.length - 1]
           Object(o.useEffect)(function() {
             window.addEventListener('popstate', function(e) {
-              ;(a = !0),
-                l({
+              ;(c = !0),
+                p({
                   type: 'BACK_ROUTE',
                   route: e.currentTarget.location.pathname,
                 })
@@ -505,20 +509,24 @@
           }),
             Object(o.useEffect)(
               function() {
-                window.location.pathname === f ||
-                  a ||
-                  window.history.pushState(f, f, f),
-                  (a = !1)
+                window.location.pathname === x ||
+                  c ||
+                  window.history.pushState(x, x, x),
+                  (c = !1)
               },
-              [l, f]
+              [p, x]
             )
-          var p = Object(o.useMemo)(
+          var y = Object(o.useMemo)(
             function() {
-              return { history: i, route: f, dispatch: l }
+              return { history: f, route: x, dispatch: p }
             },
-            [f, i, l]
+            [x, f, p]
           )
-          return s.a.createElement(d.a.Provider, { value: p }, t)
+          return s.a.createElement(
+            d.a.Provider,
+            { value: y },
+            s.a.createElement(o.Suspense, { fallback: u }, t)
+          )
         })
       'undefined' !== typeof f &&
         f &&
@@ -603,4 +611,4 @@
     },
   },
 ])
-//# sourceMappingURL=src-reusable-router-router.39bee3e0c803f1c9c363.js.map
+//# sourceMappingURL=src-reusable-router-router.f74c2ab9f6d2313a0e74.js.map

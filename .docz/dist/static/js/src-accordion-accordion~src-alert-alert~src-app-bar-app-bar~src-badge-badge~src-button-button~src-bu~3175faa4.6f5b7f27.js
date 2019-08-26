@@ -171,7 +171,6 @@
       t.d(n, 'b', function() {
         return i
       })
-      t('./src/ThemeContext/ThemeContext.tsx')
       var a = t('./node_modules/react/index.js'),
         r = a.createContext({})
       function i() {
@@ -1785,9 +1784,10 @@
               if (!i(e)) return {}
               var c = e.split(' ')
               return Object.keys(c).reduce(function(e, i) {
+                var l = parseInt(i, 10)
                 return Object(
                   a.a
-                )({}, e, Object(o.a)({}, ''.concat(r, '-').concat(c[i]), t[n]))
+                )({}, e, Object(o.a)({}, ''.concat(r, '-').concat(c[l]), t[n]))
               }, {})
             })
           )
@@ -2162,4 +2162,4 @@
     },
   },
 ])
-//# sourceMappingURL=src-accordion-accordion~src-alert-alert~src-app-bar-app-bar~src-badge-badge~src-button-button~src-bu~3175faa4.39bee3e0c803f1c9c363.js.map
+//# sourceMappingURL=src-accordion-accordion~src-alert-alert~src-app-bar-app-bar~src-badge-badge~src-button-button~src-bu~3175faa4.f74c2ab9f6d2313a0e74.js.map

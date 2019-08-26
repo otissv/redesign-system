@@ -1524,7 +1524,7 @@
                     }
                   }, [])
                 : 'function' === typeof t.props.children
-                ? t.props.children({ data: d })
+                ? l.a.createElement('td', null, t.props.children({ data: d }))
                 : t
             },
             [t, g]
@@ -3298,7 +3298,11 @@
       function Pe(e) {
         var t = e.children,
           n = e.data
-        return 'function' === typeof t ? t({ data: n }) : t
+        return l.a.createElement(
+          o.Fragment,
+          null,
+          'function' === typeof t ? t({ data: n }) : t
+        )
       }
       function Ie(e) {
         var t = e.children,
@@ -3307,7 +3311,7 @@
           r = S(),
           i = r.data,
           b = r.index,
-          d = n && n({ data: i }),
+          d = (n && n({ data: i })) || !0,
           u = l.a.cloneElement(t, Object(s.a)({ data: i }, c, { index: b })),
           m = Object(o.useMemo)(
             function() {
@@ -3322,7 +3326,11 @@
       function Re(e) {
         var t = e.children,
           n = e.data
-        return 'function' === typeof t ? t({ data: n }) : t
+        return l.a.createElement(
+          o.Fragment,
+          null,
+          'function' === typeof t ? t({ data: n }) : t
+        )
       }
       'undefined' !== typeof we &&
         we &&
@@ -4327,4 +4335,4 @@
     },
   },
 ])
-//# sourceMappingURL=src-table-table.39bee3e0c803f1c9c363.js.map
+//# sourceMappingURL=src-table-table.f74c2ab9f6d2313a0e74.js.map
