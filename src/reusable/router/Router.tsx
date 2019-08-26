@@ -4,7 +4,10 @@ import RouteParser from 'route-parser'
 import { useRouter } from './RouterContext'
 import { ParamsType, RouterTypes, RouteTypes } from './router.types'
 
-function flattenRoutes(routes: RouteTypes[], parent?: RouteTypes) {
+function flattenRoutes(
+  routes: RouteTypes[],
+  parent?: RouteTypes
+): RouteTypes[] {
   return routes.reduce((accumulator, route) => {
     return route.children
       ? [...accumulator, ...flattenRoutes(route.children, route)]
@@ -33,13 +36,13 @@ export const Router = React.memo(function Router({
     routesProp,
   ])
   const { route, history, dispatch } = useRouter()
+
   let params: ParamsType = false
-  let Component = null
+  let Component: (props?: any) => any = () => null
 
   for (let item of routes) {
     const pattern = new RouteParser(item.path)
     const match = pattern.match(route)
-
     if (match) {
       params = match
       Component = item.component

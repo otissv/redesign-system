@@ -53,7 +53,6 @@ export const Table = React.memo(function Table({
   ])
 
   const {
-    active,
     loading,
     selected,
     dispatch: dispatchHook,

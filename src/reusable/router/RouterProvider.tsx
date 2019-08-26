@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useReducer } from 'react'
+import React, { Suspense, useEffect, useMemo, useReducer } from 'react'
 import { RouterContext } from './RouterContext'
 
 import { RouterProviderInterface } from './router.types'
@@ -6,6 +6,7 @@ import { RouterProviderInterface } from './router.types'
 export const RouterProvider = React.memo(function RouterProviderInterface({
   children,
   active = window.location.pathname,
+  fallback = 'Loading...',
 }: RouterProviderInterface) {
   let isBack = false
 
@@ -15,7 +16,7 @@ export const RouterProvider = React.memo(function RouterProviderInterface({
         return [...state, action.route]
       }
       case 'BACK_ROUTE': {
-        return window.location.pathname === `${state.length - 1}`
+        return window.location.pathname === state[state.length - 2]
           ? state.slice(0, state.length - 1)
           : state
       }
@@ -51,6 +52,8 @@ export const RouterProvider = React.memo(function RouterProviderInterface({
   ])
 
   return (
-    <RouterContext.Provider value={context}>{children}</RouterContext.Provider>
+    <RouterContext.Provider value={context}>
+      <Suspense fallback={fallback}>{children}</Suspense>
+    </RouterContext.Provider>
   )
 })

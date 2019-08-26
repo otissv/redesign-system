@@ -1,10 +1,6 @@
-import upperFirst from 'lodash/fp/upperFirst';
-import {
-  ThemeInterface,
-  SharedInterface,
-  UnitsInterface,
-} from '../theme.types';
-import { themeDefaults } from '../defaults.theme';
+import upperFirst from 'lodash/fp/upperFirst'
+import { ThemeInterface, SharedInterface, UnitsInterface } from '../theme.types'
+import { themeDefaults } from '../defaults.theme'
 
 export function sharedTheme({
   border,
@@ -45,62 +41,62 @@ export function sharedTheme({
     //     value === 'default' ? font.weight.default : font.weight[value],
     // }),
     ...shared,
-  };
-  return defaults;
+  }
+  return defaults
 }
 
 interface UnitPositionsInterface {
-  unit: UnitsInterface;
-  style: string;
+  unit: UnitsInterface
+  style: string
 }
 
 export function unitPositions({ unit, style }: UnitPositionsInterface) {
   const isValidStringValue = (value: any) =>
-    typeof value === 'string' || value.trim() !== '';
+    typeof value === 'string' || value.trim() !== ''
 
   const isValidNumberValue = (value: any) =>
-    typeof value === 'number' || value < 0;
+    typeof value === 'number' || value < 0
 
   const isValidUnitValue = (value: any) =>
     value !== 'string' &&
     isValidStringValue(value) &&
-    value.match(/%|px|rem|em|auto/);
+    value.match(/%|px|rem|em|auto/)
 
   function allPositions(value: string | number, prop: string) {
     switch (true) {
       case value === 'default':
-        return { [prop]: unit.default };
+        return { [prop]: unit.default }
       case isValidNumberValue(value):
-        return { [prop]: unit[value] };
+        return { [prop]: unit[value] }
       case isValidUnitValue(value) || isValidStringValue(value):
-        return { [prop]: value };
+        return { [prop]: value }
       default:
-        return undefined;
+        return undefined
     }
   }
 
   const reducer = (accumulator: { [key: string]: any }, key: string): any => {
-    if (key === 'default') return accumulator;
+    if (key === 'default') return accumulator
 
-    const prop = `${style}${upperFirst(key)}`;
+    const prop = `${style}${upperFirst(key)}`
 
     return {
       ...accumulator,
       [prop]: (value: string) => {
-        if (!isValidStringValue(value)) return {};
+        if (!isValidStringValue(value)) return {}
 
-        let positions = value.split(' ');
+        let positions = value.split(' ')
 
-        return Object.keys(positions).reduce(
-          (accum, pos: string) => ({
+        return Object.keys(positions).reduce((accum, pos: string) => {
+          const index = parseInt(pos, 10)
+          return {
             ...accum,
-            [`${style}-${positions[pos]}`]: unit[key],
-          }),
-          {}
-        );
+            [`${style}-${positions[index]}`]: unit[key],
+          }
+        }, {})
       },
-    };
-  };
+    }
+  }
 
   const initial = {
     [style]: (value: string) => allPositions(value, style),
@@ -109,7 +105,7 @@ export function unitPositions({ unit, style }: UnitPositionsInterface) {
     [`${style}Left`]: (value: string) => allPositions(value, `${style}Left`),
     [`${style}Right`]: (value: string) => allPositions(value, `${style}Right`),
     [`${style}Top`]: (value: string) => allPositions(value, `${style}Top`),
-  };
+  }
 
-  return Object.keys(unit).reduce(reducer, initial);
+  return Object.keys(unit).reduce(reducer, initial)
 }
