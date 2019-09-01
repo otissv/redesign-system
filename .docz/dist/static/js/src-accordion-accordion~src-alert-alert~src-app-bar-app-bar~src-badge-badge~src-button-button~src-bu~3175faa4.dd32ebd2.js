@@ -17,41 +17,15 @@
         l = t(
           './node_modules/styled-components/dist/styled-components.browser.esm.js'
         ),
-        d = t('./node_modules/react-pose/dist/react-pose.es.js'),
-        s = function(e) {
-          return 'function' === typeof e
+        s = t('./node_modules/react-pose/dist/react-pose.es.js'),
+        d = t('./src/utils/either.util.ts'),
+        u = function(e, n) {
+          return Object(d.a)(e, n)(e)
         }
-      s &&
-        s === Object(s) &&
-        Object.isExtensible(s) &&
-        Object.defineProperty(s, '__filemeta', {
-          enumerable: !0,
-          configurable: !0,
-          value: {
-            name: 'isFunction',
-            filename: 'src/utils/isFunction.util.ts',
-          },
-        })
-      var u = function(e, n) {
-        return function(t) {
-          return t ? (s(e) ? e() : e) : s(n) ? n() : n
-        }
-      }
       u &&
         u === Object(u) &&
         Object.isExtensible(u) &&
         Object.defineProperty(u, '__filemeta', {
-          enumerable: !0,
-          configurable: !0,
-          value: { name: 'either', filename: 'src/utils/either.util.ts' },
-        })
-      var b = function(e, n) {
-        return u(e, n)(e)
-      }
-      b &&
-        b === Object(b) &&
-        Object.isExtensible(b) &&
-        Object.defineProperty(b, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: { name: 'setTheme', filename: 'src/utils/setTheme.util.ts' },
@@ -76,25 +50,25 @@
             filename: 'src/utils/sharedStyles.utils.ts',
           },
         })
-      var f = t('./src/ThemeContext/index.tsx')
-      function m() {
+      var b = t('./src/ThemeContext/index.tsx')
+      function f() {
         var e = Object(a.a)(['\n    ', '\n    ', '\n    ', '\n  '])
         return (
-          (m = function() {
+          (f = function() {
             return e
           }),
           e
         )
       }
       t.d(n, 'a', function() {
-        return g
+        return m
       })
-      var g = o.a.memo(function(e) {
+      var m = o.a.memo(function(e) {
         var n = e.animate,
           t = e.children,
           a = e.css,
-          s = e.as,
-          u = e.state,
+          d = e.as,
+          m = e.state,
           g = e.theme,
           v = e.themed,
           h = void 0 === v ? [] : v,
@@ -107,7 +81,7 @@
             'theme',
             'themed',
           ]),
-          x = Object(f.useTheme)().theme,
+          x = Object(b.useTheme)().theme,
           j = Object(c.useCallback)(
             function(e) {
               return h.reduce(function(n, t) {
@@ -116,32 +90,32 @@
             },
             [h]
           ),
-          A = Object(c.useRef)(d.b[s || 'div'](n)),
-          E = Object(c.useRef)(Object(l.default)(A.current)(m(), j, p, a)),
+          A = Object(c.useRef)(s.b[d || 'div'](n)),
+          E = Object(c.useRef)(Object(l.default)(A.current)(f(), j, p, a)),
           O = Object(c.useMemo)(
             function() {
               return E.current
             },
-            [s, n, a, j, p]
+            [d, n, a, j, p]
           ),
-          F = b(g, x)
-        return o.a.createElement(O, Object.assign({ pose: u, theme: F }, y), t)
+          F = u(g, x)
+        return o.a.createElement(O, Object.assign({ pose: m, theme: F }, y), t)
       })
-      'undefined' !== typeof g &&
-        g &&
-        g === Object(g) &&
-        Object.isExtensible(g) &&
-        Object.defineProperty(g, '__filemeta', {
+      'undefined' !== typeof m &&
+        m &&
+        m === Object(m) &&
+        Object.isExtensible(m) &&
+        Object.defineProperty(m, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: { name: 'Base', filename: 'src/Base/Base.tsx' },
         })
-      n.b = g
-      'undefined' !== typeof g &&
-        g &&
-        g === Object(g) &&
-        Object.isExtensible(g) &&
-        Object.defineProperty(g, '__filemeta', {
+      n.b = m
+      'undefined' !== typeof m &&
+        m &&
+        m === Object(m) &&
+        Object.isExtensible(m) &&
+        Object.defineProperty(m, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: { name: 'Base', filename: 'src/Base/Base.tsx' },
@@ -225,17 +199,17 @@
         c = t.n(i),
         o = t('./src/ThemeContext/ThemeContext.tsx'),
         l = t('./src/theme/index.ts'),
-        d = t(
+        s = t(
           './node_modules/docz/node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js'
         ),
-        s = t(
+        d = t(
           './node_modules/styled-components/dist/styled-components.browser.esm.js'
         ),
         u = t('./node_modules/styled-normalize/dist/index.js'),
-        b = t.n(u),
-        p = t('./src/ThemeContext/index.tsx')
+        p = t.n(u),
+        b = t('./src/ThemeContext/index.tsx')
       function f() {
-        var e = Object(d.a)([
+        var e = Object(s.a)([
           '\n    ',
           '\n\n    html {\n      line-height: ',
           ';\n      text-rendering: optimizeLegibility;\n      -ms-text-size-adjust: 100%;\n      -webkit-text-size-adjust: 100%;\n        box-sizing: border-box;\n        // overflow-y: scroll;\n      \n    }\n    \n    html,\n    body {\n      height: 100%;\n    }\n\n    html,\n    body,\n    pre {\n      background: ',
@@ -316,7 +290,7 @@
         )
       }
       var m = c.a.memo(function() {
-        var e = Object(p.useTheme)(),
+        var e = Object(b.useTheme)(),
           n = e.theme,
           t = e.theme,
           a = t.border,
@@ -324,9 +298,9 @@
           i = t.font,
           o = t.scrollbar,
           l = t.unit,
-          d = Object(s.createGlobalStyle)(
+          s = Object(d.createGlobalStyle)(
             f(),
-            b.a,
+            p.a,
             i.lineHeight.default,
             r.background,
             r.foreground,
@@ -397,7 +371,7 @@
             r.foreground,
             l[1]
           )
-        return c.a.createElement(d, { theme: n })
+        return c.a.createElement(s, { theme: n })
       })
       'undefined' !== typeof m &&
         m &&
@@ -451,19 +425,19 @@
               t
             )
           ),
-          d = i.useState(Object(r.a)({}, c)),
-          s = Object(a.a)(d, 2),
-          u = s[0],
-          b = s[1],
-          p = i.useMemo(
+          s = i.useState(Object(r.a)({}, c)),
+          d = Object(a.a)(s, 2),
+          u = d[0],
+          p = d[1],
+          b = i.useMemo(
             function() {
-              return { theme: u, setTheme: b }
+              return { theme: u, setTheme: p }
             },
-            [u, b]
+            [u, p]
           )
         return i.createElement(
           o.a.Provider,
-          { value: p },
+          { value: b },
           i.createElement(m, null),
           n
         )
@@ -1052,17 +1026,17 @@
           './node_modules/docz/node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/defineProperty.js'
         ),
         l = t('./node_modules/lodash/fp/upperFirst.js'),
-        d = t.n(l),
-        s = t('./node_modules/lodash/camelCase.js'),
-        u = t.n(s)
-      function b(e) {
+        s = t.n(l),
+        d = t('./node_modules/lodash/camelCase.js'),
+        u = t.n(d)
+      function p(e) {
         var n = e.border,
           t = e.color,
           r = 'solid',
           c = 'dashed',
           l = t['grey-700'],
-          s = t['grey-700'],
-          b = Object(a.a)(
+          d = t['grey-700'],
+          p = Object(a.a)(
             {
               none: 'none',
               style: r,
@@ -1070,7 +1044,7 @@
               thickWidth: '2px',
               thickColor: l,
               thinWidth: '1px',
-              thinColor: s,
+              thinColor: d,
               thick: ''
                 .concat('2px', ' ')
                 .concat(r, ' ')
@@ -1093,19 +1067,19 @@
               thin: ''
                 .concat('1px', ' ')
                 .concat(r, ' ')
-                .concat(s),
+                .concat(d),
               thinDashed: ''
                 .concat('1px', ' ')
                 .concat(c, '  ')
-                .concat(s),
+                .concat(d),
               thinDashedInvert: ''
                 .concat('1px', ' ')
                 .concat(c, '  ')
-                .concat(s),
+                .concat(d),
               thinInvert: ''
                 .concat('1px', ' ')
                 .concat(r, ' ')
-                .concat(s),
+                .concat(d),
               thinTransparent: ''
                 .concat('1px', ' ')
                 .concat(r, ' rgba(0, 0, 0, 0);'),
@@ -1119,7 +1093,7 @@
                 Object(o.a)(i, n, t[n]),
                 Object(o.a)(
                   i,
-                  ''.concat(u()('thick'.concat(d()(n)))),
+                  ''.concat(u()('thick'.concat(s()(n)))),
                   ''
                     .concat('2px', ' ')
                     .concat(r, ' ')
@@ -1127,7 +1101,7 @@
                 ),
                 Object(o.a)(
                   i,
-                  ''.concat(u()('thin'.concat(d()(n)))),
+                  ''.concat(u()('thin'.concat(s()(n)))),
                   ''
                     .concat('1px', ' ')
                     .concat(r, ' ')
@@ -1135,7 +1109,7 @@
                 ),
                 Object(o.a)(
                   i,
-                  ''.concat(u()('thickDashed'.concat(d()(n)))),
+                  ''.concat(u()('thickDashed'.concat(s()(n)))),
                   ''
                     .concat('2px', ' ')
                     .concat(c, ' ')
@@ -1143,7 +1117,7 @@
                 ),
                 Object(o.a)(
                   i,
-                  ''.concat(u()('thinDashed'.concat(d()(n)))),
+                  ''.concat(u()('thinDashed'.concat(s()(n)))),
                   ''
                     .concat('1px', ' ')
                     .concat(c, ' ')
@@ -1153,12 +1127,12 @@
               )
             }, {})
           )
-        return i()(n)(b)
+        return i()(n)(p)
       }
-      b &&
-        b === Object(b) &&
-        Object.isExtensible(b) &&
-        Object.defineProperty(b, '__filemeta', {
+      p &&
+        p === Object(p) &&
+        Object.isExtensible(p) &&
+        Object.defineProperty(p, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: {
@@ -1166,13 +1140,13 @@
             filename: 'src/theme/border/border.theme.ts',
           },
         })
-      var p = t('./src/theme/color/color.swatches.ts')
+      var b = t('./src/theme/color/color.swatches.ts')
       function f(e) {
         var n = e.color,
           t = void 0 === n ? {} : n,
           r = e.swatches,
           c = void 0 === r ? {} : r,
-          o = i()(p.a)(c)
+          o = i()(b.a)(c)
         return Object(a.a)(
           {
             foreground: o[t.foreground],
@@ -1744,7 +1718,7 @@
           l = function(e) {
             return 'string' !== e && i(e) && e.match(/%|px|rem|em|auto/)
           }
-        function s(e, n) {
+        function d(e, n) {
           switch (!0) {
             case 'default' === e:
               return Object(o.a)({}, n, t.default)
@@ -1759,24 +1733,24 @@
         var u =
           ((n = {}),
           Object(o.a)(n, r, function(e) {
-            return s(e, r)
+            return d(e, r)
           }),
           Object(o.a)(n, ''.concat(r, 'Bottom'), function(e) {
-            return s(e, ''.concat(r, 'Bottom'))
+            return d(e, ''.concat(r, 'Bottom'))
           }),
           Object(o.a)(n, ''.concat(r, 'Left'), function(e) {
-            return s(e, ''.concat(r, 'Left'))
+            return d(e, ''.concat(r, 'Left'))
           }),
           Object(o.a)(n, ''.concat(r, 'Right'), function(e) {
-            return s(e, ''.concat(r, 'Right'))
+            return d(e, ''.concat(r, 'Right'))
           }),
           Object(o.a)(n, ''.concat(r, 'Top'), function(e) {
-            return s(e, ''.concat(r, 'Top'))
+            return d(e, ''.concat(r, 'Top'))
           }),
           n)
         return Object.keys(t).reduce(function(e, n) {
           if ('default' === n) return e
-          var c = ''.concat(r).concat(d()(n))
+          var c = ''.concat(r).concat(s()(n))
           return Object(a.a)(
             {},
             e,
@@ -1801,7 +1775,7 @@
           r = Object(a.a)({}, e, { color: n, unit: t }),
           i = {
             animation: c(r),
-            border: b(r),
+            border: p(r),
             color: n,
             elevate: m(r),
             font: g(r),
@@ -2160,6 +2134,54 @@
             },
           })
     },
+    './src/utils/either.util.ts': function(e, n, t) {
+      'use strict'
+      var a = function(e) {
+        return 'function' === typeof e
+      }
+      function r(e, n) {
+        return function(t) {
+          return (Array.isArray(t)
+          ? t
+              .map(function(e) {
+                return !!e
+              })
+              .some(function(e) {
+                return !0 === e
+              })
+          : !!t)
+            ? a(e)
+              ? e()
+              : e
+            : a(n)
+            ? n()
+            : n
+        }
+      }
+      'undefined' !== typeof a &&
+        a &&
+        a === Object(a) &&
+        Object.isExtensible(a) &&
+        Object.defineProperty(a, '__filemeta', {
+          enumerable: !0,
+          configurable: !0,
+          value: {
+            name: 'isFunction',
+            filename: 'src/utils/isFunction.util.ts',
+          },
+        }),
+        t.d(n, 'a', function() {
+          return r
+        }),
+        r &&
+          r === Object(r) &&
+          Object.isExtensible(r) &&
+          Object.defineProperty(r, '__filemeta', {
+            enumerable: !0,
+            configurable: !0,
+            value: { name: 'either', filename: 'src/utils/either.util.ts' },
+          })
+    },
   },
 ])
-//# sourceMappingURL=src-accordion-accordion~src-alert-alert~src-app-bar-app-bar~src-badge-badge~src-button-button~src-bu~3175faa4.f74c2ab9f6d2313a0e74.js.map
+//# sourceMappingURL=src-accordion-accordion~src-alert-alert~src-app-bar-app-bar~src-badge-badge~src-button-button~src-bu~3175faa4.ba0686dcc6594edec57b.js.map

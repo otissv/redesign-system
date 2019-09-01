@@ -11,15 +11,15 @@
         ),
         a = t('./node_modules/react/index.js'),
         l = t.n(a),
-        c = t('./src/Base/index.tsx')
-      function i(e) {
+        i = t('./src/Base/index.tsx')
+      function c(e) {
         var n = e.theme,
           t = n.animation,
           r = n.color,
           o = n.border,
           a = n.font,
           l = n.unit,
-          c = { background: r.default, borderBottom: o.thinDefault }
+          i = { background: r.default, borderBottom: o.thinDefault }
         return {
           color: r.white,
           background: r.default,
@@ -40,7 +40,7 @@
           position: 'relative',
           '&:hover': { background: r.default2, borderBottom: o.thinDefault2 },
           '&:focus': { boxShadow: '0 0 0 0.2em '.concat(r.outline), zIndex: 2 },
-          '&:active': c,
+          '&:active': i,
         }
       }
       function d(e) {
@@ -70,7 +70,7 @@
             },
             '&:active': { background: r.active, border: o.thinActive },
           },
-          c = {
+          i = {
             background: r.action,
             border: o.thinAction,
             color: r.white,
@@ -81,7 +81,7 @@
             },
             '&:action': { background: r.action, border: o.thinAction },
           },
-          i = {
+          c = {
             background: r.danger,
             border: o.thinDanger,
             color: r.white,
@@ -255,7 +255,7 @@
             }
           case 'action':
           case 'primary-action':
-            return c
+            return i
           case 'secondary-action':
             return {
               background: 'none',
@@ -294,7 +294,7 @@
             }
           case 'danger':
           case 'primary-danger':
-            return i
+            return c
           case 'secondary-danger':
             return {
               background: 'none',
@@ -487,11 +487,11 @@
       function u(e) {
         return e.stretch ? { width: '100%' } : {}
       }
-      'undefined' !== typeof i &&
-        i &&
-        i === Object(i) &&
-        Object.isExtensible(i) &&
-        Object.defineProperty(i, '__filemeta', {
+      'undefined' !== typeof c &&
+        c &&
+        c === Object(c) &&
+        Object.isExtensible(c) &&
+        Object.defineProperty(c, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: {
@@ -544,9 +544,9 @@
           s = void 0 === t ? '' : t,
           m = e.onClick,
           p = e.as,
-          g = void 0 === p ? 'button' : p,
-          f = e.themed,
-          j = void 0 === f ? [] : f,
+          f = void 0 === p ? 'button' : p,
+          g = e.themed,
+          j = void 0 === g ? [] : g,
           O = Object(o.a)(e, [
             'children',
             'className',
@@ -560,13 +560,13 @@
             },
             [s]
           ),
-          I = O.disabled,
-          y = O.appearance,
+          y = O.disabled,
+          I = O.appearance,
           v = Object(a.useMemo)(
             function() {
-              return [i, d, b, u].concat(Object(r.a)(j))
+              return [c, d, b, u].concat(Object(r.a)(j))
             },
-            [i, d, b, u, j]
+            [c, d, b, u, j]
           ),
           w = Object(a.useCallback)(
             function(e) {
@@ -575,21 +575,21 @@
             [m]
           )
         return l.a.createElement(
-          c.Base,
+          i.Base,
           Object.assign(
             {
-              as: g,
+              as: f,
               className: h,
               themed: v,
               onClick: w,
               role: 'button',
               tabIndex: 0,
             },
-            I ||
-              'disabled' === y ||
-              'primary-disabled' === y ||
-              'secondary-disabled' === y ||
-              'tertiary-disabled' === y
+            y ||
+              'disabled' === I ||
+              'primary-disabled' === I ||
+              'secondary-disabled' === I ||
+              'tertiary-disabled' === I
               ? { disabled: !0 }
               : {},
             O
@@ -627,8 +627,8 @@
         ),
         a = t('./node_modules/react/index.js'),
         l = t.n(a),
-        c = t('./src/Base/index.tsx')
-      function i(e) {
+        i = t('./src/Base/index.tsx')
+      function c(e) {
         var n = e.appearance,
           t = e.theme,
           r = t.border,
@@ -643,12 +643,12 @@
             backgroundColor: o['action-500'],
             border: '1px solid '.concat(o['action-500']),
           },
-          c = {
+          i = {
             color: o['danger-050'],
             backgroundColor: o['danger-500'],
             border: '1px solid '.concat(o['danger-500']),
           },
-          i = {
+          c = {
             color: o['success-050'],
             backgroundColor: o['success-500'],
             border: '1px solid '.concat(o['success-500']),
@@ -705,7 +705,7 @@
             }
           case 'danger':
           case 'primary-danger':
-            return c
+            return i
           case 'secondary-danger':
             return {
               color: o['danger-800'],
@@ -720,7 +720,7 @@
             }
           case 'success':
           case 'primary-success':
-            return i
+            return c
           case 'secondary-success':
             return {
               color: o['success-800'],
@@ -752,11 +752,11 @@
             return {}
         }
       }
-      'undefined' !== typeof i &&
-        i &&
-        i === Object(i) &&
-        Object.isExtensible(i) &&
-        Object.defineProperty(i, '__filemeta', {
+      'undefined' !== typeof c &&
+        c &&
+        c === Object(c) &&
+        Object.isExtensible(c) &&
+        Object.defineProperty(c, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: {
@@ -782,12 +782,12 @@
           ),
           p = Object(a.useMemo)(
             function() {
-              return [i].concat(Object(r.a)(u))
+              return [c].concat(Object(r.a)(u))
             },
-            [i, u]
+            [c, u]
           )
         return l.a.createElement(
-          c.Base,
+          i.Base,
           Object.assign({ className: m, themed: p }, s),
           n
         )
@@ -821,8 +821,8 @@
         o = t('./node_modules/react/index.js'),
         a = t.n(o),
         l = t('./node_modules/@mdx-js/react/dist/index.es.js'),
-        c = t('./node_modules/docz/dist/index.esm.js'),
-        i = t(
+        i = t('./node_modules/docz/dist/index.esm.js'),
+        c = t(
           './node_modules/styled-components/dist/styled-components.browser.esm.js'
         ),
         d = t(
@@ -833,18 +833,10 @@
         ),
         u = t('./src/MaterialIcons/CaretDown.tsx'),
         s = t('./src/Portal/index.ts'),
-        m = t(
-          './node_modules/docz/node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectDestructuringEmpty.js'
-        )
-      function p(e) {
-        return Object(m.a)(e), { position: 'relative' }
-      }
-      function g(e) {
-        return { display: 'inline-block', width: e.stretch ? '100%' : 'auto' }
-      }
-      function f(e) {
-        return Object(m.a)(e), { position: 'absolute', zIndex: 8 }
-      }
+        m = t('./src/utils/either.util.ts'),
+        p = function(e) {
+          return { top: e.offsetTop, left: e.offsetLeft }
+        }
       'undefined' !== typeof p &&
         p &&
         p === Object(p) &&
@@ -853,21 +845,128 @@
           enumerable: !0,
           configurable: !0,
           value: {
-            name: 'dropdownTheme',
-            filename: 'src/Dropdown/dropdown.theme.ts',
+            name: '_pos',
+            filename: 'src/reusable/positionOffset/positionOffset.tsx',
           },
         }),
-        g &&
-          g === Object(g) &&
-          Object.isExtensible(g) &&
-          Object.defineProperty(g, '__filemeta', {
+        'undefined' !== typeof p &&
+          p &&
+          p === Object(p) &&
+          Object.isExtensible(p) &&
+          Object.defineProperty(p, '__filemeta', {
             enumerable: !0,
             configurable: !0,
             value: {
-              name: 'dropdownContainerTheme',
-              filename: 'src/Dropdown/dropdown.theme.ts',
+              name: 'pos',
+              filename: 'src/reusable/positionOffset/positionOffset.tsx',
             },
-          }),
+          })
+      var f = function(e) {
+        return { height: e.offsetHeight, width: e.offsetWidth }
+      }
+      function g(e) {
+        var n,
+          t = e.boundary,
+          r = e.element,
+          o = e.flip,
+          a = e.target
+        n = t
+          ? f(t)
+          : {
+              width: Math.max(
+                document.documentElement.clientWidth,
+                window.innerWidth || 0
+              ),
+              height: Math.max(
+                document.documentElement.clientHeight,
+                window.innerHeight || 0
+              ),
+            }
+        var l,
+          i,
+          c,
+          d,
+          b = p(a),
+          u = f(a),
+          s = a.getBoundingClientRect(),
+          g = { pos: p(r), dim: f(r), boundary: r.getBoundingClientRect() },
+          j = Object(m.a)(
+            function() {
+              return g.boundary.top + g.dim.height
+            },
+            function() {
+              return g.dim.height
+            }
+          ),
+          O = Object(m.a)(
+            function() {
+              return b.left + u.width
+            },
+            function() {
+              return b.left - g.dim.width
+            }
+          ),
+          h = g.boundary.left,
+          y = g.boundary.left + g.dim.width - u.width
+        o
+          ? ((l = j(s.top - g.dim.height < 0)),
+            (i = j(s.top + g.dim.height + u.height < n.height)),
+            (c = O(s.left - g.dim.width < 0)),
+            (d = O(s.left + g.dim.width + u.width < n.width)))
+          : ((l = j(!1)), (i = j(!0)), (c = O(!1)), (d = O(!0)))
+        var I = g.boundary.left + g.dim.width - (g.boundary.left + b.left),
+          v = i - (g.dim.height + u.height) / 2,
+          w = {
+            'bottom-left': { top: i, left: h },
+            'bottom-center': { top: i, left: I },
+            'bottom-right': { top: i, left: y },
+            'top-left': { top: l, left: h },
+            'top-center': { top: l, left: I },
+            'top-right': { top: l, left: y },
+            'left-top': { top: l, left: c },
+            'left-center': { top: v, left: c },
+            'left-bottom': { top: i, left: c },
+            'right-top': { top: l, left: d },
+            'right-center': { top: v, left: d },
+            'right-bottom': { top: i, left: d },
+          }
+        return function(e) {
+          return w[e] || w['bottom-left']
+        }
+      }
+      function j() {
+        return {
+          dim: function(e) {
+            return f(e)
+          },
+          offset: function(e) {
+            return g(e)
+          },
+          pos: function(e) {
+            return p(e)
+          },
+        }
+      }
+      function O() {
+        return function() {
+          return {
+            top: window.pageYOffset || document.documentElement.scrollTop,
+            left: window.pageXOffset || document.documentElement.scrollLeft,
+          }
+        }
+      }
+      'undefined' !== typeof f &&
+        f &&
+        f === Object(f) &&
+        Object.isExtensible(f) &&
+        Object.defineProperty(f, '__filemeta', {
+          enumerable: !0,
+          configurable: !0,
+          value: {
+            name: '_dim',
+            filename: 'src/reusable/positionOffset/positionOffset.tsx',
+          },
+        }),
         'undefined' !== typeof f &&
           f &&
           f === Object(f) &&
@@ -876,126 +975,251 @@
             enumerable: !0,
             configurable: !0,
             value: {
+              name: 'dim',
+              filename: 'src/reusable/positionOffset/positionOffset.tsx',
+            },
+          }),
+        g &&
+          g === Object(g) &&
+          Object.isExtensible(g) &&
+          Object.defineProperty(g, '__filemeta', {
+            enumerable: !0,
+            configurable: !0,
+            value: {
+              name: '_offset',
+              filename: 'src/reusable/positionOffset/positionOffset.tsx',
+            },
+          }),
+        g &&
+          g === Object(g) &&
+          Object.isExtensible(g) &&
+          Object.defineProperty(g, '__filemeta', {
+            enumerable: !0,
+            configurable: !0,
+            value: {
+              name: 'offset',
+              filename: 'src/reusable/positionOffset/positionOffset.tsx',
+            },
+          }),
+        j &&
+          j === Object(j) &&
+          Object.isExtensible(j) &&
+          Object.defineProperty(j, '__filemeta', {
+            enumerable: !0,
+            configurable: !0,
+            value: {
+              name: 'usePositionOffset',
+              filename: 'src/reusable/positionOffset/positionOffset.tsx',
+            },
+          }),
+        O &&
+          O === Object(O) &&
+          Object.isExtensible(O) &&
+          Object.defineProperty(O, '__filemeta', {
+            enumerable: !0,
+            configurable: !0,
+            value: {
+              name: 'useScrollPosition',
+              filename: 'src/reusable/scrollPosition/useScrollPosition.ts',
+            },
+          })
+      var h = t(
+        './node_modules/docz/node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectDestructuringEmpty.js'
+      )
+      function y(e) {
+        return Object(h.a)(e), { position: 'relative' }
+      }
+      function I(e) {
+        return { display: 'inline-block', width: e.stretch ? '100%' : 'auto' }
+      }
+      function v(e) {
+        return Object(h.a)(e), { position: 'absolute', zIndex: 8 }
+      }
+      'undefined' !== typeof y &&
+        y &&
+        y === Object(y) &&
+        Object.isExtensible(y) &&
+        Object.defineProperty(y, '__filemeta', {
+          enumerable: !0,
+          configurable: !0,
+          value: {
+            name: 'dropdownTheme',
+            filename: 'src/Dropdown/dropdown.theme.ts',
+          },
+        }),
+        I &&
+          I === Object(I) &&
+          Object.isExtensible(I) &&
+          Object.defineProperty(I, '__filemeta', {
+            enumerable: !0,
+            configurable: !0,
+            value: {
+              name: 'dropdownContainerTheme',
+              filename: 'src/Dropdown/dropdown.theme.ts',
+            },
+          }),
+        'undefined' !== typeof v &&
+          v &&
+          v === Object(v) &&
+          Object.isExtensible(v) &&
+          Object.defineProperty(v, '__filemeta', {
+            enumerable: !0,
+            configurable: !0,
+            value: {
               name: 'dropdownContentTheme',
               filename: 'src/Dropdown/dropdown.theme.ts',
             },
           })
-      var j = t('./src/Button/Button.tsx'),
-        O = t('./src/Base/Base.tsx'),
-        h = a.a.memo(function(e) {
+      var w = t('./src/Button/Button.tsx'),
+        x = t('./src/Base/Base.tsx'),
+        k = a.a.memo(function(e) {
           var n = e.children,
             t = e.className,
             l = void 0 === t ? '' : t,
-            c = e.label,
-            i = e.animate,
+            i = e.label,
+            c = e.animate,
             m = e.themed,
-            h = void 0 === m ? [] : m,
-            I = e.stretch,
-            y = void 0 !== I && I,
-            v = Object(r.a)(e, [
+            p = void 0 === m ? [] : m,
+            f = e.stretch,
+            g = void 0 !== f && f,
+            h = e.position,
+            k = void 0 === h ? 'bottom-left' : h,
+            D = (e.hover, e.noFlip, e.justify, e.opened),
+            C = void 0 !== D && D,
+            _ = Object(r.a)(e, [
               'children',
               'className',
               'label',
               'animate',
               'themed',
               'stretch',
+              'position',
+              'hover',
+              'noFlip',
+              'justify',
+              'opened',
             ]),
-            w = Object(o.useState)(!1),
-            x = Object(b.a)(w, 2),
-            k = x[0],
-            D = x[1],
-            C = Object(o.useMemo)(
+            T = Object(o.useState)(C),
+            P = Object(b.a)(T, 2),
+            S = P[0],
+            z = P[1],
+            E = Object(o.useMemo)(
               function() {
                 return 'Dropdown '.concat(l)
               },
               [l]
             ),
-            T = Object(o.useMemo)(
+            R = j().offset,
+            B = Object(o.useRef)(),
+            A = Object(o.useRef)(),
+            M = Object(o.useState)({ top: 0, left: 0 }),
+            W = Object(b.a)(M, 2),
+            N = (W[0], W[1]),
+            F = Object(o.useRef)({}),
+            H = O(),
+            L = Object(o.useMemo)(
               function() {
-                return [g]
+                return [I]
               },
-              [g]
+              [I]
             ),
-            _ = Object(o.useMemo)(
+            X = Object(o.useMemo)(
               function() {
-                return [p, f].concat(Object(d.a)(h))
+                return [y, v].concat(Object(d.a)(p))
               },
-              [p, f, h]
+              [y, v, p]
             ),
-            P = Object(o.useCallback)(
+            J = Object(o.useCallback)(
               function(e) {
-                e.preventDefault, D(!k)
+                e.preventDefault, z(!S)
+                var n = B.current && B.current.children[0],
+                  t = H(),
+                  r = t.top,
+                  o = t.left
+                if (n) {
+                  var a = R({ element: n, target: A.current })(k)
+                  F.current = { top: r + a.top, left: o + a.left }
+                }
               },
-              [D]
+              [B, F, A, R, k, N, z, H]
             ),
-            z = Object(o.useMemo)(
+            q = Object(o.useMemo)(
               function() {
-                return i || { opened: { opacity: 1 }, closed: { opacity: 0 } }
+                return (
+                  c || {
+                    opened: { applyAtStart: { display: 'block' }, opacity: 1 },
+                    closed: { applyAtEnd: { display: 'none' }, opacity: 0 },
+                  }
+                )
               },
-              [i]
+              [c]
             )
           return a.a.createElement(
-            O.b,
-            { className: 'DropdownContainer', themed: T, stretch: y },
+            x.b,
+            { className: 'DropdownContainer', themed: L, stretch: g },
             a.a.createElement(
-              j.a,
-              Object.assign({ className: C, onClick: P }, v, { stretch: y }),
-              c,
-              ' ',
-              a.a.createElement(u.a, { alt: 'dropdown arrow' })
+              'div',
+              { ref: B },
+              a.a.createElement(
+                w.a,
+                Object.assign({ className: E, onClick: J, stretch: g }, _),
+                i,
+                ' ',
+                a.a.createElement(u.a, { alt: 'dropdown arrow' })
+              )
             ),
             a.a.createElement(
               s.Portal,
               null,
               a.a.createElement(
-                O.b,
+                x.b,
                 Object.assign(
-                  { className: C, themed: _, state: k ? 'opened' : 'closed' },
-                  v,
-                  { animate: z }
+                  { className: E, themed: X, state: S ? 'opened' : 'closed' },
+                  _,
+                  { animate: q, style: F.current }
                 ),
-                n
+                a.a.createElement('div', { ref: A }, n)
               )
             )
           )
         })
-      'undefined' !== typeof h &&
-        h &&
-        h === Object(h) &&
-        Object.isExtensible(h) &&
-        Object.defineProperty(h, '__filemeta', {
+      'undefined' !== typeof k &&
+        k &&
+        k === Object(k) &&
+        Object.isExtensible(k) &&
+        Object.defineProperty(k, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: { name: 'Dropdown', filename: 'src/Dropdown/Dropdown.tsx' },
         })
-      var I = h
-      'undefined' !== typeof h &&
-        h &&
-        h === Object(h) &&
-        Object.isExtensible(h) &&
-        Object.defineProperty(h, '__filemeta', {
+      var D = k
+      'undefined' !== typeof k &&
+        k &&
+        k === Object(k) &&
+        Object.isExtensible(k) &&
+        Object.defineProperty(k, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: { name: 'Dropdown', filename: 'src/Dropdown/Dropdown.tsx' },
         })
-      var y = t('./src/Container/Container.tsx'),
-        v = t('./src/ThemeContext/ThemeProvider.tsx')
+      var C = t('./src/Container/Container.tsx'),
+        _ = t('./src/ThemeContext/ThemeProvider.tsx')
       t.d(n, 'default', function() {
-        return k
+        return S
       })
-      var w = {},
-        x = 'wrapper'
-      function k(e) {
+      var T = {},
+        P = 'wrapper'
+      function S(e) {
         var n = e.components,
           t = Object(r.a)(e, ['components'])
         return Object(l.b)(
-          x,
-          Object.assign({}, w, t, { components: n, mdxType: 'MDXLayout' }),
+          P,
+          Object.assign({}, T, t, { components: n, mdxType: 'MDXLayout' }),
           Object(l.b)('h1', { id: 'dropdown' }, 'Dropdown'),
-          Object(l.b)(c.d, { of: I, mdxType: 'Props' }),
+          Object(l.b)(i.d, { of: D, mdxType: 'Props' }),
           Object(l.b)('h2', { id: 'default' }, 'Default'),
           Object(l.b)(
-            c.c,
+            i.c,
             {
               __position: 1,
               __code:
@@ -1003,20 +1227,20 @@
               __scope: {
                 props: this ? this.props : t,
                 Fragment: o.Fragment,
-                Playground: c.c,
-                Props: c.d,
-                styled: i.default,
-                Dropdown: I,
-                Container: y.b,
-                ThemeProvider: v.a,
+                Playground: i.c,
+                Props: i.d,
+                styled: c.default,
+                Dropdown: D,
+                Container: C.b,
+                ThemeProvider: _.a,
               },
               mdxType: 'Playground',
             },
             Object(l.b)(
-              v.a,
+              _.a,
               { mdxType: 'ThemeProvider' },
               Object(l.b)(
-                I,
+                D,
                 {
                   uid: 'menu1',
                   label: 'Primary',
@@ -1024,7 +1248,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  y.b,
+                  C.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1044,7 +1268,7 @@
                 )
               ),
               Object(l.b)(
-                I,
+                D,
                 {
                   uid: 'menu1',
                   label: 'Secondary',
@@ -1053,7 +1277,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  y.b,
+                  C.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1073,7 +1297,7 @@
                 )
               ),
               Object(l.b)(
-                I,
+                D,
                 {
                   uid: 'menu1',
                   label: 'Tertiary',
@@ -1082,7 +1306,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  y.b,
+                  C.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1105,7 +1329,7 @@
           ),
           Object(l.b)('h2', { id: 'apperance' }, 'Apperance'),
           Object(l.b)(
-            c.c,
+            i.c,
             {
               __position: 2,
               __code:
@@ -1113,21 +1337,21 @@
               __scope: {
                 props: this ? this.props : t,
                 Fragment: o.Fragment,
-                Playground: c.c,
-                Props: c.d,
-                styled: i.default,
-                Dropdown: I,
-                Container: y.b,
-                ThemeProvider: v.a,
+                Playground: i.c,
+                Props: i.d,
+                styled: c.default,
+                Dropdown: D,
+                Container: C.b,
+                ThemeProvider: _.a,
               },
               mdxType: 'Playground',
             },
             Object(l.b)(
-              v.a,
+              _.a,
               { mdxType: 'ThemeProvider' },
               Object(l.b)('h3', null, 'Accent'),
               Object(l.b)(
-                I,
+                D,
                 {
                   uid: 'menu1',
                   label: 'Primary',
@@ -1136,7 +1360,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  y.b,
+                  C.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1156,7 +1380,7 @@
                 )
               ),
               Object(l.b)(
-                I,
+                D,
                 {
                   uid: 'menu1',
                   label: 'Secondary',
@@ -1165,7 +1389,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  y.b,
+                  C.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1185,7 +1409,7 @@
                 )
               ),
               Object(l.b)(
-                I,
+                D,
                 {
                   uid: 'menu1',
                   label: 'Tertiary',
@@ -1194,7 +1418,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  y.b,
+                  C.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1215,7 +1439,7 @@
               ),
               Object(l.b)('h3', null, 'Active'),
               Object(l.b)(
-                I,
+                D,
                 {
                   uid: 'menu1',
                   label: 'Primary',
@@ -1224,7 +1448,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  y.b,
+                  C.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1244,7 +1468,7 @@
                 )
               ),
               Object(l.b)(
-                I,
+                D,
                 {
                   uid: 'menu1',
                   label: 'Secondary',
@@ -1253,7 +1477,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  y.b,
+                  C.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1273,7 +1497,7 @@
                 )
               ),
               Object(l.b)(
-                I,
+                D,
                 {
                   uid: 'menu1',
                   label: 'Tertiary',
@@ -1282,7 +1506,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  y.b,
+                  C.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1303,7 +1527,7 @@
               ),
               Object(l.b)('h3', null, 'Action'),
               Object(l.b)(
-                I,
+                D,
                 {
                   uid: 'menu1',
                   label: 'Primary',
@@ -1312,7 +1536,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  y.b,
+                  C.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1332,7 +1556,7 @@
                 )
               ),
               Object(l.b)(
-                I,
+                D,
                 {
                   uid: 'menu1',
                   label: 'Secondary',
@@ -1341,7 +1565,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  y.b,
+                  C.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1361,7 +1585,7 @@
                 )
               ),
               Object(l.b)(
-                I,
+                D,
                 {
                   uid: 'menu1',
                   label: 'Tertiary',
@@ -1370,7 +1594,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  y.b,
+                  C.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1391,7 +1615,7 @@
               ),
               Object(l.b)('h3', null, 'Danger'),
               Object(l.b)(
-                I,
+                D,
                 {
                   uid: 'menu1',
                   label: 'Primary',
@@ -1400,7 +1624,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  y.b,
+                  C.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1420,7 +1644,7 @@
                 )
               ),
               Object(l.b)(
-                I,
+                D,
                 {
                   uid: 'menu1',
                   label: 'Secondary',
@@ -1429,7 +1653,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  y.b,
+                  C.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1449,7 +1673,7 @@
                 )
               ),
               Object(l.b)(
-                I,
+                D,
                 {
                   uid: 'menu1',
                   label: 'Tertiary',
@@ -1458,7 +1682,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  y.b,
+                  C.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1479,7 +1703,7 @@
               ),
               Object(l.b)('h3', null, 'Success'),
               Object(l.b)(
-                I,
+                D,
                 {
                   uid: 'menu1',
                   label: 'Primary',
@@ -1488,7 +1712,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  y.b,
+                  C.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1508,7 +1732,7 @@
                 )
               ),
               Object(l.b)(
-                I,
+                D,
                 {
                   uid: 'menu1',
                   label: 'Secondary',
@@ -1517,7 +1741,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  y.b,
+                  C.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1537,7 +1761,7 @@
                 )
               ),
               Object(l.b)(
-                I,
+                D,
                 {
                   uid: 'menu1',
                   label: 'Tertiary',
@@ -1546,7 +1770,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  y.b,
+                  C.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1567,7 +1791,7 @@
               ),
               Object(l.b)('h3', null, 'Warning'),
               Object(l.b)(
-                I,
+                D,
                 {
                   uid: 'menu1',
                   label: 'Primary',
@@ -1576,7 +1800,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  y.b,
+                  C.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1596,7 +1820,7 @@
                 )
               ),
               Object(l.b)(
-                I,
+                D,
                 {
                   uid: 'menu1',
                   label: 'Secondary',
@@ -1605,7 +1829,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  y.b,
+                  C.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1625,7 +1849,7 @@
                 )
               ),
               Object(l.b)(
-                I,
+                D,
                 {
                   uid: 'menu1',
                   label: 'Tertiary',
@@ -1634,7 +1858,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  y.b,
+                  C.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1655,7 +1879,7 @@
               ),
               Object(l.b)('h3', null, 'Disabled'),
               Object(l.b)(
-                I,
+                D,
                 {
                   uid: 'menu1',
                   label: 'Primary',
@@ -1664,7 +1888,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  y.b,
+                  C.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1684,7 +1908,7 @@
                 )
               ),
               Object(l.b)(
-                I,
+                D,
                 {
                   uid: 'menu1',
                   label: 'Secondary',
@@ -1693,7 +1917,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  y.b,
+                  C.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1713,7 +1937,7 @@
                 )
               ),
               Object(l.b)(
-                I,
+                D,
                 {
                   uid: 'menu1',
                   label: 'Tertiary',
@@ -1722,7 +1946,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  y.b,
+                  C.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -1745,7 +1969,7 @@
           ),
           Object(l.b)('h2', { id: 'size' }, 'Size'),
           Object(l.b)(
-            v.a,
+            _.a,
             { mdxType: 'ThemeProvider' },
             Object(l.b)(
               'table',
@@ -1771,7 +1995,7 @@
                     'td',
                     null,
                     Object(l.b)(
-                      I,
+                      D,
                       {
                         uid: 'menu1',
                         label: 'Dropdown',
@@ -1779,7 +2003,7 @@
                         mdxType: 'Dropdown',
                       },
                       Object(l.b)(
-                        y.b,
+                        C.b,
                         {
                           margin1: 'top',
                           radius: 'rounded',
@@ -1808,7 +2032,7 @@
                     'td',
                     null,
                     Object(l.b)(
-                      I,
+                      D,
                       {
                         uid: 'menu1',
                         label: 'Dropdown',
@@ -1816,7 +2040,7 @@
                         mdxType: 'Dropdown',
                       },
                       Object(l.b)(
-                        y.b,
+                        C.b,
                         {
                           margin1: 'top',
                           radius: 'rounded',
@@ -1845,7 +2069,7 @@
                     'td',
                     null,
                     Object(l.b)(
-                      I,
+                      D,
                       {
                         uid: 'menu1',
                         label: 'Dropdown',
@@ -1853,7 +2077,7 @@
                         mdxType: 'Dropdown',
                       },
                       Object(l.b)(
-                        y.b,
+                        C.b,
                         {
                           margin1: 'top',
                           radius: 'rounded',
@@ -1882,7 +2106,7 @@
                     'td',
                     null,
                     Object(l.b)(
-                      I,
+                      D,
                       {
                         uid: 'menu1',
                         label: 'Dropdown',
@@ -1890,7 +2114,7 @@
                         mdxType: 'Dropdown',
                       },
                       Object(l.b)(
-                        y.b,
+                        C.b,
                         {
                           margin1: 'top',
                           radius: 'rounded',
@@ -1919,7 +2143,7 @@
                     'td',
                     null,
                     Object(l.b)(
-                      I,
+                      D,
                       {
                         uid: 'menu1',
                         label: 'Dropdown',
@@ -1927,7 +2151,7 @@
                         mdxType: 'Dropdown',
                       },
                       Object(l.b)(
-                        y.b,
+                        C.b,
                         {
                           margin1: 'top',
                           radius: 'rounded',
@@ -1956,7 +2180,7 @@
                     'td',
                     null,
                     Object(l.b)(
-                      I,
+                      D,
                       {
                         uid: 'menu1',
                         label: 'Dropdown',
@@ -1964,7 +2188,7 @@
                         mdxType: 'Dropdown',
                       },
                       Object(l.b)(
-                        y.b,
+                        C.b,
                         {
                           margin1: 'top',
                           radius: 'rounded',
@@ -1993,7 +2217,7 @@
                     'td',
                     null,
                     Object(l.b)(
-                      I,
+                      D,
                       {
                         uid: 'menu1',
                         label: 'Dropdown',
@@ -2001,7 +2225,7 @@
                         mdxType: 'Dropdown',
                       },
                       Object(l.b)(
-                        y.b,
+                        C.b,
                         {
                           margin1: 'top',
                           radius: 'rounded',
@@ -2030,7 +2254,7 @@
                     'td',
                     null,
                     Object(l.b)(
-                      I,
+                      D,
                       {
                         uid: 'menu1',
                         label: 'Dropdown',
@@ -2038,7 +2262,7 @@
                         mdxType: 'Dropdown',
                       },
                       Object(l.b)(
-                        y.b,
+                        C.b,
                         {
                           margin1: 'top',
                           radius: 'rounded',
@@ -2067,7 +2291,7 @@
                     'td',
                     null,
                     Object(l.b)(
-                      I,
+                      D,
                       {
                         uid: 'menu1',
                         label: 'Dropdown',
@@ -2075,7 +2299,7 @@
                         mdxType: 'Dropdown',
                       },
                       Object(l.b)(
-                        y.b,
+                        C.b,
                         {
                           margin1: 'top',
                           radius: 'rounded',
@@ -2104,7 +2328,7 @@
                     'td',
                     null,
                     Object(l.b)(
-                      I,
+                      D,
                       {
                         uid: 'menu1',
                         label: 'Dropdown',
@@ -2112,7 +2336,7 @@
                         mdxType: 'Dropdown',
                       },
                       Object(l.b)(
-                        y.b,
+                        C.b,
                         {
                           margin1: 'top',
                           radius: 'rounded',
@@ -2138,7 +2362,7 @@
           ),
           Object(l.b)('h2', { id: 'stretch' }, 'Stretch'),
           Object(l.b)(
-            c.c,
+            i.c,
             {
               __position: 5,
               __code:
@@ -2146,20 +2370,20 @@
               __scope: {
                 props: this ? this.props : t,
                 Fragment: o.Fragment,
-                Playground: c.c,
-                Props: c.d,
-                styled: i.default,
-                Dropdown: I,
-                Container: y.b,
-                ThemeProvider: v.a,
+                Playground: i.c,
+                Props: i.d,
+                styled: c.default,
+                Dropdown: D,
+                Container: C.b,
+                ThemeProvider: _.a,
               },
               mdxType: 'Playground',
             },
             Object(l.b)(
-              v.a,
+              _.a,
               { mdxType: 'ThemeProvider' },
               Object(l.b)(
-                I,
+                D,
                 {
                   uid: 'menu1',
                   label: 'Strtch',
@@ -2167,7 +2391,7 @@
                   mdxType: 'Dropdown',
                 },
                 Object(l.b)(
-                  y.b,
+                  C.b,
                   {
                     margin1: 'top',
                     radius: 'rounded',
@@ -2190,15 +2414,15 @@
           )
         )
       }
-      k &&
-        k === Object(k) &&
-        Object.isExtensible(k) &&
-        Object.defineProperty(k, '__filemeta', {
+      S &&
+        S === Object(S) &&
+        Object.isExtensible(S) &&
+        Object.defineProperty(S, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: { name: 'MDXContent', filename: 'src/Dropdown/dropdown.mdx' },
         }),
-        (k.isMDXComponent = !0)
+        (S.isMDXComponent = !0)
     },
     './src/Icon/Icon.tsx': function(e, n, t) {
       'use strict'
@@ -2212,8 +2436,8 @@
           './node_modules/docz/node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js'
         ),
         l = t('./node_modules/react/index.js'),
-        c = t.n(l)
-      function i(e) {
+        i = t.n(l)
+      function c(e) {
         var n = e.hoverColor
         return Object(r.a)(
           {
@@ -2249,11 +2473,11 @@
             return {}
         }
       }
-      'undefined' !== typeof i &&
-        i &&
-        i === Object(i) &&
-        Object.isExtensible(i) &&
-        Object.defineProperty(i, '__filemeta', {
+      'undefined' !== typeof c &&
+        c &&
+        c === Object(c) &&
+        Object.isExtensible(c) &&
+        Object.defineProperty(c, '__filemeta', {
           enumerable: !0,
           configurable: !0,
           value: { name: 'iconTheme', filename: 'src/Icon/icon.theme.ts' },
@@ -2274,20 +2498,20 @@
       t.d(n, 'a', function() {
         return u
       })
-      var u = c.a.memo(function(e) {
+      var u = i.a.memo(function(e) {
         var n = e.children,
           t = e.className,
           u = void 0 === t ? '' : t,
           s = e.height,
           m = void 0 === s ? '24px' : s,
           p = e.themed,
-          g = void 0 === p ? [] : p,
-          f = e.title,
+          f = void 0 === p ? [] : p,
+          g = e.title,
           j = e.viewBox,
           O = void 0 === j ? '0 0 24 24' : j,
           h = e.width,
-          I = void 0 === h ? '24px' : h,
-          y = Object(a.a)(e, [
+          y = void 0 === h ? '24px' : h,
+          I = Object(a.a)(e, [
             'children',
             'className',
             'height',
@@ -2304,12 +2528,12 @@
           ),
           w = Object(l.useMemo)(
             function() {
-              return [i, d].concat(Object(o.a)(g))
+              return [c, d].concat(Object(o.a)(f))
             },
-            [i, d, g]
+            [c, d, f]
           ),
-          x = Object(r.a)({ height: m, viewBox: O, width: I }, y)
-        return c.a.createElement(
+          x = Object(r.a)({ height: m, viewBox: O, width: y }, I)
+        return i.a.createElement(
           b.b,
           Object.assign(
             {
@@ -2320,7 +2544,7 @@
             },
             x
           ),
-          f ? c.a.createElement('title', null, f) : null,
+          g ? i.a.createElement('title', null, g) : null,
           n
         )
       })
@@ -2417,18 +2641,18 @@
             t = e.selector,
             o = void 0 === t ? 'body' : t,
             l = Object(r.useRef)(document.querySelector(o)),
-            c = Object(r.useRef)(document.createElement('div'))
+            i = Object(r.useRef)(document.createElement('div'))
           return (
             Object(r.useLayoutEffect)(
               function() {
                 return (
-                  l.current && l.current.appendChild(c.current),
+                  l.current && l.current.appendChild(i.current),
                   function() {
-                    l.current && l.current.removeChild(c.current)
+                    l.current && l.current.removeChild(i.current)
                   }
                 )
               },
-              [l.current, c.current]
+              [l.current, i.current]
             ),
             Object(a.createPortal)(n, l.current)
           )
@@ -2476,4 +2700,4 @@
     },
   },
 ])
-//# sourceMappingURL=src-dropdown-dropdown.f74c2ab9f6d2313a0e74.js.map
+//# sourceMappingURL=src-dropdown-dropdown.ba0686dcc6594edec57b.js.map
