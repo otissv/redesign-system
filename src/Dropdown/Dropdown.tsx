@@ -1,7 +1,9 @@
-import React, { useCallback, useMemo, useState } from 'react'
+import React, { useCallback, useMemo, useState, useRef, useEffect } from 'react'
 import { DropdownInterface } from './dropdown.types'
 import { CaretDown } from '../MaterialIcons/CaretDown'
 import { Portal } from '../Portal'
+import { usePositionOffset } from '../reusable/positionOffset'
+import { useScrollPosition } from '../reusable/scrollPosition'
 
 import {
   dropdownTheme,
@@ -18,10 +20,29 @@ export const Dropdown = React.memo(function Dropdown({
   animate,
   themed = [],
   stretch = false,
+  position = 'bottom-left',
+  hover = false,
+  noFlip = false,
+  justify = false,
+  opened: isOpened = false,
   ...propsRest
 }: DropdownInterface) {
-  const [opened, setOpened] = useState(false)
+  const [opened, setOpened] = useState(isOpened)
   const classNames = useMemo(() => `Dropdown ${className}`, [className])
+  const { offset } = usePositionOffset()
+  const buttonContainerRef = useRef<any>()
+  const dropdownContentRef = useRef<any>()
+  const [contentPosition, setContentPosition] = useState({
+    top: 0,
+    left: 0,
+  })
+  const contentOffsetRef = useRef({})
+  const scroll = useScrollPosition()
+
+  // const contentOffset = offset({
+  //   element,
+  //   target: dropdownContentRef.current,
+  // })(contentPosition)
 
   const themedDropdownContainer = useMemo(() => [dropdownContainerTheme], [
     dropdownContainerTheme,
@@ -35,17 +56,44 @@ export const Dropdown = React.memo(function Dropdown({
     function handleClick(e) {
       e.preventDefault
       setOpened(!opened)
+
+      const element =
+        buttonContainerRef.current && buttonContainerRef.current.children[0]
+
+      const { top: scrollTop, left: scrollLeft } = scroll()
+
+      if (element) {
+        const contentOffset = offset({
+          element,
+          target: dropdownContentRef.current,
+        })(position)
+        contentOffsetRef.current = {
+          top: scrollTop + contentOffset.top,
+          left: scrollLeft + contentOffset.left,
+        }
+      }
     },
-    [setOpened]
+    [
+      buttonContainerRef,
+      contentOffsetRef,
+      dropdownContentRef,
+      offset,
+      position,
+      setContentPosition,
+      setOpened,
+      scroll,
+    ]
   )
 
   const _animate = useMemo(() => {
     return (
       animate || {
         opened: {
+          applyAtStart: { display: 'block' },
           opacity: 1,
         },
         closed: {
+          applyAtEnd: { display: 'none' },
           opacity: 0,
         },
       }
@@ -58,14 +106,16 @@ export const Dropdown = React.memo(function Dropdown({
       themed={themedDropdownContainer}
       stretch={stretch}
     >
-      <Button
-        className={classNames}
-        onClick={handleClick}
-        {...propsRest}
-        stretch={stretch}
-      >
-        {label} <CaretDown alt="dropdown arrow" />
-      </Button>
+      <div ref={buttonContainerRef}>
+        <Button
+          className={classNames}
+          onClick={handleClick}
+          stretch={stretch}
+          {...propsRest}
+        >
+          {label} <CaretDown alt="dropdown arrow" />
+        </Button>
+      </div>
 
       <Portal>
         <Base
@@ -74,8 +124,9 @@ export const Dropdown = React.memo(function Dropdown({
           state={opened ? 'opened' : 'closed'}
           {...propsRest}
           animate={_animate}
+          style={contentOffsetRef.current}
         >
-          {children}
+          <div ref={dropdownContentRef}>{children}</div>
         </Base>
       </Portal>
     </Base>
