@@ -5,7 +5,8 @@ export interface DropdownInterface extends BaseInterface {
   appearance?: AppearanceType
   position?: string
   hover?: boolean
-  noFlip?: boolean
+  flip?: boolean
   justify?: boolean
   opened?: boolean
+  height?: string
 }

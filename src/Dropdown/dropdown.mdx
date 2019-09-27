@@ -9,6 +9,7 @@ import styled from 'styled-components'
 import Dropdown from './Dropdown'
 import Container from '../Container/Container'
 import { ThemeProvider } from '../ThemeContext/ThemeProvider'
+import { Flex } from '../Flex/Flex'
 
 # Dropdown
 
@@ -676,5 +677,237 @@ import { ThemeProvider } from '../ThemeContext/ThemeProvider'
         </ul>
       </Container>
     </Dropdown>
+  </ThemeProvider>
+</Playground>
+
+## Positions
+
+<Playground>
+  <ThemeProvider>
+    <Flex>
+      <Dropdown
+        label="bottom-left"
+        position='bottom-left'
+        margin3='bottom right'
+        stretch
+      >
+        <Container
+          margin1="top"
+          radius="rounded"
+          padding="default"
+          elevate={3}
+          css="background: #fff; color:#000"
+        >
+          bottom-left
+        </Container>
+      </Dropdown>
+
+      <Dropdown
+        label="bottom-center"
+        position='bottom-center'
+        margin3='bottom right'
+        stretch>
+        <Container
+          margin1="top"
+          radius="rounded"
+          padding="default"
+          elevate={3}
+          css="background: #fff; color:#000"
+        >
+          bottom-center
+        </Container>
+      </Dropdown>
+
+      <Dropdown
+        label="bottom-right"
+        position='bottom-right'
+        margin3='bottom right'
+        height='300px'
+        stretch>
+        <Container
+          margin1="top"
+          radius="rounded"
+          padding="default"
+          elevate={3}
+          css="background: #fff; color:#000"
+        >
+          bottom-right
+        </Container>
+      </Dropdown>
+    </Flex>
+
+    <Flex>
+      <Dropdown
+        label="top-left"
+        position='top-left'
+        margin3='bottom right'
+        stretch
+      >
+        <Container
+          margin1="top"
+          radius="rounded"
+          padding="default"
+          elevate={3}
+          css="background: #fff; color:#000"
+        >
+          <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+          </ul>
+        </Container>
+      </Dropdown>
+
+      <Dropdown
+        label="top-center"
+        position='top-center'
+        margin3='bottom right'
+        height='300px'
+        stretch>
+        <Container
+          margin1="top"
+          radius="rounded"
+          padding="default"
+          elevate={3}
+          css="background: #fff; color:#000"
+        >
+          <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+          </ul>
+        </Container>
+      </Dropdown>
+
+      <Dropdown
+        label="top-right"
+        position='top-right'
+        margin3='bottom right'
+        stretch>
+        <Container
+          margin1="top"
+          radius="rounded"
+          padding="default"
+          elevate={3}
+          css="background: #fff; color:#000"
+        >
+          <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+          </ul>
+        </Container>
+      </Dropdown>
+    </Flex>
+
+ <Flex>
+      <Dropdown
+        label="left-top"
+        position='left-top'
+        margin3='bottom right'
+        stretch
+      >
+        <Container
+          margin1="top"
+          radius="rounded"
+          padding="default"
+          elevate={3}
+          css="background: #fff; color:#000"
+        >
+          bottom right
+        </Container>
+      </Dropdown>
+
+      <Dropdown
+        label="left-center"
+        position='left-center'
+        margin3='bottom right'
+        height='300px'
+        stretch>
+        <Container
+          margin1="top"
+          radius="rounded"
+          padding="default"
+          elevate={3}
+          css="background: #fff; color:#000"
+        >
+          left-center
+        </Container>
+      </Dropdown>
+
+      <Dropdown
+        label="left-bottom"
+        position='left-bottom'
+        margin3='bottom right'
+        stretch>
+        <Container
+          margin1="top"
+          radius="rounded"
+          padding="default"
+          elevate={3}
+          css="background: #fff; color:#000"
+        >
+          left-bottom
+        </Container>
+      </Dropdown>
+    </Flex>
+
+    <Flex>
+      <Dropdown
+        label="right-top"
+        position='right-top'
+        margin3='bottom right'
+        stretch
+      >
+        <Container
+          margin1="top"
+          radius="rounded"
+          padding="default"
+          elevate={3}
+          css="background: #fff; color:#000"
+        >
+         right-top
+        </Container>
+      </Dropdown>
+
+
+
+      <Dropdown
+        label="right-center"
+        position='right-center'
+        margin3='bottom right'
+        height='300px'
+        stretch>
+        <Container
+          margin1="top"
+          radius="rounded"
+          padding="default"
+          elevate={3}
+          css="background: #fff; color:#000"
+        >
+          right-center
+        </Container>
+      </Dropdown>
+
+      <Dropdown
+        label="right-bottom"
+        position='right-bottom'
+        margin3='bottom right'
+        stretch>
+        <Container
+          margin1="top"
+          radius="rounded"
+          padding="default"
+          elevate={3}
+          css="background: #fff; color:#000"
+        >
+          right-bottom
+        </Container>
+      </Dropdown>
+    </Flex>
+
   </ThemeProvider>
 </Playground>

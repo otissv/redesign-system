@@ -54,12 +54,12 @@ export function offset({ boundary, element, flip, target }: OffsetInterface) {
 
   const horFlip = either(
     () => elementDetails.boundary.top + elementDetails.dim.height,
-    () => elementDetails.dim.height
+    () => elementDetails.boundary.top - targetDetails.dim.height
   )
 
   const lrVerFlip = either(
-    () => targetDetails.pos.left + targetDetails.dim.width,
-    () => targetDetails.pos.left - elementDetails.dim.width
+    () => elementDetails.boundary.left + elementDetails.dim.width,
+    () => elementDetails.boundary.left - targetDetails.dim.width
   )
 
   const tbVerLeft = elementDetails.boundary.left
@@ -68,10 +68,10 @@ export function offset({ boundary, element, flip, target }: OffsetInterface) {
     elementDetails.dim.width -
     targetDetails.dim.width
 
-  let top
-  let bottom
-  let lrHorLeft
-  let lrHorRight
+  let top: number
+  let bottom: number
+  let lrHorLeft: number
+  let lrHorRight: number
 
   if (flip) {
     top = horFlip(targetDetails.boundary.top - elementDetails.dim.height < 0)
@@ -100,9 +100,7 @@ export function offset({ boundary, element, flip, target }: OffsetInterface) {
   const horCenter =
     elementDetails.boundary.left +
     elementDetails.dim.width -
-    (elementDetails.boundary.left + targetDetails.pos.left)
-
-  // (elementDetails.dim.width - targetDetails.dim.width) / 2
+    (elementDetails.dim.width + targetDetails.dim.width) / 2
 
   const verCenter =
     bottom - (elementDetails.dim.height + targetDetails.dim.height) / 2
