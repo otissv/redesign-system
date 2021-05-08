@@ -38,7 +38,7 @@
   "dependencies": {
     "cuid": "^2.1.6",
     "js-file-download": "^0.4.7",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "react-copy-to-clipboard": "^5.0.1",
     "react-live": "^2.1.2",
     "react-pose": "^4.0.8",
